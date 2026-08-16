@@ -47,16 +47,19 @@ interface baseline into complete detailed schematics.
 - No-blink/no-mute transfer budget: source-selector timing, protected raw-DC
   hold-up, local rail hold-up, regulator UVLO/dropout, display 12 V buck-boost,
   and oscilloscope acceptance limits.
-- Thermal architecture is locked to an internal spreader, gasketed side-wall
-  metal bulkhead, and external fins. Complete dimensions and 151.7 W closed-case
-  thermal validation; use a sealed heat exchanger if the conductive path fails.
+- Thermal architecture is locked to a filtered right-wall intake, an
+  operator-wall center-right exhaust, and downward-facing CM5/modem cooling
+  cartridges. Complete wall measurements, baffles, guards, and 151.7 W
+  closed-case validation; use a sealed heat exchanger if reduced sealing is
+  unacceptable.
 - Fans are locked to four independent 12 V PWM/tach channels controlled by an
-  `EMC2305`. The two top-panel enclosure fans are Delta
+  `EMC2305`. The two sidewall enclosure fans are Delta
   `THA0412AD-TZW3`; use one Qualtek `09150-F/30` filter guard on the intake and
   a low-restriction exhaust guard. Select the exact modem fan and place three
   `TMP117` sensors. Enclosure fan 1 is filtered
-  intake, enclosure fan 2 is exhaust, and a divider/shroud must prevent direct
-  recirculation between their adjacent openings.
+  right-wall intake and enclosure fan 2 is operator-wall exhaust. Baffles must
+  route air through the hot zones. Keep fan/PWM wiring out of the XLR quiet zone
+  and guarded hinge-side PSU corridor.
 - Top-panel mechanical layout inside the source-checked 17.00 in x 11.733 in
   nominal base bezel reference: XLR bank position, network/power/service
   connector positions, antenna placement, vents, labels, and service clearance.

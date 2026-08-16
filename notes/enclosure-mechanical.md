@@ -235,27 +235,24 @@ Design constraints:
 
 ## Thermal Implication
 
-The unmodified iM2300 is watertight/dustproof. This product's top-panel fan and
-mesh openings intentionally reduce that rating. Enclosure fan 1 is a filtered
-intake and enclosure fan 2 is exhaust; an underside baffle must prevent a short
-air loop between their adjacent openings.
-
-The selected heat exit is a gasketed aluminum bulkhead through an upper side
-wall, connected to an internal heat spreader and an exterior finned heat sink.
-It must penetrate/bypass the insulating plastic wall; a spreader merely pressed
-against the Pelican shell is not sufficient. Place the exterior fins where the
-base cannot block them.
+The unmodified iM2300 is watertight/dustproof. This product's right-wall intake
+and operator-wall exhaust intentionally reduce that rating; the top panel has
+no cooling opening. Gaskets, filters, guards, and splash-directed louvers do
+not restore the original Pelican rating. Internal baffles must force the air
+through the CM5, modem, and regulator zones before exhaust.
 
 If directed-air testing cannot reject the 151.7 W continuous design load at
 45 C / 113 F ambient, use a
-sealed air-to-air heat exchanger, increase the conductive bulkhead, or reduce
+  sealed air-to-air heat exchanger, increase airflow/heat spreading, or reduce
 the load. The product specification must explicitly state the reduced
 environmental sealing caused by the open fan paths.
 
 The CPU fan, dedicated cellular modem fan, and two enclosure fans should be
 designed around this thermal choice.
 
-The bottom-mounted AC/DC PSU is also part of the thermal load. Its covered case
+The bottom-mounted AC/DC PSU is also part of the thermal load. Install it in a
+guarded hinge/display-side bay, away from both sidewall fans and their PWM/power
+harnesses. Its covered case
 uses natural convection and must be checked for derating in the sealed iM2300,
 especially when the CM5, Wi-Fi AP, cellular modem, Ethernet controllers, HDMI
 display power, audio rails, and fans are all active.
@@ -285,7 +282,7 @@ display power, audio rails, and fans are all active.
 - Exact bottom-panel PSU mounting bracket/standoffs, fused no-switch C14 inlet
   position, protective-earth/chassis bond, service cover, and low-voltage
   harness route.
-- Exact thermal-bulkhead cutout, gasket, spreader, heat-pipe/pad, exterior-fin,
-  and protective-guard geometry.
+- Exact right-wall intake and operator-wall exhaust centers, wall reinforcement,
+  gaskets, guards/louvers, baffles, and reduced-ingress qualification.
 - Panel material and thickness.
 - PCB maximum outline and mounting-hole locations.

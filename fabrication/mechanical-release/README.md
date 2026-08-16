@@ -6,8 +6,9 @@
 - Release state: `HOLD_FOR_MEASUREMENT`
 - Panel installation plane: 38.1 mm below the case parting line
 - Controlled concept drawings:
-  - `../../cad/im2300-top-panel-layout-rev-i.svg`
-  - `../../cad/mechanical/im2300-underside-pcb-floorplan-rev-h.svg`
+  - `../../cad/im2300-top-panel-layout-rev-j.svg`
+  - `../../cad/mechanical/im2300-underside-pcb-floorplan-rev-i.svg`
+  - `../../cad/mechanical/im2300-sidewall-cooling-layout-rev-a.svg`
 
 This package controls the measurements that must be taken from the actual
 Pelican iM2300, custom four-side frame, display, battery dock, and production
@@ -48,7 +49,7 @@ operator/handle side.
    dimension. The actual frame geometry remains the controlling fit check.
 4. Produce a cardboard, acrylic, or inexpensive aluminum gauge plate. Verify
    insertion, removal, frame seating, gasket clearance, and all screw access.
-5. Mount representative connectors, battery, display, fans, guards, CM5
+5. Mount representative connectors, battery, display, sidewall fans, guards, CM5
    cooling stack, and harnesses. Close and latch the case for the closure and
    impact-clearance measurements.
    Fit 1000 +/- 25 mm H03A HDMI, H03B USB-touch, and H03C display-power
@@ -79,9 +80,13 @@ operator/handle side.
 - Minimum 3.0 mm static clearance between unrelated metal hardware; use more
   where cables, latches, fingers, insulation, or vibration motion require it.
 - XLR bank outside edge remains at least 15.0 mm from the finished panel edge.
-- The CM5 panel fan must remain centered over the released CM5 heatsink inlet.
-- Intake and exhaust openings require a divider/shroud that blocks direct
-  short-circuit airflow.
+- The CM5/modem dedicated fan inlets face the bottom and retain at least 10 mm
+  unobstructed clearance through the full tolerance and vibration stack.
+- The right-wall filtered intake and operator-wall center-right exhaust require
+  separate reinforcement plates, gaskets, guards, and splash-directed louvers.
+- Maintain at least 100 mm practical separation between enclosure fan/PWM
+  hardware and the AUDIO-8X8 quiet boundary; route fan power with a filtered
+  star return and outside the guarded hinge-side PSU harness corridor.
 - Gold Mount engagement is left to right. Keep the left insertion corridor and
   complete battery motion sweep free of panel hardware and connected cables.
 

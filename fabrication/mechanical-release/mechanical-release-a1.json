@@ -52,6 +52,8 @@
     "minimum_closed_lid_dynamic_clearance_mm": 8.0,
     "minimum_unrelated_metal_clearance_mm": 3.0,
     "minimum_xlr_bank_edge_clearance_mm": 15.0,
+    "minimum_dedicated_fan_inlet_clearance_mm": 10.0,
+    "minimum_fan_audio_separation_mm": 100.0,
     "battery_engagement_direction": "LEFT_TO_RIGHT"
   },
   "signoff": {

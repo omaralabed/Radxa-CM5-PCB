@@ -4,7 +4,7 @@
 
 This is the preliminary mechanical part freeze for the iM2300 top panel. It
 supports schematic and 3D floorplanning, but it is not permission to cut the
-production panel. The current Rev I connector-placement artwork remains the
+production panel. The current Rev J connector-placement artwork remains the
 authoritative layout.
 
 The factory cut drawing can be released only after:
@@ -31,7 +31,7 @@ The factory cut drawing can be released only after:
 | Status indicators | 6 | Bulgin `DX06` wire-lead, 12 V, black brass | Selected family; 6 mm cutouts |
 | Panel lights | 2 | YIS Marine `LS102W` | Selected concept; 22 mm cutout, 38 mm matte diffused face, 12 V warm-white SMD light, IP67 |
 | Night-light touch control | 1 | E-Switch `CS7L2FR` | Selected; 22.20 +0.25/-0.00 mm cutout, latching capacitive low-side output, IP68 |
-| Top enclosure fans | 2 | Delta `THA0412AD-TZW3` | Selected; fan 1 filtered intake, fan 2 exhaust; 40 x 40 x 20 mm, 12 V, 4-wire PWM/tach, IP55 fan body |
+| Sidewall enclosure fans | 2 | Delta `THA0412AD-TZW3` | Selected; right-wall filtered intake and operator-wall center-right exhaust; 40 x 40 x 20 mm, 12 V, 4-wire PWM/tach, IP55 fan body |
 | Intake filter guard | 1 | Qualtek `09150-F/30` | Selected for intake; 40 mm frame, 30 PPI media |
 | Exhaust guard/louver | 1 | TBD | Low-restriction, finger-safe, splash-resistant 40 mm guard with outward-facing louver |
 | Nano-SIM holders | 2 | Wurth `693043020611` | Selected electrically; requires vertical service daughterboard |
@@ -74,7 +74,7 @@ table and a drawing disagree.
 | Bulgin `DX06` | `6.0` round cutout each | Confirm rear nut and lead clearance |
 | YIS Marine `LS102W` | `22.0` round cutout each; `38.0` front-face envelope | Fit two samples, confirm the M22 x 1.5 body/nut, rear depth, warm-white CCT, beam coverage, glare, and lead exit |
 | E-Switch `CS7L2FR` | `22.20 +0.25/-0.00` round cutout; maximum panel thickness 10 mm | Fit supplied O-ring/nut, retain 20.70 mm rear body/flats clearance and 150 mm six-wire lead bend radius |
-| `THA0412AD-TZW3` + 40 mm guards | 40 x 40 fan envelope, 32 x 32 mounting-hole square, fan holes `3.5 +/-0.3`; the selected intake guard uses four `4.3` holes; center airflow opening to be finalized | Lock fan 1 intake/fan 2 exhaust labels; point external louvers in opposing directions; test panel stiffness, finger safety, filter service, pressure balance, and underside baffle effectiveness |
+| `THA0412AD-TZW3` + 40 mm guards | Sidewall work only: 40 x 40 fan envelope, 32 x 32 mounting-hole square, fan holes `3.5 +/-0.3`; use a separate internal reinforcement plate and gasket at each opening; center airflow opening to be finalized | Measure wall ribs/taper and nearby hardware; lock fan 1 intake/fan 2 exhaust labels; test wall stiffness, finger safety, ingress, filter service, pressure balance, and internal baffle effectiveness |
 | SMA / RP-SMA bulkheads | Current SVG uses approximately `6.4` round placeholders | Replace with TE bulkhead drawing after pigtail/module confirmation; include wrench flats and washer clearance if required |
 | `STX-353K7A-6N-KTTR` | No threaded panel bushing; panel clearance is concentric with PCB-mounted jack | Fix PCB Z height, plug insertion clearance, and jack-to-panel gap on a coupon |
 | Nano-SIM access | Two service openings above a vertical daughterboard, not above a horizontal holder | Design daughterboard, card insertion path, retention, ESD shield, and service cover before cutting |
@@ -108,7 +108,7 @@ accepted explicitly or the inlet must be changed before release.
 ### Sealing
 
 The LEMO `EGG.1B.302.CLL` is IP50, the Neutrik AV XLR parts are IP40, and the
-two top-panel fan openings are intentionally vented. The assembled product is
+two sidewall fan openings are intentionally vented. The assembled product is
 therefore not an IP67 Pelican case. The RA812 switch is IP54 only when fitted
 with optional E-Switch cap `ACC-P01`; the IP67 YIS lamps and IP68 CS touch
 switch do not restore overall enclosure sealing.

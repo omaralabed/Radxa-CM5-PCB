@@ -122,8 +122,10 @@ Assignments:
 | `J403` | Delta `THA0412AD-TZW3` | `INTAKE_FAN_12V`; filtered intake, air into case |
 | `J404` | Delta `THA0412AD-TZW3` | `EXHAUST_FAN_12V`; exhaust, air out of case |
 
-`J403` and `J404` require permanent harness and panel-underlay labels. Their
-PWM/tach channels remain independent so pressure balance can be tuned with the
-CM5 mesh and filter loading included.
+`J403` and `J404` require permanent keyed harness and sidewall labels. Their
+PWM/tach channels remain independent so pressure balance can be tuned with
+filter loading and measured case leakage included. Route their filtered 12 V,
+PWM, tach, and return conductors outside the audio quiet zone and guarded PSU
+corridor.
 The EMC2305 controls both enclosure channels at 1.000 kHz. Hardware pullups
 command full speed if the controller is absent, unpowered, or disconnected.

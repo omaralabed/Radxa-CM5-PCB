@@ -10,7 +10,7 @@ selected architecture before schematic partitioning.
 ```mermaid
 flowchart LR
   AC["Top-panel Qualtek 719W-00/03<br/>fused C14, no switch"] --> EMI["Fuse / EMI filter / MOV<br/>PE bond / service barrier"]
-  EMI --> PSU["Bottom-panel 24 V PSU<br/>MEAN WELL RPS-400-24-C<br/>24 V / 10.5 A / 252 W convection"]
+  EMI --> PSU["Hinge-side bottom PSU bay<br/>MEAN WELL RPS-400-24-C<br/>24 V / 10.5 A / 252 W convection"]
 
   LEMO["LEMO EGG.1B.302 backup<br/>13.0-16.8 V / 15 A path"] --> PRE["LTC4418 backup preselector"]
   GOLD["Gold Mount battery dock<br/>14.1 V nominal"] --> PRE
@@ -42,9 +42,10 @@ flowchart LR
   FAN --> FANS["EMC2305 + 4 PWM/tach fans<br/>CPU, modem, board 1, board 2"]
   ETHPWR --> ETH["PI7C9X2G608GP<br/>3 x LAN7430"]
 
-  FANS --> SPREADER["Internal aluminum heat spreader"]
-  SPREADER --> BULKHEAD["Gasketed side-wall thermal bulkhead"]
-  BULKHEAD --> SINK["External finned heat sink"]
+  FANS --> CPUCOOL["CM5 + modem B.Cu<br/>down-facing cooling cartridges"]
+  FANS --> INTAKE["Right-wall filtered intake"]
+  INTAKE --> HOTZONES["Baffled CM5 / modem / regulator airflow"]
+  HOTZONES --> EXHAUST["Operator-wall center-right exhaust"]
 ```
 
 ## Data And I/O Blocks
@@ -82,8 +83,8 @@ flowchart TB
   CM5 -- "I2C / thermal zones" --> THERMAL["EMC2305 + 3 x TMP117<br/>CPU temp + modem internal temp"]
   THERMAL --> FAN1["CPU fan"]
   THERMAL --> FAN2["Cell modem fan"]
-  THERMAL --> FAN3["Board fan 1"]
-  THERMAL --> FAN4["Board fan 2"]
+  THERMAL --> FAN3["Right-wall intake"]
+  THERMAL --> FAN4["Operator-wall exhaust"]
 
   CM5 -- "GPU" --> UI["Touch UI, meters, waveform/spectrum, graphics"]
   CM5 -- "NPU" --> AI["Future AI noise/classification and smart monitoring"]
@@ -96,14 +97,16 @@ flowchart TB
   control, and downstream low-voltage regulation.
 - `AUDIO-8X8` contains the AKM converters and all 16 active-balanced XLR paths.
 - Heavy XLR connectors are panel-supported, with PCB/harness interconnects.
-- The AC/DC PSU is bottom-panel-mounted; the top panel carries the fused C14
-  inlet and connector/PCB panel.
+- The AC/DC PSU is bottom-mounted in a guarded hinge/display-side bay; the top
+  panel carries the fused C14 inlet and connector/PCB panel.
 - The Wi-Fi AP rail and cellular modem rail are separate supplies.
 - Source transfer is no-blink/no-mute when a valid backup source is present;
   protected raw DC and critical downstream rails need hold-up.
-- The cellular modem gets both a heatsink/thermal spreader and a dedicated fan.
-- The two board/enclosure fans are controlled from board temperature sensors.
-- The real heat exit is a gasketed metal side-wall bulkhead connected to an
-  external finned heat sink; the Pelican plastic wall is not used as a heat sink.
+- The CM5 and cellular modem use downward-facing heatsink/fan cartridges with
+  structural fan supports and at least 10 mm unobstructed inlet clearance.
+- The two enclosure fans are independently controlled from board temperature
+  sensors. The right wall is filtered intake and the operator wall is exhaust.
+- Sidewall openings make the unit intentionally vented; gaskets and splash
+  louvers reduce ingress but do not restore the original Pelican rating.
 - Audio/SIP runtime should stay on protected CPU resources; GPU/NPU acceleration
   is for UI, meters, graphics, and future AI monitoring.

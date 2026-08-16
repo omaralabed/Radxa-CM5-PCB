@@ -38,9 +38,9 @@ def present(value: object) -> bool:
 def validate_package(data: dict, rows: list[dict[str, str]]) -> list[str]:
     failures: list[str] = []
     ids = [row["id"] for row in rows]
-    require(len(rows) == 45, "measurement register contains 45 controlled checks", failures)
+    require(len(rows) == 46, "measurement register contains 46 controlled checks", failures)
     require(len(ids) == len(set(ids)), "measurement IDs are unique", failures)
-    require(ids == [f"M{index:03d}" for index in range(1, 46)], "measurement IDs are contiguous", failures)
+    require(ids == [f"M{index:03d}" for index in range(1, 47)], "measurement IDs are contiguous", failures)
     require(data.get("revision") == "A1", "release data revision is A1", failures)
     hard = data.get("hard_constraints", {})
     require(hard.get("minimum_perimeter_no_pcb_band_mm") >= 15.0, "perimeter no-PCB band is at least 15 mm", failures)
@@ -49,6 +49,8 @@ def validate_package(data: dict, rows: list[dict[str, str]]) -> list[str]:
     require(hard.get("carrier_pcb_max_width_mm") <= 166.0, "carrier PCB width is limited to 166 mm", failures)
     require(hard.get("carrier_pcb_max_height_mm") <= 268.0, "carrier PCB height is limited to 268 mm", failures)
     require(hard.get("minimum_closed_lid_dynamic_clearance_mm") >= 8.0, "closed-lid dynamic clearance target is at least 8 mm", failures)
+    require(hard.get("minimum_dedicated_fan_inlet_clearance_mm") >= 10.0, "dedicated fan inlet clearance is at least 10 mm", failures)
+    require(hard.get("minimum_fan_audio_separation_mm") >= 100.0, "fan/audio separation target is at least 100 mm", failures)
     require(hard.get("battery_engagement_direction") == "LEFT_TO_RIGHT", "battery engagement direction is locked left to right", failures)
     require(data.get("battery_dock", {}).get("removal_direction") == "RIGHT_TO_LEFT", "battery removal direction is locked right to left", failures)
     return failures

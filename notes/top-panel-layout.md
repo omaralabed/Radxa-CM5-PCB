@@ -171,26 +171,19 @@ Antenna zone:
 
 Thermal/mechanical zone:
 
-- CM5 heatsink/fan clearance below the panel
-- Two 40 mm enclosure fans mounted through the top panel, each with its own
-  grille, PWM control, and tach feedback
-- Top-panel fan selection: two Delta `THA0412AD-TZW3`, 40 x 40 x 20 mm,
-  independently controlled at 1 kHz PWM with tach monitoring. Use one Qualtek
-  `09150-F/30` 30 PPI filter guard on the intake only and a low-restriction
-  finger-safe guard/louver on the exhaust.
-- Enclosure fan 1, the left fan in the operator-side view, is the filtered
-  intake and blows air into the case.
-- Enclosure fan 2, the right fan, is the exhaust and blows air out of the case.
-- Point the intake and exhaust louvers in opposite external directions to
-  reduce hot-air recirculation.
-- Add an underside divider/shroud between the adjacent fans and extend it far
-  enough toward the carrier to prevent immediate intake-to-exhaust recirculation.
-  Final height and shape require the 3D component and harness fit check.
-- Separate mesh opening above the dedicated CM5 heatsink fan
-- The dedicated modem fan remains attached directly to the modem heatsink
-  below the panel
-- Internal spreader and gasketed upper-side-wall thermal bulkhead leading to
-  protected external fins
+- No top-panel fan or mesh openings. The former cooling area remains clear.
+- The CM5 and universal M.2 WWAN module mount on carrier B.Cu with their
+  heatsinks and dedicated attached cooling fans facing the bottom.
+- The CPU-fan adapter is supported by a structural bracket tied to carrier/frame
+  standoffs and maintains at least 10 mm unobstructed inlet clearance.
+- Two Delta `THA0412AD-TZW3`, 40 x 40 x 20 mm enclosure fans move to the case
+  sidewalls and remain independently controlled at 1 kHz PWM with tach.
+- Enclosure fan 1 is the filtered right-wall intake. Enclosure fan 2 is the
+  operator-wall center-right exhaust. No fan or PWM harness enters the XLR
+  quiet zone or guarded hinge-side PSU corridor.
+- Each sidewall fan requires a reinforcement plate, closed-cell gasket,
+  finger guard, splash-directed louver, and measured clearance from molded
+  ribs, taper, handle, hinges, latches, and the custom panel frame.
 - H03 lid-display bundle uses 1000 +/- 25 mm prototype HDMI, USB-touch, and
   12 V power cables, each with a retained hinge loop and releasable panel-lift
   loop. Final lengths follow the first-article motion test.
@@ -268,19 +261,20 @@ headset openings, the SIM service openings, the Gold Mount pattern, the RF
 bulkheads, and the lid harness notch all remain dependent on final stack height
 or physical sample measurements.
 
-## Rev I SVG
+## Rev J SVG
 
 The current dimensioned connector-placement study is:
 
-- `../cad/im2300-top-panel-layout-rev-i.svg`
+- `../cad/im2300-top-panel-layout-rev-j.svg`
 
 It uses the nominal 431.8 x 298.0 mm bezel envelope and shows the Gold Mount
 battery envelope, all required user connectors, RF spacing, the guarded AC
-zone, and the two hardware-controlled diffused warm-white panel lights. Rev I
+zone, and the two hardware-controlled diffused warm-white panel lights. Rev J
 adds the 15 mm four-side frame/screw keepout, moves the XLR bank 2.3 mm right,
 retains the centered 90 x 8 mm hinge-edge lid-harness notch and selected DPST
-rocker, and labels the left enclosure fan as intake and the right enclosure fan
-as exhaust. It also locks the Gold Mount dock orientation so the battery
+rocker, and removes all top-panel cooling openings. Sidewall fan geometry is
+controlled by `../cad/mechanical/im2300-sidewall-cooling-layout-rev-a.svg`. It
+also locks the Gold Mount dock orientation so the battery
 engages from left to right, toward the network side, and removes toward the XLR
 side. The left insertion corridor and complete slide/release sweep must remain
 clear with representative XLR and RJ45 cables attached.
@@ -289,5 +283,5 @@ The notch dimensions must be replaced by the selected HDMI, USB-touch, and
 fabrication. It is not a CNC/fabrication cut file until actual case
 measurements and manufacturer cutout drawings replace the nominal geometry.
 
-Rev I is the sole retained top-panel drawing. Older panel revisions and locked
+Rev J is the sole retained top-panel drawing. Older panel revisions and locked
 duplicate exports have been removed.

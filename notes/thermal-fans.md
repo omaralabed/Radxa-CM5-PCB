@@ -13,10 +13,10 @@ Required fans:
   Delta `FFB0412EN-00Y2E` fan
 - Fan 2: dedicated cellular modem fan aimed at the modem heatsink/thermal
   spreader
-- Fan 3 / enclosure fan 1: left top-panel filtered intake, controlled by board
+- Fan 3 / enclosure fan 1: right-sidewall filtered intake, controlled by board
   temperature sensors
-- Fan 4 / enclosure fan 2: right top-panel exhaust, controlled by board
-  temperature sensors
+- Fan 4 / enclosure fan 2: operator-sidewall center-right exhaust, controlled
+  by board temperature sensors
 
 ## Preferred Hardware
 
@@ -26,11 +26,12 @@ Use four 12 V, 4-wire PWM/tach fans. The CPU fan is locked as follows:
   the supplied thermal pad and four CM2 x 4 mm screws.
 - Fan: Delta `FFB0412EN-00Y2E`, 40 x 40 x 28 mm, 12 V, 1.45 A nominal,
   17.4 W, 25,000 RPM, 32.9 CFM, PWM, and tachometer.
-- Mount the 51 g Delta fan independently to the top-panel support/frame using
-  vibration isolators. Do not transfer fan weight or vibration into the
-  heatsink, CM5, or board-to-board connectors.
-- Center the fan over the heatsink with a preliminary 5-10 mm outlet gap and
-  a short foam gasket/shroud so the airflow passes through the heatsink fins.
+- Mount the CM5 on the carrier B.Cu so the 5540A and fan face the case bottom.
+  Attach the Delta fan to a short heatsink adapter/shroud, but use a structural
+  bracket and vibration isolators to carry the 51 g fan mass into carrier/frame
+  standoffs. Do not load only the heatsink screws or board-to-board connectors.
+- Drive air upward through the heatsink and maintain at least 10 mm of clear
+  inlet space between the fan and the case floor or bottom-mounted hardware.
 - Use a protected `FAN_CPU_12V` branch sized for 3 A. The CPU fan alone is too
   large for the previous 2 A shared fan-rail assumption.
 - Use 25 kHz PWM and tach feedback. Hardware failure states command full speed.
@@ -51,7 +52,7 @@ independently from temperature and fault state. Hardware pull states must
 command all four fans to full speed if firmware, I2C, or the fan controller
 fails.
 
-The two top-panel enclosure fans are selected as Delta
+The two sidewall enclosure fans are selected as Delta
 `THA0412AD-TZW3`: 40 x 40 x 20 mm, 12 V, four wire, PWM and tach, IP55,
 0.43 A nominal / 0.52 A maximum each, 15,600 RPM, 20.56 CFM free-air flow,
 and 1.385 inch H2O maximum static pressure. The label current is 0.60 A, so
@@ -61,10 +62,10 @@ intake. Use a low-restriction finger-safe guard/louver on enclosure fan 2, the
 exhaust. The two external louvers point in opposing directions so discharged
 hot air cannot be pulled directly back into the intake.
 
-The airflow direction is locked: enclosure fan 1 is intake and enclosure fan 2
-is exhaust. Add an underside divider or duct between the adjacent openings so
-intake air must travel around the carrier hot zones before reaching the
-exhaust. Prototype testing must confirm filter pressure drop, panel vibration,
+The airflow direction is locked: the right-wall fan is intake and the
+operator-wall center-right fan is exhaust. Add internal baffles so intake air
+travels through the CM5, modem, and regulator zones before reaching the
+exhaust. Prototype testing must confirm filter pressure drop, wall vibration,
 external and internal recirculation, and the actual swept airflow path. The
 20.56 CFM rating is a free-air value; the intake/exhaust pair forms one series
 air path and must not be budgeted as 41.12 CFM.
@@ -79,16 +80,10 @@ regulation near full speed.
 
 ## Enclosure Constraint
 
-The Pelican iM2300 starts as a sealed rugged case, but the three top-panel fan
-or mesh openings make this product intentionally vented and no longer
-watertight. The intake/exhaust pair exchanges heat with ambient air; filters do
-not restore the original Pelican environmental rating.
-
-The selected architecture is a gasketed aluminum thermal bulkhead through an
-upper side wall, connected to an internal aluminum heat spreader and an
-external finned aluminum heat sink. Exterior fins must not be blocked when the
-case rests on its base. A metal plate resting against the plastic case wall is
-not an adequate heat path.
+The Pelican iM2300 starts as a sealed rugged case, but the two sidewall fan
+openings make this product intentionally vented and no longer watertight. The
+top panel has no cooling openings. Filters, gaskets, and splash-directed
+louvers reduce contamination but do not restore the original Pelican rating.
 
 Size and test this path at the 151.7 W continuous system design case and the
 184.2 W transient case. If the prototype cannot meet limits, use a sealed
@@ -124,10 +119,10 @@ The cellular modem gets its own thermal hardware:
   30% after valid tach feedback is present.
 - Enclosure fan 1 and enclosure fan 2 must never be assembled with the same
   airflow direction. Key or label both fan harnesses and add permanent
-  `INTAKE` / `EXHAUST` markings on the panel underside.
+  `INTAKE` / `EXHAUST` markings beside the sidewall mounts.
 - Control the two enclosure fans independently. Start with slightly higher
   intake command for modest positive pressure, then tune from measured CFM,
-  filter loading, temperatures, and leakage including the CM5 mesh opening.
+  filter loading, temperatures, and measured case leakage.
 - On every stopped-to-running transition, command 100 percent duty for the
   spin-up interval, then reduce to the requested duty. Do not command a running
   duty below 30 percent; the Delta datasheet guarantees dead-stop starting at
@@ -154,7 +149,7 @@ Preliminary enclosure-fan policy, to be tuned in chamber testing:
 | 65 C or above, invalid sensor, stalled fan, or control fault | 100% | 100% |
 
 The small intake bias is a starting point for positive pressure. Filter loading
-and the unfiltered CM5 opening may reverse that balance, so release values come
+and case leakage may reverse that balance, so release values come
 from measured pressure, CFM, and component temperatures rather than the table
 alone.
 
@@ -188,20 +183,20 @@ Linux direction:
 ## Open Decisions
 
 - Exact modem 12 V fan model, all fan connector types, and pinouts.
-- Final CPU-fan mesh opening, 5-10 mm plenum, gasket/shroud, and vibration
-  isolator geometry after importing the Radxa and Delta STEP models.
+- Final downward CM5 cooling-cartridge bracket, adapter/shroud, 10 mm minimum
+  inlet gap, and vibration-isolator geometry after importing exact 3D models.
 - Exact TMP117 placement and trip curves.
-- Thermal-bulkhead, spreader, heat-pipe/pad, and exterior-fin dimensions from
-  mechanical analysis and closed-case chamber testing.
-- Final intake/exhaust PWM balance, baffle geometry, splash guards, clogged
-  filter alarm threshold, and whether the dedicated CM5 mesh needs its own
-  filter or duct.
+- Optional internal heat-spreader/heat-pipe geometry if chamber testing shows
+  the sidewall airflow alone does not provide adequate local heat transport.
+- Final intake/exhaust centers, PWM balance, baffle geometry, reinforcement
+  plates, splash guards, and clogged-filter alarm threshold after measuring
+  the actual wall ribs, taper, handle, hinges, and latches.
 - Final board-temperature ramp thresholds after 45 C chamber characterization.
 
 ## Airflow Acceptance
 
-- Use smoke or tracer testing to prove air does not travel directly from fan 1
-  to fan 2 above the power stages.
+- Use smoke or tracer testing to prove right-wall intake air crosses the CM5,
+  modem, and regulator zones before leaving the operator-wall exhaust.
 - Measure intake and exhaust flow with clean and dust-loaded filters.
 - Qualify at 45 C / 113 F ambient, including the maximum CPU/GPU/NPU load,
   Wi-Fi AP traffic, cellular uplink, all audio channels, and maximum display

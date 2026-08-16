@@ -7,6 +7,10 @@ Use the same ProComm power/source-selection architecture from
 baseline, with a locked internal bottom-mounted MEAN WELL `RPS-400-24-C` 24 V
 AC/DC PSU as the primary 24 V source.
 
+Mechanical location is locked to a guarded bay along the hinge/display side of
+the case bottom. Keep both enclosure fans and all fan PWM/power wiring outside
+this bay and outside the XLR analog quiet zone.
+
 The ProComm source-selection architecture is reused intentionally: protected
 24 V first, D-Tap second, Gold Mount third, LTC4418 backup preselector, LTC4421
 main selector, back-to-back MOSFET blocking, fusing/protection, telemetry, and
@@ -124,7 +128,7 @@ Locked production PSU:
 
 - PSU: MEAN WELL `RPS-400-24-C`
 - Type: covered/enclosed, chassis-mount AC/DC converter
-- Mounting: bottom panel, not the top panel
+- Mounting: guarded hinge/display-side bay on the bottom panel, not the top panel
 - AC input: 80-264 Vac universal input
 - DC output design basis: 24 V, 10.5 A, 252 W convection-rated
 - Forced-air rating: about 400 W class; do not claim or depend on this unless
@@ -133,7 +137,7 @@ Locked production PSU:
 - Useful support outputs/signals: 5 V standby, 12 V fan output, power-good/fail,
   remote sense
 - Cooling: use the 252 W convection rating for the sealed iM2300 design basis;
-  temperature rise must still be tested with the final bottom-panel mounting
+  temperature rise must still be tested with the final hinge-side mounting
   and internal airflow pattern
 - Safety class: design as a Class I installation unless a full Class II
   integration is intentionally engineered; bond PSU metal case/chassis to PE
@@ -174,7 +178,7 @@ The AC side needs its own mechanical/electrical integration:
 
 - Top-panel fused C14 inlet, strain relief, optional interlock, and EMI filter
 - Protective-earth/chassis bond near the inlet and PSU mounting
-- Mains wiring from the top-panel inlet to the bottom-panel PSU kept short,
+- Mains wiring from the top-panel inlet to the hinge-side bottom PSU kept short,
   guarded, strain-relieved, and physically separated from audio, RF, Ethernet,
   HDMI, USB, fan, and low-voltage harnesses
 - Finger-safe guard/cover or service barrier around AC terminals and exposed

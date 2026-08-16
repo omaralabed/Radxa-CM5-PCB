@@ -2,8 +2,8 @@
 <svg xmlns="http://www.w3.org/2000/svg"
      width="1800" height="1320" viewBox="-30 -43 491.8 371"
      role="img" aria-labelledby="title desc">
-  <title id="title">Radxa CM5 ProComm iM2300 Top Panel Connector Layout Rev I</title>
-  <desc id="desc">Dimensioned preliminary connector placement for a 431.8 by 298 millimeter Pelican iM2300 top panel, with a 15 millimeter four-side frame and screw keepout, left-to-right Gold Mount battery engagement, two diffused warm-white courtesy lights, one capacitive touch switch, directed intake and exhaust, plus four Wi-Fi and four cellular RF bulkheads.</desc>
+  <title id="title">Radxa CM5 ProComm iM2300 Top Panel Connector Layout Rev J</title>
+  <desc id="desc">Dimensioned preliminary connector placement for a 431.8 by 298 millimeter Pelican iM2300 top panel, with a 15 millimeter four-side frame and screw keepout, left-to-right Gold Mount battery engagement, two diffused warm-white courtesy lights, one capacitive touch switch, no cooling openings, plus four Wi-Fi and four cellular RF bulkheads.</desc>
 
   <defs>
     <pattern id="minorGrid" width="10" height="10" patternUnits="userSpaceOnUse">
@@ -12,10 +12,6 @@
     <pattern id="majorGrid" width="50" height="50" patternUnits="userSpaceOnUse">
       <rect width="50" height="50" fill="url(#minorGrid)"/>
       <path d="M50 0H0V50" fill="none" stroke="#39414a" stroke-width="0.34"/>
-    </pattern>
-    <pattern id="meshPattern" width="4.5" height="3.9" patternUnits="userSpaceOnUse">
-      <circle cx="1.1" cy="1.1" r="0.75" fill="#090b0d" stroke="#73808a" stroke-width="0.2"/>
-      <circle cx="3.35" cy="3.05" r="0.75" fill="#090b0d" stroke="#73808a" stroke-width="0.2"/>
     </pattern>
     <marker id="arrow" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto-start-reverse">
       <path d="M6 3L0 0V6Z" fill="#aab3bd"/>
@@ -56,7 +52,7 @@
   <rect class="page" x="-30" y="-43" width="491.8" height="371"/>
 
   <text class="title" x="0" y="-32">RADXA CM5 PROCOMM - iM2300 TOP PANEL CONNECTOR LAYOUT</text>
-  <text class="subtitle" x="0" y="-24">REV I CONCEPT | GOLD MOUNT ENGAGES LEFT TO RIGHT | 15 mm FRAME KEEPOUT | 4T4R WI-FI / EIGHT RF BULKHEADS</text>
+  <text class="subtitle" x="0" y="-24">REV J CONCEPT | NO TOP-PANEL COOLING OPENINGS | 15 mm FRAME KEEPOUT | 4T4R WI-FI / EIGHT RF BULKHEADS</text>
 
   <!-- Overall dimensions -->
   <line class="extension" x1="0" y1="0" x2="0" y2="-13"/>
@@ -256,29 +252,11 @@
   <text class="tiny" x="272" y="194">WIFI</text><text class="tiny" x="296" y="194">CELL</text>
   <text class="tiny" x="320" y="194">TEMP</text><text class="tiny" x="344" y="194">AUDIO</text>
 
-  <!-- Two top-panel enclosure fans -->
-  <rect class="zone service" x="211" y="199.5" width="147" height="56" rx="3" fill="#17252f" fill-opacity="0.24"/>
-  <text class="small" x="283" y="204.5">40 mm HIGH-FLOW PWM</text>
-  <g transform="translate(243 222)">
-    <circle class="cut service" r="20"/>
-    <circle r="17" fill="none" stroke="#6d7b87" stroke-width="0.45"/>
-    <circle r="4" fill="#202b34" stroke="#76a7f7" stroke-width="0.45"/>
-    <path d="M0-4C8-17 15-10 11-3C8 2 4 2 0 0M4 0C17 8 10 15 3 11C-2 8-2 4 0 0M0 4C-8 17-15 10-11 3C-8-2-4-2 0 0M-4 0C-17-8-10-15-3-11C2-8 2-4 0 0" fill="#334550" stroke="#76a7f7" stroke-width="0.35"/>
-    <circle cx="-16" cy="-16" r="1.3" fill="none" stroke="#76a7f7" stroke-width="0.45"/><circle cx="16" cy="-16" r="1.3" fill="none" stroke="#76a7f7" stroke-width="0.45"/><circle cx="-16" cy="16" r="1.3" fill="none" stroke="#76a7f7" stroke-width="0.45"/><circle cx="16" cy="16" r="1.3" fill="none" stroke="#76a7f7" stroke-width="0.45"/>
-  </g>
-  <path d="M243 204V211" fill="none" stroke="#54c8d6" stroke-width="0.9" marker-end="url(#arrow)"/>
-  <g transform="translate(323 222)">
-    <circle class="cut service" r="20"/>
-    <circle r="17" fill="none" stroke="#6d7b87" stroke-width="0.45"/>
-    <circle r="4" fill="#202b34" stroke="#76a7f7" stroke-width="0.45"/>
-    <path d="M0-4C8-17 15-10 11-3C8 2 4 2 0 0M4 0C17 8 10 15 3 11C-2 8-2 4 0 0M0 4C-8 17-15 10-11 3C-8-2-4-2 0 0M-4 0C-17-8-10-15-3-11C2-8 2-4 0 0" fill="#334550" stroke="#76a7f7" stroke-width="0.35"/>
-    <circle cx="-16" cy="-16" r="1.3" fill="none" stroke="#76a7f7" stroke-width="0.45"/><circle cx="16" cy="-16" r="1.3" fill="none" stroke="#76a7f7" stroke-width="0.45"/><circle cx="-16" cy="16" r="1.3" fill="none" stroke="#76a7f7" stroke-width="0.45"/><circle cx="16" cy="16" r="1.3" fill="none" stroke="#76a7f7" stroke-width="0.45"/>
-  </g>
-  <path d="M323 211V204" fill="none" stroke="#e4b95f" stroke-width="0.9" marker-end="url(#arrow)"/>
-  <text class="small" x="243" y="247">FAN 1 - INTAKE</text>
-  <text class="tiny" x="243" y="251">FILTER + LOUVER LEFT</text>
-  <text class="small" x="323" y="247">FAN 2 - EXHAUST</text>
-  <text class="tiny" x="323" y="251">OPEN GUARD + LOUVER RIGHT</text>
+  <!-- Cooling openings intentionally removed from the connector panel. -->
+  <rect class="safe" x="211" y="202" width="147" height="48" rx="3"/>
+  <text class="small" x="284.5" y="221">CLEAR TOP-PANEL AREA</text>
+  <text class="tiny" x="284.5" y="229">NO FAN OR MESH CUTOUTS</text>
+  <text class="tiny" x="284.5" y="236">ENCLOSURE COOLING MOVED TO CASE SIDEWALLS</text>
   </g>
 
   <!-- Actual-size fused C14 representation -->
@@ -312,14 +290,6 @@
   <text class="tiny" x="259" y="285">EGG.1B.302 / 15 A</text>
   </g>
 
-  <!-- Mesh opening above dedicated CM5 fan -->
-  <g transform="translate(0 -8)">
-  <circle cx="326" cy="268" r="18" fill="#12171b" stroke="#76a7f7" stroke-width="0.65"/>
-  <circle cx="326" cy="268" r="15.5" fill="url(#meshPattern)" stroke="#667480" stroke-width="0.45"/>
-  <circle cx="326" cy="268" r="2.2" fill="#202b34" stroke="#76a7f7" stroke-width="0.4"/>
-  <text class="tiny" x="326" y="289">CM5 FAN MESH</text>
-  <text class="tiny" x="326" y="293">dedicated fan below panel</text>
-  </g>
   </g>
 
   <!-- Zone and fabrication notes -->
@@ -333,5 +303,5 @@
   <line x1="291" y1="307.5" x2="303" y2="307.5" stroke="#f4d8a2" stroke-width="1.4"/><text class="small" x="318" y="309">LIGHTING</text>
 
   <text class="subtitle" x="0" y="319">PRELIMINARY PLACEMENT ONLY: replace every shown cutout with the final connector manufacturer's drawing and the measured iM2300 plate outline.</text>
-  <text class="subtitle" x="0" y="325">The 15 mm dashed boundary reserves the custom four-side panel frame, screw hardware, tolerance, and PCB clearance. Final holes follow the measured frame drawing.</text>
+  <text class="subtitle" x="0" y="325">The top panel has no cooling openings. Sidewall fan cuts are controlled only by the separate Rev A cooling drawing and physical case measurements.</text>
 </svg>

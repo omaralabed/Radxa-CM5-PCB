@@ -150,31 +150,28 @@ at the connector boundary.
 
 ## Thermal Exit Path
 
-`LOCKED`: use a gasketed metal thermal bulkhead through an upper side wall of
-the iM2300, coupled to an external finned aluminum heat sink and an internal
-aluminum heat spreader.
+`LOCKED`: use a filtered right-wall intake and operator-wall center-right
+exhaust to reject heat through the iM2300 sidewalls. The top panel has no fan
+or mesh openings. Each sidewall fan uses a reinforcement plate, closed-cell
+gasket, finger guard, and splash-directed louver.
 
-This is a real heat path through the plastic case wall. A plate resting against
-the plastic shell is not accepted as a heat sink, and the four internal fans do
-not count as heat rejection.
-
-- Couple the CM5 heatsink, modem heatsink, Wi-Fi thermal pad, regulator hot
-  areas, and PSU mounting/spreader plate to the internal spreader with pads or
-  heat pipes where practical.
-- Keep the modem heatsink removable and avoid loading its miniature RF
-  connectors.
-- Put exterior fins where they are not blocked when the case rests on its base.
-- Use a gasketed flange, sealed fasteners, and chassis/PE bonding for the
-  bulkhead.
+- Mount the CM5 and universal M.2 WWAN card on carrier B.Cu. Their heatsinks and
+  dedicated attached fans face the bottom with at least 10 mm clear inlet gap.
+- Use structural brackets so fan mass and vibration load the carrier/frame
+  standoffs rather than the CM5 screws, B2B connectors, or M.2 edge connector.
+- Keep fan motors and PWM/power harnesses outside the XLR quiet zone. Filter the
+  fan rail and use a star return at the power board, independent of audio return.
+- Keep the bottom-mounted `RPS-400-24-C` in a guarded hinge/display-side bay;
+  do not route fan harnesses through the PSU or guarded AC corridor.
 - Size the thermal solution from the 151.7 W continuous system design case and
   verify the 184.2 W transient case. The display dissipates in the lid, so record
   base and lid temperatures separately.
 - Thermal acceptance testing is at 45 C / 113 F ambient, enclosure closed, display at
   maximum brightness, all network links active, Wi-Fi AP and cellular traffic
   active, all 8 audio channels running, and CPU/GPU/NPU load applied.
-- If the conductive bulkhead cannot meet temperature limits, the sealed
-  fallback is an external air-to-air heat exchanger. Open vents are allowed
-  only if reduced sealing becomes an explicit product decision.
+- The sidewall openings make reduced sealing an explicit product decision. If
+  that is unacceptable or thermal limits are missed, redesign around a sealed
+  air-to-air heat exchanger before production.
 
 Use a Microchip `EMC2305` five-channel fan controller for four independent PWM
 and tach channels, leaving one spare. Use three `TMP117` starting sensors near
@@ -244,8 +241,9 @@ test results:
   select exact surge parts from conducted-immunity testing.
 - C14 PE goes first to a dedicated chassis stud beside the inlet using a short
   green/yellow conductor, toothed washer, locking hardware, and a marked PE
-  connection. Bond PSU FG, exposed metal top panel, and thermal bulkhead to
-  this point.
+  connection. Bond PSU FG and the exposed metal top panel to this point; bond
+  metal sidewall reinforcement/guard parts only as required by the final EMC
+  and safety construction.
 - Use one deliberate low-voltage 0 V-to-chassis bond near power entry, with
   stuffing options for direct, RC, or capacitor coupling after EMC/audio test.
 - Bond XLR pin 1 and connector shells to chassis at entry; do not carry pin 1
@@ -293,7 +291,8 @@ The architecture is locked, but these items still require engineering proof:
 - PCB stackup and controlled-impedance rules.
 - Final XLR level/filter/protection calculations and audio performance tests.
 - Antenna models, cable assemblies, coexistence, and certified RF performance.
-- Final thermal-bulkhead/heatsink sizing and closed-case chamber test.
+- Final sidewall fan centers, guards/louvers, internal baffles, dedicated
+  cooling cartridges, ingress checks, and closed-case chamber test.
 - Final safety standard, fuse coordination, leakage current, hi-pot, ground
   bond, surge, ESD, EFT, conducted emissions, and radiated emissions.
 - OS/kernel driver validation and full-load TDM xrun/dropout testing.

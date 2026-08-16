@@ -4,7 +4,7 @@ Project workspace for a custom carrier board for the Radxa CM5 compute module.
 
 ## Self-Contained Project Files
 
-Only the current Rev I top-panel drawing and Rev H underside-floorplan drawing
+Only the current Rev J top-panel drawing and Rev I underside-floorplan drawing
 are retained under `cad/`. They reserve a 15 mm four-side frame/screw keepout
 and limit the suspended PCB envelopes before routing. The battery calculation
 is under `docs/`. The obsolete 8.7 GB design-session recording was intentionally
@@ -36,12 +36,14 @@ under `references/procomm-field-unit/`.
   monitoring.
 - Local touchscreen locked: JUNEBOX / DTM MALL `B0GK5X95D9` 15.6-inch HDMI
   touchscreen in the iM2300 lid, with USB touch and 12 V display power.
-- Thermal architecture locked: four PWM/tach fans plus a gasketed aluminum
-  side-wall thermal bulkhead, internal heat spreader, and external finned heat
-  sink. The modem uses both a heatsink and its own fan.
-- Directed enclosure airflow locked: left top-panel fan is filtered intake,
-  right top-panel fan is exhaust, with an underside baffle/duct preventing a
-  direct short air path between the adjacent fans.
+- Thermal architecture locked: four PWM/tach fans. The CM5 and modem are on the
+  carrier underside with downward-facing heatsinks and attached, structurally
+  supported dedicated fans. The enclosure uses a right-wall filtered intake
+  and an operator-wall center-right exhaust; the top panel has no fan or mesh
+  openings.
+- The `RPS-400-24-C` remains bottom-mounted in a guarded hinge/display-side bay.
+  Enclosure-fan power/PWM harnesses stay out of the PSU corridor and the XLR
+  analog quiet zone.
 - Storage decision selected: CM5 eMMC only.
 - Recovery/provisioning selected: USB recovery, debug UART, and network provisioning.
 - Enclosure selected: Pelican Storm Case iM2300 with custom top panel and PCB mounted underneath.

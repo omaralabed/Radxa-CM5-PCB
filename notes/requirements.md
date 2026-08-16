@@ -52,15 +52,16 @@ Custom carrier board for the Radxa CM5 module with multichannel TDM audio.
   connector colors and labels remain distinguishable. The lighting circuit is
   hardware-only, separately fused, and does not depend on
   the CM5, Linux, or a GPIO expander.
-- Cooling: four fans total. The locked CPU assembly is a panel-mounted Delta
-  `FFB0412EN-00Y2E` blowing downward through a 5-10 mm gasketed plenum onto a
-  Radxa `5540A` heatsink attached to the CM5. The fan is independently
-  vibration isolated and receives a protected 12 V / 3 A branch. Also use one
-  dedicated cellular-modem fan with modem heatsink/thermal spreader plus two
-  Delta `THA0412AD-TZW3` 40 x 40 x 20 mm enclosure fans. The board controls
-  their PWM channels independently at 1 kHz and monitors both tach signals.
-- Thermal strategy: gasketed side-wall aluminum thermal bulkhead, internal
-  spreader, and external finned heat sink; sealed heat exchanger is the fallback
+- Cooling: four fans total. The CM5 is mounted on carrier B.Cu with a downward-
+  facing Radxa `5540A` and attached Delta `FFB0412EN-00Y2E`; a structural
+  bracket carries fan mass/vibration and the inlet retains at least 10 mm floor
+  clearance. The modem uses a similar downward heatsink/fan cartridge. Two
+  Delta `THA0412AD-TZW3` 40 x 40 x 20 mm enclosure fans provide a filtered
+  right-wall intake and operator-wall center-right exhaust. All four PWM/tach
+  channels are board controlled; the top panel has no cooling openings.
+- Thermal strategy: measured sidewall airflow through the digital/power hot
+  zones with baffles, reinforcement plates, gaskets, and splash louvers; a
+  sealed heat exchanger remains the fallback if field sealing is re-required
 - Enclosure: Pelican Storm Case iM2300 with custom top panel and PCB mounted underneath
 - Storage/boot: use CM5 eMMC only
 - Recovery/provisioning: USB recovery, debug UART, and network provisioning
@@ -163,5 +164,5 @@ Start from the Radxa CM5 IO reference design and remove anything not needed.
 - Top-facing SIM access must use a vertical service daughterboard or a different
   top-entry mechanism; do not place the selected side-entry Wurth holder flat
   beneath the panel openings.
-- Pelican iM2300 is sealed; the gasketed metal thermal bulkhead and external
-  fins are the required heat exit. Internal fans only circulate air.
+- Pelican iM2300 starts sealed, but the selected sidewall intake/exhaust makes
+  this product intentionally vented. Validate ingress and 45 C thermal behavior.

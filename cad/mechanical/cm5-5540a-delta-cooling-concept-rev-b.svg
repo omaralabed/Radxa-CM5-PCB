@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1125" viewBox="0 0 480 300" role="img" aria-labelledby="title desc">
+  <title id="title">Radxa CM5 5540A and Delta cooling cartridge Rev B</title>
+  <desc id="desc">Preliminary downward-facing CM5 cooling cartridge using the Radxa 5540A and Delta FFB0412EN-00Y2E with a structural support bracket, bottom air inlet, sidewall enclosure airflow, and no top-panel cooling opening.</desc>
+  <defs>
+    <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M10 0H0V10" fill="none" stroke="#303740" stroke-width=".22"/></pattern>
+    <marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0L7 3.5L0 7Z" fill="#68b8ff"/></marker>
+    <marker id="dimArrow" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto-start-reverse"><path d="M6 3L0 0V6Z" fill="#b7c0c9"/></marker>
+    <style>
+      .page{fill:#111418}.grid{fill:url(#grid);opacity:.55}.box{fill:#151b21;stroke:#596673;stroke-width:.55}.carrier{fill:#173036;stroke:#52c7d5;stroke-width:1}.cm5{fill:#173426;stroke:#69d391;stroke-width:1}.sink{fill:#382f1e;stroke:#e4b95f;stroke-width:1}.fan{fill:#17263d;stroke:#76a7f7;stroke-width:1}.bracket{fill:#292032;stroke:#c493e8;stroke-width:1}.floor{fill:#343e48;stroke:#eef2f5;stroke-width:1}.air{fill:none;stroke:#68b8ff;stroke-width:1.5;marker-end:url(#arrow)}.leader{fill:none;stroke:#8c98a4;stroke-width:.5}.dim{fill:none;stroke:#b7c0c9;stroke-width:.55;marker-start:url(#dimArrow);marker-end:url(#dimArrow)}.warning{fill:#39211e;stroke:#f27767;stroke-width:.8}.clear{fill:#15243a;fill-opacity:.3;stroke:#76a7f7;stroke-width:.6;stroke-dasharray:3 2}
+      .title{fill:#f6f8fa;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:8px;font-weight:750}.subtitle{fill:#aeb7c0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:3.2px}.section{fill:#eef2f5;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:4.4px;font-weight:750}.label{fill:#eef2f5;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:3.2px;font-weight:650;text-anchor:middle}.small{fill:#bac3cc;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:2.7px;text-anchor:middle}.note{fill:#aeb8c2;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:2.65px}.callout{fill:#f3f5f7;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:2.9px;font-weight:650}.dimension{fill:#d0d7de;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:2.8px;text-anchor:middle;font-weight:600}.blue{fill:#8ec1ff}.gold{fill:#e4b95f}.green{fill:#83df9f}.purple{fill:#d4a2ef}.red{fill:#ff8a7b}text{letter-spacing:0}
+    </style>
+  </defs>
+  <rect class="page" width="480" height="300"/><rect class="grid" x="14" y="42" width="452" height="226" rx="4"/>
+  <text class="title" x="18" y="19">RADXA CM5 PROCOMM - 5540A + DELTA BOTTOM COOLING CARTRIDGE</text>
+  <text class="subtitle" x="18" y="29">REV B | CM5 ON CARRIER B.Cu | FAN INLET FACES CASE FLOOR | NO TOP-PANEL OPENING | VERIFY ACTUAL STACK BEFORE FABRICATION</text>
+
+  <rect class="box" x="22" y="53" width="184" height="165" rx="3"/>
+  <text class="section" x="30" y="64">BOTTOM VIEW - COOLING CARTRIDGE</text>
+  <text class="note" x="30" y="71">Fan attaches to the 5540A adapter/shroud; bracket carries mass to carrier standoffs.</text>
+  <rect class="clear" x="48" y="83" width="132" height="112" rx="4"/><rect class="carrier" x="58" y="91" width="112" height="94" rx="2"/>
+  <circle class="bracket" cx="65" cy="98" r="2.4"/><circle class="bracket" cx="163" cy="98" r="2.4"/><circle class="bracket" cx="65" cy="178" r="2.4"/><circle class="bracket" cx="163" cy="178" r="2.4"/>
+  <rect class="bracket" x="75" y="104" width="78" height="68" rx="3" fill-opacity=".34"/><rect class="sink" x="86.5" y="118" width="55" height="40" rx="2"/><rect class="fan" x="94" y="118" width="40" height="40" rx="2"/>
+  <circle cx="114" cy="138" r="15" fill="#101820" stroke="#8ec1ff" stroke-width=".7"/><circle cx="114" cy="138" r="3" fill="#526170" stroke="#8ec1ff" stroke-width=".5"/>
+  <path d="M114 135C109 125 99 125 100 133C101 139 108 140 114 138M117 138C127 133 126 124 119 125C113 126 113 133 114 138M114 141C119 151 128 149 126 142C124 136 118 137 114 138M111 138C101 143 103 152 110 149C116 147 116 142 114 138" fill="#47586a" stroke="#76a7f7" stroke-width=".45"/>
+  <circle class="bracket" cx="98" cy="122" r="2.8"/><circle class="bracket" cx="130" cy="122" r="2.8"/><circle class="bracket" cx="98" cy="154" r="2.8"/><circle class="bracket" cx="130" cy="154" r="2.8"/>
+  <line class="dim" x1="94" y1="110" x2="134" y2="110"/><text class="dimension" x="114" y="106">40.0 FAN</text><line class="dim" x1="86.5" y1="166" x2="141.5" y2="166"/><text class="dimension" x="114" y="174">55.0 HEATSINK</text>
+  <path class="leader" d="M75 104L45 80H31"/><text class="callout purple" x="31" y="78">STRUCTURAL BRACKET</text><path class="leader" d="M134 147L177 181"/><text class="callout blue" x="142" y="188">FFB0412EN-00Y2E</text><text class="note" x="142" y="193">40 x 40 x 28 mm; 51 g</text>
+  <text class="note" x="31" y="208">Bracket datum and fasteners are preliminary. Do not load only the CM5 M2 screws or B2B connectors.</text>
+
+  <rect class="box" x="216" y="53" width="242" height="165" rx="3"/>
+  <text class="section" x="225" y="64">SIDE SECTION - DOWNWARD-FACING STACK</text><text class="note" x="225" y="71">Carrier is below the top panel; CM5 and cooling cartridge face the bottom floor.</text>
+  <rect class="carrier" x="244" y="87" width="174" height="3"/><text class="small" x="391" y="83">CM5-CARRIER PCB</text>
+  <rect x="296" y="90" width="5" height="5" fill="#466450" stroke="#69d391" stroke-width=".4"/><rect x="361" y="90" width="5" height="5" fill="#466450" stroke="#69d391" stroke-width=".4"/>
+  <rect class="cm5" x="287" y="95" width="88" height="4" rx=".5"/><text class="label" x="331" y="98">RADXA CM5 - B.Cu</text><rect x="304" y="99" width="54" height="1.5" fill="#d89af0"/>
+  <rect class="sink" x="303.5" y="100.5" width="55" height="10" rx="1"/><path d="M308 101V108M314 101V108M320 101V108M326 101V108M332 101V108M338 101V108M344 101V108M350 101V108M356 101V108" stroke="#f0c96f" stroke-width=".8"/><text class="label" x="331" y="109">5540A</text>
+  <path class="bracket" d="M278 90V128H292V116H370V128H384V90H375V120H365V111H297V120H287V90Z" fill-opacity=".4"/>
+  <rect x="305.5" y="110.5" width="51" height="6" rx="1" fill="#21182a" stroke="#c493e8" stroke-width=".8"/><text class="small purple" x="399" y="115">ADAPTER / GASKET</text><path class="leader" d="M356.5 114H388"/>
+  <rect class="fan" x="311" y="116.5" width="40" height="28" rx="1.5"/><rect x="316" y="120.5" width="30" height="20" rx="10" fill="#101820" stroke="#8ec1ff" stroke-width=".6"/><text class="label" x="331" y="130">DELTA</text><text class="small" x="331" y="136">FFB0412</text>
+  <rect class="clear" x="294" y="144.5" width="74" height="17" rx="1"/><text class="small blue" x="331" y="155">10 mm MINIMUM CLEAR AIR INLET</text><rect class="floor" x="235" y="162" width="202" height="4"/><text class="small" x="404" y="173">CASE BOTTOM / HARDWARE PLANE</text>
+  <path class="air" d="M321 158V146"/><path class="air" d="M331 158V146"/><path class="air" d="M341 158V146"/><path class="air" d="M321 116V111"/><path class="air" d="M331 116V111"/><path class="air" d="M341 116V111"/><path class="air" d="M303 105C282 105 269 112 255 126"/><path class="air" d="M359 105C380 105 393 112 407 126"/>
+  <text class="callout blue" x="245" y="140">AIR ENTERS FROM FLOOR GAP</text><text class="note" x="254" y="181">Air exits laterally into the right-intake to operator-exhaust enclosure stream.</text>
+  <line class="dim" x1="427" y1="116.5" x2="427" y2="144.5"/><text class="dimension" x="434" y="130.5" transform="rotate(-90 434 130.5)">28 FAN</text><line class="dim" x1="278" y1="145" x2="278" y2="162"/><text class="dimension" x="271" y="153.5" transform="rotate(-90 271 153.5)">10 MIN</text>
+  <rect class="warning" x="230" y="191" width="214" height="18" rx="2" fill-opacity=".45"/><text class="callout red" x="238" y="198">STRUCTURAL RULE</text><text class="note" x="238" y="204">Fan attaches to the sink adapter, but bracket/standoffs carry mass and vibration into the carrier/frame.</text>
+
+  <rect class="box" x="22" y="228" width="436" height="40" rx="3"/><text class="section" x="30" y="239">POWER, CONTROL, AND VALIDATION</text>
+  <rect class="warning" x="31" y="246" width="74" height="14" rx="1" fill-opacity=".35"/><text class="label" x="68" y="252">FAN_CPU_12V</text><text class="small" x="68" y="257">protected 3 A branch</text>
+  <rect class="fan" x="122" y="246" width="74" height="14" rx="1"/><text class="label" x="159" y="252">DELTA FFB0412</text><text class="small" x="159" y="257">12 V / 1.45 A nominal</text>
+  <rect class="box" x="213" y="246" width="88" height="14" rx="1"/><text class="label" x="257" y="252">EMC2305 + DRIVER</text><text class="small" x="257" y="257">25 kHz PWM + tach</text>
+  <rect class="cm5" x="318" y="246" width="122" height="14" rx="1"/><text class="label" x="379" y="252">FULL-SPEED FAIL-SAFE</text><text class="small" x="379" y="257">log RPM and CPU temperature</text>
+  <text class="note" x="18" y="283">LOCKED CONCEPT: no top-panel mesh or fan. CM5 is mounted on B.Cu and the dedicated fan inlet faces the bottom with at least 10 mm unobstructed clearance.</text>
+  <text class="note" x="18" y="290">MECHANICAL HOLD: import exact carrier, CM5, 5540A, fan, bracket, and case geometry; verify thermal contact, fin orientation, cable exit, service access, and shock loads.</text>
+  <text class="note" x="18" y="297">QUALIFICATION: sustained CPU/GPU/NPU load, clogged side filter, fan failure, vibration, and 45 C ambient operation are required before production.</text>
+</svg>
