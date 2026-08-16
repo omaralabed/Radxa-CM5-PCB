@@ -1,0 +1,528 @@
+sheet,reference,value,manufacturer,mpn,footprint,route_status,production_status,evidence_note
+Audio-8x8,C901,4.7nF 1kV C0G,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Audio-8x8,J101,AUDIO_TDM_CONTROL,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Audio-8x8,J102,AUDIO_12V_POWER,Molex,43045-0412,Connector_Molex:Molex_Micro-Fit_3.0_43045-0412_2x02_P3.00mm_Vertical,READY,READY,
+Audio-8x8,J201,NC3MAV,Neutrik,NC3MAV,Connector_Audio:Jack_XLR_Neutrik_NC3MAV_Vertical,READY,READY,
+Audio-8x8,J202,NC3MAV,Neutrik,NC3MAV,Connector_Audio:Jack_XLR_Neutrik_NC3MAV_Vertical,READY,READY,
+Audio-8x8,J203,NC3MAV,Neutrik,NC3MAV,Connector_Audio:Jack_XLR_Neutrik_NC3MAV_Vertical,READY,READY,
+Audio-8x8,J204,NC3MAV,Neutrik,NC3MAV,Connector_Audio:Jack_XLR_Neutrik_NC3MAV_Vertical,READY,READY,
+Audio-8x8,J205,NC3MAV,Neutrik,NC3MAV,Connector_Audio:Jack_XLR_Neutrik_NC3MAV_Vertical,READY,READY,
+Audio-8x8,J206,NC3MAV,Neutrik,NC3MAV,Connector_Audio:Jack_XLR_Neutrik_NC3MAV_Vertical,READY,READY,
+Audio-8x8,J207,NC3MAV,Neutrik,NC3MAV,Connector_Audio:Jack_XLR_Neutrik_NC3MAV_Vertical,READY,READY,
+Audio-8x8,J208,NC3MAV,Neutrik,NC3MAV,Connector_Audio:Jack_XLR_Neutrik_NC3MAV_Vertical,READY,READY,
+Audio-8x8,J301,NC3FAV,Neutrik,NC3FAV,Connector_Audio:Jack_XLR_Neutrik_NC3FAV_Vertical,READY,READY,
+Audio-8x8,J302,NC3FAV,Neutrik,NC3FAV,Connector_Audio:Jack_XLR_Neutrik_NC3FAV_Vertical,READY,READY,
+Audio-8x8,J303,NC3FAV,Neutrik,NC3FAV,Connector_Audio:Jack_XLR_Neutrik_NC3FAV_Vertical,READY,READY,
+Audio-8x8,J304,NC3FAV,Neutrik,NC3FAV,Connector_Audio:Jack_XLR_Neutrik_NC3FAV_Vertical,READY,READY,
+Audio-8x8,J305,NC3FAV,Neutrik,NC3FAV,Connector_Audio:Jack_XLR_Neutrik_NC3FAV_Vertical,READY,READY,
+Audio-8x8,J306,NC3FAV,Neutrik,NC3FAV,Connector_Audio:Jack_XLR_Neutrik_NC3FAV_Vertical,READY,READY,
+Audio-8x8,J307,NC3FAV,Neutrik,NC3FAV,Connector_Audio:Jack_XLR_Neutrik_NC3FAV_Vertical,READY,READY,
+Audio-8x8,J308,NC3FAV,Neutrik,NC3FAV,Connector_Audio:Jack_XLR_Neutrik_NC3FAV_Vertical,READY,READY,
+Audio-8x8,J901,CHASSIS_BOND_TEST,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Audio-8x8,R901,1M,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Audio-Control,C901,100nF,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Audio-Control,C902,1uF,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Audio-Control,C910,1uF,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Audio-Control,C911,1uF,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Audio-Control,C912,1uF,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Audio-Control,C913,1uF,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Audio-Control,C914,10uF,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Audio-Control,C915,10uF,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Audio-Control,C916,10uF,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Audio-Control,C917,10uF,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Audio-Control,C918,10uF,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Audio-Control,C919,4.7uF,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Audio-Control,C920,1uF,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Audio-Control,C921,1uF,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Audio-Control,C922,1uF,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Audio-Control,C923,2.2uF,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Audio-Control,C924,2.2uF,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Audio-Control,C925,2.2uF,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Audio-Control,C930,100nF,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Audio-Control,J901,AUDIO_8X8_TDM_CONTROL,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Audio-Control,J910,PJ-327A_CTIA,SOFNG / qualified equivalent,PJ-327A,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Audio-Control,R901,2.2k,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Audio-Control,R902,2.2k,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Audio-Control,R903,2.2k,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Audio-Control,R904,2.2k,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Audio-Control,R910,2.2k,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Audio-Control,R911,330k,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Audio-Control,R912,100k,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Audio-Control,R913,100k,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Audio-Control,U900,CM5_AUDIO_OFFSHEET_PORT,,,,NOT_BOARD_MOUNTED,NOT_BOARD_MOUNTED,Typed CM5 off-sheet audio interface
+Audio-Control,U901,SN65LVDS047PW,Texas Instruments,SN65LVDS047PWR,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Audio-Control,U902,SN65LVDT2D,Texas Instruments,SN65LVDT2DR,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Audio-Control,U903,PCA9306D,NXP,"PCA9306D,118",,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Audio-Control,U910,LP5907MFX-3.3,Texas Instruments,LP5907MFX-3.3/NOPB,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Audio-Control,U911,LP5907MFX-1.8,Texas Instruments,LP5907MFX-1.8/NOPB,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Audio-Control,U912,ES8316,Everest Semiconductor,ES8316,Package_DFN_QFN:QFN-32-1EP_4x4mm_P0.4mm_EP2.9x2.9mm_ThermalVias,READY,READY,
+Audio-Control,U913,TPA6132A2RTE,Texas Instruments,TPA6132A2RTER,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Audio-Control,U914,TPD4E05U06DQA,Texas Instruments,TPD4E05U06DQAR,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+CM5-Carrier,J101,RAW_POWER_FROM_PWR_SELECT,Molex,43045-0412,Connector_Molex:Molex_Micro-Fit_3.0_43045-0412_2x02_P3.00mm_Vertical,READY,READY,
+CM5-Carrier,J102,PWR_STATUS_FROM_SELECTOR,Molex,53047-0810,Connector_Molex:Molex_PicoBlade_53047-0810_1x08_P1.25mm_Vertical,READY,READY,
+CM5-Carrier,J103,PWR_TELEMETRY_FROM_SELECTOR,Molex,53047-0610,Connector_Molex:Molex_PicoBlade_53047-0610_1x06_P1.25mm_Vertical,READY,READY,
+CM5-Carrier,J201,AUDIO_TDM_CONTROL,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+CM5-Carrier,J202,AUDIO_12V_POWER,Molex,43045-0412,Connector_Molex:Molex_Micro-Fit_3.0_43045-0412_2x02_P3.00mm_Vertical,READY,READY,
+CM5-Carrier,J401,CPU_FAN,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+CM5-Carrier,J402,MODEM_FAN,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+CM5-Carrier,J403,THA0412AD-TZW3_INTAKE,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+CM5-Carrier,J404,THA0412AD-TZW3_EXHAUST,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+CM5-Core-Allocated,J501,RADXA CM5 U13-A MATE,Hirose,DF40C-100DS-0.4V(51),Connector_Hirose_DF40:Hirose_DF40C-100DS-0.4V_2x50_P0.4mm,READY,READY,
+CM5-Core-Allocated,J502,RADXA CM5 U13-B MATE,Hirose,DF40C-100DS-0.4V(51),Connector_Hirose_DF40:Hirose_DF40C-100DS-0.4V_2x50_P0.4mm,READY,READY,
+CM5-Core-Allocated,J503,RADXA CM5 J1 MATE,Hirose,DF40C-100DS-0.4V(51),Connector_Hirose_DF40:Hirose_DF40C-100DS-0.4V_2x50_P0.4mm,READY,READY,
+CM5-Core-Allocated,J510,CM5_POWER_SERVICE,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+CM5-Core-Allocated,J511,DEBUG_UART_3V3,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+CM5-Core-Allocated,J512,INTERNAL_USB_RECOVERY,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+CM5-Core-Allocated,J513,CM5_POWER_ENTRY,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Display-Harness,C801,10uF,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Display-Harness,C802,100nF,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Display-Harness,F801,100mA,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Display-Harness,F802,1.0A hold,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Display-Harness,J801,HDMI_TO_LID_DISPLAY,Molex,208658-1001,Connector_Video:HDMI_A_Molex_208658-1001_Horizontal,READY,READY,
+Display-Harness,J802,TOUCH_USB_HOST,Wurth Elektronik,692122030100,Connector_USB:USB3_A_Receptacle_Wuerth_692122030100,READY,READY,
+Display-Harness,J803,LID_DISPLAY_12V,Molex,43045-0412,Connector_Molex:Molex_Micro-Fit_3.0_43045-0412_2x02_P3.00mm_Vertical,READY,READY,
+Display-Harness,R801,2.2k,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Display-Harness,R802,2.2k,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Display-Harness,U801,TPD4E05U06DQA,Texas Instruments,TPD4E05U06DQAR,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Display-Harness,U802,TPD4E05U06DQA,Texas Instruments,TPD4E05U06DQAR,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Display-Harness,U803,TPD4E05U06DQA,Texas Instruments,TPD4E05U06DQAR,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Display-Harness,U804,TPD4E05U06DQA,Texas Instruments,TPD4E05U06DQAR,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Network-PCIe,C601,100nF,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Network-PCIe,C602,100nF,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Network-PCIe,C603,100nF,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Network-PCIe,C604,100nF,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Network-PCIe,C6111,10uF,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Network-PCIe,C6112,100nF,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Network-PCIe,C6113,1uF ESR>=0.1R,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Network-PCIe,C6121,10uF,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Network-PCIe,C6122,100nF,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Network-PCIe,C6123,1uF ESR>=0.1R,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Network-PCIe,C6131,10uF,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Network-PCIe,C6132,100nF,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Network-PCIe,C6133,1uF ESR>=0.1R,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Network-PCIe,J610,74991114412,Wurth Elektronik,74991114412,CM5Carrier:T_Wurth_WE-RJ45LAN_74991114412,READY,READY,
+Network-PCIe,J611,74991114412,Wurth Elektronik,74991114412,CM5Carrier:T_Wurth_WE-RJ45LAN_74991114412,READY,READY,
+Network-PCIe,J612,74991114412,Wurth Elektronik,74991114412,CM5Carrier:T_Wurth_WE-RJ45LAN_74991114412,READY,READY,
+Network-PCIe,J613,74991114412,Wurth Elektronik,74991114412,CM5Carrier:T_Wurth_WE-RJ45LAN_74991114412,READY,READY,
+Network-PCIe,J620,AW7915-NP1_WIFI6_4T4R,Molex,0679101002,CM5Carrier:Molex_0679101002_Mini_PCIe,READY,READY,
+Network-PCIe,J621,PCIE_SPARE_TEST,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Network-PCIe,L6111,3.3uH,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Network-PCIe,L6121,3.3uH,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Network-PCIe,L6131,3.3uH,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Network-PCIe,R601,4.7k,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Network-PCIe,R602,1.43k 1%,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Network-PCIe,R603,1.43k 1%,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Network-PCIe,R604,475R 1%,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Network-PCIe,R605,2.2k,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Network-PCIe,R606,2.2k,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Network-PCIe,R607,0R,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Network-PCIe,R6111,200R 1%,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Network-PCIe,R6112,6.04k 1%,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Network-PCIe,R6121,200R 1%,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Network-PCIe,R6122,6.04k 1%,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Network-PCIe,R6131,200R 1%,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Network-PCIe,R6132,6.04k 1%,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Network-PCIe,R620,10k,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Network-PCIe,R650,330R,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Network-PCIe,R651,330R,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Network-PCIe,R652,330R,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Network-PCIe,R653,330R,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Network-PCIe,R654,330R,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Network-PCIe,R655,330R,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Network-PCIe,R656,330R,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Network-PCIe,R657,330R,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Network-PCIe,U601,PI7C9X2G608GP,,,Package_BGA:BGA-196_15x15mm_Layout14x14_P1.0mm,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+Network-PCIe,U611,LAN7430,Microchip,LAN7430/Y9X,Package_DFN_QFN:QFN-48-1EP_7x7mm_P0.5mm_EP5.3x5.3mm_ThermalVias,READY,READY,
+Network-PCIe,U612,LAN7430,Microchip,LAN7430/Y9X,Package_DFN_QFN:QFN-48-1EP_7x7mm_P0.5mm_EP5.3x5.3mm_ThermalVias,READY,READY,
+Network-PCIe,U613,LAN7430,Microchip,LAN7430/Y9X,Package_DFN_QFN:QFN-48-1EP_7x7mm_P0.5mm_EP5.3x5.3mm_ThermalVias,READY,READY,
+Network-PCIe,U630,TPD4E05U06DQA,Texas Instruments,TPD4E05U06DQA,Package_SON:USON-10_2.5x1.0mm_P0.5mm,READY,READY,
+Network-PCIe,U631,TPD4E05U06DQA,Texas Instruments,TPD4E05U06DQA,Package_SON:USON-10_2.5x1.0mm_P0.5mm,READY,READY,
+Network-PCIe,U632,TPD4E05U06DQA,Texas Instruments,TPD4E05U06DQA,Package_SON:USON-10_2.5x1.0mm_P0.5mm,READY,READY,
+Network-PCIe,U633,TPD4E05U06DQA,Texas Instruments,TPD4E05U06DQA,Package_SON:USON-10_2.5x1.0mm_P0.5mm,READY,READY,
+Network-PCIe,U634,TPD4E05U06DQA,Texas Instruments,TPD4E05U06DQA,Package_SON:USON-10_2.5x1.0mm_P0.5mm,READY,READY,
+Network-PCIe,U635,TPD4E05U06DQA,Texas Instruments,TPD4E05U06DQA,Package_SON:USON-10_2.5x1.0mm_P0.5mm,READY,READY,
+Network-PCIe,U636,TPD4E05U06DQA,Texas Instruments,TPD4E05U06DQA,Package_SON:USON-10_2.5x1.0mm_P0.5mm,READY,READY,
+Network-PCIe,U637,TPD4E05U06DQA,Texas Instruments,TPD4E05U06DQA,Package_SON:USON-10_2.5x1.0mm_P0.5mm,READY,READY,
+Network-PCIe,Y611,25MHz,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Network-PCIe,Y612,25MHz,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Network-PCIe,Y613,25MHz,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+PWR-SELECT,C101,1uF 50V X7R,,,Capacitor_SMD:C_1210_3225Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,C105,10uF 50V,,,Capacitor_SMD:C_1210_3225Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,C110,47nF 50V,,,Capacitor_SMD:C_0603_1608Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,C120,1uF 16V,,,Capacitor_SMD:C_0603_1608Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,C121,1uF 16V,,,Capacitor_SMD:C_0603_1608Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,C122,1nF C0G,,,Capacitor_SMD:C_0603_1608Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,C123,100nF,,,Capacitor_SMD:C_0603_1608Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,C201,1uF 50V X7R,,,Capacitor_SMD:C_1210_3225Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,C202,10uF 50V X7R,,,Capacitor_SMD:C_1210_3225Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,C203,10uF 50V X7R,,,Capacitor_SMD:C_1210_3225Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,C205,10uF 50V,,,Capacitor_SMD:C_1210_3225Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,C210,47nF 50V,,,Capacitor_SMD:C_0603_1608Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,C223,100nF,,,Capacitor_SMD:C_0603_1608Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,C301,220uF 50V,Panasonic,EEH-ZS1H221V,PowerSelector:CP_Panasonic_EEH-ZS_G16_10x16.8,READY,READY,
+PWR-SELECT,C302,220uF 50V,Panasonic,EEH-ZS1H221V,PowerSelector:CP_Panasonic_EEH-ZS_G16_10x16.8,READY,READY,
+PWR-SELECT,C303,220uF 50V,Panasonic,EEH-ZS1H221V,PowerSelector:CP_Panasonic_EEH-ZS_G16_10x16.8,READY,READY,
+PWR-SELECT,C304,1uF 50V X7R,,,Capacitor_SMD:C_1210_3225Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,C305,100nF 50V,,,Capacitor_SMD:C_0603_1608Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,C310,100nF 10V X7R,,,Capacitor_SMD:C_0603_1608Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,C311,1nF 50V C0G,,,Capacitor_SMD:C_0603_1608Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,C511,47nF 50V,,,Capacitor_SMD:C_0603_1608Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,C512,470nF 50V,,,Capacitor_SMD:C_0603_1608Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,C521,47nF 50V,,,Capacitor_SMD:C_0603_1608Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,C522,470nF 50V,,,Capacitor_SMD:C_0603_1608Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,C531,100nF 16V,,,Capacitor_SMD:C_0603_1608Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,C532,1nF C0G,,,Capacitor_SMD:C_0603_1608Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,C533,100uF 35V,,,Capacitor_SMD:CP_Elec_10x10,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,C601,100nF,,,Capacitor_SMD:C_0603_1608Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,C602,10nF 100V,,,Capacitor_SMD:C_0603_1608Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,C603,100nF,,,Capacitor_SMD:C_0603_1608Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,C611,100nF,,,Capacitor_SMD:C_0603_1608Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,C612,10nF 100V,,,Capacitor_SMD:C_0603_1608Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,C613,100nF,,,Capacitor_SMD:C_0603_1608Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,C621,100nF,,,Capacitor_SMD:C_0603_1608Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,C622,10nF 100V,,,Capacitor_SMD:C_0603_1608Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,C623,100nF,,,Capacitor_SMD:C_0603_1608Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,C630,1uF,,,Capacitor_SMD:C_0603_1608Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,D101,SMCJ24A,Littelfuse,SMCJ24A,Diode_SMD:D_SMC,READY,READY,
+PWR-SELECT,D201,SMCJ18A,Littelfuse,SMCJ18A,Diode_SMD:D_SMC,READY,READY,
+PWR-SELECT,D202,SMBJ18CA,Littelfuse,SMBJ18CA,Diode_SMD:D_SMB,READY,READY,
+PWR-SELECT,D203,SMBJ18CA,Littelfuse,SMBJ18CA,Diode_SMD:D_SMB,READY,READY,
+PWR-SELECT,D511,BAT46WJ,Nexperia,"BAT46WJ,115",Diode_SMD:D_SOD-323,READY,READY,
+PWR-SELECT,D521,BAT46WJ,Nexperia,"BAT46WJ,115",Diode_SMD:D_SOD-323,READY,READY,
+PWR-SELECT,F101,15A,Littelfuse,0451015.MRL,Fuse:Fuse_Littelfuse-NANO2-451_453,READY,READY,
+PWR-SELECT,F201,15A,Littelfuse,0451015.MRL,Fuse:Fuse_Littelfuse-NANO2-451_453,READY,READY,
+PWR-SELECT,F202,15A,Littelfuse,0451015.MRL,Fuse:Fuse_Littelfuse-NANO2-451_453,READY,READY,
+PWR-SELECT,F203,15A,Littelfuse,0451015.MRL,Fuse:Fuse_Littelfuse-NANO2-451_453,READY,READY,
+PWR-SELECT,J101,PANEL_24V_HARNESS,Molex,43045-0412,Connector_Molex:Molex_Micro-Fit_3.0_43045-0412_2x02_P3.00mm_Vertical,READY,READY,
+PWR-SELECT,J202,LEMO_EGG.0B.302.CLL_13V_TO_16V8,Molex,43045-0412,Connector_Molex:Molex_Micro-Fit_3.0_43045-0412_2x02_P3.00mm_Vertical,READY,READY,
+PWR-SELECT,J203,GOLD_MOUNT_10V_TO_16V8,Molex,43045-0412,Connector_Molex:Molex_Micro-Fit_3.0_43045-0412_2x02_P3.00mm_Vertical,READY,READY,
+PWR-SELECT,J204,PANEL_POWER_SWITCH_HARNESS,Molex,43045-0412,Connector_Molex:Molex_Micro-Fit_3.0_43045-0412_2x02_P3.00mm_Vertical,READY,READY,
+PWR-SELECT,J301,RAW_OUT_TO_LM5176,Molex,43045-0412,Connector_Molex:Molex_Micro-Fit_3.0_43045-0412_2x02_P3.00mm_Vertical,READY,READY,
+PWR-SELECT,J401,STATUS_TO_CARRIER_3V3_PULLUPS,Molex,53047-0810,Connector_Molex:Molex_PicoBlade_53047-0810_1x08_P1.25mm_Vertical,READY,READY,
+PWR-SELECT,J402,POWER_TELEMETRY_TO_CARRIER,Molex,53047-0610,Connector_Molex:Molex_PicoBlade_53047-0610_1x06_P1.25mm_Vertical,READY,READY,
+PWR-SELECT,Q101,PSMN4R2-80YSE,Nexperia,PSMN4R2-80YSE,PowerSelector:LFPAK56E_SOT1023,READY,READY,
+PWR-SELECT,Q102,PSMN4R2-80YSE,Nexperia,PSMN4R2-80YSE,PowerSelector:LFPAK56E_SOT1023,READY,READY,
+PWR-SELECT,Q201,PSMN4R2-80YSE,Nexperia,PSMN4R2-80YSE,PowerSelector:LFPAK56E_SOT1023,READY,READY,
+PWR-SELECT,Q202,PSMN4R2-80YSE,Nexperia,PSMN4R2-80YSE,PowerSelector:LFPAK56E_SOT1023,READY,READY,
+PWR-SELECT,Q501,SiR5607DP-T1-RE3,Vishay,SiR5607DP-T1-RE3,Package_SO:PowerPAK_SO-8_Single,READY,READY,
+PWR-SELECT,Q502,SiR5607DP-T1-RE3,Vishay,SiR5607DP-T1-RE3,Package_SO:PowerPAK_SO-8_Single,READY,READY,
+PWR-SELECT,Q503,SiR5607DP-T1-RE3,Vishay,SiR5607DP-T1-RE3,Package_SO:PowerPAK_SO-8_Single,READY,READY,
+PWR-SELECT,Q504,SiR5607DP-T1-RE3,Vishay,SiR5607DP-T1-RE3,Package_SO:PowerPAK_SO-8_Single,READY,READY,
+PWR-SELECT,R101,18.2k 0.1%,,,Resistor_SMD:R_0603_1608Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,R102,9.10k 0.1%,,,Resistor_SMD:R_0603_1608Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,R103,3.01k 0.1%,,,Resistor_SMD:R_0603_1608Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,R104,1.06M 0.1%,,,Resistor_SMD:R_0603_1608Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,R105,2.40R 1%,,,Resistor_SMD:R_0603_1608Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,R111,1.50mR 1% 1W,Vishay,WSK25121L500FEA,Resistor_SMD:R_Shunt_Vishay_WSK2512_6332Metric_T2.21mm,READY,READY,
+PWR-SELECT,R131,100k,,,Resistor_SMD:R_0603_1608Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,R201,28.0k 0.1%,,,Resistor_SMD:R_0603_1608Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,R202,15.8k 0.1%,,,Resistor_SMD:R_0603_1608Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,R203,4.22k 0.1%,,,Resistor_SMD:R_0603_1608Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,R204,965k 0.1%,,,Resistor_SMD:R_0603_1608Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,R205,1.69R 1%,,,Resistor_SMD:R_0603_1608Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,R211,1.50mR 1% 1W,Vishay,WSK25121L500FEA,Resistor_SMD:R_Shunt_Vishay_WSK2512_6332Metric_T2.21mm,READY,READY,
+PWR-SELECT,R231,100k,,,Resistor_SMD:R_0603_1608Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,R301,176k 0.1%,,,Resistor_SMD:R_0603_1608Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,R302,10.0k 0.1%,,,Resistor_SMD:R_0603_1608Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,R311,1.00mR 1% 1W,Vishay,WSK25121L000FEA,Resistor_SMD:R_Shunt_Vishay_WSK2512_6332Metric_T2.21mm,READY,READY,
+PWR-SELECT,R501,55.6k 0.1%,,,Resistor_SMD:R_0603_1608Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,R502,26.1k 0.1%,,,Resistor_SMD:R_0603_1608Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,R503,919k 0.1%,,,Resistor_SMD:R_0603_1608Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,R504,56.2k 0.1%,,,Resistor_SMD:R_0603_1608Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,R505,31.6k 0.1%,,,Resistor_SMD:R_0603_1608Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,R506,909k 0.1%,,,Resistor_SMD:R_0603_1608Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,R511,6.81k 1%,,,Resistor_SMD:R_0603_1608Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,R521,6.81k 1%,,,Resistor_SMD:R_0603_1608Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,R541,47k,,,Resistor_SMD:R_0603_1608Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,R542,47k,,,Resistor_SMD:R_0603_1608Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,R601,10R 1%,,,Resistor_SMD:R_0603_1608Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,R602,10R 1%,,,Resistor_SMD:R_0603_1608Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,R603,100R 1%,,,Resistor_SMD:R_0603_1608Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,R611,10R 1%,,,Resistor_SMD:R_0603_1608Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,R612,10R 1%,,,Resistor_SMD:R_0603_1608Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,R613,100R 1%,,,Resistor_SMD:R_0603_1608Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,R621,10R 1%,,,Resistor_SMD:R_0603_1608Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,R622,10R 1%,,,Resistor_SMD:R_0603_1608Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,R623,100R 1%,,,Resistor_SMD:R_0603_1608Metric,READY,BLOCKED_NO_PRODUCTION_PART,Lock manufacturer and MPN before BOM release
+PWR-SELECT,U101,LTC4421IUHE#PBF,Analog Devices,LTC4421IUHE#PBF,Package_DFN_QFN:QFN-36-1EP_5x6mm_P0.5mm_EP3.6x4.6mm_ThermalVias,READY,READY,
+PWR-SELECT,U201,LTC4418IUF#PBF,Analog Devices,LTC4418IUF#PBF,Package_DFN_QFN:QFN-20-1EP_4x4mm_P0.5mm_EP2.6x2.6mm_ThermalVias,READY,READY,
+PWR-SELECT,U301,TPS3842A015DRLRQ1,Texas Instruments,TPS3842A015DRLRQ1,PowerSelector:Texas_DRL0006A_SOT-5X3-6_1.6x1.6mm_P0.5mm,READY,READY,
+PWR-SELECT,U601,INA228AIDGSR,Texas Instruments,INA228AIDGSR,Package_SO:TSSOP-10_3x3mm_P0.5mm,READY,READY,
+PWR-SELECT,U602,INA228AIDGSR,Texas Instruments,INA228AIDGSR,Package_SO:TSSOP-10_3x3mm_P0.5mm,READY,READY,
+PWR-SELECT,U603,INA228AIDGSR,Texas Instruments,INA228AIDGSR,Package_SO:TSSOP-10_3x3mm_P0.5mm,READY,READY,
+Power-Regulators-A1,C1100,5600uF 50V,Nichicon,LGU1H562MELZ,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1101,5600uF 50V,Nichicon,LGU1H562MELZ,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1102,5600uF 50V,Nichicon,LGU1H562MELZ,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1103,5600uF 50V,Nichicon,LGU1H562MELZ,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1104,5600uF 50V DNP,Nichicon,LGU1H562MELZ,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1105,5600uF 50V DNP,Nichicon,LGU1H562MELZ,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1106,5600uF 50V DNP,Nichicon,LGU1H562MELZ,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1107,5600uF 50V DNP,Nichicon,LGU1H562MELZ,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1108,2200uF 50V DNP,Nichicon,UHE1H222MHD6,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1109,1uF 50V X7R,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1110,47nF,Murata,GRM188R71H473KA61D,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1111,6.8nF,Murata,GRM1885C1H682JA01D,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1112,150pF C0G,Murata,GRM1885C1H151JA01D,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1113,47uF 6.3V X7R,Murata,GCM32ER70J476KE19L,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1114,47uF 6.3V X7R,Murata,GCM32ER70J476KE19L,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1115,47uF 6.3V X7R,Murata,GCM32ER70J476KE19L,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1116,47uF 6.3V X7R,Murata,GCM32ER70J476KE19L,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1117,47uF 6.3V X7R,Murata,GCM32ER70J476KE19L,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1118,100nF 25V X7R,Murata,GRM188R71E104KA01D,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1119,4.7uF 10V X7R,Murata,GRM21BR71A475KA73L,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1120,220pF,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1121,100nF,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1122,33nF,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1123,560pF,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1124,330uF 16V polymer,Panasonic,16SVP330M,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1125,330uF 16V polymer,Panasonic,16SVP330M,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1126,330uF 16V polymer,Panasonic,16SVP330M,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1127,330uF 16V polymer,Panasonic,16SVP330M,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1128,100nF 25V,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1129,100nF 25V,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1130,100nF,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1131,4.7uF 50V,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1132,4.7uF 50V,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1133,47uF X7R,Murata,GRM32ER71A476KE15L,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1134,47uF X7R,Murata,GRM32ER71A476KE15L,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1135,47uF X7R,Murata,GRM32ER71A476KE15L,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1136,1uF 10V X7R,Murata,GRM188R71A105KA61D,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1138,4.7nF,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1140,100nF,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1141,4.7uF 50V,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1142,4.7uF 50V,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1143,47uF X7R,Murata,GRM32ER71A476KE15L,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1144,47uF X7R,Murata,GRM32ER71A476KE15L,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1145,47uF X7R,Murata,GRM32ER71A476KE15L,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1146,1uF 10V X7R,Murata,GRM188R71A105KA61D,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1149,10nF,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1150,100nF,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1151,4.7uF 50V,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1152,4.7uF 50V,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1153,47uF X7R,Murata,GRM32ER71A476KE15L,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1154,47uF X7R,Murata,GRM32ER71A476KE15L,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1155,47uF X7R,Murata,GRM32ER71A476KE15L,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1156,1uF 10V X7R,Murata,GRM188R71A105KA61D,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1160,100nF,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1161,4.7uF 50V,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1162,4.7uF 50V,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1163,47uF X7R,Murata,GRM32ER71A476KE15L,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1164,47uF X7R,Murata,GRM32ER71A476KE15L,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1165,47uF X7R,Murata,GRM32ER71A476KE15L,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1166,1uF 10V X7R,Murata,GRM188R71A105KA61D,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C11700,470nF,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C11701,22uF 10V X7R,Murata,GRM21BR71A226ME44L,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C11702,22uF 10V X7R,Murata,GRM21BR71A226ME44L,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C11703,22uF 10V X7R,Murata,GRM21BR71A226ME44L,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C11704,10uF 25V X7R,Murata,GRM21BR71E106KA73L,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C11705,10uF 25V X7R,Murata,GRM21BR71E106KA73L,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C11710,470nF,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C11711,22uF 10V X7R,Murata,GRM21BR71A226ME44L,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C11712,22uF 10V X7R,Murata,GRM21BR71A226ME44L,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C11713,22uF 10V X7R,Murata,GRM21BR71A226ME44L,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C11714,10uF 25V X7R,Murata,GRM21BR71E106KA73L,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C11715,10uF 25V X7R,Murata,GRM21BR71E106KA73L,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C11720,470nF,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C11721,22uF 10V X7R,Murata,GRM21BR71A226ME44L,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C11722,22uF 10V X7R,Murata,GRM21BR71A226ME44L,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C11723,22uF 10V X7R,Murata,GRM21BR71A226ME44L,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C11724,10uF 25V X7R,Murata,GRM21BR71E106KA73L,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C11725,10uF 25V X7R,Murata,GRM21BR71E106KA73L,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C11730,470nF,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C11731,22uF 10V X7R,Murata,GRM21BR71A226ME44L,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C11732,22uF 10V X7R,Murata,GRM21BR71A226ME44L,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C11733,22uF 10V X7R,Murata,GRM21BR71A226ME44L,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C11734,10uF 25V X7R,Murata,GRM21BR71E106KA73L,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C11735,10uF 25V X7R,Murata,GRM21BR71E106KA73L,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C11800,1uF X7R,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C11801,1uF X7R,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C11802,1uF X7R,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C11803,1uF X7R,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C11804,1uF X7R,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C11805,1uF X7R,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C11806,1uF X7R,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C11807,1uF X7R,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1189,330uF 6.3V polymer,Panasonic,6SVPE330M,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1190,330uF 6.3V polymer,Panasonic,6SVPE330M,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1191,330uF 6.3V polymer,Panasonic,6SVPE330M,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1192,330uF 6.3V polymer,Panasonic,6SVPE330M,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1193,470uF 6.3V polymer,Panasonic,6SVPE470M,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1194,4.7uF 50V X7R,Murata,GRM31CR71H475KA12L,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1195,4.7uF 50V X7R,Murata,GRM31CR71H475KA12L,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1196,4.7uF 50V X7R,Murata,GRM31CR71H475KA12L,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1197,4.7uF 50V X7R,Murata,GRM31CR71H475KA12L,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1200,4.7uF 10V,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1201,2.2nF,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1202,4.7uF 50V X7R,Murata,GRM31CR71H475KA12L,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1203,4.7uF 50V X7R,Murata,GRM31CR71H475KA12L,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1204,4.7uF 50V X7R,Murata,GRM31CR71H475KA12L,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1205,4.7uF 50V X7R,Murata,GRM31CR71H475KA12L,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,C1210,10nF,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,D1120,BAT54WS,Diodes Incorporated,BAT54WS-7-F,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,D1121,BAT54WS,Diodes Incorporated,BAT54WS-7-F,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,F1180,3A time-lag,Littelfuse,0453003.MR,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,F1181,3A time-lag,Littelfuse,0453003.MR,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,F1182,2A time-lag,Littelfuse,0453002.MR,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,F1183,0.25A fast,Littelfuse,0453.250MR,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,F1184,3A time-lag,Littelfuse,0453003.MR,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,J1100,RAW_POWER_FROM_PWR_SELECT,Molex,43045-0412,Connector_Molex:Molex_Micro-Fit_3.0_43045-0412_2x02_P3.00mm_Vertical,READY,READY,
+Power-Regulators-A1,L1110,3.3uH / 28.6A,TDK,SPM10065VTT-3R3M-D,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,L1120,4.7uH / 20.9A Isat,Wurth Elektronik,74439370047,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,L1130,4.7uH / 15.2A Isat,Coilcraft,XAL7070-472MEC,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,L1140,4.7uH / 15.2A Isat,Coilcraft,XAL7070-472MEC,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,L1150,4.7uH / 15.2A Isat,Coilcraft,XAL7070-472MEC,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,L1160,4.7uH / 15.2A Isat,Coilcraft,XAL7070-472MEC,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,L11700,2.2uH / 2.0A rail,Coilcraft,XGL4030-222MEC,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,L11710,2.2uH / 1.5A rail,Coilcraft,XGL4030-222MEC,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,L11720,2.2uH / 1.0A rail,Coilcraft,XGL4030-222MEC,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,L11730,2.2uH / 1.0A rail,Coilcraft,XGL4030-222MEC,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,Q1110,NVMFS6B25NL,onsemi,NVMFS6B25NLT1G,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,Q1111,FDWS86068-F085,onsemi,FDWS86068-F085,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,Q1120,CSD18532Q5B,Texas Instruments,CSD18532Q5B,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,Q1121,CSD18532Q5B,Texas Instruments,CSD18532Q5B,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,Q1122,CSD17573Q5B,Texas Instruments,CSD17573Q5B,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,Q1123,CSD17573Q5B,Texas Instruments,CSD17573Q5B,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,R1110,40.2k,Yageo,RC0603FR-0740K2L,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,R1111,24.0k 0.1%,Vishay,TNPW060324K0BEEA,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,R1112,4.42k 0.1%,Vishay,TNPW06034K42BEEA,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,R1113,7.5k,Yageo,RC0603FR-077K5L,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,R1114,499R,Yageo,RC0603FR-07499RL,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,R1115,69.8k 1%,Yageo,RC0603FR-0769K8L,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,R1116,10k 1%,Yageo,RC0603FR-0710KL,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,R1120,6mR 2W,Susumu,KRL6432E-M-R006-F-T1,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,R1121,27.4k,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,R1122,93.1k,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,R1123,280k 0.1%,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,R1124,20k 0.1%,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,R1125,10k,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,R1126,4mR 6W,Susumu,KRL11050-C-R004-F-T1,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,R1127,73.2k 1%,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,R1128,10k 1%,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,R1130,33.2k / 400kHz,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,R1131,100k 0.1%,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,R1132,35.7k 0.1%,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,R1133,0R RBOOT,Yageo,RC0603JR-070RL,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,R1138,255R 1% / 6A ILIM,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,R1140,33.2k / 400kHz,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,R1141,100k 0.1%,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,R1142,43.2k 0.1%,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,R1143,0R RBOOT,Yageo,RC0603JR-070RL,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,R1150,33.2k / 400kHz,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,R1151,100k 0.1%,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,R1152,43.2k 0.1%,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,R1153,0R RBOOT,Yageo,RC0603JR-070RL,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,R1160,33.2k / 400kHz,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,R1161,100k 0.1%,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,R1162,43.2k 0.1%,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,R1163,0R RBOOT,Yageo,RC0603JR-070RL,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,R11700,1.24k 0.1%,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,R11701,4.99k 0.1%,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,R11702,7.5k S-CONF,Yageo,RC0603FR-077K5L,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,R11710,6.19k 0.1%,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,R11711,4.99k 0.1%,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,R11712,7.5k S-CONF,Yageo,RC0603FR-077K5L,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,R11720,15.6k 0.1%,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,R11721,4.99k 0.1%,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,R11722,7.5k S-CONF,Yageo,RC0603FR-077K5L,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,R11730,29.4k 0.1%,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,R11731,4.99k 0.1%,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,R11732,7.5k S-CONF,Yageo,RC0603FR-077K5L,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,TP1190,RAW_OUT_LOAD,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,TP1191,SYS_5V15,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,TP1192,AUX_12V,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,TP1193,MODEM_3V8,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,U1110,LM5146RGYR,Texas Instruments,LM5146RGYR,Package_DFN_QFN:Texas_RGY_R-PVQFN-N20_EP2.05x3.05mm_ThermalVias,READY,READY,
+Power-Regulators-A1,U1120,LM5176PWP,Texas Instruments,LM5176PWP,Package_SO:HTSSOP-28-1EP_4.4x9.7mm_P0.65mm_EP3.4x9.5mm_ThermalVias,READY,READY,
+Power-Regulators-A1,U1130,LM61460RJR,Texas Instruments,LM61460RJR,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,U1131,TPS259827LNRGER,Texas Instruments,TPS259827LNRGER,Package_DFN_QFN:Texas_RGE0024H_VQFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.7mm_ThermalVias,READY,READY,
+Power-Regulators-A1,U1140,LM61440RJR,Texas Instruments,LM61440RJR,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,U1141,TPS22990DMLR,Texas Instruments,TPS22990DMLR,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,U1150,LM61440RJR,Texas Instruments,LM61440RJR,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,U1160,LM61440RJR,Texas Instruments,LM61440RJR,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,U1170,TPS62913RPU,Texas Instruments,TPS62913RPUT,Package_DFN_QFN:Texas_RPU0010A_VQFN-HR-10_2x2mm_P0.5mm,READY,READY,
+Power-Regulators-A1,U1171,TPS62913RPU,Texas Instruments,TPS62913RPUT,Package_DFN_QFN:Texas_RPU0010A_VQFN-HR-10_2x2mm_P0.5mm,READY,READY,
+Power-Regulators-A1,U1172,TPS62913RPU,Texas Instruments,TPS62913RPUT,Package_DFN_QFN:Texas_RPU0010A_VQFN-HR-10_2x2mm_P0.5mm,READY,READY,
+Power-Regulators-A1,U1173,TPS62913RPU,Texas Instruments,TPS62913RPUT,Package_DFN_QFN:Texas_RPU0010A_VQFN-HR-10_2x2mm_P0.5mm,READY,READY,
+Power-Regulators-A1,U1180,TRI 20-1223 ON AUDIO-8X8,TRACO Power,TRI 20-1223,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Power-Regulators-A1,U1181,TPS7A2050PDBVR,Texas Instruments,TPS7A2050PDBVR,Package_TO_SOT_SMD:SOT-23-5,READY,READY,
+Power-Regulators-A1,U1182,TPS7A2050PDBVR,Texas Instruments,TPS7A2050PDBVR,Package_TO_SOT_SMD:SOT-23-5,READY,READY,
+Power-Regulators-A1,U1183,TPS7A2033PDBVR,Texas Instruments,TPS7A2033PDBVR,Package_TO_SOT_SMD:SOT-23-5,READY,READY,
+Power-Regulators-A1,U1184,TPS7A2018PDBVR,Texas Instruments,TPS7A2018PDBVR,Package_TO_SOT_SMD:SOT-23-5,READY,READY,
+Thermal-IO,C1020,100nF,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Thermal-IO,C1050,100nF,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Thermal-IO,C1051,100nF,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Thermal-IO,C1052,100nF,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Thermal-IO,D1060,PWR_GREEN,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Thermal-IO,D1061,BACKUP_VIOLET,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Thermal-IO,D1062,WIFI_BLUE,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Thermal-IO,D1063,CELL_AMBER,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Thermal-IO,D1064,TEMP_RED,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Thermal-IO,D1065,AUDIO_CYAN,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Thermal-IO,D1070,YIS LS102W 12V WARM WHITE,YIS Marine,LS102W,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Thermal-IO,D1071,YIS LS102W 12V WARM WHITE,YIS Marine,LS102W,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Thermal-IO,F1021,2.0A hold,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Thermal-IO,F1022,1.0A hold,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Thermal-IO,F1023,1.0A hold,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Thermal-IO,F1024,1.0A hold,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Thermal-IO,J1021,CPU_FAN,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Thermal-IO,J1022,MODEM_FAN,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Thermal-IO,J1023,THA0412AD-TZW3 INTAKE,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Thermal-IO,J1024,THA0412AD-TZW3 EXHAUST,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Thermal-IO,R1001,2.2k,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Thermal-IO,R1002,2.2k,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Thermal-IO,R1003,2.2k,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Thermal-IO,R1004,2.2k,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Thermal-IO,R1005,4.7k,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Thermal-IO,R1010,100k,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Thermal-IO,R1011,100k,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Thermal-IO,R1012,100k,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Thermal-IO,R1013,100k,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Thermal-IO,R1014,100k,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Thermal-IO,R1015,100k,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Thermal-IO,R1016,100k,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Thermal-IO,R1017,100k,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Thermal-IO,R1018,100k,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Thermal-IO,R1020,4.7k 5%,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Thermal-IO,R1021,4.7k,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Thermal-IO,R1031,10k,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Thermal-IO,R1032,10k,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Thermal-IO,R1033,10k,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Thermal-IO,R1034,10k,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Thermal-IO,R1041,10k,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Thermal-IO,R1042,10k,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Thermal-IO,R1043,10k,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Thermal-IO,R1044,10k,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Thermal-IO,R1050,5.1k,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Thermal-IO,R1060,1k,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Thermal-IO,R1061,1k,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Thermal-IO,R1062,1k,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Thermal-IO,R1063,1k,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Thermal-IO,R1064,1k,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Thermal-IO,R1065,1k,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Thermal-IO,R1070,1k ring limit,Yageo,RC0603FR-071KL,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Thermal-IO,S1070,CS7L2FR TOUCH LATCH,E-Switch,CS7L2FR,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Thermal-IO,U1000,PCA9306D,NXP,"PCA9306D,118",,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Thermal-IO,U1001,TCA9535PWR_0x20,Texas Instruments,TCA9535PWR,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Thermal-IO,U1002,TCA9535PWR_0x21,Texas Instruments,TCA9535PWR,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Thermal-IO,U1020,EMC2305-1-AP-TR,Microchip,EMC2305-1-AP-TR,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Thermal-IO,U1050,TMP117_CM5,Texas Instruments,TMP117MAIDRVR,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Thermal-IO,U1051,TMP117_MODEM,Texas Instruments,TMP117MAIDRVR,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+Thermal-IO,U1052,TMP117_BOARD_POWER,Texas Instruments,TMP117MAIDRVR,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+WWAN-SIM,C701,1000uF low-ESR,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+WWAN-SIM,C702,100uF,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+WWAN-SIM,C703,10uF,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+WWAN-SIM,C704,100nF,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+WWAN-SIM,J701,WWAN_M2_B_KEY_USB3_USB2,TE Connectivity,2199230-3,CM5Carrier:TE_2199230-3_M2_Key_B_4.2mm,READY,READY,
+WWAN-SIM,J702,693043020611,Wurth Elektronik,693043020611,CM5Carrier:J_Wurth_WR-CRD_693043020611,READY,READY,
+WWAN-SIM,J703,693043020611,Wurth Elektronik,693043020611,CM5Carrier:J_Wurth_WR-CRD_693043020611,READY,READY,
+WWAN-SIM,J711,CELL_1_RF,Amphenol RF / TE equivalent,Final bulkhead MPN TBD,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+WWAN-SIM,J712,CELL_2_RF,Amphenol RF / TE equivalent,Final bulkhead MPN TBD,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+WWAN-SIM,J713,CELL_3_RF,Amphenol RF / TE equivalent,Final bulkhead MPN TBD,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+WWAN-SIM,J714,CELL_4_GNSS_RF,Amphenol RF / TE equivalent,Final bulkhead MPN TBD,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+WWAN-SIM,J720,WWAN_CONTROL_TEST,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+WWAN-SIM,R701,100k,,,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+WWAN-SIM,U702,TPD4E05U06DQA,Texas Instruments,TPD4E05U06DQAR,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+WWAN-SIM,U703,TPD4E05U06DQA,Texas Instruments,TPD4E05U06DQAR,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+WWAN-SIM,U704,FSA2567MPX,onsemi,FSA2567MPX,Package_DFN_QFN:WQFN-16-1EP_3x3mm_P0.5mm_EP1.68x1.68mm,READY,READY,
+WWAN-SIM,U705,TPD4E05U06DQA,Texas Instruments,TPD4E05U06DQAR,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement
+WWAN-SIM,U706,TPD4E05U06DQA,Texas Instruments,TPD4E05U06DQAR,,BLOCKED_NO_FOOTPRINT,BLOCKED_NO_FOOTPRINT,Assign a drawing-backed footprint before placement

@@ -79,6 +79,7 @@ KICAD=/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli
 python3 cad/kicad/PWR-SELECT/validate_power_selector.py
 python3 cad/kicad/CM5-CARRIER/validate_power_regulators.py
 python3 cad/kicad/validate_interface_contracts.py
+python3 cad/kicad/audit_footprint_readiness.py
 ```
 
 The complete A1 gate is automated:
@@ -97,6 +98,13 @@ The interface validator checks 174 critical connector and control pin/net
 assignments, including all three selector harnesses, power/temperature alerts,
 the 30-pin buffered TDM/control link, separate audio power, four fan headers,
 and all 16 XLR connectors.
+
+The footprint audit covers every component on all ten sheets. Its default mode
+updates the controlled CSV and Markdown reports. Use `--routing` to enforce the
+placement/routing gate and `--release` to additionally require a manufacturer
+and MPN for every board-mounted item. The drawing-backed connector evidence and
+the Molex 0679101002 datum contract are recorded in
+[`FOOTPRINT_RELEASE.md`](FOOTPRINT_RELEASE.md).
 
 Every A1 detailed sheet and AUDIO-8X8 currently reports zero ERC errors. The
 remaining warnings are isolated off-sheet interface labels or deliberately

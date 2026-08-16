@@ -130,5 +130,6 @@ install_xml_if_changed "${REVIEW_TMP}/Audio-8x8-A1.xml" \
 python3 "${SCRIPT_DIR}/PWR-SELECT/validate_power_selector.py"
 python3 "${SCRIPT_DIR}/CM5-CARRIER/validate_power_regulators.py"
 python3 "${SCRIPT_DIR}/validate_interface_contracts.py"
+python3 "${SCRIPT_DIR}/audit_footprint_readiness.py"
 
 printf 'Detailed capture review passed: all ten sheets have zero ERC errors.\n'

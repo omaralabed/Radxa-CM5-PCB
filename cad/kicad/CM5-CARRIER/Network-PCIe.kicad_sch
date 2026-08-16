@@ -13733,6 +13733,15 @@
 				(justify left)
 			)
 		)
+		(property "Footprint" "CM5Carrier:Molex_0679101002_Mini_PCIe"
+			(at 515.62 420.37 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(property "Manufacturer" "Molex"
 			(at 518.16 425.4499 0)
 			(effects
@@ -20103,7 +20112,7 @@
 		)
 		(uuid "3e2f1c31-123b-51de-9807-18857cecd2dc")
 	)
-	(text "J620 Molex 0679101002 selected; import and verify its manufacturer land pattern before PCB release."
+	(text "J620 uses the controlled SD-67910-001 C2 land pattern; 3D/first-article fit remains a release gate."
 		(exclude_from_sim no)
 		(at 400 525 0.0000)
 		(effects

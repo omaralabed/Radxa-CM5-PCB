@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/Users/viewvision/Desktop/Radxa CM5 PCB/cad/kicad/AUDIO-8X8/Audio-8x8.kicad_sch</source>
-    <date>2026-08-16T03:15:10</date>
+    <date>2026-08-16T03:44:57</date>
     <tool>Eeschema 10.0.5-rc1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -130,10 +130,11 @@
     </comp>
     <comp ref="J201">
       <value>NC3MAV</value>
+      <footprint>Connector_Audio:Jack_XLR_Neutrik_NC3MAV_Vertical</footprint>
       <fields>
         <field name="Manufacturer">Neutrik</field>
         <field name="MPN">NC3MAV</field>
-        <field name="Footprint"/>
+        <field name="Footprint">Connector_Audio:Jack_XLR_Neutrik_NC3MAV_Vertical</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -159,10 +160,11 @@
     </comp>
     <comp ref="J202">
       <value>NC3MAV</value>
+      <footprint>Connector_Audio:Jack_XLR_Neutrik_NC3MAV_Vertical</footprint>
       <fields>
         <field name="Manufacturer">Neutrik</field>
         <field name="MPN">NC3MAV</field>
-        <field name="Footprint"/>
+        <field name="Footprint">Connector_Audio:Jack_XLR_Neutrik_NC3MAV_Vertical</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -188,10 +190,11 @@
     </comp>
     <comp ref="J203">
       <value>NC3MAV</value>
+      <footprint>Connector_Audio:Jack_XLR_Neutrik_NC3MAV_Vertical</footprint>
       <fields>
         <field name="Manufacturer">Neutrik</field>
         <field name="MPN">NC3MAV</field>
-        <field name="Footprint"/>
+        <field name="Footprint">Connector_Audio:Jack_XLR_Neutrik_NC3MAV_Vertical</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -217,10 +220,11 @@
     </comp>
     <comp ref="J204">
       <value>NC3MAV</value>
+      <footprint>Connector_Audio:Jack_XLR_Neutrik_NC3MAV_Vertical</footprint>
       <fields>
         <field name="Manufacturer">Neutrik</field>
         <field name="MPN">NC3MAV</field>
-        <field name="Footprint"/>
+        <field name="Footprint">Connector_Audio:Jack_XLR_Neutrik_NC3MAV_Vertical</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -246,10 +250,11 @@
     </comp>
     <comp ref="J205">
       <value>NC3MAV</value>
+      <footprint>Connector_Audio:Jack_XLR_Neutrik_NC3MAV_Vertical</footprint>
       <fields>
         <field name="Manufacturer">Neutrik</field>
         <field name="MPN">NC3MAV</field>
-        <field name="Footprint"/>
+        <field name="Footprint">Connector_Audio:Jack_XLR_Neutrik_NC3MAV_Vertical</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -275,10 +280,11 @@
     </comp>
     <comp ref="J206">
       <value>NC3MAV</value>
+      <footprint>Connector_Audio:Jack_XLR_Neutrik_NC3MAV_Vertical</footprint>
       <fields>
         <field name="Manufacturer">Neutrik</field>
         <field name="MPN">NC3MAV</field>
-        <field name="Footprint"/>
+        <field name="Footprint">Connector_Audio:Jack_XLR_Neutrik_NC3MAV_Vertical</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -304,10 +310,11 @@
     </comp>
     <comp ref="J207">
       <value>NC3MAV</value>
+      <footprint>Connector_Audio:Jack_XLR_Neutrik_NC3MAV_Vertical</footprint>
       <fields>
         <field name="Manufacturer">Neutrik</field>
         <field name="MPN">NC3MAV</field>
-        <field name="Footprint"/>
+        <field name="Footprint">Connector_Audio:Jack_XLR_Neutrik_NC3MAV_Vertical</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -333,10 +340,11 @@
     </comp>
     <comp ref="J208">
       <value>NC3MAV</value>
+      <footprint>Connector_Audio:Jack_XLR_Neutrik_NC3MAV_Vertical</footprint>
       <fields>
         <field name="Manufacturer">Neutrik</field>
         <field name="MPN">NC3MAV</field>
-        <field name="Footprint"/>
+        <field name="Footprint">Connector_Audio:Jack_XLR_Neutrik_NC3MAV_Vertical</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -362,10 +370,11 @@
     </comp>
     <comp ref="J301">
       <value>NC3FAV</value>
+      <footprint>Connector_Audio:Jack_XLR_Neutrik_NC3FAV_Vertical</footprint>
       <fields>
         <field name="Manufacturer">Neutrik</field>
         <field name="MPN">NC3FAV</field>
-        <field name="Footprint"/>
+        <field name="Footprint">Connector_Audio:Jack_XLR_Neutrik_NC3FAV_Vertical</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -390,10 +399,11 @@
     </comp>
     <comp ref="J302">
       <value>NC3FAV</value>
+      <footprint>Connector_Audio:Jack_XLR_Neutrik_NC3FAV_Vertical</footprint>
       <fields>
         <field name="Manufacturer">Neutrik</field>
         <field name="MPN">NC3FAV</field>
-        <field name="Footprint"/>
+        <field name="Footprint">Connector_Audio:Jack_XLR_Neutrik_NC3FAV_Vertical</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -418,10 +428,11 @@
     </comp>
     <comp ref="J303">
       <value>NC3FAV</value>
+      <footprint>Connector_Audio:Jack_XLR_Neutrik_NC3FAV_Vertical</footprint>
       <fields>
         <field name="Manufacturer">Neutrik</field>
         <field name="MPN">NC3FAV</field>
-        <field name="Footprint"/>
+        <field name="Footprint">Connector_Audio:Jack_XLR_Neutrik_NC3FAV_Vertical</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -446,10 +457,11 @@
     </comp>
     <comp ref="J304">
       <value>NC3FAV</value>
+      <footprint>Connector_Audio:Jack_XLR_Neutrik_NC3FAV_Vertical</footprint>
       <fields>
         <field name="Manufacturer">Neutrik</field>
         <field name="MPN">NC3FAV</field>
-        <field name="Footprint"/>
+        <field name="Footprint">Connector_Audio:Jack_XLR_Neutrik_NC3FAV_Vertical</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -474,10 +486,11 @@
     </comp>
     <comp ref="J305">
       <value>NC3FAV</value>
+      <footprint>Connector_Audio:Jack_XLR_Neutrik_NC3FAV_Vertical</footprint>
       <fields>
         <field name="Manufacturer">Neutrik</field>
         <field name="MPN">NC3FAV</field>
-        <field name="Footprint"/>
+        <field name="Footprint">Connector_Audio:Jack_XLR_Neutrik_NC3FAV_Vertical</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -502,10 +515,11 @@
     </comp>
     <comp ref="J306">
       <value>NC3FAV</value>
+      <footprint>Connector_Audio:Jack_XLR_Neutrik_NC3FAV_Vertical</footprint>
       <fields>
         <field name="Manufacturer">Neutrik</field>
         <field name="MPN">NC3FAV</field>
-        <field name="Footprint"/>
+        <field name="Footprint">Connector_Audio:Jack_XLR_Neutrik_NC3FAV_Vertical</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -530,10 +544,11 @@
     </comp>
     <comp ref="J307">
       <value>NC3FAV</value>
+      <footprint>Connector_Audio:Jack_XLR_Neutrik_NC3FAV_Vertical</footprint>
       <fields>
         <field name="Manufacturer">Neutrik</field>
         <field name="MPN">NC3FAV</field>
-        <field name="Footprint"/>
+        <field name="Footprint">Connector_Audio:Jack_XLR_Neutrik_NC3FAV_Vertical</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -558,10 +573,11 @@
     </comp>
     <comp ref="J308">
       <value>NC3FAV</value>
+      <footprint>Connector_Audio:Jack_XLR_Neutrik_NC3FAV_Vertical</footprint>
       <fields>
         <field name="Manufacturer">Neutrik</field>
         <field name="MPN">NC3FAV</field>
-        <field name="Footprint"/>
+        <field name="Footprint">Connector_Audio:Jack_XLR_Neutrik_NC3FAV_Vertical</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>

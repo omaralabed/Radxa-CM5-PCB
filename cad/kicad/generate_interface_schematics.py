@@ -605,12 +605,154 @@ def write_cm5_local_footprints() -> None:
         WURTH_74991114412 / "T_Wurth_WE-RJ45LAN_74991114412.step",
         CM5_LOCAL_3DMODELS / "T_Wurth_WE-RJ45LAN_74991114412.step",
     )
+    write_molex_0679101002_footprint()
     (CM5_LOCAL_LIBRARY.parent / "fp-lib-table").write_text(
         '(fp_lib_table\n'
         '  (version 7)\n'
         '  (lib (name "CM5Carrier")(type "KiCad")(uri "${KIPRJMOD}/CM5Carrier.pretty")(options "")(descr "Radxa CM5 carrier-local footprints"))\n'
         ')\n'
     )
+
+
+def write_molex_0679101002_footprint() -> None:
+    """Generate the Molex Mini PCIe land pattern from SD-67910-001 C2."""
+
+    def fp_uuid(label: str) -> str:
+        return str(
+            _uuid.uuid5(
+                _uuid.NAMESPACE_URL,
+                f"radxa-cm5-procomm:molex-0679101002:{label}",
+            )
+        )
+
+    lines = [
+        '(footprint "Molex_0679101002_Mini_PCIe"',
+        '  (version 20240108)',
+        '  (generator "pcbnew")',
+        '  (layer "F.Cu")',
+        '  (descr "Molex 0679101002 Mini PCI Express socket, 52 contacts, 0.8 mm pitch, 4.0 mm height; manufacturer recommended PCB layout from production drawing SD-67910-001 revision C2")',
+        '  (tags "Molex 0679101002 67910-1002 Mini PCIe socket")',
+        '  (property "Reference" "J**"',
+        '    (at 12.5 -7.0 0)',
+        '    (layer "F.SilkS")',
+        f'    (uuid "{fp_uuid("reference")}")',
+        '    (effects (font (size 1 1) (thickness 0.15)))',
+        '  )',
+        '  (property "Value" "Molex_0679101002_Mini_PCIe"',
+        '    (at 12.5 7.0 0)',
+        '    (layer "F.Fab")',
+        f'    (uuid "{fp_uuid("value")}")',
+        '    (effects (font (size 1 1) (thickness 0.15)))',
+        '  )',
+        '  (property "Datasheet" "https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/salesdrawingpdf/679/67910/679100002_sd.pdf"',
+        '    (at 0 0 0) (layer "F.Fab") (hide yes)',
+        f'    (uuid "{fp_uuid("datasheet")}")',
+        '    (effects (font (size 1.27 1.27)))',
+        '  )',
+        '  (property "Description" "Molex 0679101002 right-angle 52-position Mini PCIe card socket"',
+        '    (at 0 0 0) (layer "F.Fab") (hide yes)',
+        f'    (uuid "{fp_uuid("description")}")',
+        '    (effects (font (size 1.27 1.27)))',
+        '  )',
+        '  (attr smd)',
+        '  (duplicate_pad_numbers_are_jumpers no)',
+    ]
+
+    def add_line(
+        start: tuple[float, float],
+        end: tuple[float, float],
+        layer: str,
+        width: float,
+        label: str,
+    ) -> None:
+        lines.extend(
+            [
+                '  (fp_line',
+                f'    (start {start[0]:.2f} {start[1]:.2f})',
+                f'    (end {end[0]:.2f} {end[1]:.2f})',
+                f'    (stroke (width {width:.2f}) (type default))',
+                f'    (layer "{layer}")',
+                f'    (uuid "{fp_uuid(label)}")',
+                '  )',
+            ]
+        )
+
+    # The left locator hole is datum E. The connector drawing specifies a
+    # 25.00 mm locator-hole pitch and a 30.00 mm maximum body width.
+    for layer, width, suffix in (("F.Fab", 0.10, "fab"), ("F.CrtYd", 0.05, "courtyard")):
+        x0, y0, x1, y1 = (
+            (-2.50, -5.10, 27.50, 5.10)
+            if layer == "F.Fab"
+            else (-3.10, -5.60, 28.10, 5.60)
+        )
+        add_line((x0, y0), (x1, y0), layer, width, f"{suffix}-top")
+        add_line((x1, y0), (x1, y1), layer, width, f"{suffix}-right")
+        add_line((x1, y1), (x0, y1), layer, width, f"{suffix}-bottom")
+        add_line((x0, y1), (x0, y0), layer, width, f"{suffix}-left")
+
+    add_line((-2.50, -5.35), (27.50, -5.35), "F.SilkS", 0.15, "silk-top")
+    add_line((-2.50, -5.35), (-2.50, -4.95), "F.SilkS", 0.15, "silk-left")
+    add_line((27.50, -5.35), (27.50, -4.95), "F.SilkS", 0.15, "silk-right")
+    add_line((-0.80, 5.35), (0.80, 5.35), "F.SilkS", 0.25, "pin-one-marker")
+
+    lines.extend(
+        [
+            '  (fp_text user "DATUM E"',
+            '    (at 0 0 0) (layer "F.Fab")',
+            f'    (uuid "{fp_uuid("datum-e-text")}")',
+            '    (effects (font (size 0.6 0.6) (thickness 0.10)))',
+            '  )',
+            '  (fp_text user "SD-67910-001 C2"',
+            '    (at 12.5 0 0) (layer "F.Fab")',
+            f'    (uuid "{fp_uuid("drawing-text")}")',
+            '    (effects (font (size 0.7 0.7) (thickness 0.10)))',
+            '  )',
+            '  (pad "" np_thru_hole circle',
+            '    (at 0 0) (size 1.60 1.60) (drill 1.60)',
+            '    (layers "*.Cu" "*.Mask")',
+            f'    (uuid "{fp_uuid("locator-e")}")',
+            '  )',
+            '  (pad "" np_thru_hole circle',
+            '    (at 25.00 0) (size 1.10 1.10) (drill 1.10)',
+            '    (layers "*.Cu" "*.Mask")',
+            f'    (uuid "{fp_uuid("locator-d")}")',
+            '  )',
+            '  (pad "" smd rect',
+            '    (at -2.15 3.50) (size 1.60 3.20)',
+            '    (layers "F.Cu" "F.Paste" "F.Mask")',
+            f'    (uuid "{fp_uuid("hold-down-left")}")',
+            '  )',
+            '  (pad "" smd rect',
+            '    (at 27.15 3.50) (size 1.60 3.20)',
+            '    (layers "F.Cu" "F.Paste" "F.Mask")',
+            f'    (uuid "{fp_uuid("hold-down-right")}")',
+            '  )',
+        ]
+    )
+
+    # The contact rows are staggered 0.40 mm. Pins 1-16 occupy the 5.60 mm
+    # group; pins 17-52 occupy the 13.60 mm group across the card key.
+    contact_positions: list[tuple[int, float, float]] = []
+    contact_positions.extend((1 + 2 * index, 0.80 * index, 4.10) for index in range(8))
+    contact_positions.extend((2 + 2 * index, 0.40 + 0.80 * index, -4.10) for index in range(8))
+    contact_positions.extend((17 + 2 * index, 10.30 + 0.80 * index, 4.10) for index in range(18))
+    contact_positions.extend((18 + 2 * index, 10.70 + 0.80 * index, -4.10) for index in range(18))
+    for pin, x, y in sorted(contact_positions):
+        shape = "roundrect" if pin == 1 else "rect"
+        lines.extend(
+            [
+                f'  (pad "{pin}" smd {shape}',
+                f'    (at {x:.2f} {y:.2f}) (size 0.60 2.00)',
+                '    (layers "F.Cu" "F.Paste" "F.Mask")',
+            ]
+        )
+        if pin == 1:
+            lines.append('    (roundrect_rratio 0.25)')
+        lines.extend([f'    (uuid "{fp_uuid(f"pad-{pin}")}")', '  )'])
+
+    lines.append(')')
+    output = CM5_LOCAL_FOOTPRINTS / "Molex_0679101002_Mini_PCIe.kicad_mod"
+    output.write_text("\n".join(lines) + "\n")
 
 
 def create_project(folder: Path, name: str) -> None:
@@ -1192,6 +1334,7 @@ def build_network_pcie_sheet() -> Path:
         "J620",
         "AW7915-NP1_WIFI6_4T4R",
         (515, 420),
+        footprint="CM5Carrier:Molex_0679101002_Mini_PCIe",
         manufacturer="Molex",
         mpn="0679101002",
     )
@@ -1221,7 +1364,7 @@ def build_network_pcie_sheet() -> Path:
     wifi_disable_pullup = add_symbol(schematic, "Device:R", "R620", "10k", (430, 490))
     label_two_pin_device(schematic, wifi_disable_pullup, "WIFI_DISABLE1_N", "WIFI_3V3")
     note(schematic, "AW7915-NP1: true Wi-Fi 6 4T4R Mini PCIe AP, 3.3 V / 4 A rail, four RF pigtails", (400, 515), 0.82)
-    note(schematic, "J620 Molex 0679101002 selected; import and verify its manufacturer land pattern before PCB release.", (400, 525), 0.78)
+    note(schematic, "J620 uses the controlled SD-67910-001 C2 land pattern; 3D/first-article fit remains a release gate.", (400, 525), 0.78)
 
     add_connector(
         schematic,
@@ -2739,6 +2882,7 @@ def build_audio() -> Path:
             f"J{200 + channel}",
             "NC3MAV",
             (55, y),
+            footprint="Connector_Audio:Jack_XLR_Neutrik_NC3MAV_Vertical",
             manufacturer="Neutrik",
             mpn="NC3MAV",
         )
@@ -2763,6 +2907,7 @@ def build_audio() -> Path:
             f"J{300 + channel}",
             "NC3FAV",
             (150, y),
+            footprint="Connector_Audio:Jack_XLR_Neutrik_NC3FAV_Vertical",
             manufacturer="Neutrik",
             mpn="NC3FAV",
         )
