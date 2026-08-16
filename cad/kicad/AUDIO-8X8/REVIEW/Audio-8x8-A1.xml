@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/Users/viewvision/Desktop/Radxa CM5 PCB/cad/kicad/AUDIO-8X8/Audio-8x8.kicad_sch</source>
-    <date>2026-08-15T22:35:08</date>
+    <date>2026-08-16T03:15:10</date>
     <tool>Eeschema 10.0.5-rc1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -37,7 +37,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>2f260991-1e08-4948-b3c2-cfd421c63cca</tstamps>
+      <tstamps>404ba63a-8ae9-5a3f-a2df-aa7bddbdb086</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -60,7 +60,7 @@
       <property name="ki_keywords" value="connector"/>
       <property name="ki_fp_filters" value="Connector*:*_2x??_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>db98988c-6b48-4ca2-b92b-8fb798d62fb2</tstamps>
+      <tstamps>8599b8a2-3901-5906-821f-4110ad35ca64</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -116,7 +116,7 @@
       <property name="ki_keywords" value="connector"/>
       <property name="ki_fp_filters" value="Connector*:*_2x??_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>210f4f72-6d74-4cee-afca-927bb9cedc51</tstamps>
+      <tstamps>509c065b-ef64-5a35-82b6-6ddf0dbed09f</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -145,7 +145,7 @@
       <property name="ki_keywords" value="xlr connector neutrik"/>
       <property name="ki_fp_filters" value="Jack*XLR*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>736408af-9070-43c9-ac1d-5129b36899c7</tstamps>
+      <tstamps>9ba872d9-096c-50bd-92ff-0acd6f36f16d</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -174,7 +174,7 @@
       <property name="ki_keywords" value="xlr connector neutrik"/>
       <property name="ki_fp_filters" value="Jack*XLR*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>c113bff2-72ca-4567-97c7-a7398307f758</tstamps>
+      <tstamps>4669d89a-28f8-5e74-a81a-4360b9d92efb</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -203,7 +203,7 @@
       <property name="ki_keywords" value="xlr connector neutrik"/>
       <property name="ki_fp_filters" value="Jack*XLR*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>44573752-cf61-4f6c-b364-90065df4dc48</tstamps>
+      <tstamps>bf3d507e-bfe7-53d7-b66c-632d03be2031</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -232,7 +232,7 @@
       <property name="ki_keywords" value="xlr connector neutrik"/>
       <property name="ki_fp_filters" value="Jack*XLR*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>419b1d0d-53c5-45ec-bd30-dad977b28164</tstamps>
+      <tstamps>7ca8c10b-2dbd-5b2e-bf9a-ec1a1f84fbaa</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -261,7 +261,7 @@
       <property name="ki_keywords" value="xlr connector neutrik"/>
       <property name="ki_fp_filters" value="Jack*XLR*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>5e51aee6-4f96-4aa4-9156-2f3111cc159f</tstamps>
+      <tstamps>26408341-5fc4-5a1c-a189-66774442542c</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -290,7 +290,7 @@
       <property name="ki_keywords" value="xlr connector neutrik"/>
       <property name="ki_fp_filters" value="Jack*XLR*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>a90b51e9-c0cb-49cd-a7b0-630a8ce8259b</tstamps>
+      <tstamps>3ee300b9-9c43-5ea2-9155-70fecf4e0daf</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -319,7 +319,7 @@
       <property name="ki_keywords" value="xlr connector neutrik"/>
       <property name="ki_fp_filters" value="Jack*XLR*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>40294874-8cc9-455f-b3aa-c71b368835d7</tstamps>
+      <tstamps>438b2d92-c14e-590d-9000-b2d8309213f9</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -348,7 +348,7 @@
       <property name="ki_keywords" value="xlr connector neutrik"/>
       <property name="ki_fp_filters" value="Jack*XLR*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>7d71a476-0fe4-4c4e-998b-81f6553aeb10</tstamps>
+      <tstamps>72746f4f-a03a-5718-ae06-6ac5c20e1ae9</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -377,7 +377,7 @@
       <property name="ki_keywords" value="xlr connector neutrik"/>
       <property name="ki_fp_filters" value="Jack*XLR*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>fa9c323d-73f2-48a2-8784-87676a03f3ce</tstamps>
+      <tstamps>36d74188-672f-53d3-8886-1b1cec0677f3</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -405,7 +405,7 @@
       <property name="ki_keywords" value="xlr connector neutrik"/>
       <property name="ki_fp_filters" value="Jack*XLR*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>e1773956-2ff2-4908-b939-d551cf1d97c4</tstamps>
+      <tstamps>2ae1864d-b3b4-5129-a86b-b139d2b6ba48</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -433,7 +433,7 @@
       <property name="ki_keywords" value="xlr connector neutrik"/>
       <property name="ki_fp_filters" value="Jack*XLR*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>3883587e-a8b0-472d-bba1-10c816d6fea9</tstamps>
+      <tstamps>31144b68-9f10-5a5b-bcdf-bcb31109acc6</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -461,7 +461,7 @@
       <property name="ki_keywords" value="xlr connector neutrik"/>
       <property name="ki_fp_filters" value="Jack*XLR*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>eb8c6068-ac69-40ab-9c2a-b7663716aad5</tstamps>
+      <tstamps>764fccb6-9af2-5f63-97b0-1be90879d6ad</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -489,7 +489,7 @@
       <property name="ki_keywords" value="xlr connector neutrik"/>
       <property name="ki_fp_filters" value="Jack*XLR*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>88d80c0f-48f5-4489-b211-b09c6d229e92</tstamps>
+      <tstamps>a6365dd2-e60f-5bac-b10a-772b8edee79c</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -517,7 +517,7 @@
       <property name="ki_keywords" value="xlr connector neutrik"/>
       <property name="ki_fp_filters" value="Jack*XLR*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>9b059359-0dc6-4e4b-9388-311a475c478a</tstamps>
+      <tstamps>04b5dc29-8428-5a2b-a539-bf51a19885e9</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -545,7 +545,7 @@
       <property name="ki_keywords" value="xlr connector neutrik"/>
       <property name="ki_fp_filters" value="Jack*XLR*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>3f6b3d41-132c-4ef4-b900-d07dce59109e</tstamps>
+      <tstamps>c7d38130-a4ac-564b-a1d5-97e7ca23377c</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -573,7 +573,7 @@
       <property name="ki_keywords" value="xlr connector neutrik"/>
       <property name="ki_fp_filters" value="Jack*XLR*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>de39cd58-0c94-4bb4-a02c-ad4efefc9957</tstamps>
+      <tstamps>d8f9a44b-a04c-540b-a3d8-4f6ae3e26d7e</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -597,7 +597,7 @@
       <property name="ki_keywords" value="connector"/>
       <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>5ad6e4c1-58a8-43bc-8095-8c2637afc195</tstamps>
+      <tstamps>24b97183-f141-5456-824b-4cf27a560846</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -620,7 +620,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>ee9c8788-e915-43a7-ad5e-b930936fca3c</tstamps>
+      <tstamps>491fa6b7-bf8f-52b5-a944-398e21c7ca2b</tstamps>
       <units>
         <unit name="A">
           <pins>

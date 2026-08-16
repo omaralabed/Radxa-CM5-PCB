@@ -87,6 +87,12 @@ The complete A1 gate is automated:
 cad/kicad/review_detailed_capture.sh
 ```
 
+The generators use deterministic UUIDs. The review script writes temporary
+ERC, netlist, and PDF outputs, then updates controlled review artifacts only
+when their electrical content or rendered appearance changes. `pdftoppm` is
+required for this visual comparison. Repeating the complete gate without a
+source change must leave the working tree unchanged.
+
 The interface validator checks 174 critical connector and control pin/net
 assignments, including all three selector harnesses, power/temperature alerts,
 the 30-pin buffered TDM/control link, separate audio power, four fan headers,

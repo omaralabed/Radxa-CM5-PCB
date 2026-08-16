@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/Users/viewvision/Desktop/Radxa CM5 PCB/cad/kicad/CM5-CARRIER/CM5-Carrier.kicad_sch</source>
-    <date>2026-08-15T22:35:07</date>
+    <date>2026-08-16T03:15:10</date>
     <tool>Eeschema 10.0.5-rc1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -42,7 +42,7 @@
       <property name="ki_keywords" value="connector"/>
       <property name="ki_fp_filters" value="Connector*:*_2x??_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>7a2031be-c7db-4dfc-96c4-5a9941826d92</tstamps>
+      <tstamps>8234649f-4fc7-5dba-ad1f-283056d891b0</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -72,7 +72,7 @@
       <property name="ki_keywords" value="connector"/>
       <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>738fdedc-5d93-49ea-a28b-d8648e5da7c6</tstamps>
+      <tstamps>70dd957b-a990-5f2e-bf8f-9a2d8bd0c07a</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -106,7 +106,7 @@
       <property name="ki_keywords" value="connector"/>
       <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>56bb8e0d-0989-46c0-a5c4-22f7f0ded1b4</tstamps>
+      <tstamps>8a43a19b-ef23-55ed-9af0-1536a6e8d8bb</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -133,7 +133,7 @@
       <property name="ki_keywords" value="connector"/>
       <property name="ki_fp_filters" value="Connector*:*_2x??_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>44db99c3-84ae-417c-b467-d58f98417e0b</tstamps>
+      <tstamps>18f2cd9b-fdc5-5939-9512-637399ba86ea</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -189,7 +189,7 @@
       <property name="ki_keywords" value="connector"/>
       <property name="ki_fp_filters" value="Connector*:*_2x??_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>6f93cd2f-c76c-4fc8-9b74-295a12e70c8a</tstamps>
+      <tstamps>46df0161-7177-5413-987d-ca9babaaa6da</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -214,7 +214,7 @@
       <property name="ki_keywords" value="connector"/>
       <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>94234d55-979e-4fd3-a205-5c0bcf9b223e</tstamps>
+      <tstamps>f65f0ed6-b7bd-5e1d-accc-c83125f76e33</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -239,7 +239,7 @@
       <property name="ki_keywords" value="connector"/>
       <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>a8732380-d419-4c7b-bb11-d51e06e25cf8</tstamps>
+      <tstamps>21fba185-b6cf-57b7-ab70-e2f6087efa79</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -264,7 +264,7 @@
       <property name="ki_keywords" value="connector"/>
       <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>969adc93-84bd-4e4d-a863-d6944089c0c9</tstamps>
+      <tstamps>67d92030-2e00-5783-acbf-8abacb819403</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -289,7 +289,7 @@
       <property name="ki_keywords" value="connector"/>
       <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>a0ee3907-1a68-46b5-b623-48785e195a60</tstamps>
+      <tstamps>1cd8a37a-ac4b-54f3-a8f0-4c7bad6e129d</tstamps>
       <units>
         <unit name="A">
           <pins>

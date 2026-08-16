@@ -3,6 +3,23 @@
 
 from pathlib import Path
 import sys
+import uuid as _uuid
+
+
+_uuid_counter = 0
+
+
+def _deterministic_uuid4() -> _uuid.UUID:
+    """Return stable KiCad UUIDs for reproducible generated schematics."""
+    global _uuid_counter
+    _uuid_counter += 1
+    return _uuid.uuid5(
+        _uuid.NAMESPACE_URL,
+        f"radxa-cm5-procomm:power-selector:{_uuid_counter}",
+    )
+
+
+_uuid.uuid4 = _deterministic_uuid4
 
 sys.path.insert(0, "/tmp/radxa-cm5-kicad-deps")
 from kicad_sch_api import create_schematic, get_symbol_cache
