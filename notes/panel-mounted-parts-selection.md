@@ -4,7 +4,7 @@
 
 This is the preliminary mechanical part freeze for the iM2300 top panel. It
 supports schematic and 3D floorplanning, but it is not permission to cut the
-production panel. The current Rev H connector-placement artwork remains the
+production panel. The current Rev I connector-placement artwork remains the
 authoritative layout.
 
 The factory cut drawing can be released only after:

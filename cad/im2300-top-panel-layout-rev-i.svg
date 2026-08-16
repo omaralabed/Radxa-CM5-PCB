@@ -2,8 +2,8 @@
 <svg xmlns="http://www.w3.org/2000/svg"
      width="1800" height="1320" viewBox="-30 -43 491.8 371"
      role="img" aria-labelledby="title desc">
-  <title id="title">Radxa CM5 ProComm iM2300 Top Panel Connector Layout Rev H</title>
-  <desc id="desc">Dimensioned preliminary connector placement for a 431.8 by 298 millimeter Pelican iM2300 top panel, with a 15 millimeter four-side frame and screw keepout, two diffused warm-white courtesy lights, one capacitive touch switch, directed intake and exhaust, plus four Wi-Fi and four cellular RF bulkheads.</desc>
+  <title id="title">Radxa CM5 ProComm iM2300 Top Panel Connector Layout Rev I</title>
+  <desc id="desc">Dimensioned preliminary connector placement for a 431.8 by 298 millimeter Pelican iM2300 top panel, with a 15 millimeter four-side frame and screw keepout, left-to-right Gold Mount battery engagement, two diffused warm-white courtesy lights, one capacitive touch switch, directed intake and exhaust, plus four Wi-Fi and four cellular RF bulkheads.</desc>
 
   <defs>
     <pattern id="minorGrid" width="10" height="10" patternUnits="userSpaceOnUse">
@@ -19,6 +19,9 @@
     </pattern>
     <marker id="arrow" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto-start-reverse">
       <path d="M6 3L0 0V6Z" fill="#aab3bd"/>
+    </marker>
+    <marker id="batteryArrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M0 0L6 3L0 6Z" fill="#c493e8"/>
     </marker>
     <filter id="shadow" x="-15%" y="-15%" width="130%" height="130%">
       <feDropShadow dx="0" dy="1.2" stdDeviation="1.5" flood-color="#000" flood-opacity="0.5"/>
@@ -53,7 +56,7 @@
   <rect class="page" x="-30" y="-43" width="491.8" height="371"/>
 
   <text class="title" x="0" y="-32">RADXA CM5 PROCOMM - iM2300 TOP PANEL CONNECTOR LAYOUT</text>
-  <text class="subtitle" x="0" y="-24">REV H CONCEPT | 15 mm FOUR-SIDE FRAME / SCREW KEEPOUT | 4T4R WI-FI / EIGHT RF BULKHEADS | DIMENSIONS IN MILLIMETERS</text>
+  <text class="subtitle" x="0" y="-24">REV I CONCEPT | GOLD MOUNT ENGAGES LEFT TO RIGHT | 15 mm FRAME KEEPOUT | 4T4R WI-FI / EIGHT RF BULKHEADS</text>
 
   <!-- Overall dimensions -->
   <line class="extension" x1="0" y1="0" x2="0" y2="-13"/>
@@ -210,8 +213,9 @@
   <!-- Gold Mount battery and dock keepout -->
   <g transform="translate(20 0)">
   <g transform="translate(-10 -26)">
-  <rect class="zone backup" x="94" y="89" width="112" height="151" rx="4" fill="#2d2037" fill-opacity="0.4"/>
+  <rect class="zone backup" x="76" y="89" width="130" height="151" rx="4" fill="#2d2037" fill-opacity="0.4"/>
   <text class="zoneTitle" x="98" y="95">GOLD MOUNT BACKUP</text>
+  <rect x="76" y="101" width="24" height="132" rx="3" fill="#c493e8" fill-opacity="0.07" stroke="#c493e8" stroke-width="0.45" stroke-dasharray="2 2"/>
   <rect x="100" y="101" width="99" height="132" rx="4" fill="#151119" stroke="#c493e8" stroke-width="0.7" stroke-dasharray="3 2"/>
   <circle cx="108" cy="109" r="2.1" fill="none" stroke="#c493e8" stroke-width="0.5"/>
   <circle cx="191" cy="109" r="2.1" fill="none" stroke="#c493e8" stroke-width="0.5"/>
@@ -219,9 +223,11 @@
   <circle cx="191" cy="225" r="2.1" fill="none" stroke="#c493e8" stroke-width="0.5"/>
   <path d="M132 143H167V176H132Z M139 150H160V169H139Z" fill="none" stroke="#c493e8" stroke-width="0.75"/>
   <path d="M143 181H156M146 186H153" stroke="#c493e8" stroke-width="0.75"/>
+  <text class="small" x="138" y="119">BATTERY ENGAGES LEFT TO RIGHT</text>
+  <path d="M82 126H191" fill="none" stroke="#c493e8" stroke-width="1.2" marker-end="url(#batteryArrow)"/>
   <text class="label" x="149.5" y="196">99 x 132 BATTERY ENVELOPE</text>
-  <text class="small" x="149.5" y="202">Dock footprint and release access</text>
-  <text class="small" x="149.5" y="208">must follow final Anton/Bauer drawing</text>
+  <text class="small" x="149.5" y="202">Keep left insertion and release sweep clear</text>
+  <text class="small" x="149.5" y="208">final travel follows dock sample/drawing</text>
   </g>
 
   <!-- Headset and SIM service zone -->

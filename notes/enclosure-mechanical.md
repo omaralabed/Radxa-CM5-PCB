@@ -201,6 +201,12 @@ upright antennas cannot remain vertical when the lid closes. Confirm whether
 the product closes with the battery removed and antennas folded/removed, or
 revise their mounting before release.
 
+Orient the Gold Mount dock so the battery engages horizontally from left to
+right, moving from the XLR side toward the network side. Removal is the reverse
+motion. Preserve at least 20 mm of unobstructed left-side insertion and hand
+clearance, with 30 mm preferred, and validate the complete slide travel using
+the actual dock and battery while representative panel cables are connected.
+
 At a 1.50 in recess, the official Pelican bezel rule adds 0.108 in of plate
 size reduction beyond the initial 0.094 in allowance: six 0.25 in increments
 times 0.018 in. Therefore the nominal 431.8 x 298.0 mm envelope cannot be used

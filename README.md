@@ -4,7 +4,7 @@ Project workspace for a custom carrier board for the Radxa CM5 compute module.
 
 ## Self-Contained Project Files
 
-Only the current Rev H top-panel drawing and Rev G underside-floorplan drawing
+Only the current Rev I top-panel drawing and Rev H underside-floorplan drawing
 are retained under `cad/`. They reserve a 15 mm four-side frame/screw keepout
 and limit the suspended PCB envelopes before routing. The battery calculation
 is under `docs/`. The obsolete 8.7 GB design-session recording was intentionally
@@ -26,7 +26,7 @@ under `references/procomm-field-unit/`.
 - Network architecture requirement added: 2x WAN, cellular WAN, 2x shared LAN, high-capacity Wi-Fi AP broadcast.
 - Rev A Ethernet is locked to 1 GbE: native CM5 Ethernet for WAN1, three
   Microchip `LAN7430` controllers for WAN2/LAN1/LAN2, and an
-  `PI7C9X2G608GP` PCIe switch shared with the 2-antenna Wi-Fi AP module.
+  `PI7C9X2G608GP` PCIe switch shared with the 4T4R Wi-Fi AP module.
 - Cellular modem direction locked to the ProComm native M.2 Key-B reference:
   SIM8260G-M2-class 3052 global target, 3042/3052 support, dual Nano-SIM, four
   cellular/GNSS antenna paths, and dedicated 3.8 V-class modem rail.

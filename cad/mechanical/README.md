@@ -1,12 +1,13 @@
 # iM2300 Mechanical Studies
 
-These drawings extend the current top-panel placement. Rev G shifts the XLR
-bank 2.3 mm right solely to clear the new frame boundary.
+These drawings extend the current top-panel placement. Rev H preserves the XLR
+and PCB datums while adding the controlled left-to-right Gold Mount engagement
+sweep.
 
 - `im2300-closed-lid-stack-current.svg`: nominal side section using the 38.1 mm
   panel recess, published iM2300 lid/base depths, and the current monitor study
   dimensions.
-- `im2300-underside-pcb-floorplan-rev-g.svg`: pre-routing revision that reserves
+- `im2300-underside-pcb-floorplan-rev-h.svg`: pre-routing revision that reserves
   a 15 mm four-side frame/screw keepout, reduces the audio and carrier board
   envelopes to 78 x 268 mm and 166 x 268 mm, preserves the current fan/mesh
   datums, and specifies two Delta
@@ -15,8 +16,9 @@ bank 2.3 mm right solely to clear the new frame boundary.
   baffle, keeps the PCIe switch
   beside the CM5, fits the full-size AW7915-NP1 Mini PCIe card and eight coax
   paths, defines protected high-speed, lid-harness, TDM, RF, and power
-  corridors, and reserves the panel-mounted warm-white courtesy-light bodies and their
-  independent fused AUX_12V harness.
+  corridors, reserves the panel-mounted warm-white courtesy-light bodies and
+  their independent fused AUX_12V harness, and keeps the Gold Mount insertion
+  corridor clear on the left so the battery slides toward the network side.
 - `cm5-5540a-delta-cooling-concept-rev-a.svg`: locked airflow architecture for
   the Radxa `5540A` heatsink and Delta `FFB0412EN-00Y2E` CPU fan, including
   independent vibration-isolated fan mounting, downward airflow, the

@@ -264,23 +264,26 @@ headset openings, the SIM service openings, the Gold Mount pattern, the RF
 bulkheads, and the lid harness notch all remain dependent on final stack height
 or physical sample measurements.
 
-## Rev H SVG
+## Rev I SVG
 
 The current dimensioned connector-placement study is:
 
-- `../cad/im2300-top-panel-layout-rev-h.svg`
+- `../cad/im2300-top-panel-layout-rev-i.svg`
 
 It uses the nominal 431.8 x 298.0 mm bezel envelope and shows the Gold Mount
 battery envelope, all required user connectors, RF spacing, the guarded AC
-zone, and the two hardware-controlled diffused warm-white panel lights. Rev H
+zone, and the two hardware-controlled diffused warm-white panel lights. Rev I
 adds the 15 mm four-side frame/screw keepout, moves the XLR bank 2.3 mm right,
 retains the centered 90 x 8 mm hinge-edge lid-harness notch and selected DPST
 rocker, and labels the left enclosure fan as intake and the right enclosure fan
-as exhaust.
+as exhaust. It also locks the Gold Mount dock orientation so the battery
+engages from left to right, toward the network side, and removes toward the XLR
+side. The left insertion corridor and complete slide/release sweep must remain
+clear with representative XLR and RJ45 cables attached.
 The notch dimensions must be replaced by the selected HDMI, USB-touch, and
 12 V harness bundle, grommet/edge protection, and minimum bend radius before
 fabrication. It is not a CNC/fabrication cut file until actual case
 measurements and manufacturer cutout drawings replace the nominal geometry.
 
-Rev H is the sole retained top-panel drawing. Older panel revisions and locked
+Rev I is the sole retained top-panel drawing. Older panel revisions and locked
 duplicate exports have been removed.

@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297mm" viewBox="0 0 420 297">
+  <title>Radxa CM5 ProComm iM2300 Measurement Worksheet A1</title>
+  <desc>Factory-facing worksheet for measuring the actual Pelican iM2300 and custom panel frame before PCB routing.</desc>
+  <defs>
+    <style>
+      .bg{fill:#11151a}.panel{fill:#171d23;stroke:#d7dee7;stroke-width:1}.frame{fill:none;stroke:#7f8b99;stroke-width:.6;stroke-dasharray:3 2}
+      .dim{fill:none;stroke:#b9c3cf;stroke-width:.35}.call{fill:none;stroke:#69d4e7;stroke-width:.45}.open{fill:#291d20;stroke:#ff7c70;stroke-width:.6}
+      .h1{fill:#fff;font:700 7px Arial,sans-serif}.h2{fill:#dce4ed;font:700 4px Arial,sans-serif}.txt{fill:#c8d1db;font:3px Arial,sans-serif}
+      .tiny{fill:#aeb8c4;font:2.35px Arial,sans-serif}.id{fill:#11151a;stroke:#69d4e7;stroke-width:.35}.idtxt{fill:#69d4e7;font:700 2.5px Arial,sans-serif}
+      .line{stroke:#6f7a87;stroke-width:.3}.blank{fill:none;stroke:#9aa6b4;stroke-width:.3}.warn{fill:#ffb36a;font:700 3px Arial,sans-serif}
+    </style>
+    <marker id="arrow" markerWidth="5" markerHeight="5" refX="2.5" refY="2.5" orient="auto"><path d="M5 0 0 2.5 5 5z" fill="#b9c3cf"/></marker>
+  </defs>
+  <rect class="bg" width="420" height="297"/>
+  <text class="h1" x="12" y="14">RADXA CM5 PROCOMM - iM2300 PHYSICAL MEASUREMENT WORKSHEET</text>
+  <text class="txt" x="12" y="20">REV A1 | UNRELEASED UNTIL ALL M001-M045 VALUES AND SIGNOFFS ARE COMPLETE | DIMENSIONS IN MILLIMETERS</text>
+
+  <g transform="translate(18 35)">
+    <text class="h2" x="0" y="-6">TOP VIEW AT PANEL PLANE A - 38.1 mm BELOW PARTING LINE D</text>
+    <rect class="panel" x="0" y="0" width="245" height="169" rx="9"/>
+    <rect class="frame" x="10" y="10" width="225" height="149" rx="5"/>
+    <text class="tiny" x="122.5" y="6" text-anchor="middle">HINGE / DATUM C</text>
+    <text class="tiny" transform="translate(5 84.5) rotate(-90)" text-anchor="middle">LEFT / DATUM B</text>
+    <text class="tiny" x="122.5" y="166" text-anchor="middle">OPERATOR / HANDLE SIDE</text>
+
+    <line class="dim" x1="0" y1="-3" x2="245" y2="-3" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+    <rect class="id" x="112" y="-7" width="21" height="5"/><text class="idtxt" x="122.5" y="-3.5" text-anchor="middle">M001-M003</text>
+    <line class="dim" x1="-3" y1="0" x2="-3" y2="169" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+    <rect class="id" x="-12" y="80" width="21" height="5"/><text class="idtxt" x="-1.5" y="83.5" text-anchor="middle">M004-M006</text>
+
+    <path class="call" d="M3 3 L22 22"/><rect class="id" x="21" y="19" width="14" height="5"/><text class="idtxt" x="28" y="22.5" text-anchor="middle">M007</text>
+    <path class="call" d="M242 3 L223 22"/><rect class="id" x="210" y="19" width="14" height="5"/><text class="idtxt" x="217" y="22.5" text-anchor="middle">M008</text>
+    <path class="call" d="M3 166 L22 147"/><rect class="id" x="21" y="144" width="14" height="5"/><text class="idtxt" x="28" y="147.5" text-anchor="middle">M009</text>
+    <path class="call" d="M242 166 L223 147"/><rect class="id" x="210" y="144" width="14" height="5"/><text class="idtxt" x="217" y="147.5" text-anchor="middle">M010</text>
+    <line class="call" x1="8" y1="8" x2="237" y2="161" stroke-dasharray="2 2"/>
+    <line class="call" x1="237" y1="8" x2="8" y2="161" stroke-dasharray="2 2"/>
+    <rect class="id" x="105" y="81" width="35" height="7"/><text class="idtxt" x="122.5" y="84" text-anchor="middle">M011 / M012</text><text class="tiny" x="122.5" y="87" text-anchor="middle">DIAGONALS</text>
+
+    <rect class="open" x="10" y="10" width="15" height="149"/><rect class="open" x="220" y="10" width="15" height="149"/>
+    <rect class="open" x="25" y="10" width="195" height="15"/><rect class="open" x="25" y="144" width="195" height="15"/>
+    <text class="warn" x="122.5" y="17" text-anchor="middle">15 mm MINIMUM FRAME / SCREW / NO-PCB BAND: M014-M020</text>
+
+    <rect class="frame" x="28" y="28" width="45" height="135"/><text class="tiny" x="50.5" y="35" text-anchor="middle">AUDIO PCB</text><text class="tiny" x="50.5" y="39" text-anchor="middle">78 x 268 MAX</text>
+    <rect class="frame" x="130" y="28" width="86" height="135"/><text class="tiny" x="173" y="35" text-anchor="middle">CM5 CARRIER</text><text class="tiny" x="173" y="39" text-anchor="middle">166 x 268 MAX</text>
+    <rect class="id" x="32" y="152" width="18" height="5"/><text class="idtxt" x="41" y="155.5" text-anchor="middle">M039</text>
+    <rect class="id" x="134" y="152" width="18" height="5"/><text class="idtxt" x="143" y="155.5" text-anchor="middle">M040</text>
+  </g>
+
+  <g transform="translate(279 35)">
+    <text class="h2" x="0" y="-6">SECTION THROUGH CASE AND LID</text>
+    <path class="panel" d="M8 25 H118 V31 H8 Z"/>
+    <path class="frame" d="M5 4 H121 V78 H5 Z"/>
+    <line class="call" x1="8" y1="4" x2="8" y2="25" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+    <rect class="id" x="10" y="12" width="14" height="5"/><text class="idtxt" x="17" y="15.5" text-anchor="middle">M013</text>
+    <rect class="open" x="28" y="8" width="72" height="10"/><text class="tiny" x="64" y="14" text-anchor="middle">DISPLAY + MOUNT: M021</text>
+    <line class="dim" x1="64" y1="18" x2="64" y2="25" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+    <rect class="id" x="66" y="20" width="25" height="5"/><text class="idtxt" x="78.5" y="23.5" text-anchor="middle">M022-M024</text>
+    <rect class="open" x="20" y="36" width="38" height="28"/><text class="tiny" x="39" y="48" text-anchor="middle">PSU</text><text class="tiny" x="39" y="52" text-anchor="middle">M028</text>
+    <rect class="open" x="66" y="36" width="38" height="20"/><text class="tiny" x="85" y="46" text-anchor="middle">COOLING</text><text class="tiny" x="85" y="50" text-anchor="middle">M029-M030</text>
+    <line class="dim" x1="112" y1="31" x2="112" y2="75" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+    <rect class="id" x="91" y="66" width="18" height="5"/><text class="idtxt" x="100" y="69.5" text-anchor="middle">M027</text>
+    <text class="tiny" x="0" y="86">Latch the case with display, battery, folded RF hardware, connectors,</text>
+    <text class="tiny" x="0" y="91">cooling stacks, and the complete hinge harness installed.</text>
+  </g>
+
+  <g transform="translate(279 142)">
+    <text class="h2" x="0" y="0">INSPECTION / SIGNOFF</text>
+    <text class="txt" x="0" y="9">Case serial / asset ID</text><rect class="blank" x="42" y="4" width="87" height="7"/>
+    <text class="txt" x="0" y="20">Measurement date</text><rect class="blank" x="42" y="15" width="87" height="7"/>
+    <text class="txt" x="0" y="31">Measured by</text><rect class="blank" x="42" y="26" width="87" height="7"/>
+    <text class="txt" x="0" y="42">Frame drawing ID</text><rect class="blank" x="42" y="37" width="87" height="7"/>
+    <text class="txt" x="0" y="53">Gauge-plate record</text><rect class="blank" x="42" y="48" width="87" height="7"/>
+    <text class="txt" x="0" y="64">Closed-lid record</text><rect class="blank" x="42" y="59" width="87" height="7"/>
+    <text class="txt" x="0" y="75">Mechanical approval</text><rect class="blank" x="42" y="70" width="87" height="7"/>
+    <text class="txt" x="0" y="86">Electrical approval</text><rect class="blank" x="42" y="81" width="87" height="7"/>
+    <rect class="open" x="0" y="94" width="129" height="20"/>
+    <text class="warn" x="64.5" y="102" text-anchor="middle">HOLD FOR PHYSICAL MEASUREMENT</text>
+    <text class="tiny" x="64.5" y="108" text-anchor="middle">Routing release requires validator PASS with --release</text>
+  </g>
+
+  <g transform="translate(18 220)">
+    <text class="h2" x="0" y="0">CRITICAL CHECKS</text>
+    <text class="txt" x="0" y="9">M021-M026  Lid display and hinge harness</text>
+    <text class="txt" x="0" y="16">M027-M030  Panel underside, PSU, CM5 and modem cooling stacks</text>
+    <text class="txt" x="0" y="23">M031-M033  Gold Mount engages LEFT TO RIGHT; measure corridor and slide travel</text>
+    <text class="txt" x="0" y="30">M034-M038  Fan alignment, divider and conductive sidewall bulkhead</text>
+    <text class="txt" x="0" y="37">M039-M043  PCB envelopes, frame hardware and vibration restraints</text>
+    <text class="txt" x="0" y="44">M044-M045  Hinge-side display harness notch</text>
+    <text class="warn" x="0" y="56">DO NOT SCALE THIS WORKSHEET FOR PANEL FABRICATION.</text>
+    <text class="tiny" x="0" y="62">Use the final released DXF/STEP after all measurements are entered and signed.</text>
+  </g>
+
+  <g transform="translate(279 269)">
+    <rect class="blank" x="0" y="0" width="129" height="17"/>
+    <text class="txt" x="3" y="6">Drawing: IM2300-MEAS-A1</text>
+    <text class="txt" x="3" y="12">Sheet 1 of 1 | Scale: NTS | State: HOLD</text>
+  </g>
+</svg>
