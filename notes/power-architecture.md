@@ -255,6 +255,51 @@ Production rule: design the bottom-panel PSU bay around the `RPS-400-24-C` /
 `CUS200M-24/A` footprint class unless later measurements prove that a smaller
 130 W or 150 W supply has safe thermal margin in the sealed enclosure.
 
+## Bottom-PSU Harnesses
+
+The bottom-mounted `RPS-400-24-C` has two different electrical interfaces. Do
+not treat the visible white JST connector as the 24 V output.
+
+### H01: 24 V DC output to PWR-SELECT
+
+- PSU `CN3 +V` -> red 14 AWG -> `PWR-SELECT J101-1 V24_IN`
+- PSU `CN2 -V` -> black 14 AWG -> `PWR-SELECT J101-2 GND`
+- PSU ends use TE Connectivity `320619` insulated closed-ring terminals for
+  the PSU's `M3.5` screws.
+- PCB end uses Molex Mega-Fit right-angle header `76825-0002`, receptacle
+  `171692-0202`, two tangless contacts `76823-0344`, and TPA `105415-0002`.
+- Use one conductor per polarity. Do not double two smaller wires under either
+  PSU screw.
+- Prototype finished length is 750 +/- 20 mm from ring center to the rear face
+  of the Mega-Fit housing. Its releasable service loop must permit at least
+  300 mm of panel lift and 45 degrees of tilt without tension. Re-lock length
+  from the dressed first-article route and service-opening test before
+  production.
+- Add a harness clamp within 50 mm of `J101` and another near the PSU. The
+  connector and PSU screw terminals must not carry cable strain.
+
+The full assembly drawing and controlled parts are in
+`../fabrication/harnesses/H01-PSU-24V.md` and `H01-PSU-24V-BOM.csv`.
+
+### H02: fused AC inlet to PSU CN1
+
+The white PSU connector shown in product photos is `CN1`, a JST `B3P-VH` or
+equivalent with 3.96 mm pitch. Its assignment is:
+
+- `CN1-1 AC/L`
+- `CN1-2` has no pin and must remain empty
+- `CN1-3 AC/N`
+
+Use genuine JST `VHR-3N` housing and `SVH-21T-P1.1` contacts or a formally
+qualified equivalent. This is a mains harness, not the PCB-to-PSU DC harness.
+Protective earth does not pass through `CN1`; it uses a separate green/yellow
+bonding conductor and controlled chassis/PSU grounding point. H02 and the PE
+bond remain safety-release items until the final C14 inlet, chassis grounding
+point, insulation system, routing, and service barrier have been inspected.
+Start H02 at 750 +/- 20 mm and retain its excess in releasable insulated
+clamps. The mains harness and flexible panel PE bond must remain untensioned
+during the same 300 mm lift / 45 degree tilt service-opening test used for H01.
+
 ## D-Tap / LEMO Backup Input
 
 Reuse the previous ProComm alternate backup input concept:

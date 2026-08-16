@@ -15,6 +15,10 @@ Preliminary engineering tables:
 - `panel_mechanical_bom_preliminary.csv` - exact panel-part candidates,
   mechanical status, controlled drawing references, and fabrication blockers.
 - `power_switch_bom.csv` - exact DPST panel-switch and four-wire harness parts.
+- `../fabrication/harnesses/H01-PSU-24V.md` - factory assembly, pinout, length,
+  crimp, routing, and acceptance requirements for the bottom-PSU 24 V harness.
+- `../fabrication/harnesses/H01-PSU-24V-BOM.csv` - exact Mega-Fit, TPA, crimp,
+  ring-terminal, and wire parts for that harness.
 - `power_regulator_bom_a1.csv` - A1 regulator-sheet BOM exported directly from
   KiCad, including selected manufacturers and MPNs.
 - `power_regulator_calculations_a1.csv` - machine-checkable rail, source,

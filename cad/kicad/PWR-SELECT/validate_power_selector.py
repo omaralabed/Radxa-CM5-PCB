@@ -12,6 +12,7 @@ ROOT = Path(__file__).resolve().parent
 NETLIST = ROOT / "REVIEW" / "PowerSelector-A0.xml"
 ERC = ROOT / "REVIEW" / "PowerSelector-A0-ERC.rpt"
 POWER_SWITCH_BOM = ROOT / "POWER_SWITCH_BOM.csv"
+PSU_HARNESS_BOM = ROOT.parent.parent.parent / "fabrication" / "harnesses" / "H01-PSU-24V-BOM.csv"
 
 
 def fail(message):
@@ -40,6 +41,10 @@ for net in root.findall("./nets/net"):
         pins_by_ref.setdefault(node.get("ref"), set()).add(node.get("pin"))
 
 expected = {
+    # Bottom-mounted RPS-400-24-C low-voltage output harness. One 14 AWG
+    # conductor per polarity terminates in a keyed two-circuit Mega-Fit.
+    ("J101", "1"): "V24_IN",
+    ("J101", "2"): "GND",
     # Panel power-switch harness. A maintained external DPST switch closes
     # pins 1-2 and 3-4; pull-downs make an open/unplugged harness fail OFF.
     ("J204", "1"): "INTVCC",
@@ -247,6 +252,28 @@ for ref, (manufacturer, mpn, qty) in required_switch_parts.items():
     if actual != (manufacturer, mpn, qty):
         fail(f"power-switch BOM {ref}: wanted {(manufacturer, mpn, qty)}, got {actual}")
 
+# The removable PSU harness is a controlled system assembly. Lock its mating
+# connector, TPA, contacts, ring terminals and conductor specification here.
+if not PSU_HARNESS_BOM.exists():
+    fail(f"missing PSU harness BOM: {PSU_HARNESS_BOM}")
+with PSU_HARNESS_BOM.open(newline="") as handle:
+    psu_harness_bom = {row["Reference"]: row for row in csv.DictReader(handle)}
+required_psu_harness_parts = {
+    "J101": ("Molex", "76825-0002", "1"),
+    "P101": ("Molex", "171692-0202", "1"),
+    "TPA101": ("Molex", "105415-0002", "1"),
+    "C101A-C101B": ("Molex", "76823-0344", "2"),
+    "RT101-RT102": ("TE Connectivity", "320619", "2"),
+    "W101-W102": ("Harness supplier", "UL1015-14AWG", "2"),
+}
+for ref, (manufacturer, mpn, qty) in required_psu_harness_parts.items():
+    row = psu_harness_bom.get(ref)
+    if row is None:
+        fail(f"PSU harness BOM missing {ref}")
+    actual = (row.get("Manufacturer"), row.get("MPN"), row.get("Qty"))
+    if actual != (manufacturer, mpn, qty):
+        fail(f"PSU harness BOM {ref}: wanted {(manufacturer, mpn, qty)}, got {actual}")
+
 # Confirm every BOM item has a footprint and every connected schematic pin
 # exists in that footprint. This catches pad-number mismatches that ERC cannot.
 refs = [component.get("ref") for component in components]
@@ -332,6 +359,7 @@ print(f"PASS: ERC 0 errors / 0 warnings")
 print(f"PASS: {len(expected)} critical pin/net checks")
 print(f"PASS: reverse-polarity architecture and parts locked")
 print(f"PASS: exact power-switch and harness BOM locked")
+print(f"PASS: exact bottom-PSU 24 V harness BOM locked")
 print(f"PASS: {len(components)} unique BOM components; footprint pad maps agree")
 print(f"PASS: D-Tap thresholds {dtap[0]:.3f} / {dtap[1]:.3f} / {dtap[2]:.3f} V")
 print(f"PASS: Gold thresholds {gold[0]:.3f} / {gold[1]:.3f} / {gold[2]:.3f} V")

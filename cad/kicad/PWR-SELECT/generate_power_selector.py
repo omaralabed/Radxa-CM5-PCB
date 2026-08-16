@@ -35,11 +35,11 @@ sch = create_schematic("PowerSelector")
 sch.set_paper_size("A2")
 sch.set_title_block(
     title="Radxa CM5 ProComm 24 V / Battery Seamless Power Selector",
-    date="2026-08-15",
+    date="2026-08-16",
     rev="A1",
     company="ProComm",
     comments={
-        1: "Fixed priority: rear 24 V, then D-Tap, then Gold Mount dock",
+        1: "Fixed priority: internal PSU 24 V, then D-Tap, then Gold Mount dock",
         2: "RAW_OUT_LOAD feeds the protected CM5-CARRIER regulator input",
         3: "Battery inputs use LTC4418 plus back-to-back P-MOS reverse-polarity blocking",
         4: "INA228 telemetry reports primary, selected backup, and delivered load",
@@ -154,6 +154,7 @@ def kelvin_shunt(c, left_net, right_net):
 
 
 MF_2X2 = "Connector_Molex:Molex_Micro-Fit_3.0_43045-0412_2x02_P3.00mm_Vertical"
+MEGAFIT_2_RA = "Connector_Molex:Molex_Mega-Fit_76825-0002_2x01_P5.70mm_Horizontal"
 PICO_6 = "Connector_Molex:Molex_PicoBlade_53047-0610_1x06_P1.25mm_Vertical"
 PICO_8 = "Connector_Molex:Molex_PicoBlade_53047-0810_1x08_P1.25mm_Vertical"
 FUSE_FP = "Fuse:Fuse_Littelfuse-NANO2-451_453"
@@ -171,14 +172,23 @@ CAP_G16 = "PowerSelector:CP_Panasonic_EEH-ZS_G16_10x16.8"
 # Input connectors, fusing, clamping, and damping
 # ---------------------------------------------------------------------------
 title("A. MAIN INPUT, COMMON BACKUP FUSE, TVS CLAMPS", (80, 22), 0.9)
-note("Rear KPJX-4S-S inlet: R7B pins 1/4 = +24 V; pins 2/3 = return.", (80, 26))
+note("H01: RPS-400 CN3 +V to J101-1; CN2 -V to J101-2; 14 AWG.", (80, 26))
 
-j101 = add("Connector_Generic:Conn_02x02_Odd_Even", "J101", "PANEL_24V_HARNESS", (28, 43), MF_2X2,
-           "43045-0412", "Molex")
-net(j101, 1, "V24_IN", "right"); net(j101, 2, "V24_IN", "left")
-net(j101, 3, "GND", "right"); net(j101, 4, "GND", "left")
-j101.add_property("Reference", "J101", hidden=True); j101.add_property("Value", "PANEL_24V_HARNESS", hidden=True)
-sch.texts.add("J101  REAR 24 V INLET HARNESS", (28, 34), size=0.85)
+j101 = add(
+    "Connector_Generic:Conn_01x02",
+    "J101",
+    "PSU_24V_HARNESS",
+    (28, 43),
+    MEGAFIT_2_RA,
+    "76825-0002",
+    "Molex",
+    "https://www.molex.com/en-us/products/part-detail/768250002",
+)
+net(j101, 1, "V24_IN", "right")
+net(j101, 2, "GND", "right")
+j101.add_property("Reference", "J101", hidden=True)
+j101.add_property("Value", "PSU_24V_HARNESS", hidden=True)
+sch.texts.add("J101  BOTTOM-PSU 24 V HARNESS", (28, 34), size=0.85)
 f101 = add("Device:Fuse", "F101", "15A", (52, 43), FUSE_FP, "0451015.MRL", "Littelfuse", rotation=90)
 two_pin(f101, "V24_IN", "V24_FUSED")
 f101.add_property("Reference", "F101", hidden=True); f101.add_property("Value", "15A", hidden=True)
@@ -717,7 +727,7 @@ fg = add("power:PWR_FLAG", "#FLG0108", "PWR_FLAG", (205, 399))
 net(fg, 1, "GND", "left")
 
 title("DESIGN INTENT", (330, 388), 1.6)
-note("Priority: rear 24 V, then D-Tap, then Gold Mount. No source paralleling.", (330, 392), 1.0)
+note("Priority: internal PSU 24 V, then D-Tap, then Gold Mount. No source paralleling.", (330, 392), 1.0)
 note("Both selectors are break-before-make; C301-C303 provide continuous energy to the LM5176 input.", (330, 396), 1.0)
 note("SW201 OFF disables both selectors; no valid source can energize RAW_OUT. Charge batteries externally.", (330, 400), 1.0)
 

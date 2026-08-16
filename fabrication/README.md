@@ -11,3 +11,7 @@ Expected outputs:
 - Assembly drawing
 - Fabrication drawing
 - Design rule report
+
+Controlled harness work instructions are under `harnesses/`. They remain
+prototype-controlled until their finished lengths are verified in the first
+mechanical article.

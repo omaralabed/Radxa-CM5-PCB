@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#c72c31"/>
+    </marker>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#1769aa"/>
+    </marker>
+    <style>
+      .title { font: 700 34px Arial, sans-serif; fill: #111827; }
+      .subtitle { font: 700 24px Arial, sans-serif; fill: #111827; }
+      .label { font: 700 19px Arial, sans-serif; fill: #111827; }
+      .body { font: 17px Arial, sans-serif; fill: #253044; }
+      .small { font: 15px Arial, sans-serif; fill: #3d4859; }
+      .tiny { font: 13px Arial, sans-serif; fill: #4b5563; }
+      .box { fill: #ffffff; stroke: #49566a; stroke-width: 2.5; rx: 6; }
+      .acbox { fill: #fff6f5; stroke: #c72c31; stroke-width: 3; rx: 6; }
+      .dcbox { fill: #f3f8fc; stroke: #1769aa; stroke-width: 3; rx: 6; }
+      .safety { fill: #fffbea; stroke: #ad7c00; stroke-width: 2; rx: 6; }
+      .red { stroke: #c72c31; fill: none; stroke-width: 7; }
+      .brown { stroke: #6f411f; fill: none; stroke-width: 7; }
+      .blue { stroke: #1769aa; fill: none; stroke-width: 7; }
+      .black { stroke: #20242c; fill: none; stroke-width: 7; }
+      .green { stroke: #17833c; fill: none; stroke-width: 7; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="1000" fill="#f6f8fa"/>
+  <text x="70" y="68" class="title">RPS-400-24-C PSU HARNESS INTERFACES</text>
+  <text x="70" y="102" class="body">Factory wiring reference | Rev A | 2026-08-16 | Connector views are functional, not mechanical scale</text>
+
+  <rect x="60" y="140" width="1480" height="350" class="acbox"/>
+  <text x="90" y="180" class="subtitle">H02 - FUSED AC INLET TO PSU CN1</text>
+  <text x="90" y="210" class="body">The white JST-VH connector in the product photo is the AC mains input. It is not the 24 V output.</text>
+
+  <rect x="105" y="260" width="235" height="135" class="box"/>
+  <text x="222" y="300" text-anchor="middle" class="label">FUSED C14 INLET</text>
+  <text x="222" y="332" text-anchor="middle" class="body">Qualtek 719W-00/03</text>
+  <text x="222" y="360" text-anchor="middle" class="small">No integrated switch</text>
+
+  <path d="M340 300 H555" class="brown" marker-end="url(#arrow-red)"/>
+  <path d="M340 350 H555" class="blue" marker-end="url(#arrow-red)"/>
+  <text x="447" y="286" text-anchor="middle" class="label" fill="#6f411f">L - BROWN - 18 AWG</text>
+  <text x="447" y="379" text-anchor="middle" class="label" fill="#1769aa">N - BLUE - 18 AWG</text>
+
+  <rect x="560" y="245" width="250" height="165" class="box"/>
+  <text x="685" y="278" text-anchor="middle" class="label">JST VHR-3N</text>
+  <rect x="600" y="298" width="170" height="30" fill="#fee2e2" stroke="#c72c31" stroke-width="2"/>
+  <rect x="600" y="328" width="170" height="30" fill="#e5e7eb" stroke="#6b7280" stroke-width="2"/>
+  <rect x="600" y="358" width="170" height="30" fill="#dbeafe" stroke="#1769aa" stroke-width="2"/>
+  <text x="685" y="319" text-anchor="middle" class="body">Cavity 1: AC/L</text>
+  <text x="685" y="349" text-anchor="middle" class="body">Cavity 2: EMPTY</text>
+  <text x="685" y="379" text-anchor="middle" class="body">Cavity 3: AC/N</text>
+  <text x="685" y="432" text-anchor="middle" class="small">2 x JST SVH-21T-P1.1 contacts</text>
+
+  <path d="M810 328 H1020" class="red" marker-end="url(#arrow-red)"/>
+  <text x="915" y="312" text-anchor="middle" class="label" fill="#c72c31">H02</text>
+
+  <rect x="1025" y="245" width="420" height="165" class="box"/>
+  <text x="1235" y="280" text-anchor="middle" class="label">MEAN WELL RPS-400-24-C</text>
+  <text x="1235" y="313" text-anchor="middle" class="body">CN1: JST B3P-VH board header</text>
+  <text x="1235" y="346" text-anchor="middle" class="body">Pin 1 AC/L | Pin 2 no pin | Pin 3 AC/N</text>
+  <text x="1235" y="379" text-anchor="middle" class="small">Bottom-panel PSU inside guarded mains zone</text>
+
+  <path d="M222 395 V455 H1235 V410" class="green"/>
+  <text x="725" y="449" text-anchor="middle" class="label" fill="#17833c">GREEN/YELLOW PE: C14 EARTH TO DEDICATED CHASSIS STUD AND PSU CHASSIS</text>
+
+  <rect x="60" y="520" width="1480" height="350" class="dcbox"/>
+  <text x="90" y="560" class="subtitle">H01 - PSU 24 V OUTPUT TO PWR-SELECT J101</text>
+  <text x="90" y="590" class="body">CN2 and CN3 are M3.5 screw terminals. Use closed rings at the PSU and a keyed, latched two-circuit connector at the PCB.</text>
+
+  <rect x="105" y="635" width="365" height="170" class="box"/>
+  <text x="287" y="671" text-anchor="middle" class="label">MEAN WELL RPS-400-24-C</text>
+  <circle cx="205" cy="720" r="28" fill="#f87171" stroke="#991b1b" stroke-width="3"/>
+  <circle cx="365" cy="720" r="28" fill="#374151" stroke="#111827" stroke-width="3"/>
+  <text x="205" y="727" text-anchor="middle" class="label" fill="#ffffff">+</text>
+  <text x="365" y="727" text-anchor="middle" class="label" fill="#ffffff">-</text>
+  <text x="205" y="770" text-anchor="middle" class="body">CN3 +V</text>
+  <text x="365" y="770" text-anchor="middle" class="body">CN2 -V</text>
+  <text x="287" y="795" text-anchor="middle" class="small">TE 320619 closed rings, #6 / M3.5</text>
+
+  <path d="M233 705 H750" class="red" marker-end="url(#arrow-blue)"/>
+  <path d="M393 735 H750" class="black" marker-end="url(#arrow-blue)"/>
+  <text x="585" y="686" text-anchor="middle" class="label" fill="#c72c31">RED - 14 AWG - +24 V</text>
+  <text x="585" y="766" text-anchor="middle" class="label">BLACK - 14 AWG - 0 V</text>
+
+  <rect x="755" y="625" width="320" height="190" class="box"/>
+  <text x="915" y="660" text-anchor="middle" class="label">P101 CABLE PLUG</text>
+  <text x="915" y="692" text-anchor="middle" class="body">Molex 171692-0202 housing</text>
+  <rect x="825" y="715" width="180" height="34" fill="#fee2e2" stroke="#c72c31" stroke-width="2"/>
+  <rect x="825" y="749" width="180" height="34" fill="#e5e7eb" stroke="#111827" stroke-width="2"/>
+  <text x="915" y="738" text-anchor="middle" class="body">Cavity 1: +24 V</text>
+  <text x="915" y="772" text-anchor="middle" class="body">Cavity 2: 0 V</text>
+  <text x="915" y="805" text-anchor="middle" class="tiny">2 x 76823-0344 contacts + 105415-0002 TPA</text>
+
+  <path d="M1075 720 H1190" class="blue" marker-end="url(#arrow-blue)"/>
+  <text x="1132" y="704" text-anchor="middle" class="label" fill="#1769aa">H01</text>
+
+  <rect x="1195" y="635" width="250" height="170" class="box"/>
+  <text x="1320" y="672" text-anchor="middle" class="label">PWR-SELECT J101</text>
+  <text x="1320" y="705" text-anchor="middle" class="body">Molex 76825-0002</text>
+  <text x="1320" y="738" text-anchor="middle" class="body">Pin 1: V24_IN</text>
+  <text x="1320" y="768" text-anchor="middle" class="body">Pin 2: GND</text>
+  <text x="1320" y="795" text-anchor="middle" class="small">Right-angle PCB header</text>
+
+  <rect x="60" y="895" width="1480" height="70" class="safety"/>
+  <text x="80" y="925" class="label">RELEASE CONTROLS:</text>
+  <text x="300" y="925" class="body">H01 and H02 prototype length: 750 +/- 20 mm; releasable loops support 300 mm panel lift and 45 degree tilt.</text>
+  <text x="300" y="951" class="body">Final lengths follow first-article service test. H02, PE, guarding, fuse coordination, and safety tests require qualified release.</text>
+</svg>

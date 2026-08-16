@@ -18,6 +18,7 @@ preliminary iM2300 panel mechanical part freeze.
 - `delta-tha0412ad-tzw3-spec.pdf`
 - `qualtek-09150f-filter-drawing.pdf`
 - `wurth-693043020611-datasheet.pdf`
+- `mean-well-rps-400-spec.pdf`
 
 Bel, TE, Anton/Bauer, and monitor links are recorded in
 `../panel_mechanical_bom_preliminary.csv`. Their controlled files are not yet
