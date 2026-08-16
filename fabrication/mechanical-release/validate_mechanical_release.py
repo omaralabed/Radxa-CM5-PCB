@@ -13,15 +13,21 @@ import sys
 ROOT = Path(__file__).resolve().parent
 DATA_PATH = ROOT / "mechanical-release-a2.json"
 REGISTER_PATH = ROOT / "im2300-measurement-register.csv"
+SUPPORT_PATH = ROOT / "pcb-support-pattern-a2.csv"
+LOAD_PATH_PATH = ROOT / "connector-load-path-a2.csv"
 MEASUREMENT_COUNT = 80
 
 
-def load_inputs() -> tuple[dict, list[dict[str, str]]]:
+def load_inputs() -> tuple[dict, list[dict[str, str]], list[dict[str, str]], list[dict[str, str]]]:
     with DATA_PATH.open(encoding="utf-8") as stream:
         data = json.load(stream)
     with REGISTER_PATH.open(newline="", encoding="utf-8") as stream:
         rows = list(csv.DictReader(stream))
-    return data, rows
+    with SUPPORT_PATH.open(newline="", encoding="utf-8") as stream:
+        supports = list(csv.DictReader(stream))
+    with LOAD_PATH_PATH.open(newline="", encoding="utf-8") as stream:
+        load_paths = list(csv.DictReader(stream))
+    return data, rows, supports, load_paths
 
 
 def require(condition: bool, message: str, failures: list[str]) -> None:
@@ -36,7 +42,12 @@ def present(value: object) -> bool:
     return value not in (None, "", "TBD")
 
 
-def validate_package(data: dict, rows: list[dict[str, str]]) -> list[str]:
+def validate_package(
+    data: dict,
+    rows: list[dict[str, str]],
+    supports: list[dict[str, str]],
+    load_paths: list[dict[str, str]],
+) -> list[str]:
     failures: list[str] = []
     ids = [row["id"] for row in rows]
     require(len(rows) == MEASUREMENT_COUNT, f"measurement register contains {MEASUREMENT_COUNT} controlled checks", failures)
@@ -51,6 +62,11 @@ def validate_package(data: dict, rows: list[dict[str, str]]) -> list[str]:
     require(hard.get("carrier_pcb_max_height_mm") <= 268.0, "carrier PCB height is limited to 268 mm", failures)
     require(hard.get("minimum_audio_pcb_support_count") >= 6, "audio PCB uses at least six supports", failures)
     require(hard.get("minimum_carrier_pcb_support_count") >= 6, "carrier PCB uses at least six supports", failures)
+    require(hard.get("maximum_long_pcb_support_row_span_mm") <= 128.0, "long-PCB support-row span is limited to 128 mm", failures)
+    require(hard.get("pcb_mount_finished_hole_diameter_mm") == 3.4, "PCB mount finished-hole target is 3.4 mm", failures)
+    require(hard.get("pcb_mount_finished_hole_tolerance_mm") <= 0.1, "PCB mount finished-hole tolerance is at most 0.1 mm", failures)
+    require(hard.get("minimum_pcb_mount_copper_keepout_diameter_mm") >= 8.0, "PCB mount all-layer copper keepout is at least 8.0 mm", failures)
+    require(hard.get("minimum_pcb_mount_component_keepout_diameter_mm") >= 10.0, "PCB mount component keepout is at least 10.0 mm", failures)
     require(hard.get("minimum_closed_lid_dynamic_clearance_mm") >= 8.0, "closed-lid dynamic clearance target is at least 8 mm", failures)
     require(hard.get("minimum_psu_guard_vertical_clearance_mm") >= 10.0, "PSU guard vertical clearance target is at least 10 mm", failures)
     require(hard.get("maximum_installed_psu_guard_height_above_deepest_floor_mm") <= 48.0, "installed PSU guard envelope is limited to 48 mm above the deepest floor", failures)
@@ -82,6 +98,82 @@ def validate_package(data: dict, rows: list[dict[str, str]]) -> list[str]:
     require(thermal.get("qualification_ambient_c") >= 45.0, "thermal qualification ambient is at least 45 C", failures)
     require(thermal.get("minimum_clean_filter_through_case_cfm") >= 15.0, "clean-filter through-case airflow target is at least 15 CFM", failures)
     require(thermal.get("maximum_psu_inlet_air_temperature_c") <= 50.0, "PSU inlet-air release limit is at most 50 C", failures)
+
+    support_ids = [row["support_id"] for row in supports]
+    require(len(support_ids) == len(set(support_ids)), "PCB support IDs are unique", failures)
+    support_spec = data.get("pcb_supports", {})
+    board_specs = {
+        "AUDIO-8X8": (support_spec.get("audio_8x8", {}), "A", 6),
+        "CM5-CARRIER": (support_spec.get("cm5_carrier", {}), "C", 6),
+    }
+    for board, (spec, prefix, count) in board_specs.items():
+        board_rows = [row for row in supports if row["board"] == board]
+        expected_ids = [f"{prefix}{index}" for index in range(1, count + 1)]
+        require(len(board_rows) == count, f"{board} has exactly six controlled supports", failures)
+        require(sorted(row["support_id"] for row in board_rows) == expected_ids, f"{board} support IDs are contiguous", failures)
+        origin = spec.get("board_origin_panel_mm", [])
+        size = spec.get("board_size_mm", [])
+        require(len(origin) == 2 and len(size) == 2, f"{board} support datum and board size are defined", failures)
+        if len(origin) != 2 or len(size) != 2:
+            continue
+        y_rows: set[float] = set()
+        for row in board_rows:
+            x_board = float(row["x_board_mm"])
+            y_board = float(row["y_board_mm"])
+            x_panel = float(row["x_panel_mm"])
+            y_panel = float(row["y_panel_mm"])
+            y_rows.add(y_board)
+            require(6.0 <= x_board <= float(size[0]) - 6.0, f'{row["support_id"]} keeps a 6 mm center distance from board X edges', failures)
+            require(6.0 <= y_board <= float(size[1]) - 6.0, f'{row["support_id"]} keeps a 6 mm center distance from board Y edges', failures)
+            require(abs(x_panel - (float(origin[0]) + x_board)) < 0.001, f'{row["support_id"]} panel X matches its board datum', failures)
+            require(abs(y_panel - (float(origin[1]) + y_board)) < 0.001, f'{row["support_id"]} panel Y matches its board datum', failures)
+            require(abs(float(row["hole_diameter_mm"]) - 3.4) < 0.001, f'{row["support_id"]} uses a 3.4 mm finished NPTH', failures)
+            require(float(row["copper_keepout_diameter_mm"]) >= 8.0, f'{row["support_id"]} has at least an 8 mm copper keepout', failures)
+            require(float(row["component_keepout_diameter_mm"]) >= 10.0, f'{row["support_id"]} has at least a 10 mm component keepout', failures)
+            require(row["hardware"] == "M3_CAPTIVE_METAL_STANDOFF", f'{row["support_id"]} uses a rigid captive M3 metal standoff', failures)
+        ordered_y = sorted(y_rows)
+        spans = [right - left for left, right in zip(ordered_y, ordered_y[1:])]
+        require(len(ordered_y) >= 3 and max(spans, default=0.0) <= 128.0, f"{board} uses at least three support rows with no span above 128 mm", failures)
+
+    # The AUDIO support keepouts must not touch the preliminary 22.8 mm XLR envelopes.
+    audio_rows = [row for row in supports if row["board"] == "AUDIO-8X8"]
+    xlr_centers = [(x, y) for x in (11.4, 54.78) for y in (19.0, 51.0, 83.0, 115.0, 147.0, 179.0, 211.0, 243.0)]
+    audio_clear = all(
+        ((float(row["x_board_mm"]) - xlr_x) ** 2 + (float(row["y_board_mm"]) - xlr_y) ** 2) ** 0.5 >= 16.4
+        for row in audio_rows
+        for xlr_x, xlr_y in xlr_centers
+    )
+    require(audio_clear, "AUDIO support component keepouts clear all preliminary XLR envelopes", failures)
+
+    carrier_rows = [row for row in supports if row["board"] == "CM5-CARRIER"]
+    modem_center = (146.0, 127.0)
+    modem_clear = all(
+        ((float(row["x_board_mm"]) - modem_center[0]) ** 2 + (float(row["y_board_mm"]) - modem_center[1]) ** 2) ** 0.5 >= 25.0
+        for row in carrier_rows
+    )
+    require(modem_clear, "carrier support component keepouts clear the preliminary modem cooling keepout", failures)
+    cm5_rect = (97.0, 222.5, 157.0, 267.5)
+    cm5_clear = all(
+        not (
+            cm5_rect[0] - 5.0 < float(row["x_board_mm"]) < cm5_rect[2] + 5.0
+            and cm5_rect[1] - 5.0 < float(row["y_board_mm"]) < cm5_rect[3] + 5.0
+        )
+        for row in carrier_rows
+    )
+    require(cm5_clear, "carrier support component keepouts clear the preliminary CM5 cooling cartridge", failures)
+
+    load_policy = data.get("connector_load_policy", {})
+    require(load_policy.get("policy") == "PANEL_OR_FRAME_CARRIES_ALL_USER_MATING_LOADS", "all user mating loads are assigned to panel or frame", failures)
+    require(load_policy.get("forbidden_load_path") == "PCB_SOLDER_ONLY", "solder-only connector retention is explicitly forbidden", failures)
+    required_interfaces = {
+        "Balanced XLR", "RJ45", "CTIA headset", "Nano-SIM", "Fused C14 inlet",
+        "LEMO backup inlet", "Main power rocker", "Panel lights and touch switch",
+        "Status indicators", "RF bulkheads", "Gold Mount dock", "Display HDMI USB and 12 V",
+    }
+    require({row["interface"] for row in load_paths} == required_interfaces, "connector load-path matrix covers every controlled interface group", failures)
+    external_rows = [row for row in load_paths if row["external_user_access"] == "YES"]
+    require(all(row["primary_load_path"] != "PCB_SOLDER_ONLY" for row in external_rows), "no external connector uses solder-only retention", failures)
+    require(all(row["status"] in {"CONTROLLED", "BRACKET_REQUIRED"} for row in external_rows), "every external connector has a controlled or required structural load path", failures)
     return failures
 
 
@@ -152,8 +244,8 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--release", action="store_true", help="require completed physical measurement and signoff evidence")
     args = parser.parse_args()
-    data, rows = load_inputs()
-    failures = validate_package(data, rows)
+    data, rows, supports, load_paths = load_inputs()
+    failures = validate_package(data, rows, supports, load_paths)
     if args.release:
         failures.extend(validate_release(data, rows))
     if failures:

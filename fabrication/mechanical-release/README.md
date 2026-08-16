@@ -7,9 +7,10 @@
 - Panel installation plane: 38.1 mm below the case parting line
 - Controlled concept drawings:
   - `../../cad/im2300-top-panel-layout-rev-k.svg`
-  - `../../cad/mechanical/im2300-underside-pcb-floorplan-rev-k.svg`
+  - `../../cad/mechanical/im2300-underside-pcb-floorplan-rev-l.svg`
   - `../../cad/mechanical/im2300-sidewall-cooling-layout-rev-c.svg`
-  - `../../cad/mechanical/im2300-closed-lid-stack-rev-e.svg`
+  - `../../cad/mechanical/im2300-closed-lid-stack-rev-f.svg`
+  - `../../cad/mechanical/pcb-and-connector-support-detail-rev-a.svg`
 
 This package controls the measurements that must be taken from the actual
 Pelican iM2300, custom four-side frame, installed display assembly, battery
@@ -115,7 +116,7 @@ frame, tray, panel, and case.
   star return and outside the guarded hinge-side PSU harness corridor.
 - Rotate the `RPS-400-24-C` footprint 90 degrees in plan and maintain at least
   125 mm from the AUDIO-8X8 quiet boundary to the nearest grounded PSU guard
-  edge after tolerance stack-up. The Rev K nominal study provides 146 mm.
+  edge after tolerance stack-up. The Rev L nominal study provides 146 mm.
   Keep the complete tray-mounted PSU/terminal-guard envelope no more than
   48.0 mm above the deepest interior floor. Maintain at least 10 mm vertically
   from that guard to the nearest carrier
@@ -126,9 +127,15 @@ frame, tray, panel, and case.
   may enter that protected corridor.
 - Gold Mount engagement is left to right. Keep the left insertion corridor and
   complete battery motion sweep free of panel hardware and connected cables.
-- Use at least six mechanical supports on AUDIO-8X8 and six on CM5-CARRIER.
-  Add supports beside panel connectors and heavy parts; do not leave the
-  268 mm audio board on four corner supports alone.
+- Use the six controlled supports `A1-A6` on AUDIO-8X8 and `C1-C6` on
+  CM5-CARRIER from `pcb-support-pattern-a2.csv`. Each support uses a 3.4 mm
+  finished NPTH, 8.0 mm all-layer copper keepout, 10.0 mm component keepout,
+  and a rigid captive metal M3 standoff. Maximum longitudinal support-row span
+  is 128 mm. Do not soft-float either PCB.
+- Every user-operated connector shall transfer plug, unplug, downward push,
+  cable-side, and vibration loads to the panel or frame. Follow
+  `connector-load-path-a2.csv`; solder-only retention is prohibited. Release
+  the RJ45 capture bracket and headset/SIM service-board coupons before routing.
 - Qualify the complete unit at 45 C ambient and 151.7 W continuous load.
   Measure at least 15 CFM through-case with a clean filter, at least 12 CFM at
   the released filter-maintenance limit, and keep PSU inlet air at or below
@@ -139,4 +146,6 @@ frame, tray, panel, and case.
 - `im2300-measurement-register.csv`: inspection record for the actual hardware
 - `mechanical-release-a2.json`: machine-readable release gate
 - `validate_mechanical_release.py`: package/release validator
+- `pcb-support-pattern-a2.csv`: controlled board and panel support coordinates
+- `connector-load-path-a2.csv`: controlled load path for each interface group
 - `im2300-measurement-worksheet-a2.svg`: printable factory worksheet

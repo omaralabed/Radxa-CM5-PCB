@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1320" viewBox="-30 -43 491.8 371" role="img" aria-labelledby="title desc" style="background:#111418">
-  <title id="title">Radxa CM5 ProComm iM2300 underside PCB floorplan Rev K</title>
-  <desc id="desc">A2 underside plan showing the 15 millimeter four-side frame and screw keepout, low-profile bottom equipment tray, rotated hinge-side PSU bay with at least 125 millimeters of guarded separation from audio, six supports per long PCB, selected bottom-side CM5 and modem cooling cartridges, sidewall airflow, routing corridors, and independent panel-light harness.</desc>
+  <title id="title">Radxa CM5 ProComm iM2300 underside PCB floorplan Rev L</title>
+  <desc id="desc">A2 underside plan showing controlled six-point M3 support patterns for both long PCBs, panel and frame load paths for user-operated connectors, the 15 millimeter four-side frame keepout, low-profile bottom equipment tray, guarded hinge-side PSU bay, bottom-side CM5 and modem cooling cartridges, sidewall airflow, and protected routing corridors.</desc>
   <defs>
     <pattern id="minorGrid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M10 0H0V10" fill="none" stroke="#2b3138" stroke-width=".22"/></pattern>
     <pattern id="majorGrid" width="50" height="50" patternUnits="userSpaceOnUse"><rect width="50" height="50" fill="url(#minorGrid)"/><path d="M50 0H0V50" fill="none" stroke="#39414a" stroke-width=".34"/></pattern>
@@ -11,15 +11,15 @@
     <style>
       .page{fill:#111418}.panel{fill:#171c21;stroke:#c4ccd4;stroke-width:1.2}.safe{fill:none;stroke:#58616b;stroke-width:.45;stroke-dasharray:3 2}.grid{fill:url(#majorGrid);opacity:.5}
       .audio{stroke:#52c7d5}.network{stroke:#69d391}.rf{stroke:#e4b95f}.service{stroke:#76a7f7}.backup{stroke:#c493e8}.mains{stroke:#f27767}.lighting{stroke:#f4d8a2}.board{stroke-width:.8}.zone{stroke-width:.6;stroke-dasharray:3 2}.keep{fill:none;stroke-width:.55;stroke-dasharray:2 2}
-      .route{fill:none;stroke-width:1.1;stroke-dasharray:3 2}.airflow{fill:none;stroke:#54c8d6;stroke-width:1.2;stroke-dasharray:3 2;marker-end:url(#arrow)}.mount{fill:#0d1013;stroke:#d7dee4;stroke-width:.5}.module{fill:#11171c;stroke-width:.55}.dim{fill:none;stroke:#aab3bd;stroke-width:.45;marker-start:url(#arrow);marker-end:url(#arrow)}.extension{stroke:#6f7983;stroke-width:.35}
-      .title{fill:#f6f8fa;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:7.2px;font-weight:750}.subtitle{fill:#aeb7c0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:3.05px}.label{fill:#eef2f5;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:3.15px;font-weight:650;text-anchor:middle}.small{fill:#bac3cc;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:2.55px;text-anchor:middle}.tiny{fill:#aeb8c2;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:2.15px;text-anchor:middle}.note{fill:#aeb8c2;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:2.25px}.dimension{fill:#bdc6ce;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:3px;text-anchor:middle}.psunote{fill:#ff8a7b;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:2.25px;font-weight:650;text-anchor:middle}.label,.small,.tiny,.note,.dimension,.psunote{paint-order:stroke fill;stroke:#111418;stroke-width:.65;stroke-linejoin:round}
+      .route{fill:none;stroke-width:1.1;stroke-dasharray:3 2}.airflow{fill:none;stroke:#54c8d6;stroke-width:1.2;stroke-dasharray:3 2;marker-end:url(#arrow)}.mount{fill:#0d1013;stroke:#d7dee4;stroke-width:.5}.mountKeepout{fill:none;stroke:#d7dee4;stroke-width:.35;stroke-dasharray:1.2 1}.module{fill:#11171c;stroke-width:.55}.dim{fill:none;stroke:#aab3bd;stroke-width:.45;marker-start:url(#arrow);marker-end:url(#arrow)}.extension{stroke:#6f7983;stroke-width:.35}
+      .title{fill:#f6f8fa;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:7.2px;font-weight:750}.subtitle{fill:#aeb7c0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:3.05px}.label{fill:#eef2f5;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:3.15px;font-weight:650;text-anchor:middle}.small{fill:#bac3cc;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:2.55px;text-anchor:middle}.tiny{fill:#aeb8c2;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:2.15px;text-anchor:middle}.note{fill:#aeb8c2;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:2.25px}.dimension{fill:#bdc6ce;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:3px;text-anchor:middle}.psunote{fill:#ff8a7b;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:2.25px;font-weight:650;text-anchor:middle}.label,.small,.tiny,.note,.dimension,.psunote{stroke:none}
       text{letter-spacing:0}
     </style>
   </defs>
 
   <rect class="page" x="-30" y="-43" width="491.8" height="371"/>
   <text class="title" x="0" y="-32">RADXA CM5 PROCOMM - iM2300 UNDERSIDE PCB FLOORPLAN</text>
-  <text class="subtitle" x="0" y="-24">REV K / A2 HOLD | PSU GUARD Z MAX 48 mm / 10 mm TO CARRIER | SIX SUPPORTS PER LONG PCB | SAMPLE-CONTROLLED FIT</text>
+  <text class="subtitle" x="0" y="-24">REV L / A2 HOLD | CONTROLLED A1-A6 + C1-C6 M3 SUPPORTS | PANEL/FRAME CARRIES ALL USER MATING LOADS | SAMPLE-CONTROLLED FIT</text>
 
   <line class="extension" x1="0" y1="0" x2="0" y2="-13"/><line class="extension" x1="431.8" y1="0" x2="431.8" y2="-13"/>
   <line class="dim" x1="1.5" y1="-10" x2="430.3" y2="-10"/><text class="dimension" x="215.9" y="-12.5">431.8 NOMINAL - FINISHED OUTLINE REQUIRES MEASURED 38.1 mm RECESS</text>
@@ -50,8 +50,7 @@
 
   <!-- AUDIO-8X8 suspended board -->
   <rect class="zone audio" x="15" y="15" width="78" height="268" rx="3" fill="#173036" fill-opacity=".5"/>
-  <text class="label" x="54" y="22">AUDIO-8X8 | 78 x 268 MAX</text>
-  <text class="small" x="54" y="27">6-LAYER RECOMMENDED | PANEL-SUPPORTED XLRs</text>
+  <text class="label" x="11" y="149" transform="rotate(-90 11 149)">AUDIO-8X8 | 78 x 268 MAX | A1-A6</text>
   <line class="audio" x1="54" y1="31" x2="54" y2="277" stroke-width=".35" stroke-dasharray="1.5 1.5"/>
   <g fill="#0d1013" stroke="#52c7d5" stroke-width=".55">
     <circle cx="26.4" cy="34" r="11.4"/><circle cx="69.78" cy="34" r="11.4"/>
@@ -63,9 +62,8 @@
     <circle cx="26.4" cy="226" r="11.4"/><circle cx="69.78" cy="226" r="11.4"/>
     <circle cx="26.4" cy="258" r="11.4"/><circle cx="69.78" cy="258" r="11.4"/>
   </g>
-  <rect class="module audio" x="35.3" y="112" width="27" height="20" rx="1"/><text class="tiny" x="48.8" y="120">AK5558</text><text class="tiny" x="48.8" y="125">AK4458</text>
-  <rect class="module audio" x="34.3" y="137" width="29" height="50" rx="1"/><text class="tiny" x="48.8" y="157">CLOCK +</text><text class="tiny" x="48.8" y="162">FILTERS</text><text class="tiny" x="48.8" y="167">+/-15 V</text>
-  <g class="mount"><circle cx="21" cy="21" r="1.8"/><circle cx="87" cy="21" r="1.8"/><circle cx="21" cy="149" r="1.8"/><circle cx="87" cy="149" r="1.8"/><circle cx="21" cy="277" r="1.8"/><circle cx="87" cy="277" r="1.8"/></g>
+  <g class="mountKeepout"><circle cx="47" cy="21" r="4"/><circle cx="87" cy="21" r="4"/><circle cx="47" cy="149" r="4"/><circle cx="87" cy="149" r="4"/><circle cx="47" cy="277" r="4"/><circle cx="87" cy="277" r="4"/></g>
+  <g class="mount"><circle cx="47" cy="21" r="1.7"/><circle cx="87" cy="21" r="1.7"/><circle cx="47" cy="149" r="1.7"/><circle cx="87" cy="149" r="1.7"/><circle cx="47" cy="277" r="1.7"/><circle cx="87" cy="277" r="1.7"/></g>
   <path d="M98 15V283" fill="none" stroke="#52c7d5" stroke-width="1.2" stroke-dasharray="3 2"/>
   <text class="tiny" x="101" y="149" transform="rotate(-90 101 149)">AUDIO QUIET BOUNDARY - NO FANS, PWM WIRING, OR SWITCH NODES</text>
 
@@ -91,13 +89,13 @@
   <rect class="module mains" x="166" y="244" width="36" height="44" rx="1"/>
   <text class="tiny" x="184" y="267">FUSED C14</text>
   <path class="route mains" d="M184 244C184 210 190 155 190 101"/>
-  <text class="tiny" x="201" y="174">GUARDED AC HARNESS TO HINGE-SIDE PSU</text>
+  <text class="tiny" x="194" y="153" transform="rotate(-90 194 153)">GUARDED AC HARNESS TO HINGE-SIDE PSU</text>
 
   <!-- CM5-CARRIER suspended board -->
   <rect class="zone network" x="219" y="15" width="166" height="268" rx="3" fill="#173426" fill-opacity=".36"/>
-  <text class="label" x="302" y="23">CM5-CARRIER - 166 x 268 MAXIMUM OUTLINE</text>
-  <text class="small" x="302" y="28">10-LAYER RECOMMENDED | CONTROLLED IMPEDANCE</text>
-  <g class="mount"><circle cx="225" cy="21" r="1.8"/><circle cx="379" cy="21" r="1.8"/><circle cx="225" cy="277" r="1.8"/><circle cx="379" cy="277" r="1.8"/><circle cx="236" cy="169" r="1.8"/><circle cx="379" cy="149" r="1.8"/></g>
+  <text class="label" x="302" y="31">CM5-CARRIER | 166 x 268 MAX | C1-C6</text>
+  <g class="mountKeepout"><circle cx="225" cy="21" r="4"/><circle cx="379" cy="21" r="4"/><circle cx="225" cy="149" r="4"/><circle cx="331" cy="149" r="4"/><circle cx="225" cy="277" r="4"/><circle cx="379" cy="205" r="4"/></g>
+  <g class="mount"><circle cx="225" cy="21" r="1.7"/><circle cx="379" cy="21" r="1.7"/><circle cx="225" cy="149" r="1.7"/><circle cx="331" cy="149" r="1.7"/><circle cx="225" cy="277" r="1.7"/><circle cx="379" cy="205" r="1.7"/></g>
   <rect x="244" y="15" width="98" height="142" rx="2" fill="#f27767" fill-opacity=".035" stroke="#f27767" stroke-width=".55" stroke-dasharray="2 2"/>
 
   <!-- Network and high-speed placement -->
@@ -135,7 +133,7 @@
   <text class="tiny" x="303" y="257">PCIE</text><text class="tiny" x="303" y="262">SWITCH</text>
   <path class="route service" d="M318.5 255H313M303 248V108M303 108C297 96 293 82 290 67M303 108C286 103 270 99 252 94M303 108C299 103 295 99 290 94M303 108C316 101 332 99 350.5 98"/>
   <path class="route network" d="M318.5 252H309V112C293 99 274 82 252 67"/>
-  <text class="tiny" x="321" y="250">SHORT UPSTREAM</text>
+  <text class="tiny" x="316" y="246">SHORT UPSTREAM</text>
 
   <!-- USB3 WWAN path leaves the central trunk above the power zone -->
   <path class="route service" d="M303 174V168H336C346 168 349 156 350 149"/>
@@ -190,5 +188,5 @@
   <rect x="92" y="311" width="12" height="7" fill="url(#floorHatch)" stroke="#c493e8"/><text class="note" x="108" y="316">BOTTOM-FLOOR HARDWARE</text>
   <line x1="203" y1="314.5" x2="220" y2="314.5" stroke="#52c7d5" stroke-width="1.1" stroke-dasharray="3 2"/><text class="note" x="224" y="316">HARNESS / CONTROLLED ROUTE</text>
   <line x1="331" y1="314.5" x2="348" y2="314.5" stroke="#76a7f7" stroke-width="2.2" opacity=".7"/><text class="note" x="352" y="316">HIGH-SPEED TRUNK</text>
-  <text class="note" x="0" y="324">A2 HOLD: physical case/display/dock survey, 62.425 mm tray-to-panel budget, PSU section gauge, folded-RF closure sweep, fan CFM, and 45 C thermal test are required before routing.</text>
+  <text class="note" x="0" y="324">A2 HOLD: A1-A6/C1-C6 use M3 NPTH dia 3.4, dia 8 all-copper keepout, dia 10 component keepout; release connector capture coupons and physical fit before routing.</text>
 </svg>

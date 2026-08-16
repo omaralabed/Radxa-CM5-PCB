@@ -1,17 +1,17 @@
 # iM2300 Mechanical Studies
 
-These drawings extend the current Rev K top-panel placement. Rev K preserves
+These drawings extend the current Rev K top-panel placement. The underside Rev L preserves
 the XLR and panel datums while adding the A2 vertical-stack gate, low-profile
 bottom tray, six supports per long PCB, selected modem fan, transport-closure
 rules, PSU airflow wash, and corrected panel-thickness logic.
 
-- `im2300-closed-lid-stack-rev-e.svg`: corrected side section using datum A at
+- `im2300-closed-lid-stack-rev-f.svg`: corrected side section using datum A at
   the finished panel top face, 3.175 mm panel thickness, the monitor's
   documented 396.24 x 203.20 x 20.32 mm body envelope, 65.425 mm nominal space below the panel underside, and
   battery-removed transport closure with all eight released compact hinged
   antennas installed and folded inboard. Their approximately 32 mm preliminary
   folded envelope remains sample-controlled and requires 8 mm dynamic clearance.
-- `im2300-underside-pcb-floorplan-rev-k.svg`: pre-routing revision that reserves
+- `im2300-underside-pcb-floorplan-rev-l.svg`: pre-routing revision that reserves
   a 15 mm four-side frame/screw keepout, reduces the audio and carrier board
   envelopes to 78 x 268 mm and 166 x 268 mm, moves the two Delta
   `THA0412AD-TZW3` enclosure fans to a right-wall intake and operator-wall
@@ -22,6 +22,9 @@ rules, PSU airflow wash, and corrected panel-thickness logic.
   corridors, reserves the panel-mounted warm-white courtesy-light bodies and
   their independent fused AUX_12V harness, and keeps the Gold Mount insertion
   corridor clear on the left so the battery slides toward the network side.
+  It also freezes six collision-checked M3 support coordinates on each long
+  PCB, with 3.4 mm NPTH holes, 8 mm all-layer copper keepouts, and 10 mm
+  component keepouts.
   The PSU guard is nominally 146 mm from the audio quiet boundary and may not
   fall below 125 mm after the physical tolerance stack is released.
   The lid-display harness has a separate protected corridor with 15 mm minimum
@@ -35,10 +38,14 @@ rules, PSU airflow wash, and corrected panel-thickness logic.
 - `im2300-sidewall-cooling-layout-rev-c.svg`: preliminary right-wall intake and
   operator-wall exhaust centers, selected Qualtek guards, custom splash-hood
   rules, clean-air PSU wash, reinforcement/gasket rules, and thermal acceptance.
-- `im2300-cooling-clearance-rev-c.scad`: parametric 3D clearance concept for the
+- `im2300-cooling-clearance-rev-d.scad`: parametric 3D clearance concept for the
   panel, suspended boards, hinge-side PSU, sidewall fans, and downward-facing
   CM5/modem cooling stacks, corrected panel underside, tray, and guarded PSU
-  Z stack. Its assertions are planning checks, not release CAD.
+  Z stack and all twelve controlled panel-to-PCB standoffs. Its assertions are
+  planning checks, not release CAD.
+- `pcb-and-connector-support-detail-rev-a.svg`: factory detail for supports
+  `A1-A6` and `C1-C6`, panel-flanged connectors, and custom capture brackets
+  that keep plug/unplug and downward loads out of PCB laminate and solder.
 
 These drawings are fit studies, not fabrication releases. Replace nominal case,
 monitor, connector, PCB, heatsink, fan, PSU, battery-dock, and harness envelopes

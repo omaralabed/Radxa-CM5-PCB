@@ -45,8 +45,8 @@ M001-M080 is complete and the A2 validator passes with the release option.
    validated for restriction and recirculation.
 9. The closed-lid drawing is a composite side projection, not a literal cut
    through one XY station. The PSU and CM5 cooling cartridge are separated in
-   the hinge-to-handle direction by the Rev K floorplan; their horizontal
-   positions are separated in the projection for readability. Rev K and the
+   the hinge-to-handle direction by the Rev L floorplan; their horizontal
+   positions are separated in the projection for readability. Rev L and the
    final STEP model, not the side projection, control XY collision checks.
 
 ## Controlled Materials
@@ -175,9 +175,9 @@ loops.
   pad-map, courtyard, 3D-model, or production-data gates; see
   `cad/kicad/reports/component-footprint-audit.md`. Zero ERC errors does not
   clear these blockers or authorize routing.
-- AUDIO-8X8: six supports minimum, panel-supported XLRs, controlled chassis
+- AUDIO-8X8: controlled `A1-A6` supports, panel-supported XLRs, controlled chassis
   shield connection, no PWM/fan harness crossing the quiet boundary.
-- CM5-CARRIER: six supports minimum, 15 mm perimeter frame keepout, no B.Cu
+- CM5-CARRIER: controlled `C1-C6` supports, 15 mm perimeter frame keepout, no B.Cu
   parts or switch-node copper above the PSU guard, and exact 3D keepouts for
   CM5/5540A/fan, Wi-Fi, WWAN/heatsink/fan, RF pigtails, RJ45s, and lid harness.
 - M.2 modem support means B-key 3042/3052 with an adjustable standoff and

@@ -1,0 +1,13 @@
+board,support_id,x_board_mm,y_board_mm,x_panel_mm,y_panel_mm,hole_diameter_mm,copper_keepout_diameter_mm,component_keepout_diameter_mm,hardware,load_path_note
+AUDIO-8X8,A1,32.0,6.0,47.0,21.0,3.4,8.0,10.0,M3_CAPTIVE_METAL_STANDOFF,Top panel to rigid standoff to PCB; independent of XLR flange screws
+AUDIO-8X8,A2,72.0,6.0,87.0,21.0,3.4,8.0,10.0,M3_CAPTIVE_METAL_STANDOFF,Top panel to rigid standoff to PCB; independent of XLR flange screws
+AUDIO-8X8,A3,32.0,134.0,47.0,149.0,3.4,8.0,10.0,M3_CAPTIVE_METAL_STANDOFF,Center support prevents long-board flex during connector use and transport
+AUDIO-8X8,A4,72.0,134.0,87.0,149.0,3.4,8.0,10.0,M3_CAPTIVE_METAL_STANDOFF,Center support prevents long-board flex during connector use and transport
+AUDIO-8X8,A5,32.0,262.0,47.0,277.0,3.4,8.0,10.0,M3_CAPTIVE_METAL_STANDOFF,Top panel to rigid standoff to PCB; independent of XLR flange screws
+AUDIO-8X8,A6,72.0,262.0,87.0,277.0,3.4,8.0,10.0,M3_CAPTIVE_METAL_STANDOFF,Top panel to rigid standoff to PCB; independent of XLR flange screws
+CM5-CARRIER,C1,6.0,6.0,225.0,21.0,3.4,8.0,10.0,M3_CAPTIVE_METAL_STANDOFF,Top panel to rigid standoff to carrier PCB
+CM5-CARRIER,C2,160.0,6.0,379.0,21.0,3.4,8.0,10.0,M3_CAPTIVE_METAL_STANDOFF,Top panel to rigid standoff to carrier PCB
+CM5-CARRIER,C3,6.0,134.0,225.0,149.0,3.4,8.0,10.0,M3_CAPTIVE_METAL_STANDOFF,Center support prevents connector and harness loads from flexing carrier
+CM5-CARRIER,C4,112.0,134.0,331.0,149.0,3.4,8.0,10.0,M3_CAPTIVE_METAL_STANDOFF,Center support clears the modem cooling keepout and prevents carrier flex
+CM5-CARRIER,C5,6.0,262.0,225.0,277.0,3.4,8.0,10.0,M3_CAPTIVE_METAL_STANDOFF,Top panel to rigid standoff to carrier PCB
+CM5-CARRIER,C6,160.0,190.0,379.0,205.0,3.4,8.0,10.0,M3_CAPTIVE_METAL_STANDOFF,Right-edge support between modem and CM5 cooling keepouts

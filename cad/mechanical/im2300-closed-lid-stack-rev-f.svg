@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1050" viewBox="-32 -36 500 250" role="img" aria-labelledby="title desc" style="background:#111418">
-  <title id="title">Radxa CM5 ProComm iM2300 closed-lid mechanical stack Rev E</title>
-  <desc id="desc">Composite side projection using the panel top face as datum A, a 3.175 millimeter panel, the documented 396.24 by 203.20 by 20.32 millimeter monitor body, battery-removed transport closure with eight compact hinged antennas installed and folded inboard, suspended PCBs, downward cooling, and hinge-side bottom power hardware. Horizontal positions are diagrammatic; the Rev K floorplan controls XY placement.</desc>
+  <title id="title">Radxa CM5 ProComm iM2300 closed-lid mechanical stack Rev F</title>
+  <desc id="desc">Composite side projection using the panel top face as datum A, a 3.175 millimeter panel, the documented 396.24 by 203.20 by 20.32 millimeter monitor body, battery-removed transport closure with eight compact hinged antennas installed and folded inboard, rigidly supported suspended PCBs, downward cooling, and hinge-side bottom power hardware. Horizontal positions are diagrammatic; the Rev L floorplan controls XY placement.</desc>
   <defs>
     <pattern id="minorGrid" width="10" height="10" patternUnits="userSpaceOnUse">
       <path d="M10 0H0V10" fill="none" stroke="#2b3138" stroke-width="0.22"/>
@@ -26,7 +26,7 @@
 
   <rect class="page" x="-32" y="-36" width="500" height="250"/>
   <text class="title" x="0" y="-25">RADXA CM5 PROCOMM - iM2300 CLOSED-LID STACK</text>
-  <text class="subtitle" x="0" y="-17">REV E A2 HOLD | DOCUMENTED DISPLAY BODY | INSTALLED STACK + ANTENNA SWEEP REQUIRED | BATTERY REMOVED / EIGHT ANTENNAS FOLDED INBOARD</text>
+  <text class="subtitle" x="0" y="-17">REV F A2 HOLD | REV L XY / RIGID PCB SUPPORTS | INSTALLED STACK + ANTENNA SWEEP REQUIRED | BATTERY REMOVED / EIGHT ANTENNAS FOLDED INBOARD</text>
 
   <!-- Case shell and cavities. Parting plane is Y=60. -->
   <path class="case" d="M0 60V9Q0 0 10 0H421.8Q431.8 0 431.8 9V60H423.8V10H8V60Z"/>
@@ -120,7 +120,7 @@
   <text class="small" x="54" y="77">GROMMET + STRAIN RELIEF + SERVICE LOOP</text>
 
   <!-- Notes -->
-  <text class="note" x="0" y="187">COMPOSITE SIDE PROJECTION: horizontal positions are separated for readability; Rev K controls XY. Do not infer plan overlap or clearance from this view.</text>
+  <text class="note" x="0" y="187">COMPOSITE SIDE PROJECTION: horizontal positions are separated for readability; Rev L controls XY. Do not infer plan overlap or clearance from this view.</text>
   <text class="note" x="0" y="193">DISPLAY: documented 396.24 x 203.20 x 20.32 mm body; verify mount buildup, connectors, cable bends, case recess, and wall taper in the installed stack.</text>
   <text class="note" x="0" y="199">PASS: battery removed, all eight selected antennas installed and folded inboard, and at least 8 mm measured dynamic clearance through the full latched lid sweep.</text>
   <text class="note" x="0" y="205">BOTTOM STACK HOLD: 48 mm maximum PSU/guard elevation, 10 mm to carrier B.Cu, 4 mm F.Cu-to-panel allowance, and 10 mm fan inlets require a physical section gauge.</text>

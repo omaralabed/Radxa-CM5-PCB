@@ -1,4 +1,4 @@
-// ProComm iM2300 cooling and vertical-stack concept Rev C / mechanical gate A2.
+// ProComm iM2300 cooling and vertical-stack concept Rev D / mechanical gate A2.
 // All dimensions are millimeters and remain preliminary until the actual case is measured.
 $fn = 48;
 
@@ -13,6 +13,9 @@ tray_t = 2.0;
 tray_top_z = 3.0; // Includes any released rigid mounting/isolator stack.
 carrier_z = 58.0;
 carrier_t = 1.6;
+standoff_h = panel_underside_z - (carrier_z + carrier_t);
+audio_supports = [[47,21],[87,21],[47,149],[87,149],[47,277],[87,277]];
+carrier_supports = [[225,21],[379,21],[225,149],[331,149],[225,277],[379,205]];
 
 cpu_cm5_bottom_z = 53.4;
 cpu_sink_h = 10.0;
@@ -45,6 +48,9 @@ assert(panel_underside_z - (carrier_z + carrier_t) >= 4.0, "Carrier F.Cu gap to 
 assert(psu_audio_gap >= 125.0, "PSU guard is less than 125 mm from the audio quiet boundary");
 assert(psu_carrier_gap >= 10.0, "PSU guard clearance to the carrier is below 10 mm");
 assert(lid_harness_psu_gap >= 15.0, "Lid-harness corridor is less than 15 mm from the PSU guard");
+assert(standoff_h > 0, "PCB standoff stack has no positive height");
+assert(len(audio_supports) == 6, "AUDIO-8X8 must have six controlled supports");
+assert(len(carrier_supports) == 6, "CM5-CARRIER must have six controlled supports");
 echo(str("Panel top above floor: ", panel_top_z, " mm"));
 echo(str("Panel underside above floor: ", panel_underside_z, " mm"));
 echo(str("Tray top to panel underside: ", panel_underside_z - tray_top_z, " mm"));
@@ -53,6 +59,7 @@ echo(str("Modem fan inlet gap: ", modem_floor_gap, " mm"));
 echo(str("PSU guard to audio quiet boundary: ", psu_audio_gap, " mm"));
 echo(str("PSU guard to carrier clearance: ", psu_carrier_gap, " mm"));
 echo(str("Lid-harness corridor to PSU guard: ", lid_harness_psu_gap, " mm"));
+echo(str("PCB standoff body height: ", standoff_h, " mm"));
 
 module colored_box(size, color_value, alpha = 1.0) {
   color([color_value[0], color_value[1], color_value[2], alpha]) cube(size);
@@ -71,6 +78,13 @@ module finned_sink(size = [55, 40, 10]) {
   color([0.88, 0.64, 0.18]) {
     cube([size[0], size[1], 2]);
     for (x = [2:6:size[0] - 2]) translate([x, 0, 2]) cube([2, size[1], size[2] - 2]);
+  }
+}
+
+module pcb_standoff() {
+  color([0.82, 0.84, 0.86]) difference() {
+    cylinder(h = standoff_h, d = 7.0);
+    translate([0, 0, -0.2]) cylinder(h = standoff_h + 0.4, d = 3.0);
   }
 }
 
@@ -107,6 +121,11 @@ translate([219, 15, carrier_z]) {
   colored_box([5, 268, carrier_t], [0.15, 0.66, 0.38], 0.90);
   translate([161, 0, 0]) colored_box([5, 268, carrier_t], [0.15, 0.66, 0.38], 0.90);
 }
+
+// Controlled A1-A6 and C1-C6 rigid panel-to-PCB supports. Panel/frame screws
+// and connector fasteners are separate systems and are not represented here.
+for (p = audio_supports) translate([p[0], p[1], carrier_z + carrier_t]) pcb_standoff();
+for (p = carrier_supports) translate([p[0], p[1], carrier_z + carrier_t]) pcb_standoff();
 
 // Guarded hinge/display-side PSU bay on the bottom floor. The supply is rotated
 // 90 degrees in plan and moved into the digital side to protect the audio zone.

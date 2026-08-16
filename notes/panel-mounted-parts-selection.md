@@ -23,11 +23,11 @@ The factory cut drawing can be released only after:
 | --- | ---: | --- | --- |
 | XLR outputs | 8 | Neutrik `NC3MAV` | Selected; use official A-series drawing and sample coupon |
 | XLR inputs | 8 | Neutrik `NC3FAV` | Selected; use official A-series drawing and sample coupon |
-| WAN/LAN MagJacks | 4 | Bel `V8BR-1AX1-GH` | Selected for PCB; panel opening waits for PCB Z height |
+| WAN/LAN MagJacks | 4 | Bel `V8BR-1AX1-GH` | Selected for PCB plus custom zero-preload four-port panel capture bracket; bracket carries plug/unplug/downward loads |
 | Fused C14 inlet | 1 | Qualtek `719W-00/03` | Conditional; exact cutout known, current-rating acceptance required |
 | Backup inlet | 1 | LEMO `EGG.1B.302.CLL` | Selected; M12 panel drill, IP50 only |
 | Main power control | 1 | E-Switch `RA812C1121` | Selected; maintained DPST OFF-ON rocker; thickness-dependent rectangular cutout |
-| Headset jack | 1 | Kycon `STX-353K7A-6N-KTTR` | Selected for PCB; panel clearance waits for PCB Z height |
+| Headset jack | 1 | Kycon `STX-353K7A-6N-KTTR` | Selected for four-M3 service daughterboard plus positive panel capture bezel and short carrier harness |
 | Status indicators | 6 | Bulgin `DX06` wire-lead, 12 V, black brass | Selected family; 6 mm cutouts |
 | Panel lights | 2 | YIS Marine `LS102W` | Selected concept; 22 mm cutout, 38 mm matte diffused face, 12 V warm-white SMD light, IP67 |
 | Night-light touch control | 1 | E-Switch `CS7L2FR` | Selected; 22.20 +0.25/-0.00 mm cutout, latching capacitive low-side output, IP68 |
@@ -70,7 +70,7 @@ table and a drawing disagree.
 | Interface | Preliminary panel work | Release condition |
 | --- | --- | --- |
 | `NC3MAV` / `NC3FAV` | Use the exact A-series manufacturer cut geometry: central panel opening at least `22.0` and two mounting holes from the controlled drawing; retain 32.0 row pitch and 43.38 column centers | Confirm front/rear mounting convention, latch orientation, connector sample, and screw engagement |
-| `V8BR-1AX1-GH` | Rectangular clearance around top-entry RJ45 mouth | Derive from the final PCB Z datum, panel thickness, plug latch travel, LED visibility, and official Bel drawing |
+| `V8BR-1AX1-GH` | Rectangular opening plus custom four-port capture bracket around top-entry RJ45 bodies | Derive from final PCB Z datum, panel thickness, plug latch travel, LED visibility, and actual MagJack/plug coupon; bracket must restrain all user axes with zero PCB preload |
 | `719W-00/03` | 36 x 44 flange; use the exact front-mounted or rear-mounted cutout in the Qualtek drawing; two `3.5` mounting holes | Select mounting side and verify finger-safe mains barrier and fuse-drawer access |
 | `EGG.1B.302.CLL` | `M12` panel drill | Confirm key orientation, nut access, cable bend radius, and IP50 acceptance |
 | `RA812C1121` | `13.0` high x `19.2`, `19.4`, or `19.62` wide for panel thickness `0.75-1.25`, `1.25-2.0`, or `2.0-3.0` respectively | Use manufacturer drawing; 3.175 mm nominal panel requires a rear pocket to `<=3.0`; verify snap retention and four FASTON clearances on a coupon |
@@ -80,7 +80,7 @@ table and a drawing disagree.
 | `THA0412AD-TZW3` + 40 mm guards | Sidewall work only: 40 x 40 fan envelope, 32 x 32 mounting-hole square, fan holes `3.5 +/-0.3`; use Qualtek `09150-F/30` at intake and `09150-G` at exhaust, with separate reinforcement plates and gaskets; center airflow opening is sample-controlled | Measure wall ribs/taper and nearby hardware; lock fan 1 intake/fan 2 exhaust labels; test custom exhaust splash hood, wall stiffness, finger safety, ingress, filter service, pressure balance, and internal baffle effectiveness |
 | SMA / RP-SMA bulkheads | Current SVG uses approximately `6.4` round placeholders | Replace with TE bulkhead drawing after pigtail/module confirmation; include wrench flats and washer clearance if required |
 | `GW.05.0153` / `TG.66.A113` folded sweep | Eight inboard dashed projections are transport envelopes, not cut geometry | Fit all eight actual antennas; verify RP-SMA versus SMA polarity, hinge rotation, 34 mm pitch, neighboring hardware, maximum folded height, and at least 8 mm latched-lid dynamic clearance |
-| `STX-353K7A-6N-KTTR` | No threaded panel bushing; panel clearance is concentric with PCB-mounted jack | Fix PCB Z height, plug insertion clearance, and jack-to-panel gap on a coupon |
+| `STX-353K7A-6N-KTTR` | No threaded panel bushing; use positive panel bezel on a four-M3 service daughterboard | Fix service-board Z height, plug clearance, bezel capture, and no-load short harness on a coupon |
 | Nano-SIM access | Two service openings above a vertical daughterboard, not above a horizontal holder | Design daughterboard, card insertion path, retention, ESD shield, and service cover before cutting |
 | QRC-GOLD | Existing 99 x 132 mm battery envelope is keepout only | Replace with Anton/Bauer bracket hole pattern and full battery release-sweep measurement; published bracket dimensions exclude the release latch |
 | Lid harness | Open hinge-edge notch, no enclosed top-panel hole | Measure HDMI, USB touch, and 12 V cable overmolds and specify edge protection and service loop |

@@ -1,0 +1,13 @@
+interface,quantity,external_user_access,primary_load_path,pcb_decoupling,release_requirement,status
+Balanced XLR,16,YES,TWO_SCREW_PANEL_FLANGE,"Rigid nearby AUDIO-8X8 standoffs maintain alignment; flange carries mating and push loads","Install both connector flange screws; coupon-test connector stack; no solder-only retention",CONTROLLED
+RJ45,4,YES,PANEL_CAPTURE_BRACKET,"Custom four-port 2.0 mm 5052-H32 capture bracket restrains MagJack bodies in insertion extraction and downward axes","Release bracket from actual MagJack and plug samples; bracket must have zero assembly preload on PCB",BRACKET_REQUIRED
+CTIA headset,1,YES,PANEL_BEZEL_AND_SERVICE_DAUGHTERBOARD,"Four-M3 supported service daughterboard and positive front capture prevent jack body motion","Release bezel/daughterboard coupon; no mating load may reach carrier PCB or solder joints",BRACKET_REQUIRED
+Nano-SIM,2,YES,GUIDED_PANEL_SERVICE_DAUGHTERBOARD,"Four-M3 supported SIM daughterboard with panel guide carries card insertion force","Release service opening cover guide and daughterboard geometry from samples",BRACKET_REQUIRED
+Fused C14 inlet,1,YES,DIRECT_PANEL_FLANGE,"Panel and guarded rear barrier carry cord loads","Use both flange fasteners and verify rear guard and strain relief",CONTROLLED
+LEMO backup inlet,1,YES,DIRECT_PANEL_BULKHEAD,"Bulkhead shell nut and anti-rotation feature carry cable loads","Torque to manufacturer value and add harness strain relief",CONTROLLED
+Main power rocker,1,YES,DIRECT_PANEL_SNAP_IN,"Rear harness is strain relieved independently","Verify local 3.0 mm panel pocket and retention coupon",CONTROLLED
+Panel lights and touch switch,3,YES,DIRECT_PANEL_THREADED_BODY,"Rear harness is clamped to panel/frame","Verify nut torque O-ring compression and touch push load",CONTROLLED
+Status indicators,6,YES,DIRECT_PANEL_THREADED_BODY,"Rear leads include service loop and strain relief","Verify rear nut clearance and harness clamp",CONTROLLED
+RF bulkheads,8,YES,DIRECT_PANEL_BULKHEAD,"Pigtail coax is clamped before reaching radio modules","Use anti-rotation washers; verify antenna hinge torque and folded sweep",CONTROLLED
+Gold Mount dock,1,YES,DIRECT_PANEL_AND_FRAME_BACKPLATE,"Removable power harness is strain relieved before PWR-SELECT","Use supplied backplate; battery insertion and removal loads shall not reach a PCB",CONTROLLED
+Display HDMI USB and 12 V,3,NO,INTERNAL_PANEL_HARNESS_CLAMPS,"Two-stage strain relief at carrier and hinge corridor leaves connector service loops unloaded","Verify 300 mm panel lift and full lid travel with no connector tension",CONTROLLED

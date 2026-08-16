@@ -4,9 +4,10 @@ Project workspace for a custom carrier board for the Radxa CM5 compute module.
 
 ## Self-Contained Project Files
 
-Only the current Rev K top-panel drawing and Rev K underside-floorplan drawing
-are retained under `cad/`. They reserve a 15 mm four-side frame/screw keepout
-and limit the suspended PCB envelopes before routing. The battery calculation
+Only the current Rev K top-panel drawing and Rev L underside-floorplan drawing
+are retained under `cad/`. They reserve a 15 mm four-side frame/screw keepout,
+limit the suspended PCB envelopes, and control six rigid M3 supports per long
+PCB before routing. The battery calculation
 is under `docs/`. The obsolete 8.7 GB design-session recording was intentionally
 removed before repository publication.
 
@@ -121,6 +122,8 @@ under `references/procomm-field-unit/`.
 - `notes/connector-protection-matrix.md` - external-connector ESD, surge, and current-limit plan
 - `notes/audio-tdm-architecture.md` - AK5558VN/AK4458VN TDM plan and CM5 pin candidates
 - `notes/enclosure-mechanical.md` - Pelican iM2300 enclosure constraints
+- `docs/pcb-and-connector-mechanical-protection-a2.md` - controlled six-point
+  PCB supports and panel/frame connector load paths
 - `notes/headset-audio.md` - integrated 3.5 mm headset jack plan
 - `notes/legacy-procomm-reference.md` - reference review of previous ProComm enclosure/PCB folder
 - `notes/network-architecture.md` - WAN/LAN/Wi-Fi architecture options

@@ -26,7 +26,7 @@ and replace the nominal panel outline with measurements from the actual case.
 
 ## Current Underside Study
 
-- `mechanical/im2300-underside-pcb-floorplan-rev-k.svg` - current pre-routing
+- `mechanical/im2300-underside-pcb-floorplan-rev-l.svg` - current pre-routing
   floorplan. It limits `AUDIO-8X8` to 78 x 268 mm and `CM5-CARRIER` to 166 x
   268 mm, keeps both boards out of the 15 mm perimeter band, places the CM5 and
   modem on B.Cu with downward cooling cartridges, rotates the PSU 90 degrees
@@ -37,4 +37,7 @@ and replace the nominal panel outline with measurements from the actual case.
   reserves the rear bodies plus fused 12 V harness route
   for the independent panel lights. It
   reserves the Gold Mount battery insertion corridor on the left and locks
-  engagement toward the network side.
+  engagement toward the network side. It controls six rigid M3 mounting
+  positions per long PCB and reserves their NPTH/copper/component keepouts.
+- `mechanical/pcb-and-connector-support-detail-rev-a.svg` - controlled factory
+  detail for long-PCB supports and panel/frame connector load transfer.

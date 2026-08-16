@@ -115,6 +115,42 @@
     "backplate_installed": null,
     "inspection_record": null
   },
+  "pcb_supports": {
+    "coordinate_file": "pcb-support-pattern-a2.csv",
+    "detail_drawing": "../../cad/mechanical/pcb-and-connector-support-detail-rev-a.svg",
+    "floorplan_drawing": "../../cad/mechanical/im2300-underside-pcb-floorplan-rev-l.svg",
+    "mount_interface": {
+      "hole_type": "NPTH",
+      "finished_hole_diameter_mm": 3.4,
+      "all_layer_copper_keepout_diameter_mm": 8.0,
+      "component_keepout_diameter_mm": 10.0,
+      "hardware": "rigid captive metal M3 standoff plus M3 SEMS or captive-washer screw with field-serviceable locking feature",
+      "electrical_rule": "Mount holes are isolated. Chassis bonding requires a separate intentional bond.",
+      "isolation_rule": "Do not soft-float the PCB; case isolation belongs between panel and frame."
+    },
+    "audio_8x8": {
+      "board_origin_panel_mm": [15.0, 15.0],
+      "board_size_mm": [78.0, 268.0],
+      "support_ids": ["A1", "A2", "A3", "A4", "A5", "A6"],
+      "maximum_longitudinal_span_mm": 128.0
+    },
+    "cm5_carrier": {
+      "board_origin_panel_mm": [219.0, 15.0],
+      "board_size_mm": [166.0, 268.0],
+      "support_ids": ["C1", "C2", "C3", "C4", "C5", "C6"],
+      "maximum_longitudinal_span_mm": 128.0
+    },
+    "heavy_assembly_rule": "CM5 and modem heatsink/fan assemblies require separate rigid brackets tied into carrier or frame supports; board-to-board and M.2 connectors are not structural."
+  },
+  "connector_load_policy": {
+    "policy": "PANEL_OR_FRAME_CARRIES_ALL_USER_MATING_LOADS",
+    "matrix_file": "connector-load-path-a2.csv",
+    "forbidden_load_path": "PCB_SOLDER_ONLY",
+    "panel_frame_screws_independent_from_pcb_standoffs": true,
+    "connector_fasteners_independent_from_pcb_standoffs": true,
+    "external_connector_coupon_test_required": true,
+    "note": "Flanges, bulkhead nuts, capture brackets, supported service daughterboards, guides, or backplates shall carry insertion, extraction, downward push, cable-side, and vibration loads."
+  },
   "thermal_release": {
     "qualification_ambient_c": 45.0,
     "minimum_clean_filter_through_case_cfm": 15.0,
@@ -131,6 +167,11 @@
     "carrier_pcb_max_height_mm": 268.0,
     "minimum_audio_pcb_support_count": 6,
     "minimum_carrier_pcb_support_count": 6,
+    "maximum_long_pcb_support_row_span_mm": 128.0,
+    "pcb_mount_finished_hole_diameter_mm": 3.4,
+    "pcb_mount_finished_hole_tolerance_mm": 0.1,
+    "minimum_pcb_mount_copper_keepout_diameter_mm": 8.0,
+    "minimum_pcb_mount_component_keepout_diameter_mm": 10.0,
     "minimum_closed_lid_dynamic_clearance_mm": 8.0,
     "minimum_unrelated_metal_clearance_mm": 3.0,
     "minimum_psu_guard_vertical_clearance_mm": 10.0,

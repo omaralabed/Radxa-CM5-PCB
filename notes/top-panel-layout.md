@@ -104,7 +104,11 @@ Left audio zone:
   `CH1 IN` through `CH8 IN` under the input connectors
 - Panel carries XLR insertion/removal force
 - PCB and harnesses do not carry cable load
-- AUDIO-8X8 and CM5-CARRIER each use at least six independent PCB supports.
+- AUDIO-8X8 and CM5-CARRIER use the controlled independent support patterns
+  `A1-A6` and `C1-C6` from the A2 mechanical release package.
+- The four RJ45 bodies require a zero-preload panel capture bracket. The
+  headset and dual SIM interfaces use four-M3 supported service daughterboards
+  with panel guides/bezels and short flexible carrier harnesses.
 
 Network/radio/service zone:
 
@@ -291,8 +295,8 @@ The preliminary exact-part freeze and cutout release gates are in:
 - `../docs/panel_mechanical_bom_preliminary.csv`
 - `../docs/mechanical-parts/`
 
-Do not trace the concept artwork into a production DXF. PCB-mounted RJ45 and
-headset openings, the SIM service openings, the Gold Mount pattern, the RF
+Do not trace the concept artwork into a production DXF. The RJ45 capture
+bracket, headset/SIM service daughterboards and guides, Gold Mount pattern, RF
 bulkheads, and the lid harness notch all remain dependent on final stack height
 or physical sample measurements.
 

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1212" viewBox="0 0 490 330" role="img" aria-labelledby="title desc" style="background:#111418">
+  <title id="title">PCB and connector support detail Rev A</title>
+  <desc id="desc">Controlled six-point support patterns for AUDIO-8X8 and CM5-CARRIER plus panel-flange and capture-bracket load-path sections that prevent user connector forces from reaching PCB laminate or solder joints.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0L7 3.5L0 7Z" fill="#f4d8a2"/></marker>
+    <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M10 0H0V10" fill="none" stroke="#2b3138" stroke-width=".3"/></pattern>
+    <style>
+      .page{fill:#111418}.grid{fill:url(#grid)}.boardA{fill:#173036;fill-opacity:.55;stroke:#52c7d5;stroke-width:.8}.boardC{fill:#173426;fill-opacity:.45;stroke:#69d391;stroke-width:.8}.xlr{fill:#0d1013;stroke:#52c7d5;stroke-width:.35}.keep{fill:none;stroke:#f4d8a2;stroke-width:.35;stroke-dasharray:1.4 1}.hole{fill:#0d1013;stroke:#f6f8fa;stroke-width:.55}.panel{fill:#68727c;stroke:#d7dee4;stroke-width:.6}.pcb{fill:#235e3b;stroke:#69d391;stroke-width:.6}.metal{fill:#2c3238;stroke:#d7dee4;stroke-width:.6}.connector{fill:#151b20;stroke:#76a7f7;stroke-width:.7}.bracket{fill:none;stroke:#f4d8a2;stroke-width:1.2}.load{fill:none;stroke:#f4d8a2;stroke-width:1.3;marker-end:url(#arrow)}
+      .title{fill:#f6f8fa;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:8px;font-weight:750}.subtitle{fill:#aeb7c0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:3.2px}.head{fill:#f6f8fa;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:4px;font-weight:700}.label{fill:#eef2f5;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:3.1px;font-weight:650}.small{fill:#bac3cc;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:2.7px}.tiny{fill:#aeb8c2;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:2.35px}.warn{fill:#f4d8a2;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:3px;font-weight:700}.label,.small,.tiny,.warn{stroke:none}text{letter-spacing:0}
+    </style>
+  </defs>
+  <rect class="page" width="490" height="330"/><rect class="grid" width="490" height="330" opacity=".55"/>
+  <text class="title" x="15" y="14">PCB + CONNECTOR MECHANICAL PROTECTION</text>
+  <text class="subtitle" x="15" y="21">REV A / A2 HOLD | DIMENSIONS IN MILLIMETERS | BOARD VIEWS ARE 1:1 IN SVG USER UNITS | VERIFY PANEL Z-STACK ON COUPON</text>
+
+  <text class="head" x="20" y="28">AUDIO-8X8 - 78 x 268 - SUPPORTS A1-A6</text>
+  <rect class="boardA" x="20" y="32" width="78" height="268" rx="2"/>
+  <g opacity=".55">
+    <circle class="xlr" cx="31.4" cy="51" r="11.4"/><circle class="xlr" cx="74.78" cy="51" r="11.4"/>
+    <circle class="xlr" cx="31.4" cy="83" r="11.4"/><circle class="xlr" cx="74.78" cy="83" r="11.4"/>
+    <circle class="xlr" cx="31.4" cy="115" r="11.4"/><circle class="xlr" cx="74.78" cy="115" r="11.4"/>
+    <circle class="xlr" cx="31.4" cy="147" r="11.4"/><circle class="xlr" cx="74.78" cy="147" r="11.4"/>
+    <circle class="xlr" cx="31.4" cy="179" r="11.4"/><circle class="xlr" cx="74.78" cy="179" r="11.4"/>
+    <circle class="xlr" cx="31.4" cy="211" r="11.4"/><circle class="xlr" cx="74.78" cy="211" r="11.4"/>
+    <circle class="xlr" cx="31.4" cy="243" r="11.4"/><circle class="xlr" cx="74.78" cy="243" r="11.4"/>
+    <circle class="xlr" cx="31.4" cy="275" r="11.4"/><circle class="xlr" cx="74.78" cy="275" r="11.4"/>
+  </g>
+  <g>
+    <circle class="keep" cx="52" cy="38" r="5"/><circle class="hole" cx="52" cy="38" r="1.7"/><text class="tiny" x="55" y="36">A1</text>
+    <circle class="keep" cx="92" cy="38" r="5"/><circle class="hole" cx="92" cy="38" r="1.7"/><text class="tiny" x="88" y="36">A2</text>
+    <circle class="keep" cx="52" cy="166" r="5"/><circle class="hole" cx="52" cy="166" r="1.7"/><text class="tiny" x="55" y="164">A3</text>
+    <circle class="keep" cx="92" cy="166" r="5"/><circle class="hole" cx="92" cy="166" r="1.7"/><text class="tiny" x="88" y="164">A4</text>
+    <circle class="keep" cx="52" cy="294" r="5"/><circle class="hole" cx="52" cy="294" r="1.7"/><text class="tiny" x="55" y="292">A5</text>
+    <circle class="keep" cx="92" cy="294" r="5"/><circle class="hole" cx="92" cy="294" r="1.7"/><text class="tiny" x="88" y="292">A6</text>
+  </g>
+
+  <text class="head" x="115" y="28">CM5-CARRIER - 166 x 268 - SUPPORTS C1-C6</text>
+  <rect class="boardC" x="115" y="32" width="166" height="268" rx="2"/>
+  <rect class="connector" x="128" y="50" width="135" height="63" rx="2"/><text class="small" x="195.5" y="83" text-anchor="middle">RJ45 CAPTURE BRACKET ZONE</text>
+  <rect class="connector" x="128" y="127" width="55" height="40" rx="2"/><text class="tiny" x="155.5" y="146" text-anchor="middle">HEADSET / SIM</text><text class="tiny" x="155.5" y="151" text-anchor="middle">SERVICE BOARD</text>
+  <rect class="connector" x="246" y="127" width="30" height="52" rx="2"/><text class="tiny" x="261" y="150" text-anchor="middle">MODEM +</text><text class="tiny" x="261" y="155" text-anchor="middle">RESTRAINT</text>
+  <rect class="connector" x="207" y="235" width="58" height="43" rx="2"/><text class="tiny" x="236" y="256" text-anchor="middle">CM5 + COOLING</text><text class="tiny" x="236" y="261" text-anchor="middle">BRACKET</text>
+  <g>
+    <circle class="keep" cx="121" cy="38" r="5"/><circle class="hole" cx="121" cy="38" r="1.7"/><text class="tiny" x="124" y="36">C1</text>
+    <circle class="keep" cx="275" cy="38" r="5"/><circle class="hole" cx="275" cy="38" r="1.7"/><text class="tiny" x="269" y="36">C2</text>
+    <circle class="keep" cx="121" cy="166" r="5"/><circle class="hole" cx="121" cy="166" r="1.7"/><text class="tiny" x="124" y="164">C3</text>
+    <circle class="keep" cx="227" cy="166" r="5"/><circle class="hole" cx="227" cy="166" r="1.7"/><text class="tiny" x="230" y="164">C4</text>
+    <circle class="keep" cx="121" cy="294" r="5"/><circle class="hole" cx="121" cy="294" r="1.7"/><text class="tiny" x="124" y="292">C5</text>
+    <circle class="keep" cx="275" cy="222" r="5"/><circle class="hole" cx="275" cy="222" r="1.7"/><text class="tiny" x="269" y="220">C6</text>
+  </g>
+
+  <text class="head" x="300" y="36">LOAD PATH A - FLANGED / BULKHEAD CONNECTOR</text>
+  <rect class="panel" x="304" y="62" width="171" height="8" rx="1"/><text class="tiny" x="468" y="59" text-anchor="end">3.175 ALUMINUM PANEL</text>
+  <rect class="connector" x="320" y="49" width="36" height="34" rx="2"/><rect class="metal" x="313" y="58" width="50" height="6" rx="1"/>
+  <rect class="pcb" x="304" y="105" width="171" height="5" rx="1"/><text class="tiny" x="468" y="116" text-anchor="end">PCB - NO STRUCTURAL MATING LOAD</text>
+  <rect class="metal" x="435" y="70" width="8" height="35"/><circle class="hole" cx="439" cy="107.5" r="1.7"/>
+  <path class="load" d="M338 43V56"/><text class="warn" x="341" y="46">USER PUSH</text>
+  <path class="load" d="M338 65H370"/><text class="warn" x="373" y="66">LOAD INTO PANEL / FRAME</text>
+  <text class="small" x="304" y="124">M3 NPTH dia 3.4 | ALL-COPPER KEEPOUT dia 8 | COMPONENT KEEPOUT dia 10</text>
+  <text class="small" x="304" y="130">CAPTIVE METAL STANDOFF + M3 SEMS / PREVAILING-TORQUE HARDWARE</text>
+
+  <text class="head" x="300" y="155">LOAD PATH B - PCB CONNECTOR WITH PANEL CAPTURE</text>
+  <rect class="panel" x="304" y="181" width="171" height="8" rx="1"/>
+  <rect class="pcb" x="304" y="235" width="171" height="5" rx="1"/>
+  <rect class="connector" x="325" y="190" width="50" height="45" rx="2"/>
+  <path class="bracket" d="M314 181V218H325M386 181V218H375"/>
+  <rect class="metal" x="435" y="189" width="8" height="46"/><circle class="hole" cx="439" cy="237.5" r="1.7"/>
+  <path class="load" d="M350 174V187"/><text class="warn" x="353" y="177">USER PUSH</text>
+  <path class="load" d="M325 212H309"/><text class="warn" x="388" y="207">CAPTURE BRACKET CARRIES</text><text class="warn" x="388" y="212">INSERT / EXTRACT / DOWN LOAD</text>
+  <text class="small" x="304" y="253">RJ45: CUSTOM FOUR-PORT PANEL CAPTURE BRACKET, ZERO PCB PRELOAD</text>
+  <text class="small" x="304" y="259">HEADSET + SIM: FOUR-M3 SERVICE DAUGHTERBOARD + PANEL GUIDE / BEZEL</text>
+  <text class="warn" x="304" y="270">PROHIBITED: CLEARANCE HOLE + PCB SOLDER JOINTS AS THE ONLY RETENTION</text>
+  <text class="small" x="304" y="280">PANEL/FRAME SCREWS, PCB STANDOFFS, AND CONNECTOR FASTENERS ARE INDEPENDENT.</text>
+  <text class="small" x="304" y="286">HEAVY CM5/MODEM COOLING ASSEMBLIES REQUIRE THEIR OWN STRUCTURAL BRACKET.</text>
+
+  <circle class="keep" cx="306" cy="305" r="5"/><circle class="hole" cx="306" cy="305" r="1.7"/>
+  <text class="small" x="314" y="306">OUTER RING = dia 10 COMPONENT KEEPOUT; INNER HOLE = dia 3.4 NPTH</text>
+  <text class="small" x="20" y="312">SUPPORT COORDINATES: fabrication/mechanical-release/pcb-support-pattern-a2.csv</text>
+  <text class="small" x="20" y="319">CONNECTOR LOAD MATRIX: fabrication/mechanical-release/connector-load-path-a2.csv</text>
+  <text class="tiny" x="20" y="326">A2 HOLD: release actual connector/bracket coupons, standoff height, panel/frame survey, tool access, torque, and vibration test before PCB routing.</text>
+</svg>

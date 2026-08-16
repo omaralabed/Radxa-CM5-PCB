@@ -58,9 +58,19 @@ Design the electronics as a top-panel-mounted assembly inside the iM2300:
   underside. Place standoffs near panel-mounted connectors, board corners,
   large inductors/capacitors, heatsinks, CM5 mounting points, M.2 sockets, and
   cable headers so the PCB cannot flex or resonate.
+- Use the controlled six-point patterns in
+  `../fabrication/mechanical-release/pcb-support-pattern-a2.csv`: `A1-A6` on
+  AUDIO-8X8 and `C1-C6` on CM5-CARRIER. Each board hole is 3.4 mm finished
+  NPTH with an 8.0 mm all-layer copper keepout and 10.0 mm component keepout.
+  The maximum longitudinal support-row span is 128 mm.
 - Do not soft-float an audio PCB relative to panel-mounted XLR connectors. The
   connector flanges and nearby rigid standoffs must keep the panel, connector,
   and PCB stack aligned so vibration is not transferred into solder joints.
+- Transfer every user connector's insertion, extraction, downward push,
+  cable-side, and vibration loads into the panel or custom frame. Solder-only
+  retention is prohibited. The four RJ45s require a zero-preload panel capture
+  bracket; the headset and dual SIM interfaces require guided four-M3 service
+  daughterboards with short flexible harnesses to the carrier.
 - Keep panel-frame screws, PCB standoffs, and connector-flange screws as three
   separately defined mechanical fastener systems.
 - Use captive or prevailing-torque hardware, appropriate thread locking, and
@@ -183,7 +193,9 @@ Preferred mechanical stack:
   protective-earth bond, and low-voltage 24 V harness to the carrier/source
   selector
 - Separate bottom-mounted `PWR-SELECT` PCB near the PSU/battery wiring
-- Cable harnesses kept short between panel connectors and board headers, or board-mounted connectors aligned directly to panel cutouts
+- Cable harnesses kept short between panel connectors and board headers. Any
+  directly aligned PCB connector also requires a flange, bulkhead nut, capture
+  bracket, supported daughterboard, or backplate that carries user mating loads
 
 ## Panel Recess And Closed-Lid Clearance
 
@@ -260,9 +272,10 @@ Design constraints:
 - Reserve a continuous 15 mm minimum no-PCB band on all four sides. The current
   maximum board envelopes are 78 x 268 mm for `AUDIO-8X8` and 166 x 268 mm for
   `CM5-CARRIER`; lock the actual frame before routing either board.
-- Support heavier connectors mechanically from the panel, not only from the PCB.
-- Use at least six supports on AUDIO-8X8 and six on CM5-CARRIER. The 268 mm
-  audio board may not rely on only four corner standoffs.
+- Support every user-operated connector mechanically from the panel/frame.
+  Solder joints and PCB laminate do not carry mating or downward push loads.
+- Use controlled supports `A1-A6` on AUDIO-8X8 and `C1-C6` on CM5-CARRIER.
+  The 268 mm audio board may not rely on only four corner standoffs.
 - Reserve eight RF bulkheads in the right-side RF bank: four Wi-Fi above four
   cellular/GNSS. Keep the bank and its coax corridor away from the lid display
   metal, AC/PSU bay, XLR bank, Ethernet magnetics, fans, and high-current wiring.

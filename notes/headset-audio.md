@@ -98,8 +98,10 @@ Alternate I2C/control pins:
 - Use a CTIA/AHJ TRRS headset jack.
 - Starting PCB jack is Kycon `STX-353K7A-6N-KTTR`: vertical through-hole,
   four-pole, non-threaded barrel, with switching/detect contact. Because it is
-  not panel-threaded, its top-panel clearance must be derived from final PCB
-  Z height and verified with a plug-insertion coupon.
+  not panel-threaded, mount it on a four-M3 service daughterboard with a
+  positive panel capture bezel and short flexible harness to the carrier.
+  Derive the Z height and bezel from the final stack and verify by insertion,
+  extraction, and downward-load coupon; no mating load may reach its solder pins.
 - Headphone output needs a real headphone driver/amplifier sized for common
   operator headsets, not just a line-level output.
 - Microphone input needs bias and input gain. Use the ES8316 mic PGA where it
