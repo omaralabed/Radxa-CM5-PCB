@@ -18,7 +18,8 @@ The touchscreen will be mounted in the Pelican iM2300 lid.
   no dedicated electronic display eFuse/current limiter. Keep this branch at
   12 V / 2.5 A for the monitor's 25 W / 2.08 A nominal rating, then verify
   startup and full-brightness current on the received sample.
-- Lid-to-base harness for HDMI, USB touch, and display power
+- Lid-to-base `H03` bundle for HDMI, USB touch, and display power. Start each
+  cable at 1000 +/- 25 mm finished length for the first mechanical article.
 
 ## Hardware Notes
 
@@ -37,7 +38,13 @@ The touchscreen will be mounted in the Pelican iM2300 lid.
   interface preference, not a verified monitor connector.
 - The earlier Waveshare 13.3-inch DSI and HDMI candidates are no longer the
   active display path.
-- Add strain relief and a hinge-safe service loop for the lid-mounted display harness.
+- Add two controlled service loops to each display cable: one for repeated lid
+  travel and one that can be released when the top panel is lifted for service.
+- The released bundle must permit full lid travel while the top panel is
+  lifted at least 300 mm and tilted at least 45 degrees, with no tension at any
+  connector and no cable below its manufacturer's moving bend radius.
+- In the closed operating position, retain both loops in cushioned releasable
+  clamps clear of every fan, PSU airflow path, PCB keepout, and sharp edge.
 - Route HDMI, USB touch, and 12 V through a centered notch that opens directly
   at the panel's hinge edge. Do not use an enclosed hole farther inside the
   top panel for this harness.
@@ -63,3 +70,6 @@ The touchscreen will be mounted in the Pelican iM2300 lid.
   conductor count.
 - Final hinge-edge notch width, depth, edge radius/grommet, and harness bend
   radius after the actual cable assembly is selected.
+- Final H03A/H03B/H03C finished lengths after the fully dressed first-article
+  lid-travel and panel-service tests. The 1000 mm starting length is not a
+  fabrication-release datum.

@@ -51,6 +51,11 @@ operator/handle side.
 5. Mount representative connectors, battery, display, fans, guards, CM5
    cooling stack, and harnesses. Close and latch the case for the closure and
    impact-clearance measurements.
+   Fit 1000 +/- 25 mm H03A HDMI, H03B USB-touch, and H03C display-power
+   prototype cables. Verify full lid travel, then release the panel-service
+   clamps and raise the connected top panel at least 300 mm while tilting it
+   at least 45 degrees. No connector may carry tension and no cable may enter
+   a fan, airflow path, sharp-edge zone, or PCB keepout.
    Mount the Gold Mount dock so the battery engages from left to right and
    removes from right to left. Measure the complete slide travel and verify at
    least 20 mm of clear insertion/hand space between the XLR hardware and dock.

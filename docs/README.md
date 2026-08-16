@@ -19,6 +19,10 @@ Preliminary engineering tables:
   crimp, routing, and acceptance requirements for the bottom-PSU 24 V harness.
 - `../fabrication/harnesses/H01-PSU-24V-BOM.csv` - exact Mega-Fit, TPA, crimp,
   ring-terminal, and wire parts for that harness.
+- `../fabrication/harnesses/H03-Lid-Display-Bundle.md` - controlled 1 m
+  prototype HDMI, USB-touch, and monitor-power service bundle definition.
+- `../fabrication/harnesses/H03-Lid-Display-BOM.csv` - selected carrier-side
+  connectors and sample-gated monitor-side cable parts.
 - `power_regulator_bom_a1.csv` - A1 regulator-sheet BOM exported directly from
   KiCad, including selected manufacturers and MPNs.
 - `power_regulator_calculations_a1.csv` - machine-checkable rail, source,

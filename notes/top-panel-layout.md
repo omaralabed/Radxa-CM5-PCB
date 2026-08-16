@@ -191,11 +191,15 @@ Thermal/mechanical zone:
   below the panel
 - Internal spreader and gasketed upper-side-wall thermal bulkhead leading to
   protected external fins
-- Lid harness service loop for HDMI, USB touch, and display power
+- H03 lid-display bundle uses 1000 +/- 25 mm prototype HDMI, USB-touch, and
+  12 V power cables, each with a retained hinge loop and releasable panel-lift
+  loop. Final lengths follow the first-article motion test.
 - HDMI, USB-touch, and 12 V display sockets mount on the PCB underside facing
   down. The harness exits through one centered notch that opens directly
   through the hinge edge; there is no enclosed cable hole farther inside the
   panel.
+- With the lid open, releasing the service-loop clamps must allow at least
+  300 mm top-panel lift and 45 degrees of tilt without loading any connector.
 
 ## Placement Rules
 

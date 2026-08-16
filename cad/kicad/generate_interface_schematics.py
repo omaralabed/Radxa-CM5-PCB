@@ -1723,12 +1723,12 @@ def build_display_harness_sheet() -> Path:
     display_flag = add_symbol(schematic, "power:PWR_FLAG", "#FLG0801", "PWR_FLAG", (475, 410))
     label_pin_auto(schematic, display_flag, 1, "DISPLAY_12V", 0.66)
     note(schematic, "DISPLAY_12V design load: 2.5 A continuous / 30 W branch, covering the locked 25 W monitor.", (400, 445), 0.82)
-    note(schematic, "No local display eFuse. Use the upstream AUX_12V branch fuse and a keyed 18 AWG harness.", (400, 455), 0.82)
+    note(schematic, "No local display eFuse. Use the upstream AUX_12V branch fuse and H03C keyed 18 AWG harness.", (400, 455), 0.82)
 
     heading(schematic, "5. HINGE-EDGE HARNESS BUILD", (45, 490), 1.65)
-    note(schematic, "Bundle HDMI, USB A-to-B, and 12 V conductors through the centered hinge-edge notch with a common abrasion sleeve.", (45, 510), 0.82)
-    note(schematic, "Provide a service loop for full lid travel, clamp the bundle on both sides, and keep bend radius outside the hinge pinch line.", (45, 520), 0.82)
-    note(schematic, "All three carrier connectors are underside-facing and remain below the top panel; they do not add panel cutouts.", (45, 530), 0.82)
+    note(schematic, "H03A HDMI, H03B USB touch, H03C 12 V: 1000 +/- 25 mm each, with separate retained hinge and service loops.", (45, 510), 0.76)
+    note(schematic, "Acceptance: full lid travel plus 300 mm panel lift / 45 degree tilt; no connector tension or hinge-line bend.", (45, 520), 0.76)
+    note(schematic, "Carrier connectors face down. Store released loops clear of fans, PSU airflow, board keepouts and sharp edges.", (45, 530), 0.76)
 
     for reference, net_name, x in (
         ("#FLG0802", "SYS_5V15", 290),

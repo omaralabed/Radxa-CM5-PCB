@@ -4644,7 +4644,7 @@
 		)
 		(uuid "6b6ffa49-7ac7-5a3f-93bc-b29e80753103")
 	)
-	(text "No local display eFuse. Use the upstream AUX_12V branch fuse and a keyed 18 AWG harness."
+	(text "No local display eFuse. Use the upstream AUX_12V branch fuse and H03C keyed 18 AWG harness."
 		(exclude_from_sim no)
 		(at 400 455 0.0000)
 		(effects
@@ -4665,32 +4665,32 @@
 		)
 		(uuid "f0f9ffbe-807a-57f4-ab59-ecaaf4a1d31d")
 	)
-	(text "Bundle HDMI, USB A-to-B, and 12 V conductors through the centered hinge-edge notch with a common abrasion sleeve."
+	(text "H03A HDMI, H03B USB touch, H03C 12 V: 1000 +/- 25 mm each, with separate retained hinge and service loops."
 		(exclude_from_sim no)
 		(at 45 510 0.0000)
 		(effects
 			(font
-				(size 0.82 0.82)
+				(size 0.76 0.76)
 			)
 		)
 		(uuid "dc4aed4a-2200-58cf-bcc0-53afcda37fa5")
 	)
-	(text "Provide a service loop for full lid travel, clamp the bundle on both sides, and keep bend radius outside the hinge pinch line."
+	(text "Acceptance: full lid travel plus 300 mm panel lift / 45 degree tilt; no connector tension or hinge-line bend."
 		(exclude_from_sim no)
 		(at 45 520 0.0000)
 		(effects
 			(font
-				(size 0.82 0.82)
+				(size 0.76 0.76)
 			)
 		)
 		(uuid "2c6162ac-17e4-57a0-b8a7-017bea3709d9")
 	)
-	(text "All three carrier connectors are underside-facing and remain below the top panel; they do not add panel cutouts."
+	(text "Carrier connectors face down. Store released loops clear of fans, PSU airflow, board keepouts and sharp edges."
 		(exclude_from_sim no)
 		(at 45 530 0.0000)
 		(effects
 			(font
-				(size 0.82 0.82)
+				(size 0.76 0.76)
 			)
 		)
 		(uuid "5fd076c5-2cf0-5e9a-bfc2-2ba496e9e806")

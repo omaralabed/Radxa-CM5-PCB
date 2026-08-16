@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="920" viewBox="0 0 1600 920">
+  <defs>
+    <style>
+      .title{font:700 34px Arial,sans-serif;fill:#111827}.sub{font:700 23px Arial,sans-serif;fill:#111827}
+      .label{font:700 18px Arial,sans-serif;fill:#111827}.body{font:16px Arial,sans-serif;fill:#263244}
+      .small{font:14px Arial,sans-serif;fill:#4b5563}.box{fill:#fff;stroke:#526174;stroke-width:2.5}
+      .zone{fill:#f4f8fb;stroke:#2f74b5;stroke-width:3}.warn{fill:#fffbea;stroke:#b47b00;stroke-width:2.5}
+      .hdmi{fill:none;stroke:#7849a8;stroke-width:8}.usb{fill:none;stroke:#1683a5;stroke-width:8}
+      .pwr{fill:none;stroke:#c8353c;stroke-width:8}.dim{fill:none;stroke:#667085;stroke-width:2;stroke-dasharray:8 6}
+    </style>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0 0 L0 6 L9 3 Z" fill="#667085"/>
+    </marker>
+  </defs>
+  <rect width="1600" height="920" fill="#f7f9fb"/>
+  <text x="65" y="62" class="title">H03 LID-DISPLAY CABLE BUNDLE</text>
+  <text x="65" y="96" class="body">Factory first-article reference | Rev A | 2026-08-16 | All three cables remain separately replaceable</text>
+
+  <rect x="55" y="130" width="1490" height="605" rx="8" class="zone"/>
+  <text x="82" y="169" class="sub">CONNECTED SERVICE CONFIGURATION</text>
+
+  <rect x="90" y="210" width="320" height="430" rx="6" class="box"/>
+  <text x="250" y="250" text-anchor="middle" class="sub">15.6-INCH MONITOR</text>
+  <text x="250" y="278" text-anchor="middle" class="small">Mounted in iM2300 lid</text>
+  <rect x="135" y="325" width="230" height="65" rx="4" class="box"/>
+  <text x="250" y="353" text-anchor="middle" class="label">HDMI INPUT</text>
+  <text x="250" y="377" text-anchor="middle" class="small">Type-A male cable end</text>
+  <rect x="135" y="425" width="230" height="65" rx="4" class="box"/>
+  <text x="250" y="453" text-anchor="middle" class="label">USB TOUCH</text>
+  <text x="250" y="477" text-anchor="middle" class="small">Type-B starting point | verify sample</text>
+  <rect x="135" y="525" width="230" height="65" rx="4" class="box"/>
+  <text x="250" y="553" text-anchor="middle" class="label">12 V POWER INPUT</text>
+  <text x="250" y="577" text-anchor="middle" class="small">Plug geometry/polarity verify sample</text>
+
+  <rect x="1165" y="210" width="330" height="430" rx="6" class="box"/>
+  <text x="1330" y="250" text-anchor="middle" class="sub">CM5-CARRIER UNDERSIDE</text>
+  <text x="1330" y="278" text-anchor="middle" class="small">All connectors face downward</text>
+  <rect x="1215" y="325" width="230" height="65" rx="4" class="box"/>
+  <text x="1330" y="353" text-anchor="middle" class="label">J801 HDMI</text>
+  <text x="1330" y="377" text-anchor="middle" class="small">Molex 208658-1001</text>
+  <rect x="1215" y="425" width="230" height="65" rx="4" class="box"/>
+  <text x="1330" y="453" text-anchor="middle" class="label">J802 USB HOST</text>
+  <text x="1330" y="477" text-anchor="middle" class="small">Wurth 692122030100</text>
+  <rect x="1215" y="525" width="230" height="80" rx="4" class="box"/>
+  <text x="1330" y="550" text-anchor="middle" class="label">J803 12 V MICRO-FIT</text>
+  <text x="1330" y="574" text-anchor="middle" class="small">Pins 1-2 +12 V | Pins 3-4 GND</text>
+  <text x="1330" y="594" text-anchor="middle" class="small">Molex 43045-0412</text>
+
+  <path d="M365 357 C500 357 480 275 610 275 C750 275 730 440 865 440 C1000 440 985 357 1215 357" class="hdmi"/>
+  <path d="M365 457 C510 457 490 375 620 375 C750 375 735 540 865 540 C1005 540 990 457 1215 457" class="usb"/>
+  <path d="M365 557 C510 557 500 490 625 490 C750 490 740 640 870 640 C1000 640 1010 565 1215 565" class="pwr"/>
+
+  <rect x="535" y="202" width="215" height="48" rx="5" class="warn"/>
+  <text x="642" y="223" text-anchor="middle" class="label">LOOP A: HINGE TRAVEL</text>
+  <text x="642" y="242" text-anchor="middle" class="small">Retained gentle moving loop</text>
+  <rect x="770" y="202" width="265" height="48" rx="5" class="warn"/>
+  <text x="902" y="223" text-anchor="middle" class="label">LOOP B: PANEL SERVICE</text>
+  <text x="902" y="242" text-anchor="middle" class="small">Released before lifting top panel</text>
+
+  <text x="535" y="685" class="label" fill="#7849a8">H03A HDMI: 1000 +/- 25 mm</text>
+  <text x="535" y="710" class="label" fill="#1683a5">H03B USB TOUCH: 1000 +/- 25 mm</text>
+  <text x="875" y="685" class="label" fill="#c8353c">H03C 12 V POWER: 1000 +/- 25 mm</text>
+  <text x="875" y="710" class="small">Two red 18 AWG + two black 18 AWG</text>
+
+  <path d="M455 660 H1140" class="dim" marker-end="url(#arr)"/>
+
+  <rect x="55" y="765" width="1490" height="110" rx="6" class="warn"/>
+  <text x="80" y="800" class="sub">FIRST-ARTICLE MOTION TEST</text>
+  <text x="80" y="829" class="body">Lid full travel + top panel lifted at least 300 mm and tilted at least 45 degrees, with all three cables connected.</text>
+  <text x="80" y="855" class="body">No connector tension, pinch, scrape, signal dropout, cable below moving bend radius, or cable intrusion into fans/airflow/PCB keepouts.</text>
+</svg>

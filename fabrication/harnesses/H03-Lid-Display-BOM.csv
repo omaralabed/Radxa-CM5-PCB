@@ -1,0 +1,12 @@
+Reference,Assembly,Manufacturer,MPN,Qty,Description,Status,Notes
+J801,CM5-CARRIER PCB,Molex,208658-1001,1,HDMI Type-A right-angle PCB receptacle,SELECTED,Carrier underside facing down
+H03A,H03 bundle,Qualified cable supplier,HIGH-FLEX-HDMI-A-M-M-1M,1,Shielded certified High Speed HDMI Type-A male to male cable,CONTROLLED_SPEC,"1000 +/- 25 mm; exact MPN and overmold orientation after monitor sample"
+J802,CM5-CARRIER PCB,Wurth Elektronik,692122030100,1,USB 3 Type-A right-angle PCB receptacle,SELECTED,Carrier uses USB 2 D+/D- for touch
+H03B,H03 bundle,Qualified cable supplier,HIGH-FLEX-USB3-A-M-TO-B-M-1M,1,Shielded high-flex USB Type-A male to Type-B male cable,CONDITIONAL,"1000 +/- 25 mm; monitor-end connector must match received sample"
+J803,CM5-CARRIER PCB,Molex,43045-0412,1,Micro-Fit 3.0 four-circuit vertical PCB header,SELECTED,"Pins 1-2 DISPLAY_12V; pins 3-4 GND; underside facing down"
+P803,H03C power harness,Molex,43025-0400,1,Micro-Fit 3.0 four-circuit receptacle housing,SELECTED,Mates with J803
+C803A-C803D,H03C power harness,Molex,43030-0038,4,Micro-Fit 3.0 tin female crimp contact for 18 AWG wire,SELECTED,One contact per conductor
+W803A-W803D,H03C power harness,Qualified wire supplier,UL1015-18AWG,4,"18 AWG stranded copper; 600 V; 105 C; two red and two black",CONTROLLED_SPEC,"1000 +/- 25 mm from P803 housing to monitor termination"
+P804,H03C power harness,Monitor manufacturer,TBD_FROM_SAMPLE,1,Monitor-side 12 V power plug and strain relief,BLOCKED_SAMPLE,Verify geometry polarity retention and rating on received monitor
+SL803,H03 bundle,Qualified harness supplier,ABRASION-SLEEVE,1,Flexible abrasion sleeve sized without crushing HDMI or USB cables,CONTROLLED_SPEC,Split as needed at service and hinge loops
+CL803A-CL803F,H03 bundle,Qualified hardware supplier,CUSHIONED-RELEASABLE-CLAMP,6,Cushioned clamps or broad hook-and-loop retainers,CONTROLLED_SPEC,Final sizes and coordinates follow dressed first article
