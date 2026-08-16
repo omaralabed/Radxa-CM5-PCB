@@ -1,0 +1,5 @@
+Reference,Assembly,Manufacturer,MPN,Qty,Description,Distributor,Distributor_PN,URL,Status,Notes
+SW201,Panel,E-Switch,RA812C1121,1,"Maintained DPST OFF-ON snap-in rocker; black; white O/-; four 0.187 inch tabs",DigiKey,EG5633-ND,https://www.digikey.com/en/products/detail/e-switch/RA812C1121/3778076,ACTIVE_IN_STOCK,"Pole A closes J204-1 to J204-2; pole B closes J204-3 to J204-4"
+T201-T204,Switch harness,TE Connectivity,2-520182-2,4,"Fully insulated 0.187 inch female quick-connect receptacle; 18-22 AWG",DigiKey,A27804-ND,https://www.digikey.com/en/products/detail/te-connectivity-amp-connectors/2-520182-2/289248,ACTIVE_IN_STOCK,"Crimp to four 22 AWG stranded switch wires"
+P204,Switch harness,Molex,0430250400,1,"Micro-Fit 3.0 four-circuit dual-row receptacle housing",DigiKey,,https://www.digikey.com/en/products/detail/molex/0430250400/252497,ACTIVE_IN_STOCK,"Mates with PCB J204 header 43045-0412"
+C204A-C204D,Switch harness,Molex,0430300007,4,"Micro-Fit 3.0 female socket crimp contact; 20-24 AWG",DigiKey,WM1837-ND,https://www.digikey.com/en/products/detail/molex/0430300007/252479,ACTIVE_IN_STOCK,"Use 22 AWG stranded wire"

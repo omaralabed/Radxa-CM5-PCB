@@ -1,0 +1,2145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>/Users/viewvision/Desktop/Radxa CM5 PCB/cad/kicad/CM5-CARRIER/Thermal-IO.kicad_sch</source>
+    <date>2026-08-15T22:35:08</date>
+    <tool>Eeschema 10.0.5-rc1</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>Radxa CM5 ProComm Carrier - Thermal and GPIO Control</title>
+        <company>ProComm</company>
+        <rev>A1</rev>
+        <date>2026-08-14</date>
+        <source>Thermal-IO.kicad_sch</source>
+        <comment number="1" value="EMC2305 controls CPU, modem, intake, and exhaust fans independently"/>
+        <comment number="2" value="PWM pull-ups provide full-speed hardware fallback if the controller or firmware fails"/>
+        <comment number="3" value="TMP117 sensors monitor CM5, modem, and board/power zones at 0x48/0x49/0x4A"/>
+        <comment number="4" value="TCA9535 0x20 captures source, fan, temperature, and power-monitor alerts"/>
+        <comment number="5" value="Two 12 V diffused warm-white panel lamps use an independent latching capacitive touch switch"/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C1020">
+      <value>100nF</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Thermal-IO"/>
+      <property name="Sheetfile" value="Thermal-IO.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1ae92318-ca1b-4c0f-9e9b-34b8ded5fa9f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C1050">
+      <value>100nF</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Thermal-IO"/>
+      <property name="Sheetfile" value="Thermal-IO.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7c333755-f9fb-4b58-a1c6-bffbda3d9007</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C1051">
+      <value>100nF</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Thermal-IO"/>
+      <property name="Sheetfile" value="Thermal-IO.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e144cbcf-70a2-4bdd-8712-e3764d04e94f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C1052">
+      <value>100nF</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Thermal-IO"/>
+      <property name="Sheetfile" value="Thermal-IO.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b7ba52a7-e3a2-4621-be8d-e6e6476e6a55</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D1060">
+      <value>PWR_GREEN</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value="Thermal-IO"/>
+      <property name="Sheetfile" value="Thermal-IO.kicad_sch"/>
+      <property name="ki_keywords" value="LED diode"/>
+      <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5d10ad0e-f893-463c-8ab8-c9101cb29aa7</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D1061">
+      <value>BACKUP_VIOLET</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value="Thermal-IO"/>
+      <property name="Sheetfile" value="Thermal-IO.kicad_sch"/>
+      <property name="ki_keywords" value="LED diode"/>
+      <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4d11879f-0ff9-47a0-b5b6-fb371452cc15</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D1062">
+      <value>WIFI_BLUE</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value="Thermal-IO"/>
+      <property name="Sheetfile" value="Thermal-IO.kicad_sch"/>
+      <property name="ki_keywords" value="LED diode"/>
+      <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a30e0a17-69e8-4d60-8514-4beb2092f069</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D1063">
+      <value>CELL_AMBER</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value="Thermal-IO"/>
+      <property name="Sheetfile" value="Thermal-IO.kicad_sch"/>
+      <property name="ki_keywords" value="LED diode"/>
+      <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b5da0dc4-4073-49da-a5d5-244133d45a91</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D1064">
+      <value>TEMP_RED</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value="Thermal-IO"/>
+      <property name="Sheetfile" value="Thermal-IO.kicad_sch"/>
+      <property name="ki_keywords" value="LED diode"/>
+      <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>23ce0915-3b88-41c3-b880-4fa7f6a967e1</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D1065">
+      <value>AUDIO_CYAN</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value="Thermal-IO"/>
+      <property name="Sheetfile" value="Thermal-IO.kicad_sch"/>
+      <property name="ki_keywords" value="LED diode"/>
+      <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>84170a71-44c6-45fa-ab02-526b323d5ead</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D1070">
+      <value>YIS LS102W 12V WARM WHITE</value>
+      <fields>
+        <field name="Manufacturer">YIS Marine</field>
+        <field name="MPN">LS102W</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Manufacturer" value="YIS Marine"/>
+      <property name="MPN" value="LS102W"/>
+      <property name="Sheetname" value="Thermal-IO"/>
+      <property name="Sheetfile" value="Thermal-IO.kicad_sch"/>
+      <property name="ki_keywords" value="LED diode"/>
+      <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f4496e16-d16b-4254-bdff-bfc459f03cfd</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D1071">
+      <value>YIS LS102W 12V WARM WHITE</value>
+      <fields>
+        <field name="Manufacturer">YIS Marine</field>
+        <field name="MPN">LS102W</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Manufacturer" value="YIS Marine"/>
+      <property name="MPN" value="LS102W"/>
+      <property name="Sheetname" value="Thermal-IO"/>
+      <property name="Sheetfile" value="Thermal-IO.kicad_sch"/>
+      <property name="ki_keywords" value="LED diode"/>
+      <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>da3e27d7-1758-49a9-9f64-7e331dde62d0</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="F1021">
+      <value>2.0A hold</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="Polyfuse" description="Resettable fuse, polymeric positive temperature coefficient"/>
+      <property name="Sheetname" value="Thermal-IO"/>
+      <property name="Sheetfile" value="Thermal-IO.kicad_sch"/>
+      <property name="ki_keywords" value="resettable fuse PTC PPTC polyfuse polyswitch"/>
+      <property name="ki_fp_filters" value="*polyfuse* *PTC*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e9712af6-8bb0-415f-be20-9905114518e5</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="F1022">
+      <value>1.0A hold</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="Polyfuse" description="Resettable fuse, polymeric positive temperature coefficient"/>
+      <property name="Sheetname" value="Thermal-IO"/>
+      <property name="Sheetfile" value="Thermal-IO.kicad_sch"/>
+      <property name="ki_keywords" value="resettable fuse PTC PPTC polyfuse polyswitch"/>
+      <property name="ki_fp_filters" value="*polyfuse* *PTC*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e95206b3-05ad-4ac8-8903-b70f3a120d19</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="F1023">
+      <value>1.0A hold</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="Polyfuse" description="Resettable fuse, polymeric positive temperature coefficient"/>
+      <property name="Sheetname" value="Thermal-IO"/>
+      <property name="Sheetfile" value="Thermal-IO.kicad_sch"/>
+      <property name="ki_keywords" value="resettable fuse PTC PPTC polyfuse polyswitch"/>
+      <property name="ki_fp_filters" value="*polyfuse* *PTC*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>682982bb-6745-456b-9903-ac62800f75f1</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="F1024">
+      <value>1.0A hold</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="Polyfuse" description="Resettable fuse, polymeric positive temperature coefficient"/>
+      <property name="Sheetname" value="Thermal-IO"/>
+      <property name="Sheetfile" value="Thermal-IO.kicad_sch"/>
+      <property name="ki_keywords" value="resettable fuse PTC PPTC polyfuse polyswitch"/>
+      <property name="ki_fp_filters" value="*polyfuse* *PTC*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c58663a6-9602-4f10-9fab-16e038c968dc</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J1021">
+      <value>CPU_FAN</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="Thermal-IO"/>
+      <property name="Sheetfile" value="Thermal-IO.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f973d0d9-769c-4020-acf5-29cdbaed9f29</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J1022">
+      <value>MODEM_FAN</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="Thermal-IO"/>
+      <property name="Sheetfile" value="Thermal-IO.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>aa167ab2-f606-4da8-b702-5f428ba1ca07</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J1023">
+      <value>THA0412AD-TZW3 INTAKE</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="Thermal-IO"/>
+      <property name="Sheetfile" value="Thermal-IO.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>764c19e1-d6a6-494c-a1fd-c2152d46fb31</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J1024">
+      <value>THA0412AD-TZW3 EXHAUST</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="Thermal-IO"/>
+      <property name="Sheetfile" value="Thermal-IO.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7331bd5b-33d0-4388-af62-bd8fbfdc5d02</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R1001">
+      <value>2.2k</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Thermal-IO"/>
+      <property name="Sheetfile" value="Thermal-IO.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4482571b-c664-4236-80cd-2a39831922a1</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R1002">
+      <value>2.2k</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Thermal-IO"/>
+      <property name="Sheetfile" value="Thermal-IO.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1fca2739-1f76-4b43-8d78-a416a31be53d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R1003">
+      <value>2.2k</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Thermal-IO"/>
+      <property name="Sheetfile" value="Thermal-IO.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4a65d1df-fad3-4f2c-b025-4a8608428142</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R1004">
+      <value>2.2k</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Thermal-IO"/>
+      <property name="Sheetfile" value="Thermal-IO.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>17e00519-a245-415f-b9d1-f9017646dec7</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R1005">
+      <value>4.7k</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Thermal-IO"/>
+      <property name="Sheetfile" value="Thermal-IO.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>895fef8b-ffc1-47a6-839e-6d563927690a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R1010">
+      <value>100k</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Thermal-IO"/>
+      <property name="Sheetfile" value="Thermal-IO.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e6bde09b-88dc-4113-a243-25c49c63081f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R1011">
+      <value>100k</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Thermal-IO"/>
+      <property name="Sheetfile" value="Thermal-IO.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8cee1a4f-e337-4930-b1cf-ea5d237aea7f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R1012">
+      <value>100k</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Thermal-IO"/>
+      <property name="Sheetfile" value="Thermal-IO.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e2c8d87a-3224-481a-bcd1-92ec2ecece1e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R1013">
+      <value>100k</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Thermal-IO"/>
+      <property name="Sheetfile" value="Thermal-IO.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8a8d2d74-a3db-455b-83af-2c23f90bc234</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R1014">
+      <value>100k</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Thermal-IO"/>
+      <property name="Sheetfile" value="Thermal-IO.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5edb75c9-d29d-4d65-83a0-6bddf5647d6a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R1015">
+      <value>100k</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Thermal-IO"/>
+      <property name="Sheetfile" value="Thermal-IO.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1e2302e4-4e29-4aea-86ab-a1b4483121ff</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R1016">
+      <value>100k</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Thermal-IO"/>
+      <property name="Sheetfile" value="Thermal-IO.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>522227fc-f998-47c1-9977-6fe4efdc051d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R1017">
+      <value>100k</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Thermal-IO"/>
+      <property name="Sheetfile" value="Thermal-IO.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>965a0131-eaea-4598-931c-4cb74ad35041</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R1018">
+      <value>100k</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Thermal-IO"/>
+      <property name="Sheetfile" value="Thermal-IO.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ec4e8284-ebf7-41d5-bdd3-3a3020360d02</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R1020">
+      <value>4.7k 5%</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Thermal-IO"/>
+      <property name="Sheetfile" value="Thermal-IO.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6239f456-f922-4750-a5ac-0b002caf60e4</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R1021">
+      <value>4.7k</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Thermal-IO"/>
+      <property name="Sheetfile" value="Thermal-IO.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3671f15e-e620-4381-88bf-30c7d3ccb094</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R1031">
+      <value>10k</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Thermal-IO"/>
+      <property name="Sheetfile" value="Thermal-IO.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>248927b0-431e-4762-a98f-b09e4ec822e5</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R1032">
+      <value>10k</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Thermal-IO"/>
+      <property name="Sheetfile" value="Thermal-IO.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ebbc6949-8610-4617-915b-c59a4ea29cc0</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R1033">
+      <value>10k</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Thermal-IO"/>
+      <property name="Sheetfile" value="Thermal-IO.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2264be40-9ac9-4910-84a6-92898def080b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R1034">
+      <value>10k</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Thermal-IO"/>
+      <property name="Sheetfile" value="Thermal-IO.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5dc0264d-6274-41d0-a5b2-b97b00829355</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R1041">
+      <value>10k</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Thermal-IO"/>
+      <property name="Sheetfile" value="Thermal-IO.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b00b5bad-c16e-4732-8688-931815ef6c52</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R1042">
+      <value>10k</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Thermal-IO"/>
+      <property name="Sheetfile" value="Thermal-IO.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0e9e44e1-fe5e-48e6-aeae-ebcf661aa9cf</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R1043">
+      <value>10k</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Thermal-IO"/>
+      <property name="Sheetfile" value="Thermal-IO.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b44d33e4-94c5-4424-9f6a-30d055701db0</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R1044">
+      <value>10k</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Thermal-IO"/>
+      <property name="Sheetfile" value="Thermal-IO.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3d8fbd56-7468-4d9d-84e0-ca24f52eec9a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R1050">
+      <value>5.1k</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Thermal-IO"/>
+      <property name="Sheetfile" value="Thermal-IO.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>559398a7-f320-4a59-850a-191b6c311c0e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R1060">
+      <value>1k</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Thermal-IO"/>
+      <property name="Sheetfile" value="Thermal-IO.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5287888b-d0c5-4ee6-ac00-c08ec96abbfd</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R1061">
+      <value>1k</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Thermal-IO"/>
+      <property name="Sheetfile" value="Thermal-IO.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>03b1926e-80e4-4c81-9a97-1d0d32252041</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R1062">
+      <value>1k</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Thermal-IO"/>
+      <property name="Sheetfile" value="Thermal-IO.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>593e8d30-b835-4805-b7d6-e2a69ef82fad</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R1063">
+      <value>1k</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Thermal-IO"/>
+      <property name="Sheetfile" value="Thermal-IO.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6e45a417-c3f9-405d-9ee0-e3c73552eb64</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R1064">
+      <value>1k</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Thermal-IO"/>
+      <property name="Sheetfile" value="Thermal-IO.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1a174be5-bf19-40ab-a5a1-30a45dca5464</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R1065">
+      <value>1k</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Thermal-IO"/>
+      <property name="Sheetfile" value="Thermal-IO.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>539a9e30-dc21-480b-97e8-89e9dc220a6e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R1070">
+      <value>1k ring limit</value>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-071KL</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-071KL"/>
+      <property name="Sheetname" value="Thermal-IO"/>
+      <property name="Sheetfile" value="Thermal-IO.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b842d165-1f4c-42ee-860d-9d07dafddc04</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="S1070">
+      <value>CS7L2FR TOUCH LATCH</value>
+      <fields>
+        <field name="Manufacturer">E-Switch</field>
+        <field name="MPN">CS7L2FR</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x06" description="Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Manufacturer" value="E-Switch"/>
+      <property name="MPN" value="CS7L2FR"/>
+      <property name="Sheetname" value="Thermal-IO"/>
+      <property name="Sheetfile" value="Thermal-IO.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e236ce78-6a51-4d0b-a7ae-b553dabb5a55</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U1000">
+      <value>PCA9306D</value>
+      <fields>
+        <field name="Manufacturer">NXP</field>
+        <field name="MPN">PCA9306D,118</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Interface" part="PCA9306D" description="Dual bidirectional I2C Bus and SMBus voltage level translator, SO-8"/>
+      <property name="Manufacturer" value="NXP"/>
+      <property name="MPN" value="PCA9306D,118"/>
+      <property name="Sheetname" value="Thermal-IO"/>
+      <property name="Sheetfile" value="Thermal-IO.kicad_sch"/>
+      <property name="ki_keywords" value="I2C SMBus"/>
+      <property name="ki_fp_filters" value="SO*3.9x4.9mm*P1.27mm*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5344e535-36a6-4108-916c-9c83bc2c8a50</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="2"/>
+            <pin num="1"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="6"/>
+            <pin num="5"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U1001">
+      <value>TCA9535PWR_0x20</value>
+      <fields>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="MPN">TCA9535PWR</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Interface_Expansion" part="TCA9535PWR" description="16-bit I/O expander, I2C and SMBus interface, interrupts, w/o pull-ups, TSSOP-24 package"/>
+      <property name="Manufacturer" value="Texas Instruments"/>
+      <property name="MPN" value="TCA9535PWR"/>
+      <property name="Sheetname" value="Thermal-IO"/>
+      <property name="Sheetfile" value="Thermal-IO.kicad_sch"/>
+      <property name="ki_keywords" value="ti parallel port"/>
+      <property name="ki_fp_filters" value="TSSOP*4.4x7.8mm*P0.65mm*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c56576b9-71e1-4b61-8ea9-6a742a8470f4</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="23"/>
+            <pin num="22"/>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="2"/>
+            <pin num="21"/>
+            <pin num="24"/>
+            <pin num="12"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="9"/>
+            <pin num="10"/>
+            <pin num="11"/>
+            <pin num="13"/>
+            <pin num="14"/>
+            <pin num="15"/>
+            <pin num="16"/>
+            <pin num="17"/>
+            <pin num="18"/>
+            <pin num="19"/>
+            <pin num="20"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U1002">
+      <value>TCA9535PWR_0x21</value>
+      <fields>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="MPN">TCA9535PWR</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Interface_Expansion" part="TCA9535PWR" description="16-bit I/O expander, I2C and SMBus interface, interrupts, w/o pull-ups, TSSOP-24 package"/>
+      <property name="Manufacturer" value="Texas Instruments"/>
+      <property name="MPN" value="TCA9535PWR"/>
+      <property name="Sheetname" value="Thermal-IO"/>
+      <property name="Sheetfile" value="Thermal-IO.kicad_sch"/>
+      <property name="ki_keywords" value="ti parallel port"/>
+      <property name="ki_fp_filters" value="TSSOP*4.4x7.8mm*P0.65mm*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b9401fea-cd55-448f-a7fb-4f4c79505e2f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="23"/>
+            <pin num="22"/>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="2"/>
+            <pin num="21"/>
+            <pin num="24"/>
+            <pin num="12"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="9"/>
+            <pin num="10"/>
+            <pin num="11"/>
+            <pin num="13"/>
+            <pin num="14"/>
+            <pin num="15"/>
+            <pin num="16"/>
+            <pin num="17"/>
+            <pin num="18"/>
+            <pin num="19"/>
+            <pin num="20"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U1020">
+      <value>EMC2305-1-AP-TR</value>
+      <fields>
+        <field name="Manufacturer">Microchip</field>
+        <field name="MPN">EMC2305-1-AP-TR</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Driver_Motor" part="EMC2305-x-AP" description="Multiple RPM-Based PWM Fan Controller for 5 Fans, up to 26 kHz, 3.3V power supply, VQFN-16"/>
+      <property name="Manufacturer" value="Microchip"/>
+      <property name="MPN" value="EMC2305-1-AP-TR"/>
+      <property name="Sheetname" value="Thermal-IO"/>
+      <property name="Sheetfile" value="Thermal-IO.kicad_sch"/>
+      <property name="ki_keywords" value="DRIVER MOTOR SMBus I2C 4-wire"/>
+      <property name="ki_fp_filters" value="*VQFN*1EP*4x4mm*P0.65mm*EP2.1x2.1mm*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f4ece9a8-2e5e-4eda-ac94-171ec5eeb543</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="4"/>
+            <pin num="11"/>
+            <pin num="12"/>
+            <pin num="3"/>
+            <pin num="17"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="9"/>
+            <pin num="10"/>
+            <pin num="13"/>
+            <pin num="14"/>
+            <pin num="15"/>
+            <pin num="16"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U1050">
+      <value>TMP117_CM5</value>
+      <fields>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="MPN">TMP117MAIDRVR</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Sensor_Temperature" part="TMP117xxDRV" description="Digital Temperature Sensor with I2C/SMBus Interface, 16 bits, ±0.3°C, one-shot conversion, alert, nist traceable, EEPROM, WSON"/>
+      <property name="Manufacturer" value="Texas Instruments"/>
+      <property name="MPN" value="TMP117MAIDRVR"/>
+      <property name="Sheetname" value="Thermal-IO"/>
+      <property name="Sheetfile" value="Thermal-IO.kicad_sch"/>
+      <property name="ki_keywords" value="digital temperature sensor i2c smbus nist"/>
+      <property name="ki_fp_filters" value="WSON*1EP?2x2mm?P0.65mm?EP1x1.6mm*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>dfdef254-a8d3-4e7e-8a8b-1790b678b6d8</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="6"/>
+            <pin num="1"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U1051">
+      <value>TMP117_MODEM</value>
+      <fields>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="MPN">TMP117MAIDRVR</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Sensor_Temperature" part="TMP117xxDRV" description="Digital Temperature Sensor with I2C/SMBus Interface, 16 bits, ±0.3°C, one-shot conversion, alert, nist traceable, EEPROM, WSON"/>
+      <property name="Manufacturer" value="Texas Instruments"/>
+      <property name="MPN" value="TMP117MAIDRVR"/>
+      <property name="Sheetname" value="Thermal-IO"/>
+      <property name="Sheetfile" value="Thermal-IO.kicad_sch"/>
+      <property name="ki_keywords" value="digital temperature sensor i2c smbus nist"/>
+      <property name="ki_fp_filters" value="WSON*1EP?2x2mm?P0.65mm?EP1x1.6mm*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d3e7cf57-5729-44bc-9c8c-6af997884bf7</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="6"/>
+            <pin num="1"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U1052">
+      <value>TMP117_BOARD_POWER</value>
+      <fields>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="MPN">TMP117MAIDRVR</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Sensor_Temperature" part="TMP117xxDRV" description="Digital Temperature Sensor with I2C/SMBus Interface, 16 bits, ±0.3°C, one-shot conversion, alert, nist traceable, EEPROM, WSON"/>
+      <property name="Manufacturer" value="Texas Instruments"/>
+      <property name="MPN" value="TMP117MAIDRVR"/>
+      <property name="Sheetname" value="Thermal-IO"/>
+      <property name="Sheetfile" value="Thermal-IO.kicad_sch"/>
+      <property name="ki_keywords" value="digital temperature sensor i2c smbus nist"/>
+      <property name="ki_fp_filters" value="WSON*1EP?2x2mm?P0.65mm?EP1x1.6mm*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c3e15626-307f-416f-bc20-9f39747479d8</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="6"/>
+            <pin num="1"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Connector_Generic" part="Conn_01x04">
+      <description>Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x04</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x06">
+      <description>Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x06</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="LED">
+      <description>Light emitting diode</description>
+      <footprints>
+        <fp>LED*</fp>
+        <fp>LED_SMD:*</fp>
+        <fp>LED_THT:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Light emitting diode</field>
+        <field name="Sim.Pins">1=K 2=A</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="Polyfuse">
+      <description>Resettable fuse, polymeric positive temperature coefficient</description>
+      <footprints>
+        <fp>*polyfuse*</fp>
+        <fp>*PTC*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">F</field>
+        <field name="Value">Polyfuse</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Resettable fuse, polymeric positive temperature coefficient</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Driver_Motor" part="EMC2305-x-AP">
+      <description>Multiple RPM-Based PWM Fan Controller for 5 Fans, up to 26 kHz, 3.3V power supply, VQFN-16</description>
+      <docs>https://ww1.microchip.com/downloads/aemDocuments/documents/MSLD/ProductDocuments/DataSheets/EMC2301-2-3-5-Data-Sheet-DS20006532A.pdf</docs>
+      <footprints>
+        <fp>*VQFN*1EP*4x4mm*P0.65mm*EP2.1x2.1mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">EMC2305-x-AP</field>
+        <field name="Footprint">Package_DFN_QFN:Texas_RGV0016A_VQFN-16-1EP_4x4mm_P0.65mm_EP2.1x2.1mm_ThermalVias</field>
+        <field name="Datasheet">https://ww1.microchip.com/downloads/aemDocuments/documents/MSLD/ProductDocuments/DataSheets/EMC2301-2-3-5-Data-Sheet-DS20006532A.pdf</field>
+        <field name="Description">Multiple RPM-Based PWM Fan Controller for 5 Fans, up to 26 kHz, 3.3V power supply, VQFN-16</field>
+      </fields>
+      <pins>
+        <pin num="1" name="SMDATA" type="bidirectional"/>
+        <pin num="2" name="SMCLK" type="input"/>
+        <pin num="3" name="VDD" type="power_in"/>
+        <pin num="4" name="ADDR_SEL" type="input"/>
+        <pin num="5" name="PWM1" type="output"/>
+        <pin num="6" name="TACH1" type="input"/>
+        <pin num="7" name="PWM2" type="output"/>
+        <pin num="8" name="TACH2" type="input"/>
+        <pin num="9" name="PWM3" type="output"/>
+        <pin num="10" name="TACH3" type="input"/>
+        <pin num="11" name="CLK" type="bidirectional"/>
+        <pin num="12" name="~{ALERT}" type="open_collector"/>
+        <pin num="13" name="PWM4" type="output"/>
+        <pin num="14" name="TACH4" type="input"/>
+        <pin num="15" name="PWM5" type="output"/>
+        <pin num="16" name="TACH5" type="input"/>
+        <pin num="17" name="GND" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Interface" part="PCA9306D">
+      <description>Dual bidirectional I2C Bus and SMBus voltage level translator, SO-8</description>
+      <docs>https://www.nxp.com/docs/en/data-sheet/PCA9306.pdf</docs>
+      <footprints>
+        <fp>SO*3.9x4.9mm*P1.27mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">PCA9306D</field>
+        <field name="Footprint">Package_SO:SO-8_3.9x4.9mm_P1.27mm</field>
+        <field name="Datasheet">https://www.nxp.com/docs/en/data-sheet/PCA9306.pdf</field>
+        <field name="Description">Dual bidirectional I2C Bus and SMBus voltage level translator, SO-8</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_in"/>
+        <pin num="2" name="VREF1" type="power_in"/>
+        <pin num="3" name="SCL1" type="bidirectional"/>
+        <pin num="4" name="SDA1" type="bidirectional"/>
+        <pin num="5" name="SDA2" type="bidirectional"/>
+        <pin num="6" name="SCL2" type="bidirectional"/>
+        <pin num="7" name="VREF2" type="power_in"/>
+        <pin num="8" name="EN" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="Interface_Expansion" part="TCA9535PWR">
+      <description>16-bit I/O expander, I2C and SMBus interface, interrupts, w/o pull-ups, TSSOP-24 package</description>
+      <docs>http://www.ti.com/lit/ds/symlink/tca9535.pdf</docs>
+      <footprints>
+        <fp>TSSOP*4.4x7.8mm*P0.65mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TCA9535PWR</field>
+        <field name="Footprint">Package_SO:TSSOP-24_4.4x7.8mm_P0.65mm</field>
+        <field name="Datasheet">http://www.ti.com/lit/ds/symlink/tca9535.pdf</field>
+        <field name="Description">16-bit I/O expander, I2C and SMBus interface, interrupts, w/o pull-ups, TSSOP-24 package</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~{INT}" type="open_collector"/>
+        <pin num="2" name="A1" type="input"/>
+        <pin num="3" name="A2" type="input"/>
+        <pin num="4" name="P00" type="bidirectional"/>
+        <pin num="5" name="P01" type="bidirectional"/>
+        <pin num="6" name="P02" type="bidirectional"/>
+        <pin num="7" name="P03" type="bidirectional"/>
+        <pin num="8" name="P04" type="bidirectional"/>
+        <pin num="9" name="P05" type="bidirectional"/>
+        <pin num="10" name="P06" type="bidirectional"/>
+        <pin num="11" name="P07" type="bidirectional"/>
+        <pin num="12" name="GND" type="power_in"/>
+        <pin num="13" name="P10" type="bidirectional"/>
+        <pin num="14" name="P11" type="bidirectional"/>
+        <pin num="15" name="P12" type="bidirectional"/>
+        <pin num="16" name="P13" type="bidirectional"/>
+        <pin num="17" name="P14" type="bidirectional"/>
+        <pin num="18" name="P15" type="bidirectional"/>
+        <pin num="19" name="P16" type="bidirectional"/>
+        <pin num="20" name="P17" type="bidirectional"/>
+        <pin num="21" name="A0" type="input"/>
+        <pin num="22" name="SCL" type="input"/>
+        <pin num="23" name="SDA" type="bidirectional"/>
+        <pin num="24" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Sensor_Temperature" part="TMP117xxDRV">
+      <description>Digital Temperature Sensor with I2C/SMBus Interface, 16 bits, ±0.3°C, one-shot conversion, alert, nist traceable, EEPROM, WSON</description>
+      <docs>https://www.ti.com/lit/ds/symlink/tmp117.pdf</docs>
+      <footprints>
+        <fp>WSON*1EP?2x2mm?P0.65mm?EP1x1.6mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TMP117xxDRV</field>
+        <field name="Footprint">Package_SON:WSON-6-1EP_2x2mm_P0.65mm_EP1x1.6mm</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tmp117.pdf</field>
+        <field name="Description">Digital Temperature Sensor with I2C/SMBus Interface, 16 bits, ±0.3°C, one-shot conversion, alert, nist traceable, EEPROM, WSON</field>
+      </fields>
+      <pins>
+        <pin num="1" name="SCL" type="input"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="ALERT" type="open_collector"/>
+        <pin num="4" name="ADD0" type="input"/>
+        <pin num="5" name="V+" type="power_in"/>
+        <pin num="6" name="SDA" type="bidirectional"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector_Generic">
+      <uri>${KICAD10_SYMBOL_DIR}/Connector_Generic.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>${KICAD10_SYMBOL_DIR}/Device.kicad_sym</uri>
+    </library>
+    <library logical="Driver_Motor">
+      <uri>${KICAD10_SYMBOL_DIR}/Driver_Motor.kicad_sym</uri>
+    </library>
+    <library logical="Interface">
+      <uri>${KICAD10_SYMBOL_DIR}/Interface.kicad_sym</uri>
+    </library>
+    <library logical="Interface_Expansion">
+      <uri>${KICAD10_SYMBOL_DIR}/Interface_Expansion.kicad_sym</uri>
+    </library>
+    <library logical="Sensor_Temperature">
+      <uri>${KICAD10_SYMBOL_DIR}/Sensor_Temperature.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/AUDIO_CYAN_A" class="Default">
+      <node ref="D1065" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="R1065" pin="2" pintype="passive"/>
+    </net>
+    <net code="2" name="/AUDIO_ENABLE" class="Default">
+      <node ref="R1010" pin="1" pintype="passive"/>
+      <node ref="U1002" pin="4" pinfunction="P00_4" pintype="bidirectional"/>
+    </net>
+    <net code="3" name="/AUDIO_PRESENT_N" class="Default">
+      <node ref="U1001" pin="19" pinfunction="P16_19" pintype="bidirectional"/>
+    </net>
+    <net code="4" name="/AUD_ADC_RST_N" class="Default">
+      <node ref="U1002" pin="5" pinfunction="P01_5" pintype="bidirectional"/>
+    </net>
+    <net code="5" name="/AUD_DAC_MUTE_N" class="Default">
+      <node ref="R1011" pin="1" pintype="passive"/>
+      <node ref="U1002" pin="7" pinfunction="P03_7" pintype="bidirectional"/>
+    </net>
+    <net code="6" name="/AUD_DAC_RST_N" class="Default">
+      <node ref="U1002" pin="6" pinfunction="P02_6" pintype="bidirectional"/>
+    </net>
+    <net code="7" name="/AUD_IRQ_N" class="Default">
+      <node ref="U1001" pin="20" pinfunction="P17_20" pintype="bidirectional"/>
+    </net>
+    <net code="8" name="/BACKUP_VIOLET_A" class="Default">
+      <node ref="D1061" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="R1061" pin="2" pintype="passive"/>
+    </net>
+    <net code="9" name="/BAT_LOW_N" class="Default">
+      <node ref="U1001" pin="8" pinfunction="P04_8" pintype="bidirectional"/>
+    </net>
+    <net code="10" name="/CELL_AMBER_A" class="Default">
+      <node ref="D1063" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="R1063" pin="2" pintype="passive"/>
+    </net>
+    <net code="11" name="/CH_24V_N" class="Default">
+      <node ref="U1001" pin="4" pinfunction="P00_4" pintype="bidirectional"/>
+    </net>
+    <net code="12" name="/CH_BAT_N" class="Default">
+      <node ref="U1001" pin="5" pinfunction="P01_5" pintype="bidirectional"/>
+    </net>
+    <net code="13" name="/CPU_FAN_12V" class="Default">
+      <node ref="F1021" pin="2" pintype="passive"/>
+      <node ref="J1021" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+    </net>
+    <net code="14" name="/CPU_FAN_PWM" class="Default">
+      <node ref="J1021" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+      <node ref="R1031" pin="2" pintype="passive"/>
+      <node ref="U1020" pin="5" pinfunction="PWM1_5" pintype="output"/>
+    </net>
+    <net code="15" name="/CPU_FAN_TACH" class="Default">
+      <node ref="J1021" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="R1041" pin="2" pintype="passive"/>
+      <node ref="U1020" pin="6" pinfunction="TACH1_6" pintype="input"/>
+    </net>
+    <net code="16" name="/CS_GREEN_RING_K" class="Default">
+      <node ref="R1070" pin="1" pintype="passive"/>
+      <node ref="S1070" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+    </net>
+    <net code="17" name="/CTRL_I2C_SCL" class="Default">
+      <node ref="R1003" pin="2" pintype="passive"/>
+      <node ref="U1000" pin="6" pinfunction="SCL2_6" pintype="bidirectional"/>
+      <node ref="U1001" pin="22" pinfunction="SCL_22" pintype="input"/>
+      <node ref="U1002" pin="22" pinfunction="SCL_22" pintype="input"/>
+      <node ref="U1020" pin="2" pinfunction="SMCLK_2" pintype="input"/>
+      <node ref="U1050" pin="1" pinfunction="SCL_1" pintype="input"/>
+      <node ref="U1051" pin="1" pinfunction="SCL_1" pintype="input"/>
+      <node ref="U1052" pin="1" pinfunction="SCL_1" pintype="input"/>
+    </net>
+    <net code="18" name="/CTRL_I2C_SDA" class="Default">
+      <node ref="R1004" pin="2" pintype="passive"/>
+      <node ref="U1000" pin="5" pinfunction="SDA2_5" pintype="bidirectional"/>
+      <node ref="U1001" pin="23" pinfunction="SDA_23" pintype="bidirectional"/>
+      <node ref="U1002" pin="23" pinfunction="SDA_23" pintype="bidirectional"/>
+      <node ref="U1020" pin="1" pinfunction="SMDATA_1" pintype="bidirectional"/>
+      <node ref="U1050" pin="6" pinfunction="SDA_6" pintype="bidirectional"/>
+      <node ref="U1051" pin="6" pinfunction="SDA_6" pintype="bidirectional"/>
+      <node ref="U1052" pin="4" pinfunction="ADD0_4" pintype="input"/>
+      <node ref="U1052" pin="6" pinfunction="SDA_6" pintype="bidirectional"/>
+    </net>
+    <net code="19" name="/EMC2305_ADDR" class="Default">
+      <node ref="R1020" pin="2" pintype="passive"/>
+      <node ref="U1020" pin="4" pinfunction="ADDR_SEL_4" pintype="input"/>
+    </net>
+    <net code="20" name="/EXHAUST_FAN_12V" class="Default">
+      <node ref="F1024" pin="2" pintype="passive"/>
+      <node ref="J1024" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+    </net>
+    <net code="21" name="/EXHAUST_FAN_PWM" class="Default">
+      <node ref="J1024" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+      <node ref="R1034" pin="2" pintype="passive"/>
+      <node ref="U1020" pin="13" pinfunction="PWM4_13" pintype="output"/>
+    </net>
+    <net code="22" name="/EXHAUST_FAN_TACH" class="Default">
+      <node ref="J1024" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="R1044" pin="2" pintype="passive"/>
+      <node ref="U1020" pin="14" pinfunction="TACH4_14" pintype="input"/>
+    </net>
+    <net code="23" name="/FAN_ALERT_N" class="Default">
+      <node ref="R1021" pin="2" pintype="passive"/>
+      <node ref="U1001" pin="9" pinfunction="P05_9" pintype="bidirectional"/>
+      <node ref="U1020" pin="12" pinfunction="~{ALERT}_12" pintype="open_collector"/>
+    </net>
+    <net code="24" name="/FAN_AUX_12V" class="Default">
+      <node ref="F1022" pin="1" pintype="passive"/>
+      <node ref="F1023" pin="1" pintype="passive"/>
+      <node ref="F1024" pin="1" pintype="passive"/>
+    </net>
+    <net code="25" name="/FAN_CPU_12V" class="Default">
+      <node ref="F1021" pin="1" pintype="passive"/>
+    </net>
+    <net code="26" name="/GND" class="Default">
+      <node ref="C1020" pin="2" pintype="passive"/>
+      <node ref="C1050" pin="2" pintype="passive"/>
+      <node ref="C1051" pin="2" pintype="passive"/>
+      <node ref="C1052" pin="2" pintype="passive"/>
+      <node ref="J1021" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="J1022" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="J1023" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="J1024" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="R1010" pin="2" pintype="passive"/>
+      <node ref="R1011" pin="2" pintype="passive"/>
+      <node ref="R1013" pin="2" pintype="passive"/>
+      <node ref="R1015" pin="2" pintype="passive"/>
+      <node ref="S1070" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="U1000" pin="1" pinfunction="GND_1" pintype="power_in"/>
+      <node ref="U1001" pin="12" pinfunction="GND_12" pintype="power_in"/>
+      <node ref="U1001" pin="2" pinfunction="A1_2" pintype="input"/>
+      <node ref="U1001" pin="21" pinfunction="A0_21" pintype="input"/>
+      <node ref="U1001" pin="3" pinfunction="A2_3" pintype="input"/>
+      <node ref="U1002" pin="12" pinfunction="GND_12" pintype="power_in"/>
+      <node ref="U1002" pin="2" pinfunction="A1_2" pintype="input"/>
+      <node ref="U1002" pin="3" pinfunction="A2_3" pintype="input"/>
+      <node ref="U1020" pin="17" pinfunction="GND_17" pintype="power_in"/>
+      <node ref="U1050" pin="2" pinfunction="GND_2" pintype="power_in"/>
+      <node ref="U1050" pin="4" pinfunction="ADD0_4" pintype="input"/>
+      <node ref="U1051" pin="2" pinfunction="GND_2" pintype="power_in"/>
+      <node ref="U1052" pin="2" pinfunction="GND_2" pintype="power_in"/>
+    </net>
+    <net code="27" name="/HEADSET_AMP_EN" class="Default">
+      <node ref="U1002" pin="9" pinfunction="P05_9" pintype="bidirectional"/>
+    </net>
+    <net code="28" name="/HEADSET_POWER_EN" class="Default">
+      <node ref="U1002" pin="8" pinfunction="P04_8" pintype="bidirectional"/>
+    </net>
+    <net code="29" name="/INTAKE_FAN_12V" class="Default">
+      <node ref="F1023" pin="2" pintype="passive"/>
+      <node ref="J1023" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+    </net>
+    <net code="30" name="/INTAKE_FAN_PWM" class="Default">
+      <node ref="J1023" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+      <node ref="R1033" pin="2" pintype="passive"/>
+      <node ref="U1020" pin="9" pinfunction="PWM3_9" pintype="output"/>
+    </net>
+    <net code="31" name="/INTAKE_FAN_TACH" class="Default">
+      <node ref="J1023" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="R1043" pin="2" pintype="passive"/>
+      <node ref="U1020" pin="10" pinfunction="TACH3_10" pintype="input"/>
+    </net>
+    <net code="32" name="/LAN1_RESET_LOCAL_N" class="Default">
+      <node ref="R1017" pin="1" pintype="passive"/>
+      <node ref="U1002" pin="17" pinfunction="P14_17" pintype="bidirectional"/>
+    </net>
+    <net code="33" name="/LAN2_RESET_LOCAL_N" class="Default">
+      <node ref="R1018" pin="1" pintype="passive"/>
+      <node ref="U1002" pin="18" pinfunction="P15_18" pintype="bidirectional"/>
+    </net>
+    <net code="34" name="/LED_AUDIO_N" class="Default">
+      <node ref="D1065" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="U1001" pin="18" pinfunction="P15_18" pintype="bidirectional"/>
+    </net>
+    <net code="35" name="/LED_BACKUP_N" class="Default">
+      <node ref="D1061" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="U1001" pin="14" pinfunction="P11_14" pintype="bidirectional"/>
+    </net>
+    <net code="36" name="/LED_CELL_N" class="Default">
+      <node ref="D1063" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="U1001" pin="16" pinfunction="P13_16" pintype="bidirectional"/>
+    </net>
+    <net code="37" name="/LED_PWR_N" class="Default">
+      <node ref="D1060" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="U1001" pin="13" pinfunction="P10_13" pintype="bidirectional"/>
+    </net>
+    <net code="38" name="/LED_TEMP_N" class="Default">
+      <node ref="D1064" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="U1001" pin="17" pinfunction="P14_17" pintype="bidirectional"/>
+    </net>
+    <net code="39" name="/LED_WIFI_N" class="Default">
+      <node ref="D1062" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="U1001" pin="15" pinfunction="P12_15" pintype="bidirectional"/>
+    </net>
+    <net code="40" name="/LOGIC_1V8" class="Default">
+      <node ref="R1001" pin="1" pintype="passive"/>
+      <node ref="R1002" pin="1" pintype="passive"/>
+      <node ref="U1000" pin="2" pinfunction="VREF1_2" pintype="power_in"/>
+    </net>
+    <net code="41" name="/LOGIC_3V3" class="Default">
+      <node ref="C1020" pin="1" pintype="passive"/>
+      <node ref="C1050" pin="1" pintype="passive"/>
+      <node ref="C1051" pin="1" pintype="passive"/>
+      <node ref="C1052" pin="1" pintype="passive"/>
+      <node ref="R1003" pin="1" pintype="passive"/>
+      <node ref="R1004" pin="1" pintype="passive"/>
+      <node ref="R1005" pin="1" pintype="passive"/>
+      <node ref="R1012" pin="2" pintype="passive"/>
+      <node ref="R1014" pin="2" pintype="passive"/>
+      <node ref="R1016" pin="2" pintype="passive"/>
+      <node ref="R1017" pin="2" pintype="passive"/>
+      <node ref="R1018" pin="2" pintype="passive"/>
+      <node ref="R1020" pin="1" pintype="passive"/>
+      <node ref="R1021" pin="1" pintype="passive"/>
+      <node ref="R1031" pin="1" pintype="passive"/>
+      <node ref="R1032" pin="1" pintype="passive"/>
+      <node ref="R1033" pin="1" pintype="passive"/>
+      <node ref="R1034" pin="1" pintype="passive"/>
+      <node ref="R1041" pin="1" pintype="passive"/>
+      <node ref="R1042" pin="1" pintype="passive"/>
+      <node ref="R1043" pin="1" pintype="passive"/>
+      <node ref="R1044" pin="1" pintype="passive"/>
+      <node ref="R1050" pin="1" pintype="passive"/>
+      <node ref="R1060" pin="1" pintype="passive"/>
+      <node ref="R1061" pin="1" pintype="passive"/>
+      <node ref="R1062" pin="1" pintype="passive"/>
+      <node ref="R1063" pin="1" pintype="passive"/>
+      <node ref="R1064" pin="1" pintype="passive"/>
+      <node ref="R1065" pin="1" pintype="passive"/>
+      <node ref="U1000" pin="7" pinfunction="VREF2_7" pintype="power_in"/>
+      <node ref="U1000" pin="8" pinfunction="EN_8" pintype="input"/>
+      <node ref="U1001" pin="24" pinfunction="VCC_24" pintype="power_in"/>
+      <node ref="U1002" pin="21" pinfunction="A0_21" pintype="input"/>
+      <node ref="U1002" pin="24" pinfunction="VCC_24" pintype="power_in"/>
+      <node ref="U1020" pin="3" pinfunction="VDD_3" pintype="power_in"/>
+      <node ref="U1050" pin="5" pinfunction="V+_5" pintype="power_in"/>
+      <node ref="U1051" pin="4" pinfunction="ADD0_4" pintype="input"/>
+      <node ref="U1051" pin="5" pinfunction="V+_5" pintype="power_in"/>
+      <node ref="U1052" pin="5" pinfunction="V+_5" pintype="power_in"/>
+    </net>
+    <net code="42" name="/MODEM_FAN_12V" class="Default">
+      <node ref="F1022" pin="2" pintype="passive"/>
+      <node ref="J1022" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+    </net>
+    <net code="43" name="/MODEM_FAN_PWM" class="Default">
+      <node ref="J1022" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+      <node ref="R1032" pin="2" pintype="passive"/>
+      <node ref="U1020" pin="7" pinfunction="PWM2_7" pintype="output"/>
+    </net>
+    <net code="44" name="/MODEM_FAN_TACH" class="Default">
+      <node ref="J1022" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="R1042" pin="2" pintype="passive"/>
+      <node ref="U1020" pin="8" pinfunction="TACH2_8" pintype="input"/>
+    </net>
+    <net code="45" name="/MODEM_FULL_CARD_POWER_OFF_N" class="Default">
+      <node ref="R1012" pin="1" pintype="passive"/>
+      <node ref="U1002" pin="10" pinfunction="P06_10" pintype="bidirectional"/>
+    </net>
+    <net code="46" name="/MODEM_RESET_N" class="Default">
+      <node ref="R1014" pin="1" pintype="passive"/>
+      <node ref="U1002" pin="13" pinfunction="P10_13" pintype="bidirectional"/>
+    </net>
+    <net code="47" name="/MODEM_SIM_MUX_SEL_OD" class="Default">
+      <node ref="U1002" pin="14" pinfunction="P11_14" pintype="bidirectional"/>
+    </net>
+    <net code="48" name="/MODEM_STATUS_LED_N" class="Default">
+      <node ref="U1002" pin="20" pinfunction="P17_20" pintype="bidirectional"/>
+    </net>
+    <net code="49" name="/MODEM_WAKE_N" class="Default">
+      <node ref="U1002" pin="19" pinfunction="P16_19" pintype="bidirectional"/>
+    </net>
+    <net code="50" name="/MODEM_W_DISABLE1_N" class="Default">
+      <node ref="R1013" pin="1" pintype="passive"/>
+      <node ref="U1002" pin="11" pinfunction="P07_11" pintype="bidirectional"/>
+    </net>
+    <net code="51" name="/NIGHT_LIGHT_12V" class="Default">
+      <node ref="D1070" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="D1071" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="S1070" pin="6" pinfunction="Pin_6_6" pintype="passive"/>
+    </net>
+    <net code="52" name="/NIGHT_LIGHT_SINK" class="Default">
+      <node ref="D1070" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="D1071" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="R1070" pin="2" pintype="passive"/>
+      <node ref="S1070" pin="5" pinfunction="Pin_5_5" pintype="passive"/>
+    </net>
+    <net code="53" name="/PWR_GREEN_A" class="Default">
+      <node ref="D1060" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="R1060" pin="2" pintype="passive"/>
+    </net>
+    <net code="54" name="/PWR_MON_ALERT_N" class="Default">
+      <node ref="R1005" pin="2" pintype="passive"/>
+      <node ref="U1001" pin="11" pinfunction="P07_11" pintype="bidirectional"/>
+    </net>
+    <net code="55" name="/SYS_I2C7_SCL" class="Default">
+      <node ref="R1001" pin="2" pintype="passive"/>
+      <node ref="U1000" pin="3" pinfunction="SCL1_3" pintype="bidirectional"/>
+    </net>
+    <net code="56" name="/SYS_I2C7_SDA" class="Default">
+      <node ref="R1002" pin="2" pintype="passive"/>
+      <node ref="U1000" pin="4" pinfunction="SDA1_4" pintype="bidirectional"/>
+    </net>
+    <net code="57" name="/TEMP_ALERT_N" class="Default">
+      <node ref="R1050" pin="2" pintype="passive"/>
+      <node ref="U1001" pin="10" pinfunction="P06_10" pintype="bidirectional"/>
+      <node ref="U1050" pin="3" pinfunction="ALERT_3" pintype="open_collector"/>
+      <node ref="U1051" pin="3" pinfunction="ALERT_3" pintype="open_collector"/>
+      <node ref="U1052" pin="3" pinfunction="ALERT_3" pintype="open_collector"/>
+    </net>
+    <net code="58" name="/TEMP_RED_A" class="Default">
+      <node ref="D1064" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="R1064" pin="2" pintype="passive"/>
+    </net>
+    <net code="59" name="/U1001_INT_N" class="Default">
+      <node ref="U1001" pin="1" pinfunction="~{INT}_1" pintype="open_collector"/>
+    </net>
+    <net code="60" name="/U1002_INT_N" class="Default">
+      <node ref="U1002" pin="1" pinfunction="~{INT}_1" pintype="open_collector"/>
+    </net>
+    <net code="61" name="/VALID_24V_N" class="Default">
+      <node ref="U1001" pin="6" pinfunction="P02_6" pintype="bidirectional"/>
+    </net>
+    <net code="62" name="/VALID_BAT_N" class="Default">
+      <node ref="U1001" pin="7" pinfunction="P03_7" pintype="bidirectional"/>
+    </net>
+    <net code="63" name="/WAN2_RESET_LOCAL_N" class="Default">
+      <node ref="R1016" pin="1" pintype="passive"/>
+      <node ref="U1002" pin="16" pinfunction="P13_16" pintype="bidirectional"/>
+    </net>
+    <net code="64" name="/WIFI_BLUE_A" class="Default">
+      <node ref="D1062" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="R1062" pin="2" pintype="passive"/>
+    </net>
+    <net code="65" name="/WIFI_DISABLE1_N" class="Default">
+      <node ref="R1015" pin="1" pintype="passive"/>
+      <node ref="U1002" pin="15" pinfunction="P12_15" pintype="bidirectional"/>
+    </net>
+    <net code="66" name="unconnected-(S1070-Pin_2-Pad2)" class="Default">
+      <node ref="S1070" pin="2" pinfunction="Pin_2_2" pintype="passive+no_connect"/>
+    </net>
+    <net code="67" name="unconnected-(S1070-Pin_4-Pad4)" class="Default">
+      <node ref="S1070" pin="4" pinfunction="Pin_4_4" pintype="passive+no_connect"/>
+    </net>
+    <net code="68" name="unconnected-(U1020-CLK-Pad11)" class="Default">
+      <node ref="U1020" pin="11" pinfunction="CLK_11" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="69" name="unconnected-(U1020-PWM5-Pad15)" class="Default">
+      <node ref="U1020" pin="15" pinfunction="PWM5_15" pintype="output+no_connect"/>
+    </net>
+    <net code="70" name="unconnected-(U1020-TACH5-Pad16)" class="Default">
+      <node ref="U1020" pin="16" pinfunction="TACH5_16" pintype="input+no_connect"/>
+    </net>
+  </nets>
+</export>

@@ -1,0 +1,38 @@
+ERC report (2026-08-15T22:35:04, Encoding UTF8)
+Report includes: Errors, Warnings
+
+***** Sheet /
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(449.58 mm, 139.70 mm): Label 'AUD_ADC_RST_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(449.58 mm, 142.24 mm): Label 'AUD_DAC_MUTE_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(449.58 mm, 144.78 mm): Label 'AUDIO_PRESENT_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(449.58 mm, 149.86 mm): Label 'TDM_SPARE_1'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(462.28 mm, 139.70 mm): Label 'AUD_DAC_RST_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(462.28 mm, 149.86 mm): Label 'TDM_SPARE_2'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(549.91 mm, 435.61 mm): Label 'ES8316_GPIO2'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(590.55 mm, 433.07 mm): Label 'ES8316_GPIO1'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(590.55 mm, 435.61 mm): Label 'ES8316_GPIO3'
+
+ ** ERC messages: 9  Errors 0  Warnings 9
+
+ ** Ignored checks:
+    - Global label only appears once in the schematic
+    - Four connection points are joined together
+    - Assigned footprint doesn't match footprint filters

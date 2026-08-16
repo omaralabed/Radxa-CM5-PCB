@@ -1,0 +1,29 @@
+* text=auto
+
+*.md text eol=lf
+*.py text eol=lf
+*.sh text eol=lf
+*.svg text eol=lf
+*.csv text eol=lf
+*.kicad_sch text eol=lf
+*.kicad_sym text eol=lf
+*.kicad_mod text eol=lf
+*.kicad_pro text eol=lf
+
+*.png binary
+*.jpg binary
+*.pdf binary
+*.xlsx binary
+*.mov binary
+*.step binary
+*.stp binary
+*.dxf binary
+*.asc binary
+*.PrjPcb binary
+*.PrjPcbStructure binary
+*.SchDoc binary
+*.PcbDoc binary
+
+# Preserve the imported upstream reference byte-for-byte.
+references/radxa-cm-projects/** binary
+references/radxa-cm-projects/SOURCE.md text diff eol=lf

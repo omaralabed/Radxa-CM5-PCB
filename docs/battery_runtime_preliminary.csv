@@ -1,0 +1,4 @@
+system_case,input_power_w,current_at_14_1v_a,ideal_runtime_99wh_min,planning_runtime_79_2wh_min,notes
+Typical operation,80.1,5.68,74.2,59.3,Planning runtime uses 80 percent of nameplate capacity
+Continuous design load,151.7,10.76,39.2,31.3,Preliminary full-feature backup-runtime target; load shedding required near cutoff
+All-load transient held continuously for comparison only,184.2,13.06,32.2,25.8,Not an acceptable sustained backup operating point; validate battery peak behavior near cutoff

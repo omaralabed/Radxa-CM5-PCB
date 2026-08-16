@@ -1,0 +1,137 @@
+ERC report (2026-08-15T22:25:59, Encoding UTF8)
+Report includes: Errors, Warnings
+
+***** Sheet /
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(39.37 mm, 275.59 mm): Label 'CPU_FAN_12V'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(39.37 mm, 278.13 mm): Label 'CPU_FAN_TACH'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(39.37 mm, 280.67 mm): Label 'CPU_FAN_PWM'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(64.77 mm, 142.24 mm): Label 'AUD_MCLK_P'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(64.77 mm, 147.32 mm): Label 'AUD_BCLK_P'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(64.77 mm, 149.86 mm): Label 'AUD_FSYNC_P'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(64.77 mm, 154.94 mm): Label 'AUD_DAC_SDIN_P'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(64.77 mm, 157.48 mm): Label 'AUD_ADC_SDOUT_P'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(64.77 mm, 162.56 mm): Label 'AUD_I2C_SCL'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(64.77 mm, 165.10 mm): Label 'AUD_ADC_RST_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(64.77 mm, 167.64 mm): Label 'AUD_DAC_MUTE_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(64.77 mm, 170.18 mm): Label 'AUDIO_PRESENT_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(64.77 mm, 175.26 mm): Label 'TDM_SPARE_1'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(77.47 mm, 142.24 mm): Label 'AUD_MCLK_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(77.47 mm, 147.32 mm): Label 'AUD_BCLK_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(77.47 mm, 149.86 mm): Label 'AUD_FSYNC_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(77.47 mm, 154.94 mm): Label 'AUD_DAC_SDIN_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(77.47 mm, 157.48 mm): Label 'AUD_ADC_SDOUT_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(77.47 mm, 162.56 mm): Label 'AUD_I2C_SDA'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(77.47 mm, 165.10 mm): Label 'AUD_DAC_RST_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(77.47 mm, 167.64 mm): Label 'AUD_IRQ_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(77.47 mm, 170.18 mm): Label 'AUDIO_ENABLE'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(77.47 mm, 175.26 mm): Label 'TDM_SPARE_2'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(110.49 mm, 275.59 mm): Label 'MODEM_FAN_12V'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(110.49 mm, 278.13 mm): Label 'MODEM_FAN_TACH'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(110.49 mm, 280.67 mm): Label 'MODEM_FAN_PWM'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(114.30 mm, 44.45 mm): Label 'CH_24V_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(114.30 mm, 46.99 mm): Label 'CH_BAT_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(114.30 mm, 49.53 mm): Label 'VALID_24V_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(114.30 mm, 52.07 mm): Label 'VALID_BAT_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(114.30 mm, 54.61 mm): Label 'BAT_LOW_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(114.30 mm, 57.15 mm): Label 'VALID_DTAP_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(114.30 mm, 59.69 mm): Label 'VALID_GOLD_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(180.34 mm, 275.59 mm): Label 'INTAKE_FAN_12V'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(180.34 mm, 278.13 mm): Label 'INTAKE_FAN_TACH'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(180.34 mm, 280.67 mm): Label 'INTAKE_FAN_PWM'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(194.31 mm, 49.53 mm): Label 'CTRL_I2C_SDA'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(194.31 mm, 52.07 mm): Label 'CTRL_I2C_SCL'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(194.31 mm, 54.61 mm): Label 'PWR_MON_ALERT_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(250.19 mm, 275.59 mm): Label 'EXHAUST_FAN_12V'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(250.19 mm, 278.13 mm): Label 'EXHAUST_FAN_TACH'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(250.19 mm, 280.67 mm): Label 'EXHAUST_FAN_PWM'
+
+ ** ERC messages: 42  Errors 0  Warnings 42
+
+ ** Ignored checks:
+    - Global label only appears once in the schematic
+    - Four connection points are joined together
+    - Assigned footprint doesn't match footprint filters

@@ -1,0 +1,92 @@
+ERC report (2026-08-15T22:35:05, Encoding UTF8)
+Report includes: Errors, Warnings
+
+***** Sheet /
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(104.14 mm, 381.00 mm): Label 'MODEM_3V8_PRE_PG'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(134.62 mm, 575.31 mm): Label 'MODEM_IMON'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(134.62 mm, 580.39 mm): Label 'MODEM_3V8_PG'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(175.26 mm, 570.23 mm): Label 'MODEM_POWER_EN'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(384.81 mm, 95.25 mm): Label 'SYS_SYNCOUT_TP'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(384.81 mm, 381.00 mm): Label 'WIFI_3V3_PRE_PG'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(410.21 mm, 577.85 mm): Label 'WIFI_POWER_EN'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(410.21 mm, 580.39 mm): Label 'WIFI_3V3_PG'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(425.45 mm, 97.79 mm): Label 'SYS_5V15_PG'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(549.91 mm, 612.14 mm): Label 'PCIE1V0_EN'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(549.91 mm, 617.22 mm): Label 'PCIE_1V0_PG'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(549.91 mm, 737.87 mm): Label 'HEADSET3V3_EN'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(549.91 mm, 742.95 mm): Label 'HEADSET_3V3_PG'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(664.21 mm, 381.00 mm): Label 'NET_3V3_PG'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(779.78 mm, 612.14 mm): Label 'LOGIC1V8_EN'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(779.78 mm, 617.22 mm): Label 'LOGIC_1V8_PG'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(779.78 mm, 737.87 mm): Label 'AUDIOPRE5V5_EN'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(779.78 mm, 742.95 mm): Label 'AUDIO_PRE_5V5_PG'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(844.55 mm, 106.68 mm): Label 'AUX_12V_PG'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(909.32 mm, 730.25 mm): Label 'AUDIO_P15V'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(909.32 mm, 732.79 mm): Label 'AUDIO_N15V'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(924.56 mm, 623.57 mm): Label 'DISPLAY_12V'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(944.88 mm, 381.00 mm): Label 'LOGIC_3V3_PG'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(975.36 mm, 623.57 mm): Label 'FAN_CPU_12V'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(1069.34 mm, 759.46 mm): Label 'HEADSET_POWER_EN'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(1074.42 mm, 623.57 mm): Label 'NIGHT_LIGHT_12V'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(1125.22 mm, 623.57 mm): Label 'FAN_AUX_12V'
+
+ ** ERC messages: 27  Errors 0  Warnings 27
+
+ ** Ignored checks:
+    - Global label only appears once in the schematic
+    - Four connection points are joined together
+    - Assigned footprint doesn't match footprint filters

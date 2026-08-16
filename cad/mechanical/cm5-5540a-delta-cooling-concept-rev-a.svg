@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1125" viewBox="0 0 480 300" role="img" aria-labelledby="title desc" style="background:#111418">
+  <title id="title">Radxa CM5 5540A and Delta FFB0412EN-00Y2E cooling concept</title>
+  <desc id="desc">Locked cooling architecture showing independent fan mounting, airflow plenum, Radxa 5540A heatsink, CM5, carrier PCB, vibration isolation, and electrical requirements.</desc>
+  <defs>
+    <pattern id="minorGrid" width="10" height="10" patternUnits="userSpaceOnUse">
+      <path d="M10 0H0V10" fill="none" stroke="#2b3138" stroke-width="0.22"/>
+    </pattern>
+    <pattern id="majorGrid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <rect width="50" height="50" fill="url(#minorGrid)"/>
+      <path d="M50 0H0V50" fill="none" stroke="#39414a" stroke-width="0.34"/>
+    </pattern>
+    <marker id="arrow" markerWidth="7" markerHeight="7" refX="3.5" refY="3.5" orient="auto-start-reverse">
+      <path d="M7 3.5L0 0V7Z" fill="#aab3bd"/>
+    </marker>
+    <marker id="airArrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0 0L8 4L0 8Z" fill="#68b8ff"/>
+    </marker>
+    <style>
+      .page{fill:#111418}.grid{fill:url(#majorGrid);opacity:.44}.frame{fill:#151b21;stroke:#56616c;stroke-width:.55}.panel{fill:#343e48;stroke:#eef2f5;stroke-width:1}.fan{fill:#17263d;stroke:#76a7f7;stroke-width:1}.sink{fill:#382f1e;stroke:#e4b95f;stroke-width:1}.cm5{fill:#173426;stroke:#69d391;stroke-width:1}.carrier{fill:#173036;stroke:#52c7d5;stroke-width:1}.rubber{fill:#21182a;stroke:#c493e8;stroke-width:.7}.gasket{fill:none;stroke:#c493e8;stroke-width:1;stroke-dasharray:3 2}.air{fill:none;stroke:#68b8ff;stroke-width:1.5;marker-end:url(#airArrow)}
+      .dim{fill:none;stroke:#aab3bd;stroke-width:.55;marker-start:url(#arrow);marker-end:url(#arrow)}.extension{stroke:#6f7983;stroke-width:.4}.leader{fill:none;stroke:#8c98a4;stroke-width:.45}.center{stroke:#697581;stroke-width:.35;stroke-dasharray:3 2}.keep{fill:#15243a;fill-opacity:.35;stroke:#76a7f7;stroke-width:.55;stroke-dasharray:3 2}.warning{fill:#3a211f;stroke:#f27767;stroke-width:.8}
+      .title{fill:#f6f8fa;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:8px;font-weight:750}.subtitle{fill:#aeb7c0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:3.2px}.section{fill:#eef2f5;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:4.4px;font-weight:750}.label{fill:#eef2f5;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:3.2px;font-weight:650;text-anchor:middle}.small{fill:#bac3cc;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:2.65px;text-anchor:middle}.note{fill:#aeb8c2;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:2.65px}.dimension{fill:#d0d7de;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:2.8px;text-anchor:middle;font-weight:600}.callout{fill:#f3f5f7;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:2.85px;font-weight:650}.blue{fill:#8ec1ff}.gold{fill:#e4b95f}.green{fill:#83df9f}.purple{fill:#d4a2ef}.red{fill:#ff8a7b}text{letter-spacing:0}
+    </style>
+  </defs>
+
+  <rect class="page" width="480" height="300"/>
+  <rect class="grid" x="14" y="42" width="452" height="226" rx="4"/>
+  <text class="title" x="18" y="19">RADXA CM5 PROCOMM - 5540A + DELTA CPU COOLING ASSEMBLY</text>
+  <text class="subtitle" x="18" y="29">REV A | LOCKED AIRFLOW ARCHITECTURE | DIMENSIONS IN MILLIMETERS | VERIFY ACTUAL PARTS BEFORE FABRICATION</text>
+
+  <!-- Top view -->
+  <rect class="frame" x="22" y="53" width="175" height="165" rx="3"/>
+  <text class="section" x="30" y="64">TOP VIEW - PANEL UNDERSIDE</text>
+  <text class="note" x="30" y="71">Fan is carried by the panel/support frame, not by the CM5.</text>
+
+  <rect class="keep" x="63" y="89" width="94" height="94" rx="4"/>
+  <rect class="sink" x="82.5" y="106" width="55" height="40" rx="2"/>
+  <rect class="fan" x="90" y="106" width="40" height="40" rx="2" fill-opacity=".82"/>
+  <circle cx="110" cy="126" r="15" fill="#101820" stroke="#8ec1ff" stroke-width=".7"/>
+  <circle cx="110" cy="126" r="3.3" fill="#526170" stroke="#8ec1ff" stroke-width=".5"/>
+  <path d="M110 123C105 113 95 113 96 121C97 127 104 128 110 126M113 126C123 121 122 112 115 113C109 114 109 121 110 126M110 129C115 139 124 137 122 130C120 124 114 125 110 126M107 126C97 131 99 140 106 137C112 135 112 130 110 126" fill="#47586a" stroke="#76a7f7" stroke-width=".45"/>
+
+  <circle class="rubber" cx="94" cy="110" r="2.8"/><circle class="rubber" cx="126" cy="110" r="2.8"/>
+  <circle class="rubber" cx="94" cy="142" r="2.8"/><circle class="rubber" cx="126" cy="142" r="2.8"/>
+  <line class="center" x1="110" y1="83" x2="110" y2="190"/><line class="center" x1="56" y1="126" x2="164" y2="126"/>
+
+  <line class="extension" x1="90" y1="101" x2="90" y2="94"/><line class="extension" x1="130" y1="101" x2="130" y2="94"/>
+  <line class="dim" x1="90" y1="96" x2="130" y2="96"/><text class="dimension" x="110" y="93">40.0 FAN</text>
+  <line class="extension" x1="82.5" y1="151" x2="82.5" y2="160"/><line class="extension" x1="137.5" y1="151" x2="137.5" y2="160"/>
+  <line class="dim" x1="82.5" y1="158" x2="137.5" y2="158"/><text class="dimension" x="110" y="165">55.0 HEATSINK</text>
+  <line class="extension" x1="135" y1="110" x2="146" y2="110"/><line class="extension" x1="135" y1="142" x2="146" y2="142"/>
+  <line class="dim" x1="144" y1="110" x2="144" y2="142"/><text class="dimension" x="150" y="126" transform="rotate(-90 150 126)">32.0 C-C*</text>
+
+  <path class="leader" d="M94 110L57 84H34"/><text class="callout purple" x="34" y="81">4× RUBBER ISOLATORS</text>
+  <text class="note" x="34" y="86">Fan mounting pattern; verify Delta drawing.</text>
+  <path class="leader" d="M138 126H169V86"/><text class="callout gold" x="160" y="80">5540A</text>
+  <text class="note" x="160" y="85">55 × 40 × 10</text>
+  <path class="leader" d="M130 137L173 172"/><text class="callout blue" x="144" y="179">DELTA 40 × 40 × 28</text>
+  <text class="note" x="144" y="184">51 g; independently supported</text>
+  <text class="note" x="31" y="205">* 32 mm fan-hole spacing is preliminary. Import the manufacturer STEP/drawing before release.</text>
+
+  <!-- Side cross-section -->
+  <rect class="frame" x="207" y="53" width="251" height="165" rx="3"/>
+  <text class="section" x="216" y="64">SIDE SECTION - AIRFLOW AND STACK</text>
+  <text class="note" x="216" y="71">Recommended arrangement when the case is open and operating.</text>
+
+  <!-- Panel and opening -->
+  <rect class="panel" x="225" y="83" width="215" height="3"/>
+  <rect x="304" y="82" width="36" height="5" fill="#111418" stroke="#68b8ff" stroke-width=".5"/>
+  <path d="M306 84.5H338M309 83.5V85.5M314 83.5V85.5M319 83.5V85.5M324 83.5V85.5M329 83.5V85.5M334 83.5V85.5" stroke="#8ec1ff" stroke-width=".5"/>
+  <text class="small" x="250" y="80">3 mm ALUMINUM TOP PANEL</text>
+  <text class="small blue" x="322" y="78">MESH / GUARD</text>
+
+  <!-- Fan support hardware -->
+  <rect class="rubber" x="296" y="86" width="5" height="8" rx="1"/><rect class="rubber" x="343" y="86" width="5" height="8" rx="1"/>
+  <rect class="fan" x="302" y="89" width="40" height="28" rx="1.5"/>
+  <rect x="307" y="93" width="30" height="20" rx="10" fill="#101820" stroke="#8ec1ff" stroke-width=".6"/>
+  <path d="M309 103H335M322 95V111" stroke="#526170" stroke-width=".7"/>
+  <text class="label" x="322" y="102">DELTA</text><text class="small" x="322" y="107">FFB0412EN-00Y2E</text>
+
+  <!-- Plenum and gasket -->
+  <path class="gasket" d="M299 117V127H345V117"/>
+  <text class="small purple" x="372" y="122">FOAM GASKET / SHORT SHROUD</text>
+  <path class="leader" d="M345 122H399"/>
+
+  <!-- Heatsink fins -->
+  <rect class="sink" x="294.5" y="127" width="55" height="10" rx="1"/>
+  <path d="M299 127V133M305 127V133M311 127V133M317 127V133M323 127V133M329 127V133M335 127V133M341 127V133M347 127V133" stroke="#f0c96f" stroke-width=".8"/>
+  <text class="label" x="322" y="136">RADXA 5540A</text>
+
+  <!-- Thermal interface, CM5 and carrier -->
+  <rect x="305" y="137" width="34" height="1.5" fill="#d89af0"/>
+  <rect class="cm5" x="294.5" y="138.5" width="55" height="3" rx=".5"/>
+  <rect x="300" y="141.5" width="5" height="5" fill="#466450" stroke="#69d391" stroke-width=".4"/>
+  <rect x="339" y="141.5" width="5" height="5" fill="#466450" stroke="#69d391" stroke-width=".4"/>
+  <rect class="carrier" x="278" y="146.5" width="88" height="2"/>
+  <line x1="297" y1="137" x2="297" y2="145" stroke="#d0d7de" stroke-width=".7"/><line x1="347" y1="137" x2="347" y2="145" stroke="#d0d7de" stroke-width=".7"/>
+  <text class="small green" x="385" y="141">RADXA CM5</text><path class="leader" d="M349.5 140H375"/>
+  <text class="small" x="385" y="148">CM5-CARRIER PCB</text><path class="leader" d="M366 147.5H375"/>
+  <text class="small purple" x="385" y="135">SUPPLIED THERMAL PAD</text><path class="leader" d="M339 137.7H375"/>
+
+  <!-- Airflow -->
+  <path class="air" d="M312 72V82"/><path class="air" d="M322 72V82"/><path class="air" d="M332 72V82"/>
+  <path class="air" d="M312 118V126"/><path class="air" d="M322 118V126"/><path class="air" d="M332 118V126"/>
+  <path class="air" d="M294 132C278 132 268 127 257 119"/><path class="air" d="M350 132C366 132 376 127 387 119"/>
+  <text class="callout blue" x="354" y="76">COOL AIR IN</text>
+  <text class="small blue" x="322" y="157">Air exits both sides and joins the enclosure intake-to-exhaust flow.</text>
+
+  <!-- Dimensions -->
+  <line class="extension" x1="349.5" y1="89" x2="358" y2="89"/><line class="extension" x1="349.5" y1="117" x2="358" y2="117"/>
+  <line class="dim" x1="356" y1="89" x2="356" y2="117"/><text class="dimension" x="362" y="103" transform="rotate(-90 362 103)">28 FAN</text>
+  <line class="extension" x1="287" y1="117" x2="287" y2="127"/><line class="dim" x1="287" y1="118" x2="287" y2="126"/>
+  <text class="dimension" x="280" y="122" transform="rotate(-90 280 122)">5-10 AIR GAP</text>
+  <line class="extension" x1="286" y1="127" x2="286" y2="137"/><line class="dim" x1="286" y1="128" x2="286" y2="136"/>
+  <text class="dimension" x="279" y="132" transform="rotate(-90 279 132)">10 SINK</text>
+  <line class="dim" x1="302" y1="166" x2="342" y2="166"/><text class="dimension" x="322" y="172">40 FAN WIDTH</text>
+  <line class="dim" x1="294.5" y1="180" x2="349.5" y2="180"/><text class="dimension" x="322" y="186">55 HEATSINK / CM5 LENGTH</text>
+
+  <!-- Mechanical rules -->
+  <rect class="warning" x="219" y="192" width="227" height="18" rx="2" fill-opacity=".45"/>
+  <text class="callout red" x="226" y="199">NO FAN LOAD ON HEATSINK OR CM5</text>
+  <text class="note" x="226" y="205">Support the fan from the panel/frame. The 5540A alone uses its supplied four M2 × 4 screws through the CM5.</text>
+
+  <!-- Power/control block -->
+  <rect class="frame" x="22" y="228" width="436" height="40" rx="3"/>
+  <text class="section" x="30" y="239">POWER AND CONTROL</text>
+  <rect class="warning" x="31" y="246" width="74" height="14" rx="1" fill-opacity=".35"/>
+  <text class="label" x="68" y="252">PROTECTED FAN_CPU_12V</text><text class="small" x="68" y="257">3 A design branch</text>
+  <path d="M105 253H128" fill="none" stroke="#f27767" stroke-width="1.2" marker-end="url(#airArrow)"/>
+  <rect class="fan" x="130" y="246" width="61" height="14" rx="1"/>
+  <text class="label" x="160.5" y="252">DELTA FAN</text><text class="small" x="160.5" y="257">12 V / 1.45 A nominal</text>
+  <path d="M191 253H218" fill="none" stroke="#76a7f7" stroke-width="1.2"/>
+  <rect class="frame" x="220" y="246" width="87" height="14" rx="1"/>
+  <text class="label" x="263.5" y="252">EMC2305 + DRIVER</text><text class="small" x="263.5" y="257">25 kHz PWM | tach feedback</text>
+  <path d="M307 253H332" fill="none" stroke="#76a7f7" stroke-width="1.2"/>
+  <rect class="cm5" x="334" y="246" width="106" height="14" rx="1"/>
+  <text class="label" x="387" y="252">THERMAL CONTROL</text><text class="small" x="387" y="257">Full-speed fail-safe; log RPM + CPU °C</text>
+
+  <text class="note" x="18" y="283">LOCKED ARCHITECTURE: panel-mounted Delta fan blows downward through a 5-10 mm plenum onto the CM5-mounted Radxa 5540A heatsink.</text>
+  <text class="note" x="18" y="290">GEOMETRY PRELIMINARY: import both STEP models and confirm fin orientation, mesh cutout, cable exit, fasteners, and clearances before fabrication.</text>
+  <text class="note" x="18" y="297">VALIDATION: sustained CPU/GPU/NPU load, loaded filters, fan failure, vibration, and hot-ambient tests are required before production release.</text>
+</svg>

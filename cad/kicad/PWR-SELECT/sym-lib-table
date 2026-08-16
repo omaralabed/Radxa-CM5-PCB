@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "PowerSelector")(type "KiCad")(uri "${KIPRJMOD}/PowerSelector.kicad_sym")(options "")(descr "ProComm 24 V / battery power selector symbols"))
+)

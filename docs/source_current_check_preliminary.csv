@@ -1,0 +1,5 @@
+source,nominal_voltage_v,typical_current_a,continuous_current_a,transient_current_a,check
+24 V PSU,24.0,3.34,6.32,7.68,Fits locked 10.5 A / 252 W RPS-400-24-C production PSU with margin
+D-Tap LEMO low end,13.0,6.16,11.67,14.17,Use 15 A LEMO 1B path; approve D-Tap cable only if source and wiring support measured load
+Gold Mount nominal,14.1,5.68,10.76,13.06,Continuous case fits a 12 A battery rating on paper; transient and thermal checks are still required
+Gold Mount high/full,16.8,4.77,9.03,10.96,Easier current case; still needs MOSFET/fuse review

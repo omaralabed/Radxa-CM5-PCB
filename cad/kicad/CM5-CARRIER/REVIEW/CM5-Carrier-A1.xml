@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>/Users/viewvision/Desktop/Radxa CM5 PCB/cad/kicad/CM5-CARRIER/CM5-Carrier.kicad_sch</source>
+    <date>2026-08-15T22:35:07</date>
+    <tool>Eeschema 10.0.5-rc1</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>Radxa CM5 ProComm Carrier - Interface Contract</title>
+        <company>ProComm</company>
+        <rev>A1</rev>
+        <date>2026-08-14</date>
+        <source>CM5-Carrier.kicad_sch</source>
+        <comment number="1" value="Interface overview; detailed A1 capture is maintained in the named standalone sheets"/>
+        <comment number="2" value="Fan 1 intake, fan 2 exhaust; independent PWM/tach channels"/>
+        <comment number="3" value="Program audio crosses a buffered differential TDM link"/>
+        <comment number="4" value="NOT A FABRICATION RELEASE"/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="J101">
+      <value>RAW_POWER_FROM_PWR_SELECT</value>
+      <footprint>Connector_Molex:Molex_Micro-Fit_3.0_43045-0412_2x02_P3.00mm_Vertical</footprint>
+      <fields>
+        <field name="Manufacturer">Molex</field>
+        <field name="MPN">43045-0412</field>
+        <field name="Footprint">Connector_Molex:Molex_Micro-Fit_3.0_43045-0412_2x02_P3.00mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_02x02_Odd_Even" description="Generic connector, double row, 02x02, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Manufacturer" value="Molex"/>
+      <property name="MPN" value="43045-0412"/>
+      <property name="Sheetname" value="CM5-Carrier"/>
+      <property name="Sheetfile" value="CM5-Carrier.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_2x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7a2031be-c7db-4dfc-96c4-5a9941826d92</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="2"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J102">
+      <value>PWR_STATUS_FROM_SELECTOR</value>
+      <footprint>Connector_Molex:Molex_PicoBlade_53047-0810_1x08_P1.25mm_Vertical</footprint>
+      <fields>
+        <field name="Manufacturer">Molex</field>
+        <field name="MPN">53047-0810</field>
+        <field name="Footprint">Connector_Molex:Molex_PicoBlade_53047-0810_1x08_P1.25mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x08" description="Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Manufacturer" value="Molex"/>
+      <property name="MPN" value="53047-0810"/>
+      <property name="Sheetname" value="CM5-Carrier"/>
+      <property name="Sheetfile" value="CM5-Carrier.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>738fdedc-5d93-49ea-a28b-d8648e5da7c6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J103">
+      <value>PWR_TELEMETRY_FROM_SELECTOR</value>
+      <footprint>Connector_Molex:Molex_PicoBlade_53047-0610_1x06_P1.25mm_Vertical</footprint>
+      <fields>
+        <field name="Manufacturer">Molex</field>
+        <field name="MPN">53047-0610</field>
+        <field name="Footprint">Connector_Molex:Molex_PicoBlade_53047-0610_1x06_P1.25mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x06" description="Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Manufacturer" value="Molex"/>
+      <property name="MPN" value="53047-0610"/>
+      <property name="Sheetname" value="CM5-Carrier"/>
+      <property name="Sheetfile" value="CM5-Carrier.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>56bb8e0d-0989-46c0-a5c4-22f7f0ded1b4</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J201">
+      <value>AUDIO_TDM_CONTROL</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_02x15_Odd_Even" description="Generic connector, double row, 02x15, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="CM5-Carrier"/>
+      <property name="Sheetfile" value="CM5-Carrier.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_2x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>44db99c3-84ae-417c-b467-d58f98417e0b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="5"/>
+            <pin num="7"/>
+            <pin num="9"/>
+            <pin num="11"/>
+            <pin num="13"/>
+            <pin num="15"/>
+            <pin num="17"/>
+            <pin num="19"/>
+            <pin num="21"/>
+            <pin num="23"/>
+            <pin num="25"/>
+            <pin num="27"/>
+            <pin num="29"/>
+            <pin num="2"/>
+            <pin num="4"/>
+            <pin num="6"/>
+            <pin num="8"/>
+            <pin num="10"/>
+            <pin num="12"/>
+            <pin num="14"/>
+            <pin num="16"/>
+            <pin num="18"/>
+            <pin num="20"/>
+            <pin num="22"/>
+            <pin num="24"/>
+            <pin num="26"/>
+            <pin num="28"/>
+            <pin num="30"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J202">
+      <value>AUDIO_12V_POWER</value>
+      <footprint>Connector_Molex:Molex_Micro-Fit_3.0_43045-0412_2x02_P3.00mm_Vertical</footprint>
+      <fields>
+        <field name="Manufacturer">Molex</field>
+        <field name="MPN">43045-0412</field>
+        <field name="Footprint">Connector_Molex:Molex_Micro-Fit_3.0_43045-0412_2x02_P3.00mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_02x02_Odd_Even" description="Generic connector, double row, 02x02, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Manufacturer" value="Molex"/>
+      <property name="MPN" value="43045-0412"/>
+      <property name="Sheetname" value="CM5-Carrier"/>
+      <property name="Sheetfile" value="CM5-Carrier.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_2x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6f93cd2f-c76c-4fc8-9b74-295a12e70c8a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="2"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J401">
+      <value>CPU_FAN</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="CM5-Carrier"/>
+      <property name="Sheetfile" value="CM5-Carrier.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>94234d55-979e-4fd3-a205-5c0bcf9b223e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J402">
+      <value>MODEM_FAN</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="CM5-Carrier"/>
+      <property name="Sheetfile" value="CM5-Carrier.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a8732380-d419-4c7b-bb11-d51e06e25cf8</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J403">
+      <value>THA0412AD-TZW3_INTAKE</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="CM5-Carrier"/>
+      <property name="Sheetfile" value="CM5-Carrier.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>969adc93-84bd-4e4d-a863-d6944089c0c9</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J404">
+      <value>THA0412AD-TZW3_EXHAUST</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="CM5-Carrier"/>
+      <property name="Sheetfile" value="CM5-Carrier.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a0ee3907-1a68-46b5-b623-48785e195a60</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Connector_Generic" part="Conn_01x04">
+      <description>Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x04</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x06">
+      <description>Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x06</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x08">
+      <description>Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x08</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+        <pin num="7" name="Pin_7" type="passive"/>
+        <pin num="8" name="Pin_8" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_02x02_Odd_Even">
+      <description>Generic connector, double row, 02x02, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <footprints>
+        <fp>Connector*:*_2x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_02x02_Odd_Even</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, double row, 02x02, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_02x15_Odd_Even">
+      <description>Generic connector, double row, 02x15, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <footprints>
+        <fp>Connector*:*_2x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_02x15_Odd_Even</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, double row, 02x15, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+        <pin num="7" name="Pin_7" type="passive"/>
+        <pin num="8" name="Pin_8" type="passive"/>
+        <pin num="9" name="Pin_9" type="passive"/>
+        <pin num="10" name="Pin_10" type="passive"/>
+        <pin num="11" name="Pin_11" type="passive"/>
+        <pin num="12" name="Pin_12" type="passive"/>
+        <pin num="13" name="Pin_13" type="passive"/>
+        <pin num="14" name="Pin_14" type="passive"/>
+        <pin num="15" name="Pin_15" type="passive"/>
+        <pin num="16" name="Pin_16" type="passive"/>
+        <pin num="17" name="Pin_17" type="passive"/>
+        <pin num="18" name="Pin_18" type="passive"/>
+        <pin num="19" name="Pin_19" type="passive"/>
+        <pin num="20" name="Pin_20" type="passive"/>
+        <pin num="21" name="Pin_21" type="passive"/>
+        <pin num="22" name="Pin_22" type="passive"/>
+        <pin num="23" name="Pin_23" type="passive"/>
+        <pin num="24" name="Pin_24" type="passive"/>
+        <pin num="25" name="Pin_25" type="passive"/>
+        <pin num="26" name="Pin_26" type="passive"/>
+        <pin num="27" name="Pin_27" type="passive"/>
+        <pin num="28" name="Pin_28" type="passive"/>
+        <pin num="29" name="Pin_29" type="passive"/>
+        <pin num="30" name="Pin_30" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector_Generic">
+      <uri>${KICAD10_SYMBOL_DIR}/Connector_Generic.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/AUDIO_12V" class="Default">
+      <node ref="J202" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="J202" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+    </net>
+    <net code="2" name="/AUDIO_ENABLE" class="Default">
+      <node ref="J201" pin="24" pinfunction="Pin_24_24" pintype="passive"/>
+    </net>
+    <net code="3" name="/AUDIO_PRESENT_N" class="Default">
+      <node ref="J201" pin="23" pinfunction="Pin_23_23" pintype="passive"/>
+    </net>
+    <net code="4" name="/AUD_ADC_RST_N" class="Default">
+      <node ref="J201" pin="19" pinfunction="Pin_19_19" pintype="passive"/>
+    </net>
+    <net code="5" name="/AUD_ADC_SDOUT_N" class="Default">
+      <node ref="J201" pin="14" pinfunction="Pin_14_14" pintype="passive"/>
+    </net>
+    <net code="6" name="/AUD_ADC_SDOUT_P" class="Default">
+      <node ref="J201" pin="13" pinfunction="Pin_13_13" pintype="passive"/>
+    </net>
+    <net code="7" name="/AUD_BCLK_N" class="Default">
+      <node ref="J201" pin="6" pinfunction="Pin_6_6" pintype="passive"/>
+    </net>
+    <net code="8" name="/AUD_BCLK_P" class="Default">
+      <node ref="J201" pin="5" pinfunction="Pin_5_5" pintype="passive"/>
+    </net>
+    <net code="9" name="/AUD_DAC_MUTE_N" class="Default">
+      <node ref="J201" pin="21" pinfunction="Pin_21_21" pintype="passive"/>
+    </net>
+    <net code="10" name="/AUD_DAC_RST_N" class="Default">
+      <node ref="J201" pin="20" pinfunction="Pin_20_20" pintype="passive"/>
+    </net>
+    <net code="11" name="/AUD_DAC_SDIN_N" class="Default">
+      <node ref="J201" pin="12" pinfunction="Pin_12_12" pintype="passive"/>
+    </net>
+    <net code="12" name="/AUD_DAC_SDIN_P" class="Default">
+      <node ref="J201" pin="11" pinfunction="Pin_11_11" pintype="passive"/>
+    </net>
+    <net code="13" name="/AUD_FSYNC_N" class="Default">
+      <node ref="J201" pin="8" pinfunction="Pin_8_8" pintype="passive"/>
+    </net>
+    <net code="14" name="/AUD_FSYNC_P" class="Default">
+      <node ref="J201" pin="7" pinfunction="Pin_7_7" pintype="passive"/>
+    </net>
+    <net code="15" name="/AUD_I2C_SCL" class="Default">
+      <node ref="J201" pin="17" pinfunction="Pin_17_17" pintype="passive"/>
+    </net>
+    <net code="16" name="/AUD_I2C_SDA" class="Default">
+      <node ref="J201" pin="18" pinfunction="Pin_18_18" pintype="passive"/>
+    </net>
+    <net code="17" name="/AUD_IRQ_N" class="Default">
+      <node ref="J201" pin="22" pinfunction="Pin_22_22" pintype="passive"/>
+    </net>
+    <net code="18" name="/AUD_MCLK_N" class="Default">
+      <node ref="J201" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+    </net>
+    <net code="19" name="/AUD_MCLK_P" class="Default">
+      <node ref="J201" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+    </net>
+    <net code="20" name="/BAT_LOW_N" class="Default">
+      <node ref="J102" pin="6" pinfunction="Pin_6_6" pintype="passive"/>
+    </net>
+    <net code="21" name="/CH_24V_N" class="Default">
+      <node ref="J102" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+    </net>
+    <net code="22" name="/CH_BAT_N" class="Default">
+      <node ref="J102" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+    </net>
+    <net code="23" name="/CPU_FAN_12V" class="Default">
+      <node ref="J401" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+    </net>
+    <net code="24" name="/CPU_FAN_PWM" class="Default">
+      <node ref="J401" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+    </net>
+    <net code="25" name="/CPU_FAN_TACH" class="Default">
+      <node ref="J401" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+    </net>
+    <net code="26" name="/CTRL_I2C_SCL" class="Default">
+      <node ref="J103" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+    </net>
+    <net code="27" name="/CTRL_I2C_SDA" class="Default">
+      <node ref="J103" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+    </net>
+    <net code="28" name="/EXHAUST_FAN_12V" class="Default">
+      <node ref="J404" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+    </net>
+    <net code="29" name="/EXHAUST_FAN_PWM" class="Default">
+      <node ref="J404" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+    </net>
+    <net code="30" name="/EXHAUST_FAN_TACH" class="Default">
+      <node ref="J404" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+    </net>
+    <net code="31" name="/GND" class="Default">
+      <node ref="J101" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="J101" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+      <node ref="J102" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="J103" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="J103" pin="6" pinfunction="Pin_6_6" pintype="passive"/>
+      <node ref="J201" pin="10" pinfunction="Pin_10_10" pintype="passive"/>
+      <node ref="J201" pin="15" pinfunction="Pin_15_15" pintype="passive"/>
+      <node ref="J201" pin="16" pinfunction="Pin_16_16" pintype="passive"/>
+      <node ref="J201" pin="26" pinfunction="Pin_26_26" pintype="passive"/>
+      <node ref="J201" pin="29" pinfunction="Pin_29_29" pintype="passive"/>
+      <node ref="J201" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="J201" pin="30" pinfunction="Pin_30_30" pintype="passive"/>
+      <node ref="J201" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+      <node ref="J201" pin="9" pinfunction="Pin_9_9" pintype="passive"/>
+      <node ref="J202" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="J202" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+      <node ref="J401" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="J402" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="J403" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="J404" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+    </net>
+    <net code="32" name="/INTAKE_FAN_12V" class="Default">
+      <node ref="J403" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+    </net>
+    <net code="33" name="/INTAKE_FAN_PWM" class="Default">
+      <node ref="J403" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+    </net>
+    <net code="34" name="/INTAKE_FAN_TACH" class="Default">
+      <node ref="J403" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+    </net>
+    <net code="35" name="/LOGIC_3V3" class="Default">
+      <node ref="J103" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="J201" pin="25" pinfunction="Pin_25_25" pintype="passive"/>
+    </net>
+    <net code="36" name="/MODEM_FAN_12V" class="Default">
+      <node ref="J402" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+    </net>
+    <net code="37" name="/MODEM_FAN_PWM" class="Default">
+      <node ref="J402" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+    </net>
+    <net code="38" name="/MODEM_FAN_TACH" class="Default">
+      <node ref="J402" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+    </net>
+    <net code="39" name="/PWR_MON_ALERT_N" class="Default">
+      <node ref="J103" pin="5" pinfunction="Pin_5_5" pintype="passive"/>
+    </net>
+    <net code="40" name="/RAW_OUT_LOAD" class="Default">
+      <node ref="J101" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="J101" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+    </net>
+    <net code="41" name="/TDM_SPARE_1" class="Default">
+      <node ref="J201" pin="27" pinfunction="Pin_27_27" pintype="passive"/>
+    </net>
+    <net code="42" name="/TDM_SPARE_2" class="Default">
+      <node ref="J201" pin="28" pinfunction="Pin_28_28" pintype="passive"/>
+    </net>
+    <net code="43" name="/VALID_24V_N" class="Default">
+      <node ref="J102" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+    </net>
+    <net code="44" name="/VALID_BAT_N" class="Default">
+      <node ref="J102" pin="5" pinfunction="Pin_5_5" pintype="passive"/>
+    </net>
+    <net code="45" name="/VALID_DTAP_N" class="Default">
+      <node ref="J102" pin="7" pinfunction="Pin_7_7" pintype="passive"/>
+    </net>
+    <net code="46" name="/VALID_GOLD_N" class="Default">
+      <node ref="J102" pin="8" pinfunction="Pin_8_8" pintype="passive"/>
+    </net>
+  </nets>
+</export>

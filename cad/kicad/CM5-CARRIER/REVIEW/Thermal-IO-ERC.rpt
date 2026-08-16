@@ -1,0 +1,59 @@
+ERC report (2026-08-15T22:26:01, Encoding UTF8)
+Report includes: Errors, Warnings
+
+***** Sheet /
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(372.11 mm, 100.33 mm): Label 'U1001_INT_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(407.67 mm, 95.25 mm): Label 'CH_24V_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(407.67 mm, 97.79 mm): Label 'CH_BAT_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(407.67 mm, 100.33 mm): Label 'VALID_24V_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(407.67 mm, 102.87 mm): Label 'VALID_BAT_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(407.67 mm, 105.41 mm): Label 'BAT_LOW_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(407.67 mm, 133.35 mm): Label 'AUDIO_PRESENT_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(407.67 mm, 135.89 mm): Label 'AUD_IRQ_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(607.06 mm, 100.33 mm): Label 'U1002_INT_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(642.62 mm, 97.79 mm): Label 'AUD_ADC_RST_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(642.62 mm, 100.33 mm): Label 'AUD_DAC_RST_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(642.62 mm, 105.41 mm): Label 'HEADSET_POWER_EN'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(642.62 mm, 107.95 mm): Label 'HEADSET_AMP_EN'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(642.62 mm, 120.65 mm): Label 'MODEM_SIM_MUX_SEL_OD'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(642.62 mm, 133.35 mm): Label 'MODEM_WAKE_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(642.62 mm, 135.89 mm): Label 'MODEM_STATUS_LED_N'
+
+ ** ERC messages: 16  Errors 0  Warnings 16
+
+ ** Ignored checks:
+    - Global label only appears once in the schematic
+    - Four connection points are joined together
+    - Assigned footprint doesn't match footprint filters

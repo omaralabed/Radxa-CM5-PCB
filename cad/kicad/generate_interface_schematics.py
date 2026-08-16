@@ -1,0 +1,2903 @@
+#!/usr/bin/env python3
+"""Generate native KiCad interface-contract schematics for CM5-CARRIER and AUDIO-8X8."""
+
+from __future__ import annotations
+
+import json
+from pathlib import Path
+import shutil
+
+from kicad_sch_api import create_schematic, get_symbol_cache
+from openpyxl import load_workbook
+
+
+ROOT = Path(__file__).resolve().parent
+WORKSPACE = ROOT.parent.parent
+CM5_PINOUT = WORKSPACE / "docs" / "radxa_cm5_v2210_pinout.xlsx"
+CM5_LOCAL_LIBRARY = ROOT / "CM5-CARRIER" / "CM5Carrier.kicad_sym"
+CM5_WURTH_LIBRARY = ROOT / "CM5-CARRIER" / "WurthRJ45.kicad_sym"
+CM5_LOCAL_FOOTPRINTS = ROOT / "CM5-CARRIER" / "CM5Carrier.pretty"
+CM5_LOCAL_3DMODELS = ROOT / "CM5-CARRIER" / "CM5Carrier.3dshapes"
+COMPONENT_REFERENCES = WORKSPACE / "references" / "components"
+WURTH_74991114412 = COMPONENT_REFERENCES / "wurth" / "74991114412"
+LEGACY_CELLULAR_FOOTPRINTS = (
+    WORKSPACE.parent / "ProComm enclosure and PCB boards" /
+    "ADVANCED_SCHEMATIC_WORK" / "ProComm_RevF.pretty"
+)
+KICAD_TEMPLATE = Path(
+    "/Applications/KiCad/KiCad.app/Contents/SharedSupport/template/"
+    "EuroCard160mmX100mm/EuroCard160mmX100mm.kicad_pro"
+)
+
+MF_2X2 = "Connector_Molex:Molex_Micro-Fit_3.0_43045-0412_2x02_P3.00mm_Vertical"
+PICO_6 = "Connector_Molex:Molex_PicoBlade_53047-0610_1x06_P1.25mm_Vertical"
+PICO_8 = "Connector_Molex:Molex_PicoBlade_53047-0810_1x08_P1.25mm_Vertical"
+CM5_DF40_FOOTPRINT = (
+    "Connector_Hirose_DF40:"
+    "Hirose_DF40C-100DS-0.4V_2x50_P0.4mm"
+)
+
+
+# This is the controlled allocation from the A0 pin audit.  Physical signal
+# names for all 300 connector contacts come directly from the official V2.21
+# workbook; only these 76 contacts receive product nets in Rev A.
+CM5_ALLOCATIONS = (
+    ("U13-A", 77, "Input", "SYS_5V15"),
+    ("U13-A", 79, "Input", "SYS_5V15"),
+    ("U13-A", 81, "Input", "SYS_5V15"),
+    ("U13-A", 83, "Input", "SYS_5V15"),
+    ("U13-A", 85, "Input", "SYS_5V15"),
+    ("U13-A", 87, "Input", "SYS_5V15"),
+    ("U13-A", 78, "Input", "LOGIC_3V3"),
+    ("U13-B", 106, "Input", "HDMI_5V_OPTION"),
+    ("U13-A", 92, "Input", "CM5_RESET_N"),
+    ("U13-A", 93, "Input", "CM5_BOOT"),
+    ("U13-A", 99, "Input", "CM5_PWRON_N"),
+    ("J1", 26, "Input", "CM5_RECOVERY_KEY"),
+    ("U13-A", 3, "Bidirectional", "WAN1_MDI3_P"),
+    ("U13-A", 5, "Bidirectional", "WAN1_MDI3_N"),
+    ("U13-A", 4, "Bidirectional", "WAN1_MDI1_P"),
+    ("U13-A", 6, "Bidirectional", "WAN1_MDI1_N"),
+    ("U13-A", 11, "Bidirectional", "WAN1_MDI2_P"),
+    ("U13-A", 9, "Bidirectional", "WAN1_MDI2_N"),
+    ("U13-A", 12, "Bidirectional", "WAN1_MDI0_P"),
+    ("U13-A", 10, "Bidirectional", "WAN1_MDI0_N"),
+    ("U13-A", 15, "Output", "WAN1_LED2"),
+    ("U13-A", 17, "Output", "WAN1_LED1"),
+    ("U13-A", 19, "Output", "WAN1_LED0"),
+    ("U13-A", 24, "Input", "PCIE_UP_WAKE_N"),
+    ("U13-B", 102, "Input", "PCIE_UP_CLKREQ_N"),
+    ("U13-B", 109, "Output", "PCIE_UP_PERST_N"),
+    ("U13-B", 110, "Output", "PCIE_UP_REFCLK_P"),
+    ("U13-B", 112, "Output", "PCIE_UP_REFCLK_N"),
+    ("U13-B", 116, "Input", "PCIE_UP_RX_P_CM5"),
+    ("U13-B", 118, "Input", "PCIE_UP_RX_N_CM5"),
+    ("U13-B", 122, "Output", "PCIE_UP_TX_P_CM5"),
+    ("U13-B", 124, "Output", "PCIE_UP_TX_N_CM5"),
+    ("J1", 51, "Output", "WWAN_USB3_TX_P"),
+    ("J1", 53, "Output", "WWAN_USB3_TX_N"),
+    ("J1", 57, "Input", "WWAN_USB3_RX_P"),
+    ("J1", 59, "Input", "WWAN_USB3_RX_N"),
+    ("J1", 63, "Bidirectional", "WWAN_USB2_DP"),
+    ("J1", 65, "Bidirectional", "WWAN_USB2_DM"),
+    ("J1", 45, "Bidirectional", "TOUCH_USB_DP"),
+    ("J1", 47, "Bidirectional", "TOUCH_USB_DM"),
+    ("U13-B", 101, "Input", "REC_USB_ID"),
+    ("U13-B", 103, "Bidirectional", "REC_USB_DM"),
+    ("U13-B", 105, "Bidirectional", "REC_USB_DP"),
+    ("J1", 97, "Input", "REC_USB_VBUS_DET"),
+    ("U13-B", 170, "Output", "HDMI_D2_P"),
+    ("U13-B", 172, "Output", "HDMI_D2_N"),
+    ("U13-B", 176, "Output", "HDMI_D1_P"),
+    ("U13-B", 178, "Output", "HDMI_D1_N"),
+    ("U13-B", 182, "Output", "HDMI_D0_P"),
+    ("U13-B", 184, "Output", "HDMI_D0_N"),
+    ("U13-B", 188, "Output", "HDMI_CLK_P"),
+    ("U13-B", 190, "Output", "HDMI_CLK_N"),
+    ("U13-B", 151, "Bidirectional", "HDMI_CEC"),
+    ("U13-B", 153, "Input", "HDMI_HPD"),
+    ("U13-B", 199, "Bidirectional", "HDMI_DDC_SDA"),
+    ("U13-B", 200, "Bidirectional", "HDMI_DDC_SCL"),
+    ("U13-B", 145, "Bidirectional", "HDMI_HEAC_P"),
+    ("U13-B", 147, "Bidirectional", "HDMI_HEAC_N"),
+    ("U13-A", 34, "Output", "AUD_DAC_SDIN"),
+    ("U13-A", 46, "Output", "AUD_BCLK"),
+    ("U13-A", 48, "Output", "AUD_FSYNC"),
+    ("U13-A", 50, "Output", "AUD_MCLK"),
+    ("U13-A", 54, "Input", "AUD_ADC_SDOUT"),
+    ("U13-A", 80, "Bidirectional", "SYS_I2C7_SCL"),
+    ("U13-A", 82, "Bidirectional", "SYS_I2C7_SDA"),
+    ("U13-A", 20, "Input", "AUD_IRQ_N"),
+    ("U13-A", 100, "Output", "HS_MCLK"),
+    ("U13-A", 28, "Output", "HS_BCLK"),
+    ("U13-A", 30, "Output", "HS_LRCK"),
+    ("U13-A", 31, "Output", "HS_SDOUT_TO_CODEC"),
+    ("J1", 40, "Input", "HS_SDIN_FROM_CODEC"),
+    ("J1", 4, "Bidirectional", "HS_I2C_SDA"),
+    ("J1", 6, "Bidirectional", "HS_I2C_SCL"),
+    ("J1", 36, "Input", "HS_JACK_DET_N"),
+    ("U13-A", 51, "Input", "DBG_UART_RX"),
+    ("U13-A", 55, "Output", "DBG_UART_TX"),
+)
+
+LAN7430_PINS = (
+    (1, "AVDDH_1"), (2, "TXRXP_A"), (3, "TXRXM_A"), (4, "AVDDL_1"),
+    (5, "TXRXP_B"), (6, "TXRXM_B"), (7, "TXRXP_C"), (8, "TXRXM_C"),
+    (9, "AVDDL_2"), (10, "TXRXP_D"), (11, "TXRXM_D"), (12, "AVDDH_2"),
+    (13, "VDD12CORE"), (14, "VP"), (15, "GD_1"), (16, "PCIE_RX_P"),
+    (17, "PCIE_RX_M"), (18, "GD_2"), (19, "PCIE_TX_P"), (20, "VPTX"),
+    (21, "PCIE_TX_M"), (22, "GD_3"), (23, "VPH"), (24, "RESREF"),
+    (25, "PCIE_CLK_P"), (26, "PCIE_CLK_M"), (27, "VDD25_REG_OUT"),
+    (28, "VDD_REG_IN"), (29, "RESET_N"), (30, "TEST"), (31, "VDD12CORE"),
+    (32, "VDD12_SW_OUT"), (33, "VDD_SW_IN"), (34, "VDD12_SW_FB"),
+    (35, "VAUX_DET/GPIO3/LED3/TCK"),
+    (36, "EECLK/GPIO2/LED2/TMS/ADV_PM_DISABLE"),
+    (37, "EEDIO/GPIO1/LED1/TDO"), (38, "EECS/GPIO0/LED0/TDI"),
+    (39, "VDDVARIO"), (40, "VDD12CORE"), (41, "VDD_OTP"),
+    (42, "CLKREQ#"), (43, "WAKE#"), (44, "PERST#"), (45, "AVDD12"),
+    (46, "XO"), (47, "XI"), (48, "ISET"), (49, "VSS_EP"),
+)
+
+PI7_BALL_ROWS = {
+    "A": ("CLKREQ_L[5]", "CLKREQ_L[4]", "PERP[7]", "PETP[7]", "PERP[6]", "PETP[6]", "REFCLKN[1]", "REXT[1]", "PETP[5]", "PERP[5]", "PETP[4]", "PERP[4]", "SHCL_I2C", "LNKSTS[4]"),
+    "B": ("LNKSTS[2]", "CLKREQ_L[6]", "PERN[7]", "PETN[7]", "PERN[6]", "PETN[6]", "REFCLKP[1]", "REXT_GND[1]", "PETN[5]", "PERN[5]", "PETN[4]", "PERN[4]", "SHDA_I2C", "LNKSTS[3]/LNKSTS_DIS"),
+    "C": ("NC", "LNKSTS[5]", "NC", "NC", "AGND", "AGND", "NC", "AVDDH", "AGND", "AGND", "AGND", "PERST_L", "CLKREQ_L[3]", "SHPCINT_L"),
+    "D": ("GPIO[1]", "GPIO[0]", "NC", "VDDR", "VDDC", "VDDC", "AVDD", "AVDD", "VDDC", "VDDC", "VDDR", "CLKREQ_L[2]", "REFCLKOP[1]", "REFCLKON[1]"),
+    "E": ("GPIO[4]", "GPIO[3]", "GPIO[2]", "VDDC", "DGND", "DGND", "DGND", "DGND", "DGND", "DGND", "VDDC", "IREF", "REFCLKOP[2]", "REFCLKON[2]"),
+    "F": ("UPS_PORTSEL[1]/DBO[4]", "GPIO[5]", "UPS_PORTSEL[0]/DBO[3]", "NC", "DGND", "DGND", "DGND", "DGND", "DGND", "DGND", "CLKREQ_L[1]", "SDA_I2C", "REFCLKOP[3]", "REFCLKON[3]"),
+    "G": ("NC", "UPS_PORTSEL[3]", "AVDDH", "VDDC", "DGND", "DGND", "DGND", "DGND", "DGND", "DGND", "VDDC", "CVDDR", "REFCLKIP", "REFCLKIN"),
+    "H": ("NC", "UPS_PORTSEL[2]", "AGND", "VDDC", "DGND", "DGND", "DGND", "DGND", "DGND", "DGND", "VDDC", "CVDDR", "REFCLKOP[4]", "REFCLKON[4]"),
+    "J": ("GPIO[7]", "RXPOLINV_DIS", "DBO[1]", "GPIO[6]", "DGND", "DGND", "DGND", "DGND", "DGND", "DGND", "SCL_I2C", "SWG_LVL", "REFCLKOP[5]", "REFCLKON[5]"),
+    "K": ("NC", "NC", "DBO[2]", "VDDC", "DGND", "DGND", "DGND", "DGND", "DGND", "DGND", "VDDC", "EEDO", "REFCLKOP[6]", "REFCLKON[6]"),
+    "L": ("SMBUS_EN_L", "CLKBUF_PD", "NC", "VDDR", "VDDC", "VDDC", "AVDD", "AVDD", "VDDC", "VDDC", "VDDR", "EECK", "REFCLKOP[7]", "REFCLKON[7]"),
+    "M": ("NC", "DWNRST_L[1]", "DWNRST_L[4]", "DWNRST_L[5]", "AGND", "AGND", "AVDDH", "NC", "AGND", "AGND", "AGND", "EECS_L", "LNKSTS[1]/DBG_DIS", "EEDI"),
+    "N": ("PL_512B/DBO[0]", "DWNRST_L[2]", "PERN[0]", "PETN[0]", "PERN[1]", "PETN[1]", "REXT_GND[0]", "REFCLKP[0]", "PETN[2]", "PERN[2]", "PETN[3]", "PERN[3]", "VC1_EN", "NC"),
+    "P": ("NC", "DWNRST_L[3]", "PERP[0]", "PETP[0]", "PERP[1]", "PETP[1]", "REXT[0]", "REFCLKN[0]", "PETP[2]", "PERP[2]", "PETP[3]", "PERP[3]", "PWR_SAV_DIS", "TEST/LNKSTS[0]"),
+}
+
+
+def allocation_map() -> dict[tuple[str, int], tuple[str, str]]:
+    return {(connector, pin): (direction, net) for connector, pin, direction, net in CM5_ALLOCATIONS}
+
+
+def load_cm5_pinout() -> dict[str, list[tuple[int, str]]]:
+    workbook = load_workbook(CM5_PINOUT, data_only=True, read_only=True)
+    signal_columns = {"U13-A": 5, "U13-B": 3, "J1": 2}
+    pinout: dict[str, list[tuple[int, str]]] = {}
+    for connector, signal_column in signal_columns.items():
+        sheet = workbook[connector]
+        rows = []
+        for row in sheet.iter_rows(min_row=3, max_row=102, values_only=True):
+            pin = int(row[0])
+            signal = str(row[signal_column - 1] or "NC")
+            rows.append((pin, signal))
+        if len(rows) != 100:
+            raise RuntimeError(f"{connector} source has {len(rows)} pins, expected 100")
+        pinout[connector] = rows
+    return pinout
+
+
+def _escape_symbol_text(value: str) -> str:
+    return value.replace("\\", "\\\\").replace('"', '\\"')
+
+
+def write_cm5_local_library() -> dict[str, list[tuple[int, str]]]:
+    """Build exact 100-contact CM5 mating symbols from Radxa's V2.21 pinout."""
+    pinout = load_cm5_pinout()
+    lines = ["(kicad_symbol_lib (version 20231120) (generator procomm_cm5_generator)"]
+    for connector, pins in pinout.items():
+        symbol_name = f"Radxa_CM5_{connector.replace('-', '_')}"
+        start_pin = pins[0][0]
+        lines.extend(
+            [
+                f'  (symbol "{symbol_name}" (pin_names (offset 0.9)) (in_bom yes) (on_board yes)',
+                '    (property "Reference" "J" (at -25.4 67.31 0) (effects (font (size 1.27 1.27)) (justify left)))',
+                f'    (property "Value" "RADXA CM5 {connector} MATE" (at -25.4 64.77 0) (effects (font (size 1.27 1.27)) (justify left)))',
+                f'    (property "Footprint" "{CM5_DF40_FOOTPRINT}" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))',
+                '    (property "Datasheet" "https://dl.radxa.com/cm5/v2210/radxa_cm5_v2210_pinout.xlsx" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))',
+                f'    (property "Description" "Radxa CM5 {connector}, all 100 physical contacts" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))',
+                f'    (symbol "{symbol_name}_0_1"',
+                '      (rectangle (start -25.4 63.5) (end 25.4 -63.5) (stroke (width 0.254) (type default)) (fill (type background)))',
+                "    )",
+                f'    (symbol "{symbol_name}_1_1"',
+            ]
+        )
+        for pin, signal in pins:
+            row = (pin - start_pin) // 2
+            y = 62.23 - row * 2.54
+            is_left = pin % 2 == 1
+            x = -27.94 if is_left else 27.94
+            orientation = 0 if is_left else 180
+            # These are physical carrier-side connector contacts.  Keep them
+            # passive for ERC; direction at the CM5 is controlled separately
+            # in CM5_ALLOCATIONS and the allocation workbook.
+            pin_type = "passive"
+            escaped = _escape_symbol_text(signal)
+            lines.append(
+                f'      (pin {pin_type} line (at {x:.2f} {y:.2f} {orientation}) (length 2.54) '
+                f'(name "{escaped}" (effects (font (size 0.75 0.75)))) '
+                f'(number "{pin}" (effects (font (size 0.75 0.75)))))'
+            )
+        lines.extend(["    )", "  )"])
+
+    lines.extend(
+        [
+            '  (symbol "LAN7430" (pin_names (offset 0.9)) (in_bom yes) (on_board yes)',
+            '    (property "Reference" "U" (at -22.86 34.29 0) (effects (font (size 1.27 1.27)) (justify left)))',
+            '    (property "Value" "LAN7430" (at -22.86 31.75 0) (effects (font (size 1.27 1.27)) (justify left)))',
+            '    (property "Footprint" "Package_DFN_QFN:QFN-48-1EP_7x7mm_P0.5mm_EP5.3x5.3mm_ThermalVias" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))',
+            '    (property "Datasheet" "https://ww1.microchip.com/downloads/aemDocuments/documents/UNG/ProductDocuments/DataSheets/LAN7430-LAN7431-Data-Sheet-DS00002631.pdf" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))',
+            '    (property "Description" "48-pin VQFN PCIe to Gigabit Ethernet controller with integrated PHY" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))',
+            '    (symbol "LAN7430_0_1"',
+            '      (rectangle (start -22.86 30.48) (end 22.86 -30.48) (stroke (width 0.254) (type default)) (fill (type background)))',
+            '    )',
+            '    (symbol "LAN7430_1_1"',
+        ]
+    )
+    for index, (pin, signal) in enumerate(LAN7430_PINS):
+        row = index // 2
+        y = 29.21 - row * 2.54
+        is_left = index % 2 == 0
+        x = -25.4 if is_left else 25.4
+        orientation = 0 if is_left else 180
+        pin_type = "passive"
+        lines.append(
+            f'      (pin {pin_type} line (at {x:.2f} {y:.2f} {orientation}) (length 2.54) '
+            f'(name "{_escape_symbol_text(signal)}" (effects (font (size 0.72 0.72)))) '
+            f'(number "{pin}" (effects (font (size 0.72 0.72)))))'
+        )
+    lines.extend(["    )", "  )"])
+
+    power_names = {"VDDC", "VDDR", "CVDDR", "AVDD", "AVDDH", "AGND", "DGND"}
+    pi7_units: dict[int, list[tuple[str, str]]] = {1: [], 2: [], 3: []}
+    for row_name, names in PI7_BALL_ROWS.items():
+        for column, signal in enumerate(names, start=1):
+            ball = f"{row_name}{column}"
+            if signal in power_names:
+                unit = 3
+            elif signal.startswith(("PER", "PET", "REFCLK", "CLKREQ", "DWNRST")) or signal == "PERST_L":
+                unit = 1
+            else:
+                unit = 2
+            pi7_units[unit].append((ball, signal))
+    lines.extend(
+        [
+            '  (symbol "PI7C9X2G608GP" (pin_names (offset 0.9)) (in_bom yes) (on_board yes)',
+            '    (property "Reference" "U" (at -25.4 2.54 0) (effects (font (size 1.27 1.27)) (justify left)))',
+            '    (property "Value" "PI7C9X2G608GP" (at -25.4 0 0) (effects (font (size 1.27 1.27)) (justify left)))',
+            '    (property "Footprint" "Package_BGA:BGA-196_15x15mm_Layout14x14_P1.0mm" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))',
+            '    (property "Datasheet" "https://www.diodes.com/datasheet/download/PI7C9X2G608GP.pdf" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))',
+            '    (property "Description" "196-ball LBGA, six-port/eight-lane PCIe Gen2 packet switch" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))',
+        ]
+    )
+    for unit, pins in pi7_units.items():
+        rows = (len(pins) + 1) // 2
+        half_height = max(12.7, rows * 1.27 + 2.54)
+        lines.extend(
+            [
+                f'    (symbol "PI7C9X2G608GP_{unit}_1"',
+                f'      (rectangle (start -25.4 {half_height:.2f}) (end 25.4 {-half_height:.2f}) (stroke (width 0.254) (type default)) (fill (type background)))',
+            ]
+        )
+        for index, (ball, signal) in enumerate(pins):
+            row = index // 2
+            y = half_height - 2.54 - row * 2.54
+            is_left = index % 2 == 0
+            x = -27.94 if is_left else 27.94
+            orientation = 0 if is_left else 180
+            pin_type = "passive"
+            lines.append(
+                f'      (pin {pin_type} line (at {x:.2f} {y:.2f} {orientation}) (length 2.54) '
+                f'(name "{_escape_symbol_text(signal)}" (effects (font (size 0.68 0.68)))) '
+                f'(number "{ball}" (effects (font (size 0.68 0.68)))))'
+            )
+        lines.append("    )")
+    lines.append("  )")
+
+    local_symbols = (
+        (
+            "LM5146RGY",
+            "U",
+            "LM5146RGYR",
+            "Package_DFN_QFN:Texas_RGY_R-PVQFN-N20_EP2.05x3.05mm_ThermalVias",
+            "https://www.ti.com/lit/ds/symlink/lm5146.pdf",
+            "100 V synchronous buck controller in 20-pin RGY VQFN",
+            (
+                (1, "EN/UVLO"), (2, "RT"), (3, "SS/TRK"), (4, "COMP"),
+                (5, "FB"), (6, "AGND"), (7, "SYNCOUT"), (8, "SYNCIN"),
+                (9, "NC"), (10, "PGOOD"), (11, "ILIM"), (12, "PGND"),
+                (13, "LO"), (14, "VCC"), (15, "EP"), (16, "NC"),
+                (17, "BST"), (18, "HO"), (19, "SW"), (20, "VIN"),
+            ),
+        ),
+        (
+            "LM61460RJR",
+            "U",
+            "LM61460RJR",
+            "",
+            "https://www.ti.com/lit/ds/symlink/lm61460.pdf",
+            "36 V 6 A synchronous buck converter in 14-pin RJR VQFN-HR",
+            (
+                (1, "BIAS"), (2, "VCC"), (3, "AGND"), (4, "FB"),
+                (5, "PGOOD"), (6, "RT"), (7, "EN/SYNC"), (8, "VIN1"),
+                (9, "PGND1"), (10, "SW"), (11, "PGND2"), (12, "VIN2"),
+                (13, "RBOOT"), (14, "CBOOT"),
+            ),
+        ),
+        (
+            "LM61440RJR",
+            "U",
+            "LM61440RJR",
+            "",
+            "https://www.ti.com/lit/ds/symlink/lm61440.pdf",
+            "36 V 4 A synchronous buck converter in 14-pin RJR VQFN-HR",
+            (
+                (1, "BIAS"), (2, "VCC"), (3, "AGND"), (4, "FB"),
+                (5, "PGOOD"), (6, "RT"), (7, "EN/SYNC"), (8, "VIN1"),
+                (9, "PGND1"), (10, "SW"), (11, "PGND2"), (12, "VIN2"),
+                (13, "RBOOT"), (14, "CBOOT"),
+            ),
+        ),
+        (
+            "LM5176PWP_A1",
+            "U",
+            "LM5176PWP",
+            "Package_SO:HTSSOP-28-1EP_4.4x9.7mm_P0.65mm_EP3.4x9.5mm_ThermalVias",
+            "https://www.ti.com/lit/ds/symlink/lm5176.pdf",
+            "55 V four-switch buck-boost controller in 28-pin PWP HTSSOP",
+            (
+                (1, "EN/UVLO"), (2, "VIN"), (3, "VISNS"), (4, "MODE"),
+                (5, "DITH"), (6, "RT/SYNC"), (7, "SLOPE"), (8, "SS"),
+                (9, "COMP"), (10, "AGND"), (11, "FB"), (12, "VOSNS"),
+                (13, "ISNS-"), (14, "ISNS+"), (15, "CSG"), (16, "CS"),
+                (17, "PGOOD"), (18, "SW2"), (19, "HDRV2"), (20, "BOOT2"),
+                (21, "LDRV2"), (22, "PGND"), (23, "VCC"), (24, "BIAS"),
+                (25, "LDRV1"), (26, "BOOT1"), (27, "HDRV1"), (28, "SW1"),
+                (29, "EP"),
+            ),
+        ),
+        (
+            "TPS62913RPU",
+            "U",
+            "TPS62913RPU",
+            "Package_DFN_QFN:Texas_RPU0010A_VQFN-HR-10_2x2mm_P0.5mm",
+            "https://www.ti.com/lit/ds/symlink/tps62913.pdf",
+            "17 V 3 A low-noise buck converter in exact 10-pin RPU QFN pinout",
+            (
+                (1, "EN/SYNC"), (2, "SW"), (3, "VO"), (4, "PGND"),
+                (5, "PG"), (6, "VIN"), (7, "PSNS"), (8, "NR/SS"),
+                (9, "FB"), (10, "S-CONF"),
+            ),
+        ),
+        (
+            "TPS259827LNRGE",
+            "U",
+            "TPS259827LNRGER",
+            "Package_DFN_QFN:Texas_RGE0024H_VQFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.7mm_ThermalVias",
+            "https://www.ti.com/lit/ds/symlink/tps25982.pdf",
+            "24 V 15 A eFuse, no fixed OVLO, active current-limiter variant",
+            (
+                (1, "IN1"), (2, "IN2"), (3, "IN3"), (4, "GND1"),
+                (5, "GND2"), (6, "EN/UVLO"), (7, "ITIMER"), (8, "ILIM"),
+                (9, "IMON"), (10, "RETRY_DLY"), (11, "NRETRY"), (12, "LDSTRT"),
+                (13, "PG"), (14, "GND3"), (15, "dVdt"), (16, "IN4"),
+                (17, "OUT1"), (18, "OUT2"), (19, "OUT3"), (20, "OUT4"),
+                (21, "OUT5"), (22, "OUT6"), (23, "OUT7"), (24, "OUT8"),
+            ),
+        ),
+        (
+            "TPS22990DML",
+            "U",
+            "TPS22990DMLR",
+            "",
+            "https://www.ti.com/lit/ds/symlink/tps22990.pdf",
+            "5.5 V 10 A controlled-rise-time load switch",
+            (
+                (1, "CT"), (2, "NC"), (3, "VIN"), (4, "VBIAS"),
+                (5, "ON"), (6, "GND"), (7, "PG"), (8, "VOUT1"),
+                (9, "VOUT2"), (10, "VOUT3"),
+            ),
+        ),
+        (
+            "TRI20_1223",
+            "U",
+            "TRI 20-1223",
+            "",
+            "https://www.tracopower.com/tri20-datasheet",
+            "20 W reinforced-isolation 12 V to dual 15 V DC/DC module",
+            (
+                (1, "+VIN"), (2, "-VIN"), (3, "+VOUT"),
+                (4, "COMMON"), (5, "-VOUT"),
+            ),
+        ),
+        (
+            "TPS7A20DBV_A1",
+            "U",
+            "TPS7A20 fixed DBV",
+            "Package_TO_SOT_SMD:SOT-23-5",
+            "https://www.ti.com/lit/ds/symlink/tps7a20.pdf",
+            "300 mA low-noise fixed-output LDO in SOT-23-5",
+            (
+                (1, "IN"), (2, "GND"), (3, "EN"), (4, "NC"), (5, "OUT"),
+            ),
+        ),
+        (
+            "FSA2567MPX",
+            "U",
+            "FSA2567MPX",
+            "Package_DFN_QFN:WQFN-16-1EP_3x3mm_P0.5mm_EP1.68x1.68mm",
+            "https://www.onsemi.com/pdf/datasheet/fsa2567-d.pdf",
+            "Dual-SIM four-pole analog switch",
+            (
+                (1, "1VSIM"), (2, "SEL"), (3, "2RST"), (4, "RST"),
+                (5, "1RST"), (6, "GND"), (7, "2CLK"), (8, "CLK"),
+                (9, "1CLK"), (10, "NC"), (11, "2DAT"), (12, "DAT"),
+                (13, "1DAT"), (14, "VCC"), (15, "2VSIM"), (16, "VSIM"),
+                (17, "EP"),
+            ),
+        ),
+        (
+            "Wurth_Nano_SIM_693043020611",
+            "J",
+            "693043020611",
+            "CM5Carrier:J_Wurth_WR-CRD_693043020611",
+            "https://www.we-online.com/components/products/datasheet/693043020611.pdf",
+            "Wurth WR-CRD push-push nano-SIM holder",
+            (
+                ("C1", "VCC"), ("C2", "RESET"), ("C3", "CLOCK"),
+                ("C5", "GND"), ("C6", "VPP_NC"), ("C7", "I/O"),
+                ("S1", "SHIELD"), ("S2", "SHIELD"), ("S3", "SHIELD"),
+                ("S4", "SHIELD"), ("S5", "SHIELD"), ("S6", "SHIELD"),
+            ),
+        ),
+        (
+            "ES8316",
+            "U",
+            "ES8316",
+            "Package_DFN_QFN:QFN-32-1EP_4x4mm_P0.4mm_EP2.9x2.9mm_ThermalVias",
+            "https://dl.radxa.com/cm5/radxa_cm5_io_board_v2200_schematic.pdf",
+            "Low-power stereo audio codec; exact pinout follows Radxa CM5 IO V2.2",
+            (
+                (1, "CCLK"), (2, "MCLK"), (3, "DVDD"), (4, "PVDD"),
+                (5, "DGND"), (6, "SCLK"), (7, "DSDIN"), (8, "DLRCK"),
+                (9, "ASDOUT"), (10, "GPIO1"), (11, "GPIO2"), (12, "GPIO3"),
+                (13, "CPVSSP"), (14, "CPVDD"), (15, "CPTOP"), (16, "CPBOT"),
+                (17, "CPGND"), (18, "CPGNDREF"), (19, "ROUT"), (20, "LOUT"),
+                (21, "DACVREF"), (22, "AVDD"), (23, "AGND"), (24, "ADCVREF"),
+                (25, "VMID"), (26, "MICBIAS"), (27, "RIN2"), (28, "LIN2"),
+                (29, "RIN1"), (30, "LIN1"), (31, "CE"), (32, "CDATA"),
+                (33, "E-PAD"),
+            ),
+        ),
+        (
+            "PJ_327A_CTIA",
+            "J",
+            "PJ-327A CTIA",
+            "",
+            "https://dl.radxa.com/cm5/radxa_cm5_io_board_v2200_schematic.pdf",
+            "3.5 mm four-pole CTIA headset jack with dedicated insertion detect",
+            (
+                (2, "R2_GND"), (3, "TIP_HP_L"), (4, "JACK_DETECT"),
+                (5, "SLEEVE_MIC"), (6, "R1_HP_R"), (7, "NC"),
+            ),
+        ),
+    )
+    for name, reference, value, footprint, datasheet, description, pins in local_symbols:
+        rows = (len(pins) + 1) // 2
+        half_height = max(10.16, rows * 1.27 + 2.54)
+        lines.extend(
+            [
+                f'  (symbol "{name}" (pin_names (offset 0.9)) (in_bom yes) (on_board yes)',
+                f'    (property "Reference" "{reference}" (at {-17.78:.2f} {half_height + 3.81:.2f} 0) (effects (font (size 1.27 1.27)) (justify left)))',
+                f'    (property "Value" "{value}" (at {-17.78:.2f} {half_height + 1.27:.2f} 0) (effects (font (size 1.27 1.27)) (justify left)))',
+                f'    (property "Footprint" "{footprint}" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))',
+                f'    (property "Datasheet" "{datasheet}" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))',
+                f'    (property "Description" "{description}" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))',
+                f'    (symbol "{name}_0_1"',
+                f'      (rectangle (start -17.78 {half_height:.2f}) (end 17.78 {-half_height:.2f}) (stroke (width 0.254) (type default)) (fill (type background)))',
+                "    )",
+                f'    (symbol "{name}_1_1"',
+            ]
+        )
+        for index, (pin, signal) in enumerate(pins):
+            row = index // 2
+            y = half_height - 2.54 - row * 2.54
+            is_left = index % 2 == 0
+            x = -20.32 if is_left else 20.32
+            orientation = 0 if is_left else 180
+            lines.append(
+                f'      (pin passive line (at {x:.2f} {y:.2f} {orientation}) (length 2.54) '
+                f'(name "{_escape_symbol_text(signal)}" (effects (font (size 0.72 0.72)))) '
+                f'(number "{pin}" (effects (font (size 0.72 0.72)))))'
+            )
+        lines.extend(["    )", "  )"])
+
+    cm5_audio_port_pins = (
+        (1, "AUD_MCLK", "output"), (2, "AUD_BCLK", "output"),
+        (3, "AUD_FSYNC", "output"), (4, "AUD_DAC_SDIN", "output"),
+        (5, "AUD_ADC_SDOUT", "passive"), (6, "SYS_I2C7_SCL", "bidirectional"),
+        (7, "SYS_I2C7_SDA", "bidirectional"), (8, "AUD_IRQ_N", "passive"),
+        (9, "HS_MCLK", "output"), (10, "HS_BCLK", "output"),
+        (11, "HS_LRCK", "output"), (12, "HS_SDOUT_TO_CODEC", "output"),
+        (13, "HS_SDIN_FROM_CODEC", "passive"), (14, "HS_I2C_SCL", "bidirectional"),
+        (15, "HS_I2C_SDA", "bidirectional"), (16, "HS_JACK_DET_N", "passive"),
+    )
+    lines.extend(
+        [
+            '  (symbol "CM5_Audio_Port" (pin_names (offset 0.9)) (in_bom no) (on_board no)',
+            '    (property "Reference" "U" (at -20.32 25.4 0) (effects (font (size 1.27 1.27)) (justify left)))',
+            '    (property "Value" "CM5 AUDIO OFF-SHEET PORT" (at -20.32 22.86 0) (effects (font (size 1.27 1.27)) (justify left)))',
+            '    (property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))',
+            '    (property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))',
+            '    (property "Description" "Typed off-sheet CM5 audio interface for ERC" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))',
+            '    (symbol "CM5_Audio_Port_0_1"',
+            '      (rectangle (start -20.32 20.32) (end 20.32 -20.32) (stroke (width 0.254) (type default)) (fill (type background)))',
+            '    )',
+            '    (symbol "CM5_Audio_Port_1_1"',
+        ]
+    )
+    for index, (pin, signal, pin_type) in enumerate(cm5_audio_port_pins):
+        row = index // 2
+        y = 17.78 - row * 5.08
+        is_left = index % 2 == 0
+        x = -22.86 if is_left else 22.86
+        orientation = 0 if is_left else 180
+        lines.append(
+            f'      (pin {pin_type} line (at {x:.2f} {y:.2f} {orientation}) (length 2.54) '
+            f'(name "{signal}" (effects (font (size 0.75 0.75)))) '
+            f'(number "{pin}" (effects (font (size 0.75 0.75)))))'
+        )
+    lines.extend(["    )", "  )"])
+    lines.append(")")
+    CM5_LOCAL_LIBRARY.parent.mkdir(parents=True, exist_ok=True)
+    CM5_LOCAL_LIBRARY.write_text("\n".join(lines) + "\n")
+    shutil.copyfile(
+        WURTH_74991114412 / "Transformer_Wurth_WE-RJ45LAN.kicad_sym",
+        CM5_WURTH_LIBRARY,
+    )
+    (CM5_LOCAL_LIBRARY.parent / "sym-lib-table").write_text(
+        '(sym_lib_table\n'
+        '  (version 7)\n'
+        '  (lib (name "CM5Carrier")(type "KiCad")(uri "${KIPRJMOD}/CM5Carrier.kicad_sym")(options "")(descr "Radxa CM5 carrier-local symbols"))\n'
+        '  (lib (name "WurthRJ45")(type "KiCad")(uri "${KIPRJMOD}/WurthRJ45.kicad_sym")(options "")(descr "Wurth manufacturer RJ45 symbols"))\n'
+        ')\n'
+    )
+    return pinout
+
+
+def write_cm5_local_footprints() -> None:
+    """Copy controlled connector mechanics into this project's local library."""
+    CM5_LOCAL_FOOTPRINTS.mkdir(parents=True, exist_ok=True)
+    CM5_LOCAL_3DMODELS.mkdir(parents=True, exist_ok=True)
+    filenames = (
+        "TE_2199230-3_M2_Key_B_4.2mm.kicad_mod",
+        "J_Wurth_WR-CRD_693043020611.kicad_mod",
+    )
+    for filename in filenames:
+        source = LEGACY_CELLULAR_FOOTPRINTS / filename
+        if not source.exists():
+            raise FileNotFoundError(f"Controlled connector footprint missing: {source}")
+        shutil.copyfile(source, CM5_LOCAL_FOOTPRINTS / filename)
+    shutil.copyfile(
+        WURTH_74991114412 / "T_Wurth_WE-RJ45LAN_74991114412.kicad_mod",
+        CM5_LOCAL_FOOTPRINTS / "T_Wurth_WE-RJ45LAN_74991114412.kicad_mod",
+    )
+    shutil.copyfile(
+        WURTH_74991114412 / "T_Wurth_WE-RJ45LAN_74991114412.step",
+        CM5_LOCAL_3DMODELS / "T_Wurth_WE-RJ45LAN_74991114412.step",
+    )
+    (CM5_LOCAL_LIBRARY.parent / "fp-lib-table").write_text(
+        '(fp_lib_table\n'
+        '  (version 7)\n'
+        '  (lib (name "CM5Carrier")(type "KiCad")(uri "${KIPRJMOD}/CM5Carrier.pretty")(options "")(descr "Radxa CM5 carrier-local footprints"))\n'
+        ')\n'
+    )
+
+
+def create_project(folder: Path, name: str) -> None:
+    folder.mkdir(parents=True, exist_ok=True)
+    project_path = folder / f"{name}.kicad_pro"
+    shutil.copyfile(KICAD_TEMPLATE, project_path)
+    data = json.loads(project_path.read_text())
+    data["meta"]["filename"] = project_path.name
+    project_path.write_text(json.dumps(data, indent=2) + "\n")
+
+
+def pin_xy(component, pin: int | str) -> tuple[float, float]:
+    point = component.get_pin_position(str(pin))
+    if point is None:
+        raise RuntimeError(f"{component.reference} has no pin {pin}")
+    return (point.x, 2.0 * component.position.y - point.y)
+
+
+def add_symbol(
+    schematic,
+    lib_id: str,
+    reference: str,
+    value: str,
+    position: tuple[float, float],
+    footprint: str = "",
+    manufacturer: str = "",
+    mpn: str = "",
+    rotation: int = 0,
+):
+    component = schematic.components.add(
+        lib_id,
+        reference,
+        value,
+        position=position,
+        footprint=footprint or None,
+        rotation=rotation,
+    )
+    if manufacturer:
+        component.add_property("Manufacturer", manufacturer, hidden=True)
+    if mpn:
+        component.add_property("MPN", mpn, hidden=True)
+    return component
+
+
+def label_pin(schematic, component, pin: int, net_name: str, two_row: bool = False) -> None:
+    justify = "right" if (not two_row or pin % 2 == 1) else "left"
+    schematic.labels.add(net_name, pin_xy(component, pin), size=0.95, justify_h=justify)
+
+
+def label_pin_auto(schematic, component, pin: int | str, net_name: str, size: float = 0.72) -> None:
+    position = pin_xy(component, pin)
+    justify = "right" if position[0] < component.position.x else "left"
+    schematic.labels.add(net_name, position, size=size, justify_h=justify)
+
+
+def label_two_pin_device(schematic, component, net_1: str, net_2: str) -> None:
+    label_pin_auto(schematic, component, 1, net_1, 0.7)
+    label_pin_auto(schematic, component, 2, net_2, 0.7)
+
+
+def label_pin_with_stub(
+    schematic,
+    component,
+    pin: int | str,
+    net_name: str,
+    offsets: tuple[tuple[float, float], ...],
+    justify: str,
+) -> None:
+    """Route a short orthogonal stub so a net label clears the symbol fields."""
+    start = pin_xy(component, pin)
+    points = [start]
+    for offset_x, offset_y in offsets:
+        points.append((start[0] + offset_x, start[1] + offset_y))
+    for segment_start, segment_end in zip(points, points[1:]):
+        schematic.wires.add(start=segment_start, end=segment_end)
+    schematic.labels.add(net_name, points[-1], size=0.85, justify_h=justify)
+
+
+def add_connector(
+    schematic,
+    lib_id: str,
+    reference: str,
+    value: str,
+    position: tuple[float, float],
+    pin_map: dict[int, str],
+    footprint: str = "",
+    manufacturer: str = "",
+    mpn: str = "",
+    two_row: bool = False,
+):
+    component = add_symbol(
+        schematic,
+        lib_id,
+        reference,
+        value,
+        position,
+        footprint,
+        manufacturer,
+        mpn,
+    )
+    for pin, net_name in pin_map.items():
+        label_pin(schematic, component, pin, net_name, two_row=two_row)
+    return component
+
+
+def heading(schematic, text: str, position: tuple[float, float], size: float = 2.0) -> None:
+    schematic.texts.add(text, position, size=size, bold=True)
+
+
+def note(schematic, text: str, position: tuple[float, float], size: float = 1.0) -> None:
+    schematic.texts.add(text, position, size=size)
+
+
+def build_cm5_core_sheet(pinout: dict[str, list[tuple[int, str]]]) -> Path:
+    """Capture all three physical CM5 connectors and the 76 locked allocations."""
+    folder = ROOT / "CM5-CARRIER"
+    name = "CM5-Core-Allocated"
+    create_project(folder, name)
+    schematic = create_schematic(name)
+    schematic.set_paper_size("A2")
+    schematic.set_title_block(
+        title="Radxa CM5 ProComm Carrier - Exact CM5 Connector Allocation",
+        date="2026-08-13",
+        rev="A1",
+        company="ProComm",
+        comments={
+            1: "Three 100-contact Hirose DF40C mates; all physical pin numbers follow CM5 V2.21",
+            2: "Exactly 76 product allocations are connected; unused functions are intentionally no-connect",
+            3: "All connector grounds join the carrier ground plane; allocated GPIO domain is 3.3 V",
+            4: "DETAILED CAPTURE BASELINE - verify CM5 voltage limits before release",
+        },
+    )
+
+    heading(schematic, "1. EXACT RADXA CM5 MATING CONNECTORS", (45, 18), 1.8)
+    allocations = allocation_map()
+    if len(CM5_ALLOCATIONS) != 76 or len(allocations) != 76:
+        raise RuntimeError(
+            "CM5 allocation contract must contain exactly 76 unique physical contacts"
+        )
+    physical_contacts = {
+        (connector, pin)
+        for connector, rows in pinout.items()
+        for pin, _signal in rows
+    }
+    missing_contacts = sorted(set(allocations) - physical_contacts)
+    if missing_contacts:
+        raise RuntimeError(
+            f"CM5 allocations reference contacts absent from the V2.21 workbook: {missing_contacts}"
+        )
+    if len(physical_contacts) != 300:
+        raise RuntimeError(
+            f"CM5 source must contain 300 unique physical contacts, found {len(physical_contacts)}"
+        )
+    placements = (
+        ("U13-A", "J501", 105.0),
+        ("U13-B", "J502", 295.0),
+        ("J1", "J503", 485.0),
+    )
+    for connector, reference, x in placements:
+        symbol_name = f"Radxa_CM5_{connector.replace('-', '_')}"
+        component = add_symbol(
+            schematic,
+            f"CM5Carrier:{symbol_name}",
+            reference,
+            f"RADXA CM5 {connector} MATE",
+            (x, 105),
+            CM5_DF40_FOOTPRINT,
+            "Hirose",
+            "DF40C-100DS-0.4V(51)",
+        )
+        for pin, signal in pinout[connector]:
+            position = pin_xy(component, pin)
+            if (connector, pin) in allocations:
+                net_name = allocations[(connector, pin)][1]
+                justify = "right" if position[0] < x else "left"
+                schematic.labels.add(net_name, position, size=0.68, justify_h=justify)
+            elif signal == "GND":
+                justify = "right" if position[0] < x else "left"
+                schematic.labels.add("GND", position, size=0.62, justify_h=justify)
+            else:
+                schematic.no_connects.add(position)
+        note(schematic, f"{connector}: 100 physical contacts", (x - 28, 174), 0.82)
+
+    heading(schematic, "2. INTERNAL POWER / STARTUP / RECOVERY SERVICE", (45, 202), 1.6)
+    add_connector(
+        schematic,
+        "Connector_Generic:Conn_01x06",
+        "J510",
+        "CM5_POWER_SERVICE",
+        (90, 235),
+        {
+            1: "LOGIC_3V3",
+            2: "GND",
+            3: "CM5_RESET_N",
+            4: "CM5_BOOT",
+            5: "CM5_PWRON_N",
+            6: "CM5_RECOVERY_KEY",
+        },
+    )
+    note(schematic, "Internal keyed service header; never exposed on the top panel.", (55, 263), 0.85)
+
+    add_connector(
+        schematic,
+        "Connector_Generic:Conn_01x04",
+        "J511",
+        "DEBUG_UART_3V3",
+        (215, 232),
+        {1: "LOGIC_3V3", 2: "GND", 3: "DBG_UART_TX", 4: "DBG_UART_RX"},
+    )
+    note(schematic, "3.3 V UART only; keyed factory/debug cable.", (190, 255), 0.85)
+
+    add_connector(
+        schematic,
+        "Connector_Generic:Conn_01x05",
+        "J512",
+        "INTERNAL_USB_RECOVERY",
+        (330, 233),
+        {
+            1: "REC_USB_VBUS_DET",
+            2: "REC_USB_DM",
+            3: "REC_USB_DP",
+            4: "REC_USB_ID",
+            5: "GND",
+        },
+    )
+    note(schematic, "Internal recovery interface; add final protected USB-C receptacle circuit.", (285, 260), 0.85)
+
+    add_connector(
+        schematic,
+        "Connector_Generic:Conn_02x04_Odd_Even",
+        "J513",
+        "CM5_POWER_ENTRY",
+        (470, 232),
+        {
+            1: "SYS_5V15",
+            2: "SYS_5V15",
+            3: "SYS_5V15",
+            4: "SYS_5V15",
+            5: "GND",
+            6: "GND",
+            7: "GND",
+            8: "GND",
+        },
+        two_row=True,
+    )
+    note(schematic, "Kelvin-sense SYS_5V15 at J501; final setpoint remains a release gate.", (420, 260), 0.85)
+
+    heading(schematic, "3. OWNERSHIP AUDIT", (45, 295), 1.6)
+    audit_lines = (
+        "76 / 76 allocated contacts connected; 0 duplicate physical-pin claims.",
+        "WAN1 uses native MDI. PCIe Gen2 x1 feeds the packet switch.",
+        "WWAN owns USB30_2 + USB20_HOST0; touch owns USB20_HOST1.",
+        "HDMI_TX0, I2S0 TDM, I2S1 headset, I2C7, I2C3 and UART2 are reserved exactly once.",
+        "Pins 145/147 remain HDMI HEAC reserved. HDMI_5V_OPTION remains a controlled DNP/link decision.",
+        "Unused alternate-function contacts carry explicit no-connect markers on this A1 baseline.",
+    )
+    for index, text in enumerate(audit_lines):
+        note(schematic, text, (45, 312 + index * 9), 0.9)
+
+    output = folder / f"{name}.kicad_sch"
+    schematic.save(output)
+    return output
+
+
+def build_network_pcie_sheet() -> Path:
+    """Capture PCIe, four protected 1 GbE ports, and the Wi-Fi M.2 interface."""
+    folder = ROOT / "CM5-CARRIER"
+    name = "Network-PCIe"
+    create_project(folder, name)
+    schematic = create_schematic(name)
+    schematic.set_paper_size("A1")
+    schematic.set_title_block(
+        title="Radxa CM5 ProComm Carrier - PCIe / Ethernet / Wi-Fi",
+        date="2026-08-14",
+        rev="A1",
+        company="ProComm",
+        comments={
+            1: "PI7C9X2G608GP in 606 mode: x1 upstream plus five x1 downstream ports",
+            2: "Native WAN1 plus three LAN7430 endpoints use exact Wurth 74991114412 MagJacks",
+            3: "Exact package balls/pins from Diodes DS40210 Rev 8 and Microchip DS00002631G",
+            4: "Package breakout pins are passive for cross-sheet ERC; net ownership defines direction",
+        },
+    )
+
+    heading(schematic, "1. PI7C9X2G608GP PCIe GEN2 SWITCH - 606 MODE", (35, 18), 1.8)
+    switch_group = schematic.components.add(
+        "CM5Carrier:PI7C9X2G608GP",
+        "U601",
+        "PI7C9X2G608GP",
+        position=(104.14, 105.41),
+        footprint="Package_BGA:BGA-196_15x15mm_Layout14x14_P1.0mm",
+        add_all_units=True,
+        unit_spacing=150,
+    )
+    switch_group.place_unit(1, (104.14, 105.41))
+    switch_group.place_unit(2, (104.14, 284.48))
+    switch_group.place_unit(3, (104.14, 455.93))
+    switch_units = {unit: switch_group.get_unit(unit) for unit in (1, 2, 3)}
+
+    switch_nets = {
+        # Upstream lane 0 and the clock-buffer input.
+        "C12": "PCIE_UP_PERST_N",
+        "G13": "PCIE_UP_REFCLK_P",
+        "G14": "PCIE_UP_REFCLK_N",
+        "P3": "PCIE_UP_TX_P_CM5",
+        "N3": "PCIE_UP_TX_N_CM5",
+        "P4": "PCIE_UP_RX_P_CM5",
+        "N4": "PCIE_UP_RX_N_CM5",
+        # Clock-buffer loopbacks for the switch PHY banks.
+        "D13": "SW_REFCLK1_RAW_P",
+        "D14": "SW_REFCLK1_RAW_N",
+        "N8": "SW_REFCLK0_IN_P",
+        "P8": "SW_REFCLK0_IN_N",
+        "E13": "SW_REFCLK2_RAW_P",
+        "E14": "SW_REFCLK2_RAW_N",
+        "B7": "SW_REFCLK1_IN_P",
+        "A7": "SW_REFCLK1_IN_N",
+        # Port 1 / lane 4: WAN2.
+        "A11": "WAN2_PCIE_RX_P",
+        "B11": "WAN2_PCIE_RX_N",
+        "A12": "WAN2_PCIE_TX_P",
+        "B12": "WAN2_PCIE_TX_N",
+        "F13": "WAN2_PCIE_REFCLK_P",
+        "F14": "WAN2_PCIE_REFCLK_N",
+        "M2": "WAN2_PCIE_PERST_N",
+        "F11": "WAN2_PCIE_CLKREQ_N",
+        # Port 2 / lane 5: LAN1.
+        "A9": "LAN1_PCIE_RX_P",
+        "B9": "LAN1_PCIE_RX_N",
+        "A10": "LAN1_PCIE_TX_P",
+        "B10": "LAN1_PCIE_TX_N",
+        "H13": "LAN1_PCIE_REFCLK_P",
+        "H14": "LAN1_PCIE_REFCLK_N",
+        "N2": "LAN1_PCIE_PERST_N",
+        "D12": "LAN1_PCIE_CLKREQ_N",
+        # Port 3 / lane 6: LAN2.
+        "A6": "LAN2_PCIE_RX_P",
+        "B6": "LAN2_PCIE_RX_N",
+        "A5": "LAN2_PCIE_TX_P",
+        "B5": "LAN2_PCIE_TX_N",
+        "J13": "LAN2_PCIE_REFCLK_P",
+        "J14": "LAN2_PCIE_REFCLK_N",
+        "P2": "LAN2_PCIE_PERST_N",
+        "C13": "LAN2_PCIE_CLKREQ_N",
+        # Port 4 / lane 7: Wi-Fi.
+        "A4": "WIFI_PCIE_RX_P",
+        "B4": "WIFI_PCIE_RX_N",
+        "A3": "WIFI_PCIE_TX_P",
+        "B3": "WIFI_PCIE_TX_N",
+        "K13": "WIFI_PCIE_REFCLK_P",
+        "K14": "WIFI_PCIE_REFCLK_N",
+        "M3": "WIFI_PCIE_PERST_N",
+        "A2": "WIFI_PCIE_CLKREQ_N",
+        # Port 5 / lane 1: spare/test endpoint.
+        "P6": "PCIE_SPARE_RX_P",
+        "N6": "PCIE_SPARE_RX_N",
+        "P5": "PCIE_SPARE_TX_P",
+        "N5": "PCIE_SPARE_TX_N",
+        "L13": "PCIE_SPARE_REFCLK_P",
+        "L14": "PCIE_SPARE_REFCLK_N",
+        "M4": "PCIE_SPARE_PERST_N",
+        "A1": "PCIE_SPARE_CLKREQ_N",
+        # Configuration and management.
+        "D2": "PCIE_MODE_606_HIGH",
+        "F12": "SYS_I2C7_SDA",
+        "J11": "SYS_I2C7_SCL",
+        "A8": "SW_REXT1",
+        "B8": "GND",
+        "P7": "SW_REXT0",
+        "N7": "GND",
+        "E12": "SW_IREF",
+    }
+    power_names = {"VDDC", "VDDR", "CVDDR", "AVDD", "AVDDH", "AGND", "DGND"}
+    for row_name, names in PI7_BALL_ROWS.items():
+        for column, signal in enumerate(names, start=1):
+            ball = f"{row_name}{column}"
+            if signal in power_names:
+                unit = 3
+            elif signal.startswith(("PER", "PET", "REFCLK", "CLKREQ", "DWNRST")) or signal == "PERST_L":
+                unit = 1
+            else:
+                unit = 2
+            component = switch_units[unit]
+            if ball in switch_nets:
+                label_pin_auto(schematic, component, ball, switch_nets[ball], 0.64)
+            elif signal in {"AGND", "DGND"}:
+                label_pin_auto(schematic, component, ball, "GND", 0.6)
+            elif signal in {"VDDC", "AVDD"}:
+                label_pin_auto(schematic, component, ball, "PCIE_1V0", 0.6)
+            elif signal in {"VDDR", "CVDDR", "AVDDH"}:
+                label_pin_auto(schematic, component, ball, "NET_3V3", 0.6)
+            else:
+                schematic.no_connects.add(pin_xy(component, ball))
+
+    note(schematic, "U601A: exact PCIe lanes, reset and distributed reference clocks", (35, 166), 0.82)
+    note(schematic, "U601B: 606-mode strap, I2C and calibration; other straps use documented internal defaults", (35, 346), 0.82)
+    note(schematic, "U601C: every 1.0 V / 3.3 V / ground ball shown; place decoupling per ball group", (35, 535), 0.82)
+
+    support_parts = (
+        ("R601", "Device:R", "4.7k", "PCIE_MODE_606_HIGH", "NET_3V3", (230, 250)),
+        ("R602", "Device:R", "1.43k 1%", "SW_REXT1", "GND", (230, 270)),
+        ("R603", "Device:R", "1.43k 1%", "SW_REXT0", "GND", (230, 290)),
+        ("R604", "Device:R", "475R 1%", "SW_IREF", "GND", (230, 310)),
+        ("R605", "Device:R", "2.2k", "SYS_I2C7_SDA", "LOGIC_3V3", (230, 330)),
+        ("R606", "Device:R", "2.2k", "SYS_I2C7_SCL", "LOGIC_3V3", (230, 350)),
+        ("R607", "Device:R", "0R", "PCIE_UP_CLKREQ_N", "GND", (230, 370)),
+        ("C601", "Device:C", "100nF", "SW_REFCLK1_RAW_P", "SW_REFCLK0_IN_P", (230, 410)),
+        ("C602", "Device:C", "100nF", "SW_REFCLK1_RAW_N", "SW_REFCLK0_IN_N", (230, 430)),
+        ("C603", "Device:C", "100nF", "SW_REFCLK2_RAW_P", "SW_REFCLK1_IN_P", (230, 450)),
+        ("C604", "Device:C", "100nF", "SW_REFCLK2_RAW_N", "SW_REFCLK1_IN_N", (230, 470)),
+    )
+    for reference, lib_id, value, net_1, net_2, position in support_parts:
+        part = add_symbol(schematic, lib_id, reference, value, position)
+        label_two_pin_device(schematic, part, net_1, net_2)
+    note(schematic, "GPIO[1:0] = 01 selects 606 mode. GPIO1 uses its internal pulldown; GPIO0 is pulled high.", (200, 390), 0.82)
+
+    heading(schematic, "2. THREE LAN7430 PCIe GIGABIT ENDPOINTS", (295, 18), 1.8)
+
+    def place_ethernet_esd(
+        reference: str,
+        nets: tuple[str, str, str, str],
+        position: tuple[float, float],
+    ) -> None:
+        esd = add_symbol(
+            schematic,
+            "Power_Protection:TPD4E05U06DQA",
+            reference,
+            "TPD4E05U06DQA",
+            position,
+            "Package_SON:USON-10_2.5x1.0mm_P0.5mm",
+            "Texas Instruments",
+            "TPD4E05U06DQA",
+        )
+        for pin, net_name in zip((1, 2, 4, 5), nets):
+            label_pin_auto(schematic, esd, pin, net_name, 0.54)
+        for pin in (3, 8):
+            label_pin_auto(schematic, esd, pin, "GND", 0.54)
+        for pin in (6, 7, 9, 10):
+            schematic.no_connects.add(pin_xy(esd, pin))
+
+    def place_magjack(
+        reference: str,
+        prefix: str,
+        x: float,
+        y: float,
+        mdi_nets: tuple[str, str, str, str, str, str, str, str],
+        led_sinks: tuple[str, str],
+        esd_references: tuple[str, str],
+        resistor_references: tuple[str, str],
+    ) -> None:
+        jack = add_symbol(
+            schematic,
+            "WurthRJ45:74991114412",
+            reference,
+            "74991114412",
+            (x, y),
+            "CM5Carrier:T_Wurth_WE-RJ45LAN_74991114412",
+            "Wurth Elektronik",
+            "74991114412",
+        )
+        label_pin_auto(schematic, jack, 1, "GND", 0.56)
+        for pin, net_name in zip(range(2, 10), mdi_nets):
+            label_pin_auto(schematic, jack, pin, net_name, 0.54)
+        label_pin_auto(schematic, jack, "S1", "CHASSIS_GND", 0.54)
+        label_pin_auto(schematic, jack, "S2", "CHASSIS_GND", 0.54)
+        label_pin_auto(schematic, jack, 11, f"{prefix}_LED_A1", 0.54)
+        label_pin_auto(schematic, jack, 12, led_sinks[0], 0.54)
+        label_pin_auto(schematic, jack, 13, f"{prefix}_LED_A2", 0.54)
+        label_pin_auto(schematic, jack, 14, led_sinks[1], 0.54)
+
+        place_ethernet_esd(esd_references[0], mdi_nets[:4], (x - 52, y + 4))
+        place_ethernet_esd(esd_references[1], mdi_nets[4:], (x + 52, y + 4))
+        for reference_r, anode_net, x_offset in (
+            (resistor_references[0], f"{prefix}_LED_A1", -14),
+            (resistor_references[1], f"{prefix}_LED_A2", 14),
+        ):
+            resistor = add_symbol(
+                schematic,
+                "Device:R",
+                reference_r,
+                "330R",
+                (x + x_offset, y + 43),
+            )
+            label_two_pin_device(schematic, resistor, "NET_3V3", anode_net)
+        note(
+            schematic,
+            f"{prefix}: 74991114412 voltage-mode 1 GbE; shields direct to chassis, PHY-side residual ESD",
+            (x - 72, y + 59),
+            0.66,
+        )
+
+    heading(schematic, "NATIVE CM5 WAN1 FRONT END", (190, 18), 1.5)
+    place_magjack(
+        "J610",
+        "WAN1",
+        240,
+        90,
+        (
+            "WAN1_MDI0_P", "WAN1_MDI0_N", "WAN1_MDI1_P", "WAN1_MDI1_N",
+            "WAN1_MDI2_P", "WAN1_MDI2_N", "WAN1_MDI3_P", "WAN1_MDI3_N",
+        ),
+        ("WAN1_LED0", "WAN1_LED1"),
+        ("U630", "U631"),
+        ("R650", "R651"),
+    )
+
+    def place_lan(reference: str, prefix: str, x: float) -> None:
+        component = add_symbol(
+            schematic,
+            "CM5Carrier:LAN7430",
+            reference,
+            "LAN7430",
+            (x, 100),
+            "Package_DFN_QFN:QFN-48-1EP_7x7mm_P0.5mm_EP5.3x5.3mm_ThermalVias",
+            "Microchip",
+            "LAN7430/Y9X",
+        )
+        pin_nets = {
+            1: f"{prefix}_2V5", 2: f"{prefix}_MDI_A_P", 3: f"{prefix}_MDI_A_N",
+            4: f"{prefix}_1V2", 5: f"{prefix}_MDI_B_P", 6: f"{prefix}_MDI_B_N",
+            7: f"{prefix}_MDI_C_P", 8: f"{prefix}_MDI_C_N", 9: f"{prefix}_1V2",
+            10: f"{prefix}_MDI_D_P", 11: f"{prefix}_MDI_D_N", 12: f"{prefix}_2V5",
+            13: f"{prefix}_1V2", 14: f"{prefix}_1V2", 15: "GND",
+            16: f"{prefix}_PCIE_RX_P", 17: f"{prefix}_PCIE_RX_N", 18: "GND",
+            19: f"{prefix}_PCIE_TX_P", 20: f"{prefix}_1V2", 21: f"{prefix}_PCIE_TX_N",
+            22: "GND", 23: f"{prefix}_2V5", 24: f"{prefix}_RESREF",
+            25: f"{prefix}_PCIE_REFCLK_P", 26: f"{prefix}_PCIE_REFCLK_N",
+            27: f"{prefix}_2V5", 28: "NET_3V3", 29: f"{prefix}_RESET_LOCAL_N",
+            30: "GND", 31: f"{prefix}_1V2", 32: f"{prefix}_SW_NODE",
+            33: "NET_3V3", 34: f"{prefix}_1V2", 35: f"{prefix}_LED3",
+            36: f"{prefix}_LED2", 37: f"{prefix}_LED1", 38: f"{prefix}_LED0",
+            39: "NET_3V3", 40: f"{prefix}_1V2", 41: "NET_3V3",
+            42: f"{prefix}_PCIE_CLKREQ_N", 43: "PCIE_UP_WAKE_N",
+            44: f"{prefix}_PCIE_PERST_N", 45: f"{prefix}_1V2",
+            46: f"{prefix}_XO", 47: f"{prefix}_XI", 48: f"{prefix}_ISET", 49: "GND",
+        }
+        for pin, net_name in pin_nets.items():
+            label_pin_auto(schematic, component, pin, net_name, 0.58)
+
+        inductor = add_symbol(schematic, "Device:L", f"L{reference[1:]}1", "3.3uH", (x - 45, 175))
+        label_two_pin_device(schematic, inductor, f"{prefix}_SW_NODE", f"{prefix}_1V2")
+        bulk = add_symbol(schematic, "Device:C", f"C{reference[1:]}1", "10uF", (x - 15, 175))
+        label_two_pin_device(schematic, bulk, f"{prefix}_1V2", "GND")
+        hf = add_symbol(schematic, "Device:C", f"C{reference[1:]}2", "100nF", (x + 15, 175))
+        label_two_pin_device(schematic, hf, f"{prefix}_1V2", "GND")
+        ldo = add_symbol(schematic, "Device:C", f"C{reference[1:]}3", "1uF ESR>=0.1R", (x + 45, 175))
+        label_two_pin_device(schematic, ldo, f"{prefix}_2V5", "GND")
+        resref = add_symbol(schematic, "Device:R", f"R{reference[1:]}1", "200R 1%", (x - 35, 205))
+        label_two_pin_device(schematic, resref, f"{prefix}_RESREF", "GND")
+        iset = add_symbol(schematic, "Device:R", f"R{reference[1:]}2", "6.04k 1%", (x + 5, 205))
+        label_two_pin_device(schematic, iset, f"{prefix}_ISET", "GND")
+        crystal = add_symbol(schematic, "Device:Crystal", f"Y{reference[1:]}", "25MHz", (x + 45, 205))
+        label_two_pin_device(schematic, crystal, f"{prefix}_XI", f"{prefix}_XO")
+        suffix = {"WAN2": 2, "LAN1": 4, "LAN2": 6}[prefix]
+        place_magjack(
+            f"J{reference[1:]}",
+            prefix,
+            x,
+            245,
+            (
+                f"{prefix}_MDI_A_P", f"{prefix}_MDI_A_N",
+                f"{prefix}_MDI_B_P", f"{prefix}_MDI_B_N",
+                f"{prefix}_MDI_C_P", f"{prefix}_MDI_C_N",
+                f"{prefix}_MDI_D_P", f"{prefix}_MDI_D_N",
+            ),
+            (f"{prefix}_LED0", f"{prefix}_LED1"),
+            (f"U63{suffix}", f"U63{suffix + 1}"),
+            (f"R65{suffix}", f"R65{suffix + 1}"),
+        )
+
+    place_lan("U611", "WAN2", 350)
+    place_lan("U612", "LAN1", 555)
+    place_lan("U613", "LAN2", 760)
+
+    heading(schematic, "3. WI-FI AP MINI PCIE 4T4R + SPARE PORT", (335, 315), 1.7)
+    wifi = add_symbol(
+        schematic,
+        "Connector:Bus_PCI_Express_Mini",
+        "J620",
+        "AW7915-NP1_WIFI6_4T4R",
+        (515, 420),
+        manufacturer="Molex",
+        mpn="0679101002",
+    )
+    wifi_nets = {
+        1: "PCIE_UP_WAKE_N",
+        2: "WIFI_3V3", 24: "WIFI_3V3", 39: "WIFI_3V3",
+        41: "WIFI_3V3", 52: "WIFI_3V3",
+        7: "WIFI_PCIE_CLKREQ_N",
+        11: "WIFI_PCIE_REFCLK_N", 13: "WIFI_PCIE_REFCLK_P",
+        20: "WIFI_DISABLE1_N", 22: "WIFI_PCIE_PERST_N",
+        23: "WIFI_PCIE_TX_N", 25: "WIFI_PCIE_TX_P",
+        31: "WIFI_PCIE_RX_N", 33: "WIFI_PCIE_RX_P",
+        30: "SYS_I2C7_SCL", 32: "SYS_I2C7_SDA",
+    }
+    wifi_ground_pins = {4, 9, 15, 18, 21, 26, 27, 29, 34, 35, 37, 40, 43, 50}
+    for pin in range(1, 53):
+        if wifi.get_pin_position(str(pin)) is None:
+            continue
+        if pin in wifi_nets:
+            label_pin_auto(schematic, wifi, pin, wifi_nets[pin], 0.6)
+        elif pin in wifi_ground_pins:
+            label_pin_auto(schematic, wifi, pin, "GND", 0.58)
+        else:
+            schematic.no_connects.add(pin_xy(wifi, pin))
+    if wifi.get_pin_position("MP") is not None:
+        schematic.no_connects.add(pin_xy(wifi, "MP"))
+    wifi_disable_pullup = add_symbol(schematic, "Device:R", "R620", "10k", (430, 490))
+    label_two_pin_device(schematic, wifi_disable_pullup, "WIFI_DISABLE1_N", "WIFI_3V3")
+    note(schematic, "AW7915-NP1: true Wi-Fi 6 4T4R Mini PCIe AP, 3.3 V / 4 A rail, four RF pigtails", (400, 515), 0.82)
+    note(schematic, "J620 Molex 0679101002 selected; import and verify its manufacturer land pattern before PCB release.", (400, 525), 0.78)
+
+    add_connector(
+        schematic,
+        "Connector_Generic:Conn_02x06_Odd_Even",
+        "J621",
+        "PCIE_SPARE_TEST",
+        (720, 415),
+        {
+            1: "PCIE_SPARE_RX_P", 2: "PCIE_SPARE_RX_N",
+            3: "PCIE_SPARE_TX_P", 4: "PCIE_SPARE_TX_N",
+            5: "PCIE_SPARE_REFCLK_P", 6: "PCIE_SPARE_REFCLK_N",
+            7: "PCIE_SPARE_PERST_N", 8: "PCIE_SPARE_CLKREQ_N",
+            9: "PCIE_UP_WAKE_N", 10: "NET_3V3", 11: "GND", 12: "GND",
+        },
+        two_row=True,
+    )
+    note(schematic, "Port 5 is a controlled factory/test option; do not fit a cable header in production by default.", (650, 470), 0.82)
+
+    for reference, net_name, x in (
+        ("#FLG0601", "NET_3V3", 320),
+        ("#FLG0602", "PCIE_1V0", 360),
+        ("#FLG0603", "WIFI_3V3", 400),
+        ("#FLG0604", "LOGIC_3V3", 440),
+        ("#FLG0605", "GND", 480),
+        ("#FLG0606", "CHASSIS_GND", 520),
+    ):
+        flag = add_symbol(schematic, "power:PWR_FLAG", reference, "PWR_FLAG", (x, 550))
+        label_pin_auto(schematic, flag, 1, net_name, 0.7)
+    note(schematic, "PWR_FLAG symbols declare off-sheet regulator outputs for ERC; they are not physical parts.", (300, 570), 0.8)
+
+    output = folder / f"{name}.kicad_sch"
+    schematic.save(output)
+    return output
+
+
+def build_wwan_sim_sheet() -> Path:
+    """Capture the universal M.2 B-key modem, USB links, controls, and dual SIM."""
+    folder = ROOT / "CM5-CARRIER"
+    name = "WWAN-SIM"
+    create_project(folder, name)
+    schematic = create_schematic(name)
+    schematic.set_paper_size("A1")
+    schematic.set_title_block(
+        title="Radxa CM5 ProComm Carrier - WWAN and Dual SIM",
+        date="2026-08-14",
+        rev="A1",
+        company="ProComm",
+        comments={
+            1: "M.2 B-key modem socket supports USB 3.0 and USB 2.0 fallback",
+            2: "Dedicated 3.8 V / 5 A minimum rail; verify selected modem peak-current waveform",
+            3: "FSA2567 defaults to physical SIM 1; open-drain low selects physical SIM 2",
+            4: "RF coax leaves the module directly for four right-side bulkhead antennas",
+        },
+    )
+
+    heading(schematic, "1. UNIVERSAL M.2 B-KEY WWAN SOCKET", (45, 20), 1.9)
+    modem = add_symbol(
+        schematic,
+        "Connector:Bus_M.2_Socket_B",
+        "J701",
+        "WWAN_M2_B_KEY_USB3_USB2",
+        (155, 145),
+        "CM5Carrier:TE_2199230-3_M2_Key_B_4.2mm",
+        "TE Connectivity",
+        "2199230-3",
+    )
+    modem_nets = {
+        2: "MODEM_3V8", 4: "MODEM_3V8", 70: "MODEM_3V8",
+        72: "MODEM_3V8", 74: "MODEM_3V8",
+        6: "MODEM_FULL_CARD_POWER_OFF_N", 7: "WWAN_USB2_DP",
+        8: "MODEM_W_DISABLE1_N", 9: "WWAN_USB2_DM",
+        10: "MODEM_STATUS_LED_N",
+        29: "WWAN_USB3_TX_N", 31: "WWAN_USB3_TX_P",
+        30: "MODEM_UIM_RESET", 32: "MODEM_UIM_CLK",
+        34: "MODEM_UIM_DATA", 35: "WWAN_USB3_RX_N",
+        36: "MODEM_UIM_PWR", 37: "WWAN_USB3_RX_P",
+        54: "MODEM_WAKE_N", 67: "MODEM_RESET_N",
+    }
+    modem_ground_pins = {3, 5, 11, 27, 33, 39, 45, 51, 57, 71, 73}
+    for pin in range(1, 76):
+        if modem.get_pin_position(str(pin)) is None:
+            continue
+        if pin in modem_nets:
+            label_pin_auto(schematic, modem, pin, modem_nets[pin], 0.58)
+        elif pin in modem_ground_pins:
+            label_pin_auto(schematic, modem, pin, "GND", 0.58)
+        else:
+            schematic.no_connects.add(pin_xy(modem, pin))
+    note(schematic, "Socket power pins retain the stock symbol's 3.3 V names but are intentionally fed from MODEM_3V8.", (45, 260), 0.82)
+    note(schematic, "Qualification window: 3.135-4.4 V module input, >=5 A transient capability, keyed B socket, 42 mm standoff.", (45, 270), 0.82)
+
+    heading(schematic, "2. USB ESD AND MODEM BULK CAPACITANCE", (300, 20), 1.75)
+    usb_esd_1 = add_symbol(
+        schematic, "Power_Protection:TPD4E05U06DQA", "U702",
+        "TPD4E05U06DQA", (365, 80), manufacturer="Texas Instruments", mpn="TPD4E05U06DQAR",
+    )
+    for pin, net_name in {
+        1: "WWAN_USB2_DP", 2: "WWAN_USB2_DM",
+        4: "WWAN_USB3_TX_P", 5: "WWAN_USB3_TX_N", 3: "GND", 8: "GND",
+    }.items():
+        label_pin_auto(schematic, usb_esd_1, pin, net_name, 0.64)
+    for pin in (6, 7, 9, 10):
+        schematic.no_connects.add(pin_xy(usb_esd_1, pin))
+    usb_esd_2 = add_symbol(
+        schematic, "Power_Protection:TPD4E05U06DQA", "U703",
+        "TPD4E05U06DQA", (365, 145), manufacturer="Texas Instruments", mpn="TPD4E05U06DQAR",
+    )
+    for pin, net_name in {
+        1: "WWAN_USB3_RX_P", 2: "WWAN_USB3_RX_N", 3: "GND", 8: "GND",
+    }.items():
+        label_pin_auto(schematic, usb_esd_2, pin, net_name, 0.64)
+    for pin in (4, 5, 6, 7, 9, 10):
+        schematic.no_connects.add(pin_xy(usb_esd_2, pin))
+    note(schematic, "Place USB ESD at the modem socket; route USB 3 pairs as short, continuous 90 ohm differential channels.", (300, 190), 0.8)
+
+    for reference, value, x in (
+        ("C701", "1000uF low-ESR", 310),
+        ("C702", "100uF", 355),
+        ("C703", "10uF", 400),
+        ("C704", "100nF", 445),
+    ):
+        capacitor = add_symbol(schematic, "Device:C", reference, value, (x, 230))
+        label_two_pin_device(schematic, capacitor, "MODEM_3V8", "GND")
+    flag = add_symbol(schematic, "power:PWR_FLAG", "#FLG0701", "PWR_FLAG", (310, 270))
+    label_pin_auto(schematic, flag, 1, "MODEM_3V8", 0.7)
+    note(schematic, "Bulk values are the placement baseline; validate rail droop with the final global modem's burst-current profile.", (300, 290), 0.8)
+
+    heading(schematic, "3. FSA2567 DUAL-SIM MUX", (470, 20), 1.75)
+    mux = add_symbol(
+        schematic,
+        "CM5Carrier:FSA2567MPX",
+        "U704",
+        "FSA2567MPX",
+        (530, 115),
+        "Package_DFN_QFN:WQFN-16-1EP_3x3mm_P0.5mm_EP1.68x1.68mm",
+        "onsemi",
+        "FSA2567MPX",
+    )
+    mux_nets = {
+        1: "SIM1_VCC", 2: "MODEM_SIM_MUX_SEL_OD", 3: "SIM2_RESET",
+        4: "MODEM_UIM_RESET", 5: "SIM1_RESET", 6: "GND",
+        7: "SIM2_CLK", 8: "MODEM_UIM_CLK", 9: "SIM1_CLK",
+        11: "SIM2_DATA", 12: "MODEM_UIM_DATA", 13: "SIM1_DATA",
+        14: "MODEM_UIM_PWR", 15: "SIM2_VCC", 16: "MODEM_UIM_PWR", 17: "GND",
+    }
+    for pin, net_name in mux_nets.items():
+        label_pin_auto(schematic, mux, pin, net_name, 0.61)
+    schematic.no_connects.add(pin_xy(mux, 10))
+    pullup = add_symbol(schematic, "Device:R", "R701", "100k", (530, 185))
+    label_two_pin_device(schematic, pullup, "MODEM_UIM_PWR", "MODEM_SIM_MUX_SEL_OD")
+    note(schematic, "R701 keeps SEL high: SIM 1 is selected by default. GPIO control must be open drain; low selects SIM 2.", (470, 210), 0.82)
+    note(schematic, "The control domain tracks MODEM_UIM_PWR, preventing a fixed 3.3 V overdrive when the SIM rail is 1.8 V.", (470, 220), 0.82)
+
+    def place_sim(reference: str, index: int, x: float) -> None:
+        prefix = f"SIM{index}"
+        holder = add_symbol(
+            schematic,
+            "CM5Carrier:Wurth_Nano_SIM_693043020611",
+            reference,
+            "693043020611",
+            (x, 105),
+            "CM5Carrier:J_Wurth_WR-CRD_693043020611",
+            "Wurth Elektronik",
+            "693043020611",
+        )
+        holder_nets = {
+            "C1": f"{prefix}_VCC", "C2": f"{prefix}_RESET",
+            "C3": f"{prefix}_CLK", "C5": "GND", "C7": f"{prefix}_DATA",
+            "S1": "CHASSIS_GND", "S2": "CHASSIS_GND", "S3": "CHASSIS_GND",
+            "S4": "CHASSIS_GND", "S5": "CHASSIS_GND", "S6": "CHASSIS_GND",
+        }
+        for pin, net_name in holder_nets.items():
+            label_pin_auto(schematic, holder, pin, net_name, 0.59)
+        schematic.no_connects.add(pin_xy(holder, "C6"))
+        esd = add_symbol(
+            schematic, "Power_Protection:TPD4E05U06DQA", f"U{704 + index}",
+            "TPD4E05U06DQA", (x, 210), manufacturer="Texas Instruments", mpn="TPD4E05U06DQAR",
+        )
+        for pin, net_name in {
+            1: f"{prefix}_VCC", 2: f"{prefix}_RESET",
+            4: f"{prefix}_CLK", 5: f"{prefix}_DATA", 3: "GND", 8: "GND",
+        }.items():
+            label_pin_auto(schematic, esd, pin, net_name, 0.6)
+        for pin in (6, 7, 9, 10):
+            schematic.no_connects.add(pin_xy(esd, pin))
+        note(schematic, f"{prefix}: ESD array adjacent to holder; electrical C5 to GND, metal shell to CHASSIS_GND.", (x - 65, 265), 0.75)
+
+    heading(schematic, "4. TWO FIELD-ACCESSIBLE NANO-SIM HOLDERS", (610, 20), 1.65)
+    place_sim("J702", 1, 650)
+    place_sim("J703", 2, 755)
+
+    heading(schematic, "5. RF BULKHEAD HARNESS CONTRACT", (525, 315), 1.65)
+    for index, (label, x) in enumerate(
+        (("CELL_1_RF", 550), ("CELL_2_RF", 625), ("CELL_3_RF", 700), ("CELL_4_GNSS_RF", 775)),
+        start=1,
+    ):
+        connector = add_symbol(
+            schematic, "Connector:Conn_Coaxial", f"J{710 + index}",
+            label, (x, 365), manufacturer="Amphenol RF / TE equivalent", mpn="Final bulkhead MPN TBD",
+        )
+        label_pin_auto(schematic, connector, 1, label, 0.66)
+        label_pin_auto(schematic, connector, 2, "CHASSIS_GND", 0.62)
+        note(schematic, label.replace("_RF", ""), (x - 22, 395), 0.75)
+    note(schematic, "Four short module U.FL/MHF pigtails terminate at the narrow right-side panel bulkheads; keep clear of PSU and fan motors.", (525, 425), 0.82)
+
+    heading(schematic, "6. MODEM CONTROL CONTRACT", (45, 325), 1.65)
+    add_connector(
+        schematic,
+        "Connector_Generic:Conn_02x06_Odd_Even",
+        "J720",
+        "WWAN_CONTROL_TEST",
+        (160, 390),
+        {
+            1: "MODEM_FULL_CARD_POWER_OFF_N", 2: "MODEM_W_DISABLE1_N",
+            3: "MODEM_RESET_N", 4: "MODEM_WAKE_N",
+            5: "MODEM_STATUS_LED_N", 6: "MODEM_SIM_MUX_SEL_OD",
+            7: "WWAN_USB2_DP", 8: "WWAN_USB2_DM",
+            9: "MODEM_3V8", 10: "LOGIC_3V3", 11: "GND", 12: "GND",
+        },
+        two_row=True,
+    )
+    note(schematic, "Control outputs originate at the system GPIO expander. FULL_CARD_POWER_OFF and RESET require final modem-specific timing validation.", (45, 445), 0.82)
+    note(schematic, "J720 is a DNP factory test footprint, not a top-panel connector.", (45, 455), 0.82)
+    for reference, net_name, x in (
+        ("#FLG0702", "LOGIC_3V3", 80),
+        ("#FLG0703", "GND", 120),
+        ("#FLG0704", "CHASSIS_GND", 160),
+    ):
+        power_flag = add_symbol(schematic, "power:PWR_FLAG", reference, "PWR_FLAG", (x, 500))
+        label_pin_auto(schematic, power_flag, 1, net_name, 0.65)
+
+    output = folder / f"{name}.kicad_sch"
+    schematic.save(output)
+    return output
+
+
+def build_display_harness_sheet() -> Path:
+    """Capture the underside-facing HDMI, USB touch, and 12 V lid harness."""
+    folder = ROOT / "CM5-CARRIER"
+    name = "Display-Harness"
+    create_project(folder, name)
+    schematic = create_schematic(name)
+    schematic.set_paper_size("A1")
+    schematic.set_title_block(
+        title="Radxa CM5 ProComm Carrier - Lid Display Harness",
+        date="2026-08-14",
+        rev="A1",
+        company="ProComm",
+        comments={
+            1: "15.6-inch lid monitor: HDMI video, USB 2 touch, 12 V / 2.5 A",
+            2: "Carrier connectors face downward at the hinge-edge harness notch",
+            3: "USB-A is the CM5 host end; cable terminates in USB-B SuperSpeed at the monitor",
+            4: "No dedicated display eFuse; DISPLAY_12V is protected by the upstream branch fuse",
+        },
+    )
+
+    heading(schematic, "1. HDMI TYPE-A SOURCE CONNECTOR", (45, 20), 1.85)
+    hdmi = add_symbol(
+        schematic,
+        "Connector:HDMI_A",
+        "J801",
+        "HDMI_TO_LID_DISPLAY",
+        (135, 120),
+        "Connector_Video:HDMI_A_Molex_208658-1001_Horizontal",
+        "Molex",
+        "208658-1001",
+    )
+    hdmi_nets = {
+        1: "HDMI_D2_P", 2: "GND", 3: "HDMI_D2_N",
+        4: "HDMI_D1_P", 5: "GND", 6: "HDMI_D1_N",
+        7: "HDMI_D0_P", 8: "GND", 9: "HDMI_D0_N",
+        10: "HDMI_CLK_P", 11: "GND", 12: "HDMI_CLK_N",
+        13: "HDMI_CEC", 14: "HDMI_HEAC_P", 15: "HDMI_DDC_SCL",
+        16: "HDMI_DDC_SDA", 17: "GND", 18: "HDMI_5V_OPTION",
+        19: "HDMI_HPD", "SH": "CHASSIS_GND",
+    }
+    for pin, net_name in hdmi_nets.items():
+        label_pin_auto(schematic, hdmi, pin, net_name, 0.62)
+    note(schematic, "HDMI_HEAC_N remains unused in Rev A; the selected monitor uses video/DDC/CEC/HPD only.", (45, 225), 0.82)
+    note(schematic, "Shell bonds to chassis at the connector. TMDS shield returns use the local digital ground plane.", (45, 235), 0.82)
+
+    heading(schematic, "2. HDMI ESD / LOW-CAPACITANCE SHUNTS", (270, 20), 1.65)
+    hdmi_esd_maps = (
+        ("U801", (1, "HDMI_D2_P"), (2, "HDMI_D2_N"), (4, "HDMI_D1_P"), (5, "HDMI_D1_N"), 80),
+        ("U802", (1, "HDMI_D0_P"), (2, "HDMI_D0_N"), (4, "HDMI_CLK_P"), (5, "HDMI_CLK_N"), 145),
+        ("U803", (1, "HDMI_CEC"), (2, "HDMI_DDC_SCL"), (4, "HDMI_DDC_SDA"), (5, "HDMI_HPD"), 210),
+    )
+    for reference, pin1, pin2, pin4, pin5, y in hdmi_esd_maps:
+        protector = add_symbol(
+            schematic, "Power_Protection:TPD4E05U06DQA", reference,
+            "TPD4E05U06DQA", (365, y), manufacturer="Texas Instruments", mpn="TPD4E05U06DQAR",
+        )
+        for pin, net_name in (pin1, pin2, pin4, pin5, (3, "GND"), (8, "GND")):
+            label_pin_auto(schematic, protector, pin, net_name, 0.61)
+        for pin in (6, 7, 9, 10):
+            schematic.no_connects.add(pin_xy(protector, pin))
+    note(schematic, "Place all HDMI ESD arrays immediately behind J801 with no stubs on TMDS pairs.", (270, 255), 0.82)
+
+    hdmi_fuse = add_symbol(schematic, "Device:Polyfuse", "F801", "100mA", (465, 80))
+    label_two_pin_device(schematic, hdmi_fuse, "SYS_5V15", "HDMI_5V_OPTION")
+    for reference, target, y in (("R801", "HDMI_DDC_SCL", 125), ("R802", "HDMI_DDC_SDA", 155)):
+        pullup = add_symbol(schematic, "Device:R", reference, "2.2k", (465, y))
+        label_two_pin_device(schematic, pullup, "HDMI_5V_OPTION", target)
+    note(schematic, "Confirm CM5 DDC 5 V tolerance and final pull-up values against the Radxa carrier reference before layout release.", (425, 195), 0.78)
+
+    heading(schematic, "3. USB TOUCH HOST PORT", (45, 285), 1.8)
+    touch = add_symbol(
+        schematic,
+        "Connector:USB3_A",
+        "J802",
+        "TOUCH_USB_HOST",
+        (135, 350),
+        "Connector_USB:USB3_A_Receptacle_Wuerth_692122030100",
+        "Wurth Elektronik",
+        "692122030100",
+    )
+    for pin, net_name in {
+        1: "TOUCH_USB_5V", 2: "TOUCH_USB_DM", 3: "TOUCH_USB_DP",
+        4: "GND", "SH": "CHASSIS_GND",
+    }.items():
+        label_pin_auto(schematic, touch, pin, net_name, 0.64)
+    for pin in (5, 6, 7, 8, 9):
+        schematic.no_connects.add(pin_xy(touch, pin))
+    note(schematic, "Only USB 2 is allocated from the CM5. A standard USB 3 A-to-B cable still carries USB 2 touch data.", (45, 425), 0.82)
+    note(schematic, "The monitor-side SuperSpeed Type-B receptacle is not duplicated as a device connector on this host carrier.", (45, 435), 0.82)
+
+    touch_esd = add_symbol(
+        schematic, "Power_Protection:TPD4E05U06DQA", "U804",
+        "TPD4E05U06DQA", (290, 350), manufacturer="Texas Instruments", mpn="TPD4E05U06DQAR",
+    )
+    for pin, net_name in {
+        1: "TOUCH_USB_DP", 2: "TOUCH_USB_DM", 3: "GND", 8: "GND",
+    }.items():
+        label_pin_auto(schematic, touch_esd, pin, net_name, 0.62)
+    for pin in (4, 5, 6, 7, 9, 10):
+        schematic.no_connects.add(pin_xy(touch_esd, pin))
+    touch_fuse = add_symbol(schematic, "Device:Polyfuse", "F802", "1.0A hold", (360, 350))
+    label_two_pin_device(schematic, touch_fuse, "SYS_5V15", "TOUCH_USB_5V")
+    for reference, value, x in (("C801", "10uF", 420), ("C802", "100nF", 465)):
+        capacitor = add_symbol(schematic, "Device:C", reference, value, (x, 350))
+        label_two_pin_device(schematic, capacitor, "TOUCH_USB_5V", "GND")
+
+    heading(schematic, "4. 12 V / 2.5 A DISPLAY POWER", (420, 285), 1.75)
+    add_connector(
+        schematic,
+        "Connector_Generic:Conn_02x02_Odd_Even",
+        "J803",
+        "LID_DISPLAY_12V",
+        (505, 350),
+        {1: "DISPLAY_12V", 2: "DISPLAY_12V", 3: "GND", 4: "GND"},
+        MF_2X2,
+        "Molex",
+        "43045-0412",
+        two_row=True,
+    )
+    display_flag = add_symbol(schematic, "power:PWR_FLAG", "#FLG0801", "PWR_FLAG", (475, 410))
+    label_pin_auto(schematic, display_flag, 1, "DISPLAY_12V", 0.66)
+    note(schematic, "DISPLAY_12V design load: 2.5 A continuous / 30 W branch, covering the locked 25 W monitor.", (400, 445), 0.82)
+    note(schematic, "No local display eFuse. Use the upstream AUX_12V branch fuse and a keyed 18 AWG harness.", (400, 455), 0.82)
+
+    heading(schematic, "5. HINGE-EDGE HARNESS BUILD", (45, 490), 1.65)
+    note(schematic, "Bundle HDMI, USB A-to-B, and 12 V conductors through the centered hinge-edge notch with a common abrasion sleeve.", (45, 510), 0.82)
+    note(schematic, "Provide a service loop for full lid travel, clamp the bundle on both sides, and keep bend radius outside the hinge pinch line.", (45, 520), 0.82)
+    note(schematic, "All three carrier connectors are underside-facing and remain below the top panel; they do not add panel cutouts.", (45, 530), 0.82)
+
+    for reference, net_name, x in (
+        ("#FLG0802", "SYS_5V15", 290),
+        ("#FLG0803", "GND", 330),
+        ("#FLG0804", "CHASSIS_GND", 370),
+        ("#FLG0805", "HDMI_5V_OPTION", 410),
+        ("#FLG0806", "TOUCH_USB_5V", 450),
+    ):
+        flag = add_symbol(schematic, "power:PWR_FLAG", reference, "PWR_FLAG", (x, 560))
+        label_pin_auto(schematic, flag, 1, net_name, 0.64)
+
+    output = folder / f"{name}.kicad_sch"
+    schematic.save(output)
+    return output
+
+
+def build_audio_control_sheet() -> Path:
+    """Capture both CM5 audio interfaces, the TDM line drivers, and CTIA headset."""
+    folder = ROOT / "CM5-CARRIER"
+    name = "Audio-Control"
+    create_project(folder, name)
+    schematic = create_schematic(name)
+    schematic.set_paper_size("A0")
+    schematic.set_title_block(
+        title="Radxa CM5 ProComm Carrier - TDM and Headset Audio",
+        date="2026-08-14",
+        rev="A1",
+        company="ProComm",
+        comments={
+            1: "I2S0/TDM program audio is buffered over LVDS to the separate AUDIO-8X8 board",
+            2: "I2S1 drives an ES8316 headset codec based on the Radxa CM5 IO V2.2 reference",
+            3: "TPA6132A2 provides the requested dedicated stereo headphone amplification",
+            4: "PJ-327A is wired CTIA: tip left, ring 1 right, ring 2 ground, sleeve microphone",
+        },
+    )
+
+    heading(schematic, "1. I2S0/TDM PROGRAM-AUDIO LVDS LINK", (45, 20), 1.9)
+    cm5_audio = add_symbol(
+        schematic,
+        "CM5Carrier:CM5_Audio_Port",
+        "U900",
+        "CM5_AUDIO_OFFSHEET_PORT",
+        (65, 135),
+    )
+    for pin, net_name in {
+        1: "AUD_MCLK", 2: "AUD_BCLK", 3: "AUD_FSYNC", 4: "AUD_DAC_SDIN",
+        5: "AUD_ADC_SDOUT", 6: "SYS_I2C7_SCL", 7: "SYS_I2C7_SDA",
+        8: "AUD_IRQ_N", 9: "HS_MCLK", 10: "HS_BCLK", 11: "HS_LRCK",
+        12: "HS_SDOUT_TO_CODEC", 13: "HS_SDIN_FROM_CODEC",
+        14: "HS_I2C_SCL", 15: "HS_I2C_SDA", 16: "HS_JACK_DET_N",
+    }.items():
+        label_pin_auto(schematic, cm5_audio, pin, net_name, 0.58)
+    driver = add_symbol(
+        schematic,
+        "Interface:SN65LVDS047PW",
+        "U901",
+        "SN65LVDS047PW",
+        (145, 105),
+        manufacturer="Texas Instruments",
+        mpn="SN65LVDS047PWR",
+    )
+    for pin, net_name in {
+        1: "AUDIO_ENABLE", 2: "AUD_MCLK", 3: "AUD_BCLK",
+        4: "LOGIC_3V3", 5: "GND", 6: "AUD_FSYNC", 7: "AUD_DAC_SDIN",
+        8: "GND", 9: "AUD_DAC_SDIN_N", 10: "AUD_DAC_SDIN_P",
+        11: "AUD_FSYNC_P", 12: "AUD_FSYNC_N", 13: "AUD_BCLK_N",
+        14: "AUD_BCLK_P", 15: "AUD_MCLK_P", 16: "AUD_MCLK_N",
+    }.items():
+        label_pin_auto(schematic, driver, pin, net_name, 0.62)
+    receiver = add_symbol(
+        schematic,
+        "Interface:SN65LVDT2D",
+        "U902",
+        "SN65LVDT2D",
+        (145, 220),
+        manufacturer="Texas Instruments",
+        mpn="SN65LVDT2DR",
+    )
+    for pin, net_name in {
+        1: "AUD_ADC_SDOUT_N", 2: "AUD_ADC_SDOUT_P", 5: "GND",
+        7: "AUD_ADC_SDOUT", 8: "LOGIC_3V3",
+    }.items():
+        label_pin_auto(schematic, receiver, pin, net_name, 0.62)
+    for pin in (3, 4, 6):
+        schematic.no_connects.add(pin_xy(receiver, pin))
+    for reference, value, rail, x in (
+        ("C901", "100nF", "LOGIC_3V3", 95),
+        ("C902", "1uF", "LOGIC_3V3", 135),
+    ):
+        capacitor = add_symbol(schematic, "Device:C", reference, value, (x, 285))
+        label_two_pin_device(schematic, capacitor, rail, "GND")
+
+    translator = add_symbol(
+        schematic,
+        "Interface:PCA9306D",
+        "U903",
+        "PCA9306D",
+        (300, 105),
+        manufacturer="NXP",
+        mpn="PCA9306D,118",
+    )
+    for pin, net_name in {
+        1: "GND", 2: "LOGIC_1V8", 3: "SYS_I2C7_SCL", 4: "SYS_I2C7_SDA",
+        5: "AUD_I2C_SDA", 6: "AUD_I2C_SCL", 7: "LOGIC_3V3", 8: "LOGIC_3V3",
+    }.items():
+        label_pin_auto(schematic, translator, pin, net_name, 0.62)
+    for index, (rail, net_name, x) in enumerate(
+        (("LOGIC_1V8", "SYS_I2C7_SCL", 250), ("LOGIC_1V8", "SYS_I2C7_SDA", 285),
+         ("LOGIC_3V3", "AUD_I2C_SCL", 320), ("LOGIC_3V3", "AUD_I2C_SDA", 355)),
+        start=1,
+    ):
+        resistor = add_symbol(schematic, "Device:R", f"R90{index}", "2.2k", (x, 180))
+        label_two_pin_device(schematic, resistor, rail, net_name)
+
+    tdm_map = {
+        1: "AUD_MCLK_P", 2: "AUD_MCLK_N", 3: "GND", 4: "GND",
+        5: "AUD_BCLK_P", 6: "AUD_BCLK_N", 7: "AUD_FSYNC_P", 8: "AUD_FSYNC_N",
+        9: "GND", 10: "GND", 11: "AUD_DAC_SDIN_P", 12: "AUD_DAC_SDIN_N",
+        13: "AUD_ADC_SDOUT_P", 14: "AUD_ADC_SDOUT_N", 15: "GND", 16: "GND",
+        17: "AUD_I2C_SCL", 18: "AUD_I2C_SDA", 19: "AUD_ADC_RST_N",
+        20: "AUD_DAC_RST_N", 21: "AUD_DAC_MUTE_N", 22: "AUD_IRQ_N",
+        23: "AUDIO_PRESENT_N", 24: "AUDIO_ENABLE", 25: "LOGIC_3V3", 26: "GND",
+        27: "TDM_SPARE_1", 28: "TDM_SPARE_2", 29: "GND", 30: "GND",
+    }
+    add_connector(
+        schematic,
+        "Connector_Generic:Conn_02x15_Odd_Even",
+        "J901",
+        "AUDIO_8X8_TDM_CONTROL",
+        (455, 135),
+        tdm_map,
+        two_row=True,
+    )
+    note(schematic, "J901 mates with AUDIO-8X8 J101. Route five 100 ohm differential pairs with the assigned interleaved returns.", (380, 260), 0.82)
+    note(schematic, "SN65LVDT2D includes the ADC-data receiver termination; do not add a duplicate far-end resistor.", (380, 270), 0.82)
+
+    heading(schematic, "2. DEDICATED LOW-NOISE HEADSET RAILS", (45, 340), 1.8)
+    ldo_3v3 = add_symbol(
+        schematic, "Regulator_Linear:LP5907MFX-3.3", "U910",
+        "LP5907MFX-3.3", (145, 395), manufacturer="Texas Instruments", mpn="LP5907MFX-3.3/NOPB",
+    )
+    for pin, net_name in {1: "SYS_5V15", 2: "GND", 3: "HEADSET_POWER_EN", 5: "HEADSET_3V3"}.items():
+        label_pin_auto(schematic, ldo_3v3, pin, net_name, 0.63)
+    schematic.no_connects.add(pin_xy(ldo_3v3, 4))
+    ldo_1v8 = add_symbol(
+        schematic, "Regulator_Linear:LP5907MFX-1.8", "U911",
+        "LP5907MFX-1.8", (300, 395), manufacturer="Texas Instruments", mpn="LP5907MFX-1.8/NOPB",
+    )
+    for pin, net_name in {1: "HEADSET_3V3", 2: "GND", 3: "HEADSET_POWER_EN", 5: "HEADSET_1V8"}.items():
+        label_pin_auto(schematic, ldo_1v8, pin, net_name, 0.63)
+    schematic.no_connects.add(pin_xy(ldo_1v8, 4))
+    for reference, value, rail, x in (
+        ("C910", "1uF", "SYS_5V15", 80), ("C911", "1uF", "HEADSET_3V3", 205),
+        ("C912", "1uF", "HEADSET_3V3", 250), ("C913", "1uF", "HEADSET_1V8", 360),
+    ):
+        capacitor = add_symbol(schematic, "Device:C", reference, value, (x, 460))
+        label_two_pin_device(schematic, capacitor, rail, "GND")
+    note(schematic, "LP5907 rails are dedicated to the codec/headphone path. HEADSET_POWER_EN comes from the GPIO expander.", (45, 495), 0.82)
+
+    heading(schematic, "3. ES8316 I2S1 HEADSET CODEC", (450, 340), 1.8)
+    codec = add_symbol(
+        schematic,
+        "CM5Carrier:ES8316",
+        "U912",
+        "ES8316",
+        (570, 445),
+        "Package_DFN_QFN:QFN-32-1EP_4x4mm_P0.4mm_EP2.9x2.9mm_ThermalVias",
+        "Everest Semiconductor",
+        "ES8316",
+    )
+    codec_nets = {
+        1: "HS_I2C_SCL", 2: "HS_MCLK", 3: "HEADSET_1V8", 4: "HEADSET_1V8",
+        5: "GND", 6: "HS_BCLK", 7: "HS_SDOUT_TO_CODEC", 8: "HS_LRCK",
+        9: "HS_SDIN_FROM_CODEC", 10: "ES8316_GPIO1", 11: "ES8316_GPIO2",
+        12: "ES8316_GPIO3", 13: "ES8316_CPVSS", 14: "HEADSET_1V8",
+        15: "ES8316_CPTOP", 16: "ES8316_CPBOT", 17: "HEADSET_AGND",
+        18: "HEADSET_AGND", 19: "HS_CODEC_HP_R", 20: "HS_CODEC_HP_L",
+        21: "ES8316_DACVREF", 22: "HEADSET_3V3", 23: "HEADSET_AGND",
+        24: "ES8316_ADCVREF", 25: "ES8316_VMID", 26: "ES8316_MICBIAS",
+        27: "HS_MIC_INPUT", 31: "GND", 32: "HS_I2C_SDA", 33: "GND",
+    }
+    for pin, net_name in codec_nets.items():
+        label_pin_auto(schematic, codec, pin, net_name, 0.58)
+    for pin in (28, 29, 30):
+        schematic.no_connects.add(pin_xy(codec, pin))
+    for reference, value, net_1, net_2, x, y in (
+        ("C914", "10uF", "ES8316_CPVSS", "HEADSET_AGND", 450, 540),
+        ("C915", "10uF", "HEADSET_1V8", "HEADSET_AGND", 495, 540),
+        ("C916", "10uF", "ES8316_CPTOP", "ES8316_CPBOT", 540, 540),
+        ("C917", "10uF", "ES8316_DACVREF", "HEADSET_AGND", 585, 540),
+        ("C918", "10uF", "ES8316_ADCVREF", "HEADSET_AGND", 630, 540),
+        ("C919", "4.7uF", "ES8316_VMID", "HEADSET_AGND", 675, 540),
+    ):
+        capacitor = add_symbol(schematic, "Device:C", reference, value, (x, y))
+        label_two_pin_device(schematic, capacitor, net_1, net_2)
+    note(schematic, "Codec pinout and baseline decoupling follow Radxa CM5 IO V2.2; validate Everest production datasheet values before release.", (430, 580), 0.8)
+
+    heading(schematic, "4. TPA6132A2 HEADPHONE AMPLIFIER", (745, 340), 1.8)
+    amplifier = add_symbol(
+        schematic,
+        "Amplifier_Audio:TPA6132A2RTE",
+        "U913",
+        "TPA6132A2RTE",
+        (835, 445),
+        manufacturer="Texas Instruments",
+        mpn="TPA6132A2RTER",
+    )
+    amplifier_nets = {
+        1: "HPAMP_IN_L", 2: "HEADSET_AGND", 3: "HEADSET_AGND", 4: "HPAMP_IN_R",
+        5: "HEADSET_HP_R", 6: "GND", 7: "HEADSET_3V3", 8: "HPAMP_HPVSS",
+        9: "HPAMP_CPN", 10: "HEADSET_AGND", 11: "HPAMP_CPP", 12: "HPAMP_HPVDD",
+        13: "HEADSET_AMP_EN", 14: "HEADSET_3V3", 15: "HEADSET_AGND",
+        16: "HEADSET_HP_L", 17: "HEADSET_AGND",
+    }
+    for pin, net_name in amplifier_nets.items():
+        label_pin_auto(schematic, amplifier, pin, net_name, 0.59)
+    for reference, value, net_1, net_2, x, y in (
+        ("C920", "1uF", "HS_CODEC_HP_L", "HPAMP_IN_L", 745, 515),
+        ("C921", "1uF", "HS_CODEC_HP_R", "HPAMP_IN_R", 790, 515),
+        ("C922", "1uF", "HPAMP_CPP", "HPAMP_CPN", 835, 515),
+        ("C923", "2.2uF", "HPAMP_HPVDD", "HEADSET_AGND", 880, 515),
+        ("C924", "2.2uF", "HPAMP_HPVSS", "HEADSET_AGND", 925, 515),
+        ("C925", "2.2uF", "HEADSET_3V3", "HEADSET_AGND", 970, 515),
+    ):
+        capacitor = add_symbol(schematic, "Device:C", reference, value, (x, y))
+        label_two_pin_device(schematic, capacitor, net_1, net_2)
+    note(schematic, "G0=0 and G1=1 strap the amplifier for 0 dB gain. EN remains software-controlled for pop-free mute.", (745, 575), 0.8)
+
+    heading(schematic, "5. CTIA HEADSET JACK, MIC BIAS, DETECT, AND ESD", (895, 20), 1.75)
+    jack = add_symbol(
+        schematic,
+        "CM5Carrier:PJ_327A_CTIA",
+        "J910",
+        "PJ-327A_CTIA",
+        (1015, 115),
+        manufacturer="SOFNG / qualified equivalent",
+        mpn="PJ-327A",
+    )
+    for pin, net_name in {
+        2: "HEADSET_AGND", 3: "HEADSET_HP_L", 4: "HS_JACK_DET_N",
+        5: "HS_MIC_JACK", 6: "HEADSET_HP_R",
+    }.items():
+        label_pin_auto(schematic, jack, pin, net_name, 0.62)
+    schematic.no_connects.add(pin_xy(jack, 7))
+    mic_bias = add_symbol(schematic, "Device:R", "R910", "2.2k", (930, 205))
+    label_two_pin_device(schematic, mic_bias, "ES8316_MICBIAS", "HS_MIC_JACK")
+    mic_coupling = add_symbol(schematic, "Device:C", "C930", "100nF", (1015, 205))
+    label_two_pin_device(schematic, mic_coupling, "HS_MIC_JACK", "HS_MIC_INPUT")
+    detect_pullup = add_symbol(schematic, "Device:R", "R911", "330k", (1090, 205))
+    label_two_pin_device(schematic, detect_pullup, "LOGIC_1V8", "HS_JACK_DET_N")
+    jack_esd = add_symbol(
+        schematic, "Power_Protection:TPD4E05U06DQA", "U914",
+        "TPD4E05U06DQA", (1015, 285), manufacturer="Texas Instruments", mpn="TPD4E05U06DQAR",
+    )
+    for pin, net_name in {
+        1: "HEADSET_HP_L", 2: "HEADSET_HP_R", 4: "HS_MIC_JACK",
+        5: "HS_JACK_DET_N", 3: "HEADSET_AGND", 8: "HEADSET_AGND",
+    }.items():
+        label_pin_auto(schematic, jack_esd, pin, net_name, 0.6)
+    for pin in (6, 7, 9, 10):
+        schematic.no_connects.add(pin_xy(jack_esd, pin))
+    note(schematic, "CTIA mapping is locked. The PJ-327A supplier footprint still requires mechanical verification before PCB release.", (895, 335), 0.8)
+
+    heading(schematic, "6. HEADSET I2C AND CONTROL POLICY", (745, 625), 1.65)
+    note(schematic, "ES8316 is controlled on HS_I2C_SCL/HS_I2C_SDA. No GPIO-expander interrupt is required; status is polled.", (745, 645), 0.82)
+    note(schematic, "HEADSET_POWER_EN and HEADSET_AMP_EN default low through 100k pulldowns so the jack remains muted during boot.", (745, 655), 0.82)
+    for index, net_name in enumerate(("HEADSET_POWER_EN", "HEADSET_AMP_EN"), start=1):
+        resistor = add_symbol(schematic, "Device:R", f"R91{1 + index}", "100k", (820 + index * 60, 700))
+        label_two_pin_device(schematic, resistor, net_name, "GND")
+    note(schematic, "Sequence: enable codec rails, configure ES8316, enable TPA6132A2, then ramp software volume.", (745, 740), 0.82)
+
+    for reference, net_name, x in (
+        ("#FLG0901", "SYS_5V15", 80), ("#FLG0902", "LOGIC_3V3", 125),
+        ("#FLG0903", "LOGIC_1V8", 170), ("#FLG0904", "GND", 215),
+        ("#FLG0905", "HEADSET_AGND", 260),
+        ("#FLG0906", "HPAMP_HPVDD", 305),
+        ("#FLG0907", "HPAMP_HPVSS", 350),
+    ):
+        flag = add_symbol(schematic, "power:PWR_FLAG", reference, "PWR_FLAG", (x, 760))
+        label_pin_auto(schematic, flag, 1, net_name, 0.64)
+
+    output = folder / f"{name}.kicad_sch"
+    schematic.save(output)
+    return output
+
+
+def build_power_regulators_sheet() -> Path:
+    """Capture the protected raw bus, production regulator tree, and rail supervision."""
+    folder = ROOT / "CM5-CARRIER"
+    name = "Power-Regulators-A1"
+    create_project(folder, name)
+    schematic = create_schematic(name)
+    schematic.set_paper_size("A0")
+    schematic.set_title_block(
+        title="Radxa CM5 ProComm Carrier - Power Regulators and Sequencing",
+        date="2026-08-14",
+        rev="A1",
+        company="ProComm",
+        comments={
+            1: "RAW_OUT_LOAD accepts 10.5 V to 30 V after source selection and load telemetry",
+            2: "22.4 mF / 50 V installed hold-up bank; optional stuffing raises total above 47 mF",
+            3: "DISPLAY_12V is a fused 12 V / 2.5 A harness branch with no dedicated eFuse",
+            4: "Component values are Rev A1 starting values; bench loop, thermal, and transfer validation remain mandatory",
+        },
+    )
+
+    heading(schematic, "1. PROTECTED RAW INPUT AND NO-BLINK HOLD-UP", (35, 18), 1.85)
+    add_connector(
+        schematic,
+        "Connector_Generic:Conn_02x02_Odd_Even",
+        "J1100",
+        "RAW_POWER_FROM_PWR_SELECT",
+        (65, 70),
+        {1: "RAW_OUT_LOAD", 2: "RAW_OUT_LOAD", 3: "GND", 4: "GND"},
+        MF_2X2,
+        "Molex",
+        "43045-0412",
+        two_row=True,
+    )
+    note(schematic, "Mates with PWR-SELECT J301; 15 A path; do not mate live.", (35, 105), 0.72)
+    raw_caps = (
+        ("C1100", "5600uF 50V", "LGU1H562MELZ", 125, False),
+        ("C1101", "5600uF 50V", "LGU1H562MELZ", 160, False),
+        ("C1102", "5600uF 50V", "LGU1H562MELZ", 195, False),
+        ("C1103", "5600uF 50V", "LGU1H562MELZ", 230, False),
+        ("C1104", "5600uF 50V DNP", "LGU1H562MELZ", 125, True),
+        ("C1105", "5600uF 50V DNP", "LGU1H562MELZ", 160, True),
+        ("C1106", "5600uF 50V DNP", "LGU1H562MELZ", 195, True),
+        ("C1107", "5600uF 50V DNP", "LGU1H562MELZ", 230, True),
+    )
+    for index, (reference, value, mpn, x, option) in enumerate(raw_caps):
+        capacitor = add_symbol(
+            schematic,
+            "Device:C_Polarized",
+            reference,
+            value,
+            (x, 60 if index < 4 else 115),
+            manufacturer="Nichicon",
+            mpn=mpn,
+        )
+        if option:
+            capacitor.add_property("Assembly", "DNP - hold-up option", hidden=True)
+        label_two_pin_device(schematic, capacitor, "RAW_OUT_LOAD", "GND")
+    option_cap = add_symbol(
+        schematic,
+        "Device:C_Polarized",
+        "C1108",
+        "2200uF 50V DNP",
+        (265, 115),
+        manufacturer="Nichicon",
+        mpn="UHE1H222MHD6",
+    )
+    option_cap.add_property("Assembly", "DNP - 47 mF option", hidden=True)
+    label_two_pin_device(schematic, option_cap, "RAW_OUT_LOAD", "GND")
+    raw_hf = add_symbol(schematic, "Device:C", "C1109", "1uF 50V X7R", (265, 60))
+    label_two_pin_device(schematic, raw_hf, "RAW_OUT_LOAD", "GND")
+    note(schematic, "4 x 5600 uF installed = 22.4 mF. PWR-SELECT local 660 uF remains additive.", (110, 160), 0.72)
+    note(schematic, "Stuff C1104-C1108 only after source MOSFET SOA and inrush tests; fully stuffed total is about 47.7 mF.", (110, 170), 0.72)
+
+    heading(schematic, "2. SYS_5V15 / 12 A SYNCHRONOUS BUCK", (320, 18), 1.85)
+    sys_controller = add_symbol(
+        schematic,
+        "CM5Carrier:LM5146RGY",
+        "U1110",
+        "LM5146RGYR",
+        (405, 100),
+        footprint="Package_DFN_QFN:Texas_RGY_R-PVQFN-N20_EP2.05x3.05mm_ThermalVias",
+        manufacturer="Texas Instruments",
+        mpn="LM5146RGYR",
+    )
+    sys_pin_map = {
+        1: "SYS_EN_UVLO", 2: "SYS_RT", 3: "SYS_SS", 4: "SYS_COMP",
+        5: "SYS_FB", 6: "GND", 7: "SYS_SYNCOUT_TP", 8: "GND",
+        10: "SYS_5V15_PG", 11: "SYS_ILIM", 12: "GND", 13: "SYS_LO",
+        14: "SYS_VCC", 15: "GND", 17: "SYS_BST", 18: "SYS_HO",
+        19: "SYS_SW", 20: "RAW_OUT_LOAD",
+    }
+    for pin, net_name in sys_pin_map.items():
+        label_pin_auto(schematic, sys_controller, pin, net_name, 0.52)
+    for pin in (9, 16):
+        schematic.no_connects.add(pin_xy(sys_controller, pin))
+    sys_parts = (
+        ("R1110", "Device:R", "40.2k", "SYS_RT", "GND", "Yageo", "RC0603FR-0740K2L", 330, 190),
+        ("C1110", "Device:C", "47nF", "SYS_SS", "GND", "Murata", "GRM188R71H473KA61D", 375, 190),
+        ("R1111", "Device:R", "24.0k 0.1%", "SYS_5V15", "SYS_FB", "Vishay", "TNPW060324K0BEEA", 420, 190),
+        ("R1112", "Device:R", "4.42k 0.1%", "SYS_FB", "GND", "Vishay", "TNPW06034K42BEEA", 465, 190),
+        ("R1113", "Device:R", "7.5k", "SYS_COMP", "SYS_COMP_C", "Yageo", "RC0603FR-077K5L", 510, 190),
+        ("C1111", "Device:C", "6.8nF", "SYS_COMP_C", "GND", "Murata", "GRM1885C1H682JA01D", 555, 190),
+        ("C1112", "Device:C", "150pF C0G", "SYS_COMP", "SYS_FB", "Murata", "GRM1885C1H151JA01D", 510, 230),
+        ("R1114", "Device:R", "499R", "SYS_ILIM", "SYS_SW", "Yageo", "RC0603FR-07499RL", 555, 230),
+        ("R1115", "Device:R", "69.8k 1%", "RAW_OUT_LOAD", "SYS_EN_UVLO", "Yageo", "RC0603FR-0769K8L", 330, 235),
+        ("R1116", "Device:R", "10k 1%", "SYS_EN_UVLO", "GND", "Yageo", "RC0603FR-0710KL", 375, 235),
+    )
+    for reference, lib_id, value, net_1, net_2, manufacturer, mpn, x, y in sys_parts:
+        part = add_symbol(schematic, lib_id, reference, value, (x, y), manufacturer=manufacturer, mpn=mpn)
+        label_two_pin_device(schematic, part, net_1, net_2)
+    q_sys_high = add_symbol(schematic, "Transistor_FET:Q_NMOS_GSD", "Q1110", "NVMFS6B25NL", (590, 85), manufacturer="onsemi", mpn="NVMFS6B25NLT1G")
+    for pin, net_name in {1: "SYS_HO", 2: "SYS_SW", 3: "RAW_OUT_LOAD"}.items():
+        label_pin_auto(schematic, q_sys_high, pin, net_name, 0.55)
+    q_sys_low = add_symbol(schematic, "Transistor_FET:Q_NMOS_GSD", "Q1111", "FDWS86068-F085", (590, 135), manufacturer="onsemi", mpn="FDWS86068-F085")
+    for pin, net_name in {1: "SYS_LO", 2: "GND", 3: "SYS_SW"}.items():
+        label_pin_auto(schematic, q_sys_low, pin, net_name, 0.55)
+    sys_inductor = add_symbol(schematic, "Device:L", "L1110", "3.3uH / 28.6A", (650, 110), manufacturer="TDK", mpn="SPM10065VTT-3R3M-D")
+    label_two_pin_device(schematic, sys_inductor, "SYS_SW", "SYS_5V15")
+    for index, x in enumerate((620, 650, 680, 710, 740), start=3):
+        cap = add_symbol(schematic, "Device:C", f"C111{index}", "47uF 6.3V X7R", (x, 190), manufacturer="Murata", mpn="GCM32ER70J476KE19L")
+        label_two_pin_device(schematic, cap, "SYS_5V15", "GND")
+    sys_boot = add_symbol(schematic, "Device:C", "C1118", "100nF 25V X7R", (600, 230), manufacturer="Murata", mpn="GRM188R71E104KA01D")
+    label_two_pin_device(schematic, sys_boot, "SYS_BST", "SYS_SW")
+    sys_vcc = add_symbol(schematic, "Device:C", "C1119", "4.7uF 10V X7R", (645, 230), manufacturer="Murata", mpn="GRM21BR71A475KA73L")
+    label_two_pin_device(schematic, sys_vcc, "SYS_VCC", "GND")
+    for index, x in enumerate((680, 710, 740, 770), start=4):
+        cap = add_symbol(schematic, "Device:C", f"C119{index}", "4.7uF 50V X7R", (x, 230), manufacturer="Murata", mpn="GRM31CR71H475KA12L")
+        label_two_pin_device(schematic, cap, "RAW_OUT_LOAD", "GND")
+    note(schematic, "TI 5 V / 12 A reference adapted to 5.144 V. 300 kHz; target loop crossover about 20 kHz.", (320, 280), 0.72)
+
+    heading(schematic, "3. AUX_12V / 8 A FOUR-SWITCH BUCK-BOOST", (775, 18), 1.85)
+    aux_controller = add_symbol(
+        schematic,
+        "CM5Carrier:LM5176PWP_A1",
+        "U1120",
+        "LM5176PWP",
+        (865, 105),
+        footprint="Package_SO:HTSSOP-28-1EP_4.4x9.7mm_P0.65mm_EP3.4x9.5mm_ThermalVias",
+        manufacturer="Texas Instruments",
+        mpn="LM5176PWP",
+    )
+    aux_pin_map = {
+        1: "AUX_EN_UVLO", 2: "RAW_OUT_LOAD", 3: "RAW_OUT_LOAD", 4: "AUX_MODE",
+        5: "AUX_DITH", 6: "AUX_RT", 7: "AUX_SLOPE", 8: "AUX_SS",
+        9: "AUX_COMP", 10: "GND", 11: "AUX_FB", 12: "AUX_12V",
+        13: "AUX_12V", 14: "AUX_12V_PRE", 15: "GND", 16: "AUX_CS",
+        17: "AUX_12V_PG", 18: "AUX_SW2", 19: "AUX_HDRV2", 20: "AUX_BOOT2",
+        21: "AUX_LDRV2", 22: "GND", 23: "AUX_VCC", 24: "AUX_12V",
+        25: "AUX_LDRV1", 26: "AUX_BOOT1", 27: "AUX_HDRV1", 28: "AUX_SW1",
+        29: "GND",
+    }
+    for pin, net_name in aux_pin_map.items():
+        label_pin_auto(schematic, aux_controller, pin, net_name, 0.48)
+    for index, (reference, gate, source, drain, mpn, x, y) in enumerate(
+        (
+            ("Q1120", "AUX_HDRV1", "AUX_SW1", "RAW_OUT_LOAD", "CSD18532Q5B", 1010, 65),
+            ("Q1121", "AUX_LDRV1", "AUX_CS", "AUX_SW1", "CSD18532Q5B", 1010, 110),
+            ("Q1122", "AUX_HDRV2", "AUX_SW2", "AUX_12V_PRE", "CSD17573Q5B", 1070, 65),
+            ("Q1123", "AUX_LDRV2", "AUX_CS", "AUX_SW2", "CSD17573Q5B", 1070, 110),
+        )
+    ):
+        mosfet = add_symbol(schematic, "Transistor_FET:Q_NMOS_GSD", reference, mpn, (x, y), manufacturer="Texas Instruments", mpn=mpn)
+        for pin, net_name in {1: gate, 2: source, 3: drain}.items():
+            label_pin_auto(schematic, mosfet, pin, net_name, 0.48)
+    aux_inductor = add_symbol(schematic, "Device:L", "L1120", "4.7uH / 20.9A Isat", (1040, 165), manufacturer="Wurth Elektronik", mpn="74439370047")
+    label_two_pin_device(schematic, aux_inductor, "AUX_SW1", "AUX_SW2")
+    sense = add_symbol(schematic, "Device:R", "R1120", "6mR 2W", (1100, 165), manufacturer="Susumu", mpn="KRL6432E-M-R006-F-T1")
+    label_two_pin_device(schematic, sense, "AUX_12V_PRE", "AUX_12V")
+    main_sense = add_symbol(schematic, "Device:R", "R1126", "4mR 6W", (1145, 165), manufacturer="Susumu", mpn="KRL11050-C-R004-F-T1")
+    label_two_pin_device(schematic, main_sense, "AUX_CS", "GND")
+    aux_parts = (
+        ("R1121", "Device:R", "27.4k", "AUX_RT", "GND", 785, 200),
+        ("R1122", "Device:R", "93.1k", "AUX_MODE", "GND", 825, 200),
+        ("C1120", "Device:C", "220pF", "AUX_SLOPE", "GND", 865, 200),
+        ("C1121", "Device:C", "100nF", "AUX_SS", "GND", 905, 200),
+        ("R1123", "Device:R", "280k 0.1%", "AUX_12V", "AUX_FB", 945, 200),
+        ("R1124", "Device:R", "20k 0.1%", "AUX_FB", "GND", 985, 200),
+        ("R1125", "Device:R", "10k", "AUX_COMP", "AUX_COMP_C", 1025, 220),
+        ("C1122", "Device:C", "33nF", "AUX_COMP_C", "GND", 1065, 220),
+        ("C1123", "Device:C", "560pF", "AUX_COMP", "AUX_FB", 1105, 220),
+        ("R1127", "Device:R", "73.2k 1%", "RAW_OUT_LOAD", "AUX_EN_UVLO", 785, 285),
+        ("R1128", "Device:R", "10k 1%", "AUX_EN_UVLO", "GND", 825, 285),
+        ("C1128", "Device:C", "100nF 25V", "AUX_BOOT1", "AUX_SW1", 980, 285),
+        ("C1129", "Device:C", "100nF 25V", "AUX_BOOT2", "AUX_SW2", 1020, 285),
+        ("C1200", "Device:C", "4.7uF 10V", "AUX_VCC", "GND", 1060, 285),
+        ("C1201", "Device:C", "2.2nF", "AUX_DITH", "GND", 1100, 285),
+    )
+    for reference, lib_id, value, net_1, net_2, x, y in aux_parts:
+        part = add_symbol(schematic, lib_id, reference, value, (x, y))
+        label_two_pin_device(schematic, part, net_1, net_2)
+    for index, x in enumerate((790, 825, 860, 895), start=4):
+        cap = add_symbol(schematic, "Device:C_Polarized", f"C112{index}", "330uF 16V polymer", (x, 250), manufacturer="Panasonic", mpn="16SVP330M")
+        label_two_pin_device(schematic, cap, "AUX_12V", "GND")
+    for reference, boot_net, x in (("D1120", "AUX_BOOT1", 900), ("D1121", "AUX_BOOT2", 940)):
+        diode = add_symbol(schematic, "Device:D_Schottky", reference, "BAT54WS", (x, 285), manufacturer="Diodes Incorporated", mpn="BAT54WS-7-F")
+        label_two_pin_device(schematic, diode, "AUX_VCC", boot_net)
+    for index, x in enumerate((1075, 1100, 1125, 1150), start=2):
+        cap = add_symbol(schematic, "Device:C", f"C120{index}", "4.7uF 50V X7R", (x, 250), manufacturer="Murata", mpn="GRM31CR71H475KA12L")
+        label_two_pin_device(schematic, cap, "RAW_OUT_LOAD", "GND")
+    note(schematic, "Revised 12 V / 8 A starting design. Recalculate losses and compensation, then verify by Bode plot and full thermal load before routing.", (775, 305), 0.72)
+
+    def place_lm614_stage(
+        reference: str,
+        part: str,
+        rail: str,
+        current: str,
+        fb_bottom: str,
+        pgood: str,
+        x: float,
+        y: float,
+    ) -> None:
+        base = int(reference[1:])
+        controller = add_symbol(
+            schematic,
+            f"CM5Carrier:{part}",
+            reference,
+            part,
+            (x, y),
+            manufacturer="Texas Instruments",
+            mpn=part,
+        )
+        prefix = rail.replace("_", "")
+        for pin, net_name in {
+            1: rail, 2: f"{prefix}_VCC", 3: "GND", 4: f"{prefix}_FB",
+            5: pgood, 6: f"{prefix}_RT", 7: "RAW_RAIL_EN", 8: "RAW_OUT_LOAD",
+            9: "GND", 10: f"{prefix}_SW", 11: "GND", 12: "RAW_OUT_LOAD",
+            13: f"{prefix}_RBOOT", 14: f"{prefix}_CBOOT",
+        }.items():
+            label_pin_auto(schematic, controller, pin, net_name, 0.46)
+        inductor = add_symbol(schematic, "Device:L", f"L{base}", f"4.7uH / {current}", (x + 65, y), manufacturer="Coilcraft", mpn="XAL7070-472MEC")
+        label_two_pin_device(schematic, inductor, f"{prefix}_SW", rail)
+        rt = add_symbol(schematic, "Device:R", f"R{base}", "33.2k / 400kHz", (x - 55, y + 70))
+        label_two_pin_device(schematic, rt, f"{prefix}_RT", "GND")
+        rtop = add_symbol(schematic, "Device:R", f"R{base + 1}", "100k 0.1%", (x, y + 70))
+        label_two_pin_device(schematic, rtop, rail, f"{prefix}_FB")
+        rbottom = add_symbol(schematic, "Device:R", f"R{base + 2}", fb_bottom, (x + 45, y + 70))
+        label_two_pin_device(schematic, rbottom, f"{prefix}_FB", "GND")
+        boot = add_symbol(schematic, "Device:C", f"C{base}", "100nF", (x + 90, y + 70))
+        label_two_pin_device(schematic, boot, f"{prefix}_CBOOT", f"{prefix}_SW")
+        rboot = add_symbol(schematic, "Device:R", f"R{base + 3}", "0R RBOOT", (x + 135, y + 70), manufacturer="Yageo", mpn="RC0603JR-070RL")
+        label_two_pin_device(schematic, rboot, f"{prefix}_RBOOT", f"{prefix}_CBOOT")
+        for index, dx in enumerate((-60, -25), start=1):
+            cap = add_symbol(schematic, "Device:C", f"C{base + index}", "4.7uF 50V", (x + dx, y + 120))
+            label_two_pin_device(schematic, cap, "RAW_OUT_LOAD", "GND")
+        for index, dx in enumerate((20, 55, 90), start=1):
+            cap = add_symbol(schematic, "Device:C", f"C{base + 2 + index}", "47uF X7R", (x + dx, y + 120), manufacturer="Murata", mpn="GRM32ER71A476KE15L")
+            label_two_pin_device(schematic, cap, rail, "GND")
+        vcc_cap = add_symbol(schematic, "Device:C", f"C{base + 6}", "1uF 10V X7R", (x + 135, y + 120), manufacturer="Murata", mpn="GRM188R71A105KA61D")
+        label_two_pin_device(schematic, vcc_cap, f"{prefix}_VCC", "GND")
+
+    heading(schematic, "4. DEDICATED RADIO, NETWORK, AND LOGIC BUCKS", (35, 315), 1.85)
+    place_lm614_stage("U1130", "LM61460RJR", "MODEM_3V8_PRE", "15.2A Isat", "35.7k 0.1%", "MODEM_3V8_PRE_PG", 125, 385)
+    place_lm614_stage("U1140", "LM61440RJR", "WIFI_3V3_PRE", "15.2A Isat", "43.2k 0.1%", "WIFI_3V3_PRE_PG", 405, 385)
+    place_lm614_stage("U1150", "LM61440RJR", "NET_3V3", "15.2A Isat", "43.2k 0.1%", "NET_3V3_PG", 685, 385)
+    place_lm614_stage("U1160", "LM61440RJR", "LOGIC_3V3", "15.2A Isat", "43.2k 0.1%", "LOGIC_3V3_PG", 965, 385)
+
+    modem_efuse = add_symbol(
+        schematic, "CM5Carrier:TPS259827LNRGE", "U1131", "TPS259827LNRGER", (155, 580),
+        footprint="Package_DFN_QFN:Texas_RGE0024H_VQFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.7mm_ThermalVias",
+        manufacturer="Texas Instruments", mpn="TPS259827LNRGER",
+    )
+    modem_map = {
+        1: "MODEM_3V8_PRE", 2: "MODEM_3V8_PRE", 3: "MODEM_3V8_PRE", 4: "GND", 5: "GND",
+        6: "MODEM_POWER_EN", 7: "MODEM_ITIMER", 8: "MODEM_ILIM", 9: "MODEM_IMON",
+        10: "GND", 11: "GND", 12: "GND", 13: "MODEM_3V8_PG", 14: "GND",
+        15: "MODEM_DVDT", 16: "MODEM_3V8_PRE", 17: "MODEM_3V8", 18: "MODEM_3V8",
+        19: "MODEM_3V8", 20: "MODEM_3V8", 21: "MODEM_3V8", 22: "MODEM_3V8",
+        23: "MODEM_3V8", 24: "MODEM_3V8",
+    }
+    for pin, net_name in modem_map.items():
+        label_pin_auto(schematic, modem_efuse, pin, net_name, 0.40)
+    modem_ilim = add_symbol(schematic, "Device:R", "R1138", "255R 1% / 6A ILIM", (65, 650))
+    label_two_pin_device(schematic, modem_ilim, "MODEM_ILIM", "GND")
+    modem_timer = add_symbol(schematic, "Device:C", "C1138", "4.7nF", (110, 650))
+    label_two_pin_device(schematic, modem_timer, "MODEM_ITIMER", "GND")
+    modem_dvdt = add_symbol(schematic, "Device:C", "C1210", "10nF", (155, 650))
+    label_two_pin_device(schematic, modem_dvdt, "MODEM_DVDT", "GND")
+    for index, x in enumerate((200, 235, 270, 305), start=1):
+        cap = add_symbol(schematic, "Device:C_Polarized", f"C{1188 + index}", "330uF 6.3V polymer", (x, 650), manufacturer="Panasonic", mpn="6SVPE330M")
+        label_two_pin_device(schematic, cap, "MODEM_3V8", "GND")
+    note(schematic, "TPS259827L active current limiter; 255 ohm ILIM; 1320 uF local modem bulk; validate weak-signal TX bursts.", (35, 705), 0.70)
+
+    wifi_switch = add_symbol(schematic, "CM5Carrier:TPS22990DML", "U1141", "TPS22990DMLR", (430, 580), manufacturer="Texas Instruments", mpn="TPS22990DMLR")
+    for pin, net_name in {
+        1: "WIFI_DVDT", 3: "WIFI_3V3_PRE", 4: "LOGIC_3V3", 5: "WIFI_POWER_EN",
+        6: "GND", 7: "WIFI_3V3_PG", 8: "WIFI_3V3", 9: "WIFI_3V3", 10: "WIFI_3V3",
+    }.items():
+        label_pin_auto(schematic, wifi_switch, pin, net_name, 0.44)
+    schematic.no_connects.add(pin_xy(wifi_switch, 2))
+    wifi_ct = add_symbol(schematic, "Device:C", "C1149", "10nF", (375, 650))
+    label_two_pin_device(schematic, wifi_ct, "WIFI_DVDT", "GND")
+    wifi_bulk = add_symbol(schematic, "Device:C_Polarized", "C1193", "470uF 6.3V polymer", (475, 650), manufacturer="Panasonic", mpn="6SVPE470M")
+    label_two_pin_device(schematic, wifi_bulk, "WIFI_3V3", "GND")
+    note(schematic, "TPS22990 provides controlled Wi-Fi startup and PG; it is not a current limiter.", (350, 705), 0.70)
+
+    heading(schematic, "5. LOW-NOISE POINT-OF-LOAD RAILS", (555, 555), 1.75)
+    pol_specs = (
+        ("U1170", "PCIE_1V0", "SYS_5V15", "1.24k", 2.0, 570, 620),
+        ("U1171", "LOGIC_1V8", "SYS_5V15", "6.19k", 1.5, 800, 620),
+        ("U1172", "HEADSET_3V3", "SYS_5V15", "15.6k", 1.0, 570, 745),
+        ("U1173", "AUDIO_PRE_5V5", "AUDIO_12V", "29.4k", 1.0, 800, 745),
+    )
+    for reference, rail, input_rail, rtop_value, rating, x, y in pol_specs:
+        passive_base = int(reference[1:]) * 10
+        pol = add_symbol(
+            schematic, "CM5Carrier:TPS62913RPU", reference, "TPS62913RPU", (x, y),
+            footprint="Package_DFN_QFN:Texas_RPU0010A_VQFN-HR-10_2x2mm_P0.5mm",
+            manufacturer="Texas Instruments", mpn="TPS62913RPUT",
+        )
+        prefix = rail.replace("_", "")
+        for pin, net_name in {
+            1: f"{prefix}_EN", 2: f"{prefix}_SW", 3: rail, 4: "GND", 5: f"{rail}_PG",
+            6: input_rail, 7: "GND", 8: f"{prefix}_NRSS", 9: f"{prefix}_FB", 10: f"{prefix}_SCONF",
+        }.items():
+            label_pin_auto(schematic, pol, pin, net_name, 0.38)
+        inductor = add_symbol(schematic, "Device:L", f"L{passive_base}", f"2.2uH / {rating:.1f}A rail", (x + 60, y), manufacturer="Coilcraft", mpn="XGL4030-222MEC")
+        label_two_pin_device(schematic, inductor, f"{prefix}_SW", rail)
+        rtop = add_symbol(schematic, "Device:R", f"R{passive_base}", f"{rtop_value} 0.1%", (x - 45, y + 55))
+        label_two_pin_device(schematic, rtop, rail, f"{prefix}_FB")
+        rbottom = add_symbol(schematic, "Device:R", f"R{passive_base + 1}", "4.99k 0.1%", (x, y + 55))
+        label_two_pin_device(schematic, rbottom, f"{prefix}_FB", "GND")
+        nrss = add_symbol(schematic, "Device:C", f"C{passive_base}", "470nF", (x + 45, y + 55))
+        label_two_pin_device(schematic, nrss, f"{prefix}_NRSS", "GND")
+        for index, dx in enumerate((-90, -65), start=4):
+            cap = add_symbol(schematic, "Device:C", f"C{passive_base + index}", "10uF 25V X7R", (x + dx, y + 55), manufacturer="Murata", mpn="GRM21BR71E106KA73L")
+            label_two_pin_device(schematic, cap, input_rail, "GND")
+        for index, dx in enumerate((65, 90, 115), start=1):
+            cap = add_symbol(schematic, "Device:C", f"C{passive_base + index}", "22uF 10V X7R", (x + dx, y + 55), manufacturer="Murata", mpn="GRM21BR71A226ME44L")
+            label_two_pin_device(schematic, cap, rail, "GND")
+        sconf = add_symbol(schematic, "Device:R", f"R{passive_base + 2}", "7.5k S-CONF", (x + 135, y - 35), manufacturer="Yageo", mpn="RC0603FR-077K5L")
+        label_two_pin_device(schematic, sconf, f"{prefix}_SCONF", "GND")
+    note(schematic, "TPS62913 uses 2.2 MHz, 470 nF NR/SS and 2.2 uH. Audio/headset variants add the optional ferrite second stage on their owning sheet.", (555, 820), 0.68)
+
+    heading(schematic, "6. AUX_12V BRANCHES AND AUDIO HANDOFF", (930, 555), 1.75)
+    branch_specs = (
+        ("F1180", "3A time-lag", "AUX_12V", "DISPLAY_12V", "0453003.MR", 925, 620),
+        ("F1181", "3A time-lag", "AUX_12V", "FAN_CPU_12V", "0453003.MR", 975, 620),
+        ("F1182", "2A time-lag", "AUX_12V", "AUDIO_12V", "0453002.MR", 1025, 620),
+        ("F1183", "0.25A fast", "AUX_12V", "NIGHT_LIGHT_12V", "0453.250MR", 1075, 620),
+        ("F1184", "3A time-lag", "AUX_12V", "FAN_AUX_12V", "0453003.MR", 1125, 620),
+    )
+    for reference, value, net_1, net_2, mpn, x, y in branch_specs:
+        fuse = add_symbol(schematic, "Device:Fuse", reference, value, (x, y), manufacturer="Littelfuse", mpn=mpn)
+        label_two_pin_device(schematic, fuse, net_1, net_2)
+    note(schematic, "DISPLAY_12V: 12 V / 2.5 A harness, simple fuse only. No dedicated monitor eFuse by requirement.", (925, 660), 0.70)
+    note(schematic, "NIGHT_LIGHT_12V: independent 0.25 A fused panel branch; no CM5 or software dependency.", (925, 670), 0.70)
+    note(schematic, "FAN_CPU_12V and FAN_AUX_12V are separate 3 A branches; every fan also has local resettable protection.", (925, 680), 0.70)
+    audio_module = add_symbol(schematic, "CM5Carrier:TRI20_1223", "U1180", "TRI 20-1223 ON AUDIO-8X8", (930, 735), manufacturer="TRACO Power", mpn="TRI 20-1223")
+    for pin, net_name in {1: "AUDIO_12V", 2: "AGND", 3: "AUDIO_P15V", 4: "AGND", 5: "AUDIO_N15V"}.items():
+        label_pin_auto(schematic, audio_module, pin, net_name, 0.48)
+    ldo_specs = (
+        ("U1181", "TPS7A2050PDBVR", "AUDIO_PRE_5V5", "ADC_5V_A", "AUDIO_ENABLE", 1005, 690),
+        ("U1182", "TPS7A2050PDBVR", "AUDIO_PRE_5V5", "DAC_5V_A", "AUDIO_ENABLE", 1090, 690),
+        ("U1183", "TPS7A2033PDBVR", "AUDIO_PRE_5V5", "AKM_3V3_D", "AUDIO_ENABLE", 1005, 765),
+        ("U1184", "TPS7A2018PDBVR", "HEADSET_3V3", "HEADSET_1V8", "HEADSET_POWER_EN", 1090, 765),
+    )
+    for index, (reference, mpn, input_rail, output_rail, enable_net, x, y) in enumerate(ldo_specs):
+        ldo = add_symbol(
+            schematic, "CM5Carrier:TPS7A20DBV_A1", reference, mpn, (x, y),
+            footprint="Package_TO_SOT_SMD:SOT-23-5",
+            manufacturer="Texas Instruments", mpn=mpn,
+        )
+        for pin, net_name in {1: input_rail, 2: "GND", 3: enable_net, 5: output_rail}.items():
+            label_pin_auto(schematic, ldo, pin, net_name, 0.40)
+        schematic.no_connects.add(pin_xy(ldo, 4))
+        input_cap = add_symbol(schematic, "Device:C", f"C{11800 + index * 2}", "1uF X7R", (x - 24, y + 28))
+        label_two_pin_device(schematic, input_cap, input_rail, "GND")
+        output_cap = add_symbol(schematic, "Device:C", f"C{11801 + index * 2}", "1uF X7R", (x + 24, y + 28))
+        label_two_pin_device(schematic, output_cap, output_rail, "GND")
+    note(schematic, "AUDIO-8X8 local: TRI 20-1223 creates +/-15 V. Separate TPS7A20 LDOs feed ADC 5 V, DAC 5 V and AKM 3.3 V; headset gets its own 1.8 V LDO.", (900, 825), 0.64)
+
+    heading(schematic, "7. SEQUENCING, POWER-GOOD, AND TEST ACCESS", (35, 735), 1.65)
+    sequence_notes = (
+        "RAW valid -> SYS_5V15, AUX_12V, LOGIC_3V3 and radio pre-regulators start from local UVLO.",
+        "SYS_5V15_PG enables LOGIC_1V8 and PCIE_1V0; hold PCIe reset until NET_3V3_PG and PCIE_1V0_PG are both valid.",
+        "Wi-Fi and modem final rails remain off until Thermal-IO asserts WIFI_POWER_EN / MODEM_POWER_EN after checks.",
+        "AUDIO_ENABLE controls the AUDIO-8X8 converters; DAC mute stays asserted through rail and clock qualification.",
+        "All PGOOD outputs are open drain; control-sheet 10k pull-ups to LOGIC_3V3 and adjacent rail test pads are required.",
+    )
+    for index, text_line in enumerate(sequence_notes):
+        note(schematic, text_line, (35, 760 + index * 11), 0.67)
+    for index, (net_name, x) in enumerate(
+        (("RAW_OUT_LOAD", 390), ("SYS_5V15", 440), ("AUX_12V", 490), ("MODEM_3V8", 540)),
+        start=0,
+    ):
+        tp = add_symbol(schematic, "Connector:TestPoint", f"TP119{index}", net_name, (x, 780))
+        label_pin_auto(schematic, tp, 1, net_name, 0.52)
+    for reference, net_name, x in (
+        ("#FLG1101", "RAW_OUT_LOAD", 415), ("#FLG1102", "SYS_5V15", 465),
+        ("#FLG1103", "AUX_12V", 515), ("#FLG1104", "GND", 565),
+    ):
+        flag = add_symbol(schematic, "power:PWR_FLAG", reference, "PWR_FLAG", (x, 835))
+        label_pin_auto(schematic, flag, 1, net_name, 0.52)
+
+    output = folder / f"{name}.kicad_sch"
+    schematic.save(output)
+    return output
+
+
+def build_thermal_io_sheet() -> Path:
+    """Capture the system I2C control plane, four fans, sensors, expanders, and LEDs."""
+    folder = ROOT / "CM5-CARRIER"
+    name = "Thermal-IO"
+    create_project(folder, name)
+    schematic = create_schematic(name)
+    schematic.set_paper_size("A0")
+    schematic.set_title_block(
+        title="Radxa CM5 ProComm Carrier - Thermal and GPIO Control",
+        date="2026-08-14",
+        rev="A1",
+        company="ProComm",
+        comments={
+            1: "EMC2305 controls CPU, modem, intake, and exhaust fans independently",
+            2: "PWM pull-ups provide full-speed hardware fallback if the controller or firmware fails",
+            3: "TMP117 sensors monitor CM5, modem, and board/power zones at 0x48/0x49/0x4A",
+            4: "TCA9535 0x20 captures source, fan, temperature, and power-monitor alerts",
+            5: "Two 12 V diffused warm-white panel lamps use an independent latching capacitive touch switch",
+        },
+    )
+
+    heading(schematic, "1. 1.8 V TO 3.3 V SYSTEM I2C CONTROL BUS", (45, 20), 1.85)
+    bus_level = add_symbol(
+        schematic,
+        "Interface:PCA9306D",
+        "U1000",
+        "PCA9306D",
+        (145, 100),
+        manufacturer="NXP",
+        mpn="PCA9306D,118",
+    )
+    for pin, net_name in {
+        1: "GND", 2: "LOGIC_1V8", 3: "SYS_I2C7_SCL", 4: "SYS_I2C7_SDA",
+        5: "CTRL_I2C_SDA", 6: "CTRL_I2C_SCL", 7: "LOGIC_3V3", 8: "LOGIC_3V3",
+    }.items():
+        label_pin_auto(schematic, bus_level, pin, net_name, 0.62)
+    for index, (rail, net_name, x) in enumerate(
+        (("LOGIC_1V8", "SYS_I2C7_SCL", 75), ("LOGIC_1V8", "SYS_I2C7_SDA", 115),
+         ("LOGIC_3V3", "CTRL_I2C_SCL", 175), ("LOGIC_3V3", "CTRL_I2C_SDA", 215)),
+        start=1,
+    ):
+        resistor = add_symbol(schematic, "Device:R", f"R100{index}", "2.2k", (x, 175))
+        label_two_pin_device(schematic, resistor, rail, net_name)
+    power_alert_pullup = add_symbol(schematic, "Device:R", "R1005", "4.7k", (255, 175))
+    label_two_pin_device(schematic, power_alert_pullup, "LOGIC_3V3", "PWR_MON_ALERT_N")
+    note(schematic, "The control branch is isolated by its own PCA9306. Recheck total bus capacitance with the separate AUDIO-8X8 branch populated.", (45, 215), 0.8)
+
+    def place_expander(reference: str, address: int, x: float, pin_map: dict[int, str]) -> None:
+        expander = add_symbol(
+            schematic,
+            "Interface_Expansion:TCA9535PWR",
+            reference,
+            f"TCA9535PWR_0x{address:02X}",
+            (x, 115),
+            manufacturer="Texas Instruments",
+            mpn="TCA9535PWR",
+        )
+        common = {
+            1: f"{reference}_INT_N", 2: "GND", 3: "GND",
+            12: "GND", 21: "GND" if address == 0x20 else "LOGIC_3V3",
+            22: "CTRL_I2C_SCL", 23: "CTRL_I2C_SDA", 24: "LOGIC_3V3",
+        }
+        for pin, net_name in {**common, **pin_map}.items():
+            label_pin_auto(schematic, expander, pin, net_name, 0.56)
+        note(schematic, f"{reference}: 7-bit address 0x{address:02X}; INT is test-point only and firmware polls status.", (x - 75, 240), 0.76)
+
+    heading(schematic, "2. TWO 16-BIT GPIO EXPANDERS", (290, 20), 1.85)
+    place_expander(
+        "U1001",
+        0x20,
+        390,
+        {
+            4: "CH_24V_N", 5: "CH_BAT_N", 6: "VALID_24V_N", 7: "VALID_BAT_N",
+            8: "BAT_LOW_N", 9: "FAN_ALERT_N", 10: "TEMP_ALERT_N", 11: "PWR_MON_ALERT_N",
+            13: "LED_PWR_N", 14: "LED_BACKUP_N", 15: "LED_WIFI_N", 16: "LED_CELL_N",
+            17: "LED_TEMP_N", 18: "LED_AUDIO_N", 19: "AUDIO_PRESENT_N", 20: "AUD_IRQ_N",
+        },
+    )
+    place_expander(
+        "U1002",
+        0x21,
+        625,
+        {
+            4: "AUDIO_ENABLE", 5: "AUD_ADC_RST_N", 6: "AUD_DAC_RST_N", 7: "AUD_DAC_MUTE_N",
+            8: "HEADSET_POWER_EN", 9: "HEADSET_AMP_EN", 10: "MODEM_FULL_CARD_POWER_OFF_N",
+            11: "MODEM_W_DISABLE1_N", 13: "MODEM_RESET_N", 14: "MODEM_SIM_MUX_SEL_OD",
+            15: "WIFI_DISABLE1_N", 16: "WAN2_RESET_LOCAL_N", 17: "LAN1_RESET_LOCAL_N",
+            18: "LAN2_RESET_LOCAL_N", 19: "MODEM_WAKE_N", 20: "MODEM_STATUS_LED_N",
+        },
+    )
+    note(schematic, "TCA9535 outputs power up as inputs. External straps below define safe reset, mute, radio, and amplifier states.", (290, 270), 0.82)
+    safe_straps = (
+        ("R1010", "100k", "AUDIO_ENABLE", "GND"),
+        ("R1011", "100k", "AUD_DAC_MUTE_N", "GND"),
+        ("R1012", "100k", "MODEM_FULL_CARD_POWER_OFF_N", "LOGIC_3V3"),
+        ("R1013", "100k", "MODEM_W_DISABLE1_N", "GND"),
+        ("R1014", "100k", "MODEM_RESET_N", "LOGIC_3V3"),
+        ("R1015", "100k", "WIFI_DISABLE1_N", "GND"),
+        ("R1016", "100k", "WAN2_RESET_LOCAL_N", "LOGIC_3V3"),
+        ("R1017", "100k", "LAN1_RESET_LOCAL_N", "LOGIC_3V3"),
+        ("R1018", "100k", "LAN2_RESET_LOCAL_N", "LOGIC_3V3"),
+    )
+    for index, (reference, value, net_1, net_2) in enumerate(safe_straps):
+        resistor = add_symbol(schematic, "Device:R", reference, value, (805 + (index % 3) * 85, 65 + (index // 3) * 65))
+        label_two_pin_device(schematic, resistor, net_1, net_2)
+    note(schematic, "W_DISABLE and WIFI_DISABLE are held active during boot; software releases them only after power and thermal checks pass.", (790, 270), 0.78)
+
+    heading(schematic, "3. EMC2305 FOUR-FAN CONTROL WITH FAILSAFE", (45, 315), 1.9)
+    fan_controller = add_symbol(
+        schematic,
+        "Driver_Motor:EMC2305-x-AP",
+        "U1020",
+        "EMC2305-1-AP-TR",
+        (160, 415),
+        manufacturer="Microchip",
+        mpn="EMC2305-1-AP-TR",
+    )
+    for pin, net_name in {
+        1: "CTRL_I2C_SDA", 2: "CTRL_I2C_SCL", 3: "LOGIC_3V3",
+        4: "EMC2305_ADDR", 5: "CPU_FAN_PWM", 6: "CPU_FAN_TACH",
+        7: "MODEM_FAN_PWM", 8: "MODEM_FAN_TACH", 9: "INTAKE_FAN_PWM",
+        10: "INTAKE_FAN_TACH", 12: "FAN_ALERT_N", 13: "EXHAUST_FAN_PWM",
+        14: "EXHAUST_FAN_TACH", 17: "GND",
+    }.items():
+        label_pin_auto(schematic, fan_controller, pin, net_name, 0.58)
+    for pin in (11, 15, 16):
+        schematic.no_connects.add(pin_xy(fan_controller, pin))
+    address_resistor = add_symbol(schematic, "Device:R", "R1020", "4.7k 5%", (160, 510))
+    label_two_pin_device(schematic, address_resistor, "LOGIC_3V3", "EMC2305_ADDR")
+    alert_pullup = add_symbol(schematic, "Device:R", "R1021", "4.7k", (225, 510))
+    label_two_pin_device(schematic, alert_pullup, "LOGIC_3V3", "FAN_ALERT_N")
+    fan_decoupling = add_symbol(schematic, "Device:C", "C1020", "100nF", (290, 510))
+    label_two_pin_device(schematic, fan_decoupling, "LOGIC_3V3", "GND")
+    note(schematic, "ADDR_SEL 4.7k to 3.3 V selects 7-bit SMBus address 0x2E; internal clock is used.", (45, 550), 0.8)
+    note(schematic, "Enclosure channels: 26.00 kHz base / divide 26 = 1.000 kHz PWM; direct duty with tach monitoring, 100% start and 30% minimum running duty.", (360, 550), 0.72)
+
+    fan_specs = (
+        ("J1021", "CPU_FAN", "FAN_CPU_12V", "CPU_FAN_12V", "2.0A hold", "CPU_FAN_TACH", "CPU_FAN_PWM", 395),
+        ("J1022", "MODEM_FAN", "FAN_AUX_12V", "MODEM_FAN_12V", "1.0A hold", "MODEM_FAN_TACH", "MODEM_FAN_PWM", 575),
+        ("J1023", "THA0412AD-TZW3 INTAKE", "FAN_AUX_12V", "INTAKE_FAN_12V", "1.0A hold", "INTAKE_FAN_TACH", "INTAKE_FAN_PWM", 755),
+        ("J1024", "THA0412AD-TZW3 EXHAUST", "FAN_AUX_12V", "EXHAUST_FAN_12V", "1.0A hold", "EXHAUST_FAN_TACH", "EXHAUST_FAN_PWM", 935),
+    )
+    for index, (reference, value, source_rail, fan_rail, fuse_value, tach, pwm, x) in enumerate(fan_specs, start=1):
+        add_connector(
+            schematic, "Connector_Generic:Conn_01x04", reference, value, (x, 400),
+            {1: "GND", 2: fan_rail, 3: tach, 4: pwm},
+        )
+        branch_fuse = add_symbol(schematic, "Device:Polyfuse", f"F102{index}", fuse_value, (x - 25, 475))
+        label_two_pin_device(schematic, branch_fuse, source_rail, fan_rail)
+        pwm_pullup = add_symbol(schematic, "Device:R", f"R103{index}", "10k", (x + 20, 475))
+        label_two_pin_device(schematic, pwm_pullup, "LOGIC_3V3", pwm)
+        tach_pullup = add_symbol(schematic, "Device:R", f"R104{index}", "10k", (x + 65, 475))
+        label_two_pin_device(schematic, tach_pullup, "LOGIC_3V3", tach)
+        note(schematic, value.replace("_", " "), (x - 45, 525), 0.74)
+    note(schematic, "Fan 1 is panel intake and fan 2 is panel exhaust. CPU and modem fans circulate locally beneath their dedicated mesh/keepout areas.", (360, 560), 0.82)
+    note(schematic, "All four PWM nets pull high when U1020 is absent or unpowered, commanding the selected 4-wire fans to full speed.", (360, 570), 0.82)
+
+    heading(schematic, "4. THREE HIGH-ACCURACY TEMPERATURE SENSORS", (45, 610), 1.85)
+    sensor_specs = (
+        ("U1050", "TMP117_CM5", "GND", "TEMP_ALERT_N", "0x48", 170),
+        ("U1051", "TMP117_MODEM", "LOGIC_3V3", "TEMP_ALERT_N", "0x49", 390),
+        ("U1052", "TMP117_BOARD_POWER", "CTRL_I2C_SDA", "TEMP_ALERT_N", "0x4A", 610),
+    )
+    for index, (reference, value, addr_net, alert_net, address, x) in enumerate(sensor_specs):
+        sensor = add_symbol(
+            schematic,
+            "Sensor_Temperature:TMP117xxDRV",
+            reference,
+            value,
+            (x, 680),
+            manufacturer="Texas Instruments",
+            mpn="TMP117MAIDRVR",
+        )
+        for pin, net_name in {
+            1: "CTRL_I2C_SCL", 2: "GND", 3: alert_net,
+            4: addr_net, 5: "LOGIC_3V3", 6: "CTRL_I2C_SDA",
+        }.items():
+            label_pin_auto(schematic, sensor, pin, net_name, 0.59)
+        bypass = add_symbol(schematic, "Device:C", f"C105{index}", "100nF", (x - 30, 750))
+        label_two_pin_device(schematic, bypass, "LOGIC_3V3", "GND")
+        if index == 0:
+            pullup = add_symbol(schematic, "Device:R", "R1050", "5.1k", (x + 35, 750))
+            label_two_pin_device(schematic, pullup, "LOGIC_3V3", alert_net)
+        note(schematic, f"{value.replace('_', ' ')} / {address}", (x - 60, 790), 0.75)
+    note(schematic, "The three open-drain TMP117 alerts share TEMP_ALERT_N; firmware reads 0x48/0x49/0x4A to identify the source.", (45, 810), 0.8)
+
+    heading(schematic, "5. SIX TOP-PANEL STATUS LED DRIVERS", (790, 610), 1.75)
+    led_specs = (
+        ("D1060", "PWR_GREEN", "LED_PWR_N", 805),
+        ("D1061", "BACKUP_VIOLET", "LED_BACKUP_N", 870),
+        ("D1062", "WIFI_BLUE", "LED_WIFI_N", 935),
+        ("D1063", "CELL_AMBER", "LED_CELL_N", 1000),
+        ("D1064", "TEMP_RED", "LED_TEMP_N", 1065),
+        ("D1065", "AUDIO_CYAN", "LED_AUDIO_N", 1130),
+    )
+    for index, (reference, value, control_net, x) in enumerate(led_specs):
+        resistor = add_symbol(schematic, "Device:R", f"R106{index}", "1k", (x, 685))
+        label_two_pin_device(schematic, resistor, "LOGIC_3V3", f"{value}_A")
+        led = add_symbol(schematic, "Device:LED", reference, value, (x, 745))
+        label_two_pin_device(schematic, led, f"{value}_A", control_net)
+        note(schematic, value.replace("_", " "), (x - 28, 790), 0.66)
+    note(schematic, "TCA9535 sinks LED current. Final LED MPNs and resistor values follow top-panel brightness and color review.", (790, 810), 0.75)
+
+    heading(schematic, "6. INDEPENDENT WARM-WHITE PANEL LIGHTS", (1015, 315), 1.55)
+    night_switch = add_connector(
+        schematic,
+        "Connector_Generic:Conn_01x06",
+        "S1070",
+        "CS7L2FR TOUCH LATCH",
+        (1045, 390),
+        {
+            1: "GND",
+            3: "CS_GREEN_RING_K",
+            5: "NIGHT_LIGHT_SINK",
+            6: "NIGHT_LIGHT_12V",
+        },
+        manufacturer="E-Switch",
+        mpn="CS7L2FR",
+    )
+    for pin in (2, 4):
+        schematic.no_connects.add(pin_xy(night_switch, pin))
+    ring_resistor = add_symbol(
+        schematic,
+        "Device:R",
+        "R1070",
+        "1k ring limit",
+        (1110, 390),
+        manufacturer="Yageo",
+        mpn="RC0603FR-071KL",
+    )
+    label_two_pin_device(schematic, ring_resistor, "CS_GREEN_RING_K", "NIGHT_LIGHT_SINK")
+    for index, x in enumerate((1080, 1150)):
+        lamp = add_symbol(
+            schematic,
+            "Device:LED",
+            f"D107{index}",
+            "YIS LS102W 12V WARM WHITE",
+            (x, 475),
+            manufacturer="YIS Marine",
+            mpn="LS102W",
+        )
+        label_two_pin_device(schematic, lamp, "NIGHT_LIGHT_SINK", "NIGHT_LIGHT_12V")
+        note(schematic, f"NIGHT LED {index + 1}", (x - 25, 510), 0.68)
+    note(schematic, "S1070 pin 5 is the rated low-side load output. Both 12 V LS102W courtesy lights switch together; pin 3 adds a dim green ON ring through R1070.", (1010, 545), 0.70)
+    note(schematic, "Hardware-only control: lights remain usable if the CM5 is booting, crashed, or powered down while AUX_12V is available.", (1010, 555), 0.70)
+
+    for reference, net_name, x in (
+        ("#FLG1001", "LOGIC_3V3", 55), ("#FLG1002", "LOGIC_1V8", 100),
+        ("#FLG1003", "FAN_CPU_12V", 145), ("#FLG1004", "FAN_AUX_12V", 190),
+        ("#FLG1005", "GND", 235),
+    ):
+        flag = add_symbol(schematic, "power:PWR_FLAG", reference, "PWR_FLAG", (x, 835))
+        label_pin_auto(schematic, flag, 1, net_name, 0.64)
+
+    output = folder / f"{name}.kicad_sch"
+    schematic.save(output)
+    return output
+
+
+def build_carrier() -> Path:
+    folder = ROOT / "CM5-CARRIER"
+    name = "CM5-Carrier"
+    create_project(folder, name)
+
+    schematic = create_schematic(name)
+    schematic.set_paper_size("A2")
+    schematic.set_title_block(
+        title="Radxa CM5 ProComm Carrier - Interface Contract",
+        date="2026-08-14",
+        rev="A1",
+        company="ProComm",
+        comments={
+            1: "Interface overview; detailed A1 capture is maintained in the named standalone sheets",
+            2: "Fan 1 intake, fan 2 exhaust; independent PWM/tach channels",
+            3: "Program audio crosses a buffered differential TDM link",
+            4: "NOT A FABRICATION RELEASE",
+        },
+    )
+
+    heading(schematic, "A. PWR-SELECT INTERFACE", (60, 22))
+    add_connector(
+        schematic,
+        "Connector_Generic:Conn_02x02_Odd_Even",
+        "J101",
+        "RAW_POWER_FROM_PWR_SELECT",
+        (45, 48),
+        {1: "RAW_OUT_LOAD", 2: "RAW_OUT_LOAD", 3: "GND", 4: "GND"},
+        MF_2X2,
+        "Molex",
+        "43045-0412",
+        two_row=True,
+    )
+    note(schematic, "Mates with PWR-SELECT J301; two contacts per polarity; validate 15 A derating.", (105, 67), 0.9)
+
+    add_connector(
+        schematic,
+        "Connector_Generic:Conn_01x08",
+        "J102",
+        "PWR_STATUS_FROM_SELECTOR",
+        (120, 50),
+        {
+            1: "GND",
+            2: "CH_24V_N",
+            3: "CH_BAT_N",
+            4: "VALID_24V_N",
+            5: "VALID_BAT_N",
+            6: "BAT_LOW_N",
+            7: "VALID_DTAP_N",
+            8: "VALID_GOLD_N",
+        },
+        PICO_8,
+        "Molex",
+        "53047-0810",
+    )
+    note(schematic, "Mates with PWR-SELECT J401; add 3.3 V pull-ups on the carrier.", (93, 78), 0.9)
+
+    add_connector(
+        schematic,
+        "Connector_Generic:Conn_01x06",
+        "J103",
+        "PWR_TELEMETRY_FROM_SELECTOR",
+        (200, 50),
+        {
+            1: "LOGIC_3V3",
+            2: "GND",
+            3: "CTRL_I2C_SDA",
+            4: "CTRL_I2C_SCL",
+            5: "PWR_MON_ALERT_N",
+            6: "GND",
+        },
+        PICO_6,
+        "Molex",
+        "53047-0610",
+    )
+    note(schematic, "Mates with PWR-SELECT J402; carrier supplies 3.3 V and owns I2C pull-ups.", (170, 78), 0.82)
+
+    heading(schematic, "B. BUFFERED DIFFERENTIAL TDM + AUDIO CONTROL", (105, 105))
+    tdm_map = {
+        1: "AUD_MCLK_P",
+        2: "AUD_MCLK_N",
+        3: "GND",
+        4: "GND",
+        5: "AUD_BCLK_P",
+        6: "AUD_BCLK_N",
+        7: "AUD_FSYNC_P",
+        8: "AUD_FSYNC_N",
+        9: "GND",
+        10: "GND",
+        11: "AUD_DAC_SDIN_P",
+        12: "AUD_DAC_SDIN_N",
+        13: "AUD_ADC_SDOUT_P",
+        14: "AUD_ADC_SDOUT_N",
+        15: "GND",
+        16: "GND",
+        17: "AUD_I2C_SCL",
+        18: "AUD_I2C_SDA",
+        19: "AUD_ADC_RST_N",
+        20: "AUD_DAC_RST_N",
+        21: "AUD_DAC_MUTE_N",
+        22: "AUD_IRQ_N",
+        23: "AUDIO_PRESENT_N",
+        24: "AUDIO_ENABLE",
+        25: "LOGIC_3V3",
+        26: "GND",
+        27: "TDM_SPARE_1",
+        28: "TDM_SPARE_2",
+        29: "GND",
+        30: "GND",
+    }
+    add_connector(
+        schematic,
+        "Connector_Generic:Conn_02x15_Odd_Even",
+        "J201",
+        "AUDIO_TDM_CONTROL",
+        (70, 160),
+        tdm_map,
+        two_row=True,
+    )
+    note(schematic, "Mates with AUDIO-8X8 J101. Final connector MPN follows 100 ohm pair and vibration review.", (115, 208), 0.9)
+    note(schematic, "Carrier drives MCLK/BCLK/FSYNC/DAC data; AUDIO-8X8 drives ADC data back.", (105, 213), 0.9)
+
+    add_connector(
+        schematic,
+        "Connector_Generic:Conn_02x02_Odd_Even",
+        "J202",
+        "AUDIO_12V_POWER",
+        (165, 155),
+        {1: "AUDIO_12V", 2: "AUDIO_12V", 3: "GND", 4: "GND"},
+        MF_2X2,
+        "Molex",
+        "43045-0412",
+        two_row=True,
+    )
+    note(schematic, "Separate filtered audio-power harness; no fan/radio loads.", (140, 180), 0.9)
+
+    heading(schematic, "C. FOUR INDEPENDENT PWM / TACH FANS", (90, 235))
+    fans = (
+        ("J401", "CPU_FAN", 45, "CPU_FAN_12V", "CPU_FAN_TACH", "CPU_FAN_PWM"),
+        ("J402", "MODEM_FAN", 115, "MODEM_FAN_12V", "MODEM_FAN_TACH", "MODEM_FAN_PWM"),
+        ("J403", "THA0412AD-TZW3_INTAKE", 185, "INTAKE_FAN_12V", "INTAKE_FAN_TACH", "INTAKE_FAN_PWM"),
+        ("J404", "THA0412AD-TZW3_EXHAUST", 255, "EXHAUST_FAN_12V", "EXHAUST_FAN_TACH", "EXHAUST_FAN_PWM"),
+    )
+    for reference, value, x, power, tach, pwm in fans:
+        add_connector(
+            schematic,
+            "Connector_Generic:Conn_01x04",
+            reference,
+            value,
+            (x, 275),
+            {1: "GND", 2: power, 3: tach, 4: pwm},
+        )
+        note(schematic, value, (x, 294), 0.78)
+    note(schematic, "J403 is physically keyed/labeled INTAKE; J404 is keyed/labeled EXHAUST.", (105, 315), 0.95)
+
+    heading(schematic, "D. DETAILED CAPTURE SUITE - REV A1", (320, 22))
+    capture_items = (
+        "01 CM5-Core-Allocated: exact 300-contact CM5 symbol, 76 locked functions",
+        "02 CM5-Core-Allocated: VCC_SYSIN, reset, recovery, power-on and debug UART",
+        "03 Network-PCIe: PI7C9X2G608GP, 3x LAN7430 and native WAN1 front end",
+        "04 Network-PCIe: 4x Wurth MagJack and Molex 0679101002 Mini PCIe 4T4R Wi-Fi",
+        "05 WWAN-SIM: TE 2199230-3 B-key, USB3/USB2, controls and dual-SIM mux",
+        "06 Display-Harness: HDMI, USB touch and dedicated 12 V / 2.5 A branch",
+        "07 Audio-Control: I2S0 TDM, I2S1 ES8316 headset and CTIA amplifier path",
+        "08 Thermal-IO: I2C translation, GPIO expansion, sensors and four fan channels",
+        "09 Power-Regulators-A1: protected raw hold-up, all main rails, sequencing and test points",
+        "10 Audio-8x8: all XLR shields bonded to chassis with one controlled AGND bond",
+        "11 Review: every detailed sheet has zero ERC errors; warnings are classified",
+    )
+    for index, item in enumerate(capture_items):
+        note(schematic, item, (320, 38 + index * 9), 0.95)
+    note(schematic, "DC/DC compensation and magnetics remain a separate power-design calculation milestone.", (320, 150), 1.0)
+    note(schematic, "High-speed routing starts only after stackup and connector Z datums are released.", (320, 160), 1.0)
+    note(schematic, "The two enclosure fans require an underside baffle to prevent direct intake/exhaust short flow.", (320, 170), 1.0)
+
+    output = folder / f"{name}.kicad_sch"
+    schematic.save(output)
+    return output
+
+
+def build_audio() -> Path:
+    folder = ROOT / "AUDIO-8X8"
+    name = "Audio-8x8"
+    create_project(folder, name)
+
+    schematic = create_schematic(name)
+    schematic.set_paper_size("A2")
+    schematic.set_title_block(
+        title="Radxa CM5 ProComm Audio 8x8 - Interface Contract",
+        date="2026-08-13",
+        rev="A0",
+        company="ProComm",
+        comments={
+            1: "AK5558VN ADC and AK4458VN DAC over buffered differential TDM",
+            2: "+4 dBu nominal, +24 dBu maximum, active-balanced XLR stages",
+            3: "Left bank male outputs; right bank female inputs",
+            4: "NOT A FABRICATION RELEASE - AKM networks require datasheet calculation",
+        },
+    )
+
+    heading(schematic, "A. PANEL-SUPPORTED BALANCED XLR BANK", (92, 20))
+    for channel in range(1, 9):
+        y = 47 + (channel - 1) * 39
+        output = add_symbol(
+            schematic,
+            "Connector_Audio:NC3MAV",
+            f"J{200 + channel}",
+            "NC3MAV",
+            (55, y),
+            manufacturer="Neutrik",
+            mpn="NC3MAV",
+        )
+        output.hidden_properties.update({"Reference", "Value"})
+        label_pin_with_stub(schematic, output, 1, "XLR_CHASSIS", ((-7.62, 0),), "right")
+        label_pin_with_stub(schematic, output, "G", "XLR_CHASSIS", ((-7.62, 0),), "right")
+        label_pin_with_stub(schematic, output, 2, f"AOUT_CH{channel}_HOT", ((7.62, 0),), "left")
+        label_pin_with_stub(
+            schematic,
+            output,
+            3,
+            f"AOUT_CH{channel}_COLD",
+            ((15.24, 0),),
+            "left",
+        )
+        note(schematic, f"J{200 + channel} / NC3MAV", (55, y + 13), 0.78)
+        note(schematic, f"CH{channel} OUT", (55, y + 20), 0.85)
+
+        input_connector = add_symbol(
+            schematic,
+            "Connector_Audio:NC3FAV",
+            f"J{300 + channel}",
+            "NC3FAV",
+            (150, y),
+            manufacturer="Neutrik",
+            mpn="NC3FAV",
+        )
+        input_connector.hidden_properties.update({"Reference", "Value"})
+        label_pin_with_stub(schematic, input_connector, 1, "XLR_CHASSIS", ((-7.62, 0),), "right")
+        label_pin_with_stub(schematic, input_connector, 2, f"AIN_CH{channel}_HOT", ((7.62, 0),), "left")
+        label_pin_with_stub(
+            schematic,
+            input_connector,
+            3,
+            f"AIN_CH{channel}_COLD",
+            ((-15.24, 0),),
+            "right",
+        )
+        note(schematic, f"J{300 + channel} / NC3FAV", (150, y + 13), 0.78)
+        note(schematic, f"CH{channel} IN", (150, y + 20), 0.85)
+
+    heading(schematic, "B. CARRIER INTERFACES", (235, 20))
+    tdm_map = {
+        1: "AUD_MCLK_P",
+        2: "AUD_MCLK_N",
+        3: "GND",
+        4: "GND",
+        5: "AUD_BCLK_P",
+        6: "AUD_BCLK_N",
+        7: "AUD_FSYNC_P",
+        8: "AUD_FSYNC_N",
+        9: "GND",
+        10: "GND",
+        11: "AUD_DAC_SDIN_P",
+        12: "AUD_DAC_SDIN_N",
+        13: "AUD_ADC_SDOUT_P",
+        14: "AUD_ADC_SDOUT_N",
+        15: "GND",
+        16: "GND",
+        17: "AUD_I2C_SCL",
+        18: "AUD_I2C_SDA",
+        19: "AUD_ADC_RST_N",
+        20: "AUD_DAC_RST_N",
+        21: "AUD_DAC_MUTE_N",
+        22: "AUD_IRQ_N",
+        23: "AUDIO_PRESENT_N",
+        24: "AUDIO_ENABLE",
+        25: "LOGIC_3V3",
+        26: "GND",
+        27: "TDM_SPARE_1",
+        28: "TDM_SPARE_2",
+        29: "GND",
+        30: "GND",
+    }
+    add_connector(
+        schematic,
+        "Connector_Generic:Conn_02x15_Odd_Even",
+        "J101",
+        "AUDIO_TDM_CONTROL",
+        (285, 72),
+        tdm_map,
+        two_row=True,
+    )
+    note(schematic, "Mates with CM5-CARRIER J201; 100 ohm differential pairs with interleaved grounds.", (235, 120), 0.9)
+
+    add_connector(
+        schematic,
+        "Connector_Generic:Conn_02x02_Odd_Even",
+        "J102",
+        "AUDIO_12V_POWER",
+        (380, 70),
+        {1: "AUDIO_12V", 2: "AUDIO_12V", 3: "GND", 4: "GND"},
+        MF_2X2,
+        "Molex",
+        "43045-0412",
+        two_row=True,
+    )
+    note(schematic, "Local filtered conversion produces +/-15 V, AKM 5 V analog and audio 3.3 V.", (345, 95), 0.9)
+
+    heading(schematic, "C. INPUT SIGNAL CHAIN", (235, 150))
+    note(schematic, "NC3FAV -> chassis/RFI/ESD -> THAT1206 -> level/filter network -> AK5558VN", (235, 165), 1.0)
+    note(schematic, "Eight differential channels; no phantom power; +4 dBu nominal / +24 dBu max.", (235, 175), 1.0)
+    note(schematic, "AK5558VN analog interface values must be recalculated from the current datasheet.", (235, 185), 1.0)
+
+    heading(schematic, "D. OUTPUT SIGNAL CHAIN", (235, 215))
+    note(schematic, "AK4458VN -> reconstruction/gain filter -> OPA165x -> THAT1646 -> RFI/fault network -> NC3MAV", (235, 230), 1.0)
+    note(schematic, "Stable into 600 ohm test load; 10 kohm or higher is the normal operating load.", (235, 240), 1.0)
+    note(schematic, "Hardware mute remains asserted through boot, clock loss, reset and power transfer.", (235, 250), 1.0)
+
+    heading(schematic, "E. CAPTURE SHEETS TO ADD", (235, 285))
+    items = (
+        "01 LVDS TDM receivers/transmitter, I2C/control protection and clock options",
+        "02 AK5558VN supplies, straps, decoupling and eight ADC input filters",
+        "03 AK4458VN supplies, straps, decoupling and eight DAC output filters",
+        "04 Eight THAT1206 balanced input receivers and connector protection",
+        "05 Eight OPA165x/THAT1646 balanced output stages and fault protection",
+        "06 AUDIO_12V conversion, +/-15 V, low-noise AKM rails and sequencing",
+        "07 Chassis/pin-1 bonding, shield strategy, star points and test fixtures",
+    )
+    for index, item in enumerate(items):
+        note(schematic, item, (235, 300 + index * 10), 0.95)
+
+    heading(schematic, "F. XLR SHIELD / CHASSIS BOND", (350, 150))
+    shield_resistor = add_symbol(
+        schematic,
+        "Device:R",
+        "R901",
+        "1M",
+        (390, 180),
+    )
+    label_pin(schematic, shield_resistor, 1, "XLR_CHASSIS")
+    label_pin(schematic, shield_resistor, 2, "AGND")
+    shield_capacitor = add_symbol(
+        schematic,
+        "Device:C",
+        "C901",
+        "4.7nF 1kV C0G",
+        (440, 180),
+    )
+    label_pin(schematic, shield_capacitor, 1, "XLR_CHASSIS")
+    label_pin(schematic, shield_capacitor, 2, "AGND")
+    add_connector(
+        schematic,
+        "Connector_Generic:Conn_01x02",
+        "J901",
+        "CHASSIS_BOND_TEST",
+        (500, 180),
+        {1: "XLR_CHASSIS", 2: "AGND"},
+    )
+    note(schematic, "Every XLR pin 1 and NC3MAV shell G bonds directly to the local chassis plane.", (350, 205), 0.88)
+    note(schematic, "R901/C901 are the single controlled RF/static bond to AGND; verify values in EMC test.", (350, 214), 0.88)
+    note(schematic, "No audio return current may use the XLR_CHASSIS copper or panel fasteners.", (350, 223), 0.88)
+
+    output = folder / f"{name}.kicad_sch"
+    schematic.save(output)
+    return output
+
+
+def main() -> None:
+    pinout = write_cm5_local_library()
+    write_cm5_local_footprints()
+    symbol_cache = get_symbol_cache()
+    symbol_cache.add_library_path(CM5_LOCAL_LIBRARY)
+    symbol_cache.add_library_path(CM5_WURTH_LIBRARY)
+    paths = (
+        build_carrier(),
+        build_cm5_core_sheet(pinout),
+        build_network_pcie_sheet(),
+        build_wwan_sim_sheet(),
+        build_display_harness_sheet(),
+        build_audio_control_sheet(),
+        build_power_regulators_sheet(),
+        build_thermal_io_sheet(),
+        build_audio(),
+    )
+    for path in paths:
+        print(path)
+
+
+if __name__ == "__main__":
+    main()

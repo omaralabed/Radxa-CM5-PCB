@@ -1,0 +1,18 @@
+load_group,rail_or_source,typical_w,continuous_design_w,peak_transient_w,confidence,notes
+Radxa CM5 module eMMC CPU GPU NPU,5.15 V system,12.0,25.0,30.0,Estimate,Verify on selected CM5 SKU and OS load
+Carrier logic clocks sensors LEDs GPIO RTC,5.15 V / 3.3 V / 1.8 V,2.0,4.0,5.0,Estimate,Housekeeping only
+Main 8x8 audio AK5558VN AK4458VN balanced line stages,clean audio rails,5.0,10.0,12.0,Estimate,Measure all channels at +24 dBu maximum into specified loads
+ES8316 headset codec headphone amp mic bias preamp,dedicated low-noise headset regulator,0.8,2.0,3.0,Estimate,Separate headset sound card with headphone drive mic input conditioning and its own clean regulator path
+Native WAN1 Ethernet support,Ethernet rails,1.0,1.5,2.0,Estimate,Depends on final PHY magnetics implementation
+PI7C9X2G608GP plus three LAN7430 controllers,NET_3V3 / PCIE_1V0,4.5,7.0,8.0,Medium,Includes controllers clocks magnetics and LEDs
+Wi-Fi AP AW7915-NP1 4T4R,dedicated 3.3 V,7.0,9.0,10.0,High,Vendor lists 4-8 W average 9 W max 3.3 V 3 A recommended
+Cellular modem SIM8260G-M2 class,MODEM_3V8,6.0,12.0,20.0,Medium,3.8 V 6 A converter with 5 A minimum usable load and local bulk
+15.6-inch JUNEBOX HDMI touchscreen and USB touch,12 V display/touch rail,20.0,25.0,30.0,User rating,Rated 12 V / 25 W (2.08 A nominal); 30 W peak budget matches locked 12 V / 2.5 A branch
+USB service/accessory reserve,5 V USB rail,2.0,5.0,8.0,Estimate,Final external USB current limits must be chosen
+CM5 CPU fan Delta FFB0412EN-00Y2E,FAN_CPU_12V,8.7,21.0,21.0,High,Locked 12 V fan; 17.4 W nominal and 21 W datasheet maximum input
+Modem fan two enclosure fans and EMC2305,FAN_AUX_12V,5.0,18.0,20.0,Estimate,Two locked Delta THA0412AD-TZW3 fans are 0.43 A nominal / 0.52 A maximum each; modem fan remains TBD
+Two YIS LS102W warm-white panel lights and E-Switch CS touch control,NIGHT_LIGHT_12V,0.6,0.7,0.7,High,Two 0.25 W 12 V courtesy lights plus low-current touch electronics on a 0.25 A fused branch
+Miscellaneous margin,mixed,0.5,1.5,2.5,Estimate,Keep until schematic/BOM is closed
+Subtotal regulated loads,mixed,75.1,141.7,172.2,Estimate,Before conversion/source-selection losses
+Conversion/source-selector thermal loss allowance,regulators / MOSFETs,5.0,10.0,12.0,Estimate,Replace with calculated efficiency by rail later
+Estimated total from 24 V source,24 V source,80.1,151.7,184.2,Estimate,Fits locked 252 W convection-rated RPS-400-24-C production PSU; includes conversion/source-selection loss allowance

@@ -1,0 +1,26 @@
+category,rail_or_check,controller_or_part,input_min_v,input_max_v,output_v,rating_a,allocated_continuous_w,allocated_peak_w,frequency_khz,inductor_uh,selected_magnetic_or_setting,result,status
+main_stage,SYS_5V15,LM5146RGYR,10.5,30.0,5.1439,12.0,30.0,38.0,300,3.3,TDK SPM10065VTT-3R3M-D 28.6A Isat,61.8W capacity / 38W peak,PASS
+main_stage,AUX_12V,LM5176PWP,10.5,30.0,12.0000,8.0,76.0,84.0,300,4.7,Wurth 74439370047 20.9A Isat,96W capacity / 84W peak,PASS-BENCH
+main_stage,MODEM_3V8_PRE,LM61460RJR,10.5,30.0,3.8011,6.0,12.0,20.0,400,4.7,Coilcraft XAL7070-472MEC 15.2A Isat,22.8W capacity / 20W transmit burst,PASS-BENCH
+main_stage,WIFI_3V3_PRE,LM61440RJR,10.5,30.0,3.3148,4.0,9.0,10.0,400,4.7,Coilcraft XAL7070-472MEC 15.2A Isat,13.2W capacity / 10W peak,PASS
+main_stage,NET_3V3,LM61440RJR,10.5,30.0,3.3148,4.0,8.5,10.0,400,4.7,Coilcraft XAL7070-472MEC 15.2A Isat,13.2W capacity / 10W peak,PASS
+main_stage,LOGIC_3V3,LM61440RJR,10.5,30.0,3.3148,3.0,4.0,5.0,400,4.7,Coilcraft XAL7070-472MEC 15.2A Isat,9.9W capacity / 5W peak,PASS
+point_of_load,PCIE_1V0,TPS62913RPUT,5.15,5.15,0.9988,2.0,,,2200,2.2,Coilcraft XGL4030-222MEC,2.08A estimated peak vs 3.7A minimum current limit,PASS
+point_of_load,LOGIC_1V8,TPS62913RPUT,5.15,5.15,1.7924,1.5,,,2200,2.2,Coilcraft XGL4030-222MEC,1.62A estimated peak vs 3.7A minimum current limit,PASS
+point_of_load,HEADSET_3V3,TPS62913RPUT,5.15,5.15,3.3010,1.0,,,2200,2.2,Coilcraft XGL4030-222MEC,1.12A estimated peak vs 3.7A minimum current limit,PASS
+point_of_load,AUDIO_PRE_5V5,TPS62913RPUT,12.0,12.0,5.5134,1.0,,,2200,2.2,Coilcraft XGL4030-222MEC,1.31A estimated peak vs 3.7A minimum current limit,PASS
+protection,MODEM_3V8,TPS259827LNRGER,3.8,3.8,3.8,6.0,,,,,255 ohm 1% ILIM,6.0A nominal active current limit,PASS-BENCH
+protection,WIFI_3V3,TPS22990DMLR,3.3,3.3,3.3,10.0,,,,,10nF CT,controlled startup only / no current limiting,PASS-BENCH
+uvlo,SYS_5V15,LM5146RGYR,8.88,9.58,,0.0,,,,,"69.8k upper / 10k lower; values shown are typical off/on",turn-on below 10.5V protected-raw minimum,PASS-BENCH
+uvlo,AUX_12V,LM5176PWP,10.07,10.30,,0.0,,,,,"73.2k upper / 10k lower including typical bias and hysteresis currents",turn-on below 10.5V protected-raw minimum,PASS-BENCH
+current_sense,AUX_12V_PWM,LM5176PWP,,,,12.5,,,,,KRL11050-C-R004-F-T1 4mR 6W,50mV nominal / 4mR = 12.5A,PASS-BENCH
+current_sense,AUX_12V_OUTPUT,LM5176PWP,,,,8.33,,,,,KRL6432E-M-R006-F-T1 6mR 2W,50mV nominal / 6mR = 8.33A,PASS-BENCH
+branch,DISPLAY_12V,Littelfuse 0453003.MR,12.0,12.0,12.0,2.5,25.0,30.0,,,,3A time-lag fuse / no dedicated eFuse,LOCKED
+branch,FAN_CPU_12V,Littelfuse 0453003.MR,12.0,12.0,12.0,3.0,17.4,21.0,,,,3A time-lag fuse / 2A hold local polyfuse,PASS-BENCH
+branch,FAN_AUX_12V,Littelfuse 0453003.MR,12.0,12.0,12.0,3.0,15.0,18.0,,,,3A time-lag fuse / 1A hold local polyfuse per fan,PASS-BENCH
+branch,AUDIO_12V,Littelfuse 0453002.MR,12.0,12.0,12.0,2.0,10.0,12.0,,,,TRI 20-1223 plus low-noise local rails,PASS-BENCH
+source,24V_PSU,Mean Well RPS-400-24-C,24.0,24.0,24.0,10.5,151.7,184.2,,,252W convection rating,39.8% spare at continuous / 67.8W at peak,PASS
+source,13V_backup_path,PWR-SELECT 15A path,13.0,13.0,13.0,15.0,151.7,184.2,,,source current,11.67A continuous / 14.17A transient,PASS-BENCH
+source,11.35V_gold_mount_low,Dionic XT90,11.35,11.35,11.35,12.0,151.7,184.2,,,battery current,13.37A continuous / 16.23A short transient,LOAD-SHED-REQUIRED
+hold_up,RAW_OUT_22mF,Nichicon 4x LGU1H562MELZ,12.5,24.0,,0.0,151.7,184.2,,,22.4mF installed plus 660uF selector local,31.0ms at 151.7W / 25.5ms at 184.2W ideal,PASS-BENCH
+hold_up,RAW_OUT_47mF,optional stuffing,12.5,24.0,,0.0,151.7,184.2,,,47.7mF total including selector local,66.0ms at 151.7W / 54.3ms at 184.2W ideal,OPTION
