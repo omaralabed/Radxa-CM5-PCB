@@ -86,8 +86,10 @@ Start from the Radxa CM5 IO reference design and remove anything not needed.
 - Backup inlet based on 15 A LEMO `EGG.1B.302.CLL`, 13.0-16.8 V operating
   range; any D-Tap source cable must also carry the measured backup load
 - Gold Mount battery dock based on Anton/Bauer Dionic XT 90 and user-locked
-  QRC-GOLD bracket `8375-0094`; production release requires sample-verified
-  mounting, latch travel, polarity, release sweep, and 12 A thermal performance
+  QRC-GOLD bracket `8375-0094`; the dock mounts only to the top panel/custom
+  frame and connects by a strain-relieved removable harness to the
+  power-selector PCB; production release requires sample-verified mounting,
+  latch travel, polarity, release sweep, and 12 A thermal performance
 - CM5 board-to-board connectors
 - Debug UART
 - USB recovery/service connector or external USB-C recovery path

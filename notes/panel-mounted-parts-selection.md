@@ -38,7 +38,7 @@ The factory cut drawing can be released only after:
 | Wi-Fi RF pigtails | 4 | TE `2016695-4` | Conditional on AW7915-NP1 IPEX receptacle and 200 mm route check |
 | Cellular RF pigtails | 4 | TE `2016694-4` | Conditional on modem receptacle and 200 mm route check |
 | Gold Mount battery | 1 | Anton/Bauer Dionic XT90 `8675-0125` | Selected battery; 99 Wh, 14.1 V, 12 A continuous |
-| Gold Mount bracket | 1 | Anton/Bauer QRC-GOLD `8375-0094` | User-selected compact bracket; approximately 119.4 x 76.2 x 12.7 mm; controlled drawing/sample still required |
+| Gold Mount bracket | 1 | Anton/Bauer QRC-GOLD `8375-0094` | User-selected compact bracket; approximately 119.4 x 76.2 x 12.7 mm; mounts to the top panel/custom frame, never to a PCB; controlled drawing/sample still required |
 | Lid display | 1 | JUNEBOX, Amazon ASIN `B0GK5X95D9` | User-locked; connector and mounting details require sample |
 
 ## Indicator Assignment
@@ -80,6 +80,12 @@ table and a drawing disagree.
 | Nano-SIM access | Two service openings above a vertical daughterboard, not above a horizontal holder | Design daughterboard, card insertion path, retention, ESD shield, and service cover before cutting |
 | QRC-GOLD | Existing 99 x 132 mm battery envelope is keepout only | Replace with Anton/Bauer bracket hole pattern and full battery release-sweep measurement; published bracket dimensions exclude the release latch |
 | Lid harness | Open hinge-edge notch, no enclosed top-panel hole | Measure HDMI, USB touch, and 12 V cable overmolds and specify edge protection and service loop |
+
+The QRC-GOLD is independent enclosure hardware. Its flying positive and
+negative leads terminate in a strain-relieved, keyed, touch-safe high-current
+harness that disconnects at the power-selector PCB. The dock mounting screws,
+battery insertion load, and vibration load must be carried by the top panel and
+custom frame, not by PCB laminate, standoffs, solder joints, or `J203`.
 
 ## Important Compatibility Findings
 

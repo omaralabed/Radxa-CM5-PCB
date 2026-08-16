@@ -54,6 +54,8 @@ operator/handle side.
    Mount the Gold Mount dock so the battery engages from left to right and
    removes from right to left. Measure the complete slide travel and verify at
    least 20 mm of clear insertion/hand space between the XLR hardware and dock.
+   Carry the dock, battery, insertion, and vibration loads entirely through the
+   top panel/custom frame. No dock fastener or load path may terminate in a PCB.
 6. Enter measured minimum/maximum values in
    `mechanical-release-a1.json`, attach measurement photos or inspection
    records, and run `validate_mechanical_release.py --release`.
@@ -66,6 +68,8 @@ operator/handle side.
 - `AUDIO-8X8` PCB envelope no larger than 78 x 268 mm.
 - `CM5-CARRIER` PCB envelope no larger than 166 x 268 mm.
 - Panel screws and frame hardware are mechanically independent of PCB mounts.
+- The QRC-GOLD dock is top-panel/custom-frame hardware, not a PCB-mounted part;
+  only its strain-relieved removable power harness reaches the selector PCB.
 - Minimum 8.0 mm closed-lid dynamic clearance after tolerance stack-up.
 - Minimum 3.0 mm static clearance between unrelated metal hardware; use more
   where cables, latches, fingers, insulation, or vibration motion require it.

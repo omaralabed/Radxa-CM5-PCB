@@ -289,6 +289,10 @@ Reuse the previous ProComm Gold Mount direction:
 - Battery envelope: 99 x 132 x 58 mm
 - Dock basis: Anton/Bauer QRC-GOLD Universal Compact Gold Mount Bracket, SKU
   `8375-0094`; approximately 119.4 x 76.2 x 12.7 mm excluding the release latch
+- Mechanical ownership: top panel/custom frame only; the dock is not mounted
+  to or mechanically supported by any PCB
+- Electrical interface: short, fused, strain-relieved positive/negative flying
+  leads through a keyed removable high-current harness to power-selector `J203`
 - Battery charging is external; no onboard charger unless a future battery
   protocol is explicitly selected and documented.
 

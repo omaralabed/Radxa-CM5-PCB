@@ -588,7 +588,7 @@ j203 = add("Connector_Generic:Conn_02x02_Odd_Even", "J203", "GOLD_MOUNT_10V_TO_1
 net(j203, 1, "GOLD_IN", "right"); net(j203, 2, "GOLD_IN", "left")
 net(j203, 3, "GND", "right"); net(j203, 4, "GND", "left")
 j203.add_property("Reference", "J203", hidden=True); j203.add_property("Value", "GOLD_MOUNT_10V_TO_16V8", hidden=True)
-sch.texts.add("J203  QRC-GOLD 8375-0094 DOCK 10.0-16.8 V", (28, 349), size=0.85)
+sch.texts.add("J203  FROM PANEL QRC-GOLD 8375-0094 HARNESS 10.0-16.8 V", (28, 349), size=0.85)
 f203 = add("Device:Fuse", "F203", "15A", (52, 359), FUSE_FP, "0451015.MRL", "Littelfuse", rotation=90)
 two_pin(f203, "GOLD_IN", "GOLD_FUSED")
 f203.add_property("Reference", "F203", hidden=True); f203.add_property("Value", "15A", hidden=True)
