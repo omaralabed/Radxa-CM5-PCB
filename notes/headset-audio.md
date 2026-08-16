@@ -40,16 +40,22 @@ proper analog support around it:
 
 Keep `I2S0` dedicated to the AK5558VN/AK4458VN TDM bus.
 
+The CM5 GPIO bank is 3.3 V while the ES8316 digital interface is 1.8 V. Rev A
+uses `SN74AVC4T245PWR` plus `SN74LVC1T45DCKR` for the five I2S signals and
+`PCA9306DP,118` for I2C. Direct 3.3 V connection to ES8316 digital pins is not
+permitted. ES8316 `CE` is pulled up to `HEADSET_1V8`.
+
 ## Dedicated Headset Power
 
 Use a dedicated low-noise headset regulator path for the ES8316, headphone
 amplifier/driver, mic bias, and mic preamp/input conditioning.
 
-Rev A starting implementation:
+Rev A locked starting implementation:
 
-- `HEADSET_3V3`: separate low-noise 3.3 V rail using a `TPS7A20`-class LDO.
+- `HEADSET_3V3`: separate low-noise 3.3 V rail using TI `LP5907MFX-3.3`.
+- `HEADSET_1V8`: cascaded low-noise 1.8 V rail using TI `LP5907MFX-1.8`.
 - `TPA6132A2` DirectPath stereo headphone amplifier, with shutdown under
-  software/hardware mute control.
+  software/hardware mute control and hardware gain strapped to 0 dB.
 - ES8316 mic bias and PGA first, with a footprint option for an external
   low-noise mic preamp only if headset measurements require more gain.
 
@@ -151,10 +157,10 @@ independent of the 8-channel HAT audio path.
 
 ## Open Decisions
 
-- Final `I2S1` pin group after PCIe, Wi-Fi, modem, HDMI, and GPIO conflicts are resolved.
-- I2C bus selection and ES8316 address.
+- Confirm the locked `I2S1` pinctrl and clocks during CM5 Linux bring-up.
+- Confirm the locked I2C bus, ES8316 address, and translated-bus timing.
 - Confirm Kycon `STX-353K7A-6N-KTTR` switching-contact mapping and detect
-  polarity in schematic capture.
+  polarity on a physical sample and plated-hole coupon.
 - Confirm `TPA6132A2` output level and noise with Logitech H111 and the selected
   production headset; change amplifier only if those measurements fail.
 - Microphone gain/noise target and whether the ES8316 internal PGA is enough or

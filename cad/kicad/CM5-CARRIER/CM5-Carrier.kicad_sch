@@ -1807,222 +1807,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Connector_Generic:Conn_01x04"
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "J"
-				(at 0 5.08 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "Conn_01x04"
-				(at 0 -7.62 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "connector"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "Connector*:*_1x??_*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "Conn_01x04_1_1"
-				(rectangle
-					(start -1.27 3.81)
-					(end 1.27 -6.35)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(rectangle
-					(start -1.27 2.667)
-					(end 0 2.413)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 0.127)
-					(end 0 -0.127)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 -2.413)
-					(end 0 -2.667)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 -4.953)
-					(end 0 -5.207)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at -5.08 2.54 0)
-					(length 3.81)
-					(name "Pin_1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 0 0)
-					(length 3.81)
-					(name "Pin_2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -2.54 0)
-					(length 3.81)
-					(name "Pin_3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -5.08 0)
-					(length 3.81)
-					(name "Pin_4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_02x02_Odd_Even")
@@ -2298,6 +2082,33 @@
 				(justify left)
 			)
 		)
+		(property "Footprint" "Connector_Molex_Milligrid:Molex_8783230xx_2x15_P2.0mm_Header_Vertical_Polarized_MountingPegs"
+			(at 69.85 160.02 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Molex"
+			(at 72.39 165.0999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "87832-6423"
+			(at 72.39 165.0999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "536e7783-f7fa-58d3-9303-d0e8908c7788")
 		)
@@ -2474,7 +2285,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector_Generic:Conn_01x04")
+		(lib_id "Connector_Generic:Conn_02x02_Odd_Even")
 		(at 44.45 275.59 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -2484,7 +2295,7 @@
 		(fields_autoplaced no)
 		(uuid "f65f0ed6-b7bd-5e1d-accc-c83125f76e33")
 		(property "Reference" "J401"
-			(at 44.45 280.67 0.0000)
+			(at 45.72 278.13 0.0000)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2493,12 +2304,39 @@
 			)
 		)
 		(property "Value" "CPU_FAN"
-			(at 44.45 267.97 0.0000)
+			(at 45.72 270.51 0.0000)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_Molex:Molex_Micro-Fit_3.0_43045-0412_2x02_P3.00mm_Vertical"
+			(at 44.45 275.59 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Molex"
+			(at 46.99 280.6699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "43045-0412"
+			(at 46.99 280.6699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -2523,7 +2361,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector_Generic:Conn_01x04")
+		(lib_id "Connector_Generic:Conn_02x02_Odd_Even")
 		(at 115.57 275.59 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -2533,7 +2371,7 @@
 		(fields_autoplaced no)
 		(uuid "21fba185-b6cf-57b7-ab70-e2f6087efa79")
 		(property "Reference" "J402"
-			(at 115.57 280.67 0.0000)
+			(at 116.84 278.13 0.0000)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2542,12 +2380,39 @@
 			)
 		)
 		(property "Value" "MODEM_FAN"
-			(at 115.57 267.97 0.0000)
+			(at 116.84 270.51 0.0000)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_Molex:Molex_Micro-Fit_3.0_43045-0412_2x02_P3.00mm_Vertical"
+			(at 115.57 275.59 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Molex"
+			(at 118.11 280.6699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "43045-0412"
+			(at 118.11 280.6699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -2572,7 +2437,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector_Generic:Conn_01x04")
+		(lib_id "Connector_Generic:Conn_02x02_Odd_Even")
 		(at 185.42 275.59 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -2582,7 +2447,7 @@
 		(fields_autoplaced no)
 		(uuid "67d92030-2e00-5783-acbf-8abacb819403")
 		(property "Reference" "J403"
-			(at 185.42 280.67 0.0000)
+			(at 186.69 278.13 0.0000)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2591,12 +2456,39 @@
 			)
 		)
 		(property "Value" "THA0412AD-TZW3_INTAKE"
-			(at 185.42 267.97 0.0000)
+			(at 186.69 270.51 0.0000)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_Molex:Molex_Micro-Fit_3.0_43045-0412_2x02_P3.00mm_Vertical"
+			(at 185.42 275.59 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Molex"
+			(at 187.96 280.6699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "43045-0412"
+			(at 187.96 280.6699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -2621,7 +2513,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector_Generic:Conn_01x04")
+		(lib_id "Connector_Generic:Conn_02x02_Odd_Even")
 		(at 255.27 275.59 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -2631,7 +2523,7 @@
 		(fields_autoplaced no)
 		(uuid "1cd8a37a-ac4b-54f3-a8f0-4c7bad6e129d")
 		(property "Reference" "J404"
-			(at 255.27 280.67 0.0000)
+			(at 256.54 278.13 0.0000)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2640,12 +2532,39 @@
 			)
 		)
 		(property "Value" "THA0412AD-TZW3_EXHAUST"
-			(at 255.27 267.97 0.0000)
+			(at 256.54 270.51 0.0000)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_Molex:Molex_Micro-Fit_3.0_43045-0412_2x02_P3.00mm_Vertical"
+			(at 255.27 275.59 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Molex"
+			(at 257.81 280.6699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "43045-0412"
+			(at 257.81 280.6699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -3190,7 +3109,7 @@
 		(uuid "8a13070e-028d-55f3-a9d1-4e7b2b988d5e")
 	)
 	(label "GND"
-		(at 39.37 273.05 0.0000)
+		(at 39.37 275.59 0.0000)
 		(effects
 			(font
 				(size 0.95 0.95)
@@ -3200,12 +3119,12 @@
 		(uuid "d389f8c9-bf22-56c6-b718-484422f441f8")
 	)
 	(label "CPU_FAN_12V"
-		(at 39.37 275.59 0.0000)
+		(at 52.07 275.59 0.0000)
 		(effects
 			(font
 				(size 0.95 0.95)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "d5ffe420-9d2c-5cb5-9942-0f599dac4c9d")
 	)
@@ -3220,17 +3139,17 @@
 		(uuid "912ccdc4-038e-5978-be69-b47a803560c9")
 	)
 	(label "CPU_FAN_PWM"
-		(at 39.37 280.67 0.0000)
+		(at 52.07 278.13 0.0000)
 		(effects
 			(font
 				(size 0.95 0.95)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "c497920f-4ae4-56d9-acb4-c3e842ff4643")
 	)
 	(label "GND"
-		(at 110.49 273.05 0.0000)
+		(at 110.49 275.59 0.0000)
 		(effects
 			(font
 				(size 0.95 0.95)
@@ -3240,12 +3159,12 @@
 		(uuid "51f92c5a-dc3f-508b-ba9b-657c90185066")
 	)
 	(label "MODEM_FAN_12V"
-		(at 110.49 275.59 0.0000)
+		(at 123.19 275.59 0.0000)
 		(effects
 			(font
 				(size 0.95 0.95)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "7a9699c9-6e99-5b0a-9773-0a44fc3f3be7")
 	)
@@ -3260,17 +3179,17 @@
 		(uuid "73bb2361-0d2c-57f4-a3cf-ca0c5f40a170")
 	)
 	(label "MODEM_FAN_PWM"
-		(at 110.49 280.67 0.0000)
+		(at 123.19 278.13 0.0000)
 		(effects
 			(font
 				(size 0.95 0.95)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "dcd670e1-230f-58f2-8fe0-1b0a08108c98")
 	)
 	(label "GND"
-		(at 180.34 273.05 0.0000)
+		(at 180.34 275.59 0.0000)
 		(effects
 			(font
 				(size 0.95 0.95)
@@ -3280,12 +3199,12 @@
 		(uuid "0b09db63-1b5c-5f53-8665-7f4b58b63c76")
 	)
 	(label "INTAKE_FAN_12V"
-		(at 180.34 275.59 0.0000)
+		(at 193.04 275.59 0.0000)
 		(effects
 			(font
 				(size 0.95 0.95)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "f2c53c64-f65e-5da4-aedb-ff31b45f5196")
 	)
@@ -3300,17 +3219,17 @@
 		(uuid "762d0ed1-8c67-50c0-85bf-3fde1dc81ad3")
 	)
 	(label "INTAKE_FAN_PWM"
-		(at 180.34 280.67 0.0000)
+		(at 193.04 278.13 0.0000)
 		(effects
 			(font
 				(size 0.95 0.95)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "9abd44a3-46e4-5073-99ed-56ada1858c63")
 	)
 	(label "GND"
-		(at 250.19 273.05 0.0000)
+		(at 250.19 275.59 0.0000)
 		(effects
 			(font
 				(size 0.95 0.95)
@@ -3320,12 +3239,12 @@
 		(uuid "a5c754ac-b874-5793-a36c-87c66255c2b6")
 	)
 	(label "EXHAUST_FAN_12V"
-		(at 250.19 275.59 0.0000)
+		(at 262.89 275.59 0.0000)
 		(effects
 			(font
 				(size 0.95 0.95)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "c9e10b55-4a38-5d80-96ae-f99a1bc20aea")
 	)
@@ -3340,12 +3259,12 @@
 		(uuid "193e06a1-9ae1-5459-bac9-367d44c0f09d")
 	)
 	(label "EXHAUST_FAN_PWM"
-		(at 250.19 280.67 0.0000)
+		(at 262.89 278.13 0.0000)
 		(effects
 			(font
 				(size 0.95 0.95)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "1ea64bba-4017-5816-91be-7ae99d1b6c57")
 	)
@@ -3401,7 +3320,7 @@
 		)
 		(uuid "88388625-09ed-531e-94ae-aca1b5ad347b")
 	)
-	(text "Mates with AUDIO-8X8 J101. Final connector MPN follows 100 ohm pair and vibration review."
+	(text "Mates with AUDIO-8X8 J101 using Molex 87832-6423 headers; harness assembly remains vibration-qualified."
 		(exclude_from_sim no)
 		(at 115 208 0.0000)
 		(effects

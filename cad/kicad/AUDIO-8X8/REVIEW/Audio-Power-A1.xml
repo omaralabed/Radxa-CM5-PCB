@@ -1,0 +1,1773 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>/Users/viewvision/Desktop/Radxa CM5 PCB/cad/kicad/AUDIO-8X8/Audio-Power.kicad_sch</source>
+    <date>2026-08-16T18:36:22</date>
+    <tool>Eeschema 10.0.5-rc1</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>ProComm AUDIO-8X8 - Local Power, Sequencing, and Ground Star</title>
+        <company>ProComm</company>
+        <rev>A1</rev>
+        <date>2026-08-16</date>
+        <source>Audio-Power.kicad_sch</source>
+        <comment number="1" value="AUDIO_12V is the only carrier power input; local 3 A fuse and one GND-to-AGND star"/>
+        <comment number="2" value="TRI 20-1223 creates +/-15 V; TPS62913 creates the quiet 5.5 V pre-rail"/>
+        <comment number="3" value="Separate LT3045 5 V/300 mA rails feed ADC and DAC; TPS7A2033 feeds AKM digital I/O"/>
+        <comment number="4" value="Power-good, sequencing, thermal rise, ripple, and conducted-emissions tests gate release"/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C601">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Manufacturer">TDK</field>
+        <field name="MPN">C1005X7R1H104K050BB</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="TDK"/>
+      <property name="MPN" value="C1005X7R1H104K050BB"/>
+      <property name="Sheetname" value="Audio-Power"/>
+      <property name="Sheetfile" value="Audio-Power.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>19714e53-1cff-5d8a-a984-e70df7c2068d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C602">
+      <value>22uF 25V</value>
+      <footprint>Capacitor_SMD:C_1210_3225Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Murata</field>
+        <field name="MPN">GRM32ER71E226KE15L</field>
+        <field name="Footprint">Capacitor_SMD:C_1210_3225Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="MPN" value="GRM32ER71E226KE15L"/>
+      <property name="Sheetname" value="Audio-Power"/>
+      <property name="Sheetfile" value="Audio-Power.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>392f3816-5903-5897-b25e-5fd6be82440f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C603">
+      <value>22uF 25V</value>
+      <footprint>Capacitor_SMD:C_1210_3225Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Murata</field>
+        <field name="MPN">GRM32ER71E226KE15L</field>
+        <field name="Footprint">Capacitor_SMD:C_1210_3225Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="MPN" value="GRM32ER71E226KE15L"/>
+      <property name="Sheetname" value="Audio-Power"/>
+      <property name="Sheetfile" value="Audio-Power.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>73ac769e-3e5b-5f69-a444-f670bd8af355</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C610">
+      <value>4.7uF 50V</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Murata</field>
+        <field name="MPN">GRM31CR71H475KA12L</field>
+        <field name="Footprint">Capacitor_SMD:C_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="MPN" value="GRM31CR71H475KA12L"/>
+      <property name="Sheetname" value="Audio-Power"/>
+      <property name="Sheetfile" value="Audio-Power.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>39a92fe6-c51b-525b-8481-8fba29491f2d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C611">
+      <value>4.7uF 50V</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Murata</field>
+        <field name="MPN">GRM31CR71H475KA12L</field>
+        <field name="Footprint">Capacitor_SMD:C_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="MPN" value="GRM31CR71H475KA12L"/>
+      <property name="Sheetname" value="Audio-Power"/>
+      <property name="Sheetfile" value="Audio-Power.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>cbde4f54-b99e-53e7-a3ce-5f0e8936c514</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C612">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Manufacturer">TDK</field>
+        <field name="MPN">C1005X7R1H104K050BB</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="TDK"/>
+      <property name="MPN" value="C1005X7R1H104K050BB"/>
+      <property name="Sheetname" value="Audio-Power"/>
+      <property name="Sheetfile" value="Audio-Power.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>226fad76-746d-5465-9b88-e6e3497fdea5</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C613">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Manufacturer">TDK</field>
+        <field name="MPN">C1005X7R1H104K050BB</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="TDK"/>
+      <property name="MPN" value="C1005X7R1H104K050BB"/>
+      <property name="Sheetname" value="Audio-Power"/>
+      <property name="Sheetfile" value="Audio-Power.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c458bd02-f137-502e-8671-51c73cbd980a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C620">
+      <value>470nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Murata</field>
+        <field name="MPN">GRM188R71E474KA12D</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="MPN" value="GRM188R71E474KA12D"/>
+      <property name="Sheetname" value="Audio-Power"/>
+      <property name="Sheetfile" value="Audio-Power.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>75f11fd2-c256-513a-b7ab-bd60ca916ebf</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C621">
+      <value>4.7uF 50V</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Murata</field>
+        <field name="MPN">GRM31CR71H475KA12L</field>
+        <field name="Footprint">Capacitor_SMD:C_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="MPN" value="GRM31CR71H475KA12L"/>
+      <property name="Sheetname" value="Audio-Power"/>
+      <property name="Sheetfile" value="Audio-Power.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>cd220613-006b-5c3d-80f2-45a5eca6afdd</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C622">
+      <value>4.7uF 50V</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Murata</field>
+        <field name="MPN">GRM31CR71H475KA12L</field>
+        <field name="Footprint">Capacitor_SMD:C_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="MPN" value="GRM31CR71H475KA12L"/>
+      <property name="Sheetname" value="Audio-Power"/>
+      <property name="Sheetfile" value="Audio-Power.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7d831b0e-6cdd-5dec-b67c-9ad06f4ab4eb</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C623">
+      <value>22uF 10V</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Murata</field>
+        <field name="MPN">GRM21BR71A226ME44L</field>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="MPN" value="GRM21BR71A226ME44L"/>
+      <property name="Sheetname" value="Audio-Power"/>
+      <property name="Sheetfile" value="Audio-Power.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>866cf10b-83a2-56a9-b064-0feef705d4a0</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C624">
+      <value>22uF 10V</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Murata</field>
+        <field name="MPN">GRM21BR71A226ME44L</field>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="MPN" value="GRM21BR71A226ME44L"/>
+      <property name="Sheetname" value="Audio-Power"/>
+      <property name="Sheetfile" value="Audio-Power.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>33aa13dd-7119-5f6c-a577-3d0a01823efc</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C630">
+      <value>470nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Murata</field>
+        <field name="MPN">GRM188R71E474KA12D</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="MPN" value="GRM188R71E474KA12D"/>
+      <property name="Sheetname" value="Audio-Power"/>
+      <property name="Sheetfile" value="Audio-Power.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f945ae4a-7697-5191-9d3b-c808e3a5cc6c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C631">
+      <value>10uF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Murata</field>
+        <field name="MPN">GRM188R71A106KA73D</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="MPN" value="GRM188R71A106KA73D"/>
+      <property name="Sheetname" value="Audio-Power"/>
+      <property name="Sheetfile" value="Audio-Power.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>486cbebd-88c4-5930-b4f5-43a2955ed7b8</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C632">
+      <value>10uF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Murata</field>
+        <field name="MPN">GRM188R71A106KA73D</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="MPN" value="GRM188R71A106KA73D"/>
+      <property name="Sheetname" value="Audio-Power"/>
+      <property name="Sheetfile" value="Audio-Power.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d9f57b66-352e-552c-927b-8358e9a75733</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C650">
+      <value>470nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Murata</field>
+        <field name="MPN">GRM188R71E474KA12D</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="MPN" value="GRM188R71E474KA12D"/>
+      <property name="Sheetname" value="Audio-Power"/>
+      <property name="Sheetfile" value="Audio-Power.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a92974c9-9142-509a-af53-b45bc614acf6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C651">
+      <value>10uF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Murata</field>
+        <field name="MPN">GRM188R71A106KA73D</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="MPN" value="GRM188R71A106KA73D"/>
+      <property name="Sheetname" value="Audio-Power"/>
+      <property name="Sheetfile" value="Audio-Power.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>cedb8eeb-e301-5a94-93c7-951dd93b527c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C652">
+      <value>10uF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Murata</field>
+        <field name="MPN">GRM188R71A106KA73D</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="MPN" value="GRM188R71A106KA73D"/>
+      <property name="Sheetname" value="Audio-Power"/>
+      <property name="Sheetfile" value="Audio-Power.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ce9ac660-67e7-53d1-9d8c-9d90a374b467</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C670">
+      <value>1uF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Murata</field>
+        <field name="MPN">GRM188R71A105KA61D</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="MPN" value="GRM188R71A105KA61D"/>
+      <property name="Sheetname" value="Audio-Power"/>
+      <property name="Sheetfile" value="Audio-Power.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>dfb5f9e5-4755-5475-8925-1bcc00cd26f6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C671">
+      <value>1uF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Murata</field>
+        <field name="MPN">GRM188R71A105KA61D</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="MPN" value="GRM188R71A105KA61D"/>
+      <property name="Sheetname" value="Audio-Power"/>
+      <property name="Sheetfile" value="Audio-Power.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>adef0de0-1aae-5abc-8cf4-a673ba5394a0</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C672">
+      <value>4.7uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Murata</field>
+        <field name="MPN">GRM21BR71A475KA73L</field>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="MPN" value="GRM21BR71A475KA73L"/>
+      <property name="Sheetname" value="Audio-Power"/>
+      <property name="Sheetfile" value="Audio-Power.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>bd1f369d-edc4-5030-bd96-b366185c53bb</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C673">
+      <value>100uF 6.3V polymer</value>
+      <footprint>Capacitor_SMD:CP_Elec_6.3x5.8</footprint>
+      <fields>
+        <field name="Manufacturer">Panasonic</field>
+        <field name="MPN">6SVP100M</field>
+        <field name="Footprint">Capacitor_SMD:CP_Elec_6.3x5.8</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C_Polarized" description="Polarized capacitor"/>
+      <property name="Manufacturer" value="Panasonic"/>
+      <property name="MPN" value="6SVP100M"/>
+      <property name="Sheetname" value="Audio-Power"/>
+      <property name="Sheetfile" value="Audio-Power.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="CP_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6a979d08-01de-5092-ab3a-3619ae96e759</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="F601">
+      <value>3A fuse</value>
+      <footprint>Fuse:Fuse_Littelfuse-NANO2-451_453</footprint>
+      <fields>
+        <field name="Manufacturer">Littelfuse</field>
+        <field name="MPN">0453003.MR</field>
+        <field name="Footprint">Fuse:Fuse_Littelfuse-NANO2-451_453</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="Fuse" description="Fuse"/>
+      <property name="Manufacturer" value="Littelfuse"/>
+      <property name="MPN" value="0453003.MR"/>
+      <property name="Sheetname" value="Audio-Power"/>
+      <property name="Sheetfile" value="Audio-Power.kicad_sch"/>
+      <property name="ki_keywords" value="fuse"/>
+      <property name="ki_fp_filters" value="*Fuse*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c64533cd-3bd6-5e27-9c9f-ab5b580d09df</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J102">
+      <value>AUDIO_12V_POWER</value>
+      <footprint>Connector_Molex:Molex_Micro-Fit_3.0_43045-0412_2x02_P3.00mm_Vertical</footprint>
+      <fields>
+        <field name="Manufacturer">Molex</field>
+        <field name="MPN">43045-0412</field>
+        <field name="Footprint">Connector_Molex:Molex_Micro-Fit_3.0_43045-0412_2x02_P3.00mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_02x02_Odd_Even" description="Generic connector, double row, 02x02, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Manufacturer" value="Molex"/>
+      <property name="MPN" value="43045-0412"/>
+      <property name="Sheetname" value="Audio-Power"/>
+      <property name="Sheetfile" value="Audio-Power.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_2x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>dfaa8426-3a4a-5423-aecb-84fbdece6651</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="2"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="L601">
+      <value>2.2uH</value>
+      <footprint>Inductor_SMD:L_Coilcraft_XxL4040</footprint>
+      <fields>
+        <field name="Manufacturer">Coilcraft</field>
+        <field name="MPN">XGL4030-222MEC</field>
+        <field name="Footprint">Inductor_SMD:L_Coilcraft_XxL4040</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="L" description="Inductor"/>
+      <property name="Manufacturer" value="Coilcraft"/>
+      <property name="MPN" value="XGL4030-222MEC"/>
+      <property name="Sheetname" value="Audio-Power"/>
+      <property name="Sheetfile" value="Audio-Power.kicad_sch"/>
+      <property name="ki_keywords" value="inductor choke coil reactor magnetic"/>
+      <property name="ki_fp_filters" value="Choke_* *Coil* Inductor_* L_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2fab25a7-3ca0-5991-a150-d1b628b55ab3</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R601">
+      <value>0R power star</value>
+      <footprint>Resistor_SMD:R_2512_6332Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC2512JK-070RL</field>
+        <field name="Footprint">Resistor_SMD:R_2512_6332Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC2512JK-070RL"/>
+      <property name="Sheetname" value="Audio-Power"/>
+      <property name="Sheetfile" value="Audio-Power.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5c4c8a76-c8b3-5a2c-8034-935def02b978</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R610">
+      <value>29.4k 0.1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Vishay</field>
+        <field name="MPN">TNPW060329K4BEEA</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Vishay"/>
+      <property name="MPN" value="TNPW060329K4BEEA"/>
+      <property name="Sheetname" value="Audio-Power"/>
+      <property name="Sheetfile" value="Audio-Power.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6239ba84-4c0c-57d6-90fb-129a9f5ea01f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R611">
+      <value>4.99k 0.1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-074K99L</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-074K99L"/>
+      <property name="Sheetname" value="Audio-Power"/>
+      <property name="Sheetfile" value="Audio-Power.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a25477c3-0728-506e-83f2-99db0486a192</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R612">
+      <value>7.5k 0.1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-077K5L</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-077K5L"/>
+      <property name="Sheetname" value="Audio-Power"/>
+      <property name="Sheetfile" value="Audio-Power.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d95e2edf-fdc9-53b0-b8e8-a7cf24e41d5d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R613">
+      <value>10k 0.1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Sheetname" value="Audio-Power"/>
+      <property name="Sheetfile" value="Audio-Power.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>352709cf-5ab2-57af-a845-2fedc931d03e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R630">
+      <value>499R 1% / 300mA ILIM</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-07499RL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-07499RL"/>
+      <property name="Sheetname" value="Audio-Power"/>
+      <property name="Sheetfile" value="Audio-Power.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>fe6f6d32-d905-5994-b821-a50f28aa3bb7</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R631">
+      <value>49.9k 0.1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Vishay</field>
+        <field name="MPN">TNPW060349K9BEEA</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Vishay"/>
+      <property name="MPN" value="TNPW060349K9BEEA"/>
+      <property name="Sheetname" value="Audio-Power"/>
+      <property name="Sheetfile" value="Audio-Power.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>175d0416-b2ad-5df3-af1f-5e1fba264275</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R632">
+      <value>140k 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-07140KL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-07140KL"/>
+      <property name="Sheetname" value="Audio-Power"/>
+      <property name="Sheetfile" value="Audio-Power.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f666d7f5-f988-5081-ad01-8f23414cc2a9</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R633">
+      <value>10k 0.1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Sheetname" value="Audio-Power"/>
+      <property name="Sheetfile" value="Audio-Power.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8ff244ae-953a-5741-90cb-4e8890c27da2</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R634">
+      <value>100k 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-07100KL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-07100KL"/>
+      <property name="Sheetname" value="Audio-Power"/>
+      <property name="Sheetfile" value="Audio-Power.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c13b963a-faaf-5772-9a9c-db95f884e2ba</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R650">
+      <value>499R 1% / 300mA ILIM</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-07499RL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-07499RL"/>
+      <property name="Sheetname" value="Audio-Power"/>
+      <property name="Sheetfile" value="Audio-Power.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b138fc23-88ca-54c9-909d-693ca05e8a1a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R651">
+      <value>49.9k 0.1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Vishay</field>
+        <field name="MPN">TNPW060349K9BEEA</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Vishay"/>
+      <property name="MPN" value="TNPW060349K9BEEA"/>
+      <property name="Sheetname" value="Audio-Power"/>
+      <property name="Sheetfile" value="Audio-Power.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7523b874-7a31-5bf8-8732-f8c95af45193</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R652">
+      <value>140k 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-07140KL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-07140KL"/>
+      <property name="Sheetname" value="Audio-Power"/>
+      <property name="Sheetfile" value="Audio-Power.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f2e9ef87-5f3d-5b78-b615-38bd8ec0b6b0</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R653">
+      <value>10k 0.1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Sheetname" value="Audio-Power"/>
+      <property name="Sheetfile" value="Audio-Power.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>dc6677c2-dc23-52f2-b6bd-f36159862107</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R654">
+      <value>100k 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-07100KL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-07100KL"/>
+      <property name="Sheetname" value="Audio-Power"/>
+      <property name="Sheetfile" value="Audio-Power.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>59fc6a63-25b1-560d-a183-867c8773341c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R670">
+      <value>10k 0.1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Sheetname" value="Audio-Power"/>
+      <property name="Sheetfile" value="Audio-Power.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8d40e78e-b7df-52db-b5d4-3a94db432534</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R671">
+      <value>10k 0.1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Sheetname" value="Audio-Power"/>
+      <property name="Sheetfile" value="Audio-Power.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1d7fe446-eccb-5d54-b198-3113493c9769</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U601">
+      <value>TRI 20-1223</value>
+      <footprint>CM5Carrier:TRACO_TRI20_DUAL</footprint>
+      <fields>
+        <field name="Manufacturer">TRACO Power</field>
+        <field name="MPN">TRI 20-1223</field>
+        <field name="Footprint">CM5Carrier:TRACO_TRI20_DUAL</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="CM5Carrier" part="TRI20_1223" description="20 W reinforced-isolation 12 V to dual 15 V DC/DC module"/>
+      <property name="Manufacturer" value="TRACO Power"/>
+      <property name="MPN" value="TRI 20-1223"/>
+      <property name="Sheetname" value="Audio-Power"/>
+      <property name="Sheetfile" value="Audio-Power.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>bd196513-3cf5-5381-86d5-c621c0ef1be8</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="5"/>
+            <pin num="2"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U602">
+      <value>TPS62913RPU</value>
+      <footprint>Package_DFN_QFN:Texas_RPU0010A_VQFN-HR-10_2x2mm_P0.5mm</footprint>
+      <fields>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="MPN">TPS62913RPUT</field>
+        <field name="Footprint">Package_DFN_QFN:Texas_RPU0010A_VQFN-HR-10_2x2mm_P0.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="CM5Carrier" part="TPS62913RPU" description="17 V 3 A low-noise buck converter in exact 10-pin RPU QFN pinout"/>
+      <property name="Manufacturer" value="Texas Instruments"/>
+      <property name="MPN" value="TPS62913RPUT"/>
+      <property name="Sheetname" value="Audio-Power"/>
+      <property name="Sheetfile" value="Audio-Power.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>388a11c4-f9f4-5a8a-9382-a803194261e2</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="5"/>
+            <pin num="7"/>
+            <pin num="9"/>
+            <pin num="2"/>
+            <pin num="4"/>
+            <pin num="6"/>
+            <pin num="8"/>
+            <pin num="10"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U603">
+      <value>LT3045IMSE</value>
+      <footprint>Package_SO:MSOP-12-1EP_3x4.039mm_P0.65mm_EP1.651x2.845mm_ThermalVias</footprint>
+      <fields>
+        <field name="Manufacturer">Analog Devices</field>
+        <field name="MPN">LT3045IMSE#TRPBF</field>
+        <field name="Footprint">Package_SO:MSOP-12-1EP_3x4.039mm_P0.65mm_EP1.651x2.845mm_ThermalVias</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Regulator_Linear" part="LT3045xMSE" description="500mA, Adjustable, Ultralow Noise, Ultrahigh PSRR Linear Regulator, MSOP-12"/>
+      <property name="Manufacturer" value="Analog Devices"/>
+      <property name="MPN" value="LT3045IMSE#TRPBF"/>
+      <property name="Sheetname" value="Audio-Power"/>
+      <property name="Sheetfile" value="Audio-Power.kicad_sch"/>
+      <property name="ki_keywords" value="linear voltage regulator low-noise"/>
+      <property name="ki_fp_filters" value="MSOP*1EP*3x4.039mm*P0.65mm*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b61a1c3c-3228-52aa-ae79-969911391958</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="6"/>
+            <pin num="8"/>
+            <pin num="9"/>
+            <pin num="13"/>
+            <pin num="11"/>
+            <pin num="12"/>
+            <pin num="10"/>
+            <pin num="7"/>
+            <pin num="5"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U604">
+      <value>LT3045IMSE</value>
+      <footprint>Package_SO:MSOP-12-1EP_3x4.039mm_P0.65mm_EP1.651x2.845mm_ThermalVias</footprint>
+      <fields>
+        <field name="Manufacturer">Analog Devices</field>
+        <field name="MPN">LT3045IMSE#TRPBF</field>
+        <field name="Footprint">Package_SO:MSOP-12-1EP_3x4.039mm_P0.65mm_EP1.651x2.845mm_ThermalVias</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Regulator_Linear" part="LT3045xMSE" description="500mA, Adjustable, Ultralow Noise, Ultrahigh PSRR Linear Regulator, MSOP-12"/>
+      <property name="Manufacturer" value="Analog Devices"/>
+      <property name="MPN" value="LT3045IMSE#TRPBF"/>
+      <property name="Sheetname" value="Audio-Power"/>
+      <property name="Sheetfile" value="Audio-Power.kicad_sch"/>
+      <property name="ki_keywords" value="linear voltage regulator low-noise"/>
+      <property name="ki_fp_filters" value="MSOP*1EP*3x4.039mm*P0.65mm*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>42235132-b028-5c01-b861-e86bb6e5889e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="6"/>
+            <pin num="8"/>
+            <pin num="9"/>
+            <pin num="13"/>
+            <pin num="11"/>
+            <pin num="12"/>
+            <pin num="10"/>
+            <pin num="7"/>
+            <pin num="5"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U605">
+      <value>TPS7A2033PDBVR</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23-5</footprint>
+      <fields>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="MPN">TPS7A2033PDBVR</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-5</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="CM5Carrier" part="TPS7A20DBV_A1" description="300 mA low-noise fixed-output LDO in SOT-23-5"/>
+      <property name="Manufacturer" value="Texas Instruments"/>
+      <property name="MPN" value="TPS7A2033PDBVR"/>
+      <property name="Sheetname" value="Audio-Power"/>
+      <property name="Sheetfile" value="Audio-Power.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ac6d60af-b897-52ee-8ca9-44737e6a0815</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="5"/>
+            <pin num="2"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="CM5Carrier" part="TPS62913RPU">
+      <description>17 V 3 A low-noise buck converter in exact 10-pin RPU QFN pinout</description>
+      <docs>https://www.ti.com/lit/ds/symlink/tps62913.pdf</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TPS62913RPU</field>
+        <field name="Footprint">Package_DFN_QFN:Texas_RPU0010A_VQFN-HR-10_2x2mm_P0.5mm</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tps62913.pdf</field>
+        <field name="Description">17 V 3 A low-noise buck converter in exact 10-pin RPU QFN pinout</field>
+      </fields>
+      <pins>
+        <pin num="1" name="EN/SYNC" type="passive"/>
+        <pin num="2" name="SW" type="passive"/>
+        <pin num="3" name="VO" type="passive"/>
+        <pin num="4" name="PGND" type="passive"/>
+        <pin num="5" name="PG" type="passive"/>
+        <pin num="6" name="VIN" type="passive"/>
+        <pin num="7" name="PSNS" type="passive"/>
+        <pin num="8" name="NR/SS" type="passive"/>
+        <pin num="9" name="FB" type="passive"/>
+        <pin num="10" name="S-CONF" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="CM5Carrier" part="TPS7A20DBV_A1">
+      <description>300 mA low-noise fixed-output LDO in SOT-23-5</description>
+      <docs>https://www.ti.com/lit/ds/symlink/tps7a20.pdf</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TPS7A20 fixed DBV</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-5</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tps7a20.pdf</field>
+        <field name="Description">300 mA low-noise fixed-output LDO in SOT-23-5</field>
+      </fields>
+      <pins>
+        <pin num="1" name="IN" type="passive"/>
+        <pin num="2" name="GND" type="passive"/>
+        <pin num="3" name="EN" type="passive"/>
+        <pin num="4" name="NC" type="passive"/>
+        <pin num="5" name="OUT" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="CM5Carrier" part="TRI20_1223">
+      <description>20 W reinforced-isolation 12 V to dual 15 V DC/DC module</description>
+      <docs>https://www.tracopower.com/tri20-datasheet</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TRI 20-1223</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">https://www.tracopower.com/tri20-datasheet</field>
+        <field name="Description">20 W reinforced-isolation 12 V to dual 15 V DC/DC module</field>
+      </fields>
+      <pins>
+        <pin num="1" name="+VIN" type="passive"/>
+        <pin num="2" name="-VIN" type="passive"/>
+        <pin num="3" name="+VOUT" type="passive"/>
+        <pin num="4" name="COMMON" type="passive"/>
+        <pin num="5" name="-VOUT" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_02x02_Odd_Even">
+      <description>Generic connector, double row, 02x02, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <footprints>
+        <fp>Connector*:*_2x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_02x02_Odd_Even</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, double row, 02x02, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C_Polarized">
+      <description>Polarized capacitor</description>
+      <footprints>
+        <fp>CP_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C_Polarized</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Polarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="Fuse">
+      <description>Fuse</description>
+      <footprints>
+        <fp>*Fuse*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">F</field>
+        <field name="Value">Fuse</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Fuse</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="L">
+      <description>Inductor</description>
+      <footprints>
+        <fp>Choke_*</fp>
+        <fp>*Coil*</fp>
+        <fp>Inductor_*</fp>
+        <fp>L_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">L</field>
+        <field name="Value">L</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Inductor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Regulator_Linear" part="LT3045xMSE">
+      <description>500mA, Adjustable, Ultralow Noise, Ultrahigh PSRR Linear Regulator, MSOP-12</description>
+      <docs>https://www.analog.com/media/en/technical-documentation/data-sheets/3045fa.pdf</docs>
+      <footprints>
+        <fp>MSOP*1EP*3x4.039mm*P0.65mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">LT3045xMSE</field>
+        <field name="Footprint">Package_SO:MSOP-12-1EP_3x4.039mm_P0.65mm_EP1.651x2.845mm</field>
+        <field name="Datasheet">https://www.analog.com/media/en/technical-documentation/data-sheets/3045fa.pdf</field>
+        <field name="Description">500mA, Adjustable, Ultralow Noise, Ultrahigh PSRR Linear Regulator, MSOP-12</field>
+      </fields>
+      <pins>
+        <pin num="1" name="IN" type="power_in"/>
+        <pin num="2" name="IN" type="passive"/>
+        <pin num="3" name="IN" type="passive"/>
+        <pin num="4" name="EN/UV" type="input"/>
+        <pin num="5" name="PG" type="open_collector"/>
+        <pin num="6" name="ILIM" type="passive"/>
+        <pin num="7" name="PGFB" type="input"/>
+        <pin num="8" name="SET" type="passive"/>
+        <pin num="9" name="GND" type="power_in"/>
+        <pin num="10" name="OUTS" type="input"/>
+        <pin num="11" name="OUT" type="power_out"/>
+        <pin num="12" name="OUT" type="passive"/>
+        <pin num="13" name="GND" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="CM5Carrier">
+      <uri>${KIPRJMOD}/../CM5-CARRIER/CM5Carrier.kicad_sym</uri>
+    </library>
+    <library logical="Connector_Generic">
+      <uri>${KICAD10_SYMBOL_DIR}/Connector_Generic.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>${KICAD10_SYMBOL_DIR}/Device.kicad_sym</uri>
+    </library>
+    <library logical="Regulator_Linear">
+      <uri>${KICAD10_SYMBOL_DIR}/Regulator_Linear.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/ADC_5V_A" class="Default">
+      <node ref="C632" pin="1" pintype="passive"/>
+      <node ref="R632" pin="1" pintype="passive"/>
+      <node ref="R634" pin="1" pintype="passive"/>
+      <node ref="R670" pin="1" pintype="passive"/>
+      <node ref="U603" pin="10" pinfunction="OUTS_10" pintype="input"/>
+      <node ref="U603" pin="11" pinfunction="OUT_11" pintype="power_out"/>
+      <node ref="U603" pin="12" pinfunction="OUT_12" pintype="passive"/>
+    </net>
+    <net code="2" name="/ADC_5V_ILIM" class="Default">
+      <node ref="R630" pin="1" pintype="passive"/>
+      <node ref="U603" pin="6" pinfunction="ILIM_6" pintype="passive"/>
+    </net>
+    <net code="3" name="/ADC_5V_PG" class="Default">
+      <node ref="R634" pin="2" pintype="passive"/>
+      <node ref="U603" pin="5" pinfunction="PG_5" pintype="open_collector"/>
+    </net>
+    <net code="4" name="/ADC_5V_PGFB" class="Default">
+      <node ref="R632" pin="2" pintype="passive"/>
+      <node ref="R633" pin="1" pintype="passive"/>
+      <node ref="U603" pin="7" pinfunction="PGFB_7" pintype="input"/>
+    </net>
+    <net code="5" name="/ADC_5V_SET" class="Default">
+      <node ref="C630" pin="1" pintype="passive"/>
+      <node ref="R631" pin="1" pintype="passive"/>
+      <node ref="U603" pin="8" pinfunction="SET_8" pintype="passive"/>
+    </net>
+    <net code="6" name="/AGND" class="Default">
+      <node ref="C601" pin="2" pintype="passive"/>
+      <node ref="C602" pin="2" pintype="passive"/>
+      <node ref="C603" pin="2" pintype="passive"/>
+      <node ref="C610" pin="2" pintype="passive"/>
+      <node ref="C611" pin="2" pintype="passive"/>
+      <node ref="C612" pin="2" pintype="passive"/>
+      <node ref="C613" pin="2" pintype="passive"/>
+      <node ref="C620" pin="2" pintype="passive"/>
+      <node ref="C621" pin="2" pintype="passive"/>
+      <node ref="C622" pin="2" pintype="passive"/>
+      <node ref="C623" pin="2" pintype="passive"/>
+      <node ref="C624" pin="2" pintype="passive"/>
+      <node ref="C630" pin="2" pintype="passive"/>
+      <node ref="C631" pin="2" pintype="passive"/>
+      <node ref="C632" pin="2" pintype="passive"/>
+      <node ref="C650" pin="2" pintype="passive"/>
+      <node ref="C651" pin="2" pintype="passive"/>
+      <node ref="C652" pin="2" pintype="passive"/>
+      <node ref="C670" pin="2" pintype="passive"/>
+      <node ref="C671" pin="2" pintype="passive"/>
+      <node ref="C672" pin="2" pintype="passive"/>
+      <node ref="C673" pin="2" pintype="passive"/>
+      <node ref="R601" pin="2" pintype="passive"/>
+      <node ref="R611" pin="2" pintype="passive"/>
+      <node ref="R612" pin="2" pintype="passive"/>
+      <node ref="R630" pin="2" pintype="passive"/>
+      <node ref="R631" pin="2" pintype="passive"/>
+      <node ref="R633" pin="2" pintype="passive"/>
+      <node ref="R650" pin="2" pintype="passive"/>
+      <node ref="R651" pin="2" pintype="passive"/>
+      <node ref="R653" pin="2" pintype="passive"/>
+      <node ref="R671" pin="2" pintype="passive"/>
+      <node ref="U601" pin="2" pinfunction="-VIN_2" pintype="passive"/>
+      <node ref="U601" pin="4" pinfunction="COMMON_4" pintype="passive"/>
+      <node ref="U602" pin="4" pinfunction="PGND_4" pintype="passive"/>
+      <node ref="U603" pin="13" pinfunction="GND_13" pintype="passive"/>
+      <node ref="U603" pin="9" pinfunction="GND_9" pintype="power_in"/>
+      <node ref="U604" pin="13" pinfunction="GND_13" pintype="passive"/>
+      <node ref="U604" pin="9" pinfunction="GND_9" pintype="power_in"/>
+      <node ref="U605" pin="2" pinfunction="GND_2" pintype="passive"/>
+    </net>
+    <net code="7" name="/AKM_3V3_D" class="Default">
+      <node ref="C671" pin="1" pintype="passive"/>
+      <node ref="C672" pin="1" pintype="passive"/>
+      <node ref="U605" pin="5" pinfunction="OUT_5" pintype="passive"/>
+    </net>
+    <net code="8" name="/AUDIO_5V5_FB" class="Default">
+      <node ref="R610" pin="2" pintype="passive"/>
+      <node ref="R611" pin="1" pintype="passive"/>
+      <node ref="U602" pin="9" pinfunction="FB_9" pintype="passive"/>
+    </net>
+    <net code="9" name="/AUDIO_5V5_NRSS" class="Default">
+      <node ref="C620" pin="1" pintype="passive"/>
+      <node ref="U602" pin="8" pinfunction="NR/SS_8" pintype="passive"/>
+    </net>
+    <net code="10" name="/AUDIO_5V5_PG" class="Default">
+      <node ref="R613" pin="2" pintype="passive"/>
+      <node ref="U602" pin="5" pinfunction="PG_5" pintype="passive"/>
+      <node ref="U603" pin="4" pinfunction="EN/UV_4" pintype="input"/>
+      <node ref="U604" pin="4" pinfunction="EN/UV_4" pintype="input"/>
+      <node ref="U605" pin="3" pinfunction="EN_3" pintype="passive"/>
+    </net>
+    <net code="11" name="/AUDIO_5V5_PRE" class="Default">
+      <node ref="C623" pin="1" pintype="passive"/>
+      <node ref="C624" pin="1" pintype="passive"/>
+      <node ref="C631" pin="1" pintype="passive"/>
+      <node ref="C651" pin="1" pintype="passive"/>
+      <node ref="C670" pin="1" pintype="passive"/>
+      <node ref="L601" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R610" pin="1" pintype="passive"/>
+      <node ref="R613" pin="1" pintype="passive"/>
+      <node ref="U602" pin="3" pinfunction="VO_3" pintype="passive"/>
+      <node ref="U602" pin="7" pinfunction="PSNS_7" pintype="passive"/>
+      <node ref="U603" pin="1" pinfunction="IN_1" pintype="power_in"/>
+      <node ref="U603" pin="2" pinfunction="IN_2" pintype="passive"/>
+      <node ref="U603" pin="3" pinfunction="IN_3" pintype="passive"/>
+      <node ref="U604" pin="1" pinfunction="IN_1" pintype="power_in"/>
+      <node ref="U604" pin="2" pinfunction="IN_2" pintype="passive"/>
+      <node ref="U604" pin="3" pinfunction="IN_3" pintype="passive"/>
+      <node ref="U605" pin="1" pinfunction="IN_1" pintype="passive"/>
+    </net>
+    <net code="12" name="/AUDIO_5V5_SCONF" class="Default">
+      <node ref="R612" pin="1" pintype="passive"/>
+      <node ref="U602" pin="10" pinfunction="S-CONF_10" pintype="passive"/>
+    </net>
+    <net code="13" name="/AUDIO_5V5_SW" class="Default">
+      <node ref="L601" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U602" pin="2" pinfunction="SW_2" pintype="passive"/>
+    </net>
+    <net code="14" name="/AUDIO_12V" class="Default">
+      <node ref="C601" pin="1" pintype="passive"/>
+      <node ref="C602" pin="1" pintype="passive"/>
+      <node ref="C603" pin="1" pintype="passive"/>
+      <node ref="C621" pin="1" pintype="passive"/>
+      <node ref="C622" pin="1" pintype="passive"/>
+      <node ref="F601" pin="2" pintype="passive"/>
+      <node ref="U601" pin="1" pinfunction="+VIN_1" pintype="passive"/>
+      <node ref="U602" pin="6" pinfunction="VIN_6" pintype="passive"/>
+    </net>
+    <net code="15" name="/AUDIO_12V_IN" class="Default">
+      <node ref="F601" pin="1" pintype="passive"/>
+      <node ref="J102" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="J102" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+    </net>
+    <net code="16" name="/AUDIO_ENABLE" class="Default">
+      <node ref="U602" pin="1" pinfunction="EN/SYNC_1" pintype="passive"/>
+    </net>
+    <net code="17" name="/AUDIO_N15V" class="Default">
+      <node ref="C611" pin="1" pintype="passive"/>
+      <node ref="C613" pin="1" pintype="passive"/>
+      <node ref="U601" pin="5" pinfunction="-VOUT_5" pintype="passive"/>
+    </net>
+    <net code="18" name="/AUDIO_P15V" class="Default">
+      <node ref="C610" pin="1" pintype="passive"/>
+      <node ref="C612" pin="1" pintype="passive"/>
+      <node ref="U601" pin="3" pinfunction="+VOUT_3" pintype="passive"/>
+    </net>
+    <net code="19" name="/DAC_5V_A" class="Default">
+      <node ref="C652" pin="1" pintype="passive"/>
+      <node ref="R652" pin="1" pintype="passive"/>
+      <node ref="R654" pin="1" pintype="passive"/>
+      <node ref="U604" pin="10" pinfunction="OUTS_10" pintype="input"/>
+      <node ref="U604" pin="11" pinfunction="OUT_11" pintype="power_out"/>
+      <node ref="U604" pin="12" pinfunction="OUT_12" pintype="passive"/>
+    </net>
+    <net code="20" name="/DAC_5V_ILIM" class="Default">
+      <node ref="R650" pin="1" pintype="passive"/>
+      <node ref="U604" pin="6" pinfunction="ILIM_6" pintype="passive"/>
+    </net>
+    <net code="21" name="/DAC_5V_PG" class="Default">
+      <node ref="R654" pin="2" pintype="passive"/>
+      <node ref="U604" pin="5" pinfunction="PG_5" pintype="open_collector"/>
+    </net>
+    <net code="22" name="/DAC_5V_PGFB" class="Default">
+      <node ref="R652" pin="2" pintype="passive"/>
+      <node ref="R653" pin="1" pintype="passive"/>
+      <node ref="U604" pin="7" pinfunction="PGFB_7" pintype="input"/>
+    </net>
+    <net code="23" name="/DAC_5V_SET" class="Default">
+      <node ref="C650" pin="1" pintype="passive"/>
+      <node ref="R651" pin="1" pintype="passive"/>
+      <node ref="U604" pin="8" pinfunction="SET_8" pintype="passive"/>
+    </net>
+    <net code="24" name="/GND" class="Default">
+      <node ref="J102" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="J102" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+      <node ref="R601" pin="1" pintype="passive"/>
+    </net>
+    <net code="25" name="/VCM_2V5" class="Default">
+      <node ref="C673" pin="1" pintype="passive"/>
+      <node ref="R670" pin="2" pintype="passive"/>
+      <node ref="R671" pin="1" pintype="passive"/>
+    </net>
+    <net code="26" name="unconnected-(U605-NC-Pad4)" class="Default">
+      <node ref="U605" pin="4" pinfunction="NC_4" pintype="passive+no_connect"/>
+    </net>
+  </nets>
+</export>

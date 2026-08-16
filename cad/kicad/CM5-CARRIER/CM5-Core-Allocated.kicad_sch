@@ -7795,6 +7795,33 @@
 				(justify left)
 			)
 		)
+		(property "Footprint" "Connector_JST:JST_GH_BM06B-GHS-TBT_1x06-1MP_P1.25mm_Vertical"
+			(at 90.17 234.95 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "JST"
+			(at 92.71 240.0299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "BM06B-GHS-TBT(LF)(SN)"
+			(at 92.71 240.0299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "3a9f96ff-d324-5486-86fb-8814f3c881eb")
 		)
@@ -7850,6 +7877,33 @@
 				(justify left)
 			)
 		)
+		(property "Footprint" "Connector_JST:JST_GH_BM04B-GHS-TBT_1x04-1MP_P1.25mm_Vertical"
+			(at 214.63 232.41 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "JST"
+			(at 217.17 237.4899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "BM04B-GHS-TBT(LF)(SN)"
+			(at 217.17 237.4899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "1ba59038-79e8-5eef-ac82-d1f105ff5c9c")
 		)
@@ -7897,6 +7951,33 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_JST:JST_GH_BM05B-GHS-TBT_1x05-1MP_P1.25mm_Vertical"
+			(at 330.2 232.41 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "JST"
+			(at 332.74 237.4899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "BM05B-GHS-TBT(LF)(SN)"
+			(at 332.74 237.4899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -7949,6 +8030,33 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_Molex:Molex_Micro-Fit_3.0_43045-0812_2x04_P3.00mm_Vertical"
+			(at 469.9 232.41 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Molex"
+			(at 472.44 237.4899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "43045-0812"
+			(at 472.44 237.4899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -10398,7 +10506,7 @@
 		)
 		(uuid "10510e43-a9cf-571e-9f36-c2aac6575e83")
 	)
-	(text "Internal recovery interface; add final protected USB-C receptacle circuit."
+	(text "Internal keyed recovery harness; service fixture owns the protected USB-C receptacle and CC network."
 		(exclude_from_sim no)
 		(at 285 260 0.0000)
 		(effects

@@ -81,11 +81,25 @@
 
 ## Audio Stress Tests
 
+- Before releasing either converter reset, verify the common 12.288 MHz MCLK,
+  12.288 MHz BCLK, 48 kHz frame sync, eight 32-bit TDM256 slots, and the
+  expected I2C devices: AK5558 at `0x10` and AK4458 at `0x11`.
+- Read back AK5558 registers `0x02=0x17` and `0x03=0x40`; read back AK4458
+  registers `0x0A=0x8D` and `0x0B=0x0C`. Treat any mismatch as a latched audio
+  fault and keep the output relays de-energized.
+- Keep the DAC soft-muted and K501-K508 de-energized during rail/clock setup.
+  Send stable zero data, complete the soft-mute ramp, and energize the relays
+  only after all rail, clock, address, and register checks pass.
 - Confirm 8-channel capture and 8-channel playback enumerate with the expected
   ALSA names and channel map.
 - Verify +4 dBu nominal and +24 dBu maximum input/output on every channel;
   confirm outputs remain stable into 600 ohm and meet noise/distortion targets
   with a normal 10 kohm load.
+- Confirm +4 dBu input measures approximately -21.0 dBFS and +24 dBu input
+  remains below clipping on all channels. Calibrate playback digital gain so
+  +24 dBu is the operating ceiling despite the calculated analog headroom.
+- Exercise mute, reset, relay drop-out, clock loss, hot-plug, and source-transfer
+  sequences while monitoring XLR outputs for clicks, DC, or unsafe transients.
 - Run simultaneous 8x8 playback/capture while applying CPU stress.
 - Repeat the same audio test while routing WAN/LAN traffic, broadcasting Wi-Fi
   AP traffic, using the cellular modem, displaying HDMI video, using USB touch,

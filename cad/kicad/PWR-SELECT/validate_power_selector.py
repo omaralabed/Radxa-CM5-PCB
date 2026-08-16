@@ -225,12 +225,33 @@ required_values = {
     "D203": "SMBJ18CA",
     "C202": "10uF 50V X7R",
     "C203": "10uF 50V X7R",
+    "C306": "6800uF 50V",
+    "C307": "6800uF 50V",
+    "C308": "6800uF 50V",
+    "C309": "6800uF 50V",
 }
 for ref, wanted in required_values.items():
     component = component_by_ref.get(ref)
     actual = component.findtext("value") if component is not None else None
     if actual != wanted:
         fail(f"reverse-protection part {ref}: wanted {wanted}, got {actual}")
+
+for ref in ("C306", "C307", "C308", "C309"):
+    component = component_by_ref[ref]
+    fields = {field.get("name"): field.text for field in component.findall("./fields/field")}
+    if fields.get("MPN") != "LGU1H682MELB":
+        fail(f"hold-up part {ref}: wanted LGU1H682MELB, got {fields.get('MPN')}")
+    if component.findtext("footprint") != "Capacitor_THT:CP_Radial_D30.0mm_P10.00mm_SnapIn":
+        fail(f"hold-up part {ref}: wrong 30 mm snap-in footprint")
+    if pin_net.get((ref, "1")) != "RAW_OUT" or pin_net.get((ref, "2")) != "GND":
+        fail(f"hold-up part {ref}: must connect RAW_OUT to GND")
+
+bulk_nominal_f = 4 * 6800e-6
+local_nominal_f = 3 * 220e-6
+worst_case_f = 0.8 * (bulk_nominal_f + local_nominal_f)
+hold_up_ms = 1000.0 * worst_case_f * (24.0**2 - 12.5**2) / (2.0 * 184.2)
+if hold_up_ms < 25.0:
+    fail(f"worst-case no-blink hold-up {hold_up_ms:.2f} ms is below the 25 ms design floor")
 
 # The panel switch is an off-board system item, so it is controlled by a
 # separate exact-MPN BOM rather than being assigned a misleading PCB footprint.
@@ -366,3 +387,4 @@ print(f"PASS: Gold thresholds {gold[0]:.3f} / {gold[1]:.3f} / {gold[2]:.3f} V")
 print(f"PASS: -16.8 V UV/OV clamp currents {reverse_dtap_uA:.2f} / {reverse_gold_uA:.2f} uA (<25 uA design, <<3 mA abs max)")
 print(f"PASS: INA228 source/load ranges {source_full_scale_a:.3f} A / {load_full_scale_a:.2f} A")
 print(f"PASS: nominal LTC4421 limit {nominal_ltc4421_limit_a:.3f} A; source shunt {source_shunt_w_at_15a:.4f} W at 15 A")
+print(f"PASS: 27.86 mF nominal / {hold_up_ms:.2f} ms at -20%, 184.2 W, 24.0 V to 12.5 V")

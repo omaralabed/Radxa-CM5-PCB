@@ -1,0 +1,31 @@
+Pin,Carrier interface,Audio interface,Net,Conductor class,Pair or return group,Assembly requirement
+1,J901,J101,AUD_MCLK_P,100 ohm differential twisted pair,P1 positive,Keep paired only with pin 2
+2,J901,J101,AUD_MCLK_N,100 ohm differential twisted pair,P1 negative,Keep paired only with pin 1
+3,J901,J101,GND,Ground return,G1,Interleaved return beside P1
+4,J901,J101,GND,Ground return,G2,Interleaved return beside P1/P2
+5,J901,J101,AUD_BCLK_P,100 ohm differential twisted pair,P2 positive,Keep paired only with pin 6
+6,J901,J101,AUD_BCLK_N,100 ohm differential twisted pair,P2 negative,Keep paired only with pin 5
+7,J901,J101,AUD_FSYNC_P,100 ohm differential twisted pair,P3 positive,Keep paired only with pin 8
+8,J901,J101,AUD_FSYNC_N,100 ohm differential twisted pair,P3 negative,Keep paired only with pin 7
+9,J901,J101,GND,Ground return,G3,Interleaved return beside P2/P3
+10,J901,J101,GND,Ground return,G4,Interleaved return beside P3/P4
+11,J901,J101,AUD_DAC_SDIN_P,100 ohm differential twisted pair,P4 positive,Keep paired only with pin 12
+12,J901,J101,AUD_DAC_SDIN_N,100 ohm differential twisted pair,P4 negative,Keep paired only with pin 11
+13,J901,J101,AUD_ADC_SDOUT_P,100 ohm differential twisted pair,P5 positive,Keep paired only with pin 14
+14,J901,J101,AUD_ADC_SDOUT_N,100 ohm differential twisted pair,P5 negative,Keep paired only with pin 13
+15,J901,J101,GND,Ground return,G5,Interleaved return beside P4/P5
+16,J901,J101,GND,Ground return,G6,Interleaved return beside P5/control group
+17,J901,J101,AUD_I2C_SCL,Low-speed insulated conductor,CTRL,Route away from P1-P5 after breakout
+18,J901,J101,AUD_I2C_SDA,Low-speed insulated conductor,CTRL,Route away from P1-P5 after breakout
+19,J901,J101,AUD_ADC_RST_N,Low-speed insulated conductor,CTRL,No branch or test stub in harness
+20,J901,J101,AUD_DAC_RST_N,Low-speed insulated conductor,CTRL,No branch or test stub in harness
+21,J901,J101,AUD_DAC_MUTE_N,Low-speed insulated conductor,CTRL,No branch or test stub in harness
+22,J901,J101,AUD_IRQ_N,Low-speed insulated conductor,CTRL,No branch or test stub in harness
+23,J901,J101,AUDIO_PRESENT_N,Low-speed insulated conductor,CTRL,No branch or test stub in harness
+24,J901,J101,AUDIO_ENABLE,Low-speed insulated conductor,CTRL,No branch or test stub in harness
+25,J901,J101,LOGIC_3V3,Low-current supply,PWR,Use only for interface logic and pull-ups
+26,J901,J101,GND,Ground return,G7,Logic supply return
+27,J901,J101,TDM_SPARE_1,Reserved insulated conductor,SPARE,Terminate both ends; do not connect in Rev A
+28,J901,J101,TDM_SPARE_2,Reserved insulated conductor,SPARE,Terminate both ends; do not connect in Rev A
+29,J901,J101,GND,Ground return,G8,Harness return and crosstalk control
+30,J901,J101,GND,Ground return,G9,Harness return and crosstalk control

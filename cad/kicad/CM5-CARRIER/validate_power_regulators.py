@@ -4,7 +4,16 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+import csv
 import math
+from pathlib import Path
+import re
+
+
+ROOT = Path(__file__).resolve().parent
+WORKSPACE = ROOT.parent.parent.parent
+FOOTPRINTS = ROOT / "CM5Carrier.pretty"
+BOM = WORKSPACE / "docs" / "power_regulator_bom_a1.csv"
 
 
 @dataclass(frozen=True)
@@ -42,7 +51,7 @@ class Stage:
 
 
 STAGES = (
-    Stage("SYS_5V15", "LM5146RGYR", 10.5, 30.0, 5.15, 12.0, 30.0, 38.0, 0.94, 300.0, 3.3, 28.6),
+    Stage("SYS_5V15", "LM5146RGYR", 10.5, 30.0, 5.15, 12.0, 30.0, 38.0, 0.94, 300.0, 3.3, 29.2),
     Stage("AUX_12V", "LM5176PWP", 10.5, 30.0, 12.0, 8.0, 76.0, 84.0, 0.90, 300.0, 4.7, 20.9),
     Stage("MODEM_3V8", "LM61460RJR", 10.5, 30.0, 3.8, 6.0, 12.0, 20.0, 0.90, 400.0, 4.7, 15.2),
     Stage("WIFI_3V3", "LM61440RJR", 10.5, 30.0, 3.3, 4.0, 9.0, 10.0, 0.90, 400.0, 4.7, 15.2),
@@ -73,9 +82,93 @@ def check(name: str, condition: bool, detail: str) -> bool:
     return condition
 
 
+def validate_controlled_artifacts(checks: list[bool]) -> None:
+    footprint_requirements = {
+        "TI_RJR0014A.kicad_mod": (
+            set(map(str, range(1, 15))),
+            ('(at 1.000 0.000) (size 2.400 0.400)', '(at -1.850 -0.525) (size 0.700 0.250)'),
+        ),
+        "TI_DML0010A.kicad_mod": (
+            set(map(str, range(1, 11))),
+            ('(at 0.020 0.000) (size 1.100 1.950)', '(at -1.300 -1.000) (size 0.450 0.240)'),
+        ),
+        "TI_DNK0008A_GSD.kicad_mod": (
+            {"1", "2", "3"},
+            ('(at 0.330 0.000) (size 4.350 4.510)', '(at -2.800 1.905) (size 0.700 0.700)'),
+        ),
+        "onsemi_DFN5_5x6_488AA_GSD.kicad_mod": (
+            {"1", "2", "3"},
+            ('(at 0.000 -0.665) (size 4.560 3.200)', '(at 1.905 2.765) (size 0.750 1.000)'),
+        ),
+        "onsemi_DFNW8_5p2x6p3_507AU_GSD.kicad_mod": (
+            {"1", "2", "3"},
+            ('(at 0.000 0.000) (size 4.420 3.750)', '(at 1.905 2.745) (size 0.610 1.420)'),
+        ),
+        "TDK_SPM10065VC.kicad_mod": (
+            {"1", "2"},
+            ('(at -4.525 0.000) (size 2.950 4.500)',),
+        ),
+        "Wurth_74439370047.kicad_mod": (
+            {"1", "2"},
+            ('(at 0.000 -5.300) (size 14.100 3.300)',),
+        ),
+        "Susumu_KRL6432E_6mR.kicad_mod": (
+            {"1", "2"},
+            ('(at -1.600 0.000) (size 1.000 6.600)',),
+        ),
+        "Susumu_KRL11050_4mR.kicad_mod": (
+            {"1", "2"},
+            ('(at -2.300 0.000) (size 1.000 11.200)',),
+        ),
+    }
+    pad_pattern = re.compile(r'\(pad "(\d+)" smd')
+    for filename, (expected_pads, geometry) in footprint_requirements.items():
+        path = FOOTPRINTS / filename
+        text = path.read_text() if path.exists() else ""
+        observed_pads = set(pad_pattern.findall(text))
+        checks.append(
+            check(
+                f"{filename} controlled footprint",
+                path.exists() and observed_pads == expected_pads and all(item in text for item in geometry),
+                f"pads {sorted(observed_pads)}; {len(geometry)} drawing-critical geometry checks",
+            )
+        )
+
+    rows = list(csv.DictReader(BOM.open())) if BOM.exists() else []
+    by_ref = {row["Reference"]: row for row in rows}
+    key_parts = {
+        "L1110": ("SPM10065VC-3R3M-D", "CM5Carrier:TDK_SPM10065VC"),
+        "L1120": ("74439370047", "CM5Carrier:Wurth_74439370047"),
+        "Q1110": ("NVMFS6B25NLT1G", "CM5Carrier:onsemi_DFN5_5x6_488AA_GSD"),
+        "Q1111": ("FDWS86068-F085", "CM5Carrier:onsemi_DFNW8_5p2x6p3_507AU_GSD"),
+        "Q1120": ("CSD18532Q5B", "CM5Carrier:TI_DNK0008A_GSD"),
+        "Q1122": ("CSD17573Q5B", "CM5Carrier:TI_DNK0008A_GSD"),
+        "U1130": ("LM61460RJR", "CM5Carrier:TI_RJR0014A"),
+        "U1140": ("LM61440RJR", "CM5Carrier:TI_RJR0014A"),
+        "U1141": ("TPS22990DMLR", "CM5Carrier:TI_DML0010A"),
+    }
+    key_parts_ok = all(
+        reference in by_ref
+        and by_ref[reference]["MPN"] == mpn
+        and by_ref[reference]["Footprint"] == footprint
+        for reference, (mpn, footprint) in key_parts.items()
+    )
+    complete = bool(rows) and all(
+        row["Manufacturer"] and row["MPN"] and row["Footprint"] for row in rows
+    )
+    checks.append(
+        check(
+            "Power-Regulators production BOM",
+            len(rows) == 150 and complete and key_parts_ok,
+            f"{len(rows)} rows (expected 150); all MPN/footprint fields complete; controlled power parts agree",
+        )
+    )
+
+
 def main() -> int:
     checks: list[bool] = []
     print("POWER-REGULATORS A1 CALCULATION CHECK\n")
+    validate_controlled_artifacts(checks)
 
     for stage in STAGES:
         required_headroom = 1.10 if stage.rail in {"MODEM_3V8", "AUX_12V"} else 1.15
@@ -115,8 +208,6 @@ def main() -> int:
         ("WIFI/NET/LOGIC_3V3", 3.3, actual_output(1.0, 100.0, 43.2)),
         ("PCIE_1V0", 1.0, actual_output(0.8, 1.24, 4.99)),
         ("LOGIC_1V8", 1.8, actual_output(0.8, 6.19, 4.99)),
-        ("HEADSET_3V3", 3.3, actual_output(0.8, 15.6, 4.99)),
-        ("AUDIO_PRE_5V5", 5.5, actual_output(0.8, 29.4, 4.99)),
     )
     for rail, target, actual in feedback:
         error = 100.0 * (actual - target) / target
@@ -131,8 +222,6 @@ def main() -> int:
     pol_specs = (
         ("PCIE_1V0", 5.15, 1.0, 2.0),
         ("LOGIC_1V8", 5.15, 1.8, 1.5),
-        ("HEADSET_3V3", 5.15, 3.3, 1.0),
-        ("AUDIO_PRE_5V5", 12.0, 5.5, 1.0),
     )
     for rail, vin, vout, rating_a in pol_specs:
         ripple = buck_ripple(vin, vout, 2.2, 2200.0)
@@ -199,12 +288,12 @@ def main() -> int:
     checks.append(check("11.35 V battery load-shed threshold", 12.0 < continuous_source_w / 11.35 <= 15.0, f"{continuous_source_w / 11.35:.2f} A requires automatic load shedding below the 12 A battery rating"))
     checks.append(check("11.35 V battery transient", transient_source_w / 11.35 <= 20.0, f"{transient_source_w / 11.35:.2f} A <= 20 A short peak; not a sustained operating point"))
 
-    for capacitance_mf in (22.4, 47.7):
+    for label, capacitance_mf in (("nominal", 27.86), ("minus-20-percent", 22.288)):
         for load_w in (continuous_source_w, transient_source_w):
             duration = holdup_ms(capacitance_mf / 1000.0, 24.0, 12.5, load_w)
             checks.append(
                 check(
-                    f"{capacitance_mf:.0f} mF hold-up at {load_w:.1f} W",
+                    f"{label} {capacitance_mf:.3f} mF hold-up at {load_w:.1f} W",
                     duration >= 20.0,
                     f"{duration:.1f} ms ideal from 24.0 V to 12.5 V",
                 )

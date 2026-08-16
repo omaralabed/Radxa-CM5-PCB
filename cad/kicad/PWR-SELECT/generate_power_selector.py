@@ -41,8 +41,8 @@ sch.set_title_block(
     comments={
         1: "Fixed priority: internal PSU 24 V, then D-Tap, then Gold Mount dock",
         2: "RAW_OUT_LOAD feeds the protected CM5-CARRIER regulator input",
-        3: "Battery inputs use LTC4418 plus back-to-back P-MOS reverse-polarity blocking",
-        4: "INA228 telemetry reports primary, selected backup, and delivered load",
+        3: "27.2 mF / 50 V hold-up bank is retained on this floor-mounted board",
+        4: "Battery inputs use LTC4418 plus back-to-back P-MOS reverse-polarity blocking",
     },
 )
 
@@ -166,6 +166,7 @@ WSK = "Resistor_SMD:R_Shunt_Vishay_WSK2512_6332Metric_T2.21mm"
 LFPAK56E = "PowerSelector:LFPAK56E_SOT1023"
 CAP10 = "Capacitor_SMD:CP_Elec_10x10"
 CAP_G16 = "PowerSelector:CP_Panasonic_EEH-ZS_G16_10x16.8"
+CAP_SNAPIN_30 = "Capacitor_THT:CP_Radial_D30.0mm_P10.00mm_SnapIn"
 
 
 # ---------------------------------------------------------------------------
@@ -388,27 +389,43 @@ net(j301, 1, "RAW_OUT_LOAD", "right"); net(j301, 2, "RAW_OUT_LOAD", "left")
 net(j301, 3, "GND", "right"); net(j301, 4, "GND", "left")
 j301.add_property("Reference", "J301", hidden=True); j301.add_property("Value", "RAW_OUT_TO_LM5176", hidden=True)
 sch.texts.add("J301  RAW OUT TO LM5176", (28, 132), size=0.85)
-for idx, x in enumerate((56, 82, 108), 1):
+for idx, x in enumerate((56, 78, 100), 1):
     c = add("Device:C_Polarized", f"C30{idx}", "220uF 50V", (x, 141), CAP_G16,
             "EEH-ZS1H221V", "Panasonic")
     two_pin(c, "RAW_OUT", "GND")
     c.add_property("Reference", f"C30{idx}", hidden=True)
     note(f"C30{idx}", (x, 152), 0.8)
-c304 = add("Device:C", "C304", "1uF 50V X7R", (134, 141), C1210)
+c304 = add("Device:C", "C304", "1uF 50V X7R", (122, 141), C1210)
 two_pin(c304, "RAW_OUT", "GND")
-c304.add_property("Reference", "C304", hidden=True); note("C304", (134, 152), 0.8)
-c305 = add("Device:C", "C305", "100nF 50V", (158, 141), C0603)
+c304.add_property("Reference", "C304", hidden=True); note("C304", (122, 152), 0.8)
+c305 = add("Device:C", "C305", "100nF 50V", (142, 141), C0603)
 two_pin(c305, "RAW_OUT", "GND")
-c305.add_property("Reference", "C305", hidden=True); note("C305", (158, 152), 0.8)
-r311 = add("Device:R_Shunt", "R311", "1.00mR 1% 1W", (190, 141), WSK,
+c305.add_property("Reference", "C305", hidden=True); note("C305", (142, 152), 0.8)
+for idx, x in enumerate((166, 194, 222, 250), 6):
+    c = add(
+        "Device:C_Polarized",
+        f"C30{idx}",
+        "6800uF 50V",
+        (x, 141),
+        CAP_SNAPIN_30,
+        "LGU1H682MELB",
+        "Nichicon",
+        "https://www.nichicon.co.jp/products/pdfs/gu.pdf",
+    )
+    two_pin(c, "RAW_OUT", "GND")
+    c.add_property("Reference", f"C30{idx}", hidden=True)
+    c.add_property("Mechanical", "30 mm diameter x 35 mm; retain with tray-supported clamp", hidden=True)
+    note(f"C30{idx}", (x, 152), 0.8)
+r311 = add("Device:R_Shunt", "R311", "1.00mR 1% 1W", (282, 141), WSK,
            "WSK25121L000FEA", "Vishay", rotation=90)
 r311.add_property("Reference", "R311", hidden=True)
 r311.add_property("Value", "1.00mR 1% 1W", hidden=True)
 kelvin_shunt(r311, "RAW_OUT", "RAW_OUT_LOAD")
-note("R311  1.00mR LOAD KELVIN", (190, 129), 0.9)
+note("R311  1.00mR LOAD KELVIN", (282, 129), 0.9)
 note("C301-C303 are low-ESR Panasonic hybrid capacitors.", (20, 162), 0.95)
-note("660 uF nominal (528 uF at -20%): approximately 0.33 V worst-case transfer droop at 10 A / 15 us.", (20, 166))
-note("RAW_OUT remains within the downstream LM5176 input range during 24 V to battery transfer.", (20, 170))
+note("C306-C309: 4 x 6800 uF = 27.2 mF; total with C301-C303 is 27.86 mF nominal.", (20, 166))
+note("At -20% capacitance the total provides about 25.4 ms ideal hold-up at 184.2 W from 24.0 V to 12.5 V.", (20, 170))
+note("30 x 35 mm cans require a tray-supported clamp; board outline and dock clearance remain A2 sample gates.", (20, 174))
 
 
 # ---------------------------------------------------------------------------
@@ -728,7 +745,7 @@ net(fg, 1, "GND", "left")
 
 title("DESIGN INTENT", (330, 388), 1.6)
 note("Priority: internal PSU 24 V, then D-Tap, then Gold Mount. No source paralleling.", (330, 392), 1.0)
-note("Both selectors are break-before-make; C301-C303 provide continuous energy to the LM5176 input.", (330, 396), 1.0)
+note("Both selectors are break-before-make; C301-C309 provide continuous energy to the carrier input.", (330, 396), 1.0)
 note("SW201 OFF disables both selectors; no valid source can energize RAW_OUT. Charge batteries externally.", (330, 400), 1.0)
 
 sch.save(OUT)

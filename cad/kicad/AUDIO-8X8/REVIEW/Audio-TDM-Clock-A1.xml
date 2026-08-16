@@ -1,0 +1,914 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>/Users/viewvision/Desktop/Radxa CM5 PCB/cad/kicad/AUDIO-8X8/Audio-TDM-Clock.kicad_sch</source>
+    <date>2026-08-16T18:36:21</date>
+    <tool>Eeschema 10.0.5-rc1</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>ProComm AUDIO-8X8 - TDM, Clock, and Control Interface</title>
+        <company>ProComm</company>
+        <rev>A1</rev>
+        <date>2026-08-16</date>
+        <source>Audio-TDM-Clock.kicad_sch</source>
+        <comment number="1" value="Four terminated LVDS receivers carry MCLK, BCLK, FSYNC, and DAC TDM data"/>
+        <comment number="2" value="One LVDS driver returns the ADC TDM data stream to the CM5 carrier"/>
+        <comment number="3" value="87832-6423 pin assignment is locked and matches CM5-CARRIER J901"/>
+        <comment number="4" value="100 ohm differential; interleaved returns; no branch stubs"/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C101">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Manufacturer">TDK</field>
+        <field name="MPN">C1005X7R1H104K050BB</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="TDK"/>
+      <property name="MPN" value="C1005X7R1H104K050BB"/>
+      <property name="Sheetname" value="Audio-TDM-Clock"/>
+      <property name="Sheetfile" value="Audio-TDM-Clock.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9c26d635-3f0c-5acb-b56c-0de78730d261</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C102">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Manufacturer">TDK</field>
+        <field name="MPN">C1005X7R1H104K050BB</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="TDK"/>
+      <property name="MPN" value="C1005X7R1H104K050BB"/>
+      <property name="Sheetname" value="Audio-TDM-Clock"/>
+      <property name="Sheetfile" value="Audio-TDM-Clock.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c6e8fe71-b87a-540e-8586-9001ee023631</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C103">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Manufacturer">TDK</field>
+        <field name="MPN">C1005X7R1H104K050BB</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="TDK"/>
+      <property name="MPN" value="C1005X7R1H104K050BB"/>
+      <property name="Sheetname" value="Audio-TDM-Clock"/>
+      <property name="Sheetfile" value="Audio-TDM-Clock.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d062f8b3-fbf3-507d-b593-89195332c901</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C104">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Manufacturer">TDK</field>
+        <field name="MPN">C1005X7R1H104K050BB</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="TDK"/>
+      <property name="MPN" value="C1005X7R1H104K050BB"/>
+      <property name="Sheetname" value="Audio-TDM-Clock"/>
+      <property name="Sheetfile" value="Audio-TDM-Clock.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b456afca-3c68-5b08-bf88-7083843ea087</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C105">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Manufacturer">TDK</field>
+        <field name="MPN">C1005X7R1H104K050BB</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="TDK"/>
+      <property name="MPN" value="C1005X7R1H104K050BB"/>
+      <property name="Sheetname" value="Audio-TDM-Clock"/>
+      <property name="Sheetfile" value="Audio-TDM-Clock.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>eb7758a3-60cf-52cb-b020-fda324733600</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C106">
+      <value>4.7uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Murata</field>
+        <field name="MPN">GRM21BR71A475KA73L</field>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="MPN" value="GRM21BR71A475KA73L"/>
+      <property name="Sheetname" value="Audio-TDM-Clock"/>
+      <property name="Sheetfile" value="Audio-TDM-Clock.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9c46b4fa-74a6-5d9d-82d1-97cd1f7b0fe6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J101">
+      <value>AUDIO_TDM_CONTROL</value>
+      <footprint>Connector_Molex_Milligrid:Molex_8783230xx_2x15_P2.0mm_Header_Vertical_Polarized_MountingPegs</footprint>
+      <fields>
+        <field name="Manufacturer">Molex</field>
+        <field name="MPN">87832-6423</field>
+        <field name="Footprint">Connector_Molex_Milligrid:Molex_8783230xx_2x15_P2.0mm_Header_Vertical_Polarized_MountingPegs</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_02x15_Odd_Even" description="Generic connector, double row, 02x15, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Manufacturer" value="Molex"/>
+      <property name="MPN" value="87832-6423"/>
+      <property name="Sheetname" value="Audio-TDM-Clock"/>
+      <property name="Sheetfile" value="Audio-TDM-Clock.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_2x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ffc89bd5-1297-557f-b322-e16d0e6afe46</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="5"/>
+            <pin num="7"/>
+            <pin num="9"/>
+            <pin num="11"/>
+            <pin num="13"/>
+            <pin num="15"/>
+            <pin num="17"/>
+            <pin num="19"/>
+            <pin num="21"/>
+            <pin num="23"/>
+            <pin num="25"/>
+            <pin num="27"/>
+            <pin num="29"/>
+            <pin num="2"/>
+            <pin num="4"/>
+            <pin num="6"/>
+            <pin num="8"/>
+            <pin num="10"/>
+            <pin num="12"/>
+            <pin num="14"/>
+            <pin num="16"/>
+            <pin num="18"/>
+            <pin num="20"/>
+            <pin num="22"/>
+            <pin num="24"/>
+            <pin num="26"/>
+            <pin num="28"/>
+            <pin num="30"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R111">
+      <value>10k 0.1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Sheetname" value="Audio-TDM-Clock"/>
+      <property name="Sheetfile" value="Audio-TDM-Clock.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>42c9151a-8f42-559e-8570-420ec85e5868</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R112">
+      <value>10k 0.1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Sheetname" value="Audio-TDM-Clock"/>
+      <property name="Sheetfile" value="Audio-TDM-Clock.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>acd0639c-ebe1-57cd-94f1-9071ab9887a8</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R113">
+      <value>10k 0.1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Sheetname" value="Audio-TDM-Clock"/>
+      <property name="Sheetfile" value="Audio-TDM-Clock.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>318e7274-a28a-547f-a2b5-c297a904c9d7</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R114">
+      <value>10k 0.1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Sheetname" value="Audio-TDM-Clock"/>
+      <property name="Sheetfile" value="Audio-TDM-Clock.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5e74c371-de8a-5dbe-bd11-44746e643d45</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R115">
+      <value>4.7k 0.1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-074K7L</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-074K7L"/>
+      <property name="Sheetname" value="Audio-TDM-Clock"/>
+      <property name="Sheetfile" value="Audio-TDM-Clock.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9d88296d-6f25-5fba-bddf-c6f7c6a5b516</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R116">
+      <value>4.7k 0.1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-074K7L</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-074K7L"/>
+      <property name="Sheetname" value="Audio-TDM-Clock"/>
+      <property name="Sheetfile" value="Audio-TDM-Clock.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8e873807-daa7-5498-8d92-7932402e6c98</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U101">
+      <value>SN65LVDT2D</value>
+      <footprint>Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</footprint>
+      <fields>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="MPN">SN65LVDT2DR</field>
+        <field name="Footprint">Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Interface" part="SN65LVDT2D" description="High-Speed Differential Line Receiver, 110 Ω Terminated, 630Mbps, SOIC-8"/>
+      <property name="Manufacturer" value="Texas Instruments"/>
+      <property name="MPN" value="SN65LVDT2DR"/>
+      <property name="Sheetname" value="Audio-TDM-Clock"/>
+      <property name="Sheetfile" value="Audio-TDM-Clock.kicad_sch"/>
+      <property name="ki_keywords" value="LVDS Receiver TI"/>
+      <property name="ki_fp_filters" value="*SOIC*3.9x4.9mm*P1.27mm*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>09103178-b7de-5eda-9cac-2d7ef4430e74</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+            <pin num="8"/>
+            <pin num="5"/>
+            <pin num="4"/>
+            <pin num="3"/>
+            <pin num="6"/>
+            <pin num="7"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U102">
+      <value>SN65LVDT2D</value>
+      <footprint>Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</footprint>
+      <fields>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="MPN">SN65LVDT2DR</field>
+        <field name="Footprint">Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Interface" part="SN65LVDT2D" description="High-Speed Differential Line Receiver, 110 Ω Terminated, 630Mbps, SOIC-8"/>
+      <property name="Manufacturer" value="Texas Instruments"/>
+      <property name="MPN" value="SN65LVDT2DR"/>
+      <property name="Sheetname" value="Audio-TDM-Clock"/>
+      <property name="Sheetfile" value="Audio-TDM-Clock.kicad_sch"/>
+      <property name="ki_keywords" value="LVDS Receiver TI"/>
+      <property name="ki_fp_filters" value="*SOIC*3.9x4.9mm*P1.27mm*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>48f35ec5-b447-5a3e-858a-23c5dfbbb29d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+            <pin num="8"/>
+            <pin num="5"/>
+            <pin num="4"/>
+            <pin num="3"/>
+            <pin num="6"/>
+            <pin num="7"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U103">
+      <value>SN65LVDT2D</value>
+      <footprint>Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</footprint>
+      <fields>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="MPN">SN65LVDT2DR</field>
+        <field name="Footprint">Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Interface" part="SN65LVDT2D" description="High-Speed Differential Line Receiver, 110 Ω Terminated, 630Mbps, SOIC-8"/>
+      <property name="Manufacturer" value="Texas Instruments"/>
+      <property name="MPN" value="SN65LVDT2DR"/>
+      <property name="Sheetname" value="Audio-TDM-Clock"/>
+      <property name="Sheetfile" value="Audio-TDM-Clock.kicad_sch"/>
+      <property name="ki_keywords" value="LVDS Receiver TI"/>
+      <property name="ki_fp_filters" value="*SOIC*3.9x4.9mm*P1.27mm*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>025d3a12-c33e-52fd-9d17-deaa13d70873</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+            <pin num="8"/>
+            <pin num="5"/>
+            <pin num="4"/>
+            <pin num="3"/>
+            <pin num="6"/>
+            <pin num="7"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U104">
+      <value>SN65LVDT2D</value>
+      <footprint>Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</footprint>
+      <fields>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="MPN">SN65LVDT2DR</field>
+        <field name="Footprint">Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Interface" part="SN65LVDT2D" description="High-Speed Differential Line Receiver, 110 Ω Terminated, 630Mbps, SOIC-8"/>
+      <property name="Manufacturer" value="Texas Instruments"/>
+      <property name="MPN" value="SN65LVDT2DR"/>
+      <property name="Sheetname" value="Audio-TDM-Clock"/>
+      <property name="Sheetfile" value="Audio-TDM-Clock.kicad_sch"/>
+      <property name="ki_keywords" value="LVDS Receiver TI"/>
+      <property name="ki_fp_filters" value="*SOIC*3.9x4.9mm*P1.27mm*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>eee6fc4e-fda1-50bd-b85c-bb207069f085</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+            <pin num="8"/>
+            <pin num="5"/>
+            <pin num="4"/>
+            <pin num="3"/>
+            <pin num="6"/>
+            <pin num="7"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U105">
+      <value>SN65LVDS1D</value>
+      <footprint>Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</footprint>
+      <fields>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="MPN">SN65LVDS1DR</field>
+        <field name="Footprint">Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Interface" part="SN65LVDS1D" description="High-Speed Differential Line Driver, 630Mbps, SOIC-8"/>
+      <property name="Manufacturer" value="Texas Instruments"/>
+      <property name="MPN" value="SN65LVDS1DR"/>
+      <property name="Sheetname" value="Audio-TDM-Clock"/>
+      <property name="Sheetfile" value="Audio-TDM-Clock.kicad_sch"/>
+      <property name="ki_keywords" value="LVDS Driver TI"/>
+      <property name="ki_fp_filters" value="*SOIC*3.9x4.9mm*P1.27mm*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e328d825-8319-50b6-8024-bc98848cc5a9</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+            <pin num="4"/>
+            <pin num="3"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Connector_Generic" part="Conn_02x15_Odd_Even">
+      <description>Generic connector, double row, 02x15, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <footprints>
+        <fp>Connector*:*_2x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_02x15_Odd_Even</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, double row, 02x15, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+        <pin num="7" name="Pin_7" type="passive"/>
+        <pin num="8" name="Pin_8" type="passive"/>
+        <pin num="9" name="Pin_9" type="passive"/>
+        <pin num="10" name="Pin_10" type="passive"/>
+        <pin num="11" name="Pin_11" type="passive"/>
+        <pin num="12" name="Pin_12" type="passive"/>
+        <pin num="13" name="Pin_13" type="passive"/>
+        <pin num="14" name="Pin_14" type="passive"/>
+        <pin num="15" name="Pin_15" type="passive"/>
+        <pin num="16" name="Pin_16" type="passive"/>
+        <pin num="17" name="Pin_17" type="passive"/>
+        <pin num="18" name="Pin_18" type="passive"/>
+        <pin num="19" name="Pin_19" type="passive"/>
+        <pin num="20" name="Pin_20" type="passive"/>
+        <pin num="21" name="Pin_21" type="passive"/>
+        <pin num="22" name="Pin_22" type="passive"/>
+        <pin num="23" name="Pin_23" type="passive"/>
+        <pin num="24" name="Pin_24" type="passive"/>
+        <pin num="25" name="Pin_25" type="passive"/>
+        <pin num="26" name="Pin_26" type="passive"/>
+        <pin num="27" name="Pin_27" type="passive"/>
+        <pin num="28" name="Pin_28" type="passive"/>
+        <pin num="29" name="Pin_29" type="passive"/>
+        <pin num="30" name="Pin_30" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Interface" part="SN65LVDS1D">
+      <description>High-Speed Differential Line Driver, 630Mbps, SOIC-8</description>
+      <docs>http://www.ti.com/lit/ds/symlink/sn65lvds1.pdf</docs>
+      <footprints>
+        <fp>*SOIC*3.9x4.9mm*P1.27mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">SN65LVDS1D</field>
+        <field name="Footprint">Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</field>
+        <field name="Datasheet">http://www.ti.com/lit/ds/symlink/sn65lvds1.pdf</field>
+        <field name="Description">High-Speed Differential Line Driver, 630Mbps, SOIC-8</field>
+      </fields>
+      <pins>
+        <pin num="1" name="V_{CC}" type="power_in"/>
+        <pin num="2" name="D" type="input"/>
+        <pin num="3" name="NC" type="passive"/>
+        <pin num="4" name="GND" type="power_in"/>
+        <pin num="5" name="NC" type="passive"/>
+        <pin num="6" name="NC" type="passive"/>
+        <pin num="7" name="Y" type="output"/>
+        <pin num="8" name="Z" type="output"/>
+      </pins>
+    </libpart>
+    <libpart lib="Interface" part="SN65LVDT2D">
+      <description>High-Speed Differential Line Receiver, 110 Ω Terminated, 630Mbps, SOIC-8</description>
+      <docs>https://www.ti.com/lit/ds/symlink/sn65lvdt2.pdf</docs>
+      <footprints>
+        <fp>*SOIC*3.9x4.9mm*P1.27mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">SN65LVDT2D</field>
+        <field name="Footprint">Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/sn65lvdt2.pdf</field>
+        <field name="Description">High-Speed Differential Line Receiver, 110 Ω Terminated, 630Mbps, SOIC-8</field>
+      </fields>
+      <pins>
+        <pin num="1" name="B" type="input"/>
+        <pin num="2" name="A" type="input"/>
+        <pin num="3" name="NC" type="passive"/>
+        <pin num="4" name="NC" type="passive"/>
+        <pin num="5" name="GND" type="power_in"/>
+        <pin num="6" name="NC" type="passive"/>
+        <pin num="7" name="R" type="output"/>
+        <pin num="8" name="V_{CC}" type="power_in"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector_Generic">
+      <uri>${KICAD10_SYMBOL_DIR}/Connector_Generic.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>${KICAD10_SYMBOL_DIR}/Device.kicad_sym</uri>
+    </library>
+    <library logical="Interface">
+      <uri>${KICAD10_SYMBOL_DIR}/Interface.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/ADC_TDM_OUT" class="Default">
+      <node ref="U105" pin="2" pinfunction="D_2" pintype="input"/>
+    </net>
+    <net code="2" name="/AGND" class="Default">
+      <node ref="C101" pin="2" pintype="passive"/>
+      <node ref="C102" pin="2" pintype="passive"/>
+      <node ref="C103" pin="2" pintype="passive"/>
+      <node ref="C104" pin="2" pintype="passive"/>
+      <node ref="C105" pin="2" pintype="passive"/>
+      <node ref="C106" pin="2" pintype="passive"/>
+      <node ref="R111" pin="2" pintype="passive"/>
+      <node ref="R112" pin="2" pintype="passive"/>
+      <node ref="R113" pin="2" pintype="passive"/>
+      <node ref="R114" pin="2" pintype="passive"/>
+      <node ref="U101" pin="5" pinfunction="GND_5" pintype="power_in"/>
+      <node ref="U102" pin="5" pinfunction="GND_5" pintype="power_in"/>
+      <node ref="U103" pin="5" pinfunction="GND_5" pintype="power_in"/>
+      <node ref="U104" pin="5" pinfunction="GND_5" pintype="power_in"/>
+      <node ref="U105" pin="4" pinfunction="GND_4" pintype="power_in"/>
+    </net>
+    <net code="3" name="/AKM_3V3_D" class="Default">
+      <node ref="C101" pin="1" pintype="passive"/>
+      <node ref="C102" pin="1" pintype="passive"/>
+      <node ref="C103" pin="1" pintype="passive"/>
+      <node ref="C104" pin="1" pintype="passive"/>
+      <node ref="C105" pin="1" pintype="passive"/>
+      <node ref="C106" pin="1" pintype="passive"/>
+      <node ref="R115" pin="1" pintype="passive"/>
+      <node ref="R116" pin="1" pintype="passive"/>
+      <node ref="U101" pin="8" pinfunction="V_{CC}_8" pintype="power_in"/>
+      <node ref="U102" pin="8" pinfunction="V_{CC}_8" pintype="power_in"/>
+      <node ref="U103" pin="8" pinfunction="V_{CC}_8" pintype="power_in"/>
+      <node ref="U104" pin="8" pinfunction="V_{CC}_8" pintype="power_in"/>
+      <node ref="U105" pin="1" pinfunction="V_{CC}_1" pintype="power_in"/>
+    </net>
+    <net code="4" name="/AKM_BCLK" class="Default">
+      <node ref="U102" pin="7" pinfunction="R_7" pintype="output"/>
+    </net>
+    <net code="5" name="/AKM_FSYNC" class="Default">
+      <node ref="U103" pin="7" pinfunction="R_7" pintype="output"/>
+    </net>
+    <net code="6" name="/AKM_MCLK" class="Default">
+      <node ref="U101" pin="7" pinfunction="R_7" pintype="output"/>
+    </net>
+    <net code="7" name="/AUDIO_ENABLE" class="Default">
+      <node ref="J101" pin="24" pinfunction="Pin_24_24" pintype="passive"/>
+    </net>
+    <net code="8" name="/AUDIO_PRESENT_N" class="Default">
+      <node ref="J101" pin="23" pinfunction="Pin_23_23" pintype="passive"/>
+      <node ref="R114" pin="1" pintype="passive"/>
+    </net>
+    <net code="9" name="/AUD_ADC_RST_N" class="Default">
+      <node ref="J101" pin="19" pinfunction="Pin_19_19" pintype="passive"/>
+      <node ref="R111" pin="1" pintype="passive"/>
+    </net>
+    <net code="10" name="/AUD_ADC_SDOUT_N" class="Default">
+      <node ref="J101" pin="14" pinfunction="Pin_14_14" pintype="passive"/>
+      <node ref="U105" pin="8" pinfunction="Z_8" pintype="output"/>
+    </net>
+    <net code="11" name="/AUD_ADC_SDOUT_P" class="Default">
+      <node ref="J101" pin="13" pinfunction="Pin_13_13" pintype="passive"/>
+      <node ref="U105" pin="7" pinfunction="Y_7" pintype="output"/>
+    </net>
+    <net code="12" name="/AUD_BCLK_N" class="Default">
+      <node ref="J101" pin="6" pinfunction="Pin_6_6" pintype="passive"/>
+      <node ref="U102" pin="1" pinfunction="B_1" pintype="input"/>
+    </net>
+    <net code="13" name="/AUD_BCLK_P" class="Default">
+      <node ref="J101" pin="5" pinfunction="Pin_5_5" pintype="passive"/>
+      <node ref="U102" pin="2" pinfunction="A_2" pintype="input"/>
+    </net>
+    <net code="14" name="/AUD_DAC_MUTE_N" class="Default">
+      <node ref="J101" pin="21" pinfunction="Pin_21_21" pintype="passive"/>
+      <node ref="R113" pin="1" pintype="passive"/>
+    </net>
+    <net code="15" name="/AUD_DAC_RST_N" class="Default">
+      <node ref="J101" pin="20" pinfunction="Pin_20_20" pintype="passive"/>
+      <node ref="R112" pin="1" pintype="passive"/>
+    </net>
+    <net code="16" name="/AUD_DAC_SDIN_N" class="Default">
+      <node ref="J101" pin="12" pinfunction="Pin_12_12" pintype="passive"/>
+      <node ref="U104" pin="1" pinfunction="B_1" pintype="input"/>
+    </net>
+    <net code="17" name="/AUD_DAC_SDIN_P" class="Default">
+      <node ref="J101" pin="11" pinfunction="Pin_11_11" pintype="passive"/>
+      <node ref="U104" pin="2" pinfunction="A_2" pintype="input"/>
+    </net>
+    <net code="18" name="/AUD_FSYNC_N" class="Default">
+      <node ref="J101" pin="8" pinfunction="Pin_8_8" pintype="passive"/>
+      <node ref="U103" pin="1" pinfunction="B_1" pintype="input"/>
+    </net>
+    <net code="19" name="/AUD_FSYNC_P" class="Default">
+      <node ref="J101" pin="7" pinfunction="Pin_7_7" pintype="passive"/>
+      <node ref="U103" pin="2" pinfunction="A_2" pintype="input"/>
+    </net>
+    <net code="20" name="/AUD_I2C_SCL" class="Default">
+      <node ref="J101" pin="17" pinfunction="Pin_17_17" pintype="passive"/>
+      <node ref="R115" pin="2" pintype="passive"/>
+    </net>
+    <net code="21" name="/AUD_I2C_SDA" class="Default">
+      <node ref="J101" pin="18" pinfunction="Pin_18_18" pintype="passive"/>
+      <node ref="R116" pin="2" pintype="passive"/>
+    </net>
+    <net code="22" name="/AUD_IRQ_N" class="Default">
+      <node ref="J101" pin="22" pinfunction="Pin_22_22" pintype="passive"/>
+    </net>
+    <net code="23" name="/AUD_MCLK_N" class="Default">
+      <node ref="J101" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="U101" pin="1" pinfunction="B_1" pintype="input"/>
+    </net>
+    <net code="24" name="/AUD_MCLK_P" class="Default">
+      <node ref="J101" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="U101" pin="2" pinfunction="A_2" pintype="input"/>
+    </net>
+    <net code="25" name="/DAC_TDM_IN" class="Default">
+      <node ref="U104" pin="7" pinfunction="R_7" pintype="output"/>
+    </net>
+    <net code="26" name="/GND" class="Default">
+      <node ref="J101" pin="10" pinfunction="Pin_10_10" pintype="passive"/>
+      <node ref="J101" pin="15" pinfunction="Pin_15_15" pintype="passive"/>
+      <node ref="J101" pin="16" pinfunction="Pin_16_16" pintype="passive"/>
+      <node ref="J101" pin="26" pinfunction="Pin_26_26" pintype="passive"/>
+      <node ref="J101" pin="29" pinfunction="Pin_29_29" pintype="passive"/>
+      <node ref="J101" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="J101" pin="30" pinfunction="Pin_30_30" pintype="passive"/>
+      <node ref="J101" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+      <node ref="J101" pin="9" pinfunction="Pin_9_9" pintype="passive"/>
+    </net>
+    <net code="27" name="/LOGIC_3V3" class="Default">
+      <node ref="J101" pin="25" pinfunction="Pin_25_25" pintype="passive"/>
+    </net>
+    <net code="28" name="/TDM_SPARE_1" class="Default">
+      <node ref="J101" pin="27" pinfunction="Pin_27_27" pintype="passive"/>
+    </net>
+    <net code="29" name="/TDM_SPARE_2" class="Default">
+      <node ref="J101" pin="28" pinfunction="Pin_28_28" pintype="passive"/>
+    </net>
+    <net code="30" name="unconnected-(U101-NC-Pad3)" class="Default">
+      <node ref="U101" pin="3" pinfunction="NC_3" pintype="passive+no_connect"/>
+    </net>
+    <net code="31" name="unconnected-(U101-NC-Pad4)" class="Default">
+      <node ref="U101" pin="4" pinfunction="NC_4" pintype="passive+no_connect"/>
+    </net>
+    <net code="32" name="unconnected-(U101-NC-Pad6)" class="Default">
+      <node ref="U101" pin="6" pinfunction="NC_6" pintype="passive+no_connect"/>
+    </net>
+    <net code="33" name="unconnected-(U102-NC-Pad3)" class="Default">
+      <node ref="U102" pin="3" pinfunction="NC_3" pintype="passive+no_connect"/>
+    </net>
+    <net code="34" name="unconnected-(U102-NC-Pad4)" class="Default">
+      <node ref="U102" pin="4" pinfunction="NC_4" pintype="passive+no_connect"/>
+    </net>
+    <net code="35" name="unconnected-(U102-NC-Pad6)" class="Default">
+      <node ref="U102" pin="6" pinfunction="NC_6" pintype="passive+no_connect"/>
+    </net>
+    <net code="36" name="unconnected-(U103-NC-Pad3)" class="Default">
+      <node ref="U103" pin="3" pinfunction="NC_3" pintype="passive+no_connect"/>
+    </net>
+    <net code="37" name="unconnected-(U103-NC-Pad4)" class="Default">
+      <node ref="U103" pin="4" pinfunction="NC_4" pintype="passive+no_connect"/>
+    </net>
+    <net code="38" name="unconnected-(U103-NC-Pad6)" class="Default">
+      <node ref="U103" pin="6" pinfunction="NC_6" pintype="passive+no_connect"/>
+    </net>
+    <net code="39" name="unconnected-(U104-NC-Pad3)" class="Default">
+      <node ref="U104" pin="3" pinfunction="NC_3" pintype="passive+no_connect"/>
+    </net>
+    <net code="40" name="unconnected-(U104-NC-Pad4)" class="Default">
+      <node ref="U104" pin="4" pinfunction="NC_4" pintype="passive+no_connect"/>
+    </net>
+    <net code="41" name="unconnected-(U104-NC-Pad6)" class="Default">
+      <node ref="U104" pin="6" pinfunction="NC_6" pintype="passive+no_connect"/>
+    </net>
+    <net code="42" name="unconnected-(U105-NC-Pad3)" class="Default">
+      <node ref="U105" pin="3" pinfunction="NC_3" pintype="passive+no_connect"/>
+    </net>
+    <net code="43" name="unconnected-(U105-NC-Pad5)" class="Default">
+      <node ref="U105" pin="5" pinfunction="NC_5" pintype="passive+no_connect"/>
+    </net>
+    <net code="44" name="unconnected-(U105-NC-Pad6)" class="Default">
+      <node ref="U105" pin="6" pinfunction="NC_6" pintype="passive+no_connect"/>
+    </net>
+  </nets>
+</export>

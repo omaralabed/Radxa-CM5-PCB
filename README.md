@@ -26,7 +26,7 @@ under `references/procomm-field-unit/`.
 - Workspace initialized.
 - Official Radxa CM5 documentation and reference design identified.
 - Audio architecture selected: photo-reference two-column XLR bank, left male outputs and right female inputs, with balanced 8x8 AK5558VN ADC and AK4458VN DAC over TDM.
-- Capacitor/active-balanced XLR electrical reference selected from `/Users/viewvision/Desktop/ProComm enclosure and PCB boards`: THAT1206 input receivers, OPA165x/THAT1646 output drivers, coupling/filter/protection capacitors; AKM interface values must be recalculated.
+- Capacitor/active-balanced XLR electrical reference selected from `/Users/viewvision/Desktop/ProComm enclosure and PCB boards`: THAT1206 input receivers, OPA1652/THAT1646 output drivers, coupling/filter/protection capacitors, and fail-silent output relays. The A1 AKM clock, level, filter, and rail starting values are calculated and captured; first-article audio validation remains mandatory.
 - XLR bank geometry extracted from `/Users/viewvision/Desktop/2026/ProComm PCB XLRs + Transformer`: Neutrik `NC3MAV` / `NC3FAV`, 28 mm row pitch, 43.38 mm circular-center column spacing.
 - Integrated headset architecture selected: ES8316 codec on a separate I2S bus,
   with headphone amplifier/driver and mic bias/preamp conditioning for a CTIA
@@ -83,12 +83,13 @@ under `references/procomm-field-unit/`.
 - Rev A schematic architecture, regulator starting parts, board partition,
   audio level, connector protection, antenna placement, service access, and
   AC safety/EMC direction are locked in `notes/rev-a-hardware-architecture.md`.
-- Native KiCad 10 A0 projects are created under `cad/kicad/` for `PWR-SELECT`,
-  `CM5-CARRIER`, and `AUDIO-8X8`. The source/status/telemetry, carrier/audio,
-  fan, temperature-alert, and XLR interfaces now have 174 critical connector
-  and control pin/net assignments machine-validated. The A1 carrier
-  regulator tree, starting component calculations, sequencing, and hold-up
-  bank are captured; all production PCB layouts remain to be completed.
+- The native KiCad 10 A1 suite under `cad/kicad/` now contains sixteen reviewed
+  schematic sheets across `PWR-SELECT`, `CM5-CARRIER`, and `AUDIO-8X8`. The
+  source/status/telemetry, carrier/audio, fan, temperature-alert, and XLR
+  interfaces have 174 critical connector and control pin/net assignments
+  machine-validated. All sixteen sheets report zero ERC errors. The controlled
+  audit covers 1023 components and intentionally blocks routing on ten audio
+  package coupons; no production PCB routing has begun.
 - The Radxa CM5 V2.21 A0 pin allocation is controlled in
   `notes/cm5-pin-allocation-a0.md` and
   `outputs/cm5-pin-allocation-a0/radxa_cm5_pin_allocation_a0.xlsx`. The audit
@@ -107,7 +108,7 @@ under `references/procomm-field-unit/`.
 ## Local Folders
 
 - `cad/` - schematic and PCB design files
-- `cad/kicad/` - native three-project KiCad A0 capture and interface validator
+- `cad/kicad/` - native sixteen-sheet KiCad A1 capture, validators, and review artifacts
 - `docs/` - datasheets, PDFs, pinout exports, design notes
 - `fabrication/` - Gerbers, drill files, assembly files, BOM exports
 - `notes/` - requirements and review notes
@@ -121,6 +122,8 @@ under `references/procomm-field-unit/`.
   mux exclusions, and schematic-integration actions
 - `notes/connector-protection-matrix.md` - external-connector ESD, surge, and current-limit plan
 - `notes/audio-tdm-architecture.md` - AK5558VN/AK4458VN TDM plan and CM5 pin candidates
+- `notes/audio-8x8-a1.md` - detailed A1 TDM, analog level, power, grounding,
+  sequencing, and routing-release contract
 - `notes/enclosure-mechanical.md` - Pelican iM2300 enclosure constraints
 - `docs/pcb-and-connector-mechanical-protection-a2.md` - controlled six-point
   PCB supports and panel/frame connector load paths
@@ -153,6 +156,11 @@ under `references/procomm-field-unit/`.
 - `notes/cellular-modem-reference.md` - native M.2 B-Key cellular modem reference adapted from ProComm
 - `docs/power_budget_preliminary.csv` - CSV version of the preliminary power budget
 - `docs/source_current_check_preliminary.csv` - CSV source-current check for 24 V, D-Tap, and Gold Mount operation
+- `docs/akm_clock_mode_matrix_a1.csv` - locked 48 kHz TDM256 clock, strap,
+  register, address, and start-up matrix
+- `docs/audio_8x8_level_budget_a1.csv` - calculated +4/+24 dBu input and
+  600-ohm output level budget
+- `docs/audio_8x8_bom_a1.csv` - generated detailed AUDIO-8X8 schematic BOM
 
 ## Remaining Detailed-Capture Work
 
@@ -161,8 +169,9 @@ inputs before layout:
 
 - Final CM5 `VCC_SYSIN` tolerance/setpoint release and monitor USB2 touch test
 - Six-layer-or-greater controlled-impedance PCB stackup from the fabricator
-- Controlled power footprints, final passive land patterns, placement/thermal
-  review, safety review, and final mechanical CAD
+- Ten audio package coupons, 67 PWR-SELECT passive MPN assignments, the Kycon
+  headset-jack production coupon, placement/thermal review, safety review, and
+  final mechanical CAD
 - Bench measurements for display, modem, Wi-Fi, fans, audio, transfer, and thermal load
 - Manufacturing target: prototype only or assembly-ready production files
 

@@ -1,16 +1,16 @@
-ERC report (2026-08-16T03:08:54, Encoding UTF8)
+ERC report (2026-08-16T18:36:02, Encoding UTF8)
 Report includes: Errors, Warnings
 
 ***** Sheet /
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(39.37 mm, 275.59 mm): Label 'CPU_FAN_12V'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
     @(39.37 mm, 278.13 mm): Label 'CPU_FAN_TACH'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(39.37 mm, 280.67 mm): Label 'CPU_FAN_PWM'
+    @(52.07 mm, 275.59 mm): Label 'CPU_FAN_12V'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(52.07 mm, 278.13 mm): Label 'CPU_FAN_PWM'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
     @(64.77 mm, 142.24 mm): Label 'AUD_MCLK_P'
@@ -73,13 +73,7 @@ Report includes: Errors, Warnings
     @(77.47 mm, 175.26 mm): Label 'TDM_SPARE_2'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(110.49 mm, 275.59 mm): Label 'MODEM_FAN_12V'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
     @(110.49 mm, 278.13 mm): Label 'MODEM_FAN_TACH'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(110.49 mm, 280.67 mm): Label 'MODEM_FAN_PWM'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
     @(114.30 mm, 44.45 mm): Label 'CH_24V_N'
@@ -103,13 +97,19 @@ Report includes: Errors, Warnings
     @(114.30 mm, 59.69 mm): Label 'VALID_GOLD_N'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(180.34 mm, 275.59 mm): Label 'INTAKE_FAN_12V'
+    @(123.19 mm, 275.59 mm): Label 'MODEM_FAN_12V'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(123.19 mm, 278.13 mm): Label 'MODEM_FAN_PWM'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
     @(180.34 mm, 278.13 mm): Label 'INTAKE_FAN_TACH'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(180.34 mm, 280.67 mm): Label 'INTAKE_FAN_PWM'
+    @(193.04 mm, 275.59 mm): Label 'INTAKE_FAN_12V'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(193.04 mm, 278.13 mm): Label 'INTAKE_FAN_PWM'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
     @(194.31 mm, 49.53 mm): Label 'CTRL_I2C_SDA'
@@ -121,13 +121,13 @@ Report includes: Errors, Warnings
     @(194.31 mm, 54.61 mm): Label 'PWR_MON_ALERT_N'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(250.19 mm, 275.59 mm): Label 'EXHAUST_FAN_12V'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
     @(250.19 mm, 278.13 mm): Label 'EXHAUST_FAN_TACH'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(250.19 mm, 280.67 mm): Label 'EXHAUST_FAN_PWM'
+    @(262.89 mm, 275.59 mm): Label 'EXHAUST_FAN_12V'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(262.89 mm, 278.13 mm): Label 'EXHAUST_FAN_PWM'
 
  ** ERC messages: 42  Errors 0  Warnings 42
 

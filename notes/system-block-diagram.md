@@ -18,7 +18,7 @@ flowchart LR
 
   PSU --> MAINSEL["LTC4421 main selector<br/>24 V first, backup second"]
   BAT --> MAINSEL
-  MAINSEL --> RAW["Protected raw DC<br/>telemetry / 22 mF hold-up start<br/>no-blink transfer"]
+  MAINSEL --> RAW["Protected raw DC<br/>telemetry / 27.2 mF hold-up bank<br/>no-blink transfer"]
 
   RAW --> SYS5["LM5146 SYS_5V15<br/>5.15 V / 12 A"]
   RAW --> WIFI33["LM61440 WIFI_3V3<br/>3.3 V / 4 A"]

@@ -1,0 +1,1483 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>/Users/viewvision/Desktop/Radxa CM5 PCB/cad/kicad/AUDIO-8X8/AK5558-ADC.kicad_sch</source>
+    <date>2026-08-16T18:36:21</date>
+    <tool>Eeschema 10.0.5-rc1</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>ProComm AUDIO-8X8 - AK5558VN Eight-Channel ADC</title>
+        <company>ProComm</company>
+        <rev>A1</rev>
+        <date>2026-08-16</date>
+        <source>AK5558-ADC.kicad_sch</source>
+        <comment number="1" value="TDM256, 32-bit I2S, slave mode: TDM1:0=10, DIF1:0=11, MSN=0"/>
+        <comment number="2" value="AVDD=5.0 V, TVDD=3.3 V, internal 1.8 V LDO enabled"/>
+        <comment number="3" value="Each VREFH uses 20 ohm plus 100 nF and 100 uF to its VREFL/AGND"/>
+        <comment number="4" value="QFN exposed-pad geometry and assembly coupon remain a routing release gate"/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C261">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Manufacturer">TDK</field>
+        <field name="MPN">C1005X7R1H104K050BB</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="TDK"/>
+      <property name="MPN" value="C1005X7R1H104K050BB"/>
+      <property name="Sheetname" value="AK5558-ADC"/>
+      <property name="Sheetfile" value="AK5558-ADC.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>df51495d-cd87-5567-932b-6dcf491814e0</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C262">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Manufacturer">TDK</field>
+        <field name="MPN">C1005X7R1H104K050BB</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="TDK"/>
+      <property name="MPN" value="C1005X7R1H104K050BB"/>
+      <property name="Sheetname" value="AK5558-ADC"/>
+      <property name="Sheetfile" value="AK5558-ADC.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3fb41967-ff99-52ea-9c89-dc41aa67c1be</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C263">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Manufacturer">TDK</field>
+        <field name="MPN">C1005X7R1H104K050BB</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="TDK"/>
+      <property name="MPN" value="C1005X7R1H104K050BB"/>
+      <property name="Sheetname" value="AK5558-ADC"/>
+      <property name="Sheetfile" value="AK5558-ADC.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>593b51b7-47d0-5e50-af55-0fdc0a1afa99</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C264">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Manufacturer">TDK</field>
+        <field name="MPN">C1005X7R1H104K050BB</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="TDK"/>
+      <property name="MPN" value="C1005X7R1H104K050BB"/>
+      <property name="Sheetname" value="AK5558-ADC"/>
+      <property name="Sheetfile" value="AK5558-ADC.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>59292c3d-cc71-5dd9-bbe1-0bba518ec63b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C271">
+      <value>100uF 6.3V polymer</value>
+      <footprint>Capacitor_SMD:CP_Elec_6.3x5.8</footprint>
+      <fields>
+        <field name="Manufacturer">Panasonic</field>
+        <field name="MPN">6SVP100M</field>
+        <field name="Footprint">Capacitor_SMD:CP_Elec_6.3x5.8</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C_Polarized" description="Polarized capacitor"/>
+      <property name="Manufacturer" value="Panasonic"/>
+      <property name="MPN" value="6SVP100M"/>
+      <property name="Sheetname" value="AK5558-ADC"/>
+      <property name="Sheetfile" value="AK5558-ADC.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="CP_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>559f86ce-734d-54ca-8669-a3d17ae2a9d1</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C272">
+      <value>100uF 6.3V polymer</value>
+      <footprint>Capacitor_SMD:CP_Elec_6.3x5.8</footprint>
+      <fields>
+        <field name="Manufacturer">Panasonic</field>
+        <field name="MPN">6SVP100M</field>
+        <field name="Footprint">Capacitor_SMD:CP_Elec_6.3x5.8</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C_Polarized" description="Polarized capacitor"/>
+      <property name="Manufacturer" value="Panasonic"/>
+      <property name="MPN" value="6SVP100M"/>
+      <property name="Sheetname" value="AK5558-ADC"/>
+      <property name="Sheetfile" value="AK5558-ADC.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="CP_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>46a26a74-2f1d-5bba-b9d8-11ed889fbef3</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C273">
+      <value>100uF 6.3V polymer</value>
+      <footprint>Capacitor_SMD:CP_Elec_6.3x5.8</footprint>
+      <fields>
+        <field name="Manufacturer">Panasonic</field>
+        <field name="MPN">6SVP100M</field>
+        <field name="Footprint">Capacitor_SMD:CP_Elec_6.3x5.8</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C_Polarized" description="Polarized capacitor"/>
+      <property name="Manufacturer" value="Panasonic"/>
+      <property name="MPN" value="6SVP100M"/>
+      <property name="Sheetname" value="AK5558-ADC"/>
+      <property name="Sheetfile" value="AK5558-ADC.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="CP_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>bcb1c3bd-b681-568e-9329-7062a29f7450</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C274">
+      <value>100uF 6.3V polymer</value>
+      <footprint>Capacitor_SMD:CP_Elec_6.3x5.8</footprint>
+      <fields>
+        <field name="Manufacturer">Panasonic</field>
+        <field name="MPN">6SVP100M</field>
+        <field name="Footprint">Capacitor_SMD:CP_Elec_6.3x5.8</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C_Polarized" description="Polarized capacitor"/>
+      <property name="Manufacturer" value="Panasonic"/>
+      <property name="MPN" value="6SVP100M"/>
+      <property name="Sheetname" value="AK5558-ADC"/>
+      <property name="Sheetfile" value="AK5558-ADC.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="CP_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>fbcf936d-674e-530f-b9ae-a22e55e2f002</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C281">
+      <value>1uF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Murata</field>
+        <field name="MPN">GRM188R71A105KA61D</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="MPN" value="GRM188R71A105KA61D"/>
+      <property name="Sheetname" value="AK5558-ADC"/>
+      <property name="Sheetfile" value="AK5558-ADC.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d6e8bc14-c7e3-5b87-b9b3-ea4cd71930d0</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C282">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Manufacturer">TDK</field>
+        <field name="MPN">C1005X7R1H104K050BB</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="TDK"/>
+      <property name="MPN" value="C1005X7R1H104K050BB"/>
+      <property name="Sheetname" value="AK5558-ADC"/>
+      <property name="Sheetfile" value="AK5558-ADC.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>74326db3-6183-5ab7-96d2-151ff0594a22</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C283">
+      <value>4.7uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Murata</field>
+        <field name="MPN">GRM21BR71A475KA73L</field>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="MPN" value="GRM21BR71A475KA73L"/>
+      <property name="Sheetname" value="AK5558-ADC"/>
+      <property name="Sheetfile" value="AK5558-ADC.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>702cee79-85e0-5b12-95ba-6cc56468a5b0</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C284">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Manufacturer">TDK</field>
+        <field name="MPN">C1005X7R1H104K050BB</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="TDK"/>
+      <property name="MPN" value="C1005X7R1H104K050BB"/>
+      <property name="Sheetname" value="AK5558-ADC"/>
+      <property name="Sheetfile" value="AK5558-ADC.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>904a0766-ad12-5103-854b-88bfc47934a1</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C285">
+      <value>4.7uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Murata</field>
+        <field name="MPN">GRM21BR71A475KA73L</field>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="MPN" value="GRM21BR71A475KA73L"/>
+      <property name="Sheetname" value="AK5558-ADC"/>
+      <property name="Sheetfile" value="AK5558-ADC.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6d7717e8-c492-57e5-80a2-fc54d692dd54</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R221">
+      <value>10k 0.1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Sheetname" value="AK5558-ADC"/>
+      <property name="Sheetfile" value="AK5558-ADC.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>eef6c276-209e-5280-a2c6-d22c87295cdd</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R222">
+      <value>10k 0.1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Sheetname" value="AK5558-ADC"/>
+      <property name="Sheetfile" value="AK5558-ADC.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>61b2110c-15e3-5a53-8b9c-3006249017b3</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R223">
+      <value>10k 0.1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Sheetname" value="AK5558-ADC"/>
+      <property name="Sheetfile" value="AK5558-ADC.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>09ab51c0-97a0-58a3-80ec-bdd4543d8d24</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R224">
+      <value>10k 0.1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Sheetname" value="AK5558-ADC"/>
+      <property name="Sheetfile" value="AK5558-ADC.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>096cbba8-ca25-5d2d-8668-64bc48c1f759</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R225">
+      <value>10k 0.1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Sheetname" value="AK5558-ADC"/>
+      <property name="Sheetfile" value="AK5558-ADC.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>687e2421-6b7f-5252-bcc5-01f4a7b2fd93</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R226">
+      <value>10k 0.1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Sheetname" value="AK5558-ADC"/>
+      <property name="Sheetfile" value="AK5558-ADC.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9794c411-6316-53be-abe0-cf957d9ffecf</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R227">
+      <value>10k 0.1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Sheetname" value="AK5558-ADC"/>
+      <property name="Sheetfile" value="AK5558-ADC.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>28a795bd-1b40-503e-ac71-40f1f1ffc019</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R228">
+      <value>10k 0.1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Sheetname" value="AK5558-ADC"/>
+      <property name="Sheetfile" value="AK5558-ADC.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f6bd58f0-0b0a-5f71-af3e-299ab7fa3ce5</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R241">
+      <value>10k 0.1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Sheetname" value="AK5558-ADC"/>
+      <property name="Sheetfile" value="AK5558-ADC.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5281c6dc-1cc1-55bc-ab14-7f823f8cba88</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R242">
+      <value>10k 0.1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Sheetname" value="AK5558-ADC"/>
+      <property name="Sheetfile" value="AK5558-ADC.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ab672d58-7a47-5a0d-a305-ef800971d55e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R243">
+      <value>10k 0.1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Sheetname" value="AK5558-ADC"/>
+      <property name="Sheetfile" value="AK5558-ADC.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>56928a03-bb3c-55f7-91b0-c6300d8e22b6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R244">
+      <value>10k 0.1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Sheetname" value="AK5558-ADC"/>
+      <property name="Sheetfile" value="AK5558-ADC.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>249cf731-1172-5b14-b19c-5f3e17ac252d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R245">
+      <value>10k 0.1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Sheetname" value="AK5558-ADC"/>
+      <property name="Sheetfile" value="AK5558-ADC.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f576067d-0972-5c71-b442-545a94883eee</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R246">
+      <value>10k 0.1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Sheetname" value="AK5558-ADC"/>
+      <property name="Sheetfile" value="AK5558-ADC.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>fa7b0520-19eb-5e98-812e-1ba189f10018</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R247">
+      <value>10k 0.1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Sheetname" value="AK5558-ADC"/>
+      <property name="Sheetfile" value="AK5558-ADC.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>68741e01-5a63-592f-ba69-fca36ae666f1</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R248">
+      <value>10k 0.1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Sheetname" value="AK5558-ADC"/>
+      <property name="Sheetfile" value="AK5558-ADC.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a4644ab2-c996-5598-88c1-8270859d73ad</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R249">
+      <value>10k 0.1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Sheetname" value="AK5558-ADC"/>
+      <property name="Sheetfile" value="AK5558-ADC.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>11bfd6e6-4d1e-5a13-a349-492aa9c59a79</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R250">
+      <value>10k 0.1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Sheetname" value="AK5558-ADC"/>
+      <property name="Sheetfile" value="AK5558-ADC.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e40c62da-dcb6-521d-aadc-807dac49647e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R261">
+      <value>20R</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0720RL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0720RL"/>
+      <property name="Sheetname" value="AK5558-ADC"/>
+      <property name="Sheetfile" value="AK5558-ADC.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b4f5c6c8-7089-5683-9cc1-5aa3050696c1</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R262">
+      <value>20R</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0720RL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0720RL"/>
+      <property name="Sheetname" value="AK5558-ADC"/>
+      <property name="Sheetfile" value="AK5558-ADC.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0ce213f5-1d71-5266-83fb-9f12e4a69052</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R263">
+      <value>20R</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0720RL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0720RL"/>
+      <property name="Sheetname" value="AK5558-ADC"/>
+      <property name="Sheetfile" value="AK5558-ADC.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e22ed48e-f031-5134-8099-db2f1a838bbe</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R264">
+      <value>20R</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0720RL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-0720RL"/>
+      <property name="Sheetname" value="AK5558-ADC"/>
+      <property name="Sheetfile" value="AK5558-ADC.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>825546df-6d47-5b05-91f4-59738d6c62cb</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U201">
+      <value>AK5558VN</value>
+      <footprint>Package_DFN_QFN:QFN-64-1EP_9x9mm_P0.5mm_EP6x6mm_ThermalVias</footprint>
+      <fields>
+        <field name="Manufacturer">Asahi Kasei Microdevices</field>
+        <field name="MPN">AK5558VN</field>
+        <field name="Footprint">Package_DFN_QFN:QFN-64-1EP_9x9mm_P0.5mm_EP6x6mm_ThermalVias</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="CM5Carrier" part="AK5558VN" description="Eight-channel 32-bit ADC; exact 64-QFN pin assignment"/>
+      <property name="Manufacturer" value="Asahi Kasei Microdevices"/>
+      <property name="MPN" value="AK5558VN"/>
+      <property name="Sheetname" value="AK5558-ADC"/>
+      <property name="Sheetfile" value="AK5558-ADC.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c4ae79a9-6ca6-5941-851d-b1c7c22869a4</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="5"/>
+            <pin num="7"/>
+            <pin num="9"/>
+            <pin num="11"/>
+            <pin num="13"/>
+            <pin num="15"/>
+            <pin num="17"/>
+            <pin num="19"/>
+            <pin num="21"/>
+            <pin num="23"/>
+            <pin num="25"/>
+            <pin num="27"/>
+            <pin num="29"/>
+            <pin num="31"/>
+            <pin num="33"/>
+            <pin num="35"/>
+            <pin num="37"/>
+            <pin num="39"/>
+            <pin num="41"/>
+            <pin num="43"/>
+            <pin num="45"/>
+            <pin num="47"/>
+            <pin num="49"/>
+            <pin num="51"/>
+            <pin num="53"/>
+            <pin num="55"/>
+            <pin num="57"/>
+            <pin num="59"/>
+            <pin num="61"/>
+            <pin num="63"/>
+            <pin num="65"/>
+            <pin num="2"/>
+            <pin num="4"/>
+            <pin num="6"/>
+            <pin num="8"/>
+            <pin num="10"/>
+            <pin num="12"/>
+            <pin num="14"/>
+            <pin num="16"/>
+            <pin num="18"/>
+            <pin num="20"/>
+            <pin num="22"/>
+            <pin num="24"/>
+            <pin num="26"/>
+            <pin num="28"/>
+            <pin num="30"/>
+            <pin num="32"/>
+            <pin num="34"/>
+            <pin num="36"/>
+            <pin num="38"/>
+            <pin num="40"/>
+            <pin num="42"/>
+            <pin num="44"/>
+            <pin num="46"/>
+            <pin num="48"/>
+            <pin num="50"/>
+            <pin num="52"/>
+            <pin num="54"/>
+            <pin num="56"/>
+            <pin num="58"/>
+            <pin num="60"/>
+            <pin num="62"/>
+            <pin num="64"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="CM5Carrier" part="AK5558VN">
+      <description>Eight-channel 32-bit ADC; exact 64-QFN pin assignment</description>
+      <docs>https://www.akm-semi.com/pdf-0f/ak5558vn.pdf</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">AK5558VN</field>
+        <field name="Footprint">Package_DFN_QFN:QFN-64-1EP_9x9mm_P0.5mm_EP6x6mm_ThermalVias</field>
+        <field name="Datasheet">https://www.akm-semi.com/pdf-0f/ak5558vn.pdf</field>
+        <field name="Description">Eight-channel 32-bit ADC; exact 64-QFN pin assignment</field>
+      </fields>
+      <pins>
+        <pin num="1" name="AVSS1" type="passive"/>
+        <pin num="2" name="AVDD1" type="passive"/>
+        <pin num="3" name="AIN3P" type="passive"/>
+        <pin num="4" name="AIN3N" type="passive"/>
+        <pin num="5" name="VREFL2" type="passive"/>
+        <pin num="6" name="VREFH2" type="passive"/>
+        <pin num="7" name="AIN4N" type="passive"/>
+        <pin num="8" name="AIN4P" type="passive"/>
+        <pin num="9" name="AIN5P" type="passive"/>
+        <pin num="10" name="AIN5N" type="passive"/>
+        <pin num="11" name="VREFH3" type="passive"/>
+        <pin num="12" name="VREFL3" type="passive"/>
+        <pin num="13" name="AIN6N" type="passive"/>
+        <pin num="14" name="AIN6P" type="passive"/>
+        <pin num="15" name="AVDD2" type="passive"/>
+        <pin num="16" name="AVSS2" type="passive"/>
+        <pin num="17" name="AIN7P" type="passive"/>
+        <pin num="18" name="AIN7N" type="passive"/>
+        <pin num="19" name="VREFH4" type="passive"/>
+        <pin num="20" name="VREFL4" type="passive"/>
+        <pin num="21" name="AIN8N" type="passive"/>
+        <pin num="22" name="AIN8P" type="passive"/>
+        <pin num="23" name="TEST" type="passive"/>
+        <pin num="24" name="MCLK" type="passive"/>
+        <pin num="25" name="TVDD" type="passive"/>
+        <pin num="26" name="DVSS" type="passive"/>
+        <pin num="27" name="VDD18" type="passive"/>
+        <pin num="28" name="PDN" type="passive"/>
+        <pin num="29" name="PW0" type="passive"/>
+        <pin num="30" name="PW1" type="passive"/>
+        <pin num="31" name="PW2" type="passive"/>
+        <pin num="32" name="MSN" type="passive"/>
+        <pin num="33" name="BICK/DCLK" type="passive"/>
+        <pin num="34" name="LRCK/DSDOL1" type="passive"/>
+        <pin num="35" name="TDMIN/DSDOR1" type="passive"/>
+        <pin num="36" name="SDTO1/DSDOL2" type="passive"/>
+        <pin num="37" name="SDTO2/DSDOR2" type="passive"/>
+        <pin num="38" name="SDTO3/DSDOL3" type="passive"/>
+        <pin num="39" name="SDTO4/DSDOR3" type="passive"/>
+        <pin num="40" name="DSDOL4" type="passive"/>
+        <pin num="41" name="DSDOR4" type="passive"/>
+        <pin num="42" name="OVF" type="passive"/>
+        <pin num="43" name="CKS0/SDA/CDTI" type="passive"/>
+        <pin num="44" name="CKS1/CAD0_I2C/CSN" type="passive"/>
+        <pin num="45" name="CKS2/SCL/CCLK" type="passive"/>
+        <pin num="46" name="CKS3/CAD1" type="passive"/>
+        <pin num="47" name="SLOW/DCKB" type="passive"/>
+        <pin num="48" name="SD/PMOD" type="passive"/>
+        <pin num="49" name="DIF0/DSDSEL0" type="passive"/>
+        <pin num="50" name="DIF1/DSDSEL1" type="passive"/>
+        <pin num="51" name="TDM0" type="passive"/>
+        <pin num="52" name="TDM1" type="passive"/>
+        <pin num="53" name="PSN/CAD0_SPI" type="passive"/>
+        <pin num="54" name="I2C" type="passive"/>
+        <pin num="55" name="DP" type="passive"/>
+        <pin num="56" name="HPFE/DCKS" type="passive"/>
+        <pin num="57" name="LDOE" type="passive"/>
+        <pin num="58" name="ODP" type="passive"/>
+        <pin num="59" name="AIN1P" type="passive"/>
+        <pin num="60" name="AIN1N" type="passive"/>
+        <pin num="61" name="VREFL1" type="passive"/>
+        <pin num="62" name="VREFH1" type="passive"/>
+        <pin num="63" name="AIN2N" type="passive"/>
+        <pin num="64" name="AIN2P" type="passive"/>
+        <pin num="65" name="EP" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C_Polarized">
+      <description>Polarized capacitor</description>
+      <footprints>
+        <fp>CP_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C_Polarized</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Polarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="CM5Carrier">
+      <uri>${KIPRJMOD}/../CM5-CARRIER/CM5Carrier.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>${KICAD10_SYMBOL_DIR}/Device.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/ADC_5V_A" class="Default">
+      <node ref="C282" pin="1" pintype="passive"/>
+      <node ref="C283" pin="1" pintype="passive"/>
+      <node ref="R261" pin="1" pintype="passive"/>
+      <node ref="R262" pin="1" pintype="passive"/>
+      <node ref="R263" pin="1" pintype="passive"/>
+      <node ref="R264" pin="1" pintype="passive"/>
+      <node ref="U201" pin="15" pinfunction="AVDD2_15" pintype="passive"/>
+      <node ref="U201" pin="2" pinfunction="AVDD1_2" pintype="passive"/>
+    </net>
+    <net code="2" name="/ADC_CAD0" class="Default">
+      <node ref="R242" pin="1" pintype="passive"/>
+      <node ref="U201" pin="44" pinfunction="CKS1/CAD0_I2C/CSN_44" pintype="passive"/>
+    </net>
+    <net code="3" name="/ADC_CAD1" class="Default">
+      <node ref="R243" pin="1" pintype="passive"/>
+      <node ref="U201" pin="46" pinfunction="CKS3/CAD1_46" pintype="passive"/>
+    </net>
+    <net code="4" name="/ADC_CH1N" class="Default">
+      <node ref="U201" pin="60" pinfunction="AIN1N_60" pintype="passive"/>
+    </net>
+    <net code="5" name="/ADC_CH1P" class="Default">
+      <node ref="U201" pin="59" pinfunction="AIN1P_59" pintype="passive"/>
+    </net>
+    <net code="6" name="/ADC_CH2N" class="Default">
+      <node ref="U201" pin="63" pinfunction="AIN2N_63" pintype="passive"/>
+    </net>
+    <net code="7" name="/ADC_CH2P" class="Default">
+      <node ref="U201" pin="64" pinfunction="AIN2P_64" pintype="passive"/>
+    </net>
+    <net code="8" name="/ADC_CH3N" class="Default">
+      <node ref="U201" pin="4" pinfunction="AIN3N_4" pintype="passive"/>
+    </net>
+    <net code="9" name="/ADC_CH3P" class="Default">
+      <node ref="U201" pin="3" pinfunction="AIN3P_3" pintype="passive"/>
+    </net>
+    <net code="10" name="/ADC_CH4N" class="Default">
+      <node ref="U201" pin="7" pinfunction="AIN4N_7" pintype="passive"/>
+    </net>
+    <net code="11" name="/ADC_CH4P" class="Default">
+      <node ref="U201" pin="8" pinfunction="AIN4P_8" pintype="passive"/>
+    </net>
+    <net code="12" name="/ADC_CH5N" class="Default">
+      <node ref="U201" pin="10" pinfunction="AIN5N_10" pintype="passive"/>
+    </net>
+    <net code="13" name="/ADC_CH5P" class="Default">
+      <node ref="U201" pin="9" pinfunction="AIN5P_9" pintype="passive"/>
+    </net>
+    <net code="14" name="/ADC_CH6N" class="Default">
+      <node ref="U201" pin="13" pinfunction="AIN6N_13" pintype="passive"/>
+    </net>
+    <net code="15" name="/ADC_CH6P" class="Default">
+      <node ref="U201" pin="14" pinfunction="AIN6P_14" pintype="passive"/>
+    </net>
+    <net code="16" name="/ADC_CH7N" class="Default">
+      <node ref="U201" pin="18" pinfunction="AIN7N_18" pintype="passive"/>
+    </net>
+    <net code="17" name="/ADC_CH7P" class="Default">
+      <node ref="U201" pin="17" pinfunction="AIN7P_17" pintype="passive"/>
+    </net>
+    <net code="18" name="/ADC_CH8N" class="Default">
+      <node ref="U201" pin="21" pinfunction="AIN8N_21" pintype="passive"/>
+    </net>
+    <net code="19" name="/ADC_CH8P" class="Default">
+      <node ref="U201" pin="22" pinfunction="AIN8P_22" pintype="passive"/>
+    </net>
+    <net code="20" name="/ADC_DIF0" class="Default">
+      <node ref="R224" pin="2" pintype="passive"/>
+      <node ref="U201" pin="49" pinfunction="DIF0/DSDSEL0_49" pintype="passive"/>
+    </net>
+    <net code="21" name="/ADC_DIF1" class="Default">
+      <node ref="R225" pin="2" pintype="passive"/>
+      <node ref="U201" pin="50" pinfunction="DIF1/DSDSEL1_50" pintype="passive"/>
+    </net>
+    <net code="22" name="/ADC_DP" class="Default">
+      <node ref="R248" pin="1" pintype="passive"/>
+      <node ref="U201" pin="55" pinfunction="DP_55" pintype="passive"/>
+    </net>
+    <net code="23" name="/ADC_DSDOL4_NC" class="Default">
+      <node ref="U201" pin="40" pinfunction="DSDOL4_40" pintype="passive"/>
+    </net>
+    <net code="24" name="/ADC_DSDOR4_NC" class="Default">
+      <node ref="U201" pin="41" pinfunction="DSDOR4_41" pintype="passive"/>
+    </net>
+    <net code="25" name="/ADC_HPFE" class="Default">
+      <node ref="R249" pin="1" pintype="passive"/>
+      <node ref="U201" pin="56" pinfunction="HPFE/DCKS_56" pintype="passive"/>
+    </net>
+    <net code="26" name="/ADC_I2C_MODE" class="Default">
+      <node ref="R227" pin="2" pintype="passive"/>
+      <node ref="U201" pin="54" pinfunction="I2C_54" pintype="passive"/>
+    </net>
+    <net code="27" name="/ADC_LDOE" class="Default">
+      <node ref="R228" pin="2" pintype="passive"/>
+      <node ref="U201" pin="57" pinfunction="LDOE_57" pintype="passive"/>
+    </net>
+    <net code="28" name="/ADC_MSN" class="Default">
+      <node ref="R241" pin="1" pintype="passive"/>
+      <node ref="U201" pin="32" pinfunction="MSN_32" pintype="passive"/>
+    </net>
+    <net code="29" name="/ADC_ODP" class="Default">
+      <node ref="R250" pin="1" pintype="passive"/>
+      <node ref="U201" pin="58" pinfunction="ODP_58" pintype="passive"/>
+    </net>
+    <net code="30" name="/ADC_PSN" class="Default">
+      <node ref="R247" pin="1" pintype="passive"/>
+      <node ref="U201" pin="53" pinfunction="PSN/CAD0_SPI_53" pintype="passive"/>
+    </net>
+    <net code="31" name="/ADC_PW0" class="Default">
+      <node ref="R221" pin="2" pintype="passive"/>
+      <node ref="U201" pin="29" pinfunction="PW0_29" pintype="passive"/>
+    </net>
+    <net code="32" name="/ADC_PW1" class="Default">
+      <node ref="R222" pin="2" pintype="passive"/>
+      <node ref="U201" pin="30" pinfunction="PW1_30" pintype="passive"/>
+    </net>
+    <net code="33" name="/ADC_PW2" class="Default">
+      <node ref="R223" pin="2" pintype="passive"/>
+      <node ref="U201" pin="31" pinfunction="PW2_31" pintype="passive"/>
+    </net>
+    <net code="34" name="/ADC_SDTO2_NC" class="Default">
+      <node ref="U201" pin="37" pinfunction="SDTO2/DSDOR2_37" pintype="passive"/>
+    </net>
+    <net code="35" name="/ADC_SDTO3_NC" class="Default">
+      <node ref="U201" pin="38" pinfunction="SDTO3/DSDOL3_38" pintype="passive"/>
+    </net>
+    <net code="36" name="/ADC_SDTO4_NC" class="Default">
+      <node ref="U201" pin="39" pinfunction="SDTO4/DSDOR3_39" pintype="passive"/>
+    </net>
+    <net code="37" name="/ADC_SD_PMOD" class="Default">
+      <node ref="R245" pin="1" pintype="passive"/>
+      <node ref="U201" pin="48" pinfunction="SD/PMOD_48" pintype="passive"/>
+    </net>
+    <net code="38" name="/ADC_SLOW" class="Default">
+      <node ref="R244" pin="1" pintype="passive"/>
+      <node ref="U201" pin="47" pinfunction="SLOW/DCKB_47" pintype="passive"/>
+    </net>
+    <net code="39" name="/ADC_TDM0" class="Default">
+      <node ref="R246" pin="1" pintype="passive"/>
+      <node ref="U201" pin="51" pinfunction="TDM0_51" pintype="passive"/>
+    </net>
+    <net code="40" name="/ADC_TDM1" class="Default">
+      <node ref="R226" pin="2" pintype="passive"/>
+      <node ref="U201" pin="52" pinfunction="TDM1_52" pintype="passive"/>
+    </net>
+    <net code="41" name="/ADC_TDM_OUT" class="Default">
+      <node ref="U201" pin="36" pinfunction="SDTO1/DSDOL2_36" pintype="passive"/>
+    </net>
+    <net code="42" name="/ADC_VDD18" class="Default">
+      <node ref="C281" pin="1" pintype="passive"/>
+      <node ref="U201" pin="27" pinfunction="VDD18_27" pintype="passive"/>
+    </net>
+    <net code="43" name="/ADC_VREFH1" class="Default">
+      <node ref="C261" pin="1" pintype="passive"/>
+      <node ref="C271" pin="1" pintype="passive"/>
+      <node ref="R261" pin="2" pintype="passive"/>
+      <node ref="U201" pin="62" pinfunction="VREFH1_62" pintype="passive"/>
+    </net>
+    <net code="44" name="/ADC_VREFH2" class="Default">
+      <node ref="C262" pin="1" pintype="passive"/>
+      <node ref="C272" pin="1" pintype="passive"/>
+      <node ref="R262" pin="2" pintype="passive"/>
+      <node ref="U201" pin="6" pinfunction="VREFH2_6" pintype="passive"/>
+    </net>
+    <net code="45" name="/ADC_VREFH3" class="Default">
+      <node ref="C263" pin="1" pintype="passive"/>
+      <node ref="C273" pin="1" pintype="passive"/>
+      <node ref="R263" pin="2" pintype="passive"/>
+      <node ref="U201" pin="11" pinfunction="VREFH3_11" pintype="passive"/>
+    </net>
+    <net code="46" name="/ADC_VREFH4" class="Default">
+      <node ref="C264" pin="1" pintype="passive"/>
+      <node ref="C274" pin="1" pintype="passive"/>
+      <node ref="R264" pin="2" pintype="passive"/>
+      <node ref="U201" pin="19" pinfunction="VREFH4_19" pintype="passive"/>
+    </net>
+    <net code="47" name="/AGND" class="Default">
+      <node ref="C261" pin="2" pintype="passive"/>
+      <node ref="C262" pin="2" pintype="passive"/>
+      <node ref="C263" pin="2" pintype="passive"/>
+      <node ref="C264" pin="2" pintype="passive"/>
+      <node ref="C271" pin="2" pintype="passive"/>
+      <node ref="C272" pin="2" pintype="passive"/>
+      <node ref="C273" pin="2" pintype="passive"/>
+      <node ref="C274" pin="2" pintype="passive"/>
+      <node ref="C281" pin="2" pintype="passive"/>
+      <node ref="C282" pin="2" pintype="passive"/>
+      <node ref="C283" pin="2" pintype="passive"/>
+      <node ref="C284" pin="2" pintype="passive"/>
+      <node ref="C285" pin="2" pintype="passive"/>
+      <node ref="R241" pin="2" pintype="passive"/>
+      <node ref="R242" pin="2" pintype="passive"/>
+      <node ref="R243" pin="2" pintype="passive"/>
+      <node ref="R244" pin="2" pintype="passive"/>
+      <node ref="R245" pin="2" pintype="passive"/>
+      <node ref="R246" pin="2" pintype="passive"/>
+      <node ref="R247" pin="2" pintype="passive"/>
+      <node ref="R248" pin="2" pintype="passive"/>
+      <node ref="R249" pin="2" pintype="passive"/>
+      <node ref="R250" pin="2" pintype="passive"/>
+      <node ref="U201" pin="1" pinfunction="AVSS1_1" pintype="passive"/>
+      <node ref="U201" pin="12" pinfunction="VREFL3_12" pintype="passive"/>
+      <node ref="U201" pin="16" pinfunction="AVSS2_16" pintype="passive"/>
+      <node ref="U201" pin="20" pinfunction="VREFL4_20" pintype="passive"/>
+      <node ref="U201" pin="23" pinfunction="TEST_23" pintype="passive"/>
+      <node ref="U201" pin="26" pinfunction="DVSS_26" pintype="passive"/>
+      <node ref="U201" pin="35" pinfunction="TDMIN/DSDOR1_35" pintype="passive"/>
+      <node ref="U201" pin="5" pinfunction="VREFL2_5" pintype="passive"/>
+      <node ref="U201" pin="61" pinfunction="VREFL1_61" pintype="passive"/>
+      <node ref="U201" pin="65" pinfunction="EP_65" pintype="passive"/>
+    </net>
+    <net code="48" name="/AKM_3V3_D" class="Default">
+      <node ref="C284" pin="1" pintype="passive"/>
+      <node ref="C285" pin="1" pintype="passive"/>
+      <node ref="R221" pin="1" pintype="passive"/>
+      <node ref="R222" pin="1" pintype="passive"/>
+      <node ref="R223" pin="1" pintype="passive"/>
+      <node ref="R224" pin="1" pintype="passive"/>
+      <node ref="R225" pin="1" pintype="passive"/>
+      <node ref="R226" pin="1" pintype="passive"/>
+      <node ref="R227" pin="1" pintype="passive"/>
+      <node ref="R228" pin="1" pintype="passive"/>
+      <node ref="U201" pin="25" pinfunction="TVDD_25" pintype="passive"/>
+    </net>
+    <net code="49" name="/AKM_BCLK" class="Default">
+      <node ref="U201" pin="33" pinfunction="BICK/DCLK_33" pintype="passive"/>
+    </net>
+    <net code="50" name="/AKM_FSYNC" class="Default">
+      <node ref="U201" pin="34" pinfunction="LRCK/DSDOL1_34" pintype="passive"/>
+    </net>
+    <net code="51" name="/AKM_MCLK" class="Default">
+      <node ref="U201" pin="24" pinfunction="MCLK_24" pintype="passive"/>
+    </net>
+    <net code="52" name="/AUD_ADC_RST_N" class="Default">
+      <node ref="U201" pin="28" pinfunction="PDN_28" pintype="passive"/>
+    </net>
+    <net code="53" name="/AUD_I2C_SCL" class="Default">
+      <node ref="U201" pin="45" pinfunction="CKS2/SCL/CCLK_45" pintype="passive"/>
+    </net>
+    <net code="54" name="/AUD_I2C_SDA" class="Default">
+      <node ref="U201" pin="43" pinfunction="CKS0/SDA/CDTI_43" pintype="passive"/>
+    </net>
+    <net code="55" name="/AUD_IRQ_N" class="Default">
+      <node ref="U201" pin="42" pinfunction="OVF_42" pintype="passive"/>
+    </net>
+  </nets>
+</export>

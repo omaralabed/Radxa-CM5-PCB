@@ -1,4 +1,4 @@
-ERC report (2026-08-16T03:08:59, Encoding UTF8)
+ERC report (2026-08-16T18:36:09, Encoding UTF8)
 Report includes: Errors, Warnings
 
 ***** Sheet /
@@ -20,17 +20,8 @@ Report includes: Errors, Warnings
 [isolated_pin_label]: Label connected to only one pin
     ; warning
     @(462.28 mm, 149.86 mm): Label 'TDM_SPARE_2'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(549.91 mm, 435.61 mm): Label 'ES8316_GPIO2'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(590.55 mm, 433.07 mm): Label 'ES8316_GPIO1'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(590.55 mm, 435.61 mm): Label 'ES8316_GPIO3'
 
- ** ERC messages: 9  Errors 0  Warnings 9
+ ** ERC messages: 6  Errors 0  Warnings 6
 
  ** Ignored checks:
     - Global label only appears once in the schematic

@@ -37,11 +37,70 @@ SCHEMATICS = (
     ("Power-Regulators-A1", ROOT / "CM5-CARRIER" / "Power-Regulators-A1.kicad_sch"),
     ("Thermal-IO", ROOT / "CM5-CARRIER" / "Thermal-IO.kicad_sch"),
     ("Audio-8x8", ROOT / "AUDIO-8X8" / "Audio-8x8.kicad_sch"),
+    ("Audio-TDM-Clock", ROOT / "AUDIO-8X8" / "Audio-TDM-Clock.kicad_sch"),
+    ("AK5558-ADC", ROOT / "AUDIO-8X8" / "AK5558-ADC.kicad_sch"),
+    ("AK4458-DAC", ROOT / "AUDIO-8X8" / "AK4458-DAC.kicad_sch"),
+    ("Audio-Inputs", ROOT / "AUDIO-8X8" / "Audio-Inputs.kicad_sch"),
+    ("Audio-Outputs", ROOT / "AUDIO-8X8" / "Audio-Outputs.kicad_sch"),
+    ("Audio-Power", ROOT / "AUDIO-8X8" / "Audio-Power.kicad_sch"),
 )
 
 # This typed port exists only to make cross-sheet ERC direction checks useful.
 INTENTIONAL_NON_BOARD = {
     ("Audio-Control", "U900"): "Typed CM5 off-sheet audio interface",
+    ("Power-Regulators-A1", "U1180"): "TRI 20-1223 is physically mounted on AUDIO-8X8",
+    ("WWAN-SIM", "J711"): "ECT 818033349 off-board RF pigtail/bulkhead harness",
+    ("WWAN-SIM", "J712"): "ECT 818033349 off-board RF pigtail/bulkhead harness",
+    ("WWAN-SIM", "J713"): "ECT 818033349 off-board RF pigtail/bulkhead harness",
+    ("WWAN-SIM", "J714"): "ECT 818033349 off-board RF pigtail/bulkhead harness",
+}
+
+# Copper probe lands are deliberate PCB features, not purchased components.
+# They remain route-ready but are not production-BOM line items.
+NO_BOM_BOARD_FEATURES = {
+    ("Power-Regulators-A1", "TP1190"): "Copper-only rail probe pad",
+    ("Power-Regulators-A1", "TP1191"): "Copper-only rail probe pad",
+    ("Power-Regulators-A1", "TP1192"): "Copper-only rail probe pad",
+    ("Power-Regulators-A1", "TP1193"): "Copper-only rail probe pad",
+    ("WWAN-SIM", "TP7201"): "Copper-only modem-control probe pad",
+    ("WWAN-SIM", "TP7202"): "Copper-only modem-control probe pad",
+    ("WWAN-SIM", "TP7203"): "Copper-only modem-control probe pad",
+    ("WWAN-SIM", "TP7204"): "Copper-only modem-control probe pad",
+    ("WWAN-SIM", "TP7205"): "Copper-only modem-control probe pad",
+    ("WWAN-SIM", "TP7206"): "Copper-only modem-control probe pad",
+    ("WWAN-SIM", "TP7207"): "Copper-only modem-power probe pad",
+    ("WWAN-SIM", "TP7208"): "Copper-only modem-ground probe pad",
+    ("Audio-8x8", "J901"): "Two-pad copper access feature for chassis-bond verification",
+}
+
+# Placement and routing must remain blocked until these drawing-derived lands
+# pass the named first-article coupon. This is stricter than a production-only
+# assembly check because escape routing and thermal-via geometry depend on it.
+ROUTING_COUPON_REQUIRED = {
+    (
+        "AK5558-ADC",
+        "U201",
+    ): "AK5558VN exposed-pad, thermal-via, stencil, and assembly coupon sign-off required",
+    (
+        "AK4458-DAC",
+        "U301",
+    ): "AK4458VN exposed-pad, thermal-via, stencil, and assembly coupon sign-off required",
+    **{
+        (
+            "Audio-Outputs",
+            f"K{reference}",
+        ): "Panasonic TQ2 pin/land drawing and through-hole insertion coupon sign-off required"
+        for reference in range(501, 509)
+    },
+}
+
+# These parts may be placed and routed for prototype capture, but production
+# release remains blocked until the named physical verification is complete.
+PRODUCTION_COUPON_REQUIRED = {
+    (
+        "Audio-Control",
+        "J910",
+    ): "Kycon component-drawing footprint requires a physical sample and plated-hole coupon sign-off",
 }
 
 
@@ -161,6 +220,9 @@ def audit_rows() -> list[dict[str, str]]:
                 manufacturer = field(comp, "Manufacturer")
                 mpn = field(comp, "MPN")
                 exemption = INTENTIONAL_NON_BOARD.get((sheet, reference), "")
+                no_bom_feature = NO_BOM_BOARD_FEATURES.get((sheet, reference), "")
+                routing_coupon_gate = ROUTING_COUPON_REQUIRED.get((sheet, reference), "")
+                coupon_gate = PRODUCTION_COUPON_REQUIRED.get((sheet, reference), "")
                 resolved = footprint_file(sheet, footprint)
 
                 route_status = "READY"
@@ -170,6 +232,14 @@ def audit_rows() -> list[dict[str, str]]:
                     route_status = "NOT_BOARD_MOUNTED"
                     production_status = "NOT_BOARD_MOUNTED"
                     note = exemption
+                elif no_bom_feature:
+                    if not footprint or resolved is None or not resolved.exists():
+                        route_status = "BLOCKED_UNRESOLVED_FOOTPRINT"
+                        production_status = "BLOCKED_UNRESOLVED_FOOTPRINT"
+                        note = "Copper-only board feature footprint does not resolve"
+                    else:
+                        production_status = "NOT_IN_BOM"
+                        note = no_bom_feature
                 elif not footprint:
                     route_status = "BLOCKED_NO_FOOTPRINT"
                     production_status = "BLOCKED_NO_FOOTPRINT"
@@ -178,9 +248,16 @@ def audit_rows() -> list[dict[str, str]]:
                     route_status = "BLOCKED_UNRESOLVED_FOOTPRINT"
                     production_status = "BLOCKED_UNRESOLVED_FOOTPRINT"
                     note = "Footprint identifier does not resolve in project or installed KiCad libraries"
+                elif routing_coupon_gate:
+                    route_status = "BLOCKED_MECHANICAL_COUPON"
+                    production_status = "BLOCKED_MECHANICAL_COUPON"
+                    note = routing_coupon_gate
                 elif not manufacturer or not mpn:
                     production_status = "BLOCKED_NO_PRODUCTION_PART"
                     note = "Lock manufacturer and MPN before BOM release"
+                elif coupon_gate:
+                    production_status = "BLOCKED_MECHANICAL_COUPON"
+                    note = coupon_gate
 
                 rows.append(
                     {
@@ -235,7 +312,7 @@ def write_reports(rows: list[dict[str, str]]) -> tuple[int, int]:
     markdown = [
         "# Component and Footprint Audit",
         "",
-        "Generated from all ten native KiCad sheets. This report is deterministic and contains no audit timestamp.",
+        "Generated from all sixteen native KiCad sheets. This report is deterministic and contains no audit timestamp.",
         "",
         "## Current gate",
         "",
@@ -245,7 +322,7 @@ def write_reports(rows: list[dict[str, str]]) -> tuple[int, int]:
         f"- Routing blockers: {len(route_blockers)}",
         f"- Production/BOM blockers: {len(production_blockers)}",
         "",
-        "A routing blocker has no footprint or references a footprint that cannot be resolved. A production blocker also includes any routed component without a locked manufacturer and MPN.",
+        "A routing blocker has no footprint, references an unresolved footprint, or still requires a routing-critical mechanical coupon. A production blocker also includes any board-mounted component without a locked manufacturer and MPN.",
         "",
         "## By sheet",
         "",

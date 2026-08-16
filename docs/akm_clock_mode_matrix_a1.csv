@@ -1,0 +1,18 @@
+Parameter,AK5558VN ADC,AK4458VN DAC,System contract,Status
+I2C 7-bit address,"0x10; CAD1:0=00","0x11; CAD1:0=01","Unique addresses on AUD_I2C_SCL/AUD_I2C_SDA",LOCKED
+Control interface,I2C serial,I2C serial,"400 kHz maximum bus; write while reset/mute asserted",LOCKED
+Sample rate,48 kHz,48 kHz,48 kHz baseline,LOCKED
+Master/slave,Slave; MSN=0,Slave,CM5/audio clock source is master,LOCKED
+TDM mode,TDM1:0=10,TDM1:0=10,TDM256,LOCKED
+Word format,DIF1:0=11,DIF2:0=111,32-bit I2S-compatible,LOCKED
+Frame,8 slots x 32 bits,"SDTI1 carries L1/R1 L2/R2 L3/R3 L4/R4",256 BCLK per LRCK,LOCKED
+BCLK,12.288 MHz,12.288 MHz,256 x 48 kHz,LOCKED
+MCLK,12.288 MHz; 256fs,12.288 MHz; 256fs manual mode,Common synchronous MCLK,LOCKED
+ADC data pin,SDTO1,DAC input SDTI1,One TDM data line in each direction,LOCKED
+Unused DAC serial inputs,N/A,"SDTI2 SDTI3 SDTI4 and DSD inputs tied AGND",No floating digital inputs,LOCKED
+DAC register 0x00,"N/A","DIF2:0=111; ACKS=0; RSTN held 0 during setup",Mode 19 data format,LOCKED
+DAC register 0x0A,N/A,"TDM1:0=10; SDS2:1=00; PW2:1=11; DEM21:20=01; value 0x8D",TDM256 and normal slot selection,LOCKED
+DAC register 0x0B,N/A,"SDS0=0; PW4:3=11; DCHAIN=0; value 0x0C",All eight channels on first device,LOCKED
+ADC register 0x02,"CKS3:0=0010; DIF1:0=11; HPFE=1; value 0x17",N/A,48 kHz and 256fs MCLK baseline,LOCKED
+ADC register 0x03,"TDM1:0=10; value 0x40",N/A,TDM256,LOCKED
+Release sequence,"PDN high then verify 0x02 and 0x03; toggle RSTN only if changed","PDN high; soft mute; write/read back mode; release RSTN; unmute last","Outputs remain relay-isolated until all readbacks and clocks pass",REQUIRES_BENCH_VALIDATION

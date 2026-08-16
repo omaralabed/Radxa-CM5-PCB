@@ -2,19 +2,19 @@
 <export version="E">
   <design>
     <source>/Users/viewvision/Desktop/Radxa CM5 PCB/cad/kicad/AUDIO-8X8/Audio-8x8.kicad_sch</source>
-    <date>2026-08-16T03:44:57</date>
+    <date>2026-08-16T18:36:21</date>
     <tool>Eeschema 10.0.5-rc1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title>Radxa CM5 ProComm Audio 8x8 - Interface Contract</title>
         <company>ProComm</company>
-        <rev>A0</rev>
-        <date>2026-08-13</date>
+        <rev>A1</rev>
+        <date>2026-08-16</date>
         <source>Audio-8x8.kicad_sch</source>
         <comment number="1" value="AK5558VN ADC and AK4458VN DAC over buffered differential TDM"/>
         <comment number="2" value="+4 dBu nominal, +24 dBu maximum, active-balanced XLR stages"/>
         <comment number="3" value="Left bank male outputs; right bank female inputs"/>
-        <comment number="4" value="NOT A FABRICATION RELEASE - AKM networks require datasheet calculation"/>
+        <comment number="4" value="ENGINEERING CAPTURE - detailed sheets complete; coupon and bench gates remain"/>
         <comment number="5" value=""/>
         <comment number="6" value=""/>
         <comment number="7" value=""/>
@@ -25,19 +25,24 @@
   </design>
   <components>
     <comp ref="C901">
-      <value>4.7nF 1kV C0G</value>
+      <value>4.7nF Y1 500Vac</value>
+      <footprint>Capacitor_THT:C_Disc_D16.0mm_W5.0mm_P10.00mm</footprint>
       <fields>
-        <field name="Footprint"/>
+        <field name="Manufacturer">Vishay</field>
+        <field name="MPN">VY1472M63Y5UQ6TV0</field>
+        <field name="Footprint">Capacitor_THT:C_Disc_D16.0mm_W5.0mm_P10.00mm</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Vishay"/>
+      <property name="MPN" value="VY1472M63Y5UQ6TV0"/>
       <property name="Sheetname" value="Audio-8x8"/>
       <property name="Sheetfile" value="Audio-8x8.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>404ba63a-8ae9-5a3f-a2df-aa7bddbdb086</tstamps>
+      <tstamps>257b8b1e-a212-5500-9653-8bb99e578728</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -49,18 +54,23 @@
     </comp>
     <comp ref="J101">
       <value>AUDIO_TDM_CONTROL</value>
+      <footprint>Connector_Molex_Milligrid:Molex_8783230xx_2x15_P2.0mm_Header_Vertical_Polarized_MountingPegs</footprint>
       <fields>
-        <field name="Footprint"/>
+        <field name="Manufacturer">Molex</field>
+        <field name="MPN">87832-6423</field>
+        <field name="Footprint">Connector_Molex_Milligrid:Molex_8783230xx_2x15_P2.0mm_Header_Vertical_Polarized_MountingPegs</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Connector_Generic" part="Conn_02x15_Odd_Even" description="Generic connector, double row, 02x15, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Manufacturer" value="Molex"/>
+      <property name="MPN" value="87832-6423"/>
       <property name="Sheetname" value="Audio-8x8"/>
       <property name="Sheetfile" value="Audio-8x8.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
       <property name="ki_fp_filters" value="Connector*:*_2x??_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>8599b8a2-3901-5906-821f-4110ad35ca64</tstamps>
+      <tstamps>3bb38888-e529-5e5f-ab55-f7bd9d3fb30b</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -116,7 +126,7 @@
       <property name="ki_keywords" value="connector"/>
       <property name="ki_fp_filters" value="Connector*:*_2x??_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>509c065b-ef64-5a35-82b6-6ddf0dbed09f</tstamps>
+      <tstamps>05b15d8c-16c1-5fc0-8e19-7cfdbd543af9</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -146,7 +156,7 @@
       <property name="ki_keywords" value="xlr connector neutrik"/>
       <property name="ki_fp_filters" value="Jack*XLR*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>9ba872d9-096c-50bd-92ff-0acd6f36f16d</tstamps>
+      <tstamps>d17121be-5f60-5884-9df0-0416e2df843c</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -176,7 +186,7 @@
       <property name="ki_keywords" value="xlr connector neutrik"/>
       <property name="ki_fp_filters" value="Jack*XLR*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>4669d89a-28f8-5e74-a81a-4360b9d92efb</tstamps>
+      <tstamps>79e7836e-3d65-5622-82e1-3ce9e39305a6</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -206,7 +216,7 @@
       <property name="ki_keywords" value="xlr connector neutrik"/>
       <property name="ki_fp_filters" value="Jack*XLR*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>bf3d507e-bfe7-53d7-b66c-632d03be2031</tstamps>
+      <tstamps>990e745a-457f-5d5f-9daf-b78072b8545d</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -236,7 +246,7 @@
       <property name="ki_keywords" value="xlr connector neutrik"/>
       <property name="ki_fp_filters" value="Jack*XLR*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>7ca8c10b-2dbd-5b2e-bf9a-ec1a1f84fbaa</tstamps>
+      <tstamps>2dd6e88a-a481-5e8b-b4f1-ff1b72bd6581</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -266,7 +276,7 @@
       <property name="ki_keywords" value="xlr connector neutrik"/>
       <property name="ki_fp_filters" value="Jack*XLR*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>26408341-5fc4-5a1c-a189-66774442542c</tstamps>
+      <tstamps>e081ba36-42da-5471-9746-1ca7fc5d3a86</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -296,7 +306,7 @@
       <property name="ki_keywords" value="xlr connector neutrik"/>
       <property name="ki_fp_filters" value="Jack*XLR*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>3ee300b9-9c43-5ea2-9155-70fecf4e0daf</tstamps>
+      <tstamps>457bde6c-63d5-5f4e-b94d-4b4a860b0cf6</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -326,7 +336,7 @@
       <property name="ki_keywords" value="xlr connector neutrik"/>
       <property name="ki_fp_filters" value="Jack*XLR*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>438b2d92-c14e-590d-9000-b2d8309213f9</tstamps>
+      <tstamps>b4d719ec-03c1-5adf-a53f-967de9f3593f</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -356,7 +366,7 @@
       <property name="ki_keywords" value="xlr connector neutrik"/>
       <property name="ki_fp_filters" value="Jack*XLR*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>72746f4f-a03a-5718-ae06-6ac5c20e1ae9</tstamps>
+      <tstamps>794cd1e1-1c77-5c78-b127-a4740597df43</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -386,7 +396,7 @@
       <property name="ki_keywords" value="xlr connector neutrik"/>
       <property name="ki_fp_filters" value="Jack*XLR*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>36d74188-672f-53d3-8886-1b1cec0677f3</tstamps>
+      <tstamps>7d9c8555-1871-520c-a969-ae54da698118</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -415,7 +425,7 @@
       <property name="ki_keywords" value="xlr connector neutrik"/>
       <property name="ki_fp_filters" value="Jack*XLR*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>2ae1864d-b3b4-5129-a86b-b139d2b6ba48</tstamps>
+      <tstamps>c5c4aa5b-9417-5abd-b995-81f812cc5a67</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -444,7 +454,7 @@
       <property name="ki_keywords" value="xlr connector neutrik"/>
       <property name="ki_fp_filters" value="Jack*XLR*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>31144b68-9f10-5a5b-bcdf-bcb31109acc6</tstamps>
+      <tstamps>dd29f54d-0544-53f7-a27e-bb55265ac6db</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -473,7 +483,7 @@
       <property name="ki_keywords" value="xlr connector neutrik"/>
       <property name="ki_fp_filters" value="Jack*XLR*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>764fccb6-9af2-5f63-97b0-1be90879d6ad</tstamps>
+      <tstamps>614c3bc3-4a69-5193-9ece-67f503323ebf</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -502,7 +512,7 @@
       <property name="ki_keywords" value="xlr connector neutrik"/>
       <property name="ki_fp_filters" value="Jack*XLR*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>a6365dd2-e60f-5bac-b10a-772b8edee79c</tstamps>
+      <tstamps>c59727e3-17ed-5eb6-808a-4ac7f8986839</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -531,7 +541,7 @@
       <property name="ki_keywords" value="xlr connector neutrik"/>
       <property name="ki_fp_filters" value="Jack*XLR*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>04b5dc29-8428-5a2b-a539-bf51a19885e9</tstamps>
+      <tstamps>9f7232bb-970d-5b4b-b215-3d4800a94581</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -560,7 +570,7 @@
       <property name="ki_keywords" value="xlr connector neutrik"/>
       <property name="ki_fp_filters" value="Jack*XLR*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>c7d38130-a4ac-564b-a1d5-97e7ca23377c</tstamps>
+      <tstamps>93460f5f-6bd9-5639-b59f-c2aee08c4d59</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -589,7 +599,7 @@
       <property name="ki_keywords" value="xlr connector neutrik"/>
       <property name="ki_fp_filters" value="Jack*XLR*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>d8f9a44b-a04c-540b-a3d8-4f6ae3e26d7e</tstamps>
+      <tstamps>3488fc42-0455-52ce-b3a1-26db6cc920b3</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -602,8 +612,9 @@
     </comp>
     <comp ref="J901">
       <value>CHASSIS_BOND_TEST</value>
+      <footprint>TestPoint:TestPoint_2Pads_Pitch2.54mm_Drill0.8mm</footprint>
       <fields>
-        <field name="Footprint"/>
+        <field name="Footprint">TestPoint:TestPoint_2Pads_Pitch2.54mm_Drill0.8mm</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -613,7 +624,7 @@
       <property name="ki_keywords" value="connector"/>
       <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>24b97183-f141-5456-824b-4cf27a560846</tstamps>
+      <tstamps>bd854f02-2438-5fff-95e6-cca4e525674b</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -625,18 +636,23 @@
     </comp>
     <comp ref="R901">
       <value>1M</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <fields>
-        <field name="Footprint"/>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-071ML</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-071ML"/>
       <property name="Sheetname" value="Audio-8x8"/>
       <property name="Sheetfile" value="Audio-8x8.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>491fa6b7-bf8f-52b5-a944-398e21c7ca2b</tstamps>
+      <tstamps>cda077fc-e8a0-5e39-8d0c-6861eda2aefc</tstamps>
       <units>
         <unit name="A">
           <pins>

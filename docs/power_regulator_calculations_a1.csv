@@ -1,5 +1,5 @@
 category,rail_or_check,controller_or_part,input_min_v,input_max_v,output_v,rating_a,allocated_continuous_w,allocated_peak_w,frequency_khz,inductor_uh,selected_magnetic_or_setting,result,status
-main_stage,SYS_5V15,LM5146RGYR,10.5,30.0,5.1439,12.0,30.0,38.0,300,3.3,TDK SPM10065VTT-3R3M-D 28.6A Isat,61.8W capacity / 38W peak,PASS
+main_stage,SYS_5V15,LM5146RGYR,10.5,30.0,5.1439,12.0,30.0,38.0,300,3.3,TDK SPM10065VC-3R3M-D 29.2A Isat,61.8W capacity / 38W peak,PASS
 main_stage,AUX_12V,LM5176PWP,10.5,30.0,12.0000,8.0,76.0,84.0,300,4.7,Wurth 74439370047 20.9A Isat,96W capacity / 84W peak,PASS-BENCH
 main_stage,MODEM_3V8_PRE,LM61460RJR,10.5,30.0,3.8011,6.0,12.0,20.0,400,4.7,Coilcraft XAL7070-472MEC 15.2A Isat,22.8W capacity / 20W transmit burst,PASS-BENCH
 main_stage,WIFI_3V3_PRE,LM61440RJR,10.5,30.0,3.3148,4.0,9.0,10.0,400,4.7,Coilcraft XAL7070-472MEC 15.2A Isat,13.2W capacity / 10W peak,PASS
@@ -22,5 +22,5 @@ branch,AUDIO_12V,Littelfuse 0453002.MR,12.0,12.0,12.0,2.0,10.0,12.0,,,,TRI 20-12
 source,24V_PSU,Mean Well RPS-400-24-C,24.0,24.0,24.0,10.5,151.7,184.2,,,252W convection rating,39.8% spare at continuous / 67.8W at peak,PASS
 source,13V_backup_path,PWR-SELECT 15A path,13.0,13.0,13.0,15.0,151.7,184.2,,,source current,11.67A continuous / 14.17A transient,PASS-BENCH
 source,11.35V_gold_mount_low,Dionic XT90,11.35,11.35,11.35,12.0,151.7,184.2,,,battery current,13.37A continuous / 16.23A short transient,LOAD-SHED-REQUIRED
-hold_up,RAW_OUT_22mF,Nichicon 4x LGU1H562MELZ,12.5,24.0,,0.0,151.7,184.2,,,22.4mF installed plus 660uF selector local,31.0ms at 151.7W / 25.5ms at 184.2W ideal,PASS-BENCH
-hold_up,RAW_OUT_47mF,optional stuffing,12.5,24.0,,0.0,151.7,184.2,,,47.7mF total including selector local,66.0ms at 151.7W / 54.3ms at 184.2W ideal,OPTION
+hold_up,RAW_OUT_27mF,Nichicon 4x LGU1H682MELB,12.5,24.0,,0.0,151.7,184.2,,,27.2mF floor bank plus 660uF selector local,38.5ms at 151.7W / 31.7ms at 184.2W ideal,PASS-BENCH
+hold_up,RAW_OUT_27mF_MINUS20,Nichicon tolerance basis,12.5,24.0,,0.0,151.7,184.2,,,22.288mF worst-case combined capacitance,30.8ms at 151.7W / 25.4ms at 184.2W ideal,PASS-BENCH

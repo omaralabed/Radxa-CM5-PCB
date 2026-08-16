@@ -19,6 +19,19 @@ The command must pass before placement or routing begins. The stricter `--releas
 | Ethernet MagJacks | Wurth 74991114412 | `CM5Carrier:T_Wurth_WE-RJ45LAN_74991114412` | Wurth manufacturer footprint and STEP | Locked |
 | Cellular M.2 B-key socket | TE 2199230-3 | `CM5Carrier:TE_2199230-3_M2_Key_B_4.2mm` | TE customer drawing C-2199230 revision B4 | Locked; modem/heatsink envelope open |
 | Dual nano-SIM holders | Wurth 693043020611 | `CM5Carrier:J_Wurth_WR-CRD_693043020611` | Wurth manufacturer drawing | Locked |
+| Program-audio TDM headers | Molex 87832-6423, two devices | `Connector_Molex_Milligrid:Molex_8783230xx_2x15_P2.0mm_Header_Vertical_Polarized_MountingPegs` | Molex 87832 production drawing; 30 circuits, pegs, polarization and 30 microinch gold | Locked; harness SI and vibration qualification open |
+| CTIA headset jack | Kycon STX-353K7A-6N-KTTR | `CM5Carrier:Kycon_STX-353K7A-6N-KTTR_PRELIMINARY` | Kycon component drawing defines terminal centers but no recommended PCB land | Route-ready for prototype only; production blocked pending sample and plated-hole coupon |
+
+## Program-audio package evidence
+
+| Function | Manufacturer / part | Footprint | Evidence | State |
+|---|---|---|---|---|
+| Eight-channel ADC | AKM `AK5558VN` | `Package_DFN_QFN:QFN-64-1EP_9x9mm_P0.5mm_EP6x6mm_ThermalVias` | AKM package drawing and KiCad exposed-pad starting land | Routing blocked pending thermal-via, paste, stencil, and assembly coupon |
+| Eight-channel DAC | AKM `AK4458VN` | `Package_DFN_QFN:QFN-48-1EP_7x7mm_P0.5mm_EP5.15x5.15mm_ThermalVias` | AKM package drawing and KiCad exposed-pad starting land | Routing blocked pending thermal-via, paste, stencil, and assembly coupon |
+| Output fail-silent relays, K501-K508 | Panasonic Industry `TQ2-12V` | `CM5Carrier:Panasonic_TQ2-12V_PRELIMINARY` | Panasonic TQ relay package drawing | Routing blocked pending pad and through-hole insertion coupon |
+| Balanced input receivers | THAT Corporation `THAT1206S08-U` | `Package_SO:SOIC-8_3.9x4.9mm_P1.27mm` | THAT package drawing and standard SOIC land | Locked |
+| Audio op amps | TI `OPA1652AIDR` | `Package_SO:SOIC-8_3.9x4.9mm_P1.27mm` | TI D package drawing and standard SOIC land | Locked |
+| Balanced output drivers | THAT Corporation `THAT1646S08-U` | `Package_SO:SOIC-8_3.9x4.9mm_P1.27mm` | THAT package drawing and standard SOIC land | Locked |
 
 ## Molex 0679101002 datum contract
 
@@ -39,6 +52,43 @@ The current official drawing is:
 
 As of 2026-08-16, Molex 0679101002 is listed active and stocked by major authorized distributors. Availability is procurement evidence only and must be refreshed before the production purchase order.
 
+## Audio connector release contract
+
+The TDM cable uses Molex `51110-3051` polarized 30-circuit housings and
+`50394-8052` crimp terminals. The exact pin and wire-class assignment is in
+`docs/audio_tdm_harness_a1.csv`. Final harness length, pair construction,
+strain relief, and eye-margin qualification remain open mechanical/electrical
+release gates.
+
+The Kycon headset footprint is intentionally marked `PRELIMINARY`. Its six
+pad centers are generated and checked by `validate_audio_control.py`, but the
+production audit must remain `BLOCKED_MECHANICAL_COUPON` until a physical
+sample and plated-hole coupon confirm terminal diameters, insertion fit, bezel,
+and switch polarity.
+
+## Locked power-package evidence
+
+| Function | Manufacturer / part | Footprint | Evidence | State |
+|---|---|---|---|---|
+| 5.15 V buck MOSFET, high side | onsemi `NVMFS6B25NLT1G` | `CM5Carrier:onsemi_DFN5_5x6_488AA_GSD` | onsemi case 488AA recommended soldering footprint | Drawing-derived G/S/D remap locked; first-article stencil and thermal review open |
+| 5.15 V buck MOSFET, low side | onsemi `FDWS86068-F085` | `CM5Carrier:onsemi_DFNW8_5p2x6p3_507AU_GSD` | onsemi case 507AU recommended land pattern | Drawing-derived G/S/D remap locked; first-article stencil and thermal review open |
+| 12 V buck-boost MOSFETs | TI `CSD18532Q5B`, `CSD17573Q5B` | `CM5Carrier:TI_DNK0008A_GSD` | TI DNK0008A / VSON-CLIP package land pattern | Repeated source/drain terminals remapped to the three-pin symbol and machine checked |
+| Radio/network buck regulators | TI `LM61460RJR`, `LM61440RJR` | `CM5Carrier:TI_RJR0014A` | TI drawing 4223976/H, RJR0014A example board layout | All 14 pads, including four L-shaped lands, are drawing-derived and machine checked |
+| Wi-Fi load switch | TI `TPS22990DMLR` | `CM5Carrier:TI_DML0010A` | TI drawing 4222524/A | Exposed VIN land and all ten terminals machine checked |
+| 5.15 V inductor | TDK `SPM10065VC-3R3M-D` | `CM5Carrier:TDK_SPM10065VC` | TDK recommended land dimensions | Locked |
+| 12 V buck-boost inductor | Wurth `74439370047` | `CM5Carrier:Wurth_74439370047` | Wurth manufacturer drawing | Locked |
+| 12 V current shunts | Susumu `KRL6432E-M-R006-F-T1`, `KRL11050-C-R004-F-T1` | project KRL6432E/KRL11050 lands | Susumu KRL recommended land tables | Locked |
+
+`CM5-CARRIER/validate_power_regulators.py` checks the critical pad sets and
+dimensions above and checks every row in `docs/power_regulator_bom_a1.csv`.
+The BOM is regenerated from the KiCad netlist by `export_schematic_bom.py`.
+
 ## Open gate
 
-The generated audit currently remains on routing and production hold. See `reports/component-footprint-audit.md` and `reports/component-footprint-audit.csv`. This is intentional: assigning a plausible package without a locked part drawing is not accepted as closure.
+Power-Regulators-A1 has zero routing or production-part blockers. Across the
+complete sixteen-sheet suite, the controlled audit currently reports 1023
+components, ten routing blockers, and 78 production blockers. PCB placement
+and routing remain on hold until the routing count is zero. See
+`reports/component-footprint-audit.md` and
+`reports/component-footprint-audit.csv`. Assigning a plausible package without
+a locked part drawing is not accepted as closure.

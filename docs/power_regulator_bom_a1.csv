@@ -1,199 +1,151 @@
-"Reference","Value","Footprint","Manufacturer","MPN","Assembly","Qty","DNP"
-"C1100","5600uF 50V","","Nichicon","LGU1H562MELZ","","1",""
-"C1101","5600uF 50V","","Nichicon","LGU1H562MELZ","","1",""
-"C1102","5600uF 50V","","Nichicon","LGU1H562MELZ","","1",""
-"C1103","5600uF 50V","","Nichicon","LGU1H562MELZ","","1",""
-"C1104","5600uF 50V DNP","","Nichicon","LGU1H562MELZ","DNP - hold-up option","1",""
-"C1105","5600uF 50V DNP","","Nichicon","LGU1H562MELZ","DNP - hold-up option","1",""
-"C1106","5600uF 50V DNP","","Nichicon","LGU1H562MELZ","DNP - hold-up option","1",""
-"C1107","5600uF 50V DNP","","Nichicon","LGU1H562MELZ","DNP - hold-up option","1",""
-"C1108","2200uF 50V DNP","","Nichicon","UHE1H222MHD6","DNP - 47 mF option","1",""
-"C1109","1uF 50V X7R","","","","","1",""
-"C1110","47nF","","Murata","GRM188R71H473KA61D","","1",""
-"C1111","6.8nF","","Murata","GRM1885C1H682JA01D","","1",""
-"C1112","150pF C0G","","Murata","GRM1885C1H151JA01D","","1",""
-"C1113","47uF 6.3V X7R","","Murata","GCM32ER70J476KE19L","","1",""
-"C1114","47uF 6.3V X7R","","Murata","GCM32ER70J476KE19L","","1",""
-"C1115","47uF 6.3V X7R","","Murata","GCM32ER70J476KE19L","","1",""
-"C1116","47uF 6.3V X7R","","Murata","GCM32ER70J476KE19L","","1",""
-"C1117","47uF 6.3V X7R","","Murata","GCM32ER70J476KE19L","","1",""
-"C1118","100nF 25V X7R","","Murata","GRM188R71E104KA01D","","1",""
-"C1119","4.7uF 10V X7R","","Murata","GRM21BR71A475KA73L","","1",""
-"C1120","220pF","","","","","1",""
-"C1121","100nF","","","","","1",""
-"C1122","33nF","","","","","1",""
-"C1123","560pF","","","","","1",""
-"C1124","330uF 16V polymer","","Panasonic","16SVP330M","","1",""
-"C1125","330uF 16V polymer","","Panasonic","16SVP330M","","1",""
-"C1126","330uF 16V polymer","","Panasonic","16SVP330M","","1",""
-"C1127","330uF 16V polymer","","Panasonic","16SVP330M","","1",""
-"C1128","100nF 25V","","","","","1",""
-"C1129","100nF 25V","","","","","1",""
-"C1130","100nF","","","","","1",""
-"C1131","4.7uF 50V","","","","","1",""
-"C1132","4.7uF 50V","","","","","1",""
-"C1133","47uF X7R","","Murata","GRM32ER71A476KE15L","","1",""
-"C1134","47uF X7R","","Murata","GRM32ER71A476KE15L","","1",""
-"C1135","47uF X7R","","Murata","GRM32ER71A476KE15L","","1",""
-"C1136","1uF 10V X7R","","Murata","GRM188R71A105KA61D","","1",""
-"C1138","4.7nF","","","","","1",""
-"C1140","100nF","","","","","1",""
-"C1141","4.7uF 50V","","","","","1",""
-"C1142","4.7uF 50V","","","","","1",""
-"C1143","47uF X7R","","Murata","GRM32ER71A476KE15L","","1",""
-"C1144","47uF X7R","","Murata","GRM32ER71A476KE15L","","1",""
-"C1145","47uF X7R","","Murata","GRM32ER71A476KE15L","","1",""
-"C1146","1uF 10V X7R","","Murata","GRM188R71A105KA61D","","1",""
-"C1149","10nF","","","","","1",""
-"C1150","100nF","","","","","1",""
-"C1151","4.7uF 50V","","","","","1",""
-"C1152","4.7uF 50V","","","","","1",""
-"C1153","47uF X7R","","Murata","GRM32ER71A476KE15L","","1",""
-"C1154","47uF X7R","","Murata","GRM32ER71A476KE15L","","1",""
-"C1155","47uF X7R","","Murata","GRM32ER71A476KE15L","","1",""
-"C1156","1uF 10V X7R","","Murata","GRM188R71A105KA61D","","1",""
-"C1160","100nF","","","","","1",""
-"C1161","4.7uF 50V","","","","","1",""
-"C1162","4.7uF 50V","","","","","1",""
-"C1163","47uF X7R","","Murata","GRM32ER71A476KE15L","","1",""
-"C1164","47uF X7R","","Murata","GRM32ER71A476KE15L","","1",""
-"C1165","47uF X7R","","Murata","GRM32ER71A476KE15L","","1",""
-"C1166","1uF 10V X7R","","Murata","GRM188R71A105KA61D","","1",""
-"C1189","330uF 6.3V polymer","","Panasonic","6SVPE330M","","1",""
-"C1190","330uF 6.3V polymer","","Panasonic","6SVPE330M","","1",""
-"C1191","330uF 6.3V polymer","","Panasonic","6SVPE330M","","1",""
-"C1192","330uF 6.3V polymer","","Panasonic","6SVPE330M","","1",""
-"C1193","470uF 6.3V polymer","","Panasonic","6SVPE470M","","1",""
-"C1194","4.7uF 50V X7R","","Murata","GRM31CR71H475KA12L","","1",""
-"C1195","4.7uF 50V X7R","","Murata","GRM31CR71H475KA12L","","1",""
-"C1196","4.7uF 50V X7R","","Murata","GRM31CR71H475KA12L","","1",""
-"C1197","4.7uF 50V X7R","","Murata","GRM31CR71H475KA12L","","1",""
-"C1200","4.7uF 10V","","","","","1",""
-"C1201","2.2nF","","","","","1",""
-"C1202","4.7uF 50V X7R","","Murata","GRM31CR71H475KA12L","","1",""
-"C1203","4.7uF 50V X7R","","Murata","GRM31CR71H475KA12L","","1",""
-"C1204","4.7uF 50V X7R","","Murata","GRM31CR71H475KA12L","","1",""
-"C1205","4.7uF 50V X7R","","Murata","GRM31CR71H475KA12L","","1",""
-"C1210","10nF","","","","","1",""
-"C11700","470nF","","","","","1",""
-"C11701","22uF 10V X7R","","Murata","GRM21BR71A226ME44L","","1",""
-"C11702","22uF 10V X7R","","Murata","GRM21BR71A226ME44L","","1",""
-"C11703","22uF 10V X7R","","Murata","GRM21BR71A226ME44L","","1",""
-"C11704","10uF 25V X7R","","Murata","GRM21BR71E106KA73L","","1",""
-"C11705","10uF 25V X7R","","Murata","GRM21BR71E106KA73L","","1",""
-"C11710","470nF","","","","","1",""
-"C11711","22uF 10V X7R","","Murata","GRM21BR71A226ME44L","","1",""
-"C11712","22uF 10V X7R","","Murata","GRM21BR71A226ME44L","","1",""
-"C11713","22uF 10V X7R","","Murata","GRM21BR71A226ME44L","","1",""
-"C11714","10uF 25V X7R","","Murata","GRM21BR71E106KA73L","","1",""
-"C11715","10uF 25V X7R","","Murata","GRM21BR71E106KA73L","","1",""
-"C11720","470nF","","","","","1",""
-"C11721","22uF 10V X7R","","Murata","GRM21BR71A226ME44L","","1",""
-"C11722","22uF 10V X7R","","Murata","GRM21BR71A226ME44L","","1",""
-"C11723","22uF 10V X7R","","Murata","GRM21BR71A226ME44L","","1",""
-"C11724","10uF 25V X7R","","Murata","GRM21BR71E106KA73L","","1",""
-"C11725","10uF 25V X7R","","Murata","GRM21BR71E106KA73L","","1",""
-"C11730","470nF","","","","","1",""
-"C11731","22uF 10V X7R","","Murata","GRM21BR71A226ME44L","","1",""
-"C11732","22uF 10V X7R","","Murata","GRM21BR71A226ME44L","","1",""
-"C11733","22uF 10V X7R","","Murata","GRM21BR71A226ME44L","","1",""
-"C11734","10uF 25V X7R","","Murata","GRM21BR71E106KA73L","","1",""
-"C11735","10uF 25V X7R","","Murata","GRM21BR71E106KA73L","","1",""
-"C11800","1uF X7R","","","","","1",""
-"C11801","1uF X7R","","","","","1",""
-"C11802","1uF X7R","","","","","1",""
-"C11803","1uF X7R","","","","","1",""
-"C11804","1uF X7R","","","","","1",""
-"C11805","1uF X7R","","","","","1",""
-"C11806","1uF X7R","","","","","1",""
-"C11807","1uF X7R","","","","","1",""
-"D1120","BAT54WS","","Diodes Incorporated","BAT54WS-7-F","","1",""
-"D1121","BAT54WS","","Diodes Incorporated","BAT54WS-7-F","","1",""
-"F1180","3A time-lag","","Littelfuse","0453003.MR","","1",""
-"F1181","3A time-lag","","Littelfuse","0453003.MR","","1",""
-"F1182","2A time-lag","","Littelfuse","0453002.MR","","1",""
-"F1183","0.25A fast","","Littelfuse","0453.250MR","","1",""
-"F1184","3A time-lag","","Littelfuse","0453003.MR","","1",""
-"J1100","RAW_POWER_FROM_PWR_SELECT","Connector_Molex:Molex_Micro-Fit_3.0_43045-0412_2x02_P3.00mm_Vertical","Molex","43045-0412","","1",""
-"L1110","3.3uH / 28.6A","","TDK","SPM10065VTT-3R3M-D","","1",""
-"L1120","4.7uH / 17A","","Wurth Elektronik","74439370047","","1",""
-"L1130","4.7uH / 15.2A Isat","","Coilcraft","XAL7070-472MEC","","1",""
-"L1140","4.7uH / 15.2A Isat","","Coilcraft","XAL7070-472MEC","","1",""
-"L1150","4.7uH / 15.2A Isat","","Coilcraft","XAL7070-472MEC","","1",""
-"L1160","4.7uH / 15.2A Isat","","Coilcraft","XAL7070-472MEC","","1",""
-"L11700","2.2uH / 2.0A rail","","Coilcraft","XGL4030-222MEC","","1",""
-"L11710","2.2uH / 1.5A rail","","Coilcraft","XGL4030-222MEC","","1",""
-"L11720","2.2uH / 1.0A rail","","Coilcraft","XGL4030-222MEC","","1",""
-"L11730","2.2uH / 1.0A rail","","Coilcraft","XGL4030-222MEC","","1",""
-"Q1110","NVMFS6B25NL","","onsemi","NVMFS6B25NLT1G","","1",""
-"Q1111","FDWS86068-F085","","onsemi","FDWS86068-F085","","1",""
-"Q1120","CSD18532Q5B","","Texas Instruments","CSD18532Q5B","","1",""
-"Q1121","CSD18532Q5B","","Texas Instruments","CSD18532Q5B","","1",""
-"Q1122","CSD17573Q5B","","Texas Instruments","CSD17573Q5B","","1",""
-"Q1123","CSD17573Q5B","","Texas Instruments","CSD17573Q5B","","1",""
-"R1110","40.2k","","Yageo","RC0603FR-0740K2L","","1",""
-"R1111","24.0k 0.1%","","Vishay","TNPW060324K0BEEA","","1",""
-"R1112","4.42k 0.1%","","Vishay","TNPW06034K42BEEA","","1",""
-"R1113","7.5k","","Yageo","RC0603FR-077K5L","","1",""
-"R1114","499R","","Yageo","RC0603FR-07499RL","","1",""
-"R1115","69.8k 1%","","Yageo","RC0603FR-0769K8L","","1",""
-"R1116","10k 1%","","Yageo","RC0603FR-0710KL","","1",""
-"R1120","6mR 2W","","Susumu","KRL6432E-M-R006-F-T1","","1",""
-"R1121","27.4k","","","","","1",""
-"R1122","93.1k","","","","","1",""
-"R1123","280k 0.1%","","","","","1",""
-"R1124","20k 0.1%","","","","","1",""
-"R1125","10k","","","","","1",""
-"R1126","4mR 6W","","Susumu","KRL11050-C-R004-F-T1","","1",""
-"R1127","73.2k 1%","","","","","1",""
-"R1128","10k 1%","","","","","1",""
-"R1130","33.2k / 400kHz","","","","","1",""
-"R1131","100k 0.1%","","","","","1",""
-"R1132","35.7k 0.1%","","","","","1",""
-"R1133","0R RBOOT","","Yageo","RC0603JR-070RL","","1",""
-"R1138","255R 1% / 6A ILIM","","","","","1",""
-"R1140","33.2k / 400kHz","","","","","1",""
-"R1141","100k 0.1%","","","","","1",""
-"R1142","43.2k 0.1%","","","","","1",""
-"R1143","0R RBOOT","","Yageo","RC0603JR-070RL","","1",""
-"R1150","33.2k / 400kHz","","","","","1",""
-"R1151","100k 0.1%","","","","","1",""
-"R1152","43.2k 0.1%","","","","","1",""
-"R1153","0R RBOOT","","Yageo","RC0603JR-070RL","","1",""
-"R1160","33.2k / 400kHz","","","","","1",""
-"R1161","100k 0.1%","","","","","1",""
-"R1162","43.2k 0.1%","","","","","1",""
-"R1163","0R RBOOT","","Yageo","RC0603JR-070RL","","1",""
-"R11700","1.24k 0.1%","","","","","1",""
-"R11701","4.99k 0.1%","","","","","1",""
-"R11702","7.5k S-CONF","","Yageo","RC0603FR-077K5L","","1",""
-"R11710","6.19k 0.1%","","","","","1",""
-"R11711","4.99k 0.1%","","","","","1",""
-"R11712","7.5k S-CONF","","Yageo","RC0603FR-077K5L","","1",""
-"R11720","15.6k 0.1%","","","","","1",""
-"R11721","4.99k 0.1%","","","","","1",""
-"R11722","7.5k S-CONF","","Yageo","RC0603FR-077K5L","","1",""
-"R11730","29.4k 0.1%","","","","","1",""
-"R11731","4.99k 0.1%","","","","","1",""
-"R11732","7.5k S-CONF","","Yageo","RC0603FR-077K5L","","1",""
-"TP1190","RAW_OUT_LOAD","","","","","1",""
-"TP1191","SYS_5V15","","","","","1",""
-"TP1192","AUX_12V","","","","","1",""
-"TP1193","MODEM_3V8","","","","","1",""
-"U1110","LM5146RGYR","Package_DFN_QFN:Texas_RGY_R-PVQFN-N20_EP2.05x3.05mm_ThermalVias","Texas Instruments","LM5146RGYR","","1",""
-"U1120","LM5176PWP","Package_SO:HTSSOP-28-1EP_4.4x9.7mm_P0.65mm_EP3.4x9.5mm_ThermalVias","Texas Instruments","LM5176PWP","","1",""
-"U1130","LM61460RJR","","Texas Instruments","LM61460RJR","","1",""
-"U1131","TPS259827LNRGER","Package_DFN_QFN:Texas_RGE0024H_VQFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.7mm_ThermalVias","Texas Instruments","TPS259827LNRGER","","1",""
-"U1140","LM61440RJR","","Texas Instruments","LM61440RJR","","1",""
-"U1141","TPS22990DMLR","","Texas Instruments","TPS22990DMLR","","1",""
-"U1150","LM61440RJR","","Texas Instruments","LM61440RJR","","1",""
-"U1160","LM61440RJR","","Texas Instruments","LM61440RJR","","1",""
-"U1170","TPS62913RPU","Package_DFN_QFN:Texas_RPU0010A_VQFN-HR-10_2x2mm_P0.5mm","Texas Instruments","TPS62913RPUT","","1",""
-"U1171","TPS62913RPU","Package_DFN_QFN:Texas_RPU0010A_VQFN-HR-10_2x2mm_P0.5mm","Texas Instruments","TPS62913RPUT","","1",""
-"U1172","TPS62913RPU","Package_DFN_QFN:Texas_RPU0010A_VQFN-HR-10_2x2mm_P0.5mm","Texas Instruments","TPS62913RPUT","","1",""
-"U1173","TPS62913RPU","Package_DFN_QFN:Texas_RPU0010A_VQFN-HR-10_2x2mm_P0.5mm","Texas Instruments","TPS62913RPUT","","1",""
-"U1180","TRI 20-1223 ON AUDIO-8X8","","TRACO Power","TRI 20-1223","","1",""
-"U1181","TPS7A2050PDBVR","Package_TO_SOT_SMD:SOT-23-5","Texas Instruments","TPS7A2050PDBVR","","1",""
-"U1182","TPS7A2050PDBVR","Package_TO_SOT_SMD:SOT-23-5","Texas Instruments","TPS7A2050PDBVR","","1",""
-"U1183","TPS7A2033PDBVR","Package_TO_SOT_SMD:SOT-23-5","Texas Instruments","TPS7A2033PDBVR","","1",""
-"U1184","TPS7A2018PDBVR","Package_TO_SOT_SMD:SOT-23-5","Texas Instruments","TPS7A2018PDBVR","","1",""
+Reference,Value,Footprint,Manufacturer,MPN,Assembly,Qty,DNP
+C1109,1uF 50V X7R,Capacitor_SMD:C_1206_3216Metric,Murata,GRM31CR71H105KA61L,,1,
+C1110,47nF,Capacitor_SMD:C_0603_1608Metric,Murata,GRM188R71H473KA61D,,1,
+C1111,6.8nF,Capacitor_SMD:C_0603_1608Metric,Murata,GRM1885C1H682JA01D,,1,
+C1112,150pF C0G,Capacitor_SMD:C_0603_1608Metric,Murata,GRM1885C1H151JA01D,,1,
+C1113,47uF 6.3V X7R,Capacitor_SMD:C_1210_3225Metric,Murata,GCM32ER70J476KE19L,,1,
+C1114,47uF 6.3V X7R,Capacitor_SMD:C_1210_3225Metric,Murata,GCM32ER70J476KE19L,,1,
+C1115,47uF 6.3V X7R,Capacitor_SMD:C_1210_3225Metric,Murata,GCM32ER70J476KE19L,,1,
+C1116,47uF 6.3V X7R,Capacitor_SMD:C_1210_3225Metric,Murata,GCM32ER70J476KE19L,,1,
+C1117,47uF 6.3V X7R,Capacitor_SMD:C_1210_3225Metric,Murata,GCM32ER70J476KE19L,,1,
+C1118,100nF 25V X7R,Capacitor_SMD:C_0603_1608Metric,Murata,GRM188R71E104KA01D,,1,
+C1119,4.7uF 10V X7R,Capacitor_SMD:C_0805_2012Metric,Murata,GRM21BR71A475KA73L,,1,
+C1120,220pF,Capacitor_SMD:C_0603_1608Metric,Murata,GRM1885C1H221JA01D,,1,
+C1121,100nF,Capacitor_SMD:C_0603_1608Metric,Murata,GRM188R71E104KA01D,,1,
+C1122,33nF,Capacitor_SMD:C_0603_1608Metric,Murata,GRM188R71H333KA01D,,1,
+C1123,560pF,Capacitor_SMD:C_0603_1608Metric,Murata,GRM1885C1H561JA01D,,1,
+C1124,330uF 16V polymer,Capacitor_SMD:CP_Elec_10x12.6,Panasonic,16SVP330M,,1,
+C1125,330uF 16V polymer,Capacitor_SMD:CP_Elec_10x12.6,Panasonic,16SVP330M,,1,
+C1126,330uF 16V polymer,Capacitor_SMD:CP_Elec_10x12.6,Panasonic,16SVP330M,,1,
+C1127,330uF 16V polymer,Capacitor_SMD:CP_Elec_10x12.6,Panasonic,16SVP330M,,1,
+C1128,100nF 25V,Capacitor_SMD:C_0603_1608Metric,Murata,GRM188R71E104KA01D,,1,
+C1129,100nF 25V,Capacitor_SMD:C_0603_1608Metric,Murata,GRM188R71E104KA01D,,1,
+C1130,100nF,Capacitor_SMD:C_0603_1608Metric,Murata,GRM188R71E104KA01D,,1,
+C1131,4.7uF 50V,Capacitor_SMD:C_1206_3216Metric,Murata,GRM31CR71H475KA12L,,1,
+C1132,4.7uF 50V,Capacitor_SMD:C_1206_3216Metric,Murata,GRM31CR71H475KA12L,,1,
+C1133,47uF X7R,Capacitor_SMD:C_1210_3225Metric,Murata,GRM32ER71A476KE15L,,1,
+C1134,47uF X7R,Capacitor_SMD:C_1210_3225Metric,Murata,GRM32ER71A476KE15L,,1,
+C1135,47uF X7R,Capacitor_SMD:C_1210_3225Metric,Murata,GRM32ER71A476KE15L,,1,
+C1136,1uF 10V X7R,Capacitor_SMD:C_0603_1608Metric,Murata,GRM188R71A105KA61D,,1,
+C1138,4.7nF,Capacitor_SMD:C_0603_1608Metric,Murata,GRM188R71H472KA01D,,1,
+C1140,100nF,Capacitor_SMD:C_0603_1608Metric,Murata,GRM188R71E104KA01D,,1,
+C1141,4.7uF 50V,Capacitor_SMD:C_1206_3216Metric,Murata,GRM31CR71H475KA12L,,1,
+C1142,4.7uF 50V,Capacitor_SMD:C_1206_3216Metric,Murata,GRM31CR71H475KA12L,,1,
+C1143,47uF X7R,Capacitor_SMD:C_1210_3225Metric,Murata,GRM32ER71A476KE15L,,1,
+C1144,47uF X7R,Capacitor_SMD:C_1210_3225Metric,Murata,GRM32ER71A476KE15L,,1,
+C1145,47uF X7R,Capacitor_SMD:C_1210_3225Metric,Murata,GRM32ER71A476KE15L,,1,
+C1146,1uF 10V X7R,Capacitor_SMD:C_0603_1608Metric,Murata,GRM188R71A105KA61D,,1,
+C1149,10nF,Capacitor_SMD:C_0603_1608Metric,Murata,GRM188R71H103KA01D,,1,
+C1150,100nF,Capacitor_SMD:C_0603_1608Metric,Murata,GRM188R71E104KA01D,,1,
+C1151,4.7uF 50V,Capacitor_SMD:C_1206_3216Metric,Murata,GRM31CR71H475KA12L,,1,
+C1152,4.7uF 50V,Capacitor_SMD:C_1206_3216Metric,Murata,GRM31CR71H475KA12L,,1,
+C1153,47uF X7R,Capacitor_SMD:C_1210_3225Metric,Murata,GRM32ER71A476KE15L,,1,
+C1154,47uF X7R,Capacitor_SMD:C_1210_3225Metric,Murata,GRM32ER71A476KE15L,,1,
+C1155,47uF X7R,Capacitor_SMD:C_1210_3225Metric,Murata,GRM32ER71A476KE15L,,1,
+C1156,1uF 10V X7R,Capacitor_SMD:C_0603_1608Metric,Murata,GRM188R71A105KA61D,,1,
+C1160,100nF,Capacitor_SMD:C_0603_1608Metric,Murata,GRM188R71E104KA01D,,1,
+C1161,4.7uF 50V,Capacitor_SMD:C_1206_3216Metric,Murata,GRM31CR71H475KA12L,,1,
+C1162,4.7uF 50V,Capacitor_SMD:C_1206_3216Metric,Murata,GRM31CR71H475KA12L,,1,
+C1163,47uF X7R,Capacitor_SMD:C_1210_3225Metric,Murata,GRM32ER71A476KE15L,,1,
+C1164,47uF X7R,Capacitor_SMD:C_1210_3225Metric,Murata,GRM32ER71A476KE15L,,1,
+C1165,47uF X7R,Capacitor_SMD:C_1210_3225Metric,Murata,GRM32ER71A476KE15L,,1,
+C1166,1uF 10V X7R,Capacitor_SMD:C_0603_1608Metric,Murata,GRM188R71A105KA61D,,1,
+C1189,330uF 6.3V polymer,Capacitor_SMD:CP_Elec_10x7.9,Panasonic,6SVP330M,,1,
+C1190,330uF 6.3V polymer,Capacitor_SMD:CP_Elec_10x7.9,Panasonic,6SVP330M,,1,
+C1191,330uF 6.3V polymer,Capacitor_SMD:CP_Elec_10x7.9,Panasonic,6SVP330M,,1,
+C1192,330uF 6.3V polymer,Capacitor_SMD:CP_Elec_10x7.9,Panasonic,6SVP330M,,1,
+C1193,470uF 6.3V polymer,Capacitor_SMD:CP_Elec_8x11.9,Panasonic,6SVP470M,,1,
+C1194,4.7uF 50V X7R,Capacitor_SMD:C_1206_3216Metric,Murata,GRM31CR71H475KA12L,,1,
+C1195,4.7uF 50V X7R,Capacitor_SMD:C_1206_3216Metric,Murata,GRM31CR71H475KA12L,,1,
+C1196,4.7uF 50V X7R,Capacitor_SMD:C_1206_3216Metric,Murata,GRM31CR71H475KA12L,,1,
+C1197,4.7uF 50V X7R,Capacitor_SMD:C_1206_3216Metric,Murata,GRM31CR71H475KA12L,,1,
+C1200,4.7uF 10V,Capacitor_SMD:C_0805_2012Metric,Murata,GRM21BR71A475KA73L,,1,
+C1201,2.2nF,Capacitor_SMD:C_0603_1608Metric,Murata,GRM188R71H222KA01D,,1,
+C1202,4.7uF 50V X7R,Capacitor_SMD:C_1206_3216Metric,Murata,GRM31CR71H475KA12L,,1,
+C1203,4.7uF 50V X7R,Capacitor_SMD:C_1206_3216Metric,Murata,GRM31CR71H475KA12L,,1,
+C1204,4.7uF 50V X7R,Capacitor_SMD:C_1206_3216Metric,Murata,GRM31CR71H475KA12L,,1,
+C1205,4.7uF 50V X7R,Capacitor_SMD:C_1206_3216Metric,Murata,GRM31CR71H475KA12L,,1,
+C1210,10nF,Capacitor_SMD:C_0603_1608Metric,Murata,GRM188R71H103KA01D,,1,
+C11700,470nF,Capacitor_SMD:C_0603_1608Metric,Murata,GRM188R71E474KA12D,,1,
+C11701,22uF 10V X7R,Capacitor_SMD:C_0805_2012Metric,Murata,GRM21BR71A226ME44L,,1,
+C11702,22uF 10V X7R,Capacitor_SMD:C_0805_2012Metric,Murata,GRM21BR71A226ME44L,,1,
+C11703,22uF 10V X7R,Capacitor_SMD:C_0805_2012Metric,Murata,GRM21BR71A226ME44L,,1,
+C11704,10uF 25V X7R,Capacitor_SMD:C_0805_2012Metric,Murata,GRM21BR71E106KA73L,,1,
+C11705,10uF 25V X7R,Capacitor_SMD:C_0805_2012Metric,Murata,GRM21BR71E106KA73L,,1,
+C11710,470nF,Capacitor_SMD:C_0603_1608Metric,Murata,GRM188R71E474KA12D,,1,
+C11711,22uF 10V X7R,Capacitor_SMD:C_0805_2012Metric,Murata,GRM21BR71A226ME44L,,1,
+C11712,22uF 10V X7R,Capacitor_SMD:C_0805_2012Metric,Murata,GRM21BR71A226ME44L,,1,
+C11713,22uF 10V X7R,Capacitor_SMD:C_0805_2012Metric,Murata,GRM21BR71A226ME44L,,1,
+C11714,10uF 25V X7R,Capacitor_SMD:C_0805_2012Metric,Murata,GRM21BR71E106KA73L,,1,
+C11715,10uF 25V X7R,Capacitor_SMD:C_0805_2012Metric,Murata,GRM21BR71E106KA73L,,1,
+D1120,BAT54WS,Diode_SMD:D_SOD-323,Diodes Incorporated,BAT54WS-7-F,,1,
+D1121,BAT54WS,Diode_SMD:D_SOD-323,Diodes Incorporated,BAT54WS-7-F,,1,
+F1180,3A time-lag,Fuse:Fuse_Littelfuse-NANO2-451_453,Littelfuse,0453003.MR,,1,
+F1181,3A time-lag,Fuse:Fuse_Littelfuse-NANO2-451_453,Littelfuse,0453003.MR,,1,
+F1182,2A time-lag,Fuse:Fuse_Littelfuse-NANO2-451_453,Littelfuse,0453002.MR,,1,
+F1183,0.25A fast,Fuse:Fuse_Littelfuse-NANO2-451_453,Littelfuse,0453.250MR,,1,
+F1184,3A time-lag,Fuse:Fuse_Littelfuse-NANO2-451_453,Littelfuse,0453003.MR,,1,
+J1100,RAW_POWER_FROM_PWR_SELECT,Connector_Molex:Molex_Micro-Fit_3.0_43045-0412_2x02_P3.00mm_Vertical,Molex,43045-0412,,1,
+L1110,3.3uH / 29.2A Isat,CM5Carrier:TDK_SPM10065VC,TDK,SPM10065VC-3R3M-D,,1,
+L1120,4.7uH / 20.9A Isat,CM5Carrier:Wurth_74439370047,Wurth Elektronik,74439370047,,1,
+L1130,4.7uH / 15.2A Isat,Inductor_SMD:L_Coilcraft_XAL7070-XXX,Coilcraft,XAL7070-472MEC,,1,
+L1140,4.7uH / 15.2A Isat,Inductor_SMD:L_Coilcraft_XAL7070-XXX,Coilcraft,XAL7070-472MEC,,1,
+L1150,4.7uH / 15.2A Isat,Inductor_SMD:L_Coilcraft_XAL7070-XXX,Coilcraft,XAL7070-472MEC,,1,
+L1160,4.7uH / 15.2A Isat,Inductor_SMD:L_Coilcraft_XAL7070-XXX,Coilcraft,XAL7070-472MEC,,1,
+L11700,2.2uH / 2.0A rail,Inductor_SMD:L_Coilcraft_XxL4040,Coilcraft,XGL4030-222MEC,,1,
+L11710,2.2uH / 1.5A rail,Inductor_SMD:L_Coilcraft_XxL4040,Coilcraft,XGL4030-222MEC,,1,
+Q1110,NVMFS6B25NL,CM5Carrier:onsemi_DFN5_5x6_488AA_GSD,onsemi,NVMFS6B25NLT1G,,1,
+Q1111,FDWS86068-F085,CM5Carrier:onsemi_DFNW8_5p2x6p3_507AU_GSD,onsemi,FDWS86068-F085,,1,
+Q1120,CSD18532Q5B,CM5Carrier:TI_DNK0008A_GSD,Texas Instruments,CSD18532Q5B,,1,
+Q1121,CSD18532Q5B,CM5Carrier:TI_DNK0008A_GSD,Texas Instruments,CSD18532Q5B,,1,
+Q1122,CSD17573Q5B,CM5Carrier:TI_DNK0008A_GSD,Texas Instruments,CSD17573Q5B,,1,
+Q1123,CSD17573Q5B,CM5Carrier:TI_DNK0008A_GSD,Texas Instruments,CSD17573Q5B,,1,
+R1110,40.2k,Resistor_SMD:R_0603_1608Metric,Yageo,RC0603FR-0740K2L,,1,
+R1111,24.0k 0.1%,Resistor_SMD:R_0603_1608Metric,Vishay,TNPW060324K0BEEA,,1,
+R1112,4.42k 0.1%,Resistor_SMD:R_0603_1608Metric,Vishay,TNPW06034K42BEEA,,1,
+R1113,7.5k,Resistor_SMD:R_0603_1608Metric,Yageo,RC0603FR-077K5L,,1,
+R1114,499R,Resistor_SMD:R_0603_1608Metric,Yageo,RC0603FR-07499RL,,1,
+R1115,69.8k 1%,Resistor_SMD:R_0603_1608Metric,Yageo,RC0603FR-0769K8L,,1,
+R1116,10k 1%,Resistor_SMD:R_0603_1608Metric,Yageo,RC0603FR-0710KL,,1,
+R1120,6mR 2W,CM5Carrier:Susumu_KRL6432E_6mR,Susumu,KRL6432E-M-R006-F-T1,,1,
+R1121,27.4k,Resistor_SMD:R_0603_1608Metric,Yageo,RC0603FR-0727K4L,,1,
+R1122,93.1k,Resistor_SMD:R_0603_1608Metric,Yageo,RC0603FR-0793K1L,,1,
+R1123,280k 0.1%,Resistor_SMD:R_0603_1608Metric,Vishay,TNPW0603280KBEEA,,1,
+R1124,20k 0.1%,Resistor_SMD:R_0603_1608Metric,Vishay,TNPW060320K0BEEA,,1,
+R1125,10k,Resistor_SMD:R_0603_1608Metric,Yageo,RC0603FR-0710KL,,1,
+R1126,4mR 6W,CM5Carrier:Susumu_KRL11050_4mR,Susumu,KRL11050-C-R004-F-T1,,1,
+R1127,73.2k 1%,Resistor_SMD:R_0603_1608Metric,Yageo,RC0603FR-0773K2L,,1,
+R1128,10k 1%,Resistor_SMD:R_0603_1608Metric,Yageo,RC0603FR-0710KL,,1,
+R1130,33.2k / 400kHz,Resistor_SMD:R_0603_1608Metric,Yageo,RC0603FR-0733K2L,,1,
+R1131,100k 0.1%,Resistor_SMD:R_0603_1608Metric,Vishay,TNPW0603100KBEEA,,1,
+R1132,35.7k 0.1%,Resistor_SMD:R_0603_1608Metric,Vishay,TNPW060335K7BEEA,,1,
+R1133,0R RBOOT,Resistor_SMD:R_0603_1608Metric,Yageo,RC0603JR-070RL,,1,
+R1138,255R 1% / 6A ILIM,Resistor_SMD:R_0603_1608Metric,Yageo,RC0603FR-07255RL,,1,
+R1140,33.2k / 400kHz,Resistor_SMD:R_0603_1608Metric,Yageo,RC0603FR-0733K2L,,1,
+R1141,100k 0.1%,Resistor_SMD:R_0603_1608Metric,Vishay,TNPW0603100KBEEA,,1,
+R1142,43.2k 0.1%,Resistor_SMD:R_0603_1608Metric,Vishay,TNPW060343K2BEEA,,1,
+R1143,0R RBOOT,Resistor_SMD:R_0603_1608Metric,Yageo,RC0603JR-070RL,,1,
+R1150,33.2k / 400kHz,Resistor_SMD:R_0603_1608Metric,Yageo,RC0603FR-0733K2L,,1,
+R1151,100k 0.1%,Resistor_SMD:R_0603_1608Metric,Vishay,TNPW0603100KBEEA,,1,
+R1152,43.2k 0.1%,Resistor_SMD:R_0603_1608Metric,Vishay,TNPW060343K2BEEA,,1,
+R1153,0R RBOOT,Resistor_SMD:R_0603_1608Metric,Yageo,RC0603JR-070RL,,1,
+R1160,33.2k / 400kHz,Resistor_SMD:R_0603_1608Metric,Yageo,RC0603FR-0733K2L,,1,
+R1161,100k 0.1%,Resistor_SMD:R_0603_1608Metric,Vishay,TNPW0603100KBEEA,,1,
+R1162,43.2k 0.1%,Resistor_SMD:R_0603_1608Metric,Vishay,TNPW060343K2BEEA,,1,
+R1163,0R RBOOT,Resistor_SMD:R_0603_1608Metric,Yageo,RC0603JR-070RL,,1,
+R11700,1.24k 0.1%,Resistor_SMD:R_0603_1608Metric,Vishay,TNPW06031K24BEEA,,1,
+R11701,4.99k 0.1%,Resistor_SMD:R_0603_1608Metric,Vishay,TNPW06034K99BEEA,,1,
+R11702,7.5k S-CONF,Resistor_SMD:R_0603_1608Metric,Yageo,RC0603FR-077K5L,,1,
+R11710,6.19k 0.1%,Resistor_SMD:R_0603_1608Metric,Vishay,TNPW06036K19BEEA,,1,
+R11711,4.99k 0.1%,Resistor_SMD:R_0603_1608Metric,Vishay,TNPW06034K99BEEA,,1,
+R11712,7.5k S-CONF,Resistor_SMD:R_0603_1608Metric,Yageo,RC0603FR-077K5L,,1,
+U1110,LM5146RGYR,Package_DFN_QFN:Texas_RGY_R-PVQFN-N20_EP2.05x3.05mm_ThermalVias,Texas Instruments,LM5146RGYR,,1,
+U1120,LM5176PWP,Package_SO:HTSSOP-28-1EP_4.4x9.7mm_P0.65mm_EP3.4x9.5mm_ThermalVias,Texas Instruments,LM5176PWP,,1,
+U1130,LM61460RJR,CM5Carrier:TI_RJR0014A,Texas Instruments,LM61460RJR,,1,
+U1131,TPS259827LNRGER,Package_DFN_QFN:Texas_RGE0024H_VQFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.7mm_ThermalVias,Texas Instruments,TPS259827LNRGER,,1,
+U1140,LM61440RJR,CM5Carrier:TI_RJR0014A,Texas Instruments,LM61440RJR,,1,
+U1141,TPS22990DMLR,CM5Carrier:TI_DML0010A,Texas Instruments,TPS22990DMLR,,1,
+U1150,LM61440RJR,CM5Carrier:TI_RJR0014A,Texas Instruments,LM61440RJR,,1,
+U1160,LM61440RJR,CM5Carrier:TI_RJR0014A,Texas Instruments,LM61440RJR,,1,
+U1170,TPS62913RPU,Package_DFN_QFN:Texas_RPU0010A_VQFN-HR-10_2x2mm_P0.5mm,Texas Instruments,TPS62913RPUT,,1,
+U1171,TPS62913RPU,Package_DFN_QFN:Texas_RPU0010A_VQFN-HR-10_2x2mm_P0.5mm,Texas Instruments,TPS62913RPUT,,1,

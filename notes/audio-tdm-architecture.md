@@ -15,13 +15,15 @@ The operator headset jack is a separate subsystem. Keep it off this bus; see
 
 ## Preferred Digital Topology
 
-Use one shared TDM clock domain:
+Use one shared TDM clock domain. The CM5-side single-ended signals are converted
+to 100 ohm differential pairs for the interboard harness, then restored on the
+AUDIO-8X8 board:
 
-- CM5 `I2S0_MCLK` to AK5558VN and AK4458VN MCLK pins
-- CM5 `I2S0_SCLK_TX` as shared TDM bit clock
-- CM5 `I2S0_LRCK_TX` as shared TDM frame sync
-- CM5 `I2S0_SDO0` to AK4458VN TDM serial audio input
-- AK5558VN TDM serial audio output to CM5 `I2S0_SDI0`
+- CM5 `I2S0_MCLK` to `AUD_MCLK_P/N`, then both AKM MCLK pins
+- CM5 `I2S0_SCLK_TX` to `AUD_BCLK_P/N`, then the shared TDM bit clock
+- CM5 `I2S0_LRCK_TX` to `AUD_FSYNC_P/N`, then the shared frame sync
+- CM5 `I2S0_SDO0` to `AUD_DAC_SDIN_P/N`, then AK4458 `SDTI1`
+- AK5558 `SDTO1` to `AUD_ADC_SDOUT_P/N`, then CM5 `I2S0_SDI0`
 - I2C bus to AK5558VN and AK4458VN control ports
 - Separate reset/control GPIOs for ADC reset, DAC reset, and DAC mute
 
@@ -29,10 +31,11 @@ Default bring-up mode:
 
 - CM5 provides BCLK/LRCK/MCLK
 - Both AKM converters consume clocks
-- PCM/TDM, 8 slots, 32-bit slot width
-- Start with 48 kHz and 96 kHz sample rates before attempting 192 kHz or higher
+- PCM/TDM256, 8 slots, 32-bit slot width
+- A1 baseline: 48 kHz, 12.288 MHz BCLK, and 12.288 MHz MCLK
+- ADC address `0x10`; DAC address `0x11`
 
-## Candidate CM5 Pins
+## Locked CM5 Pins
 
 Based on the Radxa CM5 V2.21 pinout table.
 
@@ -43,8 +46,8 @@ Based on the Radxa CM5 V2.21 pinout table.
 | TDM frame sync | U13-A | 48 | `I2S0_LRCK_TX` | P39 | `AUD_FSYNC` |
 | TDM playback data | U13-A | 34 | `I2S0_SDO0` | P41 | `AUD_DAC_SDIN` |
 | TDM capture data | U13-A | 54 | `I2S0_SDI0` | N42 | `AUD_ADC_SDOUT` |
-| I2C control SCL | U13-A | 80 | `I2C7_SCL_M2` | AY30 | `AUD_I2C_SCL` |
-| I2C control SDA | U13-A | 82 | `I2C7_SDA_M2` | AY31 | `AUD_I2C_SDA` |
+| I2C control SCL | U13-A | 80 | `I2C7_SCL_M2` | AY30 | `SYS_I2C7_SCL` |
+| I2C control SDA | U13-A | 82 | `I2C7_SDA_M2` | AY31 | `SYS_I2C7_SDA` |
 
 Reserve optional extra I2S0 pins only if needed:
 
@@ -57,7 +60,8 @@ Reserve optional extra I2S0 pins only if needed:
 
 ## Clocking Notes
 
-The first revision should route CM5-generated audio clocks directly, with optional footprints for clock cleanup:
+The first revision uses CM5-generated clocks through the differential interboard
+link, with optional source/edge-rate provisions:
 
 - 0-ohm links or source-selection resistors for MCLK/BCLK/FSYNC
 - Optional low-jitter oscillator or clock generator footprint if later required
@@ -130,9 +134,11 @@ starting point:
 The old capacitor XLR boards are valuable because they capture the active
 balanced line-stage, RFI/protection, bipolar coupling capacitor, chassis-return,
 and validation thinking. Their old PCM1861/PCM5102A converter sections are not
-copied because this product uses AK5558VN and AK4458VN. All resistor/capacitor
-values around the AKM converters must be recalculated from the AKM datasheets,
-target line level, headroom, and analog rails.
+copied because this product uses AK5558VN and AK4458VN. The A1
+resistor/capacitor starting values have been recalculated from the AKM
+datasheets, target line level, headroom, and analog rails. The controlled values
+and results are in `../docs/audio_8x8_level_budget_a1.csv`; they remain subject
+to first-article noise, THD+N, crosstalk, level, and stability measurements.
 
 The separate transformer XLR folder is useful only for prior XLR bank
 footprint/spacing reference unless transformer isolation is intentionally
@@ -174,15 +180,16 @@ load spikes without muting or losing sync:
   recovery so the prototype can recover cleanly if the SoC clock path proves
   fragile.
 
-## Open Decisions
+## Locked A1 Baseline And Open Qualification
 
-- Final sample-rate target: 48/96 kHz only, 192 kHz, or higher.
-- Exact XLR connector part numbers, panel cutouts, latch-tab orientation, and
-  row/column pitch.
-- Input stage: active balanced THAT1206-class receiver is preferred; final AK5558
-  interface values still need calculation.
-- Output stage: OPA165x plus THAT1646-class active balanced driver is preferred;
-  final AK4458 interface values still need calculation.
-- Clocking strategy: CM5 clock master for simplicity, or external low-jitter
-  audio clock source for performance and robustness if stress testing exposes
-  clock/dropout problems.
+- Baseline sample rate is 48 kHz TDM256. Higher rates are deferred until the
+  48 kHz stress and signal-integrity qualification passes.
+- XLR parts are Neutrik NC3MAV outputs and NC3FAV inputs at the controlled
+  panel/PCB datums.
+- Input stage is THAT1206 plus OPA1652; output stage is OPA1652 plus THAT1646
+  and a fail-silent TQ2 relay.
+- CM5 is the A1 clock master. An external low-jitter source is a contingency
+  only if bench testing exposes unacceptable jitter or recovery behavior.
+- Routing remains blocked by the two AKM exposed-pad coupons and eight TQ2
+  relay pad/insertion coupons listed in
+  `../cad/kicad/reports/component-footprint-audit.md`.

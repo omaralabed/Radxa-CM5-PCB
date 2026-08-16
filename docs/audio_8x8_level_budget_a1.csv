@@ -1,0 +1,7 @@
+Path,Condition,Source_dBu,Source_Vrms,Stage_assumptions,Result,Result_unit,Margin_dB,Status
+Input,+4 dBu nominal,4.000,1.228292,"THAT1206 -6 dB; OPA1652 differential scale 1/14 per leg",0.248742,Vpp differential,-21.028 dBFS,PASS
+Input,+24 dBu maximum,24.000,12.282922,"THAT1206 -6 dB; OPA1652 differential scale 1/14 per leg; AK5558 typical full scale 2.8 Vpp",2.487417,Vpp differential,1.028 below full scale,PASS
+Output,Typical high impedance full scale,,,"AK4458 5.6 Vpp differential; reconstruction 4.7k/3.9k; OPA gain 3.15; THAT1646 +6.0 dB",14.996394,Vrms,1.734 above +24 dBu,PASS
+Output,Typical 600 ohm full scale,,,"AK4458 5.6 Vpp differential; reconstruction 4.7k/3.9k; OPA gain 3.15; THAT1646 +5.3 dB",13.835244,Vrms,1.034 above +24 dBu,PASS
+Output,Worst-case 600 ohm full scale,,,"AK4458 5.3 Vpp minimum; 0.1 percent adverse resistor corners; THAT1646 +5.0 dB minimum",12.607049,Vrms,0.226 above +24 dBu,PASS
+Output,Required +24 dBu target,24.000,12.282922,"600 ohm qualification load",12.282922,Vrms,0.000,REFERENCE

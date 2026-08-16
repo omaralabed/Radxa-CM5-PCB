@@ -1,7 +1,10 @@
-ERC report (2026-08-16T03:08:57, Encoding UTF8)
+ERC report (2026-08-16T18:36:06, Encoding UTF8)
 Report includes: Errors, Warnings
 
 ***** Sheet /
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(80.01 mm, 500.38 mm): Label 'LOGIC_3V3'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
     @(544.83 mm, 364.49 mm): Label 'CELL_1_RF'
@@ -15,7 +18,7 @@ Report includes: Errors, Warnings
     ; warning
     @(769.62 mm, 364.49 mm): Label 'CELL_4_GNSS_RF'
 
- ** ERC messages: 4  Errors 0  Warnings 4
+ ** ERC messages: 5  Errors 0  Warnings 5
 
  ** Ignored checks:
     - Global label only appears once in the schematic

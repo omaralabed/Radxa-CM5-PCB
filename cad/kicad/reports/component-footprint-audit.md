@@ -1,31 +1,37 @@
 # Component and Footprint Audit
 
-Generated from all ten native KiCad sheets. This report is deterministic and contains no audit timestamp.
+Generated from all sixteen native KiCad sheets. This report is deterministic and contains no audit timestamp.
 
 ## Current gate
 
-- Components audited: 527
-- Route-ready components: 165
-- Intentional non-board symbols: 1
-- Routing blockers: 361
-- Production/BOM blockers: 429
+- Components audited: 1023
+- Route-ready components: 1007
+- Intentional non-board symbols: 6
+- Routing blockers: 10
+- Production/BOM blockers: 78
 
-A routing blocker has no footprint or references a footprint that cannot be resolved. A production blocker also includes any routed component without a locked manufacturer and MPN.
+A routing blocker has no footprint, references an unresolved footprint, or still requires a routing-critical mechanical coupon. A production blocker also includes any board-mounted component without a locked manufacturer and MPN.
 
 ## By sheet
 
 | Sheet | Components | Routing blockers | Production blockers |
 |---|---:|---:|---:|
-| PWR-SELECT | 104 | 0 | 67 |
-| CM5-Carrier | 9 | 5 | 5 |
-| CM5-Core-Allocated | 7 | 4 | 4 |
-| Network-PCIe | 59 | 42 | 43 |
-| WWAN-SIM | 18 | 14 | 14 |
-| Display-Harness | 13 | 10 | 10 |
-| Audio-Control | 38 | 36 | 36 |
-| Power-Regulators-A1 | 198 | 186 | 186 |
-| Thermal-IO | 60 | 60 | 60 |
-| Audio-8x8 | 21 | 4 | 4 |
+| PWR-SELECT | 108 | 0 | 67 |
+| CM5-Carrier | 9 | 0 | 0 |
+| CM5-Core-Allocated | 7 | 0 | 0 |
+| Network-PCIe | 64 | 0 | 0 |
+| WWAN-SIM | 23 | 0 | 0 |
+| Display-Harness | 13 | 0 | 0 |
+| Audio-Control | 57 | 0 | 1 |
+| Power-Regulators-A1 | 155 | 0 | 0 |
+| Thermal-IO | 66 | 0 | 0 |
+| Audio-8x8 | 21 | 0 | 0 |
+| Audio-TDM-Clock | 18 | 0 | 0 |
+| AK5558-ADC | 36 | 1 | 1 |
+| AK4458-DAC | 23 | 1 | 1 |
+| Audio-Inputs | 176 | 0 | 0 |
+| Audio-Outputs | 200 | 8 | 8 |
+| Audio-Power | 47 | 0 | 0 |
 
 ## Gate commands
 

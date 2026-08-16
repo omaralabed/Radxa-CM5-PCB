@@ -104,6 +104,12 @@ fi
 
 review_sheet "${SCRIPT_DIR}/CM5-CARRIER/Thermal-IO.kicad_sch" "Thermal-IO-A1"
 review_sheet "${SCRIPT_DIR}/AUDIO-8X8/Audio-8x8.kicad_sch" "Audio-8x8-A1"
+review_sheet "${SCRIPT_DIR}/AUDIO-8X8/Audio-TDM-Clock.kicad_sch" "Audio-TDM-Clock-A1"
+review_sheet "${SCRIPT_DIR}/AUDIO-8X8/AK5558-ADC.kicad_sch" "AK5558-ADC-A1"
+review_sheet "${SCRIPT_DIR}/AUDIO-8X8/AK4458-DAC.kicad_sch" "AK4458-DAC-A1"
+review_sheet "${SCRIPT_DIR}/AUDIO-8X8/Audio-Inputs.kicad_sch" "Audio-Inputs-A1"
+review_sheet "${SCRIPT_DIR}/AUDIO-8X8/Audio-Outputs.kicad_sch" "Audio-Outputs-A1"
+review_sheet "${SCRIPT_DIR}/AUDIO-8X8/Audio-Power.kicad_sch" "Audio-Power-A1"
 
 "${KICAD_CLI}" sch export netlist --format kicadxml \
     --output "${REVIEW_TMP}/PowerSelector-A0.xml" \
@@ -115,8 +121,16 @@ review_sheet "${SCRIPT_DIR}/AUDIO-8X8/Audio-8x8.kicad_sch" "Audio-8x8-A1"
     --output "${REVIEW_TMP}/Thermal-IO-A1.xml" \
     "${SCRIPT_DIR}/CM5-CARRIER/Thermal-IO.kicad_sch"
 "${KICAD_CLI}" sch export netlist --format kicadxml \
+    --output "${REVIEW_TMP}/Audio-Control-A1.xml" \
+    "${SCRIPT_DIR}/CM5-CARRIER/Audio-Control.kicad_sch"
+"${KICAD_CLI}" sch export netlist --format kicadxml \
     --output "${REVIEW_TMP}/Audio-8x8-A1.xml" \
     "${SCRIPT_DIR}/AUDIO-8X8/Audio-8x8.kicad_sch"
+for sheet in Audio-TDM-Clock AK5558-ADC AK4458-DAC Audio-Inputs Audio-Outputs Audio-Power; do
+    "${KICAD_CLI}" sch export netlist --format kicadxml \
+        --output "${REVIEW_TMP}/${sheet}-A1.xml" \
+        "${SCRIPT_DIR}/AUDIO-8X8/${sheet}.kicad_sch"
+done
 
 install_xml_if_changed "${REVIEW_TMP}/PowerSelector-A0.xml" \
     "${SCRIPT_DIR}/PWR-SELECT/REVIEW/PowerSelector-A0.xml"
@@ -124,12 +138,57 @@ install_xml_if_changed "${REVIEW_TMP}/CM5-Carrier-A1.xml" \
     "${SCRIPT_DIR}/CM5-CARRIER/REVIEW/CM5-Carrier-A1.xml"
 install_xml_if_changed "${REVIEW_TMP}/Thermal-IO-A1.xml" \
     "${SCRIPT_DIR}/CM5-CARRIER/REVIEW/Thermal-IO-A1.xml"
+install_xml_if_changed "${REVIEW_TMP}/Audio-Control-A1.xml" \
+    "${SCRIPT_DIR}/CM5-CARRIER/REVIEW/Audio-Control-A1.xml"
 install_xml_if_changed "${REVIEW_TMP}/Audio-8x8-A1.xml" \
     "${SCRIPT_DIR}/AUDIO-8X8/REVIEW/Audio-8x8-A1.xml"
+for sheet in Audio-TDM-Clock AK5558-ADC AK4458-DAC Audio-Inputs Audio-Outputs Audio-Power; do
+    install_xml_if_changed "${REVIEW_TMP}/${sheet}-A1.xml" \
+        "${SCRIPT_DIR}/AUDIO-8X8/REVIEW/${sheet}-A1.xml"
+done
 
+python3 "${SCRIPT_DIR}/export_schematic_bom.py" \
+    --schematic "${SCRIPT_DIR}/CM5-CARRIER/Power-Regulators-A1.kicad_sch" \
+    --output "${PROJECT_ROOT}/docs/power_regulator_bom_a1.csv" \
+    --exclude U1180 \
+    --exclude TP1190 \
+    --exclude TP1191 \
+    --exclude TP1192 \
+    --exclude TP1193
+python3 "${SCRIPT_DIR}/export_schematic_bom.py" \
+    --schematic "${SCRIPT_DIR}/CM5-CARRIER/Thermal-IO.kicad_sch" \
+    --output "${PROJECT_ROOT}/docs/thermal_io_bom_a1.csv"
+python3 "${SCRIPT_DIR}/export_schematic_bom.py" \
+    --schematic "${SCRIPT_DIR}/CM5-CARRIER/Network-PCIe.kicad_sch" \
+    --output "${PROJECT_ROOT}/docs/network_pcie_bom_a1.csv"
+python3 "${SCRIPT_DIR}/export_schematic_bom.py" \
+    --schematic "${SCRIPT_DIR}/CM5-CARRIER/WWAN-SIM.kicad_sch" \
+    --output "${PROJECT_ROOT}/docs/wwan_sim_bom_a1.csv" \
+    --exclude TP7201 \
+    --exclude TP7202 \
+    --exclude TP7203 \
+    --exclude TP7204 \
+    --exclude TP7205 \
+    --exclude TP7206 \
+    --exclude TP7207 \
+    --exclude TP7208
+python3 "${SCRIPT_DIR}/export_schematic_bom.py" \
+    --schematic "${SCRIPT_DIR}/CM5-CARRIER/Display-Harness.kicad_sch" \
+    --output "${PROJECT_ROOT}/docs/display_harness_bom_a1.csv"
+python3 "${SCRIPT_DIR}/export_schematic_bom.py" \
+    --schematic "${SCRIPT_DIR}/CM5-CARRIER/Audio-Control.kicad_sch" \
+    --output "${PROJECT_ROOT}/docs/audio_control_bom_a1.csv" \
+    --exclude U900
 python3 "${SCRIPT_DIR}/PWR-SELECT/validate_power_selector.py"
 python3 "${SCRIPT_DIR}/CM5-CARRIER/validate_power_regulators.py"
+python3 "${SCRIPT_DIR}/CM5-CARRIER/validate_thermal_io.py"
+python3 "${SCRIPT_DIR}/CM5-CARRIER/validate_network_pcie.py"
+python3 "${SCRIPT_DIR}/CM5-CARRIER/validate_wwan_sim.py"
+python3 "${SCRIPT_DIR}/CM5-CARRIER/validate_display_harness.py"
+python3 "${SCRIPT_DIR}/CM5-CARRIER/validate_audio_control.py"
+python3 "${SCRIPT_DIR}/AUDIO-8X8/export_audio_8x8_bom.py"
+python3 "${SCRIPT_DIR}/AUDIO-8X8/validate_audio_8x8.py"
 python3 "${SCRIPT_DIR}/validate_interface_contracts.py"
 python3 "${SCRIPT_DIR}/audit_footprint_readiness.py"
 
-printf 'Detailed capture review passed: all ten sheets have zero ERC errors.\n'
+printf 'Detailed capture review passed: all sixteen sheets have zero ERC errors.\n'

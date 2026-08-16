@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/Users/viewvision/Desktop/Radxa CM5 PCB/cad/kicad/CM5-CARRIER/CM5-Carrier.kicad_sch</source>
-    <date>2026-08-16T03:15:10</date>
+    <date>2026-08-16T18:36:20</date>
     <tool>Eeschema 10.0.5-rc1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -122,12 +122,17 @@
     </comp>
     <comp ref="J201">
       <value>AUDIO_TDM_CONTROL</value>
+      <footprint>Connector_Molex_Milligrid:Molex_8783230xx_2x15_P2.0mm_Header_Vertical_Polarized_MountingPegs</footprint>
       <fields>
-        <field name="Footprint"/>
+        <field name="Manufacturer">Molex</field>
+        <field name="MPN">87832-6423</field>
+        <field name="Footprint">Connector_Molex_Milligrid:Molex_8783230xx_2x15_P2.0mm_Header_Vertical_Polarized_MountingPegs</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Connector_Generic" part="Conn_02x15_Odd_Even" description="Generic connector, double row, 02x15, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Manufacturer" value="Molex"/>
+      <property name="MPN" value="87832-6423"/>
       <property name="Sheetname" value="CM5-Carrier"/>
       <property name="Sheetfile" value="CM5-Carrier.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
@@ -203,24 +208,29 @@
     </comp>
     <comp ref="J401">
       <value>CPU_FAN</value>
+      <footprint>Connector_Molex:Molex_Micro-Fit_3.0_43045-0412_2x02_P3.00mm_Vertical</footprint>
       <fields>
-        <field name="Footprint"/>
+        <field name="Manufacturer">Molex</field>
+        <field name="MPN">43045-0412</field>
+        <field name="Footprint">Connector_Molex:Molex_Micro-Fit_3.0_43045-0412_2x02_P3.00mm_Vertical</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
-      <libsource lib="Connector_Generic" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <libsource lib="Connector_Generic" part="Conn_02x02_Odd_Even" description="Generic connector, double row, 02x02, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Manufacturer" value="Molex"/>
+      <property name="MPN" value="43045-0412"/>
       <property name="Sheetname" value="CM5-Carrier"/>
       <property name="Sheetfile" value="CM5-Carrier.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
-      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <property name="ki_fp_filters" value="Connector*:*_2x??_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>f65f0ed6-b7bd-5e1d-accc-c83125f76e33</tstamps>
       <units>
         <unit name="A">
           <pins>
             <pin num="1"/>
-            <pin num="2"/>
             <pin num="3"/>
+            <pin num="2"/>
             <pin num="4"/>
           </pins>
         </unit>
@@ -228,24 +238,29 @@
     </comp>
     <comp ref="J402">
       <value>MODEM_FAN</value>
+      <footprint>Connector_Molex:Molex_Micro-Fit_3.0_43045-0412_2x02_P3.00mm_Vertical</footprint>
       <fields>
-        <field name="Footprint"/>
+        <field name="Manufacturer">Molex</field>
+        <field name="MPN">43045-0412</field>
+        <field name="Footprint">Connector_Molex:Molex_Micro-Fit_3.0_43045-0412_2x02_P3.00mm_Vertical</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
-      <libsource lib="Connector_Generic" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <libsource lib="Connector_Generic" part="Conn_02x02_Odd_Even" description="Generic connector, double row, 02x02, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Manufacturer" value="Molex"/>
+      <property name="MPN" value="43045-0412"/>
       <property name="Sheetname" value="CM5-Carrier"/>
       <property name="Sheetfile" value="CM5-Carrier.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
-      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <property name="ki_fp_filters" value="Connector*:*_2x??_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>21fba185-b6cf-57b7-ab70-e2f6087efa79</tstamps>
       <units>
         <unit name="A">
           <pins>
             <pin num="1"/>
-            <pin num="2"/>
             <pin num="3"/>
+            <pin num="2"/>
             <pin num="4"/>
           </pins>
         </unit>
@@ -253,24 +268,29 @@
     </comp>
     <comp ref="J403">
       <value>THA0412AD-TZW3_INTAKE</value>
+      <footprint>Connector_Molex:Molex_Micro-Fit_3.0_43045-0412_2x02_P3.00mm_Vertical</footprint>
       <fields>
-        <field name="Footprint"/>
+        <field name="Manufacturer">Molex</field>
+        <field name="MPN">43045-0412</field>
+        <field name="Footprint">Connector_Molex:Molex_Micro-Fit_3.0_43045-0412_2x02_P3.00mm_Vertical</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
-      <libsource lib="Connector_Generic" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <libsource lib="Connector_Generic" part="Conn_02x02_Odd_Even" description="Generic connector, double row, 02x02, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Manufacturer" value="Molex"/>
+      <property name="MPN" value="43045-0412"/>
       <property name="Sheetname" value="CM5-Carrier"/>
       <property name="Sheetfile" value="CM5-Carrier.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
-      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <property name="ki_fp_filters" value="Connector*:*_2x??_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>67d92030-2e00-5783-acbf-8abacb819403</tstamps>
       <units>
         <unit name="A">
           <pins>
             <pin num="1"/>
-            <pin num="2"/>
             <pin num="3"/>
+            <pin num="2"/>
             <pin num="4"/>
           </pins>
         </unit>
@@ -278,24 +298,29 @@
     </comp>
     <comp ref="J404">
       <value>THA0412AD-TZW3_EXHAUST</value>
+      <footprint>Connector_Molex:Molex_Micro-Fit_3.0_43045-0412_2x02_P3.00mm_Vertical</footprint>
       <fields>
-        <field name="Footprint"/>
+        <field name="Manufacturer">Molex</field>
+        <field name="MPN">43045-0412</field>
+        <field name="Footprint">Connector_Molex:Molex_Micro-Fit_3.0_43045-0412_2x02_P3.00mm_Vertical</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
-      <libsource lib="Connector_Generic" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <libsource lib="Connector_Generic" part="Conn_02x02_Odd_Even" description="Generic connector, double row, 02x02, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Manufacturer" value="Molex"/>
+      <property name="MPN" value="43045-0412"/>
       <property name="Sheetname" value="CM5-Carrier"/>
       <property name="Sheetfile" value="CM5-Carrier.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
-      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <property name="ki_fp_filters" value="Connector*:*_2x??_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>1cd8a37a-ac4b-54f3-a8f0-4c7bad6e129d</tstamps>
       <units>
         <unit name="A">
           <pins>
             <pin num="1"/>
-            <pin num="2"/>
             <pin num="3"/>
+            <pin num="2"/>
             <pin num="4"/>
           </pins>
         </unit>
@@ -303,25 +328,6 @@
     </comp>
   </components>
   <libparts>
-    <libpart lib="Connector_Generic" part="Conn_01x04">
-      <description>Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
-      <footprints>
-        <fp>Connector*:*_1x??_*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">J</field>
-        <field name="Value">Conn_01x04</field>
-        <field name="Footprint"/>
-        <field name="Datasheet"/>
-        <field name="Description">Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
-      </fields>
-      <pins>
-        <pin num="1" name="Pin_1" type="passive"/>
-        <pin num="2" name="Pin_2" type="passive"/>
-        <pin num="3" name="Pin_3" type="passive"/>
-        <pin num="4" name="Pin_4" type="passive"/>
-      </pins>
-    </libpart>
     <libpart lib="Connector_Generic" part="Conn_01x06">
       <description>Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
       <footprints>

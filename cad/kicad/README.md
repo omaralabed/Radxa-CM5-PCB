@@ -13,8 +13,10 @@
 
 - `PWR-SELECT/PowerSelector.kicad_pro`: Radxa A1 source-selector capture with
   1.50 mOhm source-shunt starting values, three INA228 telemetry channels, and
-  a delivered-load shunt. The 660 uF local hold-up and all 15 A-class thermal,
-  SOA, tolerance, and transfer assumptions still require release validation.
+  a delivered-load shunt. Four 6800 uF / 50 V Nichicon snap-ins plus 660 uF of
+  local hybrids form the floor-mounted hold-up bank; all 15 A-class thermal,
+  SOA, inrush, tolerance, retention, and transfer assumptions still require
+  release validation.
 - `CM5-CARRIER/CM5-Carrier.kicad_pro`: carrier interface overview and shared
   interboard connector contract.
 - `CM5-CARRIER/CM5-Core-Allocated.kicad_pro`: exact 300-contact CM5 connector
@@ -30,12 +32,24 @@
 - `CM5-CARRIER/Audio-Control.kicad_pro`: differential I2S0/TDM interboard link,
   I2S1 ES8316 CTIA headset path, and TPA6132A2 headphone amplifier.
 - `CM5-CARRIER/Power-Regulators-A1.kicad_pro`: calculated 10.5-30 V power tree,
-  no-blink hold-up bank, dedicated system/radio/network/audio rails, branch
+  protected input from the no-blink selector, dedicated system/radio/network/audio rails, branch
   protection, sequencing, and rail test access.
 - `CM5-CARRIER/Thermal-IO.kicad_pro`: I2C translation, GPIO expansion, three
   temperature zones, status outputs, and four independent PWM/tach fans.
 - `AUDIO-8X8/Audio-8x8.kicad_pro`: native audio interface sheet with the
   carrier contract and eight `NC3MAV` outputs plus eight `NC3FAV` inputs.
+- `AUDIO-8X8/Audio-TDM-Clock.kicad_pro`: differential TDM harness receivers,
+  ADC return driver, reset/mute defaults, and clock contract.
+- `AUDIO-8X8/AK5558-ADC.kicad_pro`: exact eight-channel ADC pin capture,
+  references, bypassing, mode straps, and I2C address `0x10`.
+- `AUDIO-8X8/AK4458-DAC.kicad_pro`: exact eight-channel DAC pin capture,
+  references, bypassing, mode defaults, and I2C address `0x11`.
+- `AUDIO-8X8/Audio-Inputs.kicad_pro`: eight THAT1206/OPA1652 active-balanced
+  input channels with protection and anti-alias networks.
+- `AUDIO-8X8/Audio-Outputs.kicad_pro`: eight OPA1652/THAT1646 active-balanced
+  output channels with fail-silent relays and connector protection.
+- `AUDIO-8X8/Audio-Power.kicad_pro`: isolated bipolar line-stage power,
+  low-noise AKM rails, sequencing, and controlled ground star.
 - `INTERBOARD_INTERFACE_CONTRACT.md`: controlled pin assignment shared by all
   three projects.
 - `../../notes/cm5-pin-allocation-a0.md` and
@@ -79,8 +93,14 @@ KICAD=/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli
 
 python3 cad/kicad/PWR-SELECT/validate_power_selector.py
 python3 cad/kicad/CM5-CARRIER/validate_power_regulators.py
+python3 cad/kicad/AUDIO-8X8/validate_audio_8x8.py
 python3 cad/kicad/validate_interface_contracts.py
 python3 cad/kicad/audit_footprint_readiness.py
+python3 cad/kicad/export_schematic_bom.py \
+  --schematic cad/kicad/CM5-CARRIER/Power-Regulators-A1.kicad_sch \
+  --output docs/power_regulator_bom_a1.csv \
+  --exclude U1180 --exclude TP1190 --exclude TP1191 --exclude TP1192 --exclude TP1193
+python3 cad/kicad/AUDIO-8X8/export_audio_8x8_bom.py
 ```
 
 The complete A1 gate is automated:
@@ -100,12 +120,18 @@ assignments, including all three selector harnesses, power/temperature alerts,
 the 30-pin buffered TDM/control link, separate audio power, four fan headers,
 and all 16 XLR connectors.
 
-The footprint audit covers every component on all ten sheets. Its default mode
+The footprint audit covers every component on all sixteen sheets. Its default mode
 updates the controlled CSV and Markdown reports. Use `--routing` to enforce the
 placement/routing gate and `--release` to additionally require a manufacturer
 and MPN for every board-mounted item. The drawing-backed connector evidence and
 the Molex 0679101002 datum contract are recorded in
 [`FOOTPRINT_RELEASE.md`](FOOTPRINT_RELEASE.md).
+
+The current audit covers 1023 components. Ten items intentionally block PCB
+routing until physical coupons are approved: the two AKM exposed-pad packages
+and eight Panasonic TQ2 relay lands. The stricter production audit also holds
+67 PWR-SELECT passive rows without locked manufacturer/MPN evidence and the
+Kycon headset jack coupon, for 78 production blockers total.
 
 Every A1 detailed sheet and AUDIO-8X8 currently reports zero ERC errors. The
 remaining warnings are isolated off-sheet interface labels or deliberately
@@ -121,8 +147,10 @@ Electrical validation does not replace this visual readability gate.
 
 ## Next Engineering Order
 
-1. Create controlled power footprints, assign final passive land patterns,
-   and complete placement, copper-current, thermal, and compensation review.
+1. Close the controlled footprint/MPN audit for Thermal-IO, Network-PCIe,
+   WWAN-SIM, Display-Harness, and Audio-Control. Power-Regulators-A1 is closed
+   at the schematic/BOM footprint gate but still requires first-article,
+   copper-current, thermal, loop-response, and compensation review.
 2. Complete selector shunt/current-limit tolerance, hold-up/precharge, SOA,
    telemetry calibration, and 15 A thermal review, then create its PCB.
 3. Release the measured enclosure datums, custom four-side frame drawing, and
@@ -131,6 +159,7 @@ Electrical validation does not replace this visual readability gate.
    support patterns `A1-A6` and `C1-C6` and no board, copper, component, or
    standoff entering the 15 mm frame/screw keepout, then
    convert the schematic suite into the routed carrier hierarchy.
-4. Complete current-datasheet calculations for the AK5558VN/AK4458VN supplies,
-   clocks, filters, THAT1206 inputs, and OPA165x/THAT1646 outputs.
+4. Approve the AK5558VN/AK4458VN exposed-pad and TQ2 relay coupons, then bench
+   validate the locked 48 kHz TDM256 mode, +4/+24 dBu level plan, 600 ohm
+   compatibility load, mute sequencing, crosstalk, noise, and THD+N.
 5. Run SI/PI, thermal, EMC, and fabrication DFM reviews before release.

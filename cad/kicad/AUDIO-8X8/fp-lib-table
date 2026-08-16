@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "CM5Carrier")(type "KiCad")(uri "${KIPRJMOD}/../CM5-CARRIER/CM5Carrier.pretty")(options "")(descr "Shared Radxa CM5 carrier and audio footprints"))
+)

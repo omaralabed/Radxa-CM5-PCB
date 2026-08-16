@@ -66,15 +66,16 @@ Design input envelope:
 - Backup source: 13.0-16.8 V nominal operating range.
 - Backup inlet: LEMO `EGG.1B.302.CLL`, 15 A rated starting part, with matching
   15 A cable, fuse, MOSFET, copper, and wiring path. The prior 10 A 0B inlet is
-  not accepted at the estimated 11.54 A low-voltage transient.
+  not accepted at the estimated 14.17 A transient at 13.0 V.
 - Include wiring, fuse, MOSFET, and eFuse drop in UVLO/dropout calculations.
 - Every critical regulator must remain in regulation throughout a valid
   primary-to-backup and backup-to-primary transfer.
 - Rate the selector, connector, fuse, MOSFET, shunt, copper, and harness path
   for at least 15 A. Set the selector operating threshold to at least 14 A
   after tolerance analysis; the old 10 A shunt setting is not accepted.
-- Start `PROTECTED_RAW` hold-up at 22,000 uF nominal / 50 V, with stuffing
-  space up to 47,000 uF and controlled precharge/inrush limiting. Final raw and
+- Use the floor-mounted `PROTECTED_RAW` hold-up bank at 27,200 uF nominal /
+  50 V plus 660 uF local storage, with controlled precharge/inrush limiting.
+  Final raw and
   local capacitance follows measured transfer time, load, tolerance, ESR,
   temperature, and aging; capacitance is not accepted by nominal value alone.
 
@@ -82,7 +83,7 @@ Design input envelope:
 
 | Rail | Locked target | Starting implementation | Loads and rules |
 | --- | ---: | --- | --- |
-| `SYS_5V15` | 5.15 V, 12 A continuous | TI `LM5146` synchronous buck controller with 60 V low-resistance MOSFETs such as `CSD18540Q5B` | CM5 and controlled 5 V system loads. Kelvin/remote sense at the CM5 connector. Recalculate power stage and compensation with TI tools. |
+| `SYS_5V15` | 5.15 V, 12 A continuous | TI `LM5146RGYR`, onsemi `NVMFS6B25NLT1G` / `FDWS86068-F085`, TDK `SPM10065VC-3R3M-D` | CM5 and controlled 5 V system loads. Kelvin/remote sense at the CM5 connector. Recalculate the compensation with measured final-PCB response. |
 | `AUX_12V` | Revised 12 V, 8 A minimum target | TI `LM5176` four-switch buck-boost | Backup-riding 12 V backbone. Recalculate and bench-qualify the A1 power stage before routing. |
 | `DISPLAY_12V` | 12 V, 2.5 A branch | Simple fused harness branch from `AUX_12V`; no dedicated display eFuse/current limiter | Lid display only. Rated load is 25 W / 2.08 A; size the fuse and wiring after measuring full-brightness and startup current. |
 | `FAN_CPU_12V` | 12 V, 3 A branch | Protected branch from `AUX_12V` | Locked Delta `FFB0412EN-00Y2E`; independent PWM/tach and fault containment. |
@@ -143,10 +144,12 @@ CM5 USB30_2 + USB2 -> M.2 B-Key 3042/3052 -------------> WWAN
 - No phantom power in Rev A.
 
 The `THAT1206` input receiver and `THAT1646` output driver are retained from the
-ProComm active-balanced reference. All gain, attenuation, common-mode, coupling,
-anti-alias, reconstruction, DC-blocking, protection, and AKM interface values
-must be recalculated for the locked level and rails. XLR pin 1 bonds to chassis
-at the connector boundary.
+ProComm active-balanced reference. The A1 gain, attenuation, common-mode,
+coupling, anti-alias, reconstruction, DC-blocking, protection, and AKM
+interface starting values are captured in the detailed AUDIO-8X8 sheets and
+`../docs/audio_8x8_level_budget_a1.csv`. They require first-article level,
+noise, THD+N, crosstalk, stability, and fault validation. XLR pin 1 bonds to
+chassis at the connector boundary.
 
 ## Thermal Exit Path
 

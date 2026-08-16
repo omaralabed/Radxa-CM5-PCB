@@ -79,7 +79,7 @@ Use these as starting values, not blind-copy production values:
 | Source fuses | Littelfuse `0451015.MRL`, 15 A | Recalculate for RPS PSU, battery current, wire gauge, and fault energy. |
 | Primary TVS | Littelfuse `SMCJ24A` | Recalculate for internal 24 V PSU harness and surge environment. |
 | Backup TVS | Littelfuse `SMBJ18CA` | Reuse as reference for 13.0-16.8 V backup inputs; verify with final harness. |
-| Main current sense | 2.50 mOhm, 2 W shunts | Rejected unchanged: its 10 A-class limit is below the 11.54 A D-Tap transient and the 13.22 A near-cutoff Gold Mount transient estimates. Recalculate for at least a 14 A operating threshold with tolerance while rating the path for 15 A. |
+| Main current sense | 2.50 mOhm, 2 W shunts | Rejected unchanged: its 10 A-class limit is below the 14.17 A D-Tap transient and the 16.23 A near-cutoff short transient. Recalculate for at least a 14 A operating threshold with tolerance, rate the normal path for 15 A, and shed load after transfer before sustained low-voltage battery operation. |
 | Raw-output bulk | 3 x 220 uF / 50 V polymer electrolytic plus ceramics | Rejected unchanged: 660 uF is far below the 20 ms full-load hold-up calculation. |
 | Switch pulldowns | `R541` / `R542`, 47 kOhm | Reuse fail-off behavior. |
 | Panel switch | E-Switch `RA812C1121`, maintained DPST OFF-ON | Reuse exact two-pole controller-enable arrangement; do not route load current through it. |
@@ -121,19 +121,21 @@ Preliminary ideal capacitance from 24.0 V down to 12.5 V:
 | 151.7 W continuous design case | 14,456 uF | 36,141 uF |
 | 184.2 W peak design case | 17,553 uF | 43,883 uF |
 
-`A1 CAPTURED STARTING POINT`: provide a distributed 22,400 uF nominal / 50 V
-low-ESR `RAW_OUT` bank using four Nichicon `LGU1H562MELZ` capacitors, with
-board stuffing space that raises the total storage, including the selector's
-660 uF, to about 47,700 uF. The 22,400 uF choice adds allowance above the 16,391 uF ideal
-20 ms result for capacitance tolerance, aging, temperature, and ESR. Final
-capacitance is selected from measured transfer waveforms.
+`A1 CAPTURED STARTING POINT`: keep the bulk storage on the floor-mounted
+PWR-SELECT assembly. Four Nichicon `LGU1H682MELB` snap-in capacitors provide
+27,200 uF nominal / 50 V on `RAW_OUT`; the three local 220 uF hybrids raise the
+nominal total to 27,860 uF. The selected snap-ins are 30 mm diameter x 35 mm
+high. At the -20% capacitance limit the combined bank is 22,288 uF and provides
+about 25.4 ms ideal hold-up at 184.2 W from 24.0 V to 12.5 V. Final capacitance
+still depends on measured transfer waveforms.
 
 The 50 V rating provides healthier margin above the 24 V source and its
 protected transient envelope than a 35 V bank. The bank requires controlled
 precharge/inrush limiting, discharge/bleeder
 behavior, capacitor ripple-current and fault-current review, and confirmation
 that the LTC4418/LTC4421 MOSFETs remain inside SOA. Do not connect a discharged
-22-47 mF bank through an unverified hot-plug path.
+27.2 mF bank through an unverified hot-plug path. The cans require a rigid
+tray-supported clamp; their mass must not be carried only by the snap-in leads.
 
 At the low backup end, holding 184.2 W for only 1 ms while the raw bus falls from
 13 V to 10 V already needs about 5,339 uF ideal. Therefore the D-Tap-to-Gold
@@ -154,8 +156,9 @@ Final capacitance must be calculated from measured transfer time, load current,
 minimum regulator input voltage, ESR, inrush current, and thermal limits. Do not
 guess the production capacitor bank from nominal wattage alone.
 
-The ProComm selector's 660 uF bank is additive local storage but is not counted
-as a substitute for the captured 22.4 mF carrier bank.
+The original 660 uF selector bank remains additive local storage. The large
+bank is no longer installed on the suspended CM5 carrier because the previously
+selected 22 x 50 mm cans violate the available carrier Z envelope.
 
 ## Regulator Rule
 

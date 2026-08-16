@@ -1,4 +1,4 @@
-ERC report (2026-08-16T03:09:00, Encoding UTF8)
+ERC report (2026-08-16T18:36:10, Encoding UTF8)
 Report includes: Errors, Warnings
 
 ***** Sheet /
@@ -37,12 +37,6 @@ Report includes: Errors, Warnings
     @(549.91 mm, 617.22 mm): Label 'PCIE_1V0_PG'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(549.91 mm, 737.87 mm): Label 'HEADSET3V3_EN'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(549.91 mm, 742.95 mm): Label 'HEADSET_3V3_PG'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
     @(664.21 mm, 381.00 mm): Label 'NET_3V3_PG'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
@@ -50,12 +44,6 @@ Report includes: Errors, Warnings
 [isolated_pin_label]: Label connected to only one pin
     ; warning
     @(779.78 mm, 617.22 mm): Label 'LOGIC_1V8_PG'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(779.78 mm, 737.87 mm): Label 'AUDIOPRE5V5_EN'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(779.78 mm, 742.95 mm): Label 'AUDIO_PRE_5V5_PG'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
     @(844.55 mm, 106.68 mm): Label 'AUX_12V_PG'
@@ -76,15 +64,12 @@ Report includes: Errors, Warnings
     @(975.36 mm, 623.57 mm): Label 'FAN_CPU_12V'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(1069.34 mm, 759.46 mm): Label 'HEADSET_POWER_EN'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
     @(1074.42 mm, 623.57 mm): Label 'NIGHT_LIGHT_12V'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
     @(1125.22 mm, 623.57 mm): Label 'FAN_AUX_12V'
 
- ** ERC messages: 27  Errors 0  Warnings 27
+ ** ERC messages: 22  Errors 0  Warnings 22
 
  ** Ignored checks:
     - Global label only appears once in the schematic

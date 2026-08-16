@@ -3,7 +3,7 @@
 ## Milestone
 
 - Revision: A1
-- Date: 2026-08-15
+- Date: 2026-08-16
 - Scope: detailed CM5-carrier connectivity before PCB routing
 - Source of truth: `../generate_interface_schematics.py`
 - Release state: engineering capture; not a fabrication release
@@ -16,10 +16,16 @@
 | `Network-PCIe.kicad_sch` | Native WAN1, PI7C9X2G608GP in 606 mode, three LAN7430 PCIe endpoints, four Wurth 74991114412 1 GbE MagJacks, PHY-side ESD, and the AW7915-NP1 4T4R interface through a Molex 0679101002 Mini PCIe socket |
 | `WWAN-SIM.kicad_sch` | TE 2199230-3 M.2 B-key socket, USB3 and USB2, modem control signals, supply filtering/protection, FSA2567 dual-SIM mux, and two nano-SIM holders |
 | `Display-Harness.kicad_sch` | Molex 208658-1001 HDMI, Wurth 692122030100 USB-A touch, ESD, and 12 V / 2.5 A monitor harness |
-| `Audio-Control.kicad_sch` | I2S0/TDM LVDS transport, translated audio I2C, ES8316 I2S1 headset codec, TPA6132A2 headphone amplifier, CTIA/AHJ jack, and dedicated clean rails |
+| `Audio-Control.kicad_sch` | I2S0/TDM LVDS transport with 3.3 V PCA9517A bus isolation, explicit 3.3 V/1.8 V I2S1 and I2C translation, ES8316 codec enable/decoupling, TPA6132A2 at 0 dB, Kycon CTIA map, one headset-ground bond, and dedicated clean rails |
 | `Thermal-IO.kicad_sch` | PCA9306 control-bus translation, two TCA9535 expanders, EMC2305 fan controller, three TMP117 temperature zones, status outputs, and four independently controlled PWM/tach fan headers; intake/exhaust are Delta `THA0412AD-TZW3` at 1 kHz PWM |
-| `Power-Regulators-A1.kicad_sch` | Protected-raw hold-up bank, `SYS_5V15`, revised 8 A `AUX_12V` starting design, dedicated `FAN_CPU_12V` and `FAN_AUX_12V` branches, modem/Wi-Fi/network/logic rails, point-of-load rails, display/audio branches, isolated bipolar audio power, clean AKM/headset LDOs, sequencing, and rail test points |
+| `Power-Regulators-A1.kicad_sch` | Protected raw input from floor-mounted PWR-SELECT, `SYS_5V15`, revised 8 A `AUX_12V` starting design, dedicated `FAN_CPU_12V` and `FAN_AUX_12V` branches, modem/Wi-Fi/network/logic rails, point-of-load rails, display/audio branches, isolated bipolar audio power, clean AKM/headset LDOs, sequencing, and rail test points |
 | `../AUDIO-8X8/Audio-8x8.kicad_sch` | Eight XLR inputs, eight XLR outputs, direct shield-to-chassis strategy, and one controlled chassis-to-AGND RF/static bond |
+| `../AUDIO-8X8/Audio-TDM-Clock.kicad_sch` | 30-conductor carrier harness, four terminated SN65LVDT2 clock/data receivers, one SN65LVDS1 ADC-return driver, reset/mute defaults, and the locked 48 kHz TDM256 clock contract |
+| `../AUDIO-8X8/AK5558-ADC.kicad_sch` | Exact AK5558VN 64-pin capture, eight differential inputs, references and bypassing, slave-mode/TDM256 straps, and I2C address `0x10` |
+| `../AUDIO-8X8/AK4458-DAC.kicad_sch` | Exact AK4458VN 48-pin capture, eight differential outputs on `L1/R1` through `L4/R4`, references and bypassing, serial-control/TDM256 defaults, and I2C address `0x11` |
+| `../AUDIO-8X8/Audio-Inputs.kicad_sch` | Eight repeated THAT1206/OPA1652 active-balanced input channels with RFI, ESD, fault protection, AC coupling, level shift, and anti-alias networks |
+| `../AUDIO-8X8/Audio-Outputs.kicad_sch` | Eight repeated OPA1652/THAT1646 active-balanced output channels with reconstruction/gain networks, fail-silent TQ2 relays, ferrites, RFI, ESD, and fault protection |
+| `../AUDIO-8X8/Audio-Power.kicad_sch` | Protected `AUDIO_12V_IN`, isolated bipolar line-stage power, low-noise preregulation, separate ADC/DAC analog LDOs, AKM digital rail, sequencing, and the single digital/analog ground star |
 
 ## Locked Interface Parts
 
@@ -29,12 +35,14 @@
 | PCIe switch | Diodes PI7C9X2G608GP, 606 mode |
 | Additional Ethernet | Microchip LAN7430, three devices |
 | RJ45/magnetics | Wurth 74991114412, four devices |
-| Wi-Fi socket | Molex 0679101002, full-size 52-pin Mini PCIe; official land-pattern import/verification remains a routing gate |
+| Wi-Fi socket | Molex 0679101002, full-size 52-pin Mini PCIe; drawing-derived land pattern is machine checked, with first-article and 3D fit still open |
 | Cellular socket | TE 2199230-3, M.2 B-key, 4.2 mm |
 | SIM mux | onsemi FSA2567MPX |
 | HDMI | Molex 208658-1001 |
 | USB touch | Wurth 692122030100 |
-| Headset codec/amplifier | ES8316 and TI TPA6132A2 |
+| Program-audio TDM connector | Molex 87832-6423 headers; 51110-3051 housings; 50394-8052 terminals |
+| Headset codec/amplifier | ES8316 and TI TPA6132A2RTER |
+| CTIA headset jack | Kycon STX-353K7A-6N-KTTR; production blocked pending physical coupon |
 | Fan controller | Microchip EMC2305-1-AP-TR |
 | Enclosure fans | Delta THA0412AD-TZW3, two devices; independent 1 kHz PWM/tach |
 | Temperature sensors | TI TMP117, three devices |
@@ -46,6 +54,12 @@
 | Wi-Fi startup load switch | TI TPS22990DMLR |
 | Isolated audio converter | Traco Power TRI 20-1223 |
 | Clean local audio LDOs | TI TPS7A20 family |
+| Program-audio ADC | AKM AK5558VN, eight channels, TDM256 slave, I2C `0x10` |
+| Program-audio DAC | AKM AK4458VN, eight physical outputs on `SDTI1`, TDM256 slave, I2C `0x11` |
+| Balanced input receiver | THAT Corporation THAT1206S08-U, eight devices |
+| ADC/output op amp | TI OPA1652AIDR, sixteen devices |
+| Balanced output driver | THAT Corporation THAT1646S08-U, eight devices |
+| Output fail-silent relay | Panasonic Industry TQ2-12V, eight devices; routing blocked pending pad/insertion coupon |
 
 ## ERC Classification
 
@@ -55,24 +69,33 @@ package pins. Do not suppress a warning merely to reduce the count.
 
 | Review sheet | Errors | Warnings | Classification |
 | --- | ---: | ---: | --- |
-| CM5 carrier overview | 0 | 40 | Isolated interface labels |
+| PWR-SELECT | 0 | 0 | Clean |
+| CM5 carrier overview | 0 | 42 | Isolated interface labels |
 | CM5 core allocated | 0 | 59 | Isolated interface labels |
 | Network / PCIe | 0 | 19 | Isolated interface labels |
-| WWAN / SIM | 0 | 4 | Isolated interface labels |
+| WWAN / SIM | 0 | 5 | Isolated interface labels |
 | Display harness | 0 | 1 | Isolated interface label |
-| Audio / control | 0 | 9 | Isolated interface labels |
-| Thermal / I/O | 0 | 16 | Isolated interface labels |
-| Power regulators A1 | 0 | 27 | Isolated interface labels |
+| Audio / control | 0 | 6 | Isolated interface labels |
+| Power regulators A1 | 0 | 22 | Isolated interface labels |
+| Thermal / I/O | 0 | 17 | Isolated interface labels |
 | AUDIO-8X8 | 0 | 53 | Isolated interface labels |
+| Audio TDM / clock | 0 | 9 | Isolated interface labels |
+| AK5558 ADC | 0 | 29 | Isolated interface labels and unused package pins |
+| AK4458 DAC | 0 | 24 | Isolated interface labels and unused package pins |
+| Audio inputs | 0 | 16 | Isolated interface labels |
+| Audio outputs | 0 | 16 | Isolated interface labels |
+| Audio power | 0 | 0 | Clean |
 
-These counts are regenerated by `../review_detailed_capture.sh` and must agree
-with the corresponding `REVIEW/*-ERC.rpt` files before PCB routing.
+These counts are regenerated by `../review_detailed_capture.sh` for all sixteen
+sheets and must agree with the corresponding `REVIEW/*-ERC.rpt` files before
+PCB routing.
 
 ## Gates Before Routing
 
-1. Import and independently verify the official Molex 0679101002 land pattern;
-   create and verify controlled footprints for the custom power packages,
-   select final passive footprints, and complete placement/thermal review.
+1. Close the ten routing blockers in the controlled audit: AK5558 `U201`,
+   AK4458 `U301`, and Panasonic relays `K501-K508`. Independently inspect the
+   Molex 0679101002 and drawing-derived power lands during first article, then
+   complete placement and thermal review.
 2. Bench-validate regulator stability, efficiency, thermal rise, startup,
    source transfer, current limits, fan startup/tach/fail-safe behavior, the
    45 C full-system thermal case, and the cellular weak-signal transmit case.
@@ -82,6 +105,10 @@ with the corresponding `REVIEW/*-ERC.rpt` files before PCB routing.
    frame/screw keepout shown in the current underside mechanical floorplan.
 4. Confirm selected Wi-Fi and global WWAN module power peaks, thermal solution,
    antenna cables, and regulatory integration requirements.
-5. Close AK5558VN/AK4458VN clock, power, anti-alias/reconstruction filter, and
-   active-balanced line-stage calculations.
+5. Approve AK5558/AK4458 exposed-pad, thermal-via, paste, and stencil coupons;
+   approve the TQ2 relay pad/insertion coupon; then qualify the 30-conductor TDM
+   harness at 12.288 MHz and the locked 48 kHz TDM256 mode.
 6. Review all protection return paths, chassis bonds, creepage, and EMI zoning.
+7. Close the Kycon headset-jack sample/coupon gate, verify detect-switch
+   polarity, and bench-validate every audio channel at +4 dBu nominal, +24 dBu
+   maximum, and 600 ohm compatibility load before production release.

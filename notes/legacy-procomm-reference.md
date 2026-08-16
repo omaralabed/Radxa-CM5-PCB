@@ -66,7 +66,8 @@ What to reuse as the Radxa starting point:
 - Status/telemetry outputs to the carrier
 - Raw-output hold-up concept and oscilloscope transfer validation requirement
 
-What must be recalculated for Radxa:
+Radxa-specific items recalculated at A1 and still requiring bench/release
+validation:
 
 - Input thresholds for the locked internal `RPS-400-24-C` primary PSU and
   backup sources

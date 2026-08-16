@@ -22,10 +22,11 @@ PWR-SELECT `J402` mates with CM5-CARRIER `J103` on the 3.3 V control I2C bus.
 The software and future-release requirements are controlled in
 `../docs/power-telemetry-software-spec.md`.
 
-Radxa changes are downstream of the protected raw-DC output. The final
-regulator/load budget must be recalculated for the Radxa CM5, HDMI touchscreen,
-8x8 AKM audio, Wi-Fi AP, cellular modem, Ethernet ports, headset codec, and
-four fans.
+Radxa changes are downstream of the protected raw-DC output. The A1
+regulator/load starting values are calculated for the Radxa CM5, HDMI
+touchscreen, 8x8 AKM audio, Wi-Fi AP, cellular modem, Ethernet ports, headset
+codec, and four fans. Final limits remain subject to measured module loads,
+loop-response, efficiency, thermal, source-transfer, and fault validation.
 
 Power reference files:
 
@@ -69,8 +70,8 @@ Implementation rule:
 - Rate the low-voltage source path for at least 15 A and recalculate the old
   10 A-class sense setting for at least a 14 A operating threshold after
   tolerance analysis.
-- Add a 22,000 uF nominal / 50 V protected raw-DC starting bank after the
-  source selector, with controlled precharge and stuffing room up to 47,000 uF.
+- Use the floor-mounted 27,200 uF nominal / 50 V protected raw-DC bank plus
+  660 uF local storage after the source selector, with controlled precharge.
 - Add local hold-up on critical downstream rails.
 - Ensure every regulator remains in regulation across 24 V PSU operation,
   13.0-16.8 V D-Tap/LEMO operation, Gold Mount operation, wiring drop,
@@ -86,9 +87,10 @@ The existing ProComm implementation already captures the intended behavior as a
 Rev C schematic in
 `/Users/viewvision/Desktop/ProComm enclosure and PCB boards/PCB_SOURCE/POWER_SELECTOR_24V_BATTERY`.
 Use that schematic as the electrical starting point, not the older rejected
-power board. Do not order or copy it unchanged for Radxa; the Radxa load,
-primary PSU, display rail, connector partition, source-current telemetry, SOA,
-hold-up capacitance, and thermal behavior must be recalculated.
+power board. Do not order or copy it unchanged for Radxa; the A1 capture adapts
+the Radxa load, primary PSU, display rail, connector partition, source-current
+telemetry, and hold-up bank. MOSFET SOA, inrush, tolerance, thermal behavior,
+and no-blink transfer still require release testing.
 
 ## Power Path
 
@@ -329,7 +331,7 @@ Reuse the previous ProComm alternate backup input concept:
 - Full reverse-polarity application must be non-destructive
 
 The prior `EGG.0B.302.CLL` is rated 10 A and is rejected for Rev A because the
-current budget reaches about 11.54 A at 13.0 V during the all-load transient.
+current budget reaches about 14.17 A at 13.0 V during the all-load transient.
 Use the matching 1B cable connector, wire, fuse, MOSFETs, PCB copper, and source
 path rated for at least 15 A. If an upstream D-Tap connector, cable, or source is
 only rated 10 A, software must enforce a verified backup-load limit after the

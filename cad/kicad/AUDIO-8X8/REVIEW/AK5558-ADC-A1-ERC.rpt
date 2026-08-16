@@ -1,0 +1,98 @@
+ERC report (2026-08-16T18:36:16, Encoding UTF8)
+Report includes: Errors, Warnings
+
+***** Sheet /
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(229.87 mm, 140.97 mm): Label 'ADC_CH3P'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(229.87 mm, 146.05 mm): Label 'ADC_CH4N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(229.87 mm, 148.59 mm): Label 'ADC_CH5P'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(229.87 mm, 153.67 mm): Label 'ADC_CH6N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(229.87 mm, 158.75 mm): Label 'ADC_CH7P'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(229.87 mm, 163.83 mm): Label 'ADC_CH8N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(229.87 mm, 179.07 mm): Label 'AKM_BCLK'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(229.87 mm, 184.15 mm): Label 'ADC_SDTO2_NC'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(229.87 mm, 186.69 mm): Label 'ADC_SDTO4_NC'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(229.87 mm, 189.23 mm): Label 'ADC_DSDOR4_NC'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(229.87 mm, 191.77 mm): Label 'AUD_I2C_SDA'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(229.87 mm, 194.31 mm): Label 'AUD_I2C_SCL'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(229.87 mm, 212.09 mm): Label 'ADC_CH1P'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(229.87 mm, 217.17 mm): Label 'ADC_CH2N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(270.51 mm, 140.97 mm): Label 'ADC_CH3N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(270.51 mm, 146.05 mm): Label 'ADC_CH4P'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(270.51 mm, 148.59 mm): Label 'ADC_CH5N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(270.51 mm, 153.67 mm): Label 'ADC_CH6P'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(270.51 mm, 158.75 mm): Label 'ADC_CH7N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(270.51 mm, 163.83 mm): Label 'ADC_CH8P'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(270.51 mm, 166.37 mm): Label 'AKM_MCLK'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(270.51 mm, 171.45 mm): Label 'AUD_ADC_RST_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(270.51 mm, 179.07 mm): Label 'AKM_FSYNC'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(270.51 mm, 181.61 mm): Label 'ADC_TDM_OUT'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(270.51 mm, 184.15 mm): Label 'ADC_SDTO3_NC'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(270.51 mm, 186.69 mm): Label 'ADC_DSDOL4_NC'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(270.51 mm, 189.23 mm): Label 'AUD_IRQ_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(270.51 mm, 212.09 mm): Label 'ADC_CH1N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(270.51 mm, 217.17 mm): Label 'ADC_CH2P'
+
+ ** ERC messages: 29  Errors 0  Warnings 29
+
+ ** Ignored checks:
+    - Global label only appears once in the schematic
+    - Four connection points are joined together
+    - Assigned footprint doesn't match footprint filters

@@ -21,11 +21,11 @@ the sheet from that script; do not hand-edit the generated KiCad file.
 - Source selector path: 15 A class.
 - Continuous design load: 151.7 W after locking the high-flow enclosure fans.
 - All-load transient budget: 184.2 W.
-- Installed carrier hold-up bank: four Nichicon `LGU1H562MELZ`, 5600 uF / 50 V
-  each, 22.4 mF total.
-- PWR-SELECT local storage: 660 uF, additive to the carrier bank.
-- Optional carrier stuffing: four additional 5600 uF positions plus one
-  `UHE1H222MHD6` 2200 uF position, raising the combined total to about 47.7 mF.
+- Installed PWR-SELECT hold-up bank: four Nichicon `LGU1H682MELB`, 6800 uF /
+  50 V each, 27.2 mF total, in 30 mm diameter x 35 mm snap-in cans.
+- PWR-SELECT local hybrid storage: 660 uF, for 27.86 mF combined nominal.
+- Worst-case capacitance basis: -20%, or 22.288 mF combined.
+- The suspended carrier retains only local high-frequency input decoupling.
 
 Ideal constant-power hold-up from 24.0 V to 12.5 V is:
 
@@ -35,19 +35,19 @@ t = C x (Vstart^2 - Vend^2) / (2 x P)
 
 | Capacitance | 151.7 W | 184.2 W |
 | --- | ---: | ---: |
-| 22.4 mF installed carrier bank | 31.0 ms | 25.5 ms |
-| About 47.7 mF fully stuffed including selector storage | 71.8 ms | 58.2 ms |
+| 27.86 mF combined nominal | 38.5 ms | 31.7 ms |
+| 22.288 mF combined at -20% | 30.8 ms | 25.4 ms |
 
 These are ideal energy calculations. ESR, tolerance, aging, temperature,
 converter dropout, wiring, and selector transfer behavior reduce real hold-up.
-The optional capacitors must remain DNP until hot-plug inrush and source-MOSFET
-SOA are proven.
+Hot-plug inrush, precharge, discharge time, source-MOSFET SOA, snap-in ripple
+current, and the tray-supported retention clamp must be proven before release.
 
 ## Locked Rail Tree
 
 | Rail | Rating | Controller / protection | Starting implementation |
 | --- | ---: | --- | --- |
-| `SYS_5V15` | 5.15 V / 12 A | TI `LM5146RGYR` | 300 kHz, 3.3 uH TDK `SPM10065VTT-3R3M-D`, onsemi `NVMFS6B25NLT1G` high side and `FDWS86068-F085` low side, five 47 uF output ceramics, 9.58 V typical turn-on UVLO |
+| `SYS_5V15` | 5.15 V / 12 A | TI `LM5146RGYR` | 300 kHz, 3.3 uH TDK `SPM10065VC-3R3M-D`, onsemi `NVMFS6B25NLT1G` high side and `FDWS86068-F085` low side, five 47 uF output ceramics, 9.58 V typical turn-on UVLO |
 | `AUX_12V` | Revised A1 starting point: 12 V / 8 A | TI `LM5176PWP` | 6 mOhm output sense gives about 8.33 A nominal limit. Recalculate MOSFET loss, magnetics, shunts, compensation, copper, and thermal design before routing. |
 | `MODEM_3V8_PRE` | 3.8 V / 6 A | TI `LM61460RJR` | 400 kHz, 4.7 uH Coilcraft `XAL7070-472MEC`, 100 k / 35.7 k feedback |
 | `MODEM_3V8` | 3.8 V / 6 A limit | TI `TPS259827LNRGER` | 255 ohm 1% `ILIM`, 1320 uF local polymer bulk; weak-signal transmit validation mandatory |
@@ -116,8 +116,10 @@ Delayed load reduction may occur only after the transfer is complete.
   display blink, TDM interruption, radio reset, or fan-controller reset.
 - Verify fuse clearing, short-circuit behavior, capacitor ripple current,
   discharge time, hot-plug inrush, and source-selector MOSFET SOA.
-- Create and inspect controlled land patterns for `LM61460RJR`, `LM61440RJR`,
-  and `TPS22990DMLR`; assign all remaining passive footprints before routing.
+- Inspect the drawing-derived RJR, DML, DNK and onsemi power-package lands in
+  the first-article stencil/assembly review; their source dimensions and pad-net
+  remapping are machine checked. The regulator-sheet BOM now has no missing
+  manufacturer, MPN, or footprint fields.
 
 ## Controlled Outputs
 
