@@ -7,8 +7,8 @@
 - Panel installation plane: 38.1 mm below the case parting line
 - Controlled concept drawings:
   - `../../cad/im2300-top-panel-layout-rev-j.svg`
-  - `../../cad/mechanical/im2300-underside-pcb-floorplan-rev-i.svg`
-  - `../../cad/mechanical/im2300-sidewall-cooling-layout-rev-a.svg`
+  - `../../cad/mechanical/im2300-underside-pcb-floorplan-rev-j.svg`
+  - `../../cad/mechanical/im2300-sidewall-cooling-layout-rev-b.svg`
 
 This package controls the measurements that must be taken from the actual
 Pelican iM2300, custom four-side frame, display, battery dock, and production
@@ -87,6 +87,15 @@ operator/handle side.
 - Maintain at least 100 mm practical separation between enclosure fan/PWM
   hardware and the AUDIO-8X8 quiet boundary; route fan power with a filtered
   star return and outside the guarded hinge-side PSU harness corridor.
+- Rotate the `RPS-400-24-C` footprint 90 degrees in plan and maintain at least
+  125 mm from the AUDIO-8X8 quiet boundary to the nearest grounded PSU guard
+  edge after tolerance stack-up. The Rev J nominal study provides 146 mm.
+  Maintain at least 10 mm vertically from that guard to the nearest carrier
+  component or panel underside and keep the overlying carrier B.Cu area clear.
+- Keep the actual HDMI, USB-touch, and 12 V lid-harness cable envelope at least
+  15 mm from the grounded PSU guard through full lid travel and the complete
+  panel-lift service motion. No mains conductor, fan harness, or shared clamp
+  may enter that protected corridor.
 - Gold Mount engagement is left to right. Keep the left insertion corridor and
   complete battery motion sweep free of panel hardware and connected cables.
 

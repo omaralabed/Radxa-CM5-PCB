@@ -66,7 +66,10 @@ Design the electronics as a top-panel-mounted assembly inside the iM2300:
   rely only on solder joints, board-to-board connectors, or thermal pads.
 - Add harness clamps and strain relief close to every PCB connector. Provide
   controlled service loops without allowing HDMI, USB, RF coax, fan, audio, or
-  power cables to strike the boards during transport.
+  power cables to strike the boards during transport. Reserve the H03 display
+  bundle in its own protected hinge corridor and maintain at least 15 mm from
+  the actual cable envelope to the grounded PSU guard during lid and panel
+  service motion.
 - Evaluate 2.0 mm PCB thickness or local stiffeners for long boards after the
   final stack-ups and controlled-impedance requirements are known.
 - Consider conformal coating after connectors, sockets, test pads, thermal
@@ -220,6 +223,11 @@ Design constraints:
   130 x 86 x 43 mm covered supply body, connectors/wiring, remote-sense and
   status wiring if used, wire bend radius, service guard, and natural
   convection airflow.
+- Rotate the PSU footprint 90 degrees in plan and place its grounded guard in
+  the hinge-side digital bay. Maintain at least 125 mm from the AUDIO-8X8 quiet
+  boundary to the nearest guard edge; the current nominal geometry is 146 mm.
+  Reserve the overlapping carrier area as a B.Cu component and switch-node
+  copper keepout, and verify at least 10 mm vertical clearance to the guard.
 - Provide a hinge-safe cable service loop for HDMI, USB touch, and display power.
 - Make service headers accessible without fully removing the board if possible.
 - Use connector keepouts and panel nut/washer clearances in the PCB outline.
@@ -251,8 +259,9 @@ The CPU fan, dedicated cellular modem fan, and two enclosure fans should be
 designed around this thermal choice.
 
 The bottom-mounted AC/DC PSU is also part of the thermal load. Install it in a
-guarded hinge/display-side bay, away from both sidewall fans and their PWM/power
-harnesses. Its covered case
+guarded hinge/display-side bay, rotated and shifted into the digital side so
+the grounded guard remains at least 125 mm from the audio quiet boundary. Keep
+it away from both sidewall fans and their PWM/power harnesses. Its covered case
 uses natural convection and must be checked for derating in the sealed iM2300,
 especially when the CM5, Wi-Fi AP, cellular modem, Ethernet controllers, HDMI
 display power, audio rails, and fans are all active.

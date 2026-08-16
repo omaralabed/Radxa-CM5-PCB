@@ -25,12 +25,15 @@ and replace the nominal panel outline with measurements from the actual case.
 
 ## Current Underside Study
 
-- `mechanical/im2300-underside-pcb-floorplan-rev-i.svg` - current pre-routing
+- `mechanical/im2300-underside-pcb-floorplan-rev-j.svg` - current pre-routing
   floorplan. It limits `AUDIO-8X8` to 78 x 268 mm and `CM5-CARRIER` to 166 x
   268 mm, keeps both boards out of the 15 mm perimeter band, places the CM5 and
-  modem on B.Cu with downward cooling cartridges, moves the PSU to a guarded
-  hinge-side floor bay, and defines the right-wall intake/operator-wall exhaust
-  airflow corridor. It reserves the rear bodies plus fused 12 V harness route
+  modem on B.Cu with downward cooling cartridges, rotates the PSU 90 degrees
+  in a guarded hinge-side floor bay at least 125 mm from the audio quiet
+  boundary, and defines the right-wall intake/operator-wall exhaust airflow
+  corridor. The nominal guard separation is 146 mm, and the lid-display bundle
+  has a separate protected route with at least 15 mm guard clearance. It
+  reserves the rear bodies plus fused 12 V harness route
   for the independent panel lights. It
   reserves the Gold Mount battery insertion corridor on the left and locks
   engagement toward the network side.

@@ -59,7 +59,9 @@ interface baseline into complete detailed schematics.
   `TMP117` sensors. Enclosure fan 1 is filtered
   right-wall intake and enclosure fan 2 is operator-wall exhaust. Baffles must
   route air through the hot zones. Keep fan/PWM wiring out of the XLR quiet zone
-  and guarded hinge-side PSU corridor.
+  and guarded hinge-side PSU corridor. The PSU guard stays at least 125 mm from
+  the audio boundary, and the protected H03 lid-harness envelope stays at least
+  15 mm from the guard through service motion.
 - Top-panel mechanical layout inside the source-checked 17.00 in x 11.733 in
   nominal base bezel reference: XLR bank position, network/power/service
   connector positions, antenna placement, vents, labels, and service clearance.

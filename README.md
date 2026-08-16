@@ -4,7 +4,7 @@ Project workspace for a custom carrier board for the Radxa CM5 compute module.
 
 ## Self-Contained Project Files
 
-Only the current Rev J top-panel drawing and Rev I underside-floorplan drawing
+Only the current Rev J top-panel drawing and Rev J underside-floorplan drawing
 are retained under `cad/`. They reserve a 15 mm four-side frame/screw keepout
 and limit the suspended PCB envelopes before routing. The battery calculation
 is under `docs/`. The obsolete 8.7 GB design-session recording was intentionally
@@ -42,8 +42,12 @@ under `references/procomm-field-unit/`.
   and an operator-wall center-right exhaust; the top panel has no fan or mesh
   openings.
 - The `RPS-400-24-C` remains bottom-mounted in a guarded hinge/display-side bay.
-  Enclosure-fan power/PWM harnesses stay out of the PSU corridor and the XLR
-  analog quiet zone.
+  Its footprint is rotated 90 degrees and shifted into the digital side, giving
+  146 mm nominal separation from the audio quiet boundary to the grounded guard
+  with a controlled 125 mm minimum. Enclosure-fan power/PWM harnesses stay out
+  of the PSU corridor and the XLR analog quiet zone.
+  The HDMI, USB-touch, and 12 V lid harness uses a separate protected corridor
+  with at least 15 mm clearance to the PSU guard through service motion.
 - Storage decision selected: CM5 eMMC only.
 - Recovery/provisioning selected: USB recovery, debug UART, and network provisioning.
 - Enclosure selected: Pelican Storm Case iM2300 with custom top panel and PCB mounted underneath.

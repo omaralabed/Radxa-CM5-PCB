@@ -1,4 +1,4 @@
-// ProComm iM2300 cooling clearance concept Rev A.
+// ProComm iM2300 cooling clearance concept Rev B.
 // All dimensions are millimeters and remain preliminary until the actual case is measured.
 $fn = 48;
 
@@ -25,11 +25,25 @@ modem_fan_h = 20.0;
 modem_fan_bottom_z = modem_card_bottom_z - modem_sink_h - modem_adapter_h - modem_fan_h;
 modem_floor_gap = modem_fan_bottom_z;
 
+audio_quiet_boundary_x = 98.0;
+psu_guard_x = 244.0;
+psu_audio_gap = psu_guard_x - audio_quiet_boundary_x;
+psu_guard_top_z = 48.0;
+psu_carrier_gap = carrier_z - psu_guard_top_z;
+lid_harness_corridor_right_x = 229.0;
+lid_harness_psu_gap = psu_guard_x - lid_harness_corridor_right_x;
+
 assert(cpu_floor_gap >= 10.0, "CM5 dedicated fan inlet clearance is below 10 mm");
 assert(modem_floor_gap >= 10.0, "Modem dedicated fan inlet clearance is below 10 mm");
+assert(psu_audio_gap >= 125.0, "PSU guard is less than 125 mm from the audio quiet boundary");
+assert(psu_carrier_gap >= 10.0, "PSU guard clearance to the carrier is below 10 mm");
+assert(lid_harness_psu_gap >= 15.0, "Lid-harness corridor is less than 15 mm from the PSU guard");
 echo(str("Panel plane above floor: ", panel_z, " mm"));
 echo(str("CM5 fan inlet gap: ", cpu_floor_gap, " mm"));
 echo(str("Modem fan inlet gap: ", modem_floor_gap, " mm"));
+echo(str("PSU guard to audio quiet boundary: ", psu_audio_gap, " mm"));
+echo(str("PSU guard to carrier clearance: ", psu_carrier_gap, " mm"));
+echo(str("Lid-harness corridor to PSU guard: ", lid_harness_psu_gap, " mm"));
 
 module colored_box(size, color_value, alpha = 1.0) {
   color([color_value[0], color_value[1], color_value[2], alpha]) cube(size);
@@ -77,9 +91,16 @@ translate([219, 15, carrier_z]) {
   translate([161, 0, 0]) colored_box([5, 268, carrier_t], [0.15, 0.66, 0.38], 0.90);
 }
 
-// Guarded hinge/display-side PSU bay on the bottom floor.
-translate([125, 15, 3]) colored_box([130, 86, 43], [0.82, 0.25, 0.20], 0.75);
-color([0.95, 0.47, 0.39, 0.22]) translate([119, 9, 3]) cube([142, 98, 47]);
+// Guarded hinge/display-side PSU bay on the bottom floor. The supply is rotated
+// 90 degrees in plan and moved into the digital side to protect the audio zone.
+translate([250, 21, 3]) colored_box([86, 130, 43], [0.82, 0.25, 0.20], 0.75);
+color([0.95, 0.47, 0.39, 0.22]) translate([psu_guard_x, 15, 3]) cube([98, 142, 45]);
+
+// Carrier B.Cu keepout directly above the guarded PSU bay.
+color([0.95, 0.47, 0.39, 0.52]) translate([psu_guard_x, 15, carrier_z - 0.3]) difference() {
+  cube([98, 142, 0.6]);
+  translate([2, 2, -0.1]) cube([94, 138, 0.8]);
+}
 
 // Power selector board remains in the center/operator-side floor bay.
 translate([96, 190, 3]) colored_box([116, 80, 18], [0.62, 0.37, 0.80], 0.62);
@@ -97,7 +118,7 @@ color([0.78, 0.48, 0.90]) translate([cpu_x - 4, cpu_y - 4, cpu_fan_bottom_z]) di
 }
 
 // Universal 3052 M.2 WWAN cooling cartridge on carrier B.Cu, facing down.
-modem_x = 340.5;
+modem_x = 350.0;
 modem_y = 116.0;
 translate([modem_x, modem_y, 54.0]) colored_box([30, 52, 1.2], [0.83, 0.60, 0.18], 0.95);
 translate([modem_x - 5, modem_y + 6, modem_card_bottom_z - modem_sink_h]) finned_sink([40, 40, modem_sink_h]);
@@ -109,7 +130,7 @@ translate([inner_x - 20, 190, 24]) fan_body([20, 40, 40], "x", [0.18, 0.55, 0.34
 translate([290, inner_y - 20, 24]) fan_body([40, 20, 40], "y", [0.72, 0.52, 0.20]);
 
 // Audio quiet boundary and airflow guides.
-color([0.12, 0.70, 0.78, 0.30]) translate([98, 10, 3]) cube([2, 278, panel_z - 3]);
+color([0.12, 0.70, 0.78, 0.30]) translate([audio_quiet_boundary_x, 10, 3]) cube([2, 278, panel_z - 3]);
 color([0.40, 0.72, 1.00, 0.28]) hull() {
   translate([406, 210, 44]) sphere(d = 8);
   translate([340, 180, 44]) sphere(d = 8);
@@ -119,8 +140,16 @@ color([0.40, 0.72, 1.00, 0.24]) hull() {
   translate([310, 280, 44]) sphere(d = 8);
 }
 
+// Protected HDMI, USB-touch, and 12 V lid-harness lane beside the PSU guard.
+color([0.26, 0.56, 0.94, 0.34]) hull() {
+  translate([205, 18, 53]) sphere(d = 8);
+  translate([219, 70, 53]) sphere(d = 8);
+  translate([219, 238, 53]) sphere(d = 8);
+  translate([248, 260, 53]) sphere(d = 8);
+}
+
 // Reference labels are raised so they remain visible in preview renders.
-color("white") translate([125, 7, 48]) linear_extrude(0.7) text("HINGE-SIDE PSU", size = 6);
+color("white") translate([246, 9, 49]) linear_extrude(0.7) text("HINGE PSU / 146 mm AUDIO GAP", size = 4.2);
 color("white") translate([307, 238, 66]) linear_extrude(0.7) text("CM5", size = 6);
 color("white") translate([333, 113, 66]) linear_extrude(0.7) text("WWAN", size = 5);
 color("white") translate([16, 145, 66]) linear_extrude(0.7) text("AUDIO QUIET", size = 5);

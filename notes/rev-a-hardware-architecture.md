@@ -162,7 +162,10 @@ gasket, finger guard, and splash-directed louver.
 - Keep fan motors and PWM/power harnesses outside the XLR quiet zone. Filter the
   fan rail and use a star return at the power board, independent of audio return.
 - Keep the bottom-mounted `RPS-400-24-C` in a guarded hinge/display-side bay;
-  do not route fan harnesses through the PSU or guarded AC corridor.
+  rotate it 90 degrees in plan and maintain at least 125 mm from the audio
+  quiet boundary to its grounded guard. Do not route fan harnesses through the
+  PSU or guarded AC corridor. Keep the actual H03 HDMI/USB-touch/12 V cable
+  envelope at least 15 mm from the guard and use independent clamps.
 - Size the thermal solution from the 151.7 W continuous system design case and
   verify the 184.2 W transient case. The display dissipates in the lid, so record
   base and lid temperatures separately.

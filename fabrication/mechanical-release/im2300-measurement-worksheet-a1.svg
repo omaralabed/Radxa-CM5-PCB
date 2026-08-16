@@ -13,7 +13,7 @@
   </defs>
   <rect class="bg" width="420" height="297"/>
   <text class="h1" x="12" y="14">RADXA CM5 PROCOMM - iM2300 PHYSICAL MEASUREMENT WORKSHEET</text>
-  <text class="txt" x="12" y="20">REV A1 | UNRELEASED UNTIL ALL M001-M046 VALUES AND SIGNOFFS ARE COMPLETE | DIMENSIONS IN MILLIMETERS</text>
+  <text class="txt" x="12" y="20">REV A1 | UNRELEASED UNTIL ALL M001-M048 VALUES AND SIGNOFFS ARE COMPLETE | DIMENSIONS IN MILLIMETERS</text>
 
   <g transform="translate(18 35)">
     <text class="h2" x="0" y="-6">TOP VIEW AT PANEL PLANE A - 38.1 mm BELOW PARTING LINE D</text>
@@ -85,7 +85,7 @@
     <text class="txt" x="0" y="23">M031-M033  Gold Mount engages LEFT TO RIGHT; measure corridor and slide travel</text>
     <text class="txt" x="0" y="30">M034-M038  Sidewall fan axes and fan/audio separation</text>
     <text class="txt" x="0" y="37">M039-M043  PCB envelopes, frame hardware and vibration restraints</text>
-    <text class="txt" x="0" y="44">M044-M046  Hinge notch and sidewall fan reinforcement clearance</text>
+    <text class="txt" x="0" y="44">M044-M048  Hinge notch, fan reinforcement, PSU/audio and lid-harness clearance</text>
     <text class="warn" x="0" y="56">DO NOT SCALE THIS WORKSHEET FOR PANEL FABRICATION.</text>
     <text class="tiny" x="0" y="62">Use the final released DXF/STEP after all measurements are entered and signed.</text>
   </g>

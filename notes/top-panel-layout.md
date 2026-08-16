@@ -191,6 +191,10 @@ Thermal/mechanical zone:
   down. The harness exits through one centered notch that opens directly
   through the hinge edge; there is no enclosed cable hole farther inside the
   panel.
+- Route the H03 bundle through the protected lane on the left side of the
+  hinge-side PSU guard. Maintain at least 15 mm from the actual cable envelope
+  to the grounded guard through full lid travel and panel-lift service motion;
+  do not cross mains or fan wiring and do not share clamps.
 - With the lid open, releasing the service-loop clamps must allow at least
   300 mm top-panel lift and 45 degrees of tilt without loading any connector.
 
@@ -273,7 +277,7 @@ zone, and the two hardware-controlled diffused warm-white panel lights. Rev J
 adds the 15 mm four-side frame/screw keepout, moves the XLR bank 2.3 mm right,
 retains the centered 90 x 8 mm hinge-edge lid-harness notch and selected DPST
 rocker, and removes all top-panel cooling openings. Sidewall fan geometry is
-controlled by `../cad/mechanical/im2300-sidewall-cooling-layout-rev-a.svg`. It
+controlled by `../cad/mechanical/im2300-sidewall-cooling-layout-rev-b.svg`. It
 also locks the Gold Mount dock orientation so the battery
 engages from left to right, toward the network side, and removes toward the XLR
 side. The left insertion corridor and complete slide/release sweep must remain

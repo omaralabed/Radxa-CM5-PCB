@@ -135,7 +135,10 @@ Start from the Radxa CM5 IO reference design and remove anything not needed.
 - HDMI and USB touchscreen routing need ESD protection, connector placement,
   and enough 12 V accessory power for the selected 15.6-inch display/touch
   assembly.
-- Lid-mounted touchscreen needs hinge-safe harness routing, strain relief, and enough clearance when the case opens/closes.
+- Lid-mounted touchscreen needs hinge-safe harness routing, strain relief, and
+  enough clearance when the case opens/closes. Keep the actual HDMI,
+  USB-touch, and 12 V cable envelope at least 15 mm from the grounded PSU guard
+  through full lid and panel-service motion.
 - Fan control needs PWM/tach GPIO allocation, current budget, acoustic planning,
   one modem-zone sensor placement, and at least two board temperature sensor
   placements for the two board/enclosure fans.
@@ -143,7 +146,9 @@ Start from the Radxa CM5 IO reference design and remove anything not needed.
 - Power input and load switch/current-limit choices need to match peak CM5 and peripheral current.
 - The locked `RPS-400-24-C` PSU must be validated mechanically and thermally in
   the iM2300; use the 252 W convection rating unless forced-air PSU cooling is
-  intentionally designed and tested.
+  intentionally designed and tested. Its guarded floor bay is on the
+  hinge/display side, rotated 90 degrees in plan, with 146 mm nominal and 125
+  mm minimum separation from the AUDIO-8X8 quiet boundary.
 - AC mains entry requires a fused C14 inlet with no built-in rocker switch, PE bonding, guarded service isolation, strain relief, and separation from audio/RF/high-speed low-voltage wiring.
 - Qualtek `719W-00/03` is the production C14 starting part; RS PRO `811-7204`
   remains only the fused/no-switch panel-style reference. Do not claim a 15 A

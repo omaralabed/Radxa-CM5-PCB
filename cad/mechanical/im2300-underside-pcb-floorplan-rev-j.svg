@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1320" viewBox="-30 -43 491.8 371" role="img" aria-labelledby="title desc" style="background:#111418">
-  <title id="title">Radxa CM5 ProComm iM2300 underside PCB floorplan Rev I</title>
-  <desc id="desc">Preliminary underside plan showing the 15 millimeter four-side frame and screw keepout, hinge-side bottom PSU bay, bottom-side CM5 and modem cooling cartridges, a right-side intake and operator-side exhaust, the protected audio quiet zone, routing corridors, and independent panel-light harness.</desc>
+  <title id="title">Radxa CM5 ProComm iM2300 underside PCB floorplan Rev J</title>
+  <desc id="desc">Preliminary underside plan showing the 15 millimeter four-side frame and screw keepout, rotated hinge-side bottom PSU bay with at least 125 millimeters of guarded separation from audio, bottom-side CM5 and modem cooling cartridges, a right-side intake and operator-side exhaust, routing corridors, and independent panel-light harness.</desc>
   <defs>
     <pattern id="minorGrid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M10 0H0V10" fill="none" stroke="#2b3138" stroke-width=".22"/></pattern>
     <pattern id="majorGrid" width="50" height="50" patternUnits="userSpaceOnUse"><rect width="50" height="50" fill="url(#minorGrid)"/><path d="M50 0H0V50" fill="none" stroke="#39414a" stroke-width=".34"/></pattern>
@@ -12,14 +12,14 @@
       .page{fill:#111418}.panel{fill:#171c21;stroke:#c4ccd4;stroke-width:1.2}.safe{fill:none;stroke:#58616b;stroke-width:.45;stroke-dasharray:3 2}.grid{fill:url(#majorGrid);opacity:.5}
       .audio{stroke:#52c7d5}.network{stroke:#69d391}.rf{stroke:#e4b95f}.service{stroke:#76a7f7}.backup{stroke:#c493e8}.mains{stroke:#f27767}.lighting{stroke:#f4d8a2}.board{stroke-width:.8}.zone{stroke-width:.6;stroke-dasharray:3 2}.keep{fill:none;stroke-width:.55;stroke-dasharray:2 2}
       .route{fill:none;stroke-width:1.1;stroke-dasharray:3 2}.airflow{fill:none;stroke:#54c8d6;stroke-width:1.2;stroke-dasharray:3 2;marker-end:url(#arrow)}.mount{fill:#0d1013;stroke:#d7dee4;stroke-width:.5}.module{fill:#11171c;stroke-width:.55}.dim{fill:none;stroke:#aab3bd;stroke-width:.45;marker-start:url(#arrow);marker-end:url(#arrow)}.extension{stroke:#6f7983;stroke-width:.35}
-      .title{fill:#f6f8fa;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:7.2px;font-weight:750}.subtitle{fill:#aeb7c0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:3.05px}.label{fill:#eef2f5;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:3.15px;font-weight:650;text-anchor:middle}.small{fill:#bac3cc;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:2.55px;text-anchor:middle}.tiny{fill:#aeb8c2;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:2.15px;text-anchor:middle}.note{fill:#aeb8c2;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:2.25px}.dimension{fill:#bdc6ce;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:3px;text-anchor:middle}
+      .title{fill:#f6f8fa;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:7.2px;font-weight:750}.subtitle{fill:#aeb7c0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:3.05px}.label{fill:#eef2f5;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:3.15px;font-weight:650;text-anchor:middle}.small{fill:#bac3cc;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:2.55px;text-anchor:middle}.tiny{fill:#aeb8c2;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:2.15px;text-anchor:middle}.note{fill:#aeb8c2;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:2.25px}.dimension{fill:#bdc6ce;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:3px;text-anchor:middle}.psunote{fill:#ff8a7b;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:2.25px;font-weight:650;text-anchor:middle}
       text{letter-spacing:0}
     </style>
   </defs>
 
   <rect class="page" x="-30" y="-43" width="491.8" height="371"/>
   <text class="title" x="0" y="-32">RADXA CM5 PROCOMM - iM2300 UNDERSIDE PCB FLOORPLAN</text>
-  <text class="subtitle" x="0" y="-24">REV I SIDEWALL AIRFLOW + BOTTOM-SIDE COOLING | HINGE-SIDE PSU BAY | PANEL PLANE 38.1 mm BELOW PARTING LINE</text>
+  <text class="subtitle" x="0" y="-24">REV J | HINGE-SIDE PSU: 146 mm NOMINAL / 125 mm MIN TO AUDIO | PROTECTED LID HARNESS | SIDEWALL AIRFLOW</text>
 
   <line class="extension" x1="0" y1="0" x2="0" y2="-13"/><line class="extension" x1="431.8" y1="0" x2="431.8" y2="-13"/>
   <line class="dim" x1="1.5" y1="-10" x2="430.3" y2="-10"/><text class="dimension" x="215.9" y="-12.5">431.8 NOMINAL - FINISHED OUTLINE REQUIRES MEASURED 38.1 mm RECESS</text>
@@ -74,10 +74,9 @@
   <path d="M91 85H205" fill="none" stroke="#c493e8" stroke-width="1.2" marker-end="url(#batteryArrow)"/>
   <text class="tiny" x="151" y="91">SLIDE TRAVEL + LEFT HAND CLEARANCE FROM SAMPLE</text>
 
-  <!-- Bottom-mounted PSU in guarded hinge-side bay; separated from fan hardware. -->
-  <rect x="125" y="15" width="130" height="86" rx="2" fill="url(#floorHatch)" stroke="#f27767" stroke-width=".8" stroke-dasharray="3 2"/>
-  <text class="label" x="190" y="43">RPS-400-24-C</text><text class="small" x="190" y="49">130 x 86 x 43 mm</text><text class="small" x="190" y="55">HINGE-SIDE GUARDED BOTTOM BAY</text>
-  <text class="tiny" x="190" y="60">SHIELDED AC/PSU ZONE - NO FAN OR PWM HARNESS</text>
+  <!-- Bottom-mounted PSU in guarded hinge-side bay; rotated and shifted away from audio. -->
+  <rect x="244" y="15" width="98" height="142" rx="2" fill="#3a211f" fill-opacity=".16" stroke="#f27767" stroke-width=".9" stroke-dasharray="3 2"/>
+  <rect x="250" y="21" width="86" height="130" rx="2" fill="url(#floorHatch)" stroke="#f27767" stroke-width=".8"/>
   <rect x="96" y="190" width="116" height="80" rx="2" fill="url(#floorHatch)" stroke="#c493e8" stroke-width=".8" stroke-dasharray="3 2"/>
   <text class="label" x="154" y="220">PWR-SELECT</text><text class="small" x="154" y="226">116 x 80 STARTING ENVELOPE</text><text class="small" x="154" y="232">BOTTOM FLOOR - CANDIDATE</text>
   <text class="tiny" x="160" y="274">PSU/PWR LOCATIONS REQUIRE 3D CHECK WITH BATTERY DOCK, C14 BODY, AND CARRIER</text>
@@ -94,7 +93,8 @@
   <rect class="zone network" x="219" y="15" width="166" height="268" rx="3" fill="#173426" fill-opacity=".36"/>
   <text class="label" x="302" y="23">CM5-CARRIER - 166 x 268 MAXIMUM OUTLINE</text>
   <text class="small" x="302" y="28">10-LAYER RECOMMENDED | CONTROLLED IMPEDANCE</text>
-  <g class="mount"><circle cx="225" cy="21" r="1.8"/><circle cx="379" cy="21" r="1.8"/><circle cx="225" cy="277" r="1.8"/><circle cx="379" cy="277" r="1.8"/><circle cx="225" cy="149" r="1.8"/><circle cx="379" cy="149" r="1.8"/></g>
+  <g class="mount"><circle cx="225" cy="21" r="1.8"/><circle cx="379" cy="21" r="1.8"/><circle cx="225" cy="277" r="1.8"/><circle cx="379" cy="277" r="1.8"/><circle cx="236" cy="169" r="1.8"/><circle cx="379" cy="149" r="1.8"/></g>
+  <rect x="244" y="15" width="98" height="142" rx="2" fill="#f27767" fill-opacity=".035" stroke="#f27767" stroke-width=".55" stroke-dasharray="2 2"/>
 
   <!-- Network and high-speed placement -->
   <rect class="module network" x="232" y="34" width="135" height="74" rx="2"/>
@@ -103,11 +103,12 @@
   <text class="tiny" x="252" y="60">WAN1</text><text class="tiny" x="290" y="60">WAN2</text><text class="tiny" x="252" y="87">LAN1</text><text class="tiny" x="290" y="87">LAN2</text>
   <rect class="module service" x="313" y="50" width="20" height="20"/><text class="tiny" x="323" y="61">REFCLK</text><text class="tiny" x="323" y="65">RESET</text>
   <rect class="module network" x="332" y="46" width="30" height="51"/><text class="tiny" x="347" y="66">MINI PCIE</text><text class="tiny" x="347" y="71">AW7915-NP1</text><text class="tiny" x="347" y="76">4T4R WIFI</text>
+  <text class="psunote" x="293" y="113">PSU GUARD BELOW - NO B.Cu PARTS OR SWITCH-NODE COPPER</text>
 
   <!-- WWAN and carrier control. WWAN card and cooling cartridge are on B.Cu. -->
   <rect class="module service" x="232" y="116" width="55" height="40" rx="2"/><text class="tiny" x="259.5" y="132">HEADSET + FAN</text><text class="tiny" x="259.5" y="137">CONTROL + SENSORS</text><text class="tiny" x="259.5" y="142">SERVICE LOGIC</text>
-  <rect class="module rf" x="340.5" y="116" width="30" height="52" rx="1"/><text class="tiny" x="355.5" y="136">M.2 B-KEY</text><text class="tiny" x="355.5" y="141">WWAN 3052</text><text class="tiny" x="355.5" y="146">B.Cu / FACES DOWN</text>
-  <circle class="keep service" cx="355.5" cy="142" r="22"/><text class="tiny" x="355.5" y="172">MODEM HEATSINK + ATTACHED FAN CARTRIDGE</text>
+  <rect class="module rf" x="350" y="116" width="30" height="52" rx="1"/><text class="tiny" x="365" y="136">M.2 B-KEY</text><text class="tiny" x="365" y="141">WWAN 3052</text><text class="tiny" x="365" y="146">B.Cu / FACES DOWN</text>
+  <circle class="keep service" cx="365" cy="142" r="20"/><text class="tiny" x="365" y="172">MODEM HEATSINK + ATTACHED FAN CARTRIDGE</text>
 
   <!-- Power conversion in the digital airflow chamber; no top-panel fan bodies. -->
   <rect class="zone service" x="225" y="180" width="153" height="61" rx="2" fill="#17263d" fill-opacity=".18"/>
@@ -133,7 +134,7 @@
   <text class="tiny" x="321" y="250">SHORT UPSTREAM</text>
 
   <!-- USB3 WWAN path leaves the central trunk above the power zone -->
-  <path class="route service" d="M303 174V168H326C337 168 340 156 340.5 149"/>
+  <path class="route service" d="M303 174V168H336C346 168 349 156 350 149"/>
   <text class="tiny" x="324" y="165">USB3 WWAN</text>
 
   <!-- Local lid-harness and differential TDM interfaces beside CM5 -->
@@ -154,7 +155,7 @@
   <text class="label" x="406.5" y="18">RF COAX</text>
   <text class="small" x="406.5" y="23">CORRIDOR</text>
   <text class="tiny" x="406.5" y="28">8 COAX: WIFI 1-4 + CELL 1-4</text>
-  <path class="route rf" d="M347 58C372 58 386 35 406 35M362 68C380 68 390 69 406 69M362 78C380 80 391 96 406 103M357 90C378 96 392 124 406 137M370.5 128C384 136 396 160 406 171M370.5 140C386 153 397 191 406 205M370.5 151C386 171 397 224 406 239M363 164C381 192 396 258 406 273"/>
+  <path class="route rf" d="M347 58C372 58 386 35 406 35M362 68C380 68 390 69 406 69M362 78C380 80 391 96 406 103M357 90C378 96 392 124 406 137M380 128C389 136 397 160 406 171M380 140C390 153 398 191 406 205M380 151C391 171 399 224 406 239M378 164C389 192 399 258 406 273"/>
   <text class="tiny" x="406.5" y="286">NO SWITCH NODES / USB3 / PCIE UNDER COAX</text>
 
   <!-- Inter-board harnesses -->
@@ -165,14 +166,18 @@
   <text class="tiny" x="215" y="225">PROTECTED_RAW</text>
   <path class="route audio" d="M212 242C176 249 132 252 90.5 252"/>
   <text class="tiny" x="132" y="247">SEPARATE CLEAN AUDIO POWER</text>
-  <path class="route service" d="M215.9 8C220 60 219 150 219 240V261H240"/>
-  <text class="tiny" x="215.9" y="18">HINGE-EDGE LID HARNESS NOTCH</text>
+  <path d="M205 8V48C205 56 219 56 219 68V235C219 248 229 261 240 261" fill="none" stroke="#76a7f7" stroke-width="4.5" stroke-opacity=".16"/>
+  <path class="route service" d="M205 8V48C205 56 219 56 219 68V235C219 248 229 261 240 261"/>
+  <path d="M216 68V235" fill="none" stroke="#76a7f7" stroke-width=".45" stroke-dasharray="2 2"/>
+  <path d="M229 68V235" fill="none" stroke="#76a7f7" stroke-width=".45" stroke-dasharray="2 2"/>
+  <text class="tiny" x="205" y="18">HINGE-EDGE LID HARNESS NOTCH</text>
+  <text class="tiny" x="226" y="190" transform="rotate(-90 226 190)">LID HARNESS | 15 mm MIN TO PSU GUARD</text>
 
   <!-- Sidewall cooling interfaces are below the panel plane and need 3D validation. -->
   <path d="M421 198V242" stroke="#54c8d6" stroke-width="2.2"/>
-  <text class="small" x="418" y="220" transform="rotate(-90 418 220)">RIGHT INTAKE - SIDEWALL REV A</text>
+  <text class="small" x="418" y="220" transform="rotate(-90 418 220)">RIGHT INTAKE - SIDEWALL REV B</text>
   <path d="M290 287H330" stroke="#e4b95f" stroke-width="2.2"/>
-  <text class="small" x="310" y="294">OPERATOR EXHAUST - SIDEWALL REV A</text>
+  <text class="small" x="310" y="294">OPERATOR EXHAUST - SIDEWALL REV B</text>
 
   <!-- Legend and release notes -->
   <rect x="0" y="306" width="431.8" height="22" fill="#111418"/>

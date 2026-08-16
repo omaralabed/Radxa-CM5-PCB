@@ -1,30 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1125" viewBox="0 0 480 300" role="img" aria-labelledby="title desc">
-  <title id="title">Pelican iM2300 sidewall cooling layout Rev A</title>
-  <desc id="desc">Preliminary sidewall cooling layout with a right-side filtered intake, operator-side center-right exhaust, hinge-side bottom PSU bay, protected audio quiet zone, and no top-panel cooling openings.</desc>
+  <title id="title">Pelican iM2300 sidewall cooling layout Rev B</title>
+  <desc id="desc">Preliminary sidewall cooling layout with a right-side filtered intake, operator-side center-right exhaust, rotated hinge-side bottom PSU bay at least 125 millimeters from the audio quiet boundary, and no top-panel cooling openings.</desc>
   <defs>
     <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M10 0H0V10" fill="none" stroke="#303740" stroke-width=".22"/></pattern>
     <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#68b8ff"/></marker>
     <marker id="dimArrow" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto-start-reverse"><path d="M6 3L0 0V6Z" fill="#b7c0c9"/></marker>
     <style>
-      .page{fill:#111418}.grid{fill:url(#grid);opacity:.55}.box{fill:#151b21;stroke:#596673;stroke-width:.55}.case{fill:#182027;stroke:#cad2d9;stroke-width:1}.panel{fill:#343e48;stroke:#eef2f5;stroke-width:1}.power{fill:#38231f;stroke:#f27767;stroke-width:1}.fan{fill:#17263d;stroke:#76a7f7;stroke-width:1}.intake{fill:#173426;stroke:#69d391;stroke-width:1}.exhaust{fill:#382f1e;stroke:#e4b95f;stroke-width:1}.quiet{fill:#173036;fill-opacity:.25;stroke:#52c7d5;stroke-width:.7;stroke-dasharray:3 2}.air{fill:none;stroke:#68b8ff;stroke-width:1.7;marker-end:url(#arrow)}.dim{fill:none;stroke:#b7c0c9;stroke-width:.55;marker-start:url(#dimArrow);marker-end:url(#dimArrow)}.hold{fill:#39211e;stroke:#f27767;stroke-width:.8}
+      .page{fill:#111418}.grid{fill:url(#grid);opacity:.55}.box{fill:#151b21;stroke:#596673;stroke-width:.55}.case{fill:#182027;stroke:#cad2d9;stroke-width:1}.panel{fill:#343e48;stroke:#eef2f5;stroke-width:1}.power{fill:#38231f;stroke:#f27767;stroke-width:1}.fan{fill:#17263d;stroke:#76a7f7;stroke-width:1}.intake{fill:#173426;stroke:#69d391;stroke-width:1}.exhaust{fill:#382f1e;stroke:#e4b95f;stroke-width:1}.quiet{fill:#173036;fill-opacity:.25;stroke:#52c7d5;stroke-width:.7;stroke-dasharray:3 2}.air{fill:none;stroke:#68b8ff;stroke-width:1.7;marker-end:url(#arrow)}.lidroute{fill:none;stroke:#76a7f7;stroke-width:1;stroke-dasharray:3 2}.dim{fill:none;stroke:#b7c0c9;stroke-width:.55;marker-start:url(#dimArrow);marker-end:url(#dimArrow)}.hold{fill:#39211e;stroke:#f27767;stroke-width:.8}
       .title{fill:#f6f8fa;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:8px;font-weight:750}.subtitle{fill:#aeb7c0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:3.2px}.section{fill:#eef2f5;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:4.4px;font-weight:750}.label{fill:#eef2f5;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:3.2px;font-weight:650;text-anchor:middle}.small{fill:#bac3cc;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:2.7px;text-anchor:middle}.note{fill:#aeb8c2;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:2.65px}.dimension{fill:#d0d7de;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:2.8px;text-anchor:middle;font-weight:600}.green{fill:#83df9f}.gold{fill:#e4b95f}.red{fill:#ff8a7b}text{letter-spacing:0}
     </style>
   </defs>
   <rect class="page" width="480" height="300"/><rect class="grid" x="14" y="42" width="452" height="226" rx="4"/>
   <text class="title" x="18" y="19">RADXA CM5 PROCOMM - iM2300 SIDEWALL COOLING LAYOUT</text>
-  <text class="subtitle" x="18" y="29">REV A PRELIMINARY | RIGHT-SIDE FILTERED INTAKE | OPERATOR-SIDE EXHAUST | HINGE-SIDE PSU | MEASURE CASE BEFORE CUTTING</text>
+  <text class="subtitle" x="18" y="29">REV B PRELIMINARY | ROTATED HINGE-SIDE PSU | 125 mm MIN AUDIO SEPARATION | MEASURE CASE BEFORE CUTTING</text>
 
   <rect class="box" x="22" y="53" width="286" height="171" rx="3"/><text class="section" x="30" y="64">PLAN VIEW - BELOW TOP PANEL</text>
   <rect class="case" x="31" y="72" width="266" height="138" rx="8"/><text class="small" x="164" y="78">HINGE / DISPLAY SIDE</text><text class="small" x="164" y="207">OPERATOR / HANDLE SIDE</text>
   <rect class="quiet" x="38" y="82" width="62" height="116" rx="3"/><text class="label" x="69" y="94">AUDIO QUIET ZONE</text><text class="small" x="69" y="101">XLR + ANALOG PCB</text><text class="small" x="69" y="108">NO FAN / PWM HARNESS</text>
-  <rect class="power" x="116" y="82" width="80" height="44" rx="2"/><text class="label" x="156" y="99">RPS-400-24-C</text><text class="small" x="156" y="105">HINGE-SIDE BOTTOM BAY</text><text class="small" x="156" y="111">GUARDED / NO FAN HARNESS</text>
+  <rect class="power" x="186" y="82" width="53" height="60" rx="2"/><text class="label" x="212.5" y="96">RPS-400-24-C</text><text class="small" x="212.5" y="103">ROTATED 86 x 130</text><text class="small" x="212.5" y="110">GUARDED FLOOR BAY</text><text class="small" x="212.5" y="117">NO FAN HARNESS</text>
+  <path class="lidroute" d="M161 73V112C161 122 169 130 181 137"/><text class="small" x="143" y="118">PROTECTED LID HARNESS</text><text class="small" x="143" y="123">15 mm MIN TO PSU GUARD</text>
   <rect class="box" x="112" y="137" width="147" height="54" rx="3"/><text class="label" x="185.5" y="147">DIGITAL / POWER AIRFLOW CHAMBER</text>
   <rect class="fan" x="212" y="151" width="34" height="28" rx="2"/><text class="small" x="229" y="163">CM5 + MODEM</text><text class="small" x="229" y="169">DOWN-FACING</text>
   <circle class="intake" cx="291" cy="160" r="14"/><path d="M284 160H297M291 153V167" stroke="#83df9f" stroke-width="1"/><text class="small green" x="276" y="187">RIGHT WALL INTAKE</text>
   <circle class="exhaust" cx="236" cy="204" r="14"/><path d="M229 204H242M236 197V211" stroke="#e4b95f" stroke-width="1"/><text class="small gold" x="204" y="219">OPERATOR EXHAUST</text>
   <path class="air" d="M286 160C266 160 253 160 246 164"/><path class="air" d="M212 165C182 165 159 164 133 161"/><path class="air" d="M142 173C169 189 202 198 221 202"/>
-  <line class="dim" x1="100" y1="130" x2="212" y2="130"/><text class="dimension" x="156" y="135">100 mm MIN PRACTICAL FAN / PWM SEPARATION TO AUDIO</text><text class="note" x="39" y="195">Shielded analog boundary</text>
+  <line class="dim" x1="100" y1="130" x2="186" y2="130"/><text class="dimension" x="143" y="135">146 mm NOMINAL / 125 mm MIN TO PSU GUARD</text><text class="note" x="39" y="195">Shielded analog boundary; fan/PWM separation remains 100 mm minimum practical</text>
 
   <rect class="box" x="318" y="53" width="140" height="82" rx="3"/><text class="section" x="327" y="64">RIGHT WALL - FILTERED INTAKE</text>
   <path class="case" d="M330 73H446V124H330Z"/><line class="panel" x1="330" y1="91" x2="446" y2="91"/><text class="small" x="387" y="87">PANEL PLANE - 38.1 BELOW PARTING LINE</text>
@@ -41,5 +42,5 @@
   <text class="note" x="31" y="259">Route FAN_ENC_12V, PWM, and tach along the digital boundary. Star-return the filtered fan rail at the power board; do not share audio ground or the guarded PSU harness path.</text>
   <text class="note red" x="31" y="265">MECHANICAL HOLD: centers shown are preliminary. Scan/measure wall ribs, taper, handles, hinges, latches, and closed-case clearances before any sidewall cut.</text>
   <text class="note" x="18" y="283">Sidewall openings reduce the original enclosure rating. Use splash-directed louvers and validate ingress, recirculation, pressure drop, acoustic noise, and 45 C ambient performance.</text>
-  <text class="note" x="18" y="291">No enclosure fan is allowed on the XLR/analog side. The PSU remains bottom-mounted in the guarded hinge-side bay and is separated from both enclosure fan harnesses.</text>
+  <text class="note" x="18" y="291">No enclosure fan is allowed on the XLR/analog side. The rotated PSU guard remains at least 125 mm from audio and is separated from both enclosure-fan harnesses.</text>
 </svg>

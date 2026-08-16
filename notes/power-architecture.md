@@ -145,7 +145,11 @@ Locked production PSU:
 The top panel carries the PCB/connector panel plus the selected IEC C14 mains
 inlet. Do not mount the AC/DC PSU on the top panel. The PSU remains on the
 bottom panel and feeds the carrier/source-selector assembly through a protected
-low-voltage `24V_PSU` harness.
+  low-voltage `24V_PSU` harness. Rotate the PSU 90 degrees in plan and keep its
+  grounded guard at least 125 mm from the AUDIO-8X8 quiet boundary; the current
+  nominal floorplan provides 146 mm. Keep the H03 HDMI/USB-touch/12 V cable
+  envelope at least 15 mm from that guard and never share its clamps with mains
+  or fan wiring.
 
 ## Top Panel AC Mains Inlet
 
