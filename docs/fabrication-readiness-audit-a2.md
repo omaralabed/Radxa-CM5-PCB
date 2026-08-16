@@ -29,7 +29,8 @@ M001-M080 is complete and the A2 validator passes with the release option.
 4. The locked monitor listing documents a nominal body envelope of 15.6 W x
    8.0 H x 0.8 D inches, or 396.24 x 203.20 x 20.32 mm. These dimensions are
    controlled for lid CAD. Physical verification is limited to the installed
-   stack: mount buildup, VESA details, connector positions and protrusions,
+   stack: mount buildup, VESA details, connector positions, rear-bracket
+   containment of the connector heads, cable bend envelopes,
    cable bends, lid placement, and the final closure sweep.
 5. The RPS-400-24-C is 43 mm high, and the carrier overlaps it in plan. The
    complete tray-mounted PSU and terminal guard is limited to 48 mm above the

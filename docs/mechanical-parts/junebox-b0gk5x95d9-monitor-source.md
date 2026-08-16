@@ -17,7 +17,10 @@ depth.
 
 The listing does not provide a controlled mounting drawing for the complete
 installed assembly. Before fabrication release, verify the mount and padding
-buildup, screw engagement, VESA details, connector locations and protrusions,
-cable bend envelopes, lid position, and full closed-lid clearance with all
-eight antennas installed and folded inboard. These checks validate the
+buildup, screw engagement, VESA details, and connector locations. The HDMI,
+USB-touch, and power connector heads are below the rear bracket and therefore
+do not add to the forward display protrusion when they remain within that
+bracket's Z envelope. Verify their cable bend envelopes, lid position, and
+full closed-lid clearance with all eight antennas installed and folded
+inboard. These checks validate the
 installation, not the documented monitor body size.

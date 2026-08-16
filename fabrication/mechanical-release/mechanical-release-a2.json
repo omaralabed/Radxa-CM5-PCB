@@ -61,7 +61,7 @@
     "total_lid_protrusion_mm": null,
     "connector_keepout_record": null,
     "mounting_drawing_id": null,
-    "note": "Use the documented nominal body envelope for lid CAD. Physical verification remains required for mount buildup, connector locations and protrusions, cable bends, lid placement, and the final closed-lid clearance sweep."
+    "note": "Use the documented nominal body envelope for lid CAD. HDMI, USB-touch, and power connector heads are under the rear bracket and do not add to forward display protrusion, provided the received assembly confirms they remain inside that Z envelope. Physical verification remains required for mount buildup, connector locations, cable bends, lid placement, and the final closed-lid clearance sweep."
   },
   "closed_lid": {
     "minimum_dynamic_clearance_mm": null,
