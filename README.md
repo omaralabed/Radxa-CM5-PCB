@@ -149,3 +149,12 @@ inputs before layout:
   review, safety review, and final mechanical CAD
 - Bench measurements for display, modem, Wi-Fi, fans, audio, transfer, and thermal load
 - Manufacturing target: prototype only or assembly-ready production files
+
+## Version Control Policy
+
+- Canonical repository: https://github.com/omaralabed/Radxa-CM5-PCB
+- `main` holds the latest reviewed project state.
+- After each completed controlled design update, run the applicable validation,
+  create a focused commit, and push it to `origin/main`.
+- Do not commit temporary renders, editor state, KiCad session files, or local
+  scratch data covered by `.gitignore`.
