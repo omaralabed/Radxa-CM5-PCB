@@ -5,9 +5,9 @@ the XLR and panel datums while adding the A2 vertical-stack gate, low-profile
 bottom tray, six supports per long PCB, selected modem fan, transport-closure
 rules, PSU airflow wash, and corrected panel-thickness logic.
 
-- `im2300-closed-lid-stack-rev-d.svg`: corrected side section using datum A at
-  the finished panel top face, 3.175 mm panel thickness, sample-controlled
-  monitor geometry, 65.425 mm nominal space below the panel underside, and
+- `im2300-closed-lid-stack-rev-e.svg`: corrected side section using datum A at
+  the finished panel top face, 3.175 mm panel thickness, the monitor's
+  documented 396.24 x 203.20 x 20.32 mm body envelope, 65.425 mm nominal space below the panel underside, and
   battery-removed transport closure with all eight released compact hinged
   antennas installed and folded inboard. Their approximately 32 mm preliminary
   folded envelope remains sample-controlled and requires 8 mm dynamic clearance.

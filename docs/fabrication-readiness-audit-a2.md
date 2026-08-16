@@ -26,10 +26,11 @@ M001-M080 is complete and the A2 validator passes with the release option.
    not the released part: its folded arm crosses other panel controls. Current
    candidates are Taoglas `GW.05.0153` for Wi-Fi and `TG.66.A113` for cellular.
    Actual samples still require a measured sweep and signoff.
-4. The monitor listing reuses contradictory model names and dimensions across
-   8, 10.1, 13.3, 14, and 15.6 inch products. No online body dimension is
-   accepted as fabrication data. The exact received 15.6 inch sample controls
-   its body, VESA pattern, connector positions, and lid protrusion.
+4. The locked monitor listing documents a nominal body envelope of 15.6 W x
+   8.0 H x 0.8 D inches, or 396.24 x 203.20 x 20.32 mm. These dimensions are
+   controlled for lid CAD. Physical verification is limited to the installed
+   stack: mount buildup, VESA details, connector positions and protrusions,
+   cable bends, lid placement, and the final closure sweep.
 5. The RPS-400-24-C is 43 mm high, and the carrier overlaps it in plan. The
    complete tray-mounted PSU and terminal guard is limited to 48 mm above the
    deepest floor, with 10 mm minimum to carrier B.Cu. This is a tight measured
@@ -182,8 +183,9 @@ loops.
 - M.2 modem support means B-key 3042/3052 with an adjustable standoff and
   verified USB2/USB3, SIM, power, and thermal interfaces. It does not mean
   every modem on the market.
-- Final DXF/STEP must be generated from manufacturer drawings and measured
-  samples. Concept SVG shapes may not be traced as cut geometry.
+- Final DXF/STEP must be generated from controlled manufacturer drawings,
+  documented nominal envelopes, and measured installation details. Concept
+  SVG shapes may not be traced as cut geometry.
 
 ## Required First-Article Records
 
@@ -192,7 +194,8 @@ loops.
 3. Case serial/asset ID and calibrated-tool list.
 4. Panel/frame gauge-plate photos and drawing.
 5. Bottom stack section-gauge photo and measurements.
-6. Monitor body/connector/VESA survey and closed-lid pressure test.
+6. Monitor documented-envelope traceability, connector/VESA installation
+   survey, and closed-lid pressure test.
 7. Battery insertion/removal sweep and QRC backplate inspection.
 8. Eight-antenna installed/folded closure record, including the maximum folded
    hinge height and full closing/latched sweep.

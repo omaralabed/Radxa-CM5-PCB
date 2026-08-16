@@ -21,6 +21,6 @@ S019,Allowed permanent panel hardware height,A,tallest permanent item,S018 minus
 S020,Dionic XT90 plus QRC-GOLD protrusion,A,battery outer face,approximately 70.7,58 battery plus approximately 12.7 dock before latch tolerance,INTERFERENCE_EXPECTED,M066-M067
 S021,Folded RF antenna protrusion,A,tallest hinge or folded antenna surface,32.0 preliminary maximum,"Taoglas GW.05.0153 and TG.66.A113 remain installed and fold inboard; actual samples control",SAMPLE_REQUIRED,M068-M069
 S022,QRC-GOLD support stack,A,panel/frame backplate,not applicable,supplied backplate and flat supported area mandatory,VERIFIED_SOURCE,M066 and M073
-S023,Monitor planar envelope,lid cavity,monitor body,TBD,online values are contradictory; measure actual sample,SAMPLE_REQUIRED,M059-M064
+S023,Monitor documented body envelope,lid cavity,monitor body,396.24 W x 203.20 H x 20.32 D,Amazon product information for locked ASIN B0GK5X95D9,DOCUMENTED_NOMINAL,M059-M061; installed stack M062-M065
 S024,Sidewall fan body,case wall inner face,fan rear face,20.0,Delta THA0412AD-TZW3 body,VERIFIED_SOURCE,M034-M037
 S025,Modem fan body,fan outlet,fan inlet,15.0,Delta AFB0412SHB-SP04 body,SELECTED,M077

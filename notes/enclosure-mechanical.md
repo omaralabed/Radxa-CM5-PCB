@@ -87,8 +87,8 @@ Current monitor candidate:
 
 - JUNEBOX / DTM MALL Amazon ASIN `B0GK5X95D9`
 - Listed screen size: 15.6 in
-- Online enclosure dimensions are contradictory and prohibited as fabrication
-  data. Listings reuse the same model string across multiple screen sizes.
+- Documented nominal body: 15.6 W x 8.0 H x 0.8 D in, or
+  396.24 x 203.20 x 20.32 mm. Use this controlled envelope for lid CAD.
 - Listed/displayed features: 1920 x 1080, IPS, HDMI input, DVI/VGA support,
   touch support, 450 cd/m2 class brightness, 7H tempered glass, VESA/wall-mount
   hardware, 12 V power
@@ -97,21 +97,22 @@ Selected iM2300 fit:
 
 | Case | Interior L x W x D | Lid depth | Bottom depth | Monitor planar clearance | Lid depth spare |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| iM2300 | 17.00 x 11.70 x 6.20 in | 2.00 in | 4.20 in | Sample-controlled | Sample-controlled |
+| iM2300 | 17.00 x 11.70 x 6.20 in | 2.00 in | 4.20 in | 17.78 mm nominal on each side and 47.0 mm nominal at top/bottom when centered before wall taper/mount details | Installation-controlled |
 
 Interpretation:
 
-- The iM2300 is large enough for a 15.6-inch 16:9 active area in principle,
-  but the selected monitor body, connector bosses, mount, and cable bends are
-  not verified. Base and lid fit remain on physical hold.
+- The documented 396.24 x 203.20 mm monitor body fits within the published
+  431.8 x 297.2 mm case interior in plan. The remaining hold covers the actual
+  lid cavity, wall taper, connector bosses, mount, and cable bends.
 - Keep iM2300 as the selected case unless the owner explicitly reopens the
   enclosure decision later.
 
-Do not release CAD from the published dimensions alone. Buy or borrow the
-exact case and monitor sample, then measure the real lid cavity, corner radii,
-hinge/latch intrusion, panel-bezel mounting plane, VESA screw depth, monitor
-power connector, HDMI connector, touch USB connector, DVI/VGA connector
-keepouts, and cable bend envelopes.
+Use the documented monitor body envelope in lid CAD. Before fabrication
+release, verify the exact case cavity, corner radii, hinge/latch intrusion,
+panel-bezel mounting plane, VESA screw depth, monitor power connector, HDMI
+connector, touch USB connector, DVI/VGA connector keepouts, mount buildup, and
+cable bend envelopes. This is an installation verification, not a requirement
+to rediscover the documented monitor body dimensions.
 
 ## Reference Layout
 
@@ -198,16 +199,19 @@ Using the published nominal depths and the selected nominal panel:
 - Bottom equipment tray top: no more than 3.0 mm above the deepest floor
 - Nominal tray-top to panel-underside budget: at least 62.425 mm
 - Lid depth: 2.00 in (50.8 mm)
-- Monitor total lid protrusion: sample-controlled
+- Monitor body: documented nominal 396.24 W x 203.20 H x 20.32 D mm
+- Monitor total lid protrusion: installation-controlled because it includes
+  mount, padding, fasteners, and connector bosses
 - Monitor-front to panel-top gap:
   measured lid depth + measured panel recess - measured display protrusion
 
-No closure claim can be made until the monitor sample is measured. Preserve at
-least 8 mm of final dynamic clearance from the display front to every permanent
-panel item after case tolerance, gasket compression, lid flex, impact, and
-monitor-mount tolerance. Verify the actual closed-lid gap with the real case,
-monitor, panel frame, all eight selected antennas folded inboard, and representative connectors
-before fabrication.
+The documented monitor envelope is sufficient for nominal lid CAD. No closure
+claim can be made until the complete installed display stack is verified.
+Preserve at least 8 mm of final dynamic clearance from the display front to
+every permanent panel item after case tolerance, gasket compression, lid flex,
+impact, and monitor-mount tolerance. Verify the closed-lid gap with the case,
+installed display assembly, panel frame, all eight selected antennas folded
+inboard, and representative connectors before fabrication.
 
 The Gold Mount battery and antennas are separate closure checks. The 58 mm
 Dionic XT90 plus the approximately 12.7 mm QRC-GOLD body creates an

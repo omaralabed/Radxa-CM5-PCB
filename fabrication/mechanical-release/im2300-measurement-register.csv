@@ -57,9 +57,9 @@ M055,power,Installed PSU guard envelope height,deepest interior floor,tallest gu
 M056,pcb,Carrier top-side gap to panel underside,carrier F.Cu highest non-panel component,panel underside,mm,4.0 minimum,>=4.0 after tolerance; panel connector geometry controls,,,,OPEN,
 M057,pcb,Carrier bottom copper-plane height,deepest interior floor,carrier B.Cu surface,mm,TBD,record minimum at all supports,,,,OPEN,
 M058,power,PSU guard clearance to carrier B.Cu,PSU guard envelope,carrier B.Cu keepout plane,mm,10.0 minimum,>=10.0 after tolerance and vibration,,,,OPEN,
-M059,display,Monitor body width,left body edge,right body edge,mm,TBD,measure actual sample; online data prohibited,,,,OPEN,
-M060,display,Monitor body height,top body edge,bottom body edge,mm,TBD,measure actual sample; online data prohibited,,,,OPEN,
-M061,display,Monitor body depth,rear body surface,front glass,mm,TBD,measure maximum including controls and connector bosses,,,,OPEN,
+M059,display,Monitor documented body width,left body edge,right body edge,mm,396.24 nominal,controlled Amazon ASIN listing value; installed fit uses M062-M065,396.24,396.24,Amazon product information,COMPLETE,ASIN B0GK5X95D9 accessed 2026-08-16
+M060,display,Monitor documented body height,top body edge,bottom body edge,mm,203.20 nominal,controlled Amazon ASIN listing value; installed fit uses M062-M065,203.20,203.20,Amazon product information,COMPLETE,ASIN B0GK5X95D9 accessed 2026-08-16
+M061,display,Monitor documented body depth,rear body surface,front glass,mm,20.32 nominal,controlled Amazon ASIN listing value; mount and connector protrusions use M062,20.32,20.32,Amazon product information,COMPLETE,ASIN B0GK5X95D9 accessed 2026-08-16
 M062,display,Monitor total lid protrusion,lid cavity back surface,front glass or bezel,mm,TBD,include mount padding screws and cable heads,,,,OPEN,
 M063,display,Monitor left-right position in lid,lid cavity left wall,monitor body edges,mm,TBD,record both margins and centering error,,,,OPEN,
 M064,display,Monitor hinge-operator position in lid,lid cavity hinge wall,monitor body edges,mm,TBD,record both margins and harness keepout,,,,OPEN,

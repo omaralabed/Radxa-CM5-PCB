@@ -9,12 +9,14 @@
   - `../../cad/im2300-top-panel-layout-rev-k.svg`
   - `../../cad/mechanical/im2300-underside-pcb-floorplan-rev-k.svg`
   - `../../cad/mechanical/im2300-sidewall-cooling-layout-rev-c.svg`
-  - `../../cad/mechanical/im2300-closed-lid-stack-rev-d.svg`
+  - `../../cad/mechanical/im2300-closed-lid-stack-rev-e.svg`
 
 This package controls the measurements that must be taken from the actual
-Pelican iM2300, custom four-side frame, display, battery dock, and production
-connector samples. Published case dimensions are useful for planning but are
-not fabrication datums.
+Pelican iM2300, custom four-side frame, installed display assembly, battery
+dock, and production connector samples. The monitor body uses the documented
+396.24 x 203.20 x 20.32 mm nominal envelope; its mount, connector, cable, and
+closed-lid geometry remain installation checks. Published case dimensions are
+useful for planning but are not fabrication datums.
 
 ## Required Equipment
 

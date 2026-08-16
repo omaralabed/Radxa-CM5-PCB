@@ -32,10 +32,10 @@ The touchscreen will be mounted in the Pelican iM2300 lid.
   1080 IPS, 16:9, 60 Hz, 450 cd/m2 class brightness, matte finish, 7H tempered
   glass, HDMI input, DVI/VGA support, touch support, VESA/wall-mount hardware,
   and 12 V power.
-- Do not use any online monitor body dimension for fabrication. Current
-  listings reuse contradictory dimensions and the same model string across
-  several screen sizes; one reported body width is smaller than the active
-  width of a 15.6-inch 16:9 panel.
+- The locked ASIN listing documents a nominal body envelope of
+  15.6 W x 8.0 H x 0.8 D in, or 396.24 x 203.20 x 20.32 mm. Use this controlled
+  envelope for lid CAD; duplicate sample measurement is not required to
+  establish the body width, height, or depth.
 - The listing does not provide a controlled mechanical drawing. USB Type-B
   SuperSpeed is therefore a carrier interface preference, not a verified
   monitor connector.
@@ -64,10 +64,11 @@ The touchscreen will be mounted in the Pelican iM2300 lid.
 - Verify whether the JUNEBOX touch port is standard USB 2.0 Type-B, USB-C, or
   true USB 3.x Type-B SuperSpeed on the exact received unit. Touch only needs
   USB 2.0 HID, but the product connector requirement says Type-B SuperSpeed.
-- Verify the JUNEBOX mechanical drawing, real bezel size, VESA pattern,
-  mounting screw depth, lid clearance, 12 V power input connector, current
-  draw, HDMI connector orientation, DVI/VGA keepout, and whether any built-in
-  USB hub should be disabled or left unused.
+- Verify the JUNEBOX VESA pattern, mounting screw depth, installed lid
+  protrusion, 12 V power input connector, current draw, HDMI connector
+  orientation, DVI/VGA keepout, and whether any built-in USB hub should be
+  disabled or left unused. These are installation checks; the documented body
+  envelope remains the nominal CAD input.
 - Whether the final touch connector is direct USB Type-B SuperSpeed on our
   panel/harness, or an internal adapter from Type-B SuperSpeed to the display
   controller's actual USB touch connector.

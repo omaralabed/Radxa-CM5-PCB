@@ -12,8 +12,10 @@ removed before repository publication.
 
 Mechanical fabrication remains on A2 `HOLD_FOR_MEASUREMENT`. The controlled
 gate is `docs/fabrication-readiness-audit-a2.md`; it corrects the below-panel
-stack, locks battery-removed/eight-antennas-folded transport closure, and requires actual case,
-monitor, dock, fan, tray, and connector samples before routing.
+stack, locks battery-removed/eight-antennas-folded transport closure, and uses
+the monitor's documented 396.24 x 203.20 x 20.32 mm body envelope. Actual case,
+display-installation, dock, fan, tray, and connector checks remain required
+before routing.
 
 The ProComm field-unit photo PDF and rendered reference pages are preserved
 under `references/procomm-field-unit/`.

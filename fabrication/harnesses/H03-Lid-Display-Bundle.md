@@ -99,7 +99,9 @@ There is no dedicated display eFuse by project requirement.
 
 ## Release Blockers
 
-- Receive and measure the locked JUNEBOX / DTM MALL display sample.
+- Receive the locked JUNEBOX / DTM MALL display and verify its connector,
+  mounting, and installed-stack details against the documented
+  396.24 x 203.20 x 20.32 mm nominal body envelope.
 - Confirm USB touch connector type and orientation.
 - Confirm monitor 12 V input plug size, polarity, retention, and current.
 - Select exact high-flex HDMI and USB cable manufacturer part numbers.

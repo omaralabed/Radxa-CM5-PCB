@@ -50,15 +50,18 @@
   },
   "display": {
     "part": "JUNEBOX 15.6-inch touchscreen, ASIN B0GK5X95D9",
-    "sample_required": true,
-    "body_width_mm": null,
-    "body_height_mm": null,
-    "body_depth_mm": null,
+    "body_dimension_status": "DOCUMENTED_NOMINAL",
+    "body_sample_measurement_required": false,
+    "installation_fit_verification_required": true,
+    "body_width_mm": 396.24,
+    "body_height_mm": 203.2,
+    "body_depth_mm": 20.32,
+    "body_dimension_source": "Amazon product information for ASIN B0GK5X95D9: 0.8 D x 15.6 W x 8.0 H inches; accessed 2026-08-16",
     "mount_and_padding_protrusion_mm": null,
     "total_lid_protrusion_mm": null,
     "connector_keepout_record": null,
     "mounting_drawing_id": null,
-    "note": "Online dimensions are contradictory and are not fabrication data."
+    "note": "Use the documented nominal body envelope for lid CAD. Physical verification remains required for mount buildup, connector locations and protrusions, cable bends, lid placement, and the final closed-lid clearance sweep."
   },
   "closed_lid": {
     "minimum_dynamic_clearance_mm": null,

@@ -14,7 +14,7 @@ The factory cut drawing can be released only after:
   5052-H32 coupon; the
   RA812 switch location must be locally rear-pocketed to no more than 3.0 mm;
 - PCB-to-panel Z height and connector protrusion are fixed;
-- the Gold Mount bracket drawing and lid monitor sample are measured;
+- the Gold Mount bracket and installed lid-display stack are verified;
 - the hinge harness, SIM access, and RF pigtail interfaces are resolved.
 
 ## Selected Parts
@@ -42,7 +42,7 @@ The factory cut drawing can be released only after:
 | Cellular fold-down antennas | 4 | Taoglas `TG.66.A113` | Controlled validation candidate; 70.3 x 9.7 mm, hinged SMA(M), preliminary folded height 32 mm; sample closure and RF test required |
 | Gold Mount battery | 1 | Anton/Bauer Dionic XT90 `8675-0125` | Selected battery; 99 Wh, 14.1 V, 12 A continuous |
 | Gold Mount bracket | 1 | Anton/Bauer QRC-GOLD `8375-0094` | User-selected compact bracket; approximately 119.4 x 76.2 x 12.7 mm; mounts to the top panel/custom frame, never to a PCB; controlled drawing/sample still required |
-| Lid display | 1 | JUNEBOX, Amazon ASIN `B0GK5X95D9` | User-locked; connector and mounting details require sample |
+| Lid display | 1 | JUNEBOX, Amazon ASIN `B0GK5X95D9` | User-locked; documented nominal body 396.24 x 203.20 x 20.32 mm; installation details require verification |
 
 ## Indicator Assignment
 
@@ -121,14 +121,13 @@ switch do not restore overall enclosure sealing.
 
 ### Display interface
 
-The online listings confirm HDMI, touch capability, and 12 V power, but they
-reuse contradictory dimensions and model strings across multiple screen sizes.
-At least one published width is physically impossible for a 15.6-inch 16:9
-active area. The online body dimensions are prohibited as fabrication data.
-Keep the user-locked
-12 V / 2.5 A carrier branch and 25 W design allocation, but do not release the
-HDMI, USB-touch, power connector, VESA holes, or hinge-notch dimensions until
-the exact monitor sample is measured.
+The locked ASIN listing documents HDMI, touch capability, 12 V power, and a
+nominal body envelope of 15.6 W x 8.0 H x 0.8 D in, or
+396.24 x 203.20 x 20.32 mm. Use that envelope for lid CAD and retain the
+user-locked 12 V / 2.5 A carrier branch and 25 W design allocation. The listing
+does not control HDMI, USB-touch, power-connector, VESA-hole, mount-stack, or
+hinge-notch geometry, so those installation details still require verification
+before fabrication release.
 
 ## Factory Release Rule
 
