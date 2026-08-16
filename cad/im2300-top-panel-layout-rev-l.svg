@@ -2,7 +2,7 @@
 <svg xmlns="http://www.w3.org/2000/svg"
      width="1800" height="1320" viewBox="-30 -43 491.8 371"
      role="img" aria-labelledby="title desc">
-  <title id="title">Radxa CM5 ProComm iM2300 Top Panel Connector Layout Rev K</title>
+  <title id="title">Radxa CM5 ProComm iM2300 Top Panel Connector Layout Rev L</title>
   <desc id="desc">Dimensioned preliminary connector placement for a 431.8 by 298 millimeter Pelican iM2300 top panel, with a 15 millimeter four-side frame and screw keepout, left-to-right Gold Mount battery engagement, two diffused warm-white courtesy lights, one capacitive touch switch, no cooling openings, plus four Wi-Fi RP-SMA and four cellular SMA bulkheads with compact hinged antennas folded inboard for transport.</desc>
 
   <defs>
@@ -53,7 +53,7 @@
   <rect class="page" x="-30" y="-43" width="491.8" height="371"/>
 
   <text class="title" x="0" y="-32">RADXA CM5 PROCOMM - iM2300 TOP PANEL CONNECTOR LAYOUT</text>
-  <text class="subtitle" x="0" y="-24">REV K CONCEPT | NO TOP-PANEL COOLING OPENINGS | 15 mm FRAME KEEPOUT | 4T4R WI-FI / EIGHT FOLD-DOWN RF ANTENNAS</text>
+  <text class="subtitle" x="0" y="-24">REV L CONCEPT | NO TOP-PANEL COOLING OPENINGS | 15 mm FRAME KEEPOUT | 4T4R WI-FI / EIGHT FOLD-DOWN RF ANTENNAS</text>
 
   <!-- Overall dimensions -->
   <line class="extension" x1="0" y1="0" x2="0" y2="-13"/>
@@ -318,5 +318,5 @@
   <line x1="291" y1="307.5" x2="303" y2="307.5" stroke="#f4d8a2" stroke-width="1.4"/><text class="small" x="318" y="309">LIGHTING</text>
 
   <text class="subtitle" x="0" y="319">PRELIMINARY PLACEMENT ONLY: replace every shown cutout with the final connector manufacturer's drawing and the measured iM2300 plate outline.</text>
-  <text class="subtitle" x="0" y="325">The top panel has no cooling openings. Fold all eight selected compact antennas inboard before closure; actual antenna and monitor samples must pass the 8 mm dynamic-clearance test.</text>
+  <text class="subtitle" x="0" y="325">The top panel has no cooling openings. Fold all eight selected compact antennas inboard before closure; actual antenna and monitor samples must pass the 12.7 mm / 0.50 in dynamic-clearance test.</text>
 </svg>

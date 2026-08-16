@@ -1,16 +1,17 @@
 # iM2300 Mechanical Studies
 
-These drawings extend the current Rev K top-panel placement. The underside Rev L preserves
+These drawings extend the current Rev L top-panel placement. The underside Rev L preserves
 the XLR and panel datums while adding the A2 vertical-stack gate, low-profile
 bottom tray, six supports per long PCB, selected modem fan, transport-closure
 rules, PSU airflow wash, and corrected panel-thickness logic.
 
-- `im2300-closed-lid-stack-rev-f.svg`: corrected side section using datum A at
+- `im2300-closed-lid-stack-rev-g.svg`: corrected side section using datum A at
   the finished panel top face, 3.175 mm panel thickness, the monitor's
   documented 396.24 x 203.20 x 20.32 mm body envelope, 65.425 mm nominal space below the panel underside, and
   battery-removed transport closure with all eight released compact hinged
   antennas installed and folded inboard. Their approximately 32 mm preliminary
-  folded envelope remains sample-controlled and requires 8 mm dynamic clearance.
+  folded envelope remains sample-controlled and requires 12.7 mm (0.50 in)
+  dynamic clearance from the monitor front.
 - `im2300-underside-pcb-floorplan-rev-l.svg`: pre-routing revision that reserves
   a 15 mm four-side frame/screw keepout, reduces the audio and carrier board
   envelopes to 78 x 268 mm and 166 x 268 mm, moves the two Delta

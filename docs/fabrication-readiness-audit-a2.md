@@ -5,7 +5,7 @@
 **HOLD_FOR_MEASUREMENT**
 
 This audit is the factory-facing mechanical and thermal gate before PCB
-routing. The Rev K top-panel connector placement remains the approved concept
+routing. The Rev L top-panel connector placement remains the approved concept
 layout, but it is not a cut file. No production panel, sidewall, bottom tray,
 PCB outline, or mounting-hole pattern may be released until every row
 M001-M080 is complete and the A2 validator passes with the release option.
@@ -29,8 +29,9 @@ M001-M080 is complete and the A2 validator passes with the release option.
 4. The locked monitor listing documents a nominal body envelope of 15.6 W x
    8.0 H x 0.8 D inches, or 396.24 x 203.20 x 20.32 mm. These dimensions are
    controlled for lid CAD. Physical verification is limited to the installed
-   stack: mount buildup, VESA details, connector positions, rear-bracket
-   containment of the connector heads, cable bend envelopes,
+   stack: direct lid-mount hole coordinates, thread and screw engagement,
+   sealed outside-in fasteners, gasket buildup, connector positions,
+   rear-edge containment of the connector heads, cable bend envelopes,
    cable bends, lid placement, and the final closure sweep.
 5. The RPS-400-24-C is 43 mm high, and the carrier overlaps it in plan. The
    complete tray-mounted PSU and terminal guard is limited to 48 mm above the
@@ -92,7 +93,7 @@ Use this closure equation:
 
 **display-front to panel-top gap = measured lid depth + measured panel recess - measured total display protrusion**
 
-The tallest permanent panel hardware under the display must be at least 8 mm
+The tallest permanent panel hardware under the display must be at least 12.7 mm
 shorter than that gap after tolerance, gasket compression, lid flex, and
 impact allowance. Test with the case latched and with pressure applied at the
 lid center and corners. The transport test is:
@@ -195,8 +196,8 @@ loops.
 3. Case serial/asset ID and calibrated-tool list.
 4. Panel/frame gauge-plate photos and drawing.
 5. Bottom stack section-gauge photo and measurements.
-6. Monitor documented-envelope traceability, connector/VESA installation
-   survey, and closed-lid pressure test.
+6. Monitor documented-envelope traceability, direct lid-mount drilling and
+   sealing survey, connector installation survey, and closed-lid pressure test.
 7. Battery insertion/removal sweep and QRC backplate inspection.
 8. Eight-antenna installed/folded closure record, including the maximum folded
    hinge height and full closing/latched sweep.

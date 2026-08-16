@@ -57,11 +57,18 @@
     "body_height_mm": 203.2,
     "body_depth_mm": 20.32,
     "body_dimension_source": "Amazon product information for ASIN B0GK5X95D9: 0.8 D x 15.6 W x 8.0 H inches; accessed 2026-08-16",
+    "mounting_method": "DIRECT_TO_LID_OUTSIDE_IN_SEALED_FASTENERS",
+    "vesa_pattern_used": false,
+    "connector_edge_orientation": "HINGE_SIDE",
+    "direct_mount_hole_coordinates_mm": null,
+    "direct_mount_thread_specification": null,
+    "maximum_screw_engagement_mm": null,
+    "interface_gasket_compressed_thickness_mm": null,
     "mount_and_padding_protrusion_mm": null,
     "total_lid_protrusion_mm": null,
     "connector_keepout_record": null,
     "mounting_drawing_id": null,
-    "note": "Use the documented nominal body envelope for lid CAD. HDMI, USB-touch, and power connector heads are under the rear bracket and do not add to forward display protrusion, provided the received assembly confirms they remain inside that Z envelope. Physical verification remains required for mount buildup, connector locations, cable bends, lid placement, and the final closed-lid clearance sweep."
+    "note": "Use the documented nominal body envelope for lid CAD. Mount the monitor directly to sealed lid penetrations with outside-in fasteners engaging its dedicated chassis mounting points; do not use the 75 x 75 mm VESA pattern. HDMI, USB-touch, and power connectors face the hinge-side corridor and do not add to forward display protrusion when retained inside the monitor/rear-edge envelope. Physical verification remains required for the direct-mount drilling pattern, thread and screw engagement, gasket buildup, connector locations, cable bends, lid placement, and final closed-lid clearance sweep."
   },
   "closed_lid": {
     "minimum_dynamic_clearance_mm": null,
@@ -75,7 +82,7 @@
   "transport_configuration": {
     "battery": "REMOVE_BEFORE_CLOSING",
     "external_rf_antennas": "KEEP_INSTALLED_AND_FOLD_INBOARD_BEFORE_CLOSING",
-    "exception_rule": "Only the released compact hinged antenna set may remain installed. Upright antennas or substitute models require a separate signed sweep record with at least 8.0 mm dynamic clearance everywhere."
+    "exception_rule": "Only the released compact hinged antenna set may remain installed. Upright antennas or substitute models require a separate signed sweep record with at least 12.7 mm dynamic clearance everywhere."
   },
   "rf_antennas": {
     "wifi": {
@@ -172,7 +179,7 @@
     "pcb_mount_finished_hole_tolerance_mm": 0.1,
     "minimum_pcb_mount_copper_keepout_diameter_mm": 8.0,
     "minimum_pcb_mount_component_keepout_diameter_mm": 10.0,
-    "minimum_closed_lid_dynamic_clearance_mm": 8.0,
+    "minimum_closed_lid_dynamic_clearance_mm": 12.7,
     "minimum_unrelated_metal_clearance_mm": 3.0,
     "minimum_psu_guard_vertical_clearance_mm": 10.0,
     "maximum_installed_psu_guard_height_above_deepest_floor_mm": 48.0,

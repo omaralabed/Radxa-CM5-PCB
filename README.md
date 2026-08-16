@@ -4,7 +4,7 @@ Project workspace for a custom carrier board for the Radxa CM5 compute module.
 
 ## Self-Contained Project Files
 
-Only the current Rev K top-panel drawing and Rev L underside-floorplan drawing
+Only the current Rev L top-panel drawing and Rev L underside-floorplan drawing
 are retained under `cad/`. They reserve a 15 mm four-side frame/screw keepout,
 limit the suspended PCB envelopes, and control six rigid M3 supports per long
 PCB before routing. The battery calculation

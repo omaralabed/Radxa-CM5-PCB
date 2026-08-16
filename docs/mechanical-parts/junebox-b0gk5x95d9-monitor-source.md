@@ -15,12 +15,23 @@ depth.
 
 ## Installation Verification
 
-The listing does not provide a controlled mounting drawing for the complete
-installed assembly. Before fabrication release, verify the mount and padding
-buildup, screw engagement, VESA details, and connector locations. The HDMI,
-USB-touch, and power connector heads are below the rear bracket and therefore
-do not add to the forward display protrusion when they remain within that
-bracket's Z envelope. Verify their cable bend envelopes, lid position, and
-full closed-lid clearance with all eight antennas installed and folded
-inboard. These checks validate the
-installation, not the documented monitor body size.
+The monitor mounts directly to the inside of the iM2300 lid. Outside-in
+fasteners pass through sealed lid penetrations and engage the monitor's
+dedicated chassis mounting points. The 75 x 75 mm VESA pattern is not used and
+no VESA plate is installed.
+
+The listing does not provide a controlled drilling drawing for this direct
+mount. Before fabrication release, use the received monitor to record every
+mounting-hole coordinate, thread specification, maximum screw engagement,
+fastener torque, sealing-washer geometry, and compressed interface-gasket
+thickness. Do not derive lid holes from a listing image or the unused VESA
+pattern. Use low-profile exterior fasteners with bonded sealing washers or an
+equivalent qualified seal, and use a continuous closed-cell interface gasket
+so the lid is not point-loaded or left with unsealed penetrations.
+
+Orient the monitor connector edge toward the hinge-side harness corridor. The
+HDMI, USB-touch, and power connector heads remain inside the monitor/rear-edge
+envelope and do not add to forward display protrusion. Verify their in-plane
+cable bend and strain-relief envelopes, full lid travel, and closed-lid
+clearance with all eight antennas installed and folded inboard. These checks
+validate the installation, not the documented monitor body size.

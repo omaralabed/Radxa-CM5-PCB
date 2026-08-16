@@ -32,9 +32,11 @@ Bel, TE, and monitor links are recorded in
 instruction is archived, but its actual sample, backplate, latch sweep, and
 panel/frame load path remain release measurements. The locked monitor listing
 documents a nominal 396.24 x 203.20 x 20.32 mm body envelope; that value is
-controlled for lid CAD. Mount buildup, VESA details, connector locations and
-cable bends remain sample checks; connector heads are treated as contained
-inside the monitor rear-bracket Z envelope and do not add forward protrusion.
+controlled for lid CAD. The monitor mounts directly to sealed lid penetrations;
+the 75 x 75 mm VESA pattern is not used. Direct-mount hole coordinates, thread
+and engagement, gasket buildup, connector locations, and cable bends remain
+sample checks. Connector heads are treated as contained inside the monitor
+rear-edge envelope and do not add forward protrusion.
 The Taoglas drawings control the validation candidates and connector polarity,
 but actual folded height, hinge sweep, lid clearance, and RF performance still
 require eight installed antenna samples in the production panel configuration.

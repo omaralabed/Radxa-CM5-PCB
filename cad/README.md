@@ -6,7 +6,7 @@ detailed-capture order.
 
 ## Current Mechanical Concept
 
-- `im2300-top-panel-layout-rev-k.svg` - current connector-placement concept. It
+- `im2300-top-panel-layout-rev-l.svg` - current connector-placement concept. It
   reserves a 15 mm four-side frame/screw keepout, moves the XLR bank only 2.3
   mm right to clear that boundary, and retains the preliminary centered
   90 x 8 mm notch opening through the hinge edge for the HDMI, USB-touch, and

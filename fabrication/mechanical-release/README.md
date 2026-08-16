@@ -6,10 +6,10 @@
 - Release state: `HOLD_FOR_MEASUREMENT`
 - Panel installation plane: 38.1 mm below the case parting line
 - Controlled concept drawings:
-  - `../../cad/im2300-top-panel-layout-rev-k.svg`
+  - `../../cad/im2300-top-panel-layout-rev-l.svg`
   - `../../cad/mechanical/im2300-underside-pcb-floorplan-rev-l.svg`
   - `../../cad/mechanical/im2300-sidewall-cooling-layout-rev-c.svg`
-  - `../../cad/mechanical/im2300-closed-lid-stack-rev-f.svg`
+  - `../../cad/mechanical/im2300-closed-lid-stack-rev-g.svg`
   - `../../cad/mechanical/pcb-and-connector-support-detail-rev-a.svg`
 
 This package controls the measurements that must be taken from the actual
@@ -99,7 +99,8 @@ frame, tray, panel, and case.
   Do not put a compressible foam stack under the PSU.
 - The QRC-GOLD dock is top-panel/custom-frame hardware, not a PCB-mounted part;
   only its strain-relieved removable power harness reaches the selector PCB.
-- Minimum 8.0 mm closed-lid dynamic clearance after tolerance stack-up.
+- Minimum 12.7 mm (0.50 in) closed-lid dynamic clearance from the monitor
+  front after tolerance stack-up.
 - Transport closure requires the Gold-mount battery removed and all four
   Taoglas `GW.05.0153` Wi-Fi antennas plus all four Taoglas `TG.66.A113`
   cellular antennas installed and folded inboard. Upright or substitute
