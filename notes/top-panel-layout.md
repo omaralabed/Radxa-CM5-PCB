@@ -37,6 +37,11 @@ This is the connector placement envelope for the custom top panel. Verify this
 against the real Pelican iM2300 shell, panel lip, gasket, corner radius,
 fastener pattern, and any inward case-wall taper before releasing CAD.
 
+The panel material is 3.175 mm nominal 5052-H32 aluminum with a matte black
+powder coat and masked PE bond points. At the 38.1 mm recess, the published
+106.7 mm base depth gives 68.6 mm nominal from deepest floor to panel top and
+65.425 mm to the panel underside. Physical measurements control.
+
 ## Sources
 
 - Pelican official iM2300 product page: https://www.pelican.com/us/en/product/cases/im2300
@@ -61,6 +66,10 @@ Top-panel scope:
   low-voltage harnesses.
 - Protected low-voltage power harnessing from the bottom PSU/power area feeds
   the top-panel PCB assembly.
+- Bottom hardware mounts to a separate 2.0 mm nominal 5052-H32 equipment tray.
+  Its top stays no more than 3.0 mm above the deepest floor. The complete PSU
+  and terminal guard stays no more than 48.0 mm above that floor and at least
+  10 mm below carrier B.Cu.
 
 Left audio zone:
 
@@ -95,6 +104,7 @@ Left audio zone:
   `CH1 IN` through `CH8 IN` under the input connectors
 - Panel carries XLR insertion/removal force
 - PCB and harnesses do not carry cable load
+- AUDIO-8X8 and CM5-CARRIER each use at least six independent PCB supports.
 
 Network/radio/service zone:
 
@@ -111,6 +121,9 @@ Network/radio/service zone:
 - Status LEDs
 - Reset and recovery buttons are not exposed on the top panel. Mount them as
   recessed internal/underside service controls.
+- Transport closure removes all eight external antennas and installs
+  low-profile dust caps. An installed/folded antenna arrangement is not
+  approved without a separate 8 mm dynamic-clearance sweep.
 
 Power/control zone:
 
@@ -126,12 +139,17 @@ Power/control zone:
 - D-Tap / LEMO backup input
 - Gold Mount battery/dock clearance
 - Power-source and battery-low indicators
+- The QRC-GOLD uses its supplied backplate and a flat panel/frame load path.
+  The Dionic XT90 is removed before closing the case for transport; the
+  approximately 58 mm battery plus approximately 12.7 mm dock is expected to
+  conflict with the lid monitor.
 - Main power control: E-Switch `RA812C1121`, maintained DPST OFF-ON snap-in
   rocker. Pole A enables LTC4421 `SHDN_MAIN`; pole B independently enables
   LTC4418 `SHDN_PRE`. It carries low-current controller-enable signals only.
 - RA812 panel opening is 13.0 mm high. Width is 19.2, 19.4, or 19.62 mm for
-  panel thickness 0.75-1.25, 1.25-2.0, or 2.0-3.0 mm respectively. A 3.2 mm
-  panel requires a local rear pocket to 3.0 mm maximum and a sample fit test.
+  panel thickness 0.75-1.25, 1.25-2.0, or 2.0-3.0 mm respectively. The
+  3.175 mm nominal 5052-H32 panel requires a local rear pocket to 3.0 mm
+  maximum and a sample fit test.
 - Status indicators: Bulgin `DX06` wire-lead 12 V family, 6 mm panel cutout
 
 Night-lighting zone:
@@ -277,7 +295,7 @@ zone, and the two hardware-controlled diffused warm-white panel lights. Rev J
 adds the 15 mm four-side frame/screw keepout, moves the XLR bank 2.3 mm right,
 retains the centered 90 x 8 mm hinge-edge lid-harness notch and selected DPST
 rocker, and removes all top-panel cooling openings. Sidewall fan geometry is
-controlled by `../cad/mechanical/im2300-sidewall-cooling-layout-rev-b.svg`. It
+controlled by `../cad/mechanical/im2300-sidewall-cooling-layout-rev-c.svg`. It
 also locks the Gold Mount dock orientation so the battery
 engages from left to right, toward the network side, and removes toward the XLR
 side. The left insertion corridor and complete slide/release sweep must remain

@@ -125,7 +125,7 @@ Electrical validation does not replace this visual readability gate.
 2. Complete selector shunt/current-limit tolerance, hold-up/precharge, SOA,
    telemetry calibration, and 15 A thermal review, then create its PCB.
 3. Release the measured enclosure datums, custom four-side frame drawing, and
-   controlled-impedance PCB stackup. Enforce the Rev J underside limits of 78
+   controlled-impedance PCB stackup. Enforce the Rev K underside limits of 78
    x 268 mm for `AUDIO-8X8` and 166 x 268 mm for `CM5-CARRIER`, with no board,
    copper, component, or standoff entering the 15 mm frame/screw keepout, then
    convert the schematic suite into the routed carrier hierarchy.

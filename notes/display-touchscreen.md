@@ -32,10 +32,13 @@ The touchscreen will be mounted in the Pelican iM2300 lid.
   1080 IPS, 16:9, 60 Hz, 450 cd/m2 class brightness, matte finish, 7H tempered
   glass, HDMI input, DVI/VGA support, touch support, VESA/wall-mount hardware,
   and 12 V power.
-- Listed monitor body size: 15.6 in W x 8.0 in H x 0.8 in D.
-- The listing does not identify the touch-data connector or provide a
-  controlled mechanical drawing. USB Type-B SuperSpeed is therefore a carrier
-  interface preference, not a verified monitor connector.
+- Do not use any online monitor body dimension for fabrication. Current
+  listings reuse contradictory dimensions and the same model string across
+  several screen sizes; one reported body width is smaller than the active
+  width of a 15.6-inch 16:9 panel.
+- The listing does not provide a controlled mechanical drawing. USB Type-B
+  SuperSpeed is therefore a carrier interface preference, not a verified
+  monitor connector.
 - The earlier Waveshare 13.3-inch DSI and HDMI candidates are no longer the
   active display path.
 - Add two controlled service loops to each display cable: one for repeated lid
@@ -50,6 +53,11 @@ The touchscreen will be mounted in the Pelican iM2300 lid.
   top panel for this harness.
 - Add USB ESD protection and current limiting if the port/header supplies power.
 - Confirm whether the touchscreen needs separate display power beyond USB.
+- Transport closure is qualified with the Gold-mount battery removed and all
+  eight external antennas removed and replaced by low-profile dust caps. The
+  measured display-front to tallest-permanent-panel-hardware gap must remain
+  at least 8 mm after tolerance, gasket compression, lid flex, and impact
+  allowance.
 
 ## Open Decisions
 

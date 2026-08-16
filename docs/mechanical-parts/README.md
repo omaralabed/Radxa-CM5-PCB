@@ -16,13 +16,19 @@ preliminary iM2300 panel mechanical part freeze.
 - `kycon-stx-353k7a-drawing.pdf`
 - `bulgin-dx06-indicators-catalog.pdf`
 - `delta-tha0412ad-tzw3-spec.pdf`
+- `delta-afb0412shb-sp04-spec.pdf`
 - `qualtek-09150f-filter-drawing.pdf`
+- `qualtek-09150g-guard-drawing.pdf`
 - `wurth-693043020611-datasheet.pdf`
 - `mean-well-rps-400-spec.pdf`
+- `pelican-im2300-base-bezel-rev-c.pdf`
+- `anton-bauer-qrc-gold-installation.pdf`
 
-Bel, TE, Anton/Bauer, and monitor links are recorded in
-`../panel_mechanical_bom_preliminary.csv`. Their controlled files are not yet
-archived here because the final part/sample interface remains conditional.
+Bel, TE, and monitor links are recorded in
+`../panel_mechanical_bom_preliminary.csv`. The QRC-GOLD installation
+instruction is archived, but its actual sample, backplate, latch sweep, and
+panel/frame load path remain release measurements. The monitor has no trusted
+controlled mechanical drawing and must be measured from the received sample.
 
 These files are reference inputs, not a fabrication release. Re-download each
 drawing at purchasing release and compare its revision and manufacturer part

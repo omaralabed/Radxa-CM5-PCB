@@ -10,9 +10,9 @@ authoritative layout.
 The factory cut drawing can be released only after:
 
 - the actual iM2300 opening is measured at the 38.1 mm panel recess;
-- one sample of every panel-interfacing part is fitted to a 3.2 mm coupon; the
-  RA812 switch location must be locally rear-pocketed to no more than 3.0 mm or
-  use a 3.0 mm panel;
+- one sample of every panel-interfacing part is fitted to a 3.175 mm nominal
+  5052-H32 coupon; the
+  RA812 switch location must be locally rear-pocketed to no more than 3.0 mm;
 - PCB-to-panel Z height and connector protrusion are fixed;
 - the Gold Mount bracket drawing and lid monitor sample are measured;
 - the hinge harness, SIM access, and RF pigtail interfaces are resolved.
@@ -33,7 +33,8 @@ The factory cut drawing can be released only after:
 | Night-light touch control | 1 | E-Switch `CS7L2FR` | Selected; 22.20 +0.25/-0.00 mm cutout, latching capacitive low-side output, IP68 |
 | Sidewall enclosure fans | 2 | Delta `THA0412AD-TZW3` | Selected; right-wall filtered intake and operator-wall center-right exhaust; 40 x 40 x 20 mm, 12 V, 4-wire PWM/tach, IP55 fan body |
 | Intake filter guard | 1 | Qualtek `09150-F/30` | Selected for intake; 40 mm frame, 30 PPI media |
-| Exhaust guard/louver | 1 | TBD | Low-restriction, finger-safe, splash-resistant 40 mm guard with outward-facing louver |
+| Exhaust guard | 1 | Qualtek `09150-G` | Selected 40 mm finger guard; pair with a custom formed 5052-H32 downward splash hood |
+| Modem fan | 1 | Delta `AFB0412SHB-SP04` | Selected 40 x 40 x 15 mm, 12 V, four-wire PWM/tach fan; exact modem heatsink remains module-dependent |
 | Nano-SIM holders | 2 | Wurth `693043020611` | Selected electrically; requires vertical service daughterboard |
 | Wi-Fi RF pigtails | 4 | TE `2016695-4` | Conditional on AW7915-NP1 IPEX receptacle and 200 mm route check |
 | Cellular RF pigtails | 4 | TE `2016694-4` | Conditional on modem receptacle and 200 mm route check |
@@ -66,22 +67,24 @@ table and a drawing disagree.
 
 | Interface | Preliminary panel work | Release condition |
 | --- | --- | --- |
-| `NC3MAV` / `NC3FAV` | A-series opening, nominal `>=19.8` center opening and two `3.2` mounting holes; retain 32.0 row pitch and 43.38 column centers | Confirm front/rear mounting convention, latch orientation, connector sample, and screw engagement |
+| `NC3MAV` / `NC3FAV` | Use the exact A-series manufacturer cut geometry: central panel opening at least `22.0` and two mounting holes from the controlled drawing; retain 32.0 row pitch and 43.38 column centers | Confirm front/rear mounting convention, latch orientation, connector sample, and screw engagement |
 | `V8BR-1AX1-GH` | Rectangular clearance around top-entry RJ45 mouth | Derive from the final PCB Z datum, panel thickness, plug latch travel, LED visibility, and official Bel drawing |
 | `719W-00/03` | 36 x 44 flange; use the exact front-mounted or rear-mounted cutout in the Qualtek drawing; two `3.5` mounting holes | Select mounting side and verify finger-safe mains barrier and fuse-drawer access |
 | `EGG.1B.302.CLL` | `M12` panel drill | Confirm key orientation, nut access, cable bend radius, and IP50 acceptance |
-| `RA812C1121` | `13.0` high x `19.2`, `19.4`, or `19.62` wide for panel thickness `0.75-1.25`, `1.25-2.0`, or `2.0-3.0` respectively | Use manufacturer drawing; 3.2 mm panel requires a rear pocket to `<=3.0`; verify snap retention and four FASTON clearances on a coupon |
+| `RA812C1121` | `13.0` high x `19.2`, `19.4`, or `19.62` wide for panel thickness `0.75-1.25`, `1.25-2.0`, or `2.0-3.0` respectively | Use manufacturer drawing; 3.175 mm nominal panel requires a rear pocket to `<=3.0`; verify snap retention and four FASTON clearances on a coupon |
 | Bulgin `DX06` | `6.0` round cutout each | Confirm rear nut and lead clearance |
 | YIS Marine `LS102W` | `22.0` round cutout each; `38.0` front-face envelope | Fit two samples, confirm the M22 x 1.5 body/nut, rear depth, warm-white CCT, beam coverage, glare, and lead exit |
 | E-Switch `CS7L2FR` | `22.20 +0.25/-0.00` round cutout; maximum panel thickness 10 mm | Fit supplied O-ring/nut, retain 20.70 mm rear body/flats clearance and 150 mm six-wire lead bend radius |
-| `THA0412AD-TZW3` + 40 mm guards | Sidewall work only: 40 x 40 fan envelope, 32 x 32 mounting-hole square, fan holes `3.5 +/-0.3`; use a separate internal reinforcement plate and gasket at each opening; center airflow opening to be finalized | Measure wall ribs/taper and nearby hardware; lock fan 1 intake/fan 2 exhaust labels; test wall stiffness, finger safety, ingress, filter service, pressure balance, and internal baffle effectiveness |
+| `THA0412AD-TZW3` + 40 mm guards | Sidewall work only: 40 x 40 fan envelope, 32 x 32 mounting-hole square, fan holes `3.5 +/-0.3`; use Qualtek `09150-F/30` at intake and `09150-G` at exhaust, with separate reinforcement plates and gaskets; center airflow opening is sample-controlled | Measure wall ribs/taper and nearby hardware; lock fan 1 intake/fan 2 exhaust labels; test custom exhaust splash hood, wall stiffness, finger safety, ingress, filter service, pressure balance, and internal baffle effectiveness |
 | SMA / RP-SMA bulkheads | Current SVG uses approximately `6.4` round placeholders | Replace with TE bulkhead drawing after pigtail/module confirmation; include wrench flats and washer clearance if required |
 | `STX-353K7A-6N-KTTR` | No threaded panel bushing; panel clearance is concentric with PCB-mounted jack | Fix PCB Z height, plug insertion clearance, and jack-to-panel gap on a coupon |
 | Nano-SIM access | Two service openings above a vertical daughterboard, not above a horizontal holder | Design daughterboard, card insertion path, retention, ESD shield, and service cover before cutting |
 | QRC-GOLD | Existing 99 x 132 mm battery envelope is keepout only | Replace with Anton/Bauer bracket hole pattern and full battery release-sweep measurement; published bracket dimensions exclude the release latch |
 | Lid harness | Open hinge-edge notch, no enclosed top-panel hole | Measure HDMI, USB touch, and 12 V cable overmolds and specify edge protection and service loop |
 
-The QRC-GOLD is independent enclosure hardware. Its flying positive and
+The QRC-GOLD is independent enclosure hardware. Install the supplied backplate
+and support the manufacturer's shaded areas against a flat panel/frame load
+path. Its flying positive and
 negative leads terminate in a strain-relieved, keyed, touch-safe high-current
 harness that disconnects at the power-selector PCB. The dock mounting screws,
 battery insertion load, and vibration load must be carried by the top panel and
@@ -115,9 +118,11 @@ switch do not restore overall enclosure sealing.
 
 ### Display interface
 
-The Amazon listing confirms one HDMI input, touch capability, and a listed
-body size of 15.6 x 8.0 x 0.8 in, but it does not identify the touch USB
-connector or provide a controlled mechanical drawing. Keep the user-locked
+The online listings confirm HDMI, touch capability, and 12 V power, but they
+reuse contradictory dimensions and model strings across multiple screen sizes.
+At least one published width is physically impossible for a 15.6-inch 16:9
+active area. The online body dimensions are prohibited as fabrication data.
+Keep the user-locked
 12 V / 2.5 A carrier branch and 25 W design allocation, but do not release the
 HDMI, USB-touch, power connector, VESA holes, or hinge-notch dimensions until
 the exact monitor sample is measured.

@@ -218,6 +218,13 @@ Recommended production target:
 - Why: gives better margin than the 200 W candidates while staying close to
   the same bottom-panel footprint class.
 
+Mechanical A2 release limits the complete tray-mounted PSU and terminal guard
+to 48 mm above the deepest case floor and requires 10 mm minimum vertical
+clearance to carrier B.Cu. The covered supply derates with ambient temperature:
+direct a low-velocity branch of clean intake air through the perforated guard,
+measure PSU inlet air, and keep it at or below 50 C during the 45 C ambient,
+151.7 W continuous qualification. Do not treat the guard as a sealed box.
+
 Good alternate:
 
 - TDK-Lambda `CUS200M-24/A`

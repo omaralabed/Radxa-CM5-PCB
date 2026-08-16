@@ -114,8 +114,8 @@ Start from the Radxa CM5 IO reference design and remove anything not needed.
   opens directly at the top panel's hinge edge
 - USB 2.0/3.0
 - Locked Delta `FFB0412EN-00Y2E` CPU-fan power, PWM, and tach control
-- Dedicated cellular modem fan header/control and modem heatsink/thermal
-  spreader
+- Dedicated Delta `AFB0412SHB-SP04` cellular modem fan header/control and
+  module-specific modem heatsink/thermal spreader
 - Two board/enclosure fan headers controlled by board temperature sensors
 - RTC battery
 - Six system-status LEDs plus two night-illumination LEDs and one touch

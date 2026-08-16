@@ -303,5 +303,5 @@
   <line x1="291" y1="307.5" x2="303" y2="307.5" stroke="#f4d8a2" stroke-width="1.4"/><text class="small" x="318" y="309">LIGHTING</text>
 
   <text class="subtitle" x="0" y="319">PRELIMINARY PLACEMENT ONLY: replace every shown cutout with the final connector manufacturer's drawing and the measured iM2300 plate outline.</text>
-  <text class="subtitle" x="0" y="325">The top panel has no cooling openings. Sidewall fan cuts are controlled only by the separate Rev B cooling drawing and physical case measurements.</text>
+  <text class="subtitle" x="0" y="325">The top panel has no cooling openings. Sidewall fan cuts are controlled only by the separate Rev C cooling drawing and physical case measurements.</text>
 </svg>

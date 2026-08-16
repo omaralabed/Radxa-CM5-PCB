@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1125" viewBox="0 0 480 300" role="img" aria-labelledby="title desc">
-  <title id="title">Pelican iM2300 sidewall cooling layout Rev B</title>
-  <desc id="desc">Preliminary sidewall cooling layout with a right-side filtered intake, operator-side center-right exhaust, rotated hinge-side bottom PSU bay at least 125 millimeters from the audio quiet boundary, and no top-panel cooling openings.</desc>
+  <title id="title">Pelican iM2300 sidewall cooling layout Rev C</title>
+  <desc id="desc">A2 preliminary sidewall cooling layout with a right-side filtered intake, operator-side center-right exhaust, selected Qualtek guards, a clean-air branch across the hinge-side PSU bay, at least 125 millimeters from the audio quiet boundary, and no top-panel cooling openings.</desc>
   <defs>
     <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M10 0H0V10" fill="none" stroke="#303740" stroke-width=".22"/></pattern>
     <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#68b8ff"/></marker>
@@ -13,34 +13,34 @@
   </defs>
   <rect class="page" width="480" height="300"/><rect class="grid" x="14" y="42" width="452" height="226" rx="4"/>
   <text class="title" x="18" y="19">RADXA CM5 PROCOMM - iM2300 SIDEWALL COOLING LAYOUT</text>
-  <text class="subtitle" x="18" y="29">REV B PRELIMINARY | ROTATED HINGE-SIDE PSU | 125 mm MIN AUDIO SEPARATION | MEASURE CASE BEFORE CUTTING</text>
+  <text class="subtitle" x="18" y="29">REV C / A2 HOLD | CLEAN-AIR PSU WASH | 125 mm MIN AUDIO SEPARATION | MEASURE CASE BEFORE CUTTING</text>
 
   <rect class="box" x="22" y="53" width="286" height="171" rx="3"/><text class="section" x="30" y="64">PLAN VIEW - BELOW TOP PANEL</text>
   <rect class="case" x="31" y="72" width="266" height="138" rx="8"/><text class="small" x="164" y="78">HINGE / DISPLAY SIDE</text><text class="small" x="164" y="207">OPERATOR / HANDLE SIDE</text>
   <rect class="quiet" x="38" y="82" width="62" height="116" rx="3"/><text class="label" x="69" y="94">AUDIO QUIET ZONE</text><text class="small" x="69" y="101">XLR + ANALOG PCB</text><text class="small" x="69" y="108">NO FAN / PWM HARNESS</text>
-  <rect class="power" x="186" y="82" width="53" height="60" rx="2"/><text class="label" x="212.5" y="96">RPS-400-24-C</text><text class="small" x="212.5" y="103">ROTATED 86 x 130</text><text class="small" x="212.5" y="110">GUARDED FLOOR BAY</text><text class="small" x="212.5" y="117">NO FAN HARNESS</text>
+  <rect class="power" x="186" y="82" width="53" height="60" rx="2"/><text class="label" x="212.5" y="96">RPS-400-24-C</text><text class="small" x="212.5" y="103">ROTATED 86 x 130</text><text class="small" x="212.5" y="110">PERFORATED GUARD / 48 mm MAX Z</text><text class="small" x="212.5" y="117">CLEAN-AIR WASH / NO FAN HARNESS</text>
   <path class="lidroute" d="M161 73V112C161 122 169 130 181 137"/><text class="small" x="143" y="118">PROTECTED LID HARNESS</text><text class="small" x="143" y="123">15 mm MIN TO PSU GUARD</text>
   <rect class="box" x="112" y="137" width="147" height="54" rx="3"/><text class="label" x="185.5" y="147">DIGITAL / POWER AIRFLOW CHAMBER</text>
   <rect class="fan" x="212" y="151" width="34" height="28" rx="2"/><text class="small" x="229" y="163">CM5 + MODEM</text><text class="small" x="229" y="169">DOWN-FACING</text>
   <circle class="intake" cx="291" cy="160" r="14"/><path d="M284 160H297M291 153V167" stroke="#83df9f" stroke-width="1"/><text class="small green" x="276" y="187">RIGHT WALL INTAKE</text>
   <circle class="exhaust" cx="236" cy="204" r="14"/><path d="M229 204H242M236 197V211" stroke="#e4b95f" stroke-width="1"/><text class="small gold" x="204" y="219">OPERATOR EXHAUST</text>
-  <path class="air" d="M286 160C266 160 253 160 246 164"/><path class="air" d="M212 165C182 165 159 164 133 161"/><path class="air" d="M142 173C169 189 202 198 221 202"/>
+  <path class="air" d="M286 160C266 160 253 160 246 164"/><path class="air" d="M212 165C182 165 159 164 133 161"/><path class="air" d="M142 173C169 189 202 198 221 202"/><path class="air" d="M275 153C258 137 245 120 232 110"/>
   <line class="dim" x1="100" y1="130" x2="186" y2="130"/><text class="dimension" x="143" y="135">146 mm NOMINAL / 125 mm MIN TO PSU GUARD</text><text class="note" x="39" y="195">Shielded analog boundary; fan/PWM separation remains 100 mm minimum practical</text>
 
   <rect class="box" x="318" y="53" width="140" height="82" rx="3"/><text class="section" x="327" y="64">RIGHT WALL - FILTERED INTAKE</text>
   <path class="case" d="M330 73H446V124H330Z"/><line class="panel" x1="330" y1="91" x2="446" y2="91"/><text class="small" x="387" y="87">PANEL PLANE - 38.1 BELOW PARTING LINE</text>
-  <rect class="intake" x="378" y="96" width="40" height="28" rx="1"/><circle cx="398" cy="110" r="13" fill="#101820" stroke="#83df9f" stroke-width=".7"/><text class="small green" x="398" y="120">THA0412AD-TZW3</text><text class="small" x="398" y="131">FILTER + GASKET + RAIN LOUVER</text>
+  <rect class="intake" x="378" y="96" width="40" height="28" rx="1"/><circle cx="398" cy="110" r="13" fill="#101820" stroke="#83df9f" stroke-width=".7"/><text class="small green" x="398" y="120">THA0412AD-TZW3</text><text class="small" x="398" y="131">09150-F/30 + GASKET + HOOD</text>
   <line class="dim" x1="438" y1="73" x2="438" y2="110"/><text class="dimension" x="432" y="91.5" transform="rotate(-90 432 91.5)">71.5 PRELIM AXIS</text>
 
   <rect class="box" x="318" y="145" width="140" height="79" rx="3"/><text class="section" x="327" y="156">OPERATOR WALL - EXHAUST</text>
   <path class="case" d="M330 165H446V215H330Z"/><line class="panel" x1="330" y1="182" x2="446" y2="182"/>
-  <rect class="exhaust" x="383" y="187" width="40" height="28" rx="1"/><circle cx="403" cy="201" r="13" fill="#101820" stroke="#e4b95f" stroke-width=".7"/><text class="small gold" x="403" y="211">THA0412AD-TZW3</text><text class="small" x="374" y="220">OPEN GUARD + GASKET + DOWNWARD LOUVER</text>
+  <rect class="exhaust" x="383" y="187" width="40" height="28" rx="1"/><circle cx="403" cy="201" r="13" fill="#101820" stroke="#e4b95f" stroke-width=".7"/><text class="small gold" x="403" y="211">THA0412AD-TZW3</text><text class="small" x="374" y="220">09150-G + GASKET + CUSTOM DOWNWARD HOOD</text>
   <text class="note" x="327" y="175">Center-right; clear C14, LEMO, controls, handle, and frame screws.</text>
 
   <rect class="box" x="22" y="234" width="436" height="34" rx="3"/><text class="section" x="30" y="245">SIDEWALL CONSTRUCTION AND RELEASE RULES</text>
-  <text class="note" x="31" y="253">Both 40 x 40 x 20 mm fans use separate 60 x 60 mm minimum internal reinforcement plates, closed-cell gaskets, finger guards, louvers, and serviceable fasteners.</text>
+  <text class="note" x="31" y="253">Both 40 x 40 x 20 mm fans use separate 60 x 60 mm minimum internal reinforcement plates, closed-cell gaskets, selected guards, custom hoods, and serviceable fasteners.</text>
   <text class="note" x="31" y="259">Route FAN_ENC_12V, PWM, and tach along the digital boundary. Star-return the filtered fan rail at the power board; do not share audio ground or the guarded PSU harness path.</text>
   <text class="note red" x="31" y="265">MECHANICAL HOLD: centers shown are preliminary. Scan/measure wall ribs, taper, handles, hinges, latches, and closed-case clearances before any sidewall cut.</text>
-  <text class="note" x="18" y="283">Sidewall openings reduce the original enclosure rating. Use splash-directed louvers and validate ingress, recirculation, pressure drop, acoustic noise, and 45 C ambient performance.</text>
+  <text class="note" x="18" y="283">A2 acceptance: at least 15 CFM clean, 12 CFM loaded, PSU inlet air at most 50 C, and 151.7 W continuous operation at 45 C ambient.</text>
   <text class="note" x="18" y="291">No enclosure fan is allowed on the XLR/analog side. The rotated PSU guard remains at least 125 mm from audio and is separated from both enclosure-fan harnesses.</text>
 </svg>

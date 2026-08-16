@@ -4,11 +4,16 @@ Project workspace for a custom carrier board for the Radxa CM5 compute module.
 
 ## Self-Contained Project Files
 
-Only the current Rev J top-panel drawing and Rev J underside-floorplan drawing
+Only the current Rev J top-panel drawing and Rev K underside-floorplan drawing
 are retained under `cad/`. They reserve a 15 mm four-side frame/screw keepout
 and limit the suspended PCB envelopes before routing. The battery calculation
 is under `docs/`. The obsolete 8.7 GB design-session recording was intentionally
 removed before repository publication.
+
+Mechanical fabrication remains on A2 `HOLD_FOR_MEASUREMENT`. The controlled
+gate is `docs/fabrication-readiness-audit-a2.md`; it corrects the below-panel
+stack, locks battery/antenna transport closure, and requires actual case,
+monitor, dock, fan, tray, and connector samples before routing.
 
 The ProComm field-unit photo PDF and rendered reference pages are preserved
 under `references/procomm-field-unit/`.

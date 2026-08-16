@@ -60,7 +60,7 @@ not the production target.
   rating is 12 V / 25 W, or 2.08 A nominal. Keep a 12 V / 2.5 A branch and
   verify startup and full-brightness current on the received sample.
 - CPU cooling is locked to the Radxa `5540A` plus Delta
-  `FFB0412EN-00Y2E`. The modem fan remains to be selected; the two enclosure
+  `FFB0412EN-00Y2E`. The modem fan is Delta `AFB0412SHB-SP04`; the two enclosure
   fans are locked to Delta `THA0412AD-TZW3`, each 0.43 A nominal / 0.52 A
   maximum with 0.60 A label current.
 
@@ -79,7 +79,7 @@ not the production target.
 | 15.6-inch JUNEBOX HDMI touchscreen and USB touch | 12 V display/touch rail | 20.0 | 25.0 | 30.0 | User rating | Rated 12 V / 25 W (2.08 A nominal); 30 W peak budget matches the locked 12 V / 2.5 A branch. |
 | USB service/accessory power reserve | 5 V USB rail | 2.0 | 5.0 | 8.0 | Estimate | Final external USB current limits must be chosen. |
 | CM5 CPU fan, Delta FFB0412EN-00Y2E | protected `FAN_CPU_12V` | 8.7 | 21.0 | 21.0 | High | Locked 12 V fan; 17.4 W nominal at full rated operation and 21 W datasheet maximum input. Typical column assumes reduced PWM duty. |
-| Modem fan, two enclosure fans, and fan drivers | protected `FAN_AUX_12V` branch | 5.0 | 18.0 | 20.0 | Medium | Two locked THA0412AD-TZW3 fans consume 10.32 W nominal / 12.48 W maximum as a pair; allowance includes the still-TBD modem fan and controller. |
+| Modem fan, two enclosure fans, and fan drivers | protected `FAN_AUX_12V` branch | 5.0 | 18.0 | 20.0 | Medium | Two locked THA0412AD-TZW3 fans consume 10.32 W nominal / 12.48 W maximum as a pair; Delta AFB0412SHB-SP04 modem fan is 3.0 W; remaining allowance covers controller and starting margin. |
 | Two YIS LS102W warm-white panel lights and E-Switch CS touch control | `NIGHT_LIGHT_12V` | 0.6 | 0.7 | 0.7 | High | Two 0.25 W 12 V courtesy lights plus low-current touch electronics on a 0.25 A fused branch. |
 | Miscellaneous margin: buttons, status, losses not otherwise captured | mixed | 0.5 | 1.5 | 2.5 | Estimate | Keep until schematic/BOM is closed. |
 | Subtotal regulated loads | mixed | 75.1 | 141.7 | 172.2 | Estimate | Before conversion/source-selection losses. |

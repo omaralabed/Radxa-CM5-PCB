@@ -55,7 +55,7 @@ installed or tested.
 | EMC2305 channel | Function | PWM net | Tach net | Fan status |
 | ---: | --- | --- | --- | --- |
 | 1 | CM5 heatsink fan | `CPU_FAN_PWM` | `CPU_FAN_TACH` | Delta `FFB0412EN-00Y2E` starting selection |
-| 2 | Cellular-modem fan | `MODEM_FAN_PWM` | `MODEM_FAN_TACH` | Exact model remains to be locked |
+| 2 | Cellular-modem fan | `MODEM_FAN_PWM` | `MODEM_FAN_TACH` | Delta `AFB0412SHB-SP04`, 40 x 40 x 15 mm |
 | 3 | Right-wall filtered enclosure intake | `INTAKE_FAN_PWM` | `INTAKE_FAN_TACH` | Delta `THA0412AD-TZW3` |
 | 4 | Operator-wall center-right enclosure exhaust | `EXHAUST_FAN_PWM` | `EXHAUST_FAN_TACH` | Delta `THA0412AD-TZW3` |
 | 5 | Spare | Reserved | Reserved | Do not assign without a design revision |
@@ -203,7 +203,7 @@ low-speed divide needed for exact 1 kHz output. If the selected Radxa kernel
 does not expose it, add a reviewed board-specific driver extension. Do not use
 uncoordinated `i2cset` writes while the kernel EMC2305 driver is bound.
 
-The CPU and final modem fan frequencies must be taken from their released fan
+The CPU and modem fan frequencies must be taken from their released fan
 datasheets. Do not assume that the 1 kHz enclosure-fan setting applies to every
 fan model.
 

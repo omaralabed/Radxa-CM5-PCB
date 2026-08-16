@@ -10,7 +10,7 @@ Cellular modem SIM8260G-M2 class,MODEM_3V8,6.0,12.0,20.0,Medium,3.8 V 6 A conver
 15.6-inch JUNEBOX HDMI touchscreen and USB touch,12 V display/touch rail,20.0,25.0,30.0,User rating,Rated 12 V / 25 W (2.08 A nominal); 30 W peak budget matches locked 12 V / 2.5 A branch
 USB service/accessory reserve,5 V USB rail,2.0,5.0,8.0,Estimate,Final external USB current limits must be chosen
 CM5 CPU fan Delta FFB0412EN-00Y2E,FAN_CPU_12V,8.7,21.0,21.0,High,Locked 12 V fan; 17.4 W nominal and 21 W datasheet maximum input
-Modem fan two enclosure fans and EMC2305,FAN_AUX_12V,5.0,18.0,20.0,Estimate,Two locked Delta THA0412AD-TZW3 fans are 0.43 A nominal / 0.52 A maximum each; modem fan remains TBD
+Modem fan two enclosure fans and EMC2305,FAN_AUX_12V,5.0,18.0,20.0,Estimate,Two Delta THA0412AD-TZW3 fans are 0.43 A nominal / 0.52 A maximum each; Delta AFB0412SHB-SP04 modem fan is 3.0 W
 Two YIS LS102W warm-white panel lights and E-Switch CS touch control,NIGHT_LIGHT_12V,0.6,0.7,0.7,High,Two 0.25 W 12 V courtesy lights plus low-current touch electronics on a 0.25 A fused branch
 Miscellaneous margin,mixed,0.5,1.5,2.5,Estimate,Keep until schematic/BOM is closed
 Subtotal regulated loads,mixed,75.1,141.7,172.2,Estimate,Before conversion/source-selection losses

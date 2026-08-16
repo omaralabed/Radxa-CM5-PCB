@@ -48,7 +48,8 @@ its width depends on finished panel thickness.
 | 1.25-2.00 mm | 19.4 mm |
 | 2.00-3.00 mm | 19.62 mm |
 
-The selected 3.2 mm panel concept exceeds the switch's listed snap-in range.
+The selected 3.175 mm nominal panel concept exceeds the switch's listed
+snap-in range.
 Machine a shallow rear pocket so the finished thickness at the switch is no
 more than 3.0 mm, or use a 3.0 mm panel. Confirm the opening and snap retention
 with a physical switch in a material/finish coupon before panel release.

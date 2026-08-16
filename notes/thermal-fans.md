@@ -58,9 +58,11 @@ The two sidewall enclosure fans are selected as Delta
 and 1.385 inch H2O maximum static pressure. The label current is 0.60 A, so
 wire, connector, and branch protection calculations use at least that value.
 Use one Qualtek `09150-F/30` 30 PPI filter guard on enclosure fan 1, the
-intake. Use a low-restriction finger-safe guard/louver on enclosure fan 2, the
-exhaust. The two external louvers point in opposing directions so discharged
-hot air cannot be pulled directly back into the intake.
+intake. Use a Qualtek `09150-G` finger guard plus a custom formed 5052-H32
+downward splash hood on enclosure fan 2, the exhaust. The two external hoods
+point in opposing directions so discharged hot air cannot be pulled directly
+back into the intake. The custom hood remains a measured and flow-tested
+mechanical part.
 
 The airflow direction is locked: the right-wall fan is intake and the
 operator-wall center-right fan is exhaust. Add internal baffles so intake air
@@ -96,6 +98,8 @@ specification.
 The cellular modem gets its own thermal hardware:
 
 - Selected approach: both heatsink/thermal spreader and dedicated fan.
+- Selected fan: Delta `AFB0412SHB-SP04`, 40 x 40 x 15 mm, 12 V,
+  0.25 A / 3.0 W, 11,000 RPM, 14.83 CFM, 0.601 inch H2O, four-wire PWM/tach.
 - Fan-only is not enough for a sealed field unit because it only moves hot air
   around the modem.
 - Heatsink-only is not enough unless a tested conductive path carries heat to
@@ -105,6 +109,8 @@ The cellular modem gets its own thermal hardware:
 - No mechanical load on the modem's miniature RF connectors.
 - Airflow path that does not bend or stress the four cellular RF pigtails.
 - Temperature sensor near the modem hot zone.
+- Structural fan/heatsink cartridge that does not load the M.2 socket or the
+  modem RF connectors, with at least 10 mm floor/harness inlet clearance.
 - Software should also read the modem's internal temperature if the module
   exposes it through QMI/MBIM/AT commands.
 
@@ -182,7 +188,8 @@ Linux direction:
 
 ## Open Decisions
 
-- Exact modem 12 V fan model, all fan connector types, and pinouts.
+- Exact modem heat spreader and thermal-pad stack for each approved 3042/3052
+  module; all fan connector types and pinouts.
 - Final downward CM5 cooling-cartridge bracket, adapter/shroud, 10 mm minimum
   inlet gap, and vibration-isolator geometry after importing exact 3D models.
 - Exact TMP117 placement and trip curves.
@@ -206,5 +213,11 @@ Linux direction:
 - Demonstrate at least 15 CFM measured through-case flow with a clean intake
   filter and document the dust-loaded maintenance threshold. The exact
   acceptance value may be raised after the first 45 C thermal run.
+- Demonstrate at least 12 CFM at the released filter-maintenance loading limit.
+- Direct a low-velocity branch of clean intake air across the guarded
+  RPS-400-24-C bay without routing fan/PWM wiring through the audio quiet zone
+  or mains corridor. Keep PSU inlet air at or below 50 C during the 45 C,
+  151.7 W continuous qualification. A terminal guard may not create a sealed
+  hot box.
 - Block the intake filter to the maintenance limit and verify safe throttling or
   shutdown without damaging the CM5, modem, regulators, PSU, or audio stages.

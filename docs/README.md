@@ -4,6 +4,15 @@ Place downloaded datasheets, pinout tables, and exported design PDFs here.
 
 Official Radxa resources are listed in the project README. The reference design is cloned under `references/radxa-cm-projects/cm5/radxa-cm5-io-board/`.
 
+Mechanical A2 release gate:
+
+- `fabrication-readiness-audit-a2.md` - factory-facing fit, material, thermal,
+  power, transport-closure, and first-article audit.
+- `mechanical-stack-budget-a2.csv` - controlled panel, tray, PSU, carrier,
+  cooling, display, battery, and RF stack budget.
+- `../fabrication/mechanical-release/` - M001-M080 register, A2 release data,
+  printable worksheet, and validator.
+
 Preliminary engineering tables:
 
 - `power_budget_preliminary.csv` - typical, continuous-design, and transient

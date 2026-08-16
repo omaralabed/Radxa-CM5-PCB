@@ -1,0 +1,26 @@
+id,stack_or_interface,from_datum,to_datum,nominal_or_target_mm,tolerance_or_rule,status,release_evidence
+S001,Published base cavity depth,case parting line,deepest nominal floor,106.7,reference only,VERIFIED_SOURCE,Pelican iM2300 product page
+S002,Top-panel recess,case parting line,finished panel top face A,38.1,+/-0.5 target,MEASURE,M013
+S003,Nominal floor to panel top,deepest nominal floor,A,68.6,S001 minus S002; do not release from calculation,CALCULATED,M052
+S004,Top-panel thickness,panel top face A,panel underside,3.175,3.0 to 3.3,SELECTED,M018
+S005,Nominal floor to panel underside,deepest nominal floor,panel underside,65.425,S003 minus S004; actual controls,CALCULATED,M027
+S006,Bottom equipment tray top elevation,deepest local floor,tray top,3.0 maximum,include tray and restrained isolator stack,DESIGN_LIMIT,M049-M051
+S007,Tray top to panel underside,tray top,panel underside,62.425 nominal minimum,actual floor/frame/panel stack controls,CALCULATED,M053
+S008,RPS-400-24-C enclosed body,tray top,PSU case top,43.0,+/-1.0 manufacturer body tolerance,VERIFIED_SOURCE,M054
+S009,Complete PSU and terminal-guard envelope,deepest local floor,tallest PSU guard point,48.0 maximum,includes tray mounting and terminal cover,DESIGN_LIMIT,M055
+S010,PSU guard to carrier B.Cu,PSU guard envelope,carrier B.Cu plane,10.0 minimum,worst-case tolerance and vibration,DESIGN_LIMIT,M058
+S011,Carrier B.Cu minimum elevation,deepest local floor,carrier B.Cu plane,58.0 minimum,S009 plus S010,DESIGN_LIMIT,M057
+S012,Carrier PCB thickness,carrier B.Cu,carrier F.Cu,1.6 to 2.0,release with controlled-impedance stackup,OPEN,PCB stackup
+S013,Carrier F.Cu to panel underside,highest non-panel component,panel underside,4.0 minimum,panel-mounted connector Z controls,DESIGN_LIMIT,M056
+S014,CM5 dedicated fan inlet,nearest floor tray or harness,fan inlet,10.0 minimum,worst-case tolerance and vibration,DESIGN_LIMIT,M029 and M076
+S015,Modem dedicated fan inlet,nearest floor tray or harness,fan inlet,10.0 minimum,worst-case tolerance and vibration,DESIGN_LIMIT,M030 and M077
+S016,Published lid cavity depth,lid parting line,lid cavity back,50.8,reference only,VERIFIED_SOURCE,Pelican iM2300 product page
+S017,Display total lid protrusion,lid cavity back,display front glass,TBD,actual monitor plus mount padding screw heads and cable bosses,SAMPLE_REQUIRED,M021 and M062
+S018,Display-front to panel-top gap,display front,A,88.9 minus S017,50.8 lid depth plus 38.1 panel recess minus measured display protrusion,CALCULATED,M065
+S019,Allowed permanent panel hardware height,A,tallest permanent item,S018 minus 8.0,retain 8.0 dynamic clearance after tolerance,DESIGN_LIMIT,M065
+S020,Dionic XT90 plus QRC-GOLD protrusion,A,battery outer face,approximately 70.7,58 battery plus approximately 12.7 dock before latch tolerance,INTERFERENCE_EXPECTED,M066-M067
+S021,Capped RF bulkhead protrusion,A,dust-cap top,TBD,all external antennas removed for closure,SAMPLE_REQUIRED,M068-M069
+S022,QRC-GOLD support stack,A,panel/frame backplate,not applicable,supplied backplate and flat supported area mandatory,VERIFIED_SOURCE,M066 and M073
+S023,Monitor planar envelope,lid cavity,monitor body,TBD,online values are contradictory; measure actual sample,SAMPLE_REQUIRED,M059-M064
+S024,Sidewall fan body,case wall inner face,fan rear face,20.0,Delta THA0412AD-TZW3 body,VERIFIED_SOURCE,M034-M037
+S025,Modem fan body,fan outlet,fan inlet,15.0,Delta AFB0412SHB-SP04 body,SELECTED,M077

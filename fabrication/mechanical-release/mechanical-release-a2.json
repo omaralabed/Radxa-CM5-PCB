@@ -1,0 +1,125 @@
+{
+  "project": "Radxa CM5 ProComm iM2300",
+  "revision": "A2",
+  "release_state": "HOLD_FOR_MEASUREMENT",
+  "release_scope": "mechanical fit, thermal path, power-bay stack, and transport closure before PCB routing",
+  "datum_origin": "finished left panel edge B / finished hinge panel edge C / finished top-panel face A",
+  "nominal_case_reference": {
+    "interior_width_mm": 431.8,
+    "interior_depth_mm": 297.2,
+    "base_depth_mm": 106.7,
+    "lid_depth_mm": 50.8,
+    "bezel_depth_reference_mm": 298.0,
+    "source": "Pelican iM2300 product page and P111-0095 Rev C base-bezel drawing"
+  },
+  "panel_recess_mm": null,
+  "actual_case": {
+    "serial_or_asset_id": null,
+    "opening_width_min_mm": null,
+    "opening_width_max_mm": null,
+    "opening_depth_min_mm": null,
+    "opening_depth_max_mm": null,
+    "diagonal_difference_mm": null,
+    "minimum_corner_radius_mm": null,
+    "deepest_floor_to_panel_top_mm": null,
+    "deepest_floor_to_panel_underside_mm": null
+  },
+  "released_panel": {
+    "width_mm": null,
+    "depth_mm": null,
+    "corner_radius_mm": null,
+    "thickness_mm": null,
+    "target_thickness_mm": 3.175,
+    "material": "5052-H32 aluminum",
+    "finish": "matte black powder coat after fit and grounding-coupon approval",
+    "local_rocker_pocket_max_thickness_mm": 3.0
+  },
+  "bottom_equipment_tray": {
+    "material": "5052-H32 aluminum",
+    "target_thickness_mm": 2.0,
+    "maximum_top_above_deepest_floor_mm": 3.0,
+    "measured_top_above_deepest_floor_mm": null,
+    "drawing_id": null,
+    "note": "Low-profile rigid tray; do not stack foam under the PSU. Use restrained thin isolators only where the released shock design requires them."
+  },
+  "frame": {
+    "minimum_support_width_mm": null,
+    "minimum_screw_edge_distance_mm": null,
+    "maximum_hardware_intrusion_mm": null,
+    "drawing_id": null
+  },
+  "display": {
+    "part": "JUNEBOX 15.6-inch touchscreen, ASIN B0GK5X95D9",
+    "sample_required": true,
+    "body_width_mm": null,
+    "body_height_mm": null,
+    "body_depth_mm": null,
+    "mount_and_padding_protrusion_mm": null,
+    "total_lid_protrusion_mm": null,
+    "connector_keepout_record": null,
+    "mounting_drawing_id": null,
+    "note": "Online dimensions are contradictory and are not fabrication data."
+  },
+  "closed_lid": {
+    "minimum_dynamic_clearance_mm": null,
+    "display_protrusion_mm": null,
+    "tallest_permanent_panel_hardware_mm": null,
+    "battery_plus_dock_protrusion_mm": null,
+    "rf_cap_protrusion_mm": null,
+    "inspection_record": null
+  },
+  "transport_configuration": {
+    "battery": "REMOVE_BEFORE_CLOSING",
+    "external_rf_antennas": "REMOVE_AND_INSTALL_DUST_CAPS_BEFORE_CLOSING",
+    "exception_rule": "An alternate installed/folded configuration requires a separate signed sweep record with at least 8.0 mm dynamic clearance everywhere."
+  },
+  "battery_dock": {
+    "part": "Anton/Bauer QRC-GOLD 8375-0094",
+    "battery": "Anton/Bauer Dionic XT90 8675-0125",
+    "mount_orientation": "portrait_99x132",
+    "engagement_direction": "LEFT_TO_RIGHT",
+    "removal_direction": "RIGHT_TO_LEFT",
+    "slide_travel_mm": null,
+    "minimum_left_insertion_corridor_mm": 20.0,
+    "measured_left_insertion_corridor_mm": null,
+    "backplate_installed": null,
+    "inspection_record": null
+  },
+  "thermal_release": {
+    "qualification_ambient_c": 45.0,
+    "minimum_clean_filter_through_case_cfm": 15.0,
+    "minimum_loaded_filter_through_case_cfm": 12.0,
+    "maximum_psu_inlet_air_temperature_c": 50.0,
+    "psu_bay_temperature_record": null,
+    "airflow_record": null
+  },
+  "hard_constraints": {
+    "minimum_perimeter_no_pcb_band_mm": 15.0,
+    "audio_pcb_max_width_mm": 78.0,
+    "audio_pcb_max_height_mm": 268.0,
+    "carrier_pcb_max_width_mm": 166.0,
+    "carrier_pcb_max_height_mm": 268.0,
+    "minimum_audio_pcb_support_count": 6,
+    "minimum_carrier_pcb_support_count": 6,
+    "minimum_closed_lid_dynamic_clearance_mm": 8.0,
+    "minimum_unrelated_metal_clearance_mm": 3.0,
+    "minimum_psu_guard_vertical_clearance_mm": 10.0,
+    "maximum_installed_psu_guard_height_above_deepest_floor_mm": 48.0,
+    "minimum_xlr_bank_edge_clearance_mm": 15.0,
+    "minimum_dedicated_fan_inlet_clearance_mm": 10.0,
+    "minimum_fan_audio_separation_mm": 100.0,
+    "minimum_psu_audio_separation_mm": 125.0,
+    "minimum_lid_harness_psu_guard_clearance_mm": 15.0,
+    "battery_engagement_direction": "LEFT_TO_RIGHT",
+    "battery_transport_state": "REMOVED",
+    "rf_antenna_transport_state": "REMOVED_AND_CAPPED"
+  },
+  "signoff": {
+    "measured_by": null,
+    "measurement_date": null,
+    "mechanical_reviewed_by": null,
+    "electrical_reviewed_by": null,
+    "thermal_reviewed_by": null,
+    "release_date": null
+  }
+}

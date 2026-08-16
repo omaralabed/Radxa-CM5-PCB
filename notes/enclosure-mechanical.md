@@ -32,6 +32,11 @@ Design the electronics as a top-panel-mounted assembly inside the iM2300:
   tool clearance, and sealing treatment from the measured custom frame.
 - Source-checked base/top-panel bezel reference is 17.00 in x 11.733 in nominal (431.8 mm x 298.0 mm nominal)
 - Main carrier PCB mounted underneath the top panel on standoffs
+- Top panel material: 3.175 mm nominal 5052-H32 aluminum, matte black powder
+  coat, with masked PE/chassis bond points and a local RA812 rocker pocket no
+  thicker than 3.0 mm
+- Low-profile bottom equipment tray: 2.0 mm nominal 5052-H32 aluminum, with
+  its top surface no more than 3.0 mm above the deepest measured floor datum
 - MEAN WELL `RPS-400-24-C` 24 V AC/DC PSU mounted to the bottom panel, not to
   the top panel
 - Touchscreen mounted in the Pelican lid
@@ -82,7 +87,8 @@ Current monitor candidate:
 
 - JUNEBOX / DTM MALL Amazon ASIN `B0GK5X95D9`
 - Listed screen size: 15.6 in
-- Listed enclosure size: 15.6 in W x 8.0 in H x 0.8 in D
+- Online enclosure dimensions are contradictory and prohibited as fabrication
+  data. Listings reuse the same model string across multiple screen sizes.
 - Listed/displayed features: 1920 x 1080, IPS, HDMI input, DVI/VGA support,
   touch support, 450 cd/m2 class brightness, 7H tempered glass, VESA/wall-mount
   hardware, 12 V power
@@ -91,13 +97,13 @@ Selected iM2300 fit:
 
 | Case | Interior L x W x D | Lid depth | Bottom depth | Monitor planar clearance | Lid depth spare |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| iM2300 | 17.00 x 11.70 x 6.20 in | 2.00 in | 4.20 in | 1.40 in length, 3.70 in width | 1.20 in |
+| iM2300 | 17.00 x 11.70 x 6.20 in | 2.00 in | 4.20 in | Sample-controlled | Sample-controlled |
 
 Interpretation:
 
-- The iM2300 fits the 15.6-inch monitor in the lid on paper and gives
-  a workable base depth for the Radxa carrier, XLR harnessing, PSU, modem,
-  Wi-Fi, Ethernet, and four-fan cooling plan.
+- The iM2300 is large enough for a 15.6-inch 16:9 active area in principle,
+  but the selected monitor body, connector bosses, mount, and cable bends are
+  not verified. Base and lid fit remain on physical hold.
 - Keep iM2300 as the selected case unless the owner explicitly reopens the
   enclosure decision later.
 
@@ -183,26 +189,33 @@ Preferred mechanical stack:
 The mechanical target is to mount the top-panel plane 1.50 in (38.1 mm) below
 the upper case edge/parting-line reference.
 
-Using the published nominal depths:
+Using the published nominal depths and the selected nominal panel:
 
 - Base depth below the parting line: 4.20 in (106.7 mm)
-- Remaining nominal depth below the recessed panel: 2.70 in (68.6 mm)
+- Finished top-panel face above the nominal deepest floor: 68.6 mm
+- Panel thickness: 3.175 mm nominal
+- Remaining nominal depth below the panel underside: 65.425 mm
+- Bottom equipment tray top: no more than 3.0 mm above the deepest floor
+- Nominal tray-top to panel-underside budget: at least 62.425 mm
 - Lid depth: 2.00 in (50.8 mm)
-- Monitor body thickness: about 0.80 in (20.3 mm)
-- Preliminary monitor mounting/padding allowance: 5 mm
-- Preliminary monitor-front-to-panel gap with the lid closed: about 63.6 mm
+- Monitor total lid protrusion: sample-controlled
+- Monitor-front to panel-top gap:
+  measured lid depth + measured panel recess - measured display protrusion
 
-This is enough on paper for the monitor to clear the normal XLR faces, RJ45
-connectors, controls, and fan grilles. Preserve at least 8-10 mm of final
-dynamic clearance for case tolerance, gasket compression, lid flex, impact,
-and monitor-mount tolerance. Verify the actual closed-lid gap with the real
-case, monitor, panel frame, and representative connectors before fabrication.
+No closure claim can be made until the monitor sample is measured. Preserve at
+least 8 mm of final dynamic clearance from the display front to every permanent
+panel item after case tolerance, gasket compression, lid flex, impact, and
+monitor-mount tolerance. Verify the actual closed-lid gap with the real case,
+monitor, panel frame, dust-capped RF bulkheads, and representative connectors
+before fabrication.
 
-The Gold Mount battery and antennas are separate closure checks. A roughly
-59 mm battery leaves very little nominal margin in the preliminary stack, and
-upright antennas cannot remain vertical when the lid closes. Confirm whether
-the product closes with the battery removed and antennas folded/removed, or
-revise their mounting before release.
+The Gold Mount battery and antennas are separate closure checks. The 58 mm
+Dionic XT90 plus the approximately 12.7 mm QRC-GOLD body creates an
+approximately 70.7 mm protrusion before latch tolerance, which is expected to
+interfere with the lid monitor. The locked transport rule is: remove the
+battery, remove all eight external antennas, and fit low-profile dust caps
+before closing the case. An installed-battery or folded-antenna alternative
+requires its own signed sweep record with at least 8 mm dynamic clearance.
 
 Orient the Gold Mount dock so the battery engages horizontally from left to
 right, moving from the XLR side toward the network side. Removal is the reverse
@@ -223,6 +236,10 @@ Design constraints:
   130 x 86 x 43 mm covered supply body, connectors/wiring, remote-sense and
   status wiring if used, wire bend radius, service guard, and natural
   convection airflow.
+- Limit the complete bottom-tray-mounted PSU and terminal-guard envelope to
+  48.0 mm above the deepest measured floor. Maintain at least 10 mm from that
+  envelope to carrier B.Cu. Make a physical section gauge before freezing PCB
+  mounting holes.
 - Rotate the PSU footprint 90 degrees in plan and place its grounded guard in
   the hinge-side digital bay. Maintain at least 125 mm from the AUDIO-8X8 quiet
   boundary to the nearest guard edge; the current nominal geometry is 146 mm.
@@ -237,6 +254,8 @@ Design constraints:
   maximum board envelopes are 78 x 268 mm for `AUDIO-8X8` and 166 x 268 mm for
   `CM5-CARRIER`; lock the actual frame before routing either board.
 - Support heavier connectors mechanically from the panel, not only from the PCB.
+- Use at least six supports on AUDIO-8X8 and six on CM5-CARRIER. The 268 mm
+  audio board may not rely on only four corner standoffs.
 - Reserve eight RF bulkheads in the right-side RF bank: four Wi-Fi above four
   cellular/GNSS. Keep the bank and its coax corridor away from the lid display
   metal, AC/PSU bay, XLR bank, Ethernet magnetics, fans, and high-current wiring.
@@ -248,6 +267,12 @@ and operator-wall exhaust intentionally reduce that rating; the top panel has
 no cooling opening. Gaskets, filters, guards, and splash-directed louvers do
 not restore the original Pelican rating. Internal baffles must force the air
 through the CM5, modem, and regulator zones before exhaust.
+
+Route a low-velocity clean-air branch across the guarded PSU bay and measure
+the PSU inlet-air temperature; the guard may not form a sealed hot box. At
+45 C ambient and 151.7 W continuous load, keep PSU inlet air at or below 50 C,
+measure at least 15 CFM through-case with a clean filter, and at least 12 CFM
+at the released filter-maintenance limit.
 
 If directed-air testing cannot reject the 151.7 W continuous design load at
 45 C / 113 F ambient, use a

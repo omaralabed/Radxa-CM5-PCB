@@ -2,13 +2,14 @@
 
 ## Status
 
-- Package revision: A1
+- Package revision: A2
 - Release state: `HOLD_FOR_MEASUREMENT`
 - Panel installation plane: 38.1 mm below the case parting line
 - Controlled concept drawings:
   - `../../cad/im2300-top-panel-layout-rev-j.svg`
-  - `../../cad/mechanical/im2300-underside-pcb-floorplan-rev-j.svg`
-  - `../../cad/mechanical/im2300-sidewall-cooling-layout-rev-b.svg`
+  - `../../cad/mechanical/im2300-underside-pcb-floorplan-rev-k.svg`
+  - `../../cad/mechanical/im2300-sidewall-cooling-layout-rev-c.svg`
+  - `../../cad/mechanical/im2300-closed-lid-stack-rev-c.svg`
 
 This package controls the measurements that must be taken from the actual
 Pelican iM2300, custom four-side frame, display, battery dock, and production
@@ -37,6 +38,12 @@ All panel X/Y coordinates use the intersection of datums `B` and `C` as the
 origin. Positive X runs toward the RF bank. Positive Y runs toward the
 operator/handle side.
 
+All vertical dimensions use the finished top face of the panel as datum `A`.
+At the published 106.7 mm base depth, a 38.1 mm recess places `A` 68.6 mm
+above the nominal deepest floor. A 3.175 mm panel leaves 65.425 mm below the panel
+underside. These are planning values only; measure the actual floor ribs,
+frame, tray, panel, and case.
+
 ## Procedure
 
 1. Install temporary gauge rails at exactly 38.1 mm below datum `D`.
@@ -57,13 +64,18 @@ operator/handle side.
    clamps and raise the connected top panel at least 300 mm while tilting it
    at least 45 degrees. No connector may carry tension and no cable may enter
    a fan, airflow path, sharp-edge zone, or PCB keepout.
-   Mount the Gold Mount dock so the battery engages from left to right and
+   Mount the Gold Mount dock with its supplied backplate against a supported
+   flat panel/frame load path. The battery engages from left to right and
    removes from right to left. Measure the complete slide travel and verify at
    least 20 mm of clear insertion/hand space between the XLR hardware and dock.
    Carry the dock, battery, insertion, and vibration loads entirely through the
    top panel/custom frame. No dock fastener or load path may terminate in a PCB.
+   Perform the transport-closure test with the battery removed and all eight
+   external antennas removed and replaced by low-profile dust caps. Do not
+   force or latch a closure that shows interference. Battery-installed or
+   folded-antenna closure requires a separate signed sweep record.
 6. Enter measured minimum/maximum values in
-   `mechanical-release-a1.json`, attach measurement photos or inspection
+   `mechanical-release-a2.json`, attach measurement photos or inspection
    records, and run `validate_mechanical_release.py --release`.
 7. Only after the release validator passes may the exact panel outline, panel
    screw coordinates, and PCB mounting-hole coordinates be frozen for routing.
@@ -74,9 +86,17 @@ operator/handle side.
 - `AUDIO-8X8` PCB envelope no larger than 78 x 268 mm.
 - `CM5-CARRIER` PCB envelope no larger than 166 x 268 mm.
 - Panel screws and frame hardware are mechanically independent of PCB mounts.
+- Top panel is 3.175 mm nominal 5052-H32 aluminum with a matte black finish;
+  validate a 3.0-3.3 mm coupon. Rear-pocket the RA812 rocker area to no more
+  than 3.0 mm without weakening its local support.
+- Bottom equipment tray is 2.0 mm nominal 5052-H32 aluminum. Its released top
+  surface may be no more than 3.0 mm above the deepest local case-floor datum.
+  Do not put a compressible foam stack under the PSU.
 - The QRC-GOLD dock is top-panel/custom-frame hardware, not a PCB-mounted part;
   only its strain-relieved removable power harness reaches the selector PCB.
 - Minimum 8.0 mm closed-lid dynamic clearance after tolerance stack-up.
+- Transport closure requires the Gold-mount battery removed and the external
+  Wi-Fi/cellular antennas removed and capped. Upright antennas cannot close.
 - Minimum 3.0 mm static clearance between unrelated metal hardware; use more
   where cables, latches, fingers, insulation, or vibration motion require it.
 - XLR bank outside edge remains at least 15.0 mm from the finished panel edge.
@@ -89,8 +109,10 @@ operator/handle side.
   star return and outside the guarded hinge-side PSU harness corridor.
 - Rotate the `RPS-400-24-C` footprint 90 degrees in plan and maintain at least
   125 mm from the AUDIO-8X8 quiet boundary to the nearest grounded PSU guard
-  edge after tolerance stack-up. The Rev J nominal study provides 146 mm.
-  Maintain at least 10 mm vertically from that guard to the nearest carrier
+  edge after tolerance stack-up. The Rev K nominal study provides 146 mm.
+  Keep the complete tray-mounted PSU/terminal-guard envelope no more than
+  48.0 mm above the deepest interior floor. Maintain at least 10 mm vertically
+  from that guard to the nearest carrier
   component or panel underside and keep the overlying carrier B.Cu area clear.
 - Keep the actual HDMI, USB-touch, and 12 V lid-harness cable envelope at least
   15 mm from the grounded PSU guard through full lid travel and the complete
@@ -98,10 +120,17 @@ operator/handle side.
   may enter that protected corridor.
 - Gold Mount engagement is left to right. Keep the left insertion corridor and
   complete battery motion sweep free of panel hardware and connected cables.
+- Use at least six mechanical supports on AUDIO-8X8 and six on CM5-CARRIER.
+  Add supports beside panel connectors and heavy parts; do not leave the
+  268 mm audio board on four corner supports alone.
+- Qualify the complete unit at 45 C ambient and 151.7 W continuous load.
+  Measure at least 15 CFM through-case with a clean filter, at least 12 CFM at
+  the released filter-maintenance limit, and keep PSU inlet air at or below
+  50 C. The RPS-400-24-C derates with temperature.
 
 ## Files
 
 - `im2300-measurement-register.csv`: inspection record for the actual hardware
-- `mechanical-release-a1.json`: machine-readable release gate
+- `mechanical-release-a2.json`: machine-readable release gate
 - `validate_mechanical_release.py`: package/release validator
-- `im2300-measurement-worksheet-a1.svg`: printable factory worksheet
+- `im2300-measurement-worksheet-a2.svg`: printable factory worksheet

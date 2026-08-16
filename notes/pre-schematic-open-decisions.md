@@ -55,7 +55,8 @@ interface baseline into complete detailed schematics.
 - Fans are locked to four independent 12 V PWM/tach channels controlled by an
   `EMC2305`. The two sidewall enclosure fans are Delta
   `THA0412AD-TZW3`; use one Qualtek `09150-F/30` filter guard on the intake and
-  a low-restriction exhaust guard. Select the exact modem fan and place three
+  a Qualtek `09150-G` guard with custom downward splash hood on exhaust. Use
+  Delta `AFB0412SHB-SP04` for the modem fan and place three
   `TMP117` sensors. Enclosure fan 1 is filtered
   right-wall intake and enclosure fan 2 is operator-wall exhaust. Baffles must
   route air through the hot zones. Keep fan/PWM wiring out of the XLR quiet zone

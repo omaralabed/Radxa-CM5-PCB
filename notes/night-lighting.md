@@ -73,4 +73,4 @@ and reject cool-white substitutions before the panel is released.
 - Verify both matte lenses produce uniform light without bright hotspots.
 - Strain-relieve all three panel harnesses and insulate exposed terminations.
 - Confirm O-ring compression, nut torque, rear-body clearance, and cable bend
-  radius on a 3.2 mm panel coupon before release.
+  radius on a 3.175 mm nominal panel coupon before release.
