@@ -90,6 +90,12 @@ under `references/procomm-field-unit/`.
   machine-validated. All sixteen sheets report zero ERC errors. The controlled
   audit covers 1023 components and intentionally blocks routing on ten audio
   package coupons; no production PCB routing has begun.
+- Footprint Coupon A1 is now a controlled 100 x 80 mm, six-layer KiCad board
+  with zero DRC violations. It compares open, bottom-tented, and selective
+  Type VII exposed-pad vias for AK5558VN/AK4458VN and includes physical fit
+  sites for the TQ2-12V relay and Kycon CTIA jack. The PCBWay-ready Gerber,
+  drill, drawing, placement, render, BOM, inspection, and result package is in
+  `fabrication/footprint-coupon-a1`; physical qualification remains pending.
 - The Radxa CM5 V2.21 A0 pin allocation is controlled in
   `notes/cm5-pin-allocation-a0.md` and
   `outputs/cm5-pin-allocation-a0/radxa_cm5_pin_allocation_a0.xlsx`. The audit
@@ -161,6 +167,8 @@ under `references/procomm-field-unit/`.
 - `docs/audio_8x8_level_budget_a1.csv` - calculated +4/+24 dBu input and
   600-ohm output level budget
 - `docs/audio_8x8_bom_a1.csv` - generated detailed AUDIO-8X8 schematic BOM
+- `docs/qualification/footprint-coupon-a1.md` - controlled AKM exposed-pad,
+  Panasonic relay, and Kycon jack physical qualification plan
 
 ## Remaining Detailed-Capture Work
 
@@ -169,9 +177,9 @@ inputs before layout:
 
 - Final CM5 `VCC_SYSIN` tolerance/setpoint release and monitor USB2 touch test
 - Six-layer-or-greater controlled-impedance PCB stackup from the fabricator
-- Ten audio package coupons, 67 PWR-SELECT passive MPN assignments, the Kycon
-  headset-jack production coupon, placement/thermal review, safety review, and
-  final mechanical CAD
+- Physical build and signed inspection of Footprint Coupon A1, 67 PWR-SELECT
+  passive MPN assignments, placement/thermal review, safety review, and final
+  mechanical CAD
 - Bench measurements for display, modem, Wi-Fi, fans, audio, transfer, and thermal load
 - Manufacturing target: prototype only or assembly-ready production files
 

@@ -1,0 +1,51 @@
+(footprint "Kycon_STX_353K7A_6N_FIT_COUPON"
+  (version 20240108)
+  (generator "procomm_cm5_generator")
+  (layer "F.Cu")
+  (descr "Kycon STX-353K7A-6N-KTTR vertical four-pole jack; terminal centers reconstructed from the Kycon component drawing; PRELIMINARY - SAMPLE AND COUPON VERIFICATION REQUIRED")
+  (tags "Kycon STX-353K7A CTIA preliminary coupon required")
+  (attr through_hole)
+  (duplicate_pad_numbers_are_jumpers no)
+  (property "Reference" "REF**" (at 0 -14.25 0) (layer "F.SilkS") (hide yes) (uuid "00b47239-89f0-59f5-8334-6e43a784d88e") (effects (font (size 1 1) (thickness 0.15))))
+  (property "Value" "STX-353K7A-6N-KT-TR" (at 0 2.75 0) (layer "F.Fab") (uuid "8104e756-8074-571f-96ce-4e89d24b445a") (effects (font (size 1 1) (thickness 0.15))))
+  (property "Datasheet" "https://www.kycon.com/Catalog_PDF/STX-353K7A.pdf" (at 0 0 0) (layer "F.Fab") (hide yes) (uuid "084a5cd6-6623-55e7-95fd-3e5324ce028c") (effects (font (size 1.27 1.27))))
+  (property "Description" "Drawing-derived preliminary footprint; physical sample and coupon are release gates" (at 0 0 0) (layer "F.Fab") (hide yes) (uuid "383c72de-c112-57b0-a90a-f6f7c2ebdf6b") (effects (font (size 1.27 1.27))))
+  (fp_rect (start -3.825 -12.50) (end 3.825 0.00) (stroke (width 0.10) (type default)) (fill none) (layer "F.Fab") (uuid "1452ebd4-4e50-52dc-a170-50e794e79456"))
+  (fp_rect (start -4.15 -12.85) (end 4.15 1.05) (stroke (width 0.05) (type default)) (fill none) (layer "F.CrtYd") (uuid "3d1ea2a9-5414-5aeb-b32c-b80722ba7b5c"))
+
+
+
+  (fp_text user "A1 FIT COUPON - SAMPLE REQUIRED" (at 0 -8.8 0) (layer "F.Fab") (uuid "940f8417-b620-57da-8e55-0fe059182131") (effects (font (size 0.8 0.8) (thickness 0.12))))
+  (pad "1" thru_hole roundrect
+    (at 0.000 0.000) (size 1.10 1.80) (drill 0.80)
+    (layers "*.Cu" "*.Mask")
+    (roundrect_rratio 0.25)
+    (uuid "de078238-478b-59be-8981-d329246812f3")
+  )
+  (pad "2" thru_hole oval
+    (at -1.725 -5.100) (size 1.10 1.80) (drill 0.80)
+    (layers "*.Cu" "*.Mask")
+    (uuid "91378412-c344-5bb0-bcf6-51f6dd68d8ee")
+  )
+  (pad "3" thru_hole oval
+    (at 1.725 -5.100) (size 1.10 1.80) (drill 0.80)
+    (layers "*.Cu" "*.Mask")
+    (uuid "21c7e5fb-61e5-5aff-be06-811a6e5a2ac6")
+  )
+  (pad "4" thru_hole oval
+    (at 3.070 0.000) (size 1.10 1.80) (drill 0.80)
+    (layers "*.Cu" "*.Mask")
+    (uuid "84f3da1b-4022-531f-8b63-a7c2f368b6be")
+  )
+  (pad "5" thru_hole oval
+    (at -1.300 0.000) (size 1.10 1.80) (drill 0.80)
+    (layers "*.Cu" "*.Mask")
+    (uuid "ec060207-5a7a-57e5-9bb2-93a7a08a9eb0")
+  )
+  (pad "6" thru_hole oval
+    (at -3.350 0.000) (size 1.10 1.80) (drill 0.80)
+    (layers "*.Cu" "*.Mask")
+    (uuid "f0b596f7-6148-591a-87c4-4ed7b30a6bea")
+  )
+  (embedded_fonts no)
+)

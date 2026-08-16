@@ -1,0 +1,9 @@
+build,reference,quantity,manufacturer,manufacturer_part_number,description,populate
+A,U101-U103,3,AKM,AK5558VN,32-bit 8-channel ADC QFN-64,YES
+A,U201-U203,3,AKM,AK4458VN,32-bit 8-channel DAC QFN-48,YES
+A,K1,1,Panasonic Industry,TQ2-12V,DPDT 12 V signal relay standard PC-board terminal,YES
+A,J1,1,Kycon,STX-353K7A-6N-KTTR,3.5 mm four-pole vertical high-temperature jack,YES
+B,U103,1,AKM,AK5558VN,Type VII repeatability site,YES
+B,U203,1,AKM,AK4458VN,Type VII repeatability site,YES
+C,U103,1,AKM,AK5558VN,Type VII repeatability site,YES
+C,U203,1,AKM,AK4458VN,Type VII repeatability site,YES

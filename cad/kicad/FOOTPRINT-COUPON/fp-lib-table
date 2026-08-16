@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name "FootprintCoupon")(type "KiCad")(uri "${KIPRJMOD}/FootprintCoupon.pretty")(options "")(descr "A1 qualification coupon footprints"))
+)

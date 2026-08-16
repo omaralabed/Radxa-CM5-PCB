@@ -20,15 +20,15 @@ The command must pass before placement or routing begins. The stricter `--releas
 | Cellular M.2 B-key socket | TE 2199230-3 | `CM5Carrier:TE_2199230-3_M2_Key_B_4.2mm` | TE customer drawing C-2199230 revision B4 | Locked; modem/heatsink envelope open |
 | Dual nano-SIM holders | Wurth 693043020611 | `CM5Carrier:J_Wurth_WR-CRD_693043020611` | Wurth manufacturer drawing | Locked |
 | Program-audio TDM headers | Molex 87832-6423, two devices | `Connector_Molex_Milligrid:Molex_8783230xx_2x15_P2.0mm_Header_Vertical_Polarized_MountingPegs` | Molex 87832 production drawing; 30 circuits, pegs, polarization and 30 microinch gold | Locked; harness SI and vibration qualification open |
-| CTIA headset jack | Kycon STX-353K7A-6N-KTTR | `CM5Carrier:Kycon_STX-353K7A-6N-KTTR_PRELIMINARY` | Kycon component drawing defines terminal centers but no recommended PCB land | Route-ready for prototype only; production blocked pending sample and plated-hole coupon |
+| CTIA headset jack | Kycon STX-353K7A-6N-KTTR | `CM5Carrier:Kycon_STX-353K7A-6N-KTTR_PRELIMINARY` | Kycon component drawing defines terminal centers but no recommended PCB land | Coupon A1 artwork ready; production blocked pending physical sample and plated-hole result |
 
 ## Program-audio package evidence
 
 | Function | Manufacturer / part | Footprint | Evidence | State |
 |---|---|---|---|---|
-| Eight-channel ADC | AKM `AK5558VN` | `Package_DFN_QFN:QFN-64-1EP_9x9mm_P0.5mm_EP6x6mm_ThermalVias` | AKM package drawing and KiCad exposed-pad starting land | Routing blocked pending thermal-via, paste, stencil, and assembly coupon |
-| Eight-channel DAC | AKM `AK4458VN` | `Package_DFN_QFN:QFN-48-1EP_7x7mm_P0.5mm_EP5.15x5.15mm_ThermalVias` | AKM package drawing and KiCad exposed-pad starting land | Routing blocked pending thermal-via, paste, stencil, and assembly coupon |
-| Output fail-silent relays, K501-K508 | Panasonic Industry `TQ2-12V` | `CM5Carrier:Panasonic_TQ2-12V_PRELIMINARY` | Panasonic TQ relay package drawing | Routing blocked pending pad and through-hole insertion coupon |
+| Eight-channel ADC | AKM `AK5558VN` | `Package_DFN_QFN:QFN-64-1EP_9x9mm_P0.5mm_EP6x6mm_ThermalVias` | AKM package drawing and KiCad exposed-pad starting land | Coupon A1 artwork ready; routing blocked pending physical X-ray and assembly pass |
+| Eight-channel DAC | AKM `AK4458VN` | `Package_DFN_QFN:QFN-48-1EP_7x7mm_P0.5mm_EP5.15x5.15mm_ThermalVias` | AKM package drawing and KiCad exposed-pad starting land | Coupon A1 artwork ready; routing blocked pending physical X-ray and assembly pass |
+| Output fail-silent relays, K501-K508 | Panasonic Industry `TQ2-12V` | `CM5Carrier:Panasonic_TQ2-12V_PRELIMINARY` | Panasonic TQ relay package drawing | Coupon A1 artwork ready; routing blocked pending insertion, seating, and pin-map pass |
 | Balanced input receivers | THAT Corporation `THAT1206S08-U` | `Package_SO:SOIC-8_3.9x4.9mm_P1.27mm` | THAT package drawing and standard SOIC land | Locked |
 | Audio op amps | TI `OPA1652AIDR` | `Package_SO:SOIC-8_3.9x4.9mm_P1.27mm` | TI D package drawing and standard SOIC land | Locked |
 | Balanced output drivers | THAT Corporation `THAT1646S08-U` | `Package_SO:SOIC-8_3.9x4.9mm_P1.27mm` | THAT package drawing and standard SOIC land | Locked |
@@ -65,6 +65,20 @@ pad centers are generated and checked by `validate_audio_control.py`, but the
 production audit must remain `BLOCKED_MECHANICAL_COUPON` until a physical
 sample and plated-hole coupon confirm terminal diameters, insertion fit, bezel,
 and switch polarity.
+
+## Footprint Coupon A1
+
+The controlled coupon project is in `FOOTPRINT-COUPON`. Its generated release
+archive and factory instructions are in
+`../../fabrication/footprint-coupon-a1`. The coupon compares open, bottom-tented,
+and selective IPC-4761 Type VII thermal vias for both AKM packages and includes
+physical fit sites for the Panasonic relay and Kycon jack.
+
+`FOOTPRINT-COUPON/review_coupon.sh` currently passes with zero KiCad DRC
+violations. This closes CAD preparation only. It does not clear any routing or
+production gate until the signed physical result sheet, X-ray evidence, via
+microsection, and part-fit records pass the criteria in
+`../../docs/qualification/footprint-coupon-a1.md`.
 
 ## Locked power-package evidence
 

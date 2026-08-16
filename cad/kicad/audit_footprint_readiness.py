@@ -80,16 +80,16 @@ ROUTING_COUPON_REQUIRED = {
     (
         "AK5558-ADC",
         "U201",
-    ): "AK5558VN exposed-pad, thermal-via, stencil, and assembly coupon sign-off required",
+    ): "AK5558VN Coupon A1 artwork is ready; exposed-pad, thermal-via, stencil, X-ray, and assembly sign-off still required",
     (
         "AK4458-DAC",
         "U301",
-    ): "AK4458VN exposed-pad, thermal-via, stencil, and assembly coupon sign-off required",
+    ): "AK4458VN Coupon A1 artwork is ready; exposed-pad, thermal-via, stencil, X-ray, and assembly sign-off still required",
     **{
         (
             "Audio-Outputs",
             f"K{reference}",
-        ): "Panasonic TQ2 pin/land drawing and through-hole insertion coupon sign-off required"
+        ): "Panasonic TQ2 Coupon A1 artwork is ready; sample insertion, seating, and pin-map sign-off still required"
         for reference in range(501, 509)
     },
 }
@@ -100,7 +100,7 @@ PRODUCTION_COUPON_REQUIRED = {
     (
         "Audio-Control",
         "J910",
-    ): "Kycon component-drawing footprint requires a physical sample and plated-hole coupon sign-off",
+    ): "Kycon Coupon A1 artwork is ready; exact sample insertion, seating, CTIA map, and plated-hole sign-off still required",
 }
 
 

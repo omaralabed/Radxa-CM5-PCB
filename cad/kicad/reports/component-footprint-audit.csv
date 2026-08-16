@@ -21,7 +21,7 @@ AK4458-DAC,R351,20R,Yageo,RC0603FR-0720RL,Resistor_SMD:R_0603_1608Metric,READY,R
 AK4458-DAC,R352,20R,Yageo,RC0603FR-0720RL,Resistor_SMD:R_0603_1608Metric,READY,READY,
 AK4458-DAC,R353,20R,Yageo,RC0603FR-0720RL,Resistor_SMD:R_0603_1608Metric,READY,READY,
 AK4458-DAC,R354,20R,Yageo,RC0603FR-0720RL,Resistor_SMD:R_0603_1608Metric,READY,READY,
-AK4458-DAC,U301,AK4458VN,Asahi Kasei Microdevices,AK4458VN,Package_DFN_QFN:QFN-48-1EP_7x7mm_P0.5mm_EP5.15x5.15mm_ThermalVias,BLOCKED_MECHANICAL_COUPON,BLOCKED_MECHANICAL_COUPON,"AK4458VN exposed-pad, thermal-via, stencil, and assembly coupon sign-off required"
+AK4458-DAC,U301,AK4458VN,Asahi Kasei Microdevices,AK4458VN,Package_DFN_QFN:QFN-48-1EP_7x7mm_P0.5mm_EP5.15x5.15mm_ThermalVias,BLOCKED_MECHANICAL_COUPON,BLOCKED_MECHANICAL_COUPON,"AK4458VN Coupon A1 artwork is ready; exposed-pad, thermal-via, stencil, X-ray, and assembly sign-off still required"
 AK5558-ADC,C261,100nF,TDK,C1005X7R1H104K050BB,Capacitor_SMD:C_0402_1005Metric,READY,READY,
 AK5558-ADC,C262,100nF,TDK,C1005X7R1H104K050BB,Capacitor_SMD:C_0402_1005Metric,READY,READY,
 AK5558-ADC,C263,100nF,TDK,C1005X7R1H104K050BB,Capacitor_SMD:C_0402_1005Metric,READY,READY,
@@ -57,7 +57,7 @@ AK5558-ADC,R261,20R,Yageo,RC0603FR-0720RL,Resistor_SMD:R_0603_1608Metric,READY,R
 AK5558-ADC,R262,20R,Yageo,RC0603FR-0720RL,Resistor_SMD:R_0603_1608Metric,READY,READY,
 AK5558-ADC,R263,20R,Yageo,RC0603FR-0720RL,Resistor_SMD:R_0603_1608Metric,READY,READY,
 AK5558-ADC,R264,20R,Yageo,RC0603FR-0720RL,Resistor_SMD:R_0603_1608Metric,READY,READY,
-AK5558-ADC,U201,AK5558VN,Asahi Kasei Microdevices,AK5558VN,Package_DFN_QFN:QFN-64-1EP_9x9mm_P0.5mm_EP6x6mm_ThermalVias,BLOCKED_MECHANICAL_COUPON,BLOCKED_MECHANICAL_COUPON,"AK5558VN exposed-pad, thermal-via, stencil, and assembly coupon sign-off required"
+AK5558-ADC,U201,AK5558VN,Asahi Kasei Microdevices,AK5558VN,Package_DFN_QFN:QFN-64-1EP_9x9mm_P0.5mm_EP6x6mm_ThermalVias,BLOCKED_MECHANICAL_COUPON,BLOCKED_MECHANICAL_COUPON,"AK5558VN Coupon A1 artwork is ready; exposed-pad, thermal-via, stencil, X-ray, and assembly sign-off still required"
 Audio-8x8,C901,4.7nF Y1 500Vac,Vishay,VY1472M63Y5UQ6TV0,Capacitor_THT:C_Disc_D16.0mm_W5.0mm_P10.00mm,READY,READY,
 Audio-8x8,J101,AUDIO_TDM_CONTROL,Molex,87832-6423,Connector_Molex_Milligrid:Molex_8783230xx_2x15_P2.0mm_Header_Vertical_Polarized_MountingPegs,READY,READY,
 Audio-8x8,J102,AUDIO_12V_POWER,Molex,43045-0412,Connector_Molex:Molex_Micro-Fit_3.0_43045-0412_2x02_P3.00mm_Vertical,READY,READY,
@@ -109,7 +109,7 @@ Audio-Control,C928,100nF,TDK,C1005X7R1H104K050BB,Capacitor_SMD:C_0402_1005Metric
 Audio-Control,C929,100nF,TDK,C1005X7R1H104K050BB,Capacitor_SMD:C_0402_1005Metric,READY,READY,
 Audio-Control,C930,100nF,TDK,C1005X7R1H104K050BB,Capacitor_SMD:C_0402_1005Metric,READY,READY,
 Audio-Control,J901,AUDIO_8X8_TDM_CONTROL,Molex,87832-6423,Connector_Molex_Milligrid:Molex_8783230xx_2x15_P2.0mm_Header_Vertical_Polarized_MountingPegs,READY,READY,
-Audio-Control,J910,STX-353K7A-6N-KTTR,Kycon,STX-353K7A-6N-KTTR,CM5Carrier:Kycon_STX-353K7A-6N-KTTR_PRELIMINARY,READY,BLOCKED_MECHANICAL_COUPON,Kycon component-drawing footprint requires a physical sample and plated-hole coupon sign-off
+Audio-Control,J910,STX-353K7A-6N-KTTR,Kycon,STX-353K7A-6N-KTTR,CM5Carrier:Kycon_STX-353K7A-6N-KTTR_PRELIMINARY,READY,BLOCKED_MECHANICAL_COUPON,"Kycon Coupon A1 artwork is ready; exact sample insertion, seating, CTIA map, and plated-hole sign-off still required"
 Audio-Control,R900,0R star bond,Yageo,RC0603JR-070RL,Resistor_SMD:R_0603_1608Metric,READY,READY,
 Audio-Control,R901,2.2k,Yageo,RC0603FR-072K2L,Resistor_SMD:R_0603_1608Metric,READY,READY,
 Audio-Control,R902,2.2k,Yageo,RC0603FR-072K2L,Resistor_SMD:R_0603_1608Metric,READY,READY,
@@ -408,14 +408,14 @@ Audio-Outputs,D5321,S1G,Diodes Incorporated,S1G-13-F,Diode_SMD:D_SMA,READY,READY
 Audio-Outputs,D5322,S1G,Diodes Incorporated,S1G-13-F,Diode_SMD:D_SMA,READY,READY,
 Audio-Outputs,D5323,S1G,Diodes Incorporated,S1G-13-F,Diode_SMD:D_SMA,READY,READY,
 Audio-Outputs,D5324,S1G,Diodes Incorporated,S1G-13-F,Diode_SMD:D_SMA,READY,READY,
-Audio-Outputs,K501,TQ2-12V,Panasonic Industry,TQ2-12V,CM5Carrier:Panasonic_TQ2-12V_PRELIMINARY,BLOCKED_MECHANICAL_COUPON,BLOCKED_MECHANICAL_COUPON,Panasonic TQ2 pin/land drawing and through-hole insertion coupon sign-off required
-Audio-Outputs,K502,TQ2-12V,Panasonic Industry,TQ2-12V,CM5Carrier:Panasonic_TQ2-12V_PRELIMINARY,BLOCKED_MECHANICAL_COUPON,BLOCKED_MECHANICAL_COUPON,Panasonic TQ2 pin/land drawing and through-hole insertion coupon sign-off required
-Audio-Outputs,K503,TQ2-12V,Panasonic Industry,TQ2-12V,CM5Carrier:Panasonic_TQ2-12V_PRELIMINARY,BLOCKED_MECHANICAL_COUPON,BLOCKED_MECHANICAL_COUPON,Panasonic TQ2 pin/land drawing and through-hole insertion coupon sign-off required
-Audio-Outputs,K504,TQ2-12V,Panasonic Industry,TQ2-12V,CM5Carrier:Panasonic_TQ2-12V_PRELIMINARY,BLOCKED_MECHANICAL_COUPON,BLOCKED_MECHANICAL_COUPON,Panasonic TQ2 pin/land drawing and through-hole insertion coupon sign-off required
-Audio-Outputs,K505,TQ2-12V,Panasonic Industry,TQ2-12V,CM5Carrier:Panasonic_TQ2-12V_PRELIMINARY,BLOCKED_MECHANICAL_COUPON,BLOCKED_MECHANICAL_COUPON,Panasonic TQ2 pin/land drawing and through-hole insertion coupon sign-off required
-Audio-Outputs,K506,TQ2-12V,Panasonic Industry,TQ2-12V,CM5Carrier:Panasonic_TQ2-12V_PRELIMINARY,BLOCKED_MECHANICAL_COUPON,BLOCKED_MECHANICAL_COUPON,Panasonic TQ2 pin/land drawing and through-hole insertion coupon sign-off required
-Audio-Outputs,K507,TQ2-12V,Panasonic Industry,TQ2-12V,CM5Carrier:Panasonic_TQ2-12V_PRELIMINARY,BLOCKED_MECHANICAL_COUPON,BLOCKED_MECHANICAL_COUPON,Panasonic TQ2 pin/land drawing and through-hole insertion coupon sign-off required
-Audio-Outputs,K508,TQ2-12V,Panasonic Industry,TQ2-12V,CM5Carrier:Panasonic_TQ2-12V_PRELIMINARY,BLOCKED_MECHANICAL_COUPON,BLOCKED_MECHANICAL_COUPON,Panasonic TQ2 pin/land drawing and through-hole insertion coupon sign-off required
+Audio-Outputs,K501,TQ2-12V,Panasonic Industry,TQ2-12V,CM5Carrier:Panasonic_TQ2-12V_PRELIMINARY,BLOCKED_MECHANICAL_COUPON,BLOCKED_MECHANICAL_COUPON,"Panasonic TQ2 Coupon A1 artwork is ready; sample insertion, seating, and pin-map sign-off still required"
+Audio-Outputs,K502,TQ2-12V,Panasonic Industry,TQ2-12V,CM5Carrier:Panasonic_TQ2-12V_PRELIMINARY,BLOCKED_MECHANICAL_COUPON,BLOCKED_MECHANICAL_COUPON,"Panasonic TQ2 Coupon A1 artwork is ready; sample insertion, seating, and pin-map sign-off still required"
+Audio-Outputs,K503,TQ2-12V,Panasonic Industry,TQ2-12V,CM5Carrier:Panasonic_TQ2-12V_PRELIMINARY,BLOCKED_MECHANICAL_COUPON,BLOCKED_MECHANICAL_COUPON,"Panasonic TQ2 Coupon A1 artwork is ready; sample insertion, seating, and pin-map sign-off still required"
+Audio-Outputs,K504,TQ2-12V,Panasonic Industry,TQ2-12V,CM5Carrier:Panasonic_TQ2-12V_PRELIMINARY,BLOCKED_MECHANICAL_COUPON,BLOCKED_MECHANICAL_COUPON,"Panasonic TQ2 Coupon A1 artwork is ready; sample insertion, seating, and pin-map sign-off still required"
+Audio-Outputs,K505,TQ2-12V,Panasonic Industry,TQ2-12V,CM5Carrier:Panasonic_TQ2-12V_PRELIMINARY,BLOCKED_MECHANICAL_COUPON,BLOCKED_MECHANICAL_COUPON,"Panasonic TQ2 Coupon A1 artwork is ready; sample insertion, seating, and pin-map sign-off still required"
+Audio-Outputs,K506,TQ2-12V,Panasonic Industry,TQ2-12V,CM5Carrier:Panasonic_TQ2-12V_PRELIMINARY,BLOCKED_MECHANICAL_COUPON,BLOCKED_MECHANICAL_COUPON,"Panasonic TQ2 Coupon A1 artwork is ready; sample insertion, seating, and pin-map sign-off still required"
+Audio-Outputs,K507,TQ2-12V,Panasonic Industry,TQ2-12V,CM5Carrier:Panasonic_TQ2-12V_PRELIMINARY,BLOCKED_MECHANICAL_COUPON,BLOCKED_MECHANICAL_COUPON,"Panasonic TQ2 Coupon A1 artwork is ready; sample insertion, seating, and pin-map sign-off still required"
+Audio-Outputs,K508,TQ2-12V,Panasonic Industry,TQ2-12V,CM5Carrier:Panasonic_TQ2-12V_PRELIMINARY,BLOCKED_MECHANICAL_COUPON,BLOCKED_MECHANICAL_COUPON,"Panasonic TQ2 Coupon A1 artwork is ready; sample insertion, seating, and pin-map sign-off still required"
 Audio-Outputs,L5040,220R ferrite,Murata,BLM21PG221SN1D,Inductor_SMD:L_0805_2012Metric,READY,READY,
 Audio-Outputs,L5041,220R ferrite,Murata,BLM21PG221SN1D,Inductor_SMD:L_0805_2012Metric,READY,READY,
 Audio-Outputs,L5080,220R ferrite,Murata,BLM21PG221SN1D,Inductor_SMD:L_0805_2012Metric,READY,READY,

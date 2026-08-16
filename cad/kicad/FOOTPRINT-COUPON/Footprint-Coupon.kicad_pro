@@ -1,0 +1,23 @@
+{
+  "board": {
+    "design_settings": {
+      "rules": {
+        "min_clearance": 0.1,
+        "min_copper_edge_clearance": 0.25,
+        "min_hole_to_hole": 0.25,
+        "min_through_hole_diameter": 0.2,
+        "min_via_annular_width": 0.15
+      }
+    }
+  },
+  "meta": {
+    "filename": "Footprint-Coupon.kicad_pro",
+    "version": 1
+  },
+  "net_settings": {
+    "classes": [],
+    "meta": {
+      "version": 3
+    }
+  }
+}

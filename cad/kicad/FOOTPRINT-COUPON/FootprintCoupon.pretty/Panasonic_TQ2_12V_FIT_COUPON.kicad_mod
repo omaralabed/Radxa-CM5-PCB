@@ -1,0 +1,58 @@
+(footprint "Panasonic_TQ2_12V_FIT_COUPON"
+  (version 20240108)
+  (generator "procomm_cm5_generator")
+  (layer "F.Cu")
+  (descr "Panasonic TQ2 standard PC-board relay; PRELIMINARY - current engineering drawing and insertion coupon required")
+  (tags "Panasonic TQ2 preliminary coupon required")
+  (attr through_hole)
+  (duplicate_pad_numbers_are_jumpers no)
+  (property "Reference" "REF**" (at 0 -5.8 0) (layer "F.SilkS") (uuid "94178a9f-7500-5a41-8720-e381893f3cbc") (effects (font (size 1 1) (thickness 0.15))))
+  (property "Value" "TQ2-12V" (at 0 5.8 0) (layer "F.Fab") (uuid "6c63b872-b5b5-5433-9190-f5f3f4e7156f") (effects (font (size 1 1) (thickness 0.15))))
+  (property "Datasheet" "https://na.industrial.panasonic.com/products/relays-contactors/mechanical-signal-relays/series/119572/model/119888" (at 0 0 0) (layer "F.Fab") (hide yes) (uuid "40255c19-c6f6-50d1-a724-6709f8c5786a") (effects (font (size 1.27 1.27))))
+  (fp_rect (start -7.1 -4.5) (end 7.1 4.5) (stroke (width 0.10) (type default)) (fill none) (layer "F.Fab") (uuid "5d9d5021-55d9-5391-8431-75ff6c8c1eb0"))
+  (fp_rect (start -7.35 -4.75) (end 7.35 4.75) (stroke (width 0.05) (type default)) (fill none) (layer "F.CrtYd") (uuid "6f74f342-875c-5458-a0ad-6b6060d33e52"))
+
+  (fp_text user "A1 FIT COUPON - SAMPLE REQUIRED" (at 0 0 0) (layer "F.Fab") (uuid "a7fe33ee-0649-5139-a830-685dd2379cba") (effects (font (size 0.7 0.7) (thickness 0.1))))
+  (pad "1" thru_hole roundrect
+    (at -3.81 -3.81) (size 1.7 1.7) (drill 0.9)
+    (layers "*.Cu" "*.Mask")
+    (roundrect_rratio 0.25)
+    (uuid "903ec98c-76bf-57fe-9500-bda5e3d9a518")
+  )
+  (pad "2" thru_hole circle
+    (at -1.27 -3.81) (size 1.7 1.7) (drill 0.9)
+    (layers "*.Cu" "*.Mask")
+    (uuid "5904ac72-480c-58db-a964-2307599fe768")
+  )
+  (pad "3" thru_hole circle
+    (at 1.27 -3.81) (size 1.7 1.7) (drill 0.9)
+    (layers "*.Cu" "*.Mask")
+    (uuid "37ccc3b3-43c8-5162-b4fb-1513edbd1ac4")
+  )
+  (pad "4" thru_hole circle
+    (at 3.81 -3.81) (size 1.7 1.7) (drill 0.9)
+    (layers "*.Cu" "*.Mask")
+    (uuid "23b5d116-217a-5a09-b4c8-cf7f3f1a9364")
+  )
+  (pad "10" thru_hole circle
+    (at -3.81 3.81) (size 1.7 1.7) (drill 0.9)
+    (layers "*.Cu" "*.Mask")
+    (uuid "fae36b45-d22c-5c2f-a284-508ec3b44684")
+  )
+  (pad "9" thru_hole circle
+    (at -1.27 3.81) (size 1.7 1.7) (drill 0.9)
+    (layers "*.Cu" "*.Mask")
+    (uuid "660ebaea-a7dc-5d33-a872-c8c9b2c1a5f9")
+  )
+  (pad "8" thru_hole circle
+    (at 1.27 3.81) (size 1.7 1.7) (drill 0.9)
+    (layers "*.Cu" "*.Mask")
+    (uuid "fc5d5345-bcc6-55d2-ae53-33c09964bae9")
+  )
+  (pad "7" thru_hole circle
+    (at 3.81 3.81) (size 1.7 1.7) (drill 0.9)
+    (layers "*.Cu" "*.Mask")
+    (uuid "4f250844-a93d-5e4e-890a-c92467c6479c")
+  )
+  (embedded_fonts no)
+)
