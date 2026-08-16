@@ -5,7 +5,7 @@
 **HOLD_FOR_MEASUREMENT**
 
 This audit is the factory-facing mechanical and thermal gate before PCB
-routing. The Rev J top-panel connector placement remains the approved concept
+routing. The Rev K top-panel connector placement remains the approved concept
 layout, but it is not a cut file. No production panel, sidewall, bottom tray,
 PCB outline, or mounting-hole pattern may be released until every row
 M001-M080 is complete and the A2 validator passes with the release option.
@@ -21,8 +21,11 @@ M001-M080 is complete and the A2 validator passes with the release option.
    producing an approximately 70.7 mm protrusion. This is expected to interfere
    with the lid monitor. The battery must be removed before closing the case.
 3. Upright RF antennas cannot close under the lid. The transport configuration
-   removes all eight antennas and installs low-profile dust caps. Any folded
-   antenna alternative needs its own measured sweep and signoff.
+   keeps the released compact hinged antenna set installed and folds all eight
+   antennas inboard. The linked 163 mm Sierra paddle is a form-factor reference,
+   not the released part: its folded arm crosses other panel controls. Current
+   candidates are Taoglas `GW.05.0153` for Wi-Fi and `TG.66.A113` for cellular.
+   Actual samples still require a measured sweep and signoff.
 4. The monitor listing reuses contradictory model names and dimensions across
    8, 10.1, 13.3, 14, and 15.6 inch products. No online body dimension is
    accepted as fabrication data. The exact received 15.6 inch sample controls
@@ -93,7 +96,7 @@ impact allowance. Test with the case latched and with pressure applied at the
 lid center and corners. The transport test is:
 
 - Gold-mount battery removed;
-- all eight external antennas removed and dust caps installed;
+- all eight released external antennas installed and folded inboard;
 - all panel plugs removed unless a separate connected-transport condition is
   intentionally qualified;
 - hinge bundle clamped in its operating loop with no contact against display,
@@ -191,7 +194,8 @@ loops.
 5. Bottom stack section-gauge photo and measurements.
 6. Monitor body/connector/VESA survey and closed-lid pressure test.
 7. Battery insertion/removal sweep and QRC backplate inspection.
-8. Antenna-removed/capped closure record.
+8. Eight-antenna installed/folded closure record, including the maximum folded
+   hinge height and full closing/latched sweep.
 9. Sidewall scan, fan reinforcement, guard, gasket, and splash-hood drawings.
 10. Clean/loaded-filter CFM and 45 C thermal report.
 11. PE continuity and mains barrier inspection.
@@ -205,3 +209,5 @@ loops.
 - Delta modem fan: mechanical-parts/delta-afb0412shb-sp04-spec.pdf
 - Delta enclosure fans: mechanical-parts/delta-tha0412ad-tzw3-spec.pdf
 - Qualtek intake/exhaust guards: mechanical-parts/qualtek-09150f-filter-drawing.pdf and mechanical-parts/qualtek-09150g-guard-drawing.pdf
+- Taoglas Wi-Fi fold-down antenna: mechanical-parts/taoglas-gw05-0153-wifi-antenna.pdf
+- Taoglas cellular fold-down antenna: mechanical-parts/taoglas-tg66-a113-cellular-antenna.pdf

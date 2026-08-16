@@ -190,5 +190,5 @@
   <rect x="92" y="311" width="12" height="7" fill="url(#floorHatch)" stroke="#c493e8"/><text class="note" x="108" y="316">BOTTOM-FLOOR HARDWARE</text>
   <line x1="203" y1="314.5" x2="220" y2="314.5" stroke="#52c7d5" stroke-width="1.1" stroke-dasharray="3 2"/><text class="note" x="224" y="316">HARNESS / CONTROLLED ROUTE</text>
   <line x1="331" y1="314.5" x2="348" y2="314.5" stroke="#76a7f7" stroke-width="2.2" opacity=".7"/><text class="note" x="352" y="316">HIGH-SPEED TRUNK</text>
-  <text class="note" x="0" y="324">A2 HOLD: physical case/display/dock survey, 62.425 mm tray-to-panel budget, PSU section gauge, capped-RF closure, fan CFM, and 45 C thermal test are required before routing.</text>
+  <text class="note" x="0" y="324">A2 HOLD: physical case/display/dock survey, 62.425 mm tray-to-panel budget, PSU section gauge, folded-RF closure sweep, fan CFM, and 45 C thermal test are required before routing.</text>
 </svg>

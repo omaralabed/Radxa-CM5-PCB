@@ -6,15 +6,16 @@ detailed-capture order.
 
 ## Current Mechanical Concept
 
-- `im2300-top-panel-layout-rev-j.svg` - current connector-placement concept. It
+- `im2300-top-panel-layout-rev-k.svg` - current connector-placement concept. It
   reserves a 15 mm four-side frame/screw keepout, moves the XLR bank only 2.3
   mm right to clear that boundary, and retains the preliminary centered
   90 x 8 mm notch opening through the hinge edge for the HDMI, USB-touch, and
   12 V display harness. It also adds two diffused 12 V warm-white courtesy
   lights and one latching capacitive touch control in the clear strip above
   the Gold Mount keepout. It includes
-  the 8x8 XLR bank, left-to-right Gold Mount engagement sweep, eight RF
-  bulkheads, four Ethernet ports,
+  the 8x8 XLR bank, left-to-right Gold Mount engagement sweep, four RP-SMA
+  Wi-Fi and four SMA cellular bulkheads with inboard folded-transport
+  projections, four Ethernet ports,
   lid-display harness, headset/SIM service, status, LEMO backup,
   separate DPST main source-enable rocker, and guarded fused C14 zone. It has
   no fan or mesh cooling openings; enclosure airflow is on the case sidewalls.

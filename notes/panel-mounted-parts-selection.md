@@ -4,7 +4,7 @@
 
 This is the preliminary mechanical part freeze for the iM2300 top panel. It
 supports schematic and 3D floorplanning, but it is not permission to cut the
-production panel. The current Rev J connector-placement artwork remains the
+production panel. The current Rev K connector-placement artwork remains the
 authoritative layout.
 
 The factory cut drawing can be released only after:
@@ -38,6 +38,8 @@ The factory cut drawing can be released only after:
 | Nano-SIM holders | 2 | Wurth `693043020611` | Selected electrically; requires vertical service daughterboard |
 | Wi-Fi RF pigtails | 4 | TE `2016695-4` | Conditional on AW7915-NP1 IPEX receptacle and 200 mm route check |
 | Cellular RF pigtails | 4 | TE `2016694-4` | Conditional on modem receptacle and 200 mm route check |
+| Wi-Fi fold-down antennas | 4 | Taoglas `GW.05.0153` | Controlled validation candidate; 62.3 x 10 mm, hinged RP-SMA(M), preliminary folded height 29.4 mm; sample closure and RF test required |
+| Cellular fold-down antennas | 4 | Taoglas `TG.66.A113` | Controlled validation candidate; 70.3 x 9.7 mm, hinged SMA(M), preliminary folded height 32 mm; sample closure and RF test required |
 | Gold Mount battery | 1 | Anton/Bauer Dionic XT90 `8675-0125` | Selected battery; 99 Wh, 14.1 V, 12 A continuous |
 | Gold Mount bracket | 1 | Anton/Bauer QRC-GOLD `8375-0094` | User-selected compact bracket; approximately 119.4 x 76.2 x 12.7 mm; mounts to the top panel/custom frame, never to a PCB; controlled drawing/sample still required |
 | Lid display | 1 | JUNEBOX, Amazon ASIN `B0GK5X95D9` | User-locked; connector and mounting details require sample |
@@ -77,6 +79,7 @@ table and a drawing disagree.
 | E-Switch `CS7L2FR` | `22.20 +0.25/-0.00` round cutout; maximum panel thickness 10 mm | Fit supplied O-ring/nut, retain 20.70 mm rear body/flats clearance and 150 mm six-wire lead bend radius |
 | `THA0412AD-TZW3` + 40 mm guards | Sidewall work only: 40 x 40 fan envelope, 32 x 32 mounting-hole square, fan holes `3.5 +/-0.3`; use Qualtek `09150-F/30` at intake and `09150-G` at exhaust, with separate reinforcement plates and gaskets; center airflow opening is sample-controlled | Measure wall ribs/taper and nearby hardware; lock fan 1 intake/fan 2 exhaust labels; test custom exhaust splash hood, wall stiffness, finger safety, ingress, filter service, pressure balance, and internal baffle effectiveness |
 | SMA / RP-SMA bulkheads | Current SVG uses approximately `6.4` round placeholders | Replace with TE bulkhead drawing after pigtail/module confirmation; include wrench flats and washer clearance if required |
+| `GW.05.0153` / `TG.66.A113` folded sweep | Eight inboard dashed projections are transport envelopes, not cut geometry | Fit all eight actual antennas; verify RP-SMA versus SMA polarity, hinge rotation, 34 mm pitch, neighboring hardware, maximum folded height, and at least 8 mm latched-lid dynamic clearance |
 | `STX-353K7A-6N-KTTR` | No threaded panel bushing; panel clearance is concentric with PCB-mounted jack | Fix PCB Z height, plug insertion clearance, and jack-to-panel gap on a coupon |
 | Nano-SIM access | Two service openings above a vertical daughterboard, not above a horizontal holder | Design daughterboard, card insertion path, retention, ESD shield, and service cover before cutting |
 | QRC-GOLD | Existing 99 x 132 mm battery envelope is keepout only | Replace with Anton/Bauer bracket hole pattern and full battery release-sweep measurement; published bracket dimensions exclude the release latch |

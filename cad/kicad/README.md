@@ -43,10 +43,11 @@
   controlled Radxa CM5 V2.21 module-pin ownership and mux-conflict audit for
   detailed `CM5-CARRIER` capture.
 
-Enclosure fan 1 is the left filtered intake. Enclosure fan 2 is the right
-exhaust. Both are Delta `THA0412AD-TZW3` units. They have independent 1 kHz PWM
-and tach nets from the EMC2305, and the mechanical design requires a
-divider/shroud plus opposed external louvers between the adjacent fan openings.
+Enclosure fan 1 is the filtered right-wall intake. Enclosure fan 2 is the
+operator-wall center-right exhaust. Both are Delta `THA0412AD-TZW3` units.
+They have independent 1 kHz PWM and tach nets from the EMC2305; internal
+baffles must force intake air across the hot zones before it reaches the
+separate exhaust opening.
 
 ## Regenerate And Validate
 

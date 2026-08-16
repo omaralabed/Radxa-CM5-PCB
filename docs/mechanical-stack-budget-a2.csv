@@ -19,7 +19,7 @@ S017,Display total lid protrusion,lid cavity back,display front glass,TBD,actual
 S018,Display-front to panel-top gap,display front,A,88.9 minus S017,50.8 lid depth plus 38.1 panel recess minus measured display protrusion,CALCULATED,M065
 S019,Allowed permanent panel hardware height,A,tallest permanent item,S018 minus 8.0,retain 8.0 dynamic clearance after tolerance,DESIGN_LIMIT,M065
 S020,Dionic XT90 plus QRC-GOLD protrusion,A,battery outer face,approximately 70.7,58 battery plus approximately 12.7 dock before latch tolerance,INTERFERENCE_EXPECTED,M066-M067
-S021,Capped RF bulkhead protrusion,A,dust-cap top,TBD,all external antennas removed for closure,SAMPLE_REQUIRED,M068-M069
+S021,Folded RF antenna protrusion,A,tallest hinge or folded antenna surface,32.0 preliminary maximum,"Taoglas GW.05.0153 and TG.66.A113 remain installed and fold inboard; actual samples control",SAMPLE_REQUIRED,M068-M069
 S022,QRC-GOLD support stack,A,panel/frame backplate,not applicable,supplied backplate and flat supported area mandatory,VERIFIED_SOURCE,M066 and M073
 S023,Monitor planar envelope,lid cavity,monitor body,TBD,online values are contradictory; measure actual sample,SAMPLE_REQUIRED,M059-M064
 S024,Sidewall fan body,case wall inner face,fan rear face,20.0,Delta THA0412AD-TZW3 body,VERIFIED_SOURCE,M034-M037

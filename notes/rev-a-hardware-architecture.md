@@ -193,12 +193,15 @@ Provide eight RF bulkheads in the right-side RF bank:
 Starting mechanical rules, to be replaced by antenna-vendor and enclosure RF
 test results:
 
-- Place the Wi-Fi pair at one end of the panel and the cellular cluster at the
+- Place the four Wi-Fi bulkheads at one end of the panel and the cellular cluster at the
   opposite end. Put `CELL 4 / GNSS` farthest from Wi-Fi and switching power.
-- The current mechanical panel study uses a compact 38 mm vertical pitch for
-  all six right-side bulkheads and about 45 mm center-to-edge clearance at the
-  first and last connectors. This overrides the earlier 50 mm starting pitch
-  and must be accepted only after antenna isolation/coexistence testing.
+- The current mechanical panel study uses a compact 34 mm vertical pitch for
+  all eight right-side bulkheads. This overrides the earlier 50 mm starting
+  pitch and must be accepted only after antenna isolation/coexistence testing.
+- The controlled validation set is four Taoglas `GW.05.0153` hinged RP-SMA(M)
+  Wi-Fi antennas and four Taoglas `TG.66.A113` hinged SMA(M) cellular antennas.
+  They remain installed and fold inboard for transport. Samples must prove the
+  full hinge sweep and 8 mm closed-lid dynamic clearance; deploy them for use.
 - Keep RF bulkheads/coax at least 100 mm from the C14, AC filter, PSU, and major
   switching inductors, and at least 50 mm from Ethernet magnetics and fan motors.
 - Do not place antennas beneath the metal display/backplate in the lid or close

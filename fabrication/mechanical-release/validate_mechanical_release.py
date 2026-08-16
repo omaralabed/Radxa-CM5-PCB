@@ -61,7 +61,14 @@ def validate_package(data: dict, rows: list[dict[str, str]]) -> list[str]:
     require(hard.get("battery_engagement_direction") == "LEFT_TO_RIGHT", "battery engagement direction is locked left to right", failures)
     require(data.get("battery_dock", {}).get("removal_direction") == "RIGHT_TO_LEFT", "battery removal direction is locked right to left", failures)
     require(data.get("transport_configuration", {}).get("battery") == "REMOVE_BEFORE_CLOSING", "transport closure requires battery removal", failures)
-    require(data.get("transport_configuration", {}).get("external_rf_antennas") == "REMOVE_AND_INSTALL_DUST_CAPS_BEFORE_CLOSING", "transport closure requires antennas removed and capped", failures)
+    require(data.get("transport_configuration", {}).get("external_rf_antennas") == "KEEP_INSTALLED_AND_FOLD_INBOARD_BEFORE_CLOSING", "transport closure keeps the released antennas installed and folded inboard", failures)
+    rf_antennas = data.get("rf_antennas", {})
+    require(rf_antennas.get("wifi", {}).get("candidate_part") == "Taoglas GW.05.0153", "compact hinged Wi-Fi antenna candidate is controlled", failures)
+    require(rf_antennas.get("wifi", {}).get("antenna_connector") == "RP-SMA(M)", "Wi-Fi antenna uses RP-SMA polarity", failures)
+    require(rf_antennas.get("cellular", {}).get("candidate_part") == "Taoglas TG.66.A113", "compact hinged cellular antenna candidate is controlled", failures)
+    require(rf_antennas.get("cellular", {}).get("antenna_connector") == "SMA(M)", "cellular antenna uses standard SMA polarity", failures)
+    require(rf_antennas.get("transport_fold_direction") == "INBOARD_TOWARD_PANEL_CENTER", "all eight antennas fold inboard for transport", failures)
+    require(rf_antennas.get("bulkhead_center_pitch_mm") >= 34.0, "RF bulkhead center pitch is at least 34 mm", failures)
     require(data.get("released_panel", {}).get("target_thickness_mm") == 3.175, "panel target thickness is 3.175 mm", failures)
     require(data.get("bottom_equipment_tray", {}).get("target_thickness_mm") == 2.0, "bottom equipment tray target thickness is 2.0 mm", failures)
     thermal = data.get("thermal_release", {})
@@ -93,6 +100,8 @@ def validate_release(data: dict, rows: list[dict[str, str]]) -> list[str]:
         ("minimum frame support", data["frame"].get("minimum_support_width_mm")),
         ("minimum closed-lid clearance", data["closed_lid"].get("minimum_dynamic_clearance_mm")),
         ("closed-lid inspection record", data["closed_lid"].get("inspection_record")),
+        ("maximum folded RF antenna protrusion", data["closed_lid"].get("maximum_folded_rf_antenna_protrusion_mm")),
+        ("folded RF antenna sweep record", data["closed_lid"].get("rf_folded_sweep_record")),
         ("monitor body width", data["display"].get("body_width_mm")),
         ("monitor body height", data["display"].get("body_height_mm")),
         ("monitor body depth", data["display"].get("body_depth_mm")),

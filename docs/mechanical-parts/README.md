@@ -23,12 +23,17 @@ preliminary iM2300 panel mechanical part freeze.
 - `mean-well-rps-400-spec.pdf`
 - `pelican-im2300-base-bezel-rev-c.pdf`
 - `anton-bauer-qrc-gold-installation.pdf`
+- `taoglas-gw05-0153-wifi-antenna.pdf`
+- `taoglas-tg66-a113-cellular-antenna.pdf`
 
 Bel, TE, and monitor links are recorded in
 `../panel_mechanical_bom_preliminary.csv`. The QRC-GOLD installation
 instruction is archived, but its actual sample, backplate, latch sweep, and
 panel/frame load path remain release measurements. The monitor has no trusted
 controlled mechanical drawing and must be measured from the received sample.
+The Taoglas drawings control the validation candidates and connector polarity,
+but actual folded height, hinge sweep, lid clearance, and RF performance still
+require eight installed antenna samples in the production panel configuration.
 
 These files are reference inputs, not a fabrication release. Re-download each
 drawing at purchasing release and compare its revision and manufacturer part

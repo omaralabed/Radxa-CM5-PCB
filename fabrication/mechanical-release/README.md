@@ -6,10 +6,10 @@
 - Release state: `HOLD_FOR_MEASUREMENT`
 - Panel installation plane: 38.1 mm below the case parting line
 - Controlled concept drawings:
-  - `../../cad/im2300-top-panel-layout-rev-j.svg`
+  - `../../cad/im2300-top-panel-layout-rev-k.svg`
   - `../../cad/mechanical/im2300-underside-pcb-floorplan-rev-k.svg`
   - `../../cad/mechanical/im2300-sidewall-cooling-layout-rev-c.svg`
-  - `../../cad/mechanical/im2300-closed-lid-stack-rev-c.svg`
+  - `../../cad/mechanical/im2300-closed-lid-stack-rev-d.svg`
 
 This package controls the measurements that must be taken from the actual
 Pelican iM2300, custom four-side frame, display, battery dock, and production
@@ -24,7 +24,8 @@ not fabrication datums.
 - Radius gauges or a printed radius template
 - Feeler gauges or calibrated spacer blocks
 - Actual iM2300 case, display, battery and dock, fans/guards, XLR connectors,
-  C14 inlet, LEMO connector, switches, SIM holders, RJ45s, and RF bulkheads
+  C14 inlet, LEMO connector, switches, SIM holders, RJ45s, RF bulkheads, and
+  four samples of each selected compact hinged antenna
 
 ## Datum System
 
@@ -71,9 +72,10 @@ frame, tray, panel, and case.
    Carry the dock, battery, insertion, and vibration loads entirely through the
    top panel/custom frame. No dock fastener or load path may terminate in a PCB.
    Perform the transport-closure test with the battery removed and all eight
-   external antennas removed and replaced by low-profile dust caps. Do not
-   force or latch a closure that shows interference. Battery-installed or
-   folded-antenna closure requires a separate signed sweep record.
+   released compact hinged antennas installed and folded inboard toward the
+   panel center. Do not force or latch a closure that shows interference.
+   Upright antennas, substitute antenna models, or battery-installed closure
+   require a separate signed sweep record.
 6. Enter measured minimum/maximum values in
    `mechanical-release-a2.json`, attach measurement photos or inspection
    records, and run `validate_mechanical_release.py --release`.
@@ -95,8 +97,10 @@ frame, tray, panel, and case.
 - The QRC-GOLD dock is top-panel/custom-frame hardware, not a PCB-mounted part;
   only its strain-relieved removable power harness reaches the selector PCB.
 - Minimum 8.0 mm closed-lid dynamic clearance after tolerance stack-up.
-- Transport closure requires the Gold-mount battery removed and the external
-  Wi-Fi/cellular antennas removed and capped. Upright antennas cannot close.
+- Transport closure requires the Gold-mount battery removed and all four
+  Taoglas `GW.05.0153` Wi-Fi antennas plus all four Taoglas `TG.66.A113`
+  cellular antennas installed and folded inboard. Upright or substitute
+  antennas are not an approved closure configuration.
 - Minimum 3.0 mm static clearance between unrelated metal hardware; use more
   where cables, latches, fingers, insulation, or vibration motion require it.
 - XLR bank outside edge remains at least 15.0 mm from the finished panel edge.

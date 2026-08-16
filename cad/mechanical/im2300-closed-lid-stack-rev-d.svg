@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1050" viewBox="-32 -36 500 250" role="img" aria-labelledby="title desc" style="background:#111418">
+  <title id="title">Radxa CM5 ProComm iM2300 closed-lid mechanical stack Rev D</title>
+  <desc id="desc">Corrected composite side projection using the panel top face as datum A, a 3.175 millimeter panel, sample-controlled monitor geometry, battery-removed transport closure with eight compact hinged antennas installed and folded inboard, suspended PCBs, downward cooling, and hinge-side bottom power hardware. Horizontal positions are diagrammatic; the Rev K floorplan controls XY placement.</desc>
+  <defs>
+    <pattern id="minorGrid" width="10" height="10" patternUnits="userSpaceOnUse">
+      <path d="M10 0H0V10" fill="none" stroke="#2b3138" stroke-width="0.22"/>
+    </pattern>
+    <pattern id="majorGrid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <rect width="50" height="50" fill="url(#minorGrid)"/>
+      <path d="M50 0H0V50" fill="none" stroke="#39414a" stroke-width="0.34"/>
+    </pattern>
+    <marker id="arrow" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto-start-reverse">
+      <path d="M6 3L0 0V6Z" fill="#aab3bd"/>
+    </marker>
+    <style>
+      .page{fill:#111418}.case{fill:#171c21;stroke:#c4ccd4;stroke-width:1.2}.cavity{fill:#0d1115;stroke:#67727d;stroke-width:.5}.grid{fill:url(#majorGrid);opacity:.48}
+      .panel{fill:#28313a;stroke:#eef2f5;stroke-width:1}.monitor{fill:#101820;stroke:#76a7f7;stroke-width:1}.glass{stroke:#8ec1ff;stroke-width:1.2}.mount{fill:#34414b;stroke:#99a6b2;stroke-width:.6}
+      .audio{fill:#173036;stroke:#52c7d5}.network{fill:#173426;stroke:#69d391}.backup{fill:#2d2037;stroke:#c493e8}.mains{fill:#3a211f;stroke:#f27767}.service{fill:#17263d;stroke:#76a7f7}.rf{fill:#382f19;stroke:#e4b95f}
+      .board{stroke-width:.8}.keep{fill:none;stroke:#f27767;stroke-width:.6;stroke-dasharray:3 2}.datum{stroke:#e4b95f;stroke-width:.65;stroke-dasharray:4 2}.dim{fill:none;stroke:#aab3bd;stroke-width:.5;marker-start:url(#arrow);marker-end:url(#arrow)}
+      .extension{stroke:#6f7983;stroke-width:.35}.title{fill:#f6f8fa;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:8px;font-weight:750}.subtitle{fill:#aeb7c0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:3.2px}
+      .label{fill:#eef2f5;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:3.3px;font-weight:650;text-anchor:middle}.small{fill:#bac3cc;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:2.8px;text-anchor:middle}.note{fill:#aeb8c2;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:2.55px}.dimension{fill:#d0d7de;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:3px;text-anchor:middle;font-weight:600}
+      text{letter-spacing:0}
+    </style>
+  </defs>
+
+  <rect class="page" x="-32" y="-36" width="500" height="250"/>
+  <text class="title" x="0" y="-25">RADXA CM5 PROCOMM - iM2300 CLOSED-LID STACK</text>
+  <text class="subtitle" x="0" y="-17">REV D A2 HOLD | PANEL TOP = DATUM A | DISPLAY + ANTENNA SAMPLES REQUIRED | BATTERY REMOVED / EIGHT ANTENNAS FOLDED INBOARD</text>
+
+  <!-- Case shell and cavities. Parting plane is Y=60. -->
+  <path class="case" d="M0 60V9Q0 0 10 0H421.8Q431.8 0 431.8 9V60H423.8V10H8V60Z"/>
+  <path class="case" d="M0 60V166.7Q0 176.7 10 176.7H421.8Q431.8 176.7 431.8 166.7V60H423.8V165.5Q423.8 168.7 420.5 168.7H11.3Q8 168.7 8 165.5V60Z"/>
+  <rect class="grid" x="8" y="9.2" width="415.8" height="159.5"/>
+  <line class="datum" x1="0" y1="60" x2="431.8" y2="60"/>
+  <text class="small" x="215.9" y="57">CASE PARTING / SEALING PLANE</text>
+
+  <!-- Lid monitor assembly -->
+  <rect class="mount" x="22" y="9.2" width="387.8" height="5" rx="1"/>
+  <rect class="monitor" x="27" y="14.2" width="377.8" height="24.1" rx="2"/>
+  <line class="glass" x1="27" y1="38.3" x2="404.8" y2="38.3"/>
+  <text class="label" x="215.9" y="22.5">15.6-IN HDMI TOUCH MONITOR</text>
+
+  <!-- Dynamic clearance plane -->
+  <line class="keep" x1="17" y1="46.3" x2="414.8" y2="46.3"/>
+  <text class="small" x="335" y="44">8 mm MINIMUM DYNAMIC CLEARANCE LIMIT</text>
+
+  <!-- Recessed top panel -->
+  <rect class="panel" x="15" y="98.1" width="401.8" height="3.175" rx=".5"/>
+  <rect class="mount" x="8" y="94.1" width="8" height="11"/>
+  <rect class="mount" x="415.8" y="94.1" width="8" height="11"/>
+  <text class="label" x="165" y="105.7">DATUM A / TOP PANEL - 3.175 mm NOMINAL 5052-H32</text>
+
+  <!-- Representative above-panel hardware -->
+  <rect class="audio board" x="45" y="82.1" width="38" height="16" rx="2"/>
+  <text class="small" x="64" y="89">XLR FACE</text>
+  <rect class="network board" x="92" y="86.1" width="34" height="12" rx="1"/>
+  <text class="small" x="109" y="93">RJ45</text>
+  <rect class="service board" x="337" y="89.1" width="32" height="9" rx="1"/>
+  <text class="small" x="353" y="95">STATUS</text>
+  <!-- Conservative folded envelope: approximately 32 mm above datum A. The
+       actual maximum of both selected antenna samples controls release. -->
+  <rect class="rf board" x="386" y="71.5" width="8" height="26.6" rx="2"/>
+  <rect class="rf board" x="345" y="66.6" width="45" height="9.7" rx="4.85" fill-opacity=".55"/>
+  <text class="small" x="367.5" y="73.4">FOLDED RF / 32 mm PRELIM</text>
+
+  <!-- Gold Mount closure check -->
+  <rect class="backup board" x="145" y="27.4" width="84" height="70.7" rx="3" fill-opacity=".62"/>
+  <text class="label" x="187" y="66">GOLD MOUNT BATTERY</text>
+  <text class="small" x="187" y="72">58 BATTERY + APPROX 12.7 DOCK</text>
+  <text class="small" x="187" y="77">APPROX 10.9 mm INTERFERENCE IN DRAWN STUDY</text>
+  <text class="small" x="187" y="82">REMOVE BATTERY BEFORE CLOSING</text>
+
+  <!-- Under-panel suspended boards -->
+  <line class="extension" x1="55" y1="101.275" x2="55" y2="107.1"/>
+  <line class="extension" x1="85" y1="101.275" x2="85" y2="107.1"/>
+  <rect class="audio board" x="30" y="107.1" width="80" height="1.6"/>
+  <rect class="audio board" x="35" y="108.7" width="70" height="22" fill-opacity=".5"/>
+  <text class="label" x="70" y="123">AUDIO-8X8</text>
+  <text class="small" x="70" y="129">CONNECTORS + ANALOG</text>
+
+  <line class="extension" x1="268" y1="101.275" x2="268" y2="107.1"/>
+  <line class="extension" x1="382" y1="101.275" x2="382" y2="107.1"/>
+  <rect class="network board" x="245" y="107.1" width="155" height="1.6"/>
+  <text class="label" x="322.5" y="104.2">CM5-CARRIER</text>
+  <rect class="network board" x="340" y="108.7" width="55" height="4" fill-opacity=".75"/>
+  <rect class="mains board" x="340" y="112.7" width="55" height="10" fill-opacity=".75"/>
+  <rect class="backup board" x="342" y="122.7" width="51" height="3" fill-opacity=".75"/>
+  <rect class="service board" x="347.5" y="125.7" width="40" height="31" fill-opacity=".75"/>
+  <text class="small" x="367.5" y="121">5540A</text><text class="small" x="367.5" y="147">DELTA FFB0412</text>
+  <line class="dim" x1="405" y1="156.7" x2="405" y2="166.7"/><text class="dimension" x="411" y="161.7" transform="rotate(-90 411 161.7)">10 MIN</text>
+  <text class="small" x="367.5" y="161">FAN INLET FACES BOTTOM</text>
+
+  <!-- Bottom-mounted power hardware, shown in non-overlap zones -->
+  <rect class="mains board" x="244" y="120.7" width="98" height="46" rx="1" fill-opacity=".58"/>
+  <rect class="backup board" x="244" y="163.7" width="98" height="3" rx=".4" fill-opacity=".45"/>
+  <text class="label" x="293" y="140">RPS-400-24-C PSU</text>
+  <text class="small" x="293" y="146">43 mm BODY / 48 mm MAX INSTALLED GUARD</text>
+  <text class="small" x="293" y="151">2 mm TRAY / HINGE-SIDE DIGITAL BAY</text>
+
+  <!-- Critical dimensions -->
+  <line class="dim" x1="135" y1="39.3" x2="135" y2="97.1"/>
+  <text class="dimension" x="130" y="68" transform="rotate(-90 130 68)">59.8 DRAWN EXAMPLE / SAMPLE CONTROLS</text>
+
+  <line class="dim" x1="440" y1="61" x2="440" y2="97.1"/>
+  <text class="dimension" x="446" y="79" transform="rotate(-90 446 79)">38.1 / 1.50 in PANEL RECESS</text>
+
+  <line class="dim" x1="428" y1="102.275" x2="428" y2="165.7"/>
+  <text class="dimension" x="422" y="134" transform="rotate(-90 422 134)">65.425 BELOW PANEL UNDERSIDE</text>
+
+  <line class="dim" x1="-12" y1="10.2" x2="-12" y2="59"/>
+  <text class="dimension" x="-18" y="35" transform="rotate(-90 -18 35)">50.8 LID DEPTH</text>
+  <line class="dim" x1="-12" y1="61" x2="-12" y2="165.7"/>
+  <text class="dimension" x="-18" y="113" transform="rotate(-90 -18 113)">106.7 BASE DEPTH</text>
+
+  <!-- Hinge harness concept -->
+  <path d="M20 55C34 58 34 70 28 79C24 86 27 92 38 98" fill="none" stroke="#76a7f7" stroke-width="1.2" stroke-dasharray="3 2"/>
+  <text class="small" x="54" y="72">HDMI + USB TOUCH + 12 V</text>
+  <text class="small" x="54" y="77">GROMMET + STRAIN RELIEF + SERVICE LOOP</text>
+
+  <!-- Notes -->
+  <text class="note" x="0" y="187">COMPOSITE SIDE PROJECTION: horizontal positions are separated for readability; Rev K controls XY. Do not infer plan overlap or clearance from this view.</text>
+  <text class="note" x="0" y="193">PRELIMINARY FIT STUDY: monitor body, mount, cable bosses, VESA, case recess, and wall taper require measured production samples.</text>
+  <text class="note" x="0" y="199">PASS: battery removed, all eight selected antennas installed and folded inboard, and at least 8 mm measured dynamic clearance through the full latched lid sweep.</text>
+  <text class="note" x="0" y="205">BOTTOM STACK HOLD: 48 mm maximum PSU/guard elevation, 10 mm to carrier B.Cu, 4 mm F.Cu-to-panel allowance, and 10 mm fan inlets require a physical section gauge.</text>
+</svg>

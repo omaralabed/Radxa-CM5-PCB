@@ -121,9 +121,9 @@ Network/radio/service zone:
 - Status LEDs
 - Reset and recovery buttons are not exposed on the top panel. Mount them as
   recessed internal/underside service controls.
-- Transport closure removes all eight external antennas and installs
-  low-profile dust caps. An installed/folded antenna arrangement is not
-  approved without a separate 8 mm dynamic-clearance sweep.
+- Transport closure keeps the released compact hinged antenna set installed
+  and folds all eight antennas inboard toward the panel center. The actual
+  antenna and monitor samples must pass a signed 8 mm dynamic-clearance sweep.
 
 Power/control zone:
 
@@ -177,12 +177,25 @@ Antenna zone:
 - 4 cellular/GNSS paths for a 5G MIMO-capable modem; label the fourth
   `CELL 4 / GNSS` when supported by the selected modem
 - All eight antenna bulkheads are arranged vertically along the right side of
-  the top panel at a 38 mm starting center pitch, with the group centered
-  vertically to give the first and last connectors about 45 mm center-to-edge
-  clearance. Use a narrow 31 mm panel
-  strip, an approximately 6.4 mm hole as the drawing placeholder for each SMA
-  bulkhead, and place each antenna label directly below its connector. Replace
-  the placeholder with the final bulkhead manufacturer's cutout.
+  the top panel at 34 mm center pitch. The centers are X = 406.5 mm and
+  Y = 35, 69, 103, 137, 171, 205, 239, and 273 mm. Use a narrow 25.8 mm
+  panel strip, an approximately 6.4 mm hole as the drawing placeholder, and
+  place each antenna label directly below its connector. Replace the
+  placeholder with the final bulkhead manufacturer's cutout.
+- Wi-Fi production candidate: four Taoglas `GW.05.0153`, 62.3 x 10 mm,
+  hinged `RP-SMA(M)`, covering 2.4 GHz and 5.15-7.125 GHz. Mate them only to
+  RP-SMA jack bulkheads.
+- Cellular production candidate: four Taoglas `TG.66.A113`, 70.3 x 9.7 mm,
+  hinged `SMA(M)`, covering 600-6000 MHz. Mate them only to standard SMA jack
+  bulkheads. `CELL 4 / GNSS` remains conditional on the final modem port map;
+  active or dedicated GNSS requires a separate antenna revision.
+- Before closing, rotate every hinge so the antenna upper arm folds left/inboard
+  over its dashed Rev K transport projection. Manufacturer drawings imply a
+  preliminary worst-case height of about 32 mm above datum A; physical samples
+  control the final value. The folded state is for transport, not radio use.
+- The Sierra `6001110` 163 x 22 x 7 mm paddle linked during concept work is a
+  style reference only. Its long folded arm would cross other panel hardware,
+  and its 698-3800 MHz range is not the global 600-6000 MHz cellular target.
 - Keep antennas spaced from each other and away from XLR analog wiring,
   switching regulators, fan wiring, HDMI, USB3, and the cellular modem power
   converter.
@@ -283,19 +296,22 @@ headset openings, the SIM service openings, the Gold Mount pattern, the RF
 bulkheads, and the lid harness notch all remain dependent on final stack height
 or physical sample measurements.
 
-## Rev J SVG
+## Rev K SVG
 
 The current dimensioned connector-placement study is:
 
-- `../cad/im2300-top-panel-layout-rev-j.svg`
+- `../cad/im2300-top-panel-layout-rev-k.svg`
 
 It uses the nominal 431.8 x 298.0 mm bezel envelope and shows the Gold Mount
 battery envelope, all required user connectors, RF spacing, the guarded AC
-zone, and the two hardware-controlled diffused warm-white panel lights. Rev J
+zone, and the two hardware-controlled diffused warm-white panel lights. Rev K
 adds the 15 mm four-side frame/screw keepout, moves the XLR bank 2.3 mm right,
 retains the centered 90 x 8 mm hinge-edge lid-harness notch and selected DPST
 rocker, and removes all top-panel cooling openings. Sidewall fan geometry is
 controlled by `../cad/mechanical/im2300-sidewall-cooling-layout-rev-c.svg`. It
+adds eight dashed inboard antenna transport projections while preserving every
+Rev J RF bulkhead center, and compresses the six-status-light pitch to keep the
+`CELL 1` fold projection clear of the `AUDIO` indicator.
 also locks the Gold Mount dock orientation so the battery
 engages from left to right, toward the network side, and removes toward the XLR
 side. The left insertion corridor and complete slide/release sweep must remain
@@ -305,5 +321,5 @@ The notch dimensions must be replaced by the selected HDMI, USB-touch, and
 fabrication. It is not a CNC/fabrication cut file until actual case
 measurements and manufacturer cutout drawings replace the nominal geometry.
 
-Rev J is the sole retained top-panel drawing. Older panel revisions and locked
+Rev K is the sole retained top-panel drawing. Older panel revisions and locked
 duplicate exports have been removed.

@@ -5,9 +5,9 @@
     <style>
       .bg{fill:#11151a}.panel{fill:#171d23;stroke:#d7dee7;stroke-width:1}.frame{fill:none;stroke:#7f8b99;stroke-width:.6;stroke-dasharray:3 2}
       .dim{fill:none;stroke:#b9c3cf;stroke-width:.35}.call{fill:none;stroke:#69d4e7;stroke-width:.45}.open{fill:#291d20;stroke:#ff7c70;stroke-width:.6}
-      .h1{fill:#fff;font:700 7px Arial,sans-serif}.h2{fill:#dce4ed;font:700 4px Arial,sans-serif}.txt{fill:#c8d1db;font:3px Arial,sans-serif}
-      .tiny{fill:#aeb8c4;font:2.35px Arial,sans-serif}.id{fill:#11151a;stroke:#69d4e7;stroke-width:.35}.idtxt{fill:#69d4e7;font:700 2.5px Arial,sans-serif}
-      .line{stroke:#6f7a87;stroke-width:.3}.blank{fill:none;stroke:#9aa6b4;stroke-width:.3}.warn{fill:#ffb36a;font:700 3px Arial,sans-serif}
+      .h1{fill:#fff;font-family:Arial,sans-serif;font-size:7px;font-weight:700}.h2{fill:#dce4ed;font-family:Arial,sans-serif;font-size:4px;font-weight:700}.txt{fill:#c8d1db;font-family:Arial,sans-serif;font-size:3px}
+      .tiny{fill:#aeb8c4;font-family:Arial,sans-serif;font-size:2.35px}.id{fill:#11151a;stroke:#69d4e7;stroke-width:.35}.idtxt{fill:#69d4e7;font-family:Arial,sans-serif;font-size:2.5px;font-weight:700}
+      .line{stroke:#6f7a87;stroke-width:.3}.blank{fill:none;stroke:#9aa6b4;stroke-width:.3}.warn{fill:#ffb36a;font-family:Arial,sans-serif;font-size:3px;font-weight:700}
     </style>
     <marker id="arrow" markerWidth="5" markerHeight="5" refX="2.5" refY="2.5" orient="auto"><path d="M5 0 0 2.5 5 5z" fill="#b9c3cf"/></marker>
   </defs>
@@ -59,8 +59,8 @@
     <rect class="open" x="66" y="36" width="38" height="20"/><text class="tiny" x="85" y="44" text-anchor="middle">COOLING</text><text class="tiny" x="85" y="49" text-anchor="middle">M029-M030</text><text class="tiny" x="85" y="53" text-anchor="middle">M070-M077</text>
     <line class="dim" x1="112" y1="31" x2="112" y2="75" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
     <rect class="id" x="91" y="66" width="18" height="5"/><text class="idtxt" x="100" y="69.5" text-anchor="middle">M027</text>
-    <text class="tiny" x="0" y="86">Closure test uses the actual display, permanent connectors, capped RF bulkheads,</text>
-    <text class="tiny" x="0" y="91">and complete hinge harness. Remove battery and all external antennas first.</text>
+    <text class="tiny" x="0" y="86">Closure test uses the actual display, permanent connectors, and all eight released antennas folded inboard,</text>
+    <text class="tiny" x="0" y="91">and complete hinge harness. Remove the Gold-mount battery; do not remove the released RF antennas.</text>
   </g>
 
   <g transform="translate(279 142)">
@@ -80,7 +80,7 @@
 
   <g transform="translate(18 220)">
     <text class="h2" x="0" y="0">CRITICAL CHECKS</text>
-    <text class="txt" x="0" y="9">M021-M026, M059-M069  Display, closure, battery/dock and capped-RF transport clearances</text>
+    <text class="txt" x="0" y="9">M021-M026, M059-M069  Display, closure, battery/dock and folded-RF transport clearances</text>
     <text class="txt" x="0" y="16">M027-M030, M049-M058  Panel underside, floor tray, PSU guard, carrier and cooler Z stack</text>
     <text class="txt" x="0" y="23">M031-M033  Gold Mount engages LEFT TO RIGHT; QRC backplate carries panel/frame load</text>
     <text class="txt" x="0" y="30">M034-M038, M070-M072  Fan axes, fan/audio separation, measured CFM and PSU inlet air</text>

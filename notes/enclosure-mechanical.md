@@ -206,16 +206,19 @@ No closure claim can be made until the monitor sample is measured. Preserve at
 least 8 mm of final dynamic clearance from the display front to every permanent
 panel item after case tolerance, gasket compression, lid flex, impact, and
 monitor-mount tolerance. Verify the actual closed-lid gap with the real case,
-monitor, panel frame, dust-capped RF bulkheads, and representative connectors
+monitor, panel frame, all eight selected antennas folded inboard, and representative connectors
 before fabrication.
 
 The Gold Mount battery and antennas are separate closure checks. The 58 mm
 Dionic XT90 plus the approximately 12.7 mm QRC-GOLD body creates an
 approximately 70.7 mm protrusion before latch tolerance, which is expected to
 interfere with the lid monitor. The locked transport rule is: remove the
-battery, remove all eight external antennas, and fit low-profile dust caps
-before closing the case. An installed-battery or folded-antenna alternative
-requires its own signed sweep record with at least 8 mm dynamic clearance.
+battery, leave the released compact hinged RF antennas installed, and fold all
+eight inboard before closing the case. Current candidates are Taoglas
+`GW.05.0153` for Wi-Fi and `TG.66.A113` for cellular. The preliminary tallest
+folded envelope is 32 mm above datum A; the actual samples control. An
+installed-battery, upright-antenna, or substitute-antenna configuration requires
+its own signed sweep record with at least 8 mm dynamic clearance.
 
 Orient the Gold Mount dock so the battery engages horizontally from left to
 right, moving from the XLR side toward the network side. Removal is the reverse
@@ -259,6 +262,11 @@ Design constraints:
 - Reserve eight RF bulkheads in the right-side RF bank: four Wi-Fi above four
   cellular/GNSS. Keep the bank and its coax corridor away from the lid display
   metal, AC/PSU bay, XLR bank, Ethernet magnetics, fans, and high-current wiring.
+- Use RP-SMA jack bulkheads for the four Wi-Fi positions and standard SMA jack
+  bulkheads for the four cellular positions. Preserve the eight inboard fold
+  sweeps and do not place cable clamps or raised service hardware in the hinge
+  rotation volume. The folded state is for transport only; deploy and orient
+  the antennas for radio operation.
 
 ## Thermal Implication
 

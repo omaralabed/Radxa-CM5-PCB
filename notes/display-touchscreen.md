@@ -54,10 +54,10 @@ The touchscreen will be mounted in the Pelican iM2300 lid.
 - Add USB ESD protection and current limiting if the port/header supplies power.
 - Confirm whether the touchscreen needs separate display power beyond USB.
 - Transport closure is qualified with the Gold-mount battery removed and all
-  eight external antennas removed and replaced by low-profile dust caps. The
-  measured display-front to tallest-permanent-panel-hardware gap must remain
-  at least 8 mm after tolerance, gasket compression, lid flex, and impact
-  allowance.
+  eight released compact hinged antennas installed and folded inboard. The
+  measured display-front to the tallest hinge or folded antenna surface must
+  remain at least 8 mm after tolerance, gasket compression, lid flex, and
+  impact allowance. Upright or substitute antennas require a new closure test.
 
 ## Open Decisions
 

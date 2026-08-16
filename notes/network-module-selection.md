@@ -211,6 +211,12 @@ Use eight bulkheads total in the narrow right-side RF bank: `WIFI 1-4` above
 the available strip cannot hold eight connectors at 50 mm pitch. Validate
 antenna isolation, diversity, cable loss, and closed-enclosure throughput; use
 greater spacing if the measured production panel permits it.
+Use four Taoglas `GW.05.0153` hinged `RP-SMA(M)` antennas for Wi-Fi and four
+Taoglas `TG.66.A113` hinged `SMA(M)` antennas for cellular validation. The
+compact antenna set remains installed and folds inboard for transport; it must
+pass the physical lid sweep with at least 8 mm dynamic clearance. Raise and
+orient the antennas for operation because the folded position is not an RF
+performance configuration. Do not substitute the connector polarities.
 Keep RF paths away from the XLR analog bank, PSU/AC bay, power converters, fan
 motors, Ethernet magnetics, HDMI, USB 3, and high-current wiring. Detailed
 placement rules are in `rev-a-hardware-architecture.md`.
@@ -227,3 +233,5 @@ placement rules are in `rev-a-hardware-architecture.md`.
 - Radxa Wireless A8: https://www.radxa.com/products/accessories/wireless-module-a8/
 - Quectel RM520N series: https://www.quectel.com/product/5g-rm520n-series/
 - SIMCom SIM8260G-M2: https://www.simcom.com/product/SIM8260G-M2.html
+- Taoglas GW.05.0153 Wi-Fi antenna: https://www.taoglas.com/datasheets/GW.05.0153.pdf
+- Taoglas TG.66.A113 cellular antenna: https://www.taoglas.com/datasheets/TG.66.A113.pdf

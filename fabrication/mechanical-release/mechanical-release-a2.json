@@ -65,13 +65,40 @@
     "display_protrusion_mm": null,
     "tallest_permanent_panel_hardware_mm": null,
     "battery_plus_dock_protrusion_mm": null,
-    "rf_cap_protrusion_mm": null,
+    "maximum_folded_rf_antenna_protrusion_mm": null,
+    "rf_folded_sweep_record": null,
     "inspection_record": null
   },
   "transport_configuration": {
     "battery": "REMOVE_BEFORE_CLOSING",
-    "external_rf_antennas": "REMOVE_AND_INSTALL_DUST_CAPS_BEFORE_CLOSING",
-    "exception_rule": "An alternate installed/folded configuration requires a separate signed sweep record with at least 8.0 mm dynamic clearance everywhere."
+    "external_rf_antennas": "KEEP_INSTALLED_AND_FOLD_INBOARD_BEFORE_CLOSING",
+    "exception_rule": "Only the released compact hinged antenna set may remain installed. Upright antennas or substitute models require a separate signed sweep record with at least 8.0 mm dynamic clearance everywhere."
+  },
+  "rf_antennas": {
+    "wifi": {
+      "quantity": 4,
+      "candidate_part": "Taoglas GW.05.0153",
+      "frequency_range_mhz": "2400-2500 / 5150-7125",
+      "antenna_connector": "RP-SMA(M)",
+      "panel_bulkhead": "RP-SMA jack bulkhead",
+      "straight_envelope_mm": "62.3 x 10 diameter",
+      "drawing_estimate_folded_height_above_panel_mm": 29.4,
+      "datasheet": "docs/mechanical-parts/taoglas-gw05-0153-wifi-antenna.pdf"
+    },
+    "cellular": {
+      "quantity": 4,
+      "candidate_part": "Taoglas TG.66.A113",
+      "frequency_range_mhz": "600-6000",
+      "antenna_connector": "SMA(M)",
+      "panel_bulkhead": "SMA jack bulkhead",
+      "straight_envelope_mm": "70.3 x 9.7 diameter",
+      "drawing_estimate_folded_height_above_panel_mm": 32.0,
+      "datasheet": "docs/mechanical-parts/taoglas-tg66-a113-cellular-antenna.pdf"
+    },
+    "transport_fold_direction": "INBOARD_TOWARD_PANEL_CENTER",
+    "bulkhead_center_pitch_mm": 34.0,
+    "physical_sample_required": true,
+    "gnss_note": "CELL 4 / GNSS is conditional on the selected modem port map. A modem that requires active or dedicated GNSS needs a separate antenna and mechanical revision."
   },
   "battery_dock": {
     "part": "Anton/Bauer QRC-GOLD 8375-0094",
@@ -112,7 +139,9 @@
     "minimum_lid_harness_psu_guard_clearance_mm": 15.0,
     "battery_engagement_direction": "LEFT_TO_RIGHT",
     "battery_transport_state": "REMOVED",
-    "rf_antenna_transport_state": "REMOVED_AND_CAPPED"
+    "rf_antenna_transport_state": "INSTALLED_FOLDED_INBOARD",
+    "minimum_rf_bulkhead_center_pitch_mm": 34.0,
+    "maximum_preliminary_folded_rf_height_mm": 32.0
   },
   "signoff": {
     "measured_by": null,
