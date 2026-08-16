@@ -287,12 +287,14 @@ Reuse the previous ProComm Gold Mount direction:
 - Capacity: 99 Wh
 - Maximum continuous current: 12 A
 - Battery envelope: 99 x 132 x 58 mm
-- Dock basis: Anton/Bauer QR-GOLD Universal Gold Mount Bracket, SKU `8375-0081`
+- Dock basis: Anton/Bauer QRC-GOLD Universal Compact Gold Mount Bracket, SKU
+  `8375-0094`; approximately 119.4 x 76.2 x 12.7 mm excluding the release latch
 - Battery charging is external; no onboard charger unless a future battery
   protocol is explicitly selected and documented.
 
-The exact QR-GOLD polarity, mounting datum, latch travel, and clearance still
-need to be verified from manufacturer documentation or a measured sample.
+The exact QRC-GOLD polarity, mounting datum, latch travel, clearance, and main
+power-path temperature rise at 12 A still need to be verified from manufacturer
+documentation and a measured production sample.
 
 ## Selector Architecture
 

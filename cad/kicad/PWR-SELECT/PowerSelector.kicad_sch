@@ -16245,7 +16245,7 @@
 		)
 		(uuid "88a89d0e-b6aa-5375-91d9-2ce9614ea2a4")
 	)
-	(text "J203  QR-GOLD DOCK 10.0-16.8 V"
+	(text "J203  QRC-GOLD 8375-0094 DOCK 10.0-16.8 V"
 		(exclude_from_sim no)
 		(at 28 349 0.0000)
 		(effects
