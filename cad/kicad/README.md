@@ -11,10 +11,12 @@
 
 ## Project Split
 
-- `SYSTEM/Radxa-CM5-ProComm-System.kicad_pro`: one native KiCad navigation
-  project for the complete sixteen-sheet design. Its sheet instances are
-  excluded from BOM and board update; the three physical PCB netlists remain
-  controlled by their board projects below.
+- `SYSTEM/Radxa-CM5-ProComm-System.kicad_pro`: one native KiCad electrical
+  project for the complete design. Page 1 captures the exact system harness,
+  power, display, fan, network, service, RF, and XLR pin/net interconnects;
+  pages 2-17 contain the sixteen component-level sheets. System connector and
+  sheet instances are excluded from BOM and board update; the three physical
+  PCB netlists remain controlled by their board projects below.
 
 - `PWR-SELECT/PowerSelector.kicad_pro`: Radxa A1 source-selector capture with
   1.50 mOhm source-shunt starting values, three INA228 telemetry channels, and

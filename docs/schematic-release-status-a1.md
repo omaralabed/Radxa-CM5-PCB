@@ -8,14 +8,17 @@ The native KiCad source consists of sixteen controlled sheets across
 `PWR-SELECT`, `CM5-CARRIER`, and `AUDIO-8X8`. The complete deterministic review
 gate passes without source drift. Open
 `cad/kicad/SYSTEM/Radxa-CM5-ProComm-System.kicad_pro` for one native KiCad
-entry point to the complete design; its navigation sheets cannot update a PCB.
+entry point to the complete design. Page 1 is the real system electrical
+interconnect and pages 2-17 contain the component-level circuits. Its system
+representations cannot update a PCB.
 
 ## Passed Gates
 
 - All sixteen sheets: zero ERC errors after controlled classification of
   intentional off-sheet labels and unused package pins.
-- Complete-system project: all sixteen source sheets are present and its A2 PDF
-  export contains exactly 17 pages, including the system index.
+- Complete-system project: page 1 contains 58 electrical symbols and 294 named
+  pin interconnects; all sixteen source sheets are present, and its A2 PDF
+  export contains exactly 17 pages.
 - PWR-SELECT: zero ERC errors/warnings, 186 critical checks, 111 exact BOM
   components, reverse-polarity controls, source thresholds, telemetry ranges,
   current limit, and hold-up calculations pass.

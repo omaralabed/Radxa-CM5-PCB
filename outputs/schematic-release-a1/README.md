@@ -8,6 +8,9 @@ This folder contains the factory-review PDF set generated from all sixteen
 controlled KiCad schematic sheets. The editable whole-system entry point is
 `../../cad/kicad/SYSTEM/Radxa-CM5-ProComm-System.kicad_pro`.
 
+- `Radxa-CM5-ProComm-Complete-Electrical-A2.pdf`: native KiCad 17-page export;
+  page 1 is the real system electrical interconnect and pages 2-17 are the
+  complete component-level circuits.
 - `Power-Selector-Schematic-A1.pdf`: no-blink primary/backup selector,
   hold-up, telemetry, and protected output.
 - `CM5-Carrier-Schematic-A1.pdf`: CM5 allocation, network, Wi-Fi, cellular,
@@ -16,7 +19,7 @@ controlled KiCad schematic sheets. The editable whole-system entry point is
   balanced line stages, relays, XLRs, and audio power.
 - `Radxa-CM5-ProComm-Schematic-Release-A1.pdf`: cover plus the complete master
   set in electrical review order.
-- `SHA256SUMS.txt`: controlled hashes for all four release PDFs.
+- `SHA256SUMS.txt`: controlled hashes for all five release PDFs.
 
 Regenerate only after the complete capture gate passes:
 

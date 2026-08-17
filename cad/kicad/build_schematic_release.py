@@ -4,6 +4,8 @@
 from __future__ import annotations
 
 import hashlib
+import os
+import subprocess
 from io import BytesIO
 from pathlib import Path
 
@@ -18,6 +20,12 @@ from reportlab.platypus import Paragraph, SimpleDocTemplate, Spacer, Table, Tabl
 ROOT = Path(__file__).resolve().parents[2]
 KICAD = ROOT / "cad/kicad"
 OUTPUT = ROOT / "outputs/schematic-release-a1"
+KICAD_CLI = Path(
+    os.environ.get(
+        "KICAD_CLI", "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli"
+    )
+)
+SYSTEM_SCHEMATIC = KICAD / "SYSTEM/Radxa-CM5-ProComm-System.kicad_sch"
 
 PWR_PDFS = [KICAD / "PWR-SELECT/REVIEW/PowerSelector-A0.pdf"]
 CM5_PDFS = [
@@ -193,10 +201,29 @@ def sha256(path: Path) -> str:
 
 def main() -> int:
     OUTPUT.mkdir(parents=True, exist_ok=True)
+    system_out = OUTPUT / "Radxa-CM5-ProComm-Complete-Electrical-A2.pdf"
     pwr_out = OUTPUT / "Power-Selector-Schematic-A1.pdf"
     cm5_out = OUTPUT / "CM5-Carrier-Schematic-A1.pdf"
     audio_out = OUTPUT / "Audio-8x8-Schematic-A1.pdf"
     master_out = OUTPUT / "Radxa-CM5-ProComm-Schematic-Release-A1.pdf"
+
+    if not KICAD_CLI.exists():
+        raise FileNotFoundError(KICAD_CLI)
+    subprocess.run(
+        [
+            str(KICAD_CLI),
+            "sch",
+            "export",
+            "pdf",
+            "--output",
+            str(system_out),
+            str(SYSTEM_SCHEMATIC),
+        ],
+        check=True,
+    )
+    system_pages = len(PdfReader(system_out).pages)
+    if system_pages != 17:
+        raise RuntimeError(f"complete electrical PDF has {system_pages} pages, expected 17")
 
     pwr_pages = merge(PWR_PDFS, pwr_out)
     cm5_pages = merge(CM5_PDFS, cm5_out)
@@ -225,7 +252,7 @@ def main() -> int:
             f"master page count {actual_master} does not match {expected_master}"
         )
 
-    outputs = (pwr_out, cm5_out, audio_out, master_out)
+    outputs = (system_out, pwr_out, cm5_out, audio_out, master_out)
     for path in outputs:
         reader = PdfReader(path)
         if not reader.pages:

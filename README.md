@@ -106,8 +106,10 @@ under `references/procomm-field-unit/`.
   `docs/schematic-release-status-a1.md` records the passed electrical gates and
   the physical coupon/mechanical holds that must close before PCB placement.
 - The complete native KiCad design now has one entry point at
-  `cad/kicad/SYSTEM/Radxa-CM5-ProComm-System.kicad_pro`. It indexes all sixteen
-  sheets while preserving the three separate physical PCB netlists.
+  `cad/kicad/SYSTEM/Radxa-CM5-ProComm-System.kicad_pro`. Its first page is the
+  real pin-level system electrical interconnect and pages 2-17 contain all
+  sixteen component-level sheets, while preserving the three separate physical
+  PCB netlists.
 - The Radxa CM5 V2.21 A0 pin allocation is controlled in
   `notes/cm5-pin-allocation-a0.md` and
   `outputs/cm5-pin-allocation-a0/radxa_cm5_pin_allocation_a0.xlsx`. The audit
