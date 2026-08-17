@@ -83,7 +83,8 @@ Design input envelope:
 
 | Rail | Locked target | Starting implementation | Loads and rules |
 | --- | ---: | --- | --- |
-| `SYS_5V15` | 5.15 V, 12 A continuous | TI `LM5146RGYR`, onsemi `NVMFS6B25NLT1G` / `FDWS86068-F085`, TDK `SPM10065VC-3R3M-D` | CM5 and controlled 5 V system loads. Kelvin/remote sense at the CM5 connector. Recalculate the compensation with measured final-PCB response. |
+| `SYS_4V0` | 4.006 V, 12 A continuous | TI `LM5146RGYR`, onsemi `NVMFS6B25NLT1G` / `FDWS86068-F085`, TDK `SPM10065VC-3R3M-D` | All six CM5 `VCC_SYSIN` pins. The 4 V target follows the Radxa CM5 carrier design note. Kelvin/remote sense at the CM5 connector and recalculate compensation with measured final-PCB response. |
+| `IO_5V0` | 4.984 V, 2 A | TI `TPS62913RPUT` from fused `DISPLAY_IO_12V` | CM5 `5V_HDMI` pin 106 plus separately fused HDMI pin 18 and touchscreen USB VBUS. Do not merge with `SYS_4V0`. |
 | `AUX_12V` | Revised 12 V, 8 A minimum target | TI `LM5176` four-switch buck-boost | Backup-riding 12 V backbone. Recalculate and bench-qualify the A1 power stage before routing. |
 | `DISPLAY_12V` | 12 V, 2.5 A branch | Simple fused harness branch from `AUX_12V`; no dedicated display eFuse/current limiter | Lid display only. Rated load is 25 W / 2.08 A; size the fuse and wiring after measuring full-brightness and startup current. |
 | `FAN_CPU_12V` | 12 V, 3 A branch | Protected branch from `AUX_12V` | Locked Delta `FFB0412EN-00Y2E`; independent PWM/tach and fault containment. |
@@ -97,7 +98,7 @@ Design input envelope:
 | `AUDIO_BIPOLAR` | +/-15 V, 20 W class | TRACO Power `TRI 20-1223` starting module from `AUX_12V`, followed by common-mode/pi filtering | THAT1206/OPA165x/THAT1646 line stages. Confirm current and noise with all 16 channels driven. |
 | `AKM_5V_A` | Clean 5.0 V, 500 mA class | Quiet 6 V pre-regulator followed by `LT3045` | AK5558/AK4458 analog supplies. Keep thermal dissipation within the LDO limit. |
 | `AUDIO_3V3_D` | Clean 3.3 V, load TBD | `TPS7A20` or equivalent low-noise LDO | AKM digital/control and audio clock loads after exact current calculation. |
-| `HEADSET_3V3` | Clean 3.3 V, load TBD | Separate `TPS7A20` or equivalent | ES8316, mic bias/preamp, jack detect, and `TPA6132A2` headphone amplifier. No radio, fan, USB, or LED loads. |
+| `HEADSET_3V3` | Clean 3.3 V, 250 mA class | Separate `LP5907MFX-3.3/NOPB` | ES8316, mic bias/preamp, jack detect, and `TPA6132A2` headphone amplifier. No radio, fan, USB, or LED loads. |
 
 The listed ICs are schematic starting parts, not a substitute for the vendor
 design worksheets. Inductor saturation, MOSFET SOA, current sense, compensation,

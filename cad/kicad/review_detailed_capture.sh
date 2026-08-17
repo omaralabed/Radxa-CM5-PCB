@@ -148,6 +148,9 @@ for sheet in Audio-TDM-Clock AK5558-ADC AK4458-DAC Audio-Inputs Audio-Outputs Au
 done
 
 python3 "${SCRIPT_DIR}/export_schematic_bom.py" \
+    --schematic "${SCRIPT_DIR}/PWR-SELECT/PowerSelector.kicad_sch" \
+    --output "${PROJECT_ROOT}/docs/power_selector_bom_a1.csv"
+python3 "${SCRIPT_DIR}/export_schematic_bom.py" \
     --schematic "${SCRIPT_DIR}/CM5-CARRIER/Power-Regulators-A1.kicad_sch" \
     --output "${PROJECT_ROOT}/docs/power_regulator_bom_a1.csv" \
     --exclude U1180 \

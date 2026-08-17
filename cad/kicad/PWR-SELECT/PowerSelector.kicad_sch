@@ -4625,6 +4625,33 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "GRM32RR71H105KA01L"
+			(at 93.98 48.2599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 93.98 48.2599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.murata.com/en-us/products/capacitor/mlcc/grm"
+			(at 91.44 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "2155df35-f904-59e8-b31e-83187eb571f9")
 		)
@@ -4679,6 +4706,33 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "RC0603FR-072R4L"
+			(at 111.76 44.4499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 111.76 44.4499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_14.pdf"
+			(at 109.22 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "afb64172-e566-5024-a35b-56399196aa45")
 		)
@@ -4725,6 +4779,33 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_1210_3225Metric"
 			(at 125.4252 39.37 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "GRM32ER71H106KA12L"
+			(at 127 48.2599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 127 48.2599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.murata.com/en-us/products/capacitor/mlcc/grm"
+			(at 124.46 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4929,6 +5010,33 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "GRM32RR71H105KA01L"
+			(at 93.98 82.5499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 93.98 82.5499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.murata.com/en-us/products/capacitor/mlcc/grm"
+			(at 91.44 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "53747326-11b9-57b1-b5d5-fd3d61985fb1")
 		)
@@ -4983,6 +5091,33 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "RC0603FR-071R69L"
+			(at 111.76 78.7399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 111.76 78.7399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_14.pdf"
+			(at 109.22 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "8de65582-5ef4-52e8-8c64-2753f1c18c7c")
 		)
@@ -5029,6 +5164,33 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_1210_3225Metric"
 			(at 125.4252 73.66 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "GRM32ER71H106KA12L"
+			(at 127 82.5499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 127 82.5499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.murata.com/en-us/products/capacitor/mlcc/grm"
+			(at 124.46 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5244,6 +5406,33 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 168.6052 60.96 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "GRM188R71H473KA61D"
+			(at 170.18 69.8499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 170.18 69.8499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.murata.com/en-us/products/capacitor/mlcc/grm"
+			(at 167.64 64.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5537,6 +5726,33 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 168.6052 97.79 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "GRM188R71H473KA61D"
+			(at 170.18 106.6799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 170.18 106.6799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.murata.com/en-us/products/capacitor/mlcc/grm"
+			(at 167.64 101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5852,6 +6068,33 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "GRM188R71E105KA12D"
+			(at 245.11 99.0599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 245.11 99.0599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.murata.com/en-us/products/capacitor/mlcc/grm"
+			(at 242.57 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "9d09cfd7-37f9-599c-8e5d-4ea9973d2da3")
 		)
@@ -5898,6 +6141,33 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 257.5052 111.76 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "GRM188R71E105KA12D"
+			(at 259.08 120.6499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 259.08 120.6499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.murata.com/en-us/products/capacitor/mlcc/grm"
+			(at 256.54 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5958,6 +6228,33 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "GRM1885C1H102JA01D"
+			(at 278.13 120.6499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 278.13 120.6499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.murata.com/en-us/products/capacitor/mlcc/grm"
+			(at 275.59 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "c6a5dd9c-6c6e-5a75-b3d1-4cefb9fc7b8c")
 		)
@@ -6011,6 +6308,33 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "GRM188R71E104KA01D"
+			(at 297.18 120.6499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 297.18 120.6499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.murata.com/en-us/products/capacitor/mlcc/grm"
+			(at 294.64 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "f6ef594e-0ae0-5599-9ec9-f117491641e2")
 		)
@@ -6057,6 +6381,33 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 314.6552 111.76 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "GRM188R71E104KA01D"
+			(at 316.23 120.6499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 316.23 120.6499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.murata.com/en-us/products/capacitor/mlcc/grm"
+			(at 313.69 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6118,6 +6469,33 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "RC0603FR-07100KL"
+			(at 335.28 96.5199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 335.28 96.5199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_14.pdf"
+			(at 332.74 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "4e8a096a-f14c-5de4-b331-9bcb6fb0723d")
 		)
@@ -6165,6 +6543,33 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 330.962 105.41 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RC0603FR-07100KL"
+			(at 335.28 110.4899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 335.28 110.4899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_14.pdf"
+			(at 332.74 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6304,6 +6709,33 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "RC0603FR-0747KL"
+			(at 471.17 52.0699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 471.17 52.0699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_14.pdf"
+			(at 468.63 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "e7a8862c-9521-5554-9e26-eb4295585a32")
 		)
@@ -6351,6 +6783,33 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 498.602 46.99 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RC0603FR-0747KL"
+			(at 502.92 52.0699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 502.92 52.0699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_14.pdf"
+			(at 500.38 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6702,6 +7161,33 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "GRM32RR71H105KA01L"
+			(at 124.46 146.0499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 124.46 146.0499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.murata.com/en-us/products/capacitor/mlcc/grm"
+			(at 121.92 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "3d51f0e9-e86a-5e18-9139-c26bd6ad6bc2")
 		)
@@ -6748,6 +7234,33 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 143.2052 137.16 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "GRM188R71H104KA93D"
+			(at 144.78 146.0499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 144.78 146.0499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.murata.com/en-us/products/capacitor/mlcc/grm"
+			(at 142.24 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7206,7 +7719,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 27.94 199.39 90)
+		(at 21.59 199.39 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7215,7 +7728,7 @@
 		(fields_autoplaced no)
 		(uuid "9182395b-8416-538a-9c23-a8703dae4ddd")
 		(property "Reference" "R104"
-			(at 27.94 201.422 180)
+			(at 21.59 201.422 180)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7224,8 +7737,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "1.06M 0.1%"
-			(at 27.94 199.39 180)
+		(property "Value" "953k 0.1%"
+			(at 21.59 199.39 180)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7235,7 +7748,34 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 26.162 199.39 90)
+			(at 19.812 199.39 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "ERA3AEB9533V"
+			(at 24.13 204.4699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Panasonic"
+			(at 24.13 204.4699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf"
+			(at 21.59 199.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7260,16 +7800,16 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 58.42 199.39 90)
+		(at 45.72 199.39 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "f9b3af47-6290-50a2-8962-5daccf7b05bd")
-		(property "Reference" "R103"
-			(at 58.42 201.422 180)
+		(uuid "82d74f4d-3d14-5e8a-8bc5-71e3e1bb6e92")
+		(property "Reference" "R106"
+			(at 45.72 201.422 180)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7278,8 +7818,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "3.01k 0.1%"
-			(at 58.42 199.39 180)
+		(property "Value" "107k 0.1%"
+			(at 45.72 199.39 180)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7289,7 +7829,115 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 56.642 199.39 90)
+			(at 43.942 199.39 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "ERA3AEB1073V"
+			(at 48.26 204.4699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Panasonic"
+			(at 48.26 204.4699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf"
+			(at 45.72 199.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9b36b281-3541-54e3-8db3-5c535c6c6152")
+		)
+		(pin "2"
+			(uuid "de5e4089-7130-5ea3-b58a-3deea4bc40a4")
+		)
+		(instances
+			(project "PowerSelector"
+				(path "/50e616da-ae80-520e-a112-772753ecd272"
+					(reference "R106")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 69.85 199.39 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "f9b3af47-6290-50a2-8962-5daccf7b05bd")
+		(property "Reference" "R103"
+			(at 69.85 201.422 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Value" "3.01k 0.1%"
+			(at 69.85 199.39 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 68.072 199.39 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "ERA3AEB3011V"
+			(at 72.39 204.4699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Panasonic"
+			(at 72.39 204.4699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf"
+			(at 69.85 199.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7314,7 +7962,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 87.63 199.39 90)
+		(at 93.98 199.39 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7323,7 +7971,7 @@
 		(fields_autoplaced no)
 		(uuid "c79035cf-2d92-5574-933b-f64dfa957761")
 		(property "Reference" "R102"
-			(at 87.63 201.422 180)
+			(at 93.98 201.422 180)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7333,7 +7981,7 @@
 			)
 		)
 		(property "Value" "9.10k 0.1%"
-			(at 87.63 199.39 180)
+			(at 93.98 199.39 180)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7343,7 +7991,34 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 85.852 199.39 90)
+			(at 92.202 199.39 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "ERA3AEB9101V"
+			(at 96.52 204.4699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Panasonic"
+			(at 96.52 204.4699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf"
+			(at 93.98 199.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7405,6 +8080,33 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "ERA3AEB1822V"
+			(at 120.65 204.4699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Panasonic"
+			(at 120.65 204.4699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf"
+			(at 118.11 199.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "76acf23f-f7f7-59dc-841f-d8bd42459dca")
 		)
@@ -7422,7 +8124,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 157.48 199.39 90)
+		(at 148.59 199.39 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7431,7 +8133,7 @@
 		(fields_autoplaced no)
 		(uuid "4482f762-0bf1-5033-a37d-006a0ad94330")
 		(property "Reference" "R204"
-			(at 157.48 201.422 180)
+			(at 148.59 201.422 180)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7440,8 +8142,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "965k 0.1%"
-			(at 157.48 199.39 180)
+		(property "Value" "953k 0.1%"
+			(at 148.59 199.39 180)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7451,7 +8153,34 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 155.702 199.39 90)
+			(at 146.812 199.39 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "ERA3AEB9533V"
+			(at 151.13 204.4699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Panasonic"
+			(at 151.13 204.4699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf"
+			(at 148.59 199.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7476,16 +8205,16 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 187.96 199.39 90)
+		(at 172.72 199.39 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "49f323bf-48c9-5c3b-9cc1-48ae2a10c232")
-		(property "Reference" "R203"
-			(at 187.96 201.422 180)
+		(uuid "aa5cfbb5-26fe-5079-830f-3f60c2a5e0b4")
+		(property "Reference" "R206"
+			(at 172.72 201.422 180)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7494,8 +8223,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "4.22k 0.1%"
-			(at 187.96 199.39 180)
+		(property "Value" "12.1k 0.1%"
+			(at 172.72 199.39 180)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7505,7 +8234,115 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 186.182 199.39 90)
+			(at 170.942 199.39 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "ERA3AEB1212V"
+			(at 175.26 204.4699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Panasonic"
+			(at 175.26 204.4699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf"
+			(at 172.72 199.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1cb16e92-5a21-5c4e-81b6-712cc67f251c")
+		)
+		(pin "2"
+			(uuid "d1900850-c029-5f5d-9341-f56e776f26fd")
+		)
+		(instances
+			(project "PowerSelector"
+				(path "/50e616da-ae80-520e-a112-772753ecd272"
+					(reference "R206")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 198.12 199.39 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "49f323bf-48c9-5c3b-9cc1-48ae2a10c232")
+		(property "Reference" "R203"
+			(at 198.12 201.422 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Value" "4.22k 0.1%"
+			(at 198.12 199.39 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 196.342 199.39 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "ERA3AEB4221V"
+			(at 200.66 204.4699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Panasonic"
+			(at 200.66 204.4699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf"
+			(at 198.12 199.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7530,7 +8367,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 218.44 199.39 90)
+		(at 223.52 199.39 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7539,7 +8376,7 @@
 		(fields_autoplaced no)
 		(uuid "2d905fc0-1d85-5fa9-860d-74d4f1a86491")
 		(property "Reference" "R202"
-			(at 218.44 201.422 180)
+			(at 223.52 201.422 180)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7549,7 +8386,7 @@
 			)
 		)
 		(property "Value" "15.8k 0.1%"
-			(at 218.44 199.39 180)
+			(at 223.52 199.39 180)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7559,7 +8396,34 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 216.662 199.39 90)
+			(at 221.742 199.39 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "ERA3AEB1582V"
+			(at 226.06 204.4699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Panasonic"
+			(at 226.06 204.4699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf"
+			(at 223.52 199.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7614,6 +8478,33 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 245.872 199.39 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "ERA3AEB2802V"
+			(at 250.19 204.4699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Panasonic"
+			(at 250.19 204.4699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf"
+			(at 247.65 199.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7759,6 +8650,33 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "ERA3AEB1763V"
+			(at 292.1 233.6799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Panasonic"
+			(at 292.1 233.6799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf"
+			(at 289.56 228.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "e10889a2-01aa-5a4b-a5c8-7c94dc49e040")
 		)
@@ -7806,6 +8724,33 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 313.182 228.6 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "ERA3AEB1002V"
+			(at 317.5 233.6799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Panasonic"
+			(at 317.5 233.6799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf"
+			(at 314.96 228.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7867,6 +8812,33 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "GRM188R71E104KA01D"
+			(at 341.63 233.6799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 341.63 233.6799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.murata.com/en-us/products/capacitor/mlcc/grm"
+			(at 339.09 228.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "edce71de-6b60-5bb5-bf70-1495cb5d0af0")
 		)
@@ -7914,6 +8886,33 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 361.6452 224.79 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "GRM1885C1H102JA01D"
+			(at 363.22 233.6799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 363.22 233.6799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.murata.com/en-us/products/capacitor/mlcc/grm"
+			(at 360.68 228.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8170,6 +9169,33 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "RC0603FR-0710RL"
+			(at 419.1 236.2199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 419.1 236.2199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_14.pdf"
+			(at 416.56 231.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "a09976cb-e527-54a1-9161-3adb86bdb6b1")
 		)
@@ -8217,6 +9243,33 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 414.782 241.3 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RC0603FR-0710RL"
+			(at 419.1 246.3799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 419.1 246.3799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_14.pdf"
+			(at 416.56 241.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8278,6 +9331,33 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "GRM188R71E104KA01D"
+			(at 419.1 256.5399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 419.1 256.5399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.murata.com/en-us/products/capacitor/mlcc/grm"
+			(at 416.56 251.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "aded4cb6-ee4b-5ca4-b7e4-5794ff856657")
 		)
@@ -8325,6 +9405,33 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 414.782 261.62 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RC0603FR-07100RL"
+			(at 419.1 266.6999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 419.1 266.6999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_14.pdf"
+			(at 416.56 261.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8386,6 +9493,33 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "GRM188R72A103KA01D"
+			(at 440.69 261.6199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 440.69 261.6199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.murata.com/en-us/products/capacitor/mlcc/grm"
+			(at 438.15 256.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "8c9715ef-846c-5ab5-a29c-f60f56d4488a")
 		)
@@ -8433,6 +9567,33 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 439.1152 262.89 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "GRM188R71E104KA01D"
+			(at 440.69 271.7799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 440.69 271.7799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.murata.com/en-us/products/capacitor/mlcc/grm"
+			(at 438.15 266.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8599,6 +9760,33 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "RC0603FR-0710RL"
+			(at 474.98 236.2199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 474.98 236.2199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_14.pdf"
+			(at 472.44 231.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "7e891761-07aa-554b-b29e-4003d299eada")
 		)
@@ -8646,6 +9834,33 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 470.662 241.3 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RC0603FR-0710RL"
+			(at 474.98 246.3799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 474.98 246.3799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_14.pdf"
+			(at 472.44 241.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8707,6 +9922,33 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "GRM188R71E104KA01D"
+			(at 474.98 256.5399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 474.98 256.5399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.murata.com/en-us/products/capacitor/mlcc/grm"
+			(at 472.44 251.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "ebf47fae-4d86-5403-8d3b-fc707a3043e6")
 		)
@@ -8754,6 +9996,33 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 470.662 261.62 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RC0603FR-07100RL"
+			(at 474.98 266.6999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 474.98 266.6999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_14.pdf"
+			(at 472.44 261.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8815,6 +10084,33 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "GRM188R72A103KA01D"
+			(at 495.3 261.6199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 495.3 261.6199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.murata.com/en-us/products/capacitor/mlcc/grm"
+			(at 492.76 256.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "76be2833-3e05-5810-8588-7336e0ce1e83")
 		)
@@ -8862,6 +10158,33 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 493.7252 262.89 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "GRM188R71E104KA01D"
+			(at 495.3 271.7799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 495.3 271.7799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.murata.com/en-us/products/capacitor/mlcc/grm"
+			(at 492.76 266.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9028,6 +10351,33 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "RC0603FR-0710RL"
+			(at 529.59 236.2199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 529.59 236.2199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_14.pdf"
+			(at 527.05 231.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "45b947b9-f3f5-5eb1-b65b-f7c034511b8c")
 		)
@@ -9075,6 +10425,33 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 525.272 241.3 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RC0603FR-0710RL"
+			(at 529.59 246.3799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 529.59 246.3799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_14.pdf"
+			(at 527.05 241.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9136,6 +10513,33 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "GRM188R71E104KA01D"
+			(at 529.59 256.5399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 529.59 256.5399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.murata.com/en-us/products/capacitor/mlcc/grm"
+			(at 527.05 251.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "9f688a8d-050b-5c4c-a0ad-a86121311171")
 		)
@@ -9183,6 +10587,33 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 525.272 261.62 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RC0603FR-07100RL"
+			(at 529.59 266.6999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 529.59 266.6999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_14.pdf"
+			(at 527.05 261.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9244,6 +10675,33 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "GRM188R72A103KA01D"
+			(at 549.91 261.6199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 549.91 261.6199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.murata.com/en-us/products/capacitor/mlcc/grm"
+			(at 547.37 256.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "5fce05a4-e572-5c58-a961-9bfc1209e17b")
 		)
@@ -9291,6 +10749,33 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 548.3352 262.89 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "GRM188R71E104KA01D"
+			(at 549.91 271.7799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 549.91 271.7799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.murata.com/en-us/products/capacitor/mlcc/grm"
+			(at 547.37 266.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9429,6 +10914,33 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 535.6352 266.7 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "GRM188R71A105KA61D"
+			(at 537.21 275.5899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 537.21 275.5899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.murata.com/en-us/products/capacitor/mlcc/grm"
+			(at 534.67 270.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9751,6 +11263,33 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "GRM32ER71H106KA12L"
+			(at 99.06 318.7699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 99.06 318.7699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.murata.com/en-us/products/capacitor/mlcc/grm"
+			(at 96.52 313.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "e5a0824d-9add-5c42-84c9-e1f1e81c595b")
 		)
@@ -10019,6 +11558,33 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_1210_3225Metric"
 			(at 97.4852 355.6 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "GRM32ER71H106KA12L"
+			(at 99.06 364.4899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 99.06 364.4899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.murata.com/en-us/products/capacitor/mlcc/grm"
+			(at 96.52 359.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10440,6 +12006,33 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "RC0603FR-076K81L"
+			(at 207.01 311.1499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 207.01 311.1499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_14.pdf"
+			(at 204.47 306.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "aa9e07a9-4480-54a4-adb6-49457a859088")
 		)
@@ -10565,6 +12158,33 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "GRM188R71H473KA61D"
+			(at 237.49 318.7699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 237.49 318.7699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.murata.com/en-us/products/capacitor/mlcc/grm"
+			(at 234.95 313.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "cfce320d-cadc-5c56-aa21-fcb24b78e7d0")
 		)
@@ -10611,6 +12231,33 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 251.1552 309.88 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "GRM188R71H474KA12D"
+			(at 252.73 318.7699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 252.73 318.7699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.murata.com/en-us/products/capacitor/mlcc/grm"
+			(at 250.19 313.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10665,6 +12312,33 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 202.692 350.52 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RC0603FR-076K81L"
+			(at 207.01 355.5999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 207.01 355.5999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_14.pdf"
+			(at 204.47 350.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10797,6 +12471,33 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "GRM188R71H473KA61D"
+			(at 237.49 364.4899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 237.49 364.4899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.murata.com/en-us/products/capacitor/mlcc/grm"
+			(at 234.95 359.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "6418b743-39b7-50db-b3ad-555158741eb9")
 		)
@@ -10843,6 +12544,33 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 251.1552 355.6 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "GRM188R71H474KA12D"
+			(at 252.73 364.4899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 252.73 364.4899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.murata.com/en-us/products/capacitor/mlcc/grm"
+			(at 250.19 359.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11032,6 +12760,33 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "GRM188R71E104KA01D"
+			(at 353.06 353.0599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 353.06 353.0599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.murata.com/en-us/products/capacitor/mlcc/grm"
+			(at 350.52 347.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "0ef6cf6e-81c2-50ee-bb17-e91b37e0c4ec")
 		)
@@ -11085,6 +12840,33 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "GRM1885C1H102JA01D"
+			(at 372.11 353.0599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 372.11 353.0599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.murata.com/en-us/products/capacitor/mlcc/grm"
+			(at 369.57 347.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "46090037-0f2c-5330-922a-ea0ca59f2769")
 		)
@@ -11120,7 +12902,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "100uF 35V"
+		(property "Value" "100uF 63V"
 			(at 390.525 345.44 0.0000)
 			(effects
 				(font
@@ -11131,6 +12913,33 @@
 		)
 		(property "Footprint" "Capacitor_SMD:CP_Elec_10x10"
 			(at 390.8552 344.17 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "EEEFK1J101L"
+			(at 392.43 353.0599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Panasonic"
+			(at 392.43 353.0599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://na.industrial.panasonic.com/products/capacitors/aluminum-electrolytic-capacitors/series/133493"
+			(at 389.89 347.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11155,7 +12964,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 415.29 320.04 90)
+		(at 400.05 320.04 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11164,7 +12973,7 @@
 		(fields_autoplaced no)
 		(uuid "1d4daa25-065a-53bb-977f-6432d31e2e06")
 		(property "Reference" "R503"
-			(at 415.29 322.072 180)
+			(at 400.05 322.072 180)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11173,8 +12982,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "919k 0.1%"
-			(at 415.29 320.04 180)
+		(property "Value" "909k 0.1%"
+			(at 400.05 320.04 180)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11184,7 +12993,34 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 413.512 320.04 90)
+			(at 398.272 320.04 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "ERA3AEB9093V"
+			(at 402.59 325.1199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Panasonic"
+			(at 402.59 325.1199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf"
+			(at 400.05 320.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11209,16 +13045,16 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 464.82 320.04 90)
+		(at 439.42 320.04 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "2834e299-454a-5ee6-a68d-188710a60062")
-		(property "Reference" "R502"
-			(at 464.82 322.072 180)
+		(uuid "53c38791-3bdc-5006-bc79-e8f76a4a41ac")
+		(property "Reference" "R507"
+			(at 439.42 322.072 180)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11227,8 +13063,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "26.1k 0.1%"
-			(at 464.82 320.04 180)
+		(property "Value" "10.0k 0.1%"
+			(at 439.42 320.04 180)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11238,7 +13074,115 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 463.042 320.04 90)
+			(at 437.642 320.04 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "ERA3AEB1002V"
+			(at 441.96 325.1199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Panasonic"
+			(at 441.96 325.1199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf"
+			(at 439.42 320.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "16fe0a28-c170-5457-af01-ad9756101ea5")
+		)
+		(pin "2"
+			(uuid "a1ddf084-2285-50db-bee4-454605d9d393")
+		)
+		(instances
+			(project "PowerSelector"
+				(path "/50e616da-ae80-520e-a112-772753ecd272"
+					(reference "R507")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 480.06 320.04 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "2834e299-454a-5ee6-a68d-188710a60062")
+		(property "Reference" "R502"
+			(at 480.06 322.072 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Value" "26.1k 0.1%"
+			(at 480.06 320.04 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 478.282 320.04 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "ERA3AEB2612V"
+			(at 482.6 325.1199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Panasonic"
+			(at 482.6 325.1199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf"
+			(at 480.06 320.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11263,7 +13207,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 515.62 320.04 90)
+		(at 519.43 320.04 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11272,7 +13216,7 @@
 		(fields_autoplaced no)
 		(uuid "08279509-2a6f-5239-9de0-2e97ec0989e2")
 		(property "Reference" "R501"
-			(at 515.62 322.072 180)
+			(at 519.43 322.072 180)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11282,7 +13226,7 @@
 			)
 		)
 		(property "Value" "55.6k 0.1%"
-			(at 515.62 320.04 180)
+			(at 519.43 320.04 180)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11292,7 +13236,34 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 513.842 320.04 90)
+			(at 517.652 320.04 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "ERA3AEB5562V"
+			(at 521.97 325.1199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Panasonic"
+			(at 521.97 325.1199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf"
+			(at 519.43 320.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11354,6 +13325,33 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "ERA3AEB9093V"
+			(at 417.83 369.5699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Panasonic"
+			(at 417.83 369.5699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf"
+			(at 415.29 364.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "07b35f05-20a8-5b1e-b4f4-296cb9409dd3")
 		)
@@ -11408,6 +13406,33 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "ERA3AEB3162V"
+			(at 467.36 369.5699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Panasonic"
+			(at 467.36 369.5699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf"
+			(at 464.82 364.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "49a80c5c-9e38-5127-9b4b-86d24eca4937")
 		)
@@ -11455,6 +13480,33 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 513.842 364.49 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "ERA3AEB5622V"
+			(at 518.16 369.5699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Panasonic"
+			(at 518.16 369.5699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf"
+			(at 515.62 364.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13798,7 +15850,7 @@
 		(uuid "c53e06dc-0242-5e19-9c03-5b69676d0ce2")
 	)
 	(label "V24_FUSED"
-		(at 24.13 199.39 0)
+		(at 17.78 199.39 0)
 		(effects
 			(font
 				(size 1 1)
@@ -13807,8 +15859,8 @@
 		)
 		(uuid "3391636f-904b-51e6-b0bc-021c7bca9d61")
 	)
-	(label "UVF_24"
-		(at 31.75 199.39 0)
+	(label "V24_RTOP_MID"
+		(at 25.4 199.39 0)
 		(effects
 			(font
 				(size 1 1)
@@ -13817,8 +15869,28 @@
 		)
 		(uuid "8acbdcdb-c864-5096-b4b6-7e691b0649fb")
 	)
+	(label "V24_RTOP_MID"
+		(at 41.91 199.39 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify right bottom)
+		)
+		(uuid "d2a4a326-3b5b-5619-8286-442861036213")
+	)
 	(label "UVF_24"
-		(at 54.61 199.39 0)
+		(at 49.53 199.39 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "6fdb9795-be52-5f20-840d-14c6b8fa8608")
+	)
+	(label "UVF_24"
+		(at 66.04 199.39 0)
 		(effects
 			(font
 				(size 1 1)
@@ -13828,7 +15900,7 @@
 		(uuid "680d8752-b81a-5135-90ad-1eeff680097e")
 	)
 	(label "UVR_24"
-		(at 62.23 199.39 0)
+		(at 73.66 199.39 0)
 		(effects
 			(font
 				(size 1 1)
@@ -13838,7 +15910,7 @@
 		(uuid "2847c8c1-91e3-5eb5-842d-a03c68464149")
 	)
 	(label "UVR_24"
-		(at 83.82 199.39 0)
+		(at 90.17 199.39 0)
 		(effects
 			(font
 				(size 1 1)
@@ -13848,7 +15920,7 @@
 		(uuid "8624fe75-c94d-5ba5-a8f2-1ac1abae75ec")
 	)
 	(label "OV_24"
-		(at 91.44 199.39 0)
+		(at 97.79 199.39 0)
 		(effects
 			(font
 				(size 1 1)
@@ -13878,7 +15950,7 @@
 		(uuid "c3ada80f-30a7-5804-8b03-ae2505b72d08")
 	)
 	(label "BAT_FUSED"
-		(at 153.67 199.39 0)
+		(at 144.78 199.39 0)
 		(effects
 			(font
 				(size 1 1)
@@ -13887,8 +15959,8 @@
 		)
 		(uuid "4dd669ac-316b-5b05-9fdf-9f3932426575")
 	)
-	(label "UVF_BAT"
-		(at 161.29 199.39 0)
+	(label "BAT_RTOP_MID"
+		(at 152.4 199.39 0)
 		(effects
 			(font
 				(size 1 1)
@@ -13897,8 +15969,28 @@
 		)
 		(uuid "ae8b9423-dfc9-5bcb-b9cd-c27e08c2c6d5")
 	)
+	(label "BAT_RTOP_MID"
+		(at 168.91 199.39 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify right bottom)
+		)
+		(uuid "96807d6b-a41c-5111-b591-2296103b36b5")
+	)
 	(label "UVF_BAT"
-		(at 184.15 199.39 0)
+		(at 176.53 199.39 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "737332b2-6063-5ad3-87ce-5be0ad62c43f")
+	)
+	(label "UVF_BAT"
+		(at 194.31 199.39 0)
 		(effects
 			(font
 				(size 1 1)
@@ -13908,7 +16000,7 @@
 		(uuid "d96a16e3-9581-5596-8d81-8d5fa371e3bb")
 	)
 	(label "UVR_BAT"
-		(at 191.77 199.39 0)
+		(at 201.93 199.39 0)
 		(effects
 			(font
 				(size 1 1)
@@ -13918,7 +16010,7 @@
 		(uuid "16a32a89-3e84-5dfa-9ad8-ecec72708e03")
 	)
 	(label "UVR_BAT"
-		(at 214.63 199.39 0)
+		(at 219.71 199.39 0)
 		(effects
 			(font
 				(size 1 1)
@@ -13928,7 +16020,7 @@
 		(uuid "87dee9eb-cdf1-5cb6-8c4c-2c7db1f5b3a9")
 	)
 	(label "OV_BAT"
-		(at 222.25 199.39 0)
+		(at 227.33 199.39 0)
 		(effects
 			(font
 				(size 1 1)
@@ -15638,7 +17730,7 @@
 		(uuid "031fe5ea-f799-5edc-8881-c5a3f6802c72")
 	)
 	(label "DTAP_FUSED"
-		(at 411.48 320.04 0)
+		(at 396.24 320.04 0)
 		(effects
 			(font
 				(size 1 1)
@@ -15647,8 +17739,8 @@
 		)
 		(uuid "a05b2141-9df0-58eb-aa7e-18d45bbc7335")
 	)
-	(label "UV_DTAP"
-		(at 419.1 320.04 0)
+	(label "DTAP_RTOP_MID"
+		(at 403.86 320.04 0)
 		(effects
 			(font
 				(size 1 1)
@@ -15657,8 +17749,28 @@
 		)
 		(uuid "4b28a6b2-97ba-5ff0-9a66-e91aca230e0f")
 	)
+	(label "DTAP_RTOP_MID"
+		(at 435.61 320.04 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify right bottom)
+		)
+		(uuid "9bc8b399-793c-53e4-b9f1-4462d6cdecaf")
+	)
 	(label "UV_DTAP"
-		(at 461.01 320.04 0)
+		(at 443.23 320.04 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "325659a1-2d0f-5d93-bf44-5cb816de1005")
+	)
+	(label "UV_DTAP"
+		(at 476.25 320.04 0)
 		(effects
 			(font
 				(size 1 1)
@@ -15668,7 +17780,7 @@
 		(uuid "bd8bd076-bd5a-5c59-87af-c641069c6a48")
 	)
 	(label "OV_DTAP"
-		(at 468.63 320.04 0)
+		(at 483.87 320.04 0)
 		(effects
 			(font
 				(size 1 1)
@@ -15678,7 +17790,7 @@
 		(uuid "f03de604-0cce-5bee-b335-b780c51d45f8")
 	)
 	(label "OV_DTAP"
-		(at 511.81 320.04 0)
+		(at 515.62 320.04 0)
 		(effects
 			(font
 				(size 1 1)
@@ -15688,7 +17800,7 @@
 		(uuid "cdbffd15-1738-5e9e-9a44-30b3f4ef20b8")
 	)
 	(label "GND"
-		(at 519.43 320.04 0)
+		(at 523.24 320.04 0)
 		(effects
 			(font
 				(size 1 1)
@@ -16519,9 +18631,9 @@
 		)
 		(uuid "bf4640e7-cd8d-597d-a699-a26c8c722513")
 	)
-	(text "R104  1.06M 0.1%"
+	(text "R104  953k 0.1%"
 		(exclude_from_sim no)
-		(at 28 207 0.0000)
+		(at 22 207 0.0000)
 		(effects
 			(font
 				(size 0.75 0.75)
@@ -16529,9 +18641,19 @@
 		)
 		(uuid "67bc4250-33e6-5e6c-b6b0-36052519a9d5")
 	)
+	(text "R106  107k 0.1%"
+		(exclude_from_sim no)
+		(at 46 207 0.0000)
+		(effects
+			(font
+				(size 0.75 0.75)
+			)
+		)
+		(uuid "91eaac77-5918-5e5d-9de5-6f1a033f7c80")
+	)
 	(text "R103  3.01k 0.1%"
 		(exclude_from_sim no)
-		(at 58 207 0.0000)
+		(at 70 207 0.0000)
 		(effects
 			(font
 				(size 0.75 0.75)
@@ -16541,7 +18663,7 @@
 	)
 	(text "R102  9.10k 0.1%"
 		(exclude_from_sim no)
-		(at 88 207 0.0000)
+		(at 94 207 0.0000)
 		(effects
 			(font
 				(size 0.75 0.75)
@@ -16569,9 +18691,9 @@
 		)
 		(uuid "e472ebe6-415c-5098-b5e4-20654145bb0c")
 	)
-	(text "R204  965k 0.1%"
+	(text "R204  953k 0.1%"
 		(exclude_from_sim no)
-		(at 158 207 0.0000)
+		(at 148 207 0.0000)
 		(effects
 			(font
 				(size 0.75 0.75)
@@ -16579,9 +18701,19 @@
 		)
 		(uuid "bb824415-5a51-5cde-bf64-f92260c2e669")
 	)
+	(text "R206  12.1k 0.1%"
+		(exclude_from_sim no)
+		(at 173 207 0.0000)
+		(effects
+			(font
+				(size 0.75 0.75)
+			)
+		)
+		(uuid "c048032f-c249-5b84-8194-544d287417e6")
+	)
 	(text "R203  4.22k 0.1%"
 		(exclude_from_sim no)
-		(at 188 207 0.0000)
+		(at 198 207 0.0000)
 		(effects
 			(font
 				(size 0.75 0.75)
@@ -16591,7 +18723,7 @@
 	)
 	(text "R202  15.8k 0.1%"
 		(exclude_from_sim no)
-		(at 218 207 0.0000)
+		(at 223 207 0.0000)
 		(effects
 			(font
 				(size 0.75 0.75)
@@ -16992,9 +19124,9 @@
 		)
 		(uuid "dce61500-1a81-572a-b1e2-baf655e4b78f")
 	)
-	(text "R503 919k 0.1%"
+	(text "R503 909k 0.1%"
 		(exclude_from_sim no)
-		(at 415 330 0.0000)
+		(at 400 330 0.0000)
 		(effects
 			(font
 				(size 0.65 0.65)
@@ -17002,9 +19134,19 @@
 		)
 		(uuid "2bad09af-479f-5f13-b367-66adf6454f18")
 	)
+	(text "R507 10.0k 0.1%"
+		(exclude_from_sim no)
+		(at 440 330 0.0000)
+		(effects
+			(font
+				(size 0.65 0.65)
+			)
+		)
+		(uuid "2c02de6b-c537-5eb1-938b-59e9814f6f5e")
+	)
 	(text "R502 26.1k 0.1%"
 		(exclude_from_sim no)
-		(at 465 330 0.0000)
+		(at 480 330 0.0000)
 		(effects
 			(font
 				(size 0.65 0.65)
@@ -17014,7 +19156,7 @@
 	)
 	(text "R501 55.6k 0.1%"
 		(exclude_from_sim no)
-		(at 515 330 0.0000)
+		(at 520 330 0.0000)
 		(effects
 			(font
 				(size 0.65 0.65)

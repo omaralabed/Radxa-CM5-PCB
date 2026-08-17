@@ -29,7 +29,7 @@
 - Verify standby and main power rails before installing CM5.
 - Verify source-selector output and regulator rails from rear 24 V, D-Tap, and Gold Mount inputs before installing CM5.
 - Verify no-blink source transfer with a scope before installing CM5:
-  `24V_PSU`, `BAT_SELECTED`, protected raw DC, `SYS_5V15`, `DISPLAY_12V`,
+  `24V_PSU`, `BAT_SELECTED`, protected raw DC, `SYS_4V0`, `IO_5V0`, `DISPLAY_12V`,
   `AUX_12V`, `FAN_CPU_12V`, `FAN_AUX_12V`, `MODEM_3V8`, `WIFI_3V3`, `NET_3V3`, `PCIE_1V0`,
   audio rails, reset lines, and mute lines must stay inside limits.
 - Use the ProComm PowerSelector Rev C bench-test style as the starting point,

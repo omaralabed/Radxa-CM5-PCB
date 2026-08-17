@@ -1,12 +1,15 @@
-ERC report (2026-08-16T03:08:58, Encoding UTF8)
+ERC report (2026-08-16T22:23:10, Encoding UTF8)
 Report includes: Errors, Warnings
 
 ***** Sheet /
 [isolated_pin_label]: Label connected to only one pin
     ; warning
     @(124.46 mm, 134.62 mm): Label 'HDMI_HEAC_P'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(589.28 mm, 97.79 mm): Label 'IO_5V0_PG'
 
- ** ERC messages: 1  Errors 0  Warnings 1
+ ** ERC messages: 2  Errors 0  Warnings 2
 
  ** Ignored checks:
     - Global label only appears once in the schematic

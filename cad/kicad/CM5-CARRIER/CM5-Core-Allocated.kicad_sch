@@ -8522,7 +8522,7 @@
 		)
 		(uuid "776b8074-80e4-5983-9199-9df08537f80a")
 	)
-	(label "SYS_5V15"
+	(label "SYS_4V0"
 		(at 77.47 139.7 0.0000)
 		(effects
 			(font
@@ -8542,7 +8542,7 @@
 		)
 		(uuid "d4177f4d-b468-5c8d-979e-f20aa88c9da5")
 	)
-	(label "SYS_5V15"
+	(label "SYS_4V0"
 		(at 77.47 142.24 0.0000)
 		(effects
 			(font
@@ -8562,7 +8562,7 @@
 		)
 		(uuid "34dc194d-b2e4-5ba4-9e43-547fe8da7042")
 	)
-	(label "SYS_5V15"
+	(label "SYS_4V0"
 		(at 77.47 144.78 0.0000)
 		(effects
 			(font
@@ -8582,7 +8582,7 @@
 		)
 		(uuid "9afcc1e0-7124-5640-bd81-230ce070d108")
 	)
-	(label "SYS_5V15"
+	(label "SYS_4V0"
 		(at 77.47 147.32 0.0000)
 		(effects
 			(font
@@ -8592,7 +8592,7 @@
 		)
 		(uuid "dbde4cc6-90b0-54c6-9d95-d23a7546f4b4")
 	)
-	(label "SYS_5V15"
+	(label "SYS_4V0"
 		(at 77.47 149.86 0.0000)
 		(effects
 			(font
@@ -8602,7 +8602,7 @@
 		)
 		(uuid "42563514-980b-5190-8f99-80ad3a8e6600")
 	)
-	(label "SYS_5V15"
+	(label "SYS_4V0"
 		(at 77.47 152.4 0.0000)
 		(effects
 			(font
@@ -8702,7 +8702,7 @@
 		)
 		(uuid "cc1dda02-497d-5d5b-bc35-f995c40fc5bf")
 	)
-	(label "HDMI_5V_OPTION"
+	(label "IO_5V0"
 		(at 322.58 48.26 0.0000)
 		(effects
 			(font
@@ -9762,7 +9762,7 @@
 		)
 		(uuid "7c123f9c-4a56-54f6-bf71-a328940253ab")
 	)
-	(label "SYS_5V15"
+	(label "SYS_4V0"
 		(at 464.82 229.87 0.0000)
 		(effects
 			(font
@@ -9772,7 +9772,7 @@
 		)
 		(uuid "abb0666b-4cf5-53d0-8eba-b147263c3e10")
 	)
-	(label "SYS_5V15"
+	(label "SYS_4V0"
 		(at 477.52 229.87 0.0000)
 		(effects
 			(font
@@ -9782,7 +9782,7 @@
 		)
 		(uuid "89a35f3b-c082-5bdf-85dc-29abffb924bb")
 	)
-	(label "SYS_5V15"
+	(label "SYS_4V0"
 		(at 464.82 232.41 0.0000)
 		(effects
 			(font
@@ -9792,7 +9792,7 @@
 		)
 		(uuid "066d08fc-0616-56ca-acc6-50df7acd71d2")
 	)
-	(label "SYS_5V15"
+	(label "SYS_4V0"
 		(at 477.52 232.41 0.0000)
 		(effects
 			(font
@@ -10516,7 +10516,7 @@
 		)
 		(uuid "0000809a-4e5a-5f1d-8a1a-1c53dfffe434")
 	)
-	(text "Kelvin-sense SYS_5V15 at J501; final setpoint remains a release gate."
+	(text "Kelvin-sense SYS_4V0 at J501; 4.0 V follows the Radxa CM5 carrier design note."
 		(exclude_from_sim no)
 		(at 420 260 0.0000)
 		(effects
@@ -10577,7 +10577,7 @@
 		)
 		(uuid "01fc75a7-bbc4-5157-ae5f-bc924cca7083")
 	)
-	(text "Pins 145/147 remain HDMI HEAC reserved. HDMI_5V_OPTION remains a controlled DNP/link decision."
+	(text "Pins 145/147 remain HDMI HEAC reserved. U13-B pin 106 receives the dedicated IO_5V0 rail."
 		(exclude_from_sim no)
 		(at 45 348 0.0000)
 		(effects

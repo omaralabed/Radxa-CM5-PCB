@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/Users/viewvision/Desktop/Radxa CM5 PCB/cad/kicad/CM5-CARRIER/Audio-Control.kicad_sch</source>
-    <date>2026-08-16T18:36:21</date>
+    <date>2026-08-16T22:35:34</date>
     <tool>Eeschema 10.0.5-rc1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -2594,7 +2594,7 @@
       <node ref="U905" pin="3" pinfunction="2DIR_3" pintype="input"/>
       <node ref="U906" pin="1" pinfunction="VCCA_1" pintype="power_in"/>
     </net>
-    <net code="65" name="/SYS_5V15" class="Default">
+    <net code="65" name="/SYS_4V0" class="Default">
       <node ref="C910" pin="1" pintype="passive"/>
       <node ref="U910" pin="1" pinfunction="IN_1" pintype="power_in"/>
     </net>

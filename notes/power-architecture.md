@@ -106,7 +106,8 @@ Downstream rail split:
 
 ```text
 protected raw DC
-  -> main 5.15 V-class CM5/system rail
+  -> main 4.006 V / 12 A CM5 rail
+  -> dedicated 4.984 V / 2 A CM5 HDMI, HDMI connector, and touch-USB rail
   -> separate 3.3 V Wi-Fi AP rail
   -> separate 3.8 V-class cellular modem rail
   -> clean audio analog/digital rails
@@ -427,7 +428,8 @@ compensation, copper, and thermal design still require calculation.
 
 | Rail | Target | Starting part/topology |
 | --- | ---: | --- |
-| `SYS_5V15` | 5.15 V / 12 A | `LM5146` synchronous buck controller with external MOSFETs |
+| `SYS_4V0` | 4.006 V / 12 A | `LM5146` synchronous buck controller with external MOSFETs; all six CM5 `VCC_SYSIN` pins |
+| `IO_5V0` | 4.984 V / 2 A | `TPS62913` from fused `DISPLAY_IO_12V`; CM5 pin 106 plus separately fused HDMI and touch USB |
 | `AUX_12V` | Revised 12 V / 8 A minimum target | `LM5176` four-switch buck-boost; recalculate and bench-qualify A1 stage |
 | `DISPLAY_12V` | 12 V / 2.5 A | Simple fused harness branch from `AUX_12V`; no dedicated display eFuse/current limiter; 25 W / 2.08 A rated monitor load |
 | `NIGHT_LIGHT_12V` | 12 V / 0.25 A protected branch | Two YIS Marine LS102W warm-white courtesy lights and one E-Switch CS7L2FR latching touch control; independent of CM5 software |
@@ -441,11 +443,11 @@ compensation, copper, and thermal design still require calculation.
 | `LOGIC_1V8` | 1.8 V / 1.5 A | Point-of-load regulator |
 | `AUDIO_BIPOLAR` | +/-15 V, 20 W class | `TRI 20-1223` starting module plus pi/common-mode filtering |
 | `AKM_5V_A` | Clean 5.0 V | Quiet pre-regulator plus `LT3045` |
-| `HEADSET_3V3` | Clean 3.3 V | Separate `TPS7A20`-class LDO |
+| `HEADSET_3V3` | Clean 3.3 V / 250 mA | Separate `LP5907MFX-3.3/NOPB` LDO |
 
 Selected separation rule:
 
-- CM5/system 5.15 V rail is separate from radio rails.
+- CM5 `SYS_4V0` rail is separate from the display-interface `IO_5V0` and radio rails.
 - Wi-Fi AP gets its own switched/local 3.3 V rail sized for AP transmit duty.
 - Cellular modem gets its own switched/protected 3.8 V-class rail sized for 5G
   registration and transmit bursts.
@@ -456,15 +458,15 @@ Selected separation rule:
   Ethernet rails.
 - Ethernet controller/switch rails follow their own regulator and sequencing
   requirements.
-- Critical rails must ride through source transfer. `SYS_5V15`, modem, Wi-Fi,
+- Critical rails must ride through source transfer. `SYS_4V0`, `IO_5V0`, modem, Wi-Fi,
   audio, headset, `AUX_12V`, and display rails must not brown out when the
   selected source steps from 24 V PSU to backup voltage.
 - `AUX_12V` is buck-boost so both display and fan branches remain at 12 V on
   the 13.0-16.8 V backup source and during transfer droop.
 
-The prior 5.15 V / 9 A target is not accepted as final. The Radxa design should
-start with at least a 5.15 V / 12 A-class continuous engineering target until a
-full worst-case load budget proves otherwise.
+The CM5 input is locked at 4.006 V / 12 A. Radxa recommends a 4 V
+`VCC_SYSIN` target for RK806 efficiency and performance; with an input below
+5 V, CM5 `5V_HDMI` pin 106 must receive the separate `IO_5V0` supply.
 
 ## Network And Radio Rail Rules
 
@@ -493,7 +495,7 @@ connector type.
   plus ceramics, then tune from the selected modem guide and scope results.
   Include modem enable, reset, power-cycle control,
   current measurement/protection, and bulk capacitance close to the modem power
-  pins. This rail is separate from the Wi-Fi AP rail and the CM5/system 5.15 V
+  pins. This rail is separate from the Wi-Fi AP rail and the CM5 `SYS_4V0`
   rail.
 - SIM/eSIM power is not a boardwide fixed rail. SIM voltage, commonly 1.8 V or
   3.0 V, should come from or be controlled by the selected modem with the proper

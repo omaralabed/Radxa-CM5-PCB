@@ -146,7 +146,7 @@ that a long low-voltage backup-to-backup gap is acceptable.
 Hold-up is placed at multiple levels:
 
 - Protected raw-DC bus bulk capacitance after the source selector.
-- Local bulk capacitance at `SYS_5V15`, `AUX_12V`, `DISPLAY_12V`,
+- Local bulk capacitance at `SYS_4V0`, `IO_5V0`, `AUX_12V`, `DISPLAY_12V`,
   `FAN_CPU_12V`, `FAN_AUX_12V`, `MODEM_3V8`, `WIFI_3V3`,
   `NET_3V3`, and clean audio rails.
 - Extra low-ESR bulk near the cellular modem M.2 socket for transmit bursts.
@@ -172,8 +172,9 @@ across the full source range and through transfer transients:
 
 Rail-specific rule:
 
-- `SYS_5V15`: wide-input high-current buck is acceptable because every valid
-  source is above the 5.15 V output.
+- `SYS_4V0`: wide-input high-current buck is acceptable because every valid
+  source is above the 4.006 V output. The dedicated `IO_5V0` rail supplies
+  CM5 `5V_HDMI` pin 106 plus separately fused HDMI and touch-USB power.
 - `WIFI_3V3`: wide-input buck with local hold-up and load switch.
 - `MODEM_3V8`: wide-input high-current buck with large local bulk.
 - `AUX_12V`: use the locked `LM5176` buck-boost topology so the 12 V backbone
@@ -208,7 +209,7 @@ Not allowed during transfer:
 
 Acceptance test with oscilloscope and system logging:
 
-- Scope `24V_PSU`, `BAT_SELECTED`, `PROTECTED_RAW_DC`, `SYS_5V15`,
+- Scope `24V_PSU`, `BAT_SELECTED`, `PROTECTED_RAW_DC`, `SYS_4V0`, `IO_5V0`,
   `AUX_12V`, `DISPLAY_12V`, `FAN_CPU_12V`, `FAN_AUX_12V`, `MODEM_3V8`, `WIFI_3V3`,
   `NET_3V3`, audio rails, and reset/mute GPIOs.
 - Run CM5, HDMI touchscreen, 8x8 audio, Wi-Fi AP, cellular modem, Ethernet, and

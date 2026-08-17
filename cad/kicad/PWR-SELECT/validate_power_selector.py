@@ -13,6 +13,7 @@ NETLIST = ROOT / "REVIEW" / "PowerSelector-A0.xml"
 ERC = ROOT / "REVIEW" / "PowerSelector-A0-ERC.rpt"
 POWER_SWITCH_BOM = ROOT / "POWER_SWITCH_BOM.csv"
 PSU_HARNESS_BOM = ROOT.parent.parent.parent / "fabrication" / "harnesses" / "H01-PSU-24V-BOM.csv"
+PRODUCTION_BOM = ROOT.parent.parent.parent / "docs" / "power_selector_bom_a1.csv"
 
 
 def fail(message):
@@ -55,6 +56,19 @@ expected = {
     ("R541", "2"): "GND",
     ("R542", "1"): "SHDN_PRE",
     ("R542", "2"): "GND",
+    # Sourceable E96 series splits preserve the original LTC4421 thresholds.
+    ("R104", "1"): "V24_FUSED",
+    ("R104", "2"): "V24_RTOP_MID",
+    ("R106", "1"): "V24_RTOP_MID",
+    ("R106", "2"): "UVF_24",
+    ("R204", "1"): "BAT_FUSED",
+    ("R204", "2"): "BAT_RTOP_MID",
+    ("R206", "1"): "BAT_RTOP_MID",
+    ("R206", "2"): "UVF_BAT",
+    ("R503", "1"): "DTAP_FUSED",
+    ("R503", "2"): "DTAP_RTOP_MID",
+    ("R507", "1"): "DTAP_RTOP_MID",
+    ("R507", "2"): "UV_DTAP",
     # Keyed LEMO harness and reverse-polarity-tolerant front end.
     ("J202", "1"): "DTAP_IN",
     ("J202", "2"): "DTAP_IN",
@@ -216,6 +230,13 @@ required_values = {
     "R211": "1.50mR 1% 1W",
     "R311": "1.00mR 1% 1W",
     "R301": "176k 0.1%",
+    "R104": "953k 0.1%",
+    "R106": "107k 0.1%",
+    "R204": "953k 0.1%",
+    "R206": "12.1k 0.1%",
+    "R503": "909k 0.1%",
+    "R507": "10.0k 0.1%",
+    "C533": "100uF 63V",
     "U201": "LTC4418IUF#PBF",
     "Q501": "SiR5607DP-T1-RE3",
     "Q502": "SiR5607DP-T1-RE3",
@@ -245,6 +266,15 @@ for ref in ("C306", "C307", "C308", "C309"):
         fail(f"hold-up part {ref}: wrong 30 mm snap-in footprint")
     if pin_net.get((ref, "1")) != "RAW_OUT" or pin_net.get((ref, "2")) != "GND":
         fail(f"hold-up part {ref}: must connect RAW_OUT to GND")
+
+c533_fields = {
+    field.get("name"): field.text
+    for field in component_by_ref["C533"].findall("./fields/field")
+}
+if c533_fields.get("MPN") != "EEEFK1J101L":
+    fail(f"C533: wanted EEEFK1J101L, got {c533_fields.get('MPN')}")
+if component_by_ref["C533"].findtext("footprint") != "Capacitor_SMD:CP_Elec_10x10":
+    fail("C533 must retain the 10 mm diameter SMD footprint")
 
 bulk_nominal_f = 4 * 6800e-6
 local_nominal_f = 3 * 220e-6
@@ -295,6 +325,21 @@ for ref, (manufacturer, mpn, qty) in required_psu_harness_parts.items():
     if actual != (manufacturer, mpn, qty):
         fail(f"PSU harness BOM {ref}: wanted {(manufacturer, mpn, qty)}, got {actual}")
 
+# The generated production BOM is the factory handoff for this PCB. Every
+# assembled line must carry an exact manufacturer, MPN, and footprint.
+if not PRODUCTION_BOM.exists():
+    fail(f"missing production BOM: {PRODUCTION_BOM}")
+with PRODUCTION_BOM.open(newline="") as handle:
+    production_rows = list(csv.DictReader(handle))
+incomplete_rows = [
+    row["Reference"] for row in production_rows
+    if not row["Manufacturer"] or not row["MPN"] or not row["Footprint"]
+]
+if len(production_rows) != 111:
+    fail(f"production BOM has {len(production_rows)} rows; expected 111")
+if incomplete_rows:
+    fail(f"production BOM has incomplete controlled parts: {', '.join(incomplete_rows)}")
+
 # Confirm every BOM item has a footprint and every connected schematic pin
 # exists in that footprint. This catches pad-number mismatches that ERC cannot.
 refs = [component.get("ref") for component in components]
@@ -337,7 +382,7 @@ def thresholds(r_top, r_mid, r_bottom):
     return uv_rising, uv_falling, ov_rising
 
 
-dtap = thresholds(919_000, 26_100, 55_600)
+dtap = thresholds(909_000 + 10_000, 26_100, 55_600)
 gold = thresholds(909_000, 31_600, 56_200)
 targets = (
     ("D-Tap UV rising", dtap[0], 12.60, 12.64),
@@ -354,7 +399,7 @@ for label, actual, low, high in targets:
 # LTC4418 UV/OV pins are clamped near ground during a reversed input. The
 # datasheet absolute maximum allows 3 mA negative input current; these high
 # value divider tops limit a -16.8 V cable miswire to about 18 uA.
-reverse_dtap_uA = (16.8 - 0.3) / 919_000 * 1_000_000
+reverse_dtap_uA = (16.8 - 0.3) / (909_000 + 10_000) * 1_000_000
 reverse_gold_uA = (16.8 - 0.3) / 909_000 * 1_000_000
 for label, actual in (("D-Tap", reverse_dtap_uA), ("Gold", reverse_gold_uA)):
     if actual > 25.0:
@@ -381,6 +426,7 @@ print(f"PASS: {len(expected)} critical pin/net checks")
 print(f"PASS: reverse-polarity architecture and parts locked")
 print(f"PASS: exact power-switch and harness BOM locked")
 print(f"PASS: exact bottom-PSU 24 V harness BOM locked")
+print(f"PASS: {len(production_rows)}-line production BOM has exact MPNs and footprints")
 print(f"PASS: {len(components)} unique BOM components; footprint pad maps agree")
 print(f"PASS: D-Tap thresholds {dtap[0]:.3f} / {dtap[1]:.3f} / {dtap[2]:.3f} V")
 print(f"PASS: Gold thresholds {gold[0]:.3f} / {gold[1]:.3f} / {gold[2]:.3f} V")

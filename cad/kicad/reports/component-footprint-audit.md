@@ -4,11 +4,11 @@ Generated from all sixteen native KiCad sheets. This report is deterministic and
 
 ## Current gate
 
-- Components audited: 1023
-- Route-ready components: 1007
+- Components audited: 1038
+- Route-ready components: 1022
 - Intentional non-board symbols: 6
 - Routing blockers: 10
-- Production/BOM blockers: 78
+- Production/BOM blockers: 11
 
 A routing blocker has no footprint, references an unresolved footprint, or still requires a routing-critical mechanical coupon. A production blocker also includes any board-mounted component without a locked manufacturer and MPN.
 
@@ -16,14 +16,14 @@ A routing blocker has no footprint, references an unresolved footprint, or still
 
 | Sheet | Components | Routing blockers | Production blockers |
 |---|---:|---:|---:|
-| PWR-SELECT | 108 | 0 | 67 |
+| PWR-SELECT | 111 | 0 | 0 |
 | CM5-Carrier | 9 | 0 | 0 |
 | CM5-Core-Allocated | 7 | 0 | 0 |
 | Network-PCIe | 64 | 0 | 0 |
 | WWAN-SIM | 23 | 0 | 0 |
-| Display-Harness | 13 | 0 | 0 |
+| Display-Harness | 24 | 0 | 0 |
 | Audio-Control | 57 | 0 | 1 |
-| Power-Regulators-A1 | 155 | 0 | 0 |
+| Power-Regulators-A1 | 156 | 0 | 0 |
 | Thermal-IO | 66 | 0 | 0 |
 | Audio-8x8 | 21 | 0 | 0 |
 | Audio-TDM-Clock | 18 | 0 | 0 |

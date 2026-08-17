@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/Users/viewvision/Desktop/Radxa CM5 PCB/cad/kicad/PWR-SELECT/PowerSelector.kicad_sch</source>
-    <date>2026-08-16T15:35:34</date>
+    <date>2026-08-16T22:43:56</date>
     <tool>Eeschema 10.0.5-rc1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -27,12 +27,17 @@
     <comp ref="C101">
       <value>1uF 50V X7R</value>
       <footprint>Capacitor_SMD:C_1210_3225Metric</footprint>
+      <datasheet>https://www.murata.com/en-us/products/capacitor/mlcc/grm</datasheet>
       <fields>
+        <field name="MPN">GRM32RR71H105KA01L</field>
+        <field name="Manufacturer">Murata</field>
         <field name="Footprint">Capacitor_SMD:C_1210_3225Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.murata.com/en-us/products/capacitor/mlcc/grm</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="GRM32RR71H105KA01L"/>
+      <property name="Manufacturer" value="Murata"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -51,12 +56,17 @@
     <comp ref="C105">
       <value>10uF 50V</value>
       <footprint>Capacitor_SMD:C_1210_3225Metric</footprint>
+      <datasheet>https://www.murata.com/en-us/products/capacitor/mlcc/grm</datasheet>
       <fields>
+        <field name="MPN">GRM32ER71H106KA12L</field>
+        <field name="Manufacturer">Murata</field>
         <field name="Footprint">Capacitor_SMD:C_1210_3225Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.murata.com/en-us/products/capacitor/mlcc/grm</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="GRM32ER71H106KA12L"/>
+      <property name="Manufacturer" value="Murata"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -75,12 +85,17 @@
     <comp ref="C110">
       <value>47nF 50V</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>https://www.murata.com/en-us/products/capacitor/mlcc/grm</datasheet>
       <fields>
+        <field name="MPN">GRM188R71H473KA61D</field>
+        <field name="Manufacturer">Murata</field>
         <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.murata.com/en-us/products/capacitor/mlcc/grm</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="GRM188R71H473KA61D"/>
+      <property name="Manufacturer" value="Murata"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -99,12 +114,17 @@
     <comp ref="C120">
       <value>1uF 16V</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>https://www.murata.com/en-us/products/capacitor/mlcc/grm</datasheet>
       <fields>
+        <field name="MPN">GRM188R71E105KA12D</field>
+        <field name="Manufacturer">Murata</field>
         <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.murata.com/en-us/products/capacitor/mlcc/grm</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="GRM188R71E105KA12D"/>
+      <property name="Manufacturer" value="Murata"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -123,12 +143,17 @@
     <comp ref="C121">
       <value>1uF 16V</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>https://www.murata.com/en-us/products/capacitor/mlcc/grm</datasheet>
       <fields>
+        <field name="MPN">GRM188R71E105KA12D</field>
+        <field name="Manufacturer">Murata</field>
         <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.murata.com/en-us/products/capacitor/mlcc/grm</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="GRM188R71E105KA12D"/>
+      <property name="Manufacturer" value="Murata"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -147,12 +172,17 @@
     <comp ref="C122">
       <value>1nF C0G</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>https://www.murata.com/en-us/products/capacitor/mlcc/grm</datasheet>
       <fields>
+        <field name="MPN">GRM1885C1H102JA01D</field>
+        <field name="Manufacturer">Murata</field>
         <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.murata.com/en-us/products/capacitor/mlcc/grm</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="GRM1885C1H102JA01D"/>
+      <property name="Manufacturer" value="Murata"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -171,12 +201,17 @@
     <comp ref="C123">
       <value>100nF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>https://www.murata.com/en-us/products/capacitor/mlcc/grm</datasheet>
       <fields>
+        <field name="MPN">GRM188R71E104KA01D</field>
+        <field name="Manufacturer">Murata</field>
         <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.murata.com/en-us/products/capacitor/mlcc/grm</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="GRM188R71E104KA01D"/>
+      <property name="Manufacturer" value="Murata"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -195,12 +230,17 @@
     <comp ref="C201">
       <value>1uF 50V X7R</value>
       <footprint>Capacitor_SMD:C_1210_3225Metric</footprint>
+      <datasheet>https://www.murata.com/en-us/products/capacitor/mlcc/grm</datasheet>
       <fields>
+        <field name="MPN">GRM32RR71H105KA01L</field>
+        <field name="Manufacturer">Murata</field>
         <field name="Footprint">Capacitor_SMD:C_1210_3225Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.murata.com/en-us/products/capacitor/mlcc/grm</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="GRM32RR71H105KA01L"/>
+      <property name="Manufacturer" value="Murata"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -219,12 +259,17 @@
     <comp ref="C202">
       <value>10uF 50V X7R</value>
       <footprint>Capacitor_SMD:C_1210_3225Metric</footprint>
+      <datasheet>https://www.murata.com/en-us/products/capacitor/mlcc/grm</datasheet>
       <fields>
+        <field name="MPN">GRM32ER71H106KA12L</field>
+        <field name="Manufacturer">Murata</field>
         <field name="Footprint">Capacitor_SMD:C_1210_3225Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.murata.com/en-us/products/capacitor/mlcc/grm</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="GRM32ER71H106KA12L"/>
+      <property name="Manufacturer" value="Murata"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -243,12 +288,17 @@
     <comp ref="C203">
       <value>10uF 50V X7R</value>
       <footprint>Capacitor_SMD:C_1210_3225Metric</footprint>
+      <datasheet>https://www.murata.com/en-us/products/capacitor/mlcc/grm</datasheet>
       <fields>
+        <field name="MPN">GRM32ER71H106KA12L</field>
+        <field name="Manufacturer">Murata</field>
         <field name="Footprint">Capacitor_SMD:C_1210_3225Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.murata.com/en-us/products/capacitor/mlcc/grm</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="GRM32ER71H106KA12L"/>
+      <property name="Manufacturer" value="Murata"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -267,12 +317,17 @@
     <comp ref="C205">
       <value>10uF 50V</value>
       <footprint>Capacitor_SMD:C_1210_3225Metric</footprint>
+      <datasheet>https://www.murata.com/en-us/products/capacitor/mlcc/grm</datasheet>
       <fields>
+        <field name="MPN">GRM32ER71H106KA12L</field>
+        <field name="Manufacturer">Murata</field>
         <field name="Footprint">Capacitor_SMD:C_1210_3225Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.murata.com/en-us/products/capacitor/mlcc/grm</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="GRM32ER71H106KA12L"/>
+      <property name="Manufacturer" value="Murata"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -291,12 +346,17 @@
     <comp ref="C210">
       <value>47nF 50V</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>https://www.murata.com/en-us/products/capacitor/mlcc/grm</datasheet>
       <fields>
+        <field name="MPN">GRM188R71H473KA61D</field>
+        <field name="Manufacturer">Murata</field>
         <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.murata.com/en-us/products/capacitor/mlcc/grm</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="GRM188R71H473KA61D"/>
+      <property name="Manufacturer" value="Murata"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -315,12 +375,17 @@
     <comp ref="C223">
       <value>100nF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>https://www.murata.com/en-us/products/capacitor/mlcc/grm</datasheet>
       <fields>
+        <field name="MPN">GRM188R71E104KA01D</field>
+        <field name="Manufacturer">Murata</field>
         <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.murata.com/en-us/products/capacitor/mlcc/grm</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="GRM188R71E104KA01D"/>
+      <property name="Manufacturer" value="Murata"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -423,12 +488,17 @@
     <comp ref="C304">
       <value>1uF 50V X7R</value>
       <footprint>Capacitor_SMD:C_1210_3225Metric</footprint>
+      <datasheet>https://www.murata.com/en-us/products/capacitor/mlcc/grm</datasheet>
       <fields>
+        <field name="MPN">GRM32RR71H105KA01L</field>
+        <field name="Manufacturer">Murata</field>
         <field name="Footprint">Capacitor_SMD:C_1210_3225Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.murata.com/en-us/products/capacitor/mlcc/grm</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="GRM32RR71H105KA01L"/>
+      <property name="Manufacturer" value="Murata"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -447,12 +517,17 @@
     <comp ref="C305">
       <value>100nF 50V</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>https://www.murata.com/en-us/products/capacitor/mlcc/grm</datasheet>
       <fields>
+        <field name="MPN">GRM188R71H104KA93D</field>
+        <field name="Manufacturer">Murata</field>
         <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.murata.com/en-us/products/capacitor/mlcc/grm</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="GRM188R71H104KA93D"/>
+      <property name="Manufacturer" value="Murata"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -595,12 +670,17 @@
     <comp ref="C310">
       <value>100nF 10V X7R</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>https://www.murata.com/en-us/products/capacitor/mlcc/grm</datasheet>
       <fields>
+        <field name="MPN">GRM188R71E104KA01D</field>
+        <field name="Manufacturer">Murata</field>
         <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.murata.com/en-us/products/capacitor/mlcc/grm</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="GRM188R71E104KA01D"/>
+      <property name="Manufacturer" value="Murata"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -619,12 +699,17 @@
     <comp ref="C311">
       <value>1nF 50V C0G</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>https://www.murata.com/en-us/products/capacitor/mlcc/grm</datasheet>
       <fields>
+        <field name="MPN">GRM1885C1H102JA01D</field>
+        <field name="Manufacturer">Murata</field>
         <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.murata.com/en-us/products/capacitor/mlcc/grm</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="GRM1885C1H102JA01D"/>
+      <property name="Manufacturer" value="Murata"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -643,12 +728,17 @@
     <comp ref="C511">
       <value>47nF 50V</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>https://www.murata.com/en-us/products/capacitor/mlcc/grm</datasheet>
       <fields>
+        <field name="MPN">GRM188R71H473KA61D</field>
+        <field name="Manufacturer">Murata</field>
         <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.murata.com/en-us/products/capacitor/mlcc/grm</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="GRM188R71H473KA61D"/>
+      <property name="Manufacturer" value="Murata"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -667,12 +757,17 @@
     <comp ref="C512">
       <value>470nF 50V</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>https://www.murata.com/en-us/products/capacitor/mlcc/grm</datasheet>
       <fields>
+        <field name="MPN">GRM188R71H474KA12D</field>
+        <field name="Manufacturer">Murata</field>
         <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.murata.com/en-us/products/capacitor/mlcc/grm</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="GRM188R71H474KA12D"/>
+      <property name="Manufacturer" value="Murata"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -691,12 +786,17 @@
     <comp ref="C521">
       <value>47nF 50V</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>https://www.murata.com/en-us/products/capacitor/mlcc/grm</datasheet>
       <fields>
+        <field name="MPN">GRM188R71H473KA61D</field>
+        <field name="Manufacturer">Murata</field>
         <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.murata.com/en-us/products/capacitor/mlcc/grm</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="GRM188R71H473KA61D"/>
+      <property name="Manufacturer" value="Murata"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -715,12 +815,17 @@
     <comp ref="C522">
       <value>470nF 50V</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>https://www.murata.com/en-us/products/capacitor/mlcc/grm</datasheet>
       <fields>
+        <field name="MPN">GRM188R71H474KA12D</field>
+        <field name="Manufacturer">Murata</field>
         <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.murata.com/en-us/products/capacitor/mlcc/grm</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="GRM188R71H474KA12D"/>
+      <property name="Manufacturer" value="Murata"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -739,12 +844,17 @@
     <comp ref="C531">
       <value>100nF 16V</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>https://www.murata.com/en-us/products/capacitor/mlcc/grm</datasheet>
       <fields>
+        <field name="MPN">GRM188R71E104KA01D</field>
+        <field name="Manufacturer">Murata</field>
         <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.murata.com/en-us/products/capacitor/mlcc/grm</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="GRM188R71E104KA01D"/>
+      <property name="Manufacturer" value="Murata"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -763,12 +873,17 @@
     <comp ref="C532">
       <value>1nF C0G</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>https://www.murata.com/en-us/products/capacitor/mlcc/grm</datasheet>
       <fields>
+        <field name="MPN">GRM1885C1H102JA01D</field>
+        <field name="Manufacturer">Murata</field>
         <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.murata.com/en-us/products/capacitor/mlcc/grm</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="GRM1885C1H102JA01D"/>
+      <property name="Manufacturer" value="Murata"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -785,14 +900,19 @@
       </units>
     </comp>
     <comp ref="C533">
-      <value>100uF 35V</value>
+      <value>100uF 63V</value>
       <footprint>Capacitor_SMD:CP_Elec_10x10</footprint>
+      <datasheet>https://na.industrial.panasonic.com/products/capacitors/aluminum-electrolytic-capacitors/series/133493</datasheet>
       <fields>
+        <field name="MPN">EEEFK1J101L</field>
+        <field name="Manufacturer">Panasonic</field>
         <field name="Footprint">Capacitor_SMD:CP_Elec_10x10</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://na.industrial.panasonic.com/products/capacitors/aluminum-electrolytic-capacitors/series/133493</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C_Polarized" description="Polarized capacitor"/>
+      <property name="MPN" value="EEEFK1J101L"/>
+      <property name="Manufacturer" value="Panasonic"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -811,12 +931,17 @@
     <comp ref="C601">
       <value>100nF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>https://www.murata.com/en-us/products/capacitor/mlcc/grm</datasheet>
       <fields>
+        <field name="MPN">GRM188R71E104KA01D</field>
+        <field name="Manufacturer">Murata</field>
         <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.murata.com/en-us/products/capacitor/mlcc/grm</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="GRM188R71E104KA01D"/>
+      <property name="Manufacturer" value="Murata"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -835,12 +960,17 @@
     <comp ref="C602">
       <value>10nF 100V</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>https://www.murata.com/en-us/products/capacitor/mlcc/grm</datasheet>
       <fields>
+        <field name="MPN">GRM188R72A103KA01D</field>
+        <field name="Manufacturer">Murata</field>
         <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.murata.com/en-us/products/capacitor/mlcc/grm</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="GRM188R72A103KA01D"/>
+      <property name="Manufacturer" value="Murata"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -859,12 +989,17 @@
     <comp ref="C603">
       <value>100nF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>https://www.murata.com/en-us/products/capacitor/mlcc/grm</datasheet>
       <fields>
+        <field name="MPN">GRM188R71E104KA01D</field>
+        <field name="Manufacturer">Murata</field>
         <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.murata.com/en-us/products/capacitor/mlcc/grm</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="GRM188R71E104KA01D"/>
+      <property name="Manufacturer" value="Murata"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -883,12 +1018,17 @@
     <comp ref="C611">
       <value>100nF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>https://www.murata.com/en-us/products/capacitor/mlcc/grm</datasheet>
       <fields>
+        <field name="MPN">GRM188R71E104KA01D</field>
+        <field name="Manufacturer">Murata</field>
         <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.murata.com/en-us/products/capacitor/mlcc/grm</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="GRM188R71E104KA01D"/>
+      <property name="Manufacturer" value="Murata"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -907,12 +1047,17 @@
     <comp ref="C612">
       <value>10nF 100V</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>https://www.murata.com/en-us/products/capacitor/mlcc/grm</datasheet>
       <fields>
+        <field name="MPN">GRM188R72A103KA01D</field>
+        <field name="Manufacturer">Murata</field>
         <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.murata.com/en-us/products/capacitor/mlcc/grm</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="GRM188R72A103KA01D"/>
+      <property name="Manufacturer" value="Murata"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -931,12 +1076,17 @@
     <comp ref="C613">
       <value>100nF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>https://www.murata.com/en-us/products/capacitor/mlcc/grm</datasheet>
       <fields>
+        <field name="MPN">GRM188R71E104KA01D</field>
+        <field name="Manufacturer">Murata</field>
         <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.murata.com/en-us/products/capacitor/mlcc/grm</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="GRM188R71E104KA01D"/>
+      <property name="Manufacturer" value="Murata"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -955,12 +1105,17 @@
     <comp ref="C621">
       <value>100nF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>https://www.murata.com/en-us/products/capacitor/mlcc/grm</datasheet>
       <fields>
+        <field name="MPN">GRM188R71E104KA01D</field>
+        <field name="Manufacturer">Murata</field>
         <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.murata.com/en-us/products/capacitor/mlcc/grm</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="GRM188R71E104KA01D"/>
+      <property name="Manufacturer" value="Murata"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -979,12 +1134,17 @@
     <comp ref="C622">
       <value>10nF 100V</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>https://www.murata.com/en-us/products/capacitor/mlcc/grm</datasheet>
       <fields>
+        <field name="MPN">GRM188R72A103KA01D</field>
+        <field name="Manufacturer">Murata</field>
         <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.murata.com/en-us/products/capacitor/mlcc/grm</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="GRM188R72A103KA01D"/>
+      <property name="Manufacturer" value="Murata"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -1003,12 +1163,17 @@
     <comp ref="C623">
       <value>100nF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>https://www.murata.com/en-us/products/capacitor/mlcc/grm</datasheet>
       <fields>
+        <field name="MPN">GRM188R71E104KA01D</field>
+        <field name="Manufacturer">Murata</field>
         <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.murata.com/en-us/products/capacitor/mlcc/grm</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="GRM188R71E104KA01D"/>
+      <property name="Manufacturer" value="Murata"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -1027,12 +1192,17 @@
     <comp ref="C630">
       <value>1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>https://www.murata.com/en-us/products/capacitor/mlcc/grm</datasheet>
       <fields>
+        <field name="MPN">GRM188R71A105KA61D</field>
+        <field name="Manufacturer">Murata</field>
         <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.murata.com/en-us/products/capacitor/mlcc/grm</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="GRM188R71A105KA61D"/>
+      <property name="Manufacturer" value="Murata"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -1782,12 +1952,17 @@
     <comp ref="R101">
       <value>18.2k 0.1%</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf</datasheet>
       <fields>
+        <field name="MPN">ERA3AEB1822V</field>
+        <field name="Manufacturer">Panasonic</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="ERA3AEB1822V"/>
+      <property name="Manufacturer" value="Panasonic"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -1806,12 +1981,17 @@
     <comp ref="R102">
       <value>9.10k 0.1%</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf</datasheet>
       <fields>
+        <field name="MPN">ERA3AEB9101V</field>
+        <field name="Manufacturer">Panasonic</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="ERA3AEB9101V"/>
+      <property name="Manufacturer" value="Panasonic"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -1830,12 +2010,17 @@
     <comp ref="R103">
       <value>3.01k 0.1%</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf</datasheet>
       <fields>
+        <field name="MPN">ERA3AEB3011V</field>
+        <field name="Manufacturer">Panasonic</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="ERA3AEB3011V"/>
+      <property name="Manufacturer" value="Panasonic"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -1852,14 +2037,19 @@
       </units>
     </comp>
     <comp ref="R104">
-      <value>1.06M 0.1%</value>
+      <value>953k 0.1%</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf</datasheet>
       <fields>
+        <field name="MPN">ERA3AEB9533V</field>
+        <field name="Manufacturer">Panasonic</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="ERA3AEB9533V"/>
+      <property name="Manufacturer" value="Panasonic"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -1878,18 +2068,52 @@
     <comp ref="R105">
       <value>2.40R 1%</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_14.pdf</datasheet>
       <fields>
+        <field name="MPN">RC0603FR-072R4L</field>
+        <field name="Manufacturer">Yageo</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_14.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="RC0603FR-072R4L"/>
+      <property name="Manufacturer" value="Yageo"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>9259411f-0d1d-50dc-bcf0-75c418a262b8</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R106">
+      <value>107k 0.1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf</datasheet>
+      <fields>
+        <field name="MPN">ERA3AEB1073V</field>
+        <field name="Manufacturer">Panasonic</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="ERA3AEB1073V"/>
+      <property name="Manufacturer" value="Panasonic"/>
+      <property name="Sheetname" value="PowerSelector"/>
+      <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>82d74f4d-3d14-5e8a-8bc5-71e3e1bb6e92</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1932,12 +2156,17 @@
     <comp ref="R131">
       <value>100k</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_14.pdf</datasheet>
       <fields>
+        <field name="MPN">RC0603FR-07100KL</field>
+        <field name="Manufacturer">Yageo</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_14.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="RC0603FR-07100KL"/>
+      <property name="Manufacturer" value="Yageo"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -1956,12 +2185,17 @@
     <comp ref="R201">
       <value>28.0k 0.1%</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf</datasheet>
       <fields>
+        <field name="MPN">ERA3AEB2802V</field>
+        <field name="Manufacturer">Panasonic</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="ERA3AEB2802V"/>
+      <property name="Manufacturer" value="Panasonic"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -1980,12 +2214,17 @@
     <comp ref="R202">
       <value>15.8k 0.1%</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf</datasheet>
       <fields>
+        <field name="MPN">ERA3AEB1582V</field>
+        <field name="Manufacturer">Panasonic</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="ERA3AEB1582V"/>
+      <property name="Manufacturer" value="Panasonic"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -2004,12 +2243,17 @@
     <comp ref="R203">
       <value>4.22k 0.1%</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf</datasheet>
       <fields>
+        <field name="MPN">ERA3AEB4221V</field>
+        <field name="Manufacturer">Panasonic</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="ERA3AEB4221V"/>
+      <property name="Manufacturer" value="Panasonic"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -2026,14 +2270,19 @@
       </units>
     </comp>
     <comp ref="R204">
-      <value>965k 0.1%</value>
+      <value>953k 0.1%</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf</datasheet>
       <fields>
+        <field name="MPN">ERA3AEB9533V</field>
+        <field name="Manufacturer">Panasonic</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="ERA3AEB9533V"/>
+      <property name="Manufacturer" value="Panasonic"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -2052,18 +2301,52 @@
     <comp ref="R205">
       <value>1.69R 1%</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_14.pdf</datasheet>
       <fields>
+        <field name="MPN">RC0603FR-071R69L</field>
+        <field name="Manufacturer">Yageo</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_14.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="RC0603FR-071R69L"/>
+      <property name="Manufacturer" value="Yageo"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>94cf1e42-96a6-57d7-9dd7-2057820fc377</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R206">
+      <value>12.1k 0.1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf</datasheet>
+      <fields>
+        <field name="MPN">ERA3AEB1212V</field>
+        <field name="Manufacturer">Panasonic</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="ERA3AEB1212V"/>
+      <property name="Manufacturer" value="Panasonic"/>
+      <property name="Sheetname" value="PowerSelector"/>
+      <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>aa5cfbb5-26fe-5079-830f-3f60c2a5e0b4</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2106,12 +2389,17 @@
     <comp ref="R231">
       <value>100k</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_14.pdf</datasheet>
       <fields>
+        <field name="MPN">RC0603FR-07100KL</field>
+        <field name="Manufacturer">Yageo</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_14.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="RC0603FR-07100KL"/>
+      <property name="Manufacturer" value="Yageo"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -2130,12 +2418,17 @@
     <comp ref="R301">
       <value>176k 0.1%</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf</datasheet>
       <fields>
+        <field name="MPN">ERA3AEB1763V</field>
+        <field name="Manufacturer">Panasonic</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="ERA3AEB1763V"/>
+      <property name="Manufacturer" value="Panasonic"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -2154,12 +2447,17 @@
     <comp ref="R302">
       <value>10.0k 0.1%</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf</datasheet>
       <fields>
+        <field name="MPN">ERA3AEB1002V</field>
+        <field name="Manufacturer">Panasonic</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="ERA3AEB1002V"/>
+      <property name="Manufacturer" value="Panasonic"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -2208,12 +2506,17 @@
     <comp ref="R501">
       <value>55.6k 0.1%</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf</datasheet>
       <fields>
+        <field name="MPN">ERA3AEB5562V</field>
+        <field name="Manufacturer">Panasonic</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="ERA3AEB5562V"/>
+      <property name="Manufacturer" value="Panasonic"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -2232,12 +2535,17 @@
     <comp ref="R502">
       <value>26.1k 0.1%</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf</datasheet>
       <fields>
+        <field name="MPN">ERA3AEB2612V</field>
+        <field name="Manufacturer">Panasonic</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="ERA3AEB2612V"/>
+      <property name="Manufacturer" value="Panasonic"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -2254,14 +2562,19 @@
       </units>
     </comp>
     <comp ref="R503">
-      <value>919k 0.1%</value>
+      <value>909k 0.1%</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf</datasheet>
       <fields>
+        <field name="MPN">ERA3AEB9093V</field>
+        <field name="Manufacturer">Panasonic</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="ERA3AEB9093V"/>
+      <property name="Manufacturer" value="Panasonic"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -2280,12 +2593,17 @@
     <comp ref="R504">
       <value>56.2k 0.1%</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf</datasheet>
       <fields>
+        <field name="MPN">ERA3AEB5622V</field>
+        <field name="Manufacturer">Panasonic</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="ERA3AEB5622V"/>
+      <property name="Manufacturer" value="Panasonic"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -2304,12 +2622,17 @@
     <comp ref="R505">
       <value>31.6k 0.1%</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf</datasheet>
       <fields>
+        <field name="MPN">ERA3AEB3162V</field>
+        <field name="Manufacturer">Panasonic</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="ERA3AEB3162V"/>
+      <property name="Manufacturer" value="Panasonic"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -2328,12 +2651,17 @@
     <comp ref="R506">
       <value>909k 0.1%</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf</datasheet>
       <fields>
+        <field name="MPN">ERA3AEB9093V</field>
+        <field name="Manufacturer">Panasonic</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="ERA3AEB9093V"/>
+      <property name="Manufacturer" value="Panasonic"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -2349,15 +2677,49 @@
         </unit>
       </units>
     </comp>
-    <comp ref="R511">
-      <value>6.81k 1%</value>
+    <comp ref="R507">
+      <value>10.0k 0.1%</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf</datasheet>
       <fields>
+        <field name="MPN">ERA3AEB1002V</field>
+        <field name="Manufacturer">Panasonic</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="ERA3AEB1002V"/>
+      <property name="Manufacturer" value="Panasonic"/>
+      <property name="Sheetname" value="PowerSelector"/>
+      <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>53c38791-3bdc-5006-bc79-e8f76a4a41ac</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R511">
+      <value>6.81k 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_14.pdf</datasheet>
+      <fields>
+        <field name="MPN">RC0603FR-076K81L</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_14.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="RC0603FR-076K81L"/>
+      <property name="Manufacturer" value="Yageo"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -2376,12 +2738,17 @@
     <comp ref="R521">
       <value>6.81k 1%</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_14.pdf</datasheet>
       <fields>
+        <field name="MPN">RC0603FR-076K81L</field>
+        <field name="Manufacturer">Yageo</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_14.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="RC0603FR-076K81L"/>
+      <property name="Manufacturer" value="Yageo"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -2400,12 +2767,17 @@
     <comp ref="R541">
       <value>47k</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_14.pdf</datasheet>
       <fields>
+        <field name="MPN">RC0603FR-0747KL</field>
+        <field name="Manufacturer">Yageo</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_14.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="RC0603FR-0747KL"/>
+      <property name="Manufacturer" value="Yageo"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -2424,12 +2796,17 @@
     <comp ref="R542">
       <value>47k</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_14.pdf</datasheet>
       <fields>
+        <field name="MPN">RC0603FR-0747KL</field>
+        <field name="Manufacturer">Yageo</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_14.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="RC0603FR-0747KL"/>
+      <property name="Manufacturer" value="Yageo"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -2448,12 +2825,17 @@
     <comp ref="R601">
       <value>10R 1%</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_14.pdf</datasheet>
       <fields>
+        <field name="MPN">RC0603FR-0710RL</field>
+        <field name="Manufacturer">Yageo</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_14.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="RC0603FR-0710RL"/>
+      <property name="Manufacturer" value="Yageo"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -2472,12 +2854,17 @@
     <comp ref="R602">
       <value>10R 1%</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_14.pdf</datasheet>
       <fields>
+        <field name="MPN">RC0603FR-0710RL</field>
+        <field name="Manufacturer">Yageo</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_14.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="RC0603FR-0710RL"/>
+      <property name="Manufacturer" value="Yageo"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -2496,12 +2883,17 @@
     <comp ref="R603">
       <value>100R 1%</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_14.pdf</datasheet>
       <fields>
+        <field name="MPN">RC0603FR-07100RL</field>
+        <field name="Manufacturer">Yageo</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_14.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="RC0603FR-07100RL"/>
+      <property name="Manufacturer" value="Yageo"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -2520,12 +2912,17 @@
     <comp ref="R611">
       <value>10R 1%</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_14.pdf</datasheet>
       <fields>
+        <field name="MPN">RC0603FR-0710RL</field>
+        <field name="Manufacturer">Yageo</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_14.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="RC0603FR-0710RL"/>
+      <property name="Manufacturer" value="Yageo"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -2544,12 +2941,17 @@
     <comp ref="R612">
       <value>10R 1%</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_14.pdf</datasheet>
       <fields>
+        <field name="MPN">RC0603FR-0710RL</field>
+        <field name="Manufacturer">Yageo</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_14.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="RC0603FR-0710RL"/>
+      <property name="Manufacturer" value="Yageo"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -2568,12 +2970,17 @@
     <comp ref="R613">
       <value>100R 1%</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_14.pdf</datasheet>
       <fields>
+        <field name="MPN">RC0603FR-07100RL</field>
+        <field name="Manufacturer">Yageo</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_14.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="RC0603FR-07100RL"/>
+      <property name="Manufacturer" value="Yageo"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -2592,12 +2999,17 @@
     <comp ref="R621">
       <value>10R 1%</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_14.pdf</datasheet>
       <fields>
+        <field name="MPN">RC0603FR-0710RL</field>
+        <field name="Manufacturer">Yageo</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_14.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="RC0603FR-0710RL"/>
+      <property name="Manufacturer" value="Yageo"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -2616,12 +3028,17 @@
     <comp ref="R622">
       <value>10R 1%</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_14.pdf</datasheet>
       <fields>
+        <field name="MPN">RC0603FR-0710RL</field>
+        <field name="Manufacturer">Yageo</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_14.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="RC0603FR-0710RL"/>
+      <property name="Manufacturer" value="Yageo"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -2640,12 +3057,17 @@
     <comp ref="R623">
       <value>100R 1%</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_14.pdf</datasheet>
       <fields>
+        <field name="MPN">RC0603FR-07100RL</field>
+        <field name="Manufacturer">Yageo</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_14.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="RC0603FR-07100RL"/>
+      <property name="Manufacturer" value="Yageo"/>
       <property name="Sheetname" value="PowerSelector"/>
       <property name="Sheetfile" value="PowerSelector.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -3339,7 +3761,11 @@
       <node ref="R302" pin="1" pintype="passive"/>
       <node ref="U301" pin="5" pinfunction="SENSE_5" pintype="input"/>
     </net>
-    <net code="4" name="/BAT_SELECTED" class="Default">
+    <net code="4" name="/BAT_RTOP_MID" class="Default">
+      <node ref="R204" pin="2" pintype="passive"/>
+      <node ref="R206" pin="1" pintype="passive"/>
+    </net>
+    <net code="5" name="/BAT_SELECTED" class="Default">
       <node ref="C511" pin="2" pintype="passive"/>
       <node ref="C512" pin="2" pintype="passive"/>
       <node ref="C521" pin="2" pintype="passive"/>
@@ -3350,26 +3776,26 @@
       <node ref="Q504" pin="5" pinfunction="D_5" pintype="passive"/>
       <node ref="U201" pin="15" pinfunction="VOUT_15" pintype="power_in"/>
     </net>
-    <net code="5" name="/BAT_SENSE" class="Default">
+    <net code="6" name="/BAT_SENSE" class="Default">
       <node ref="Q202" pin="5" pinfunction="D_5" pintype="passive"/>
       <node ref="R211" pin="1" pintype="passive"/>
       <node ref="R211" pin="2" pintype="passive"/>
       <node ref="R611" pin="1" pintype="passive"/>
       <node ref="U101" pin="30" pinfunction="SENSE2_30" pintype="input"/>
     </net>
-    <net code="6" name="/CH_24V_N" class="Default">
+    <net code="7" name="/CH_24V_N" class="Default">
       <node ref="J401" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
       <node ref="U101" pin="9" pinfunction="~{CH1}_9" pintype="open_collector"/>
     </net>
-    <net code="7" name="/CH_BAT_N" class="Default">
+    <net code="8" name="/CH_BAT_N" class="Default">
       <node ref="J401" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
       <node ref="U101" pin="21" pinfunction="~{CH2}_21" pintype="open_collector"/>
     </net>
-    <net code="8" name="/CPO" class="Default">
+    <net code="9" name="/CPO" class="Default">
       <node ref="C120" pin="1" pintype="passive"/>
       <node ref="U101" pin="33" pinfunction="CPO_33" pintype="power_out"/>
     </net>
-    <net code="9" name="/DTAP_FUSED" class="Default">
+    <net code="10" name="/DTAP_FUSED" class="Default">
       <node ref="C202" pin="1" pintype="passive"/>
       <node ref="D202" pin="1" pinfunction="A1_1" pintype="passive"/>
       <node ref="F202" pin="2" pintype="passive"/>
@@ -3377,58 +3803,62 @@
       <node ref="R503" pin="1" pintype="passive"/>
       <node ref="U201" pin="17" pinfunction="V1_17" pintype="power_in"/>
     </net>
-    <net code="10" name="/DTAP_IN" class="Default">
+    <net code="11" name="/DTAP_IN" class="Default">
       <node ref="F202" pin="1" pintype="passive"/>
       <node ref="J202" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
       <node ref="J202" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
     </net>
-    <net code="11" name="/FAULT_DISABLE_24" class="Default">
+    <net code="12" name="/DTAP_RTOP_MID" class="Default">
+      <node ref="R503" pin="2" pintype="passive"/>
+      <node ref="R507" pin="1" pintype="passive"/>
+    </net>
+    <net code="13" name="/FAULT_DISABLE_24" class="Default">
       <node ref="R131" pin="2" pintype="passive"/>
       <node ref="U101" pin="11" pinfunction="~{FAULT1}_11" pintype="open_collector"/>
       <node ref="U101" pin="8" pinfunction="DISABLE1_8" pintype="input"/>
     </net>
-    <net code="12" name="/FAULT_DISABLE_BAT" class="Default">
+    <net code="14" name="/FAULT_DISABLE_BAT" class="Default">
       <node ref="R231" pin="2" pintype="passive"/>
       <node ref="U101" pin="19" pinfunction="~{FAULT2}_19" pintype="open_collector"/>
       <node ref="U101" pin="22" pinfunction="DISABLE2_22" pintype="input"/>
     </net>
-    <net code="13" name="/G1_CTRL" class="Default">
+    <net code="15" name="/G1_CTRL" class="Default">
       <node ref="D511" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="R511" pin="1" pintype="passive"/>
       <node ref="U201" pin="13" pinfunction="G1_13" pintype="output"/>
     </net>
-    <net code="14" name="/G2_CTRL" class="Default">
+    <net code="16" name="/G2_CTRL" class="Default">
       <node ref="D521" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="R521" pin="1" pintype="passive"/>
       <node ref="U201" pin="11" pinfunction="G2_11" pintype="output"/>
     </net>
-    <net code="15" name="/GATE_24" class="Default">
+    <net code="17" name="/GATE_24" class="Default">
       <node ref="C110" pin="1" pintype="passive"/>
       <node ref="Q101" pin="1" pinfunction="G_1" pintype="input"/>
       <node ref="Q102" pin="1" pinfunction="G_1" pintype="input"/>
       <node ref="U101" pin="2" pinfunction="GATE1_2" pintype="output"/>
     </net>
-    <net code="16" name="/GATE_BAT" class="Default">
+    <net code="18" name="/GATE_BAT" class="Default">
       <node ref="C210" pin="1" pintype="passive"/>
       <node ref="Q201" pin="1" pinfunction="G_1" pintype="input"/>
       <node ref="Q202" pin="1" pinfunction="G_1" pintype="input"/>
       <node ref="U101" pin="28" pinfunction="GATE2_28" pintype="output"/>
     </net>
-    <net code="17" name="/GATE_DTAP" class="Default">
+    <net code="19" name="/GATE_DTAP" class="Default">
       <node ref="C511" pin="1" pintype="passive"/>
       <node ref="D511" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="Q501" pin="4" pinfunction="G_4" pintype="input"/>
       <node ref="Q502" pin="4" pinfunction="G_4" pintype="input"/>
       <node ref="R511" pin="2" pintype="passive"/>
     </net>
-    <net code="18" name="/GATE_GOLD" class="Default">
+    <net code="20" name="/GATE_GOLD" class="Default">
       <node ref="C521" pin="1" pintype="passive"/>
       <node ref="D521" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="Q503" pin="4" pinfunction="G_4" pintype="input"/>
       <node ref="Q504" pin="4" pinfunction="G_4" pintype="input"/>
       <node ref="R521" pin="2" pintype="passive"/>
     </net>
-    <net code="19" name="/GND" class="Default">
+    <net code="21" name="/GND" class="Default">
       <node ref="C101" pin="2" pintype="passive"/>
       <node ref="C105" pin="2" pintype="passive"/>
       <node ref="C121" pin="2" pintype="passive"/>
@@ -3496,7 +3926,7 @@
       <node ref="U603" pin="2" pinfunction="A0_2" pintype="input"/>
       <node ref="U603" pin="7" pinfunction="GND_7" pintype="power_in"/>
     </net>
-    <net code="20" name="/GOLD_FUSED" class="Default">
+    <net code="22" name="/GOLD_FUSED" class="Default">
       <node ref="C203" pin="1" pintype="passive"/>
       <node ref="D203" pin="1" pinfunction="A1_1" pintype="passive"/>
       <node ref="F203" pin="2" pintype="passive"/>
@@ -3504,12 +3934,12 @@
       <node ref="R506" pin="1" pintype="passive"/>
       <node ref="U201" pin="16" pinfunction="V2_16" pintype="power_in"/>
     </net>
-    <net code="21" name="/GOLD_IN" class="Default">
+    <net code="23" name="/GOLD_IN" class="Default">
       <node ref="F203" pin="1" pintype="passive"/>
       <node ref="J203" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
       <node ref="J203" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
     </net>
-    <net code="22" name="/INTVCC" class="Default">
+    <net code="24" name="/INTVCC" class="Default">
       <node ref="C121" pin="1" pintype="passive"/>
       <node ref="J204" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
       <node ref="R131" pin="1" pintype="passive"/>
@@ -3517,52 +3947,52 @@
       <node ref="U101" pin="12" pinfunction="CASIN_12" pintype="input"/>
       <node ref="U101" pin="13" pinfunction="INTVCC_13" pintype="power_out"/>
     </net>
-    <net code="23" name="/MON24_INN" class="Default">
+    <net code="25" name="/MON24_INN" class="Default">
       <node ref="C601" pin="2" pintype="passive"/>
       <node ref="R602" pin="2" pintype="passive"/>
       <node ref="U601" pin="9" pinfunction="Vin-_9" pintype="input"/>
     </net>
-    <net code="24" name="/MON24_INP" class="Default">
+    <net code="26" name="/MON24_INP" class="Default">
       <node ref="C601" pin="1" pintype="passive"/>
       <node ref="R601" pin="2" pintype="passive"/>
       <node ref="U601" pin="10" pinfunction="Vin+_10" pintype="input"/>
     </net>
-    <net code="25" name="/MON24_VBUS" class="Default">
+    <net code="27" name="/MON24_VBUS" class="Default">
       <node ref="C602" pin="1" pintype="passive"/>
       <node ref="R603" pin="2" pintype="passive"/>
       <node ref="U601" pin="8" pinfunction="Vbus_8" pintype="input"/>
     </net>
-    <net code="26" name="/MONBAT_INN" class="Default">
+    <net code="28" name="/MONBAT_INN" class="Default">
       <node ref="C611" pin="2" pintype="passive"/>
       <node ref="R612" pin="2" pintype="passive"/>
       <node ref="U602" pin="9" pinfunction="Vin-_9" pintype="input"/>
     </net>
-    <net code="27" name="/MONBAT_INP" class="Default">
+    <net code="29" name="/MONBAT_INP" class="Default">
       <node ref="C611" pin="1" pintype="passive"/>
       <node ref="R611" pin="2" pintype="passive"/>
       <node ref="U602" pin="10" pinfunction="Vin+_10" pintype="input"/>
     </net>
-    <net code="28" name="/MONBAT_VBUS" class="Default">
+    <net code="30" name="/MONBAT_VBUS" class="Default">
       <node ref="C612" pin="1" pintype="passive"/>
       <node ref="R613" pin="2" pintype="passive"/>
       <node ref="U602" pin="8" pinfunction="Vbus_8" pintype="input"/>
     </net>
-    <net code="29" name="/MONLOAD_INN" class="Default">
+    <net code="31" name="/MONLOAD_INN" class="Default">
       <node ref="C621" pin="2" pintype="passive"/>
       <node ref="R622" pin="2" pintype="passive"/>
       <node ref="U603" pin="9" pinfunction="Vin-_9" pintype="input"/>
     </net>
-    <net code="30" name="/MONLOAD_INP" class="Default">
+    <net code="32" name="/MONLOAD_INP" class="Default">
       <node ref="C621" pin="1" pintype="passive"/>
       <node ref="R621" pin="2" pintype="passive"/>
       <node ref="U603" pin="10" pinfunction="Vin+_10" pintype="input"/>
     </net>
-    <net code="31" name="/MONLOAD_VBUS" class="Default">
+    <net code="33" name="/MONLOAD_VBUS" class="Default">
       <node ref="C622" pin="1" pintype="passive"/>
       <node ref="R623" pin="2" pintype="passive"/>
       <node ref="U603" pin="8" pinfunction="Vbus_8" pintype="input"/>
     </net>
-    <net code="32" name="/MON_3V3" class="Default">
+    <net code="34" name="/MON_3V3" class="Default">
       <node ref="C310" pin="1" pintype="passive"/>
       <node ref="C603" pin="1" pintype="passive"/>
       <node ref="C613" pin="1" pintype="passive"/>
@@ -3576,55 +4006,55 @@
       <node ref="U603" pin="1" pinfunction="A1_1" pintype="input"/>
       <node ref="U603" pin="6" pinfunction="VS_6" pintype="power_in"/>
     </net>
-    <net code="33" name="/OV_24" class="Default">
+    <net code="35" name="/OV_24" class="Default">
       <node ref="R101" pin="1" pintype="passive"/>
       <node ref="R102" pin="2" pintype="passive"/>
       <node ref="U101" pin="6" pinfunction="OV1_6" pintype="input"/>
     </net>
-    <net code="34" name="/OV_BAT" class="Default">
+    <net code="36" name="/OV_BAT" class="Default">
       <node ref="R201" pin="1" pintype="passive"/>
       <node ref="R202" pin="2" pintype="passive"/>
       <node ref="U101" pin="24" pinfunction="OV2_24" pintype="input"/>
     </net>
-    <net code="35" name="/OV_DTAP" class="Default">
+    <net code="37" name="/OV_DTAP" class="Default">
       <node ref="R501" pin="1" pintype="passive"/>
       <node ref="R502" pin="2" pintype="passive"/>
       <node ref="U201" pin="3" pinfunction="OV1_3" pintype="input"/>
     </net>
-    <net code="36" name="/OV_GOLD" class="Default">
+    <net code="38" name="/OV_GOLD" class="Default">
       <node ref="R504" pin="1" pintype="passive"/>
       <node ref="R505" pin="2" pintype="passive"/>
       <node ref="U201" pin="5" pinfunction="OV2_5" pintype="input"/>
     </net>
-    <net code="37" name="/PRE_INTVCC" class="Default">
+    <net code="39" name="/PRE_INTVCC" class="Default">
       <node ref="C531" pin="1" pintype="passive"/>
       <node ref="J204" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
       <node ref="U201" pin="10" pinfunction="INTVCC_10" pintype="power_out"/>
       <node ref="U201" pin="18" pinfunction="EN_18" pintype="input"/>
     </net>
-    <net code="38" name="/PWR_MON_ALERT_N" class="Default">
+    <net code="40" name="/PWR_MON_ALERT_N" class="Default">
       <node ref="J402" pin="5" pinfunction="Pin_5_5" pintype="passive"/>
       <node ref="U601" pin="3" pinfunction="~{Alert}_3" pintype="open_collector"/>
       <node ref="U602" pin="3" pinfunction="~{Alert}_3" pintype="open_collector"/>
       <node ref="U603" pin="3" pinfunction="~{Alert}_3" pintype="open_collector"/>
     </net>
-    <net code="39" name="/PWR_MON_SCL" class="Default">
+    <net code="41" name="/PWR_MON_SCL" class="Default">
       <node ref="J402" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
       <node ref="U601" pin="5" pinfunction="SCL_5" pintype="input"/>
       <node ref="U602" pin="5" pinfunction="SCL_5" pintype="input"/>
       <node ref="U603" pin="5" pinfunction="SCL_5" pintype="input"/>
     </net>
-    <net code="40" name="/PWR_MON_SDA" class="Default">
+    <net code="42" name="/PWR_MON_SDA" class="Default">
       <node ref="J402" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
       <node ref="U601" pin="4" pinfunction="SDA_4" pintype="bidirectional"/>
       <node ref="U602" pin="4" pinfunction="SDA_4" pintype="bidirectional"/>
       <node ref="U603" pin="4" pinfunction="SDA_4" pintype="bidirectional"/>
     </net>
-    <net code="41" name="/QUAL" class="Default">
+    <net code="43" name="/QUAL" class="Default">
       <node ref="C122" pin="1" pintype="passive"/>
       <node ref="U101" pin="15" pinfunction="QUAL_15" pintype="input"/>
     </net>
-    <net code="42" name="/RAW_OUT" class="Default">
+    <net code="44" name="/RAW_OUT" class="Default">
       <node ref="C120" pin="2" pintype="passive"/>
       <node ref="C301" pin="1" pintype="passive"/>
       <node ref="C302" pin="1" pintype="passive"/>
@@ -3649,7 +4079,7 @@
       <node ref="U101" pin="34" pinfunction="EXTVCC_34" pintype="power_in"/>
       <node ref="U101" pin="35" pinfunction="OUT1_35" pintype="input"/>
     </net>
-    <net code="43" name="/RAW_OUT_LOAD" class="Default">
+    <net code="45" name="/RAW_OUT_LOAD" class="Default">
       <node ref="J301" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
       <node ref="J301" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
       <node ref="R311" pin="3" pintype="passive"/>
@@ -3657,17 +4087,17 @@
       <node ref="R622" pin="1" pintype="passive"/>
       <node ref="R623" pin="1" pintype="passive"/>
     </net>
-    <net code="44" name="/SHDN_MAIN" class="Default">
+    <net code="46" name="/SHDN_MAIN" class="Default">
       <node ref="J204" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
       <node ref="R541" pin="1" pintype="passive"/>
       <node ref="U101" pin="18" pinfunction="~{SHDN}_18" pintype="input"/>
     </net>
-    <net code="45" name="/SHDN_PRE" class="Default">
+    <net code="47" name="/SHDN_PRE" class="Default">
       <node ref="J204" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
       <node ref="R542" pin="1" pintype="passive"/>
       <node ref="U201" pin="19" pinfunction="SHDN_19" pintype="input"/>
     </net>
-    <net code="46" name="/SRC_24" class="Default">
+    <net code="48" name="/SRC_24" class="Default">
       <node ref="C110" pin="2" pintype="passive"/>
       <node ref="Q101" pin="2" pinfunction="S_2" pintype="passive"/>
       <node ref="Q101" pin="3" pinfunction="S_3" pintype="passive"/>
@@ -3677,7 +4107,7 @@
       <node ref="Q102" pin="4" pinfunction="S_4" pintype="passive"/>
       <node ref="U101" pin="1" pinfunction="SOURCE1_1" pintype="input"/>
     </net>
-    <net code="47" name="/SRC_BAT" class="Default">
+    <net code="49" name="/SRC_BAT" class="Default">
       <node ref="C210" pin="2" pintype="passive"/>
       <node ref="Q201" pin="2" pinfunction="S_2" pintype="passive"/>
       <node ref="Q201" pin="3" pinfunction="S_3" pintype="passive"/>
@@ -3687,7 +4117,7 @@
       <node ref="Q202" pin="4" pinfunction="S_4" pintype="passive"/>
       <node ref="U101" pin="29" pinfunction="SOURCE2_29" pintype="input"/>
     </net>
-    <net code="48" name="/SRC_DTAP" class="Default">
+    <net code="50" name="/SRC_DTAP" class="Default">
       <node ref="C512" pin="1" pintype="passive"/>
       <node ref="Q501" pin="1" pinfunction="S_1" pintype="passive"/>
       <node ref="Q501" pin="2" pinfunction="S_2" pintype="passive"/>
@@ -3697,7 +4127,7 @@
       <node ref="Q502" pin="3" pinfunction="S_3" pintype="passive"/>
       <node ref="U201" pin="14" pinfunction="VS1_14" pintype="input"/>
     </net>
-    <net code="49" name="/SRC_GOLD" class="Default">
+    <net code="51" name="/SRC_GOLD" class="Default">
       <node ref="C522" pin="1" pintype="passive"/>
       <node ref="Q503" pin="1" pinfunction="S_1" pintype="passive"/>
       <node ref="Q503" pin="2" pinfunction="S_2" pintype="passive"/>
@@ -3707,49 +4137,49 @@
       <node ref="Q504" pin="3" pinfunction="S_3" pintype="passive"/>
       <node ref="U201" pin="12" pinfunction="VS2_12" pintype="input"/>
     </net>
-    <net code="50" name="/TMR_24" class="Default">
+    <net code="52" name="/TMR_24" class="Default">
       <node ref="C123" pin="1" pintype="passive"/>
       <node ref="U101" pin="7" pinfunction="TMR1_7" pintype="input"/>
     </net>
-    <net code="51" name="/TMR_BAT" class="Default">
+    <net code="53" name="/TMR_BAT" class="Default">
       <node ref="C223" pin="1" pintype="passive"/>
       <node ref="U101" pin="23" pinfunction="TMR2_23" pintype="input"/>
     </net>
-    <net code="52" name="/TMR_PRE" class="Default">
+    <net code="54" name="/TMR_PRE" class="Default">
       <node ref="C532" pin="1" pintype="passive"/>
       <node ref="U201" pin="1" pinfunction="TMR_1" pintype="input"/>
     </net>
-    <net code="53" name="/UVF_24" class="Default">
+    <net code="55" name="/UVF_24" class="Default">
       <node ref="R103" pin="1" pintype="passive"/>
-      <node ref="R104" pin="2" pintype="passive"/>
+      <node ref="R106" pin="2" pintype="passive"/>
       <node ref="U101" pin="4" pinfunction="UVF1_4" pintype="input"/>
     </net>
-    <net code="54" name="/UVF_BAT" class="Default">
+    <net code="56" name="/UVF_BAT" class="Default">
       <node ref="R203" pin="1" pintype="passive"/>
-      <node ref="R204" pin="2" pintype="passive"/>
+      <node ref="R206" pin="2" pintype="passive"/>
       <node ref="U101" pin="26" pinfunction="UVF2_26" pintype="input"/>
     </net>
-    <net code="55" name="/UVR_24" class="Default">
+    <net code="57" name="/UVR_24" class="Default">
       <node ref="R102" pin="1" pintype="passive"/>
       <node ref="R103" pin="2" pintype="passive"/>
       <node ref="U101" pin="5" pinfunction="UVR1_5" pintype="input"/>
     </net>
-    <net code="56" name="/UVR_BAT" class="Default">
+    <net code="58" name="/UVR_BAT" class="Default">
       <node ref="R202" pin="1" pintype="passive"/>
       <node ref="R203" pin="2" pintype="passive"/>
       <node ref="U101" pin="25" pinfunction="UVR2_25" pintype="input"/>
     </net>
-    <net code="57" name="/UV_DTAP" class="Default">
+    <net code="59" name="/UV_DTAP" class="Default">
       <node ref="R502" pin="1" pintype="passive"/>
-      <node ref="R503" pin="2" pintype="passive"/>
+      <node ref="R507" pin="2" pintype="passive"/>
       <node ref="U201" pin="2" pinfunction="UV1_2" pintype="input"/>
     </net>
-    <net code="58" name="/UV_GOLD" class="Default">
+    <net code="60" name="/UV_GOLD" class="Default">
       <node ref="R505" pin="1" pintype="passive"/>
       <node ref="R506" pin="2" pintype="passive"/>
       <node ref="U201" pin="4" pinfunction="UV2_4" pintype="input"/>
     </net>
-    <net code="59" name="/V24_FUSED" class="Default">
+    <net code="61" name="/V24_FUSED" class="Default">
       <node ref="C101" pin="1" pintype="passive"/>
       <node ref="D101" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="F101" pin="2" pintype="passive"/>
@@ -3759,51 +4189,55 @@
       <node ref="R603" pin="1" pintype="passive"/>
       <node ref="U101" pin="3" pinfunction="V1_3" pintype="power_in"/>
     </net>
-    <net code="60" name="/V24_IN" class="Default">
+    <net code="62" name="/V24_IN" class="Default">
       <node ref="F101" pin="1" pintype="passive"/>
       <node ref="J101" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
     </net>
-    <net code="61" name="/V24_SENSE" class="Default">
+    <net code="63" name="/V24_RTOP_MID" class="Default">
+      <node ref="R104" pin="2" pintype="passive"/>
+      <node ref="R106" pin="1" pintype="passive"/>
+    </net>
+    <net code="64" name="/V24_SENSE" class="Default">
       <node ref="Q102" pin="5" pinfunction="D_5" pintype="passive"/>
       <node ref="R111" pin="1" pintype="passive"/>
       <node ref="R111" pin="2" pintype="passive"/>
       <node ref="R601" pin="1" pintype="passive"/>
       <node ref="U101" pin="36" pinfunction="SENSE1_36" pintype="input"/>
     </net>
-    <net code="62" name="/VALID_24V_N" class="Default">
+    <net code="65" name="/VALID_24V_N" class="Default">
       <node ref="J401" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
       <node ref="U101" pin="10" pinfunction="~{VALID1}_10" pintype="open_collector"/>
     </net>
-    <net code="63" name="/VALID_BAT_N" class="Default">
+    <net code="66" name="/VALID_BAT_N" class="Default">
       <node ref="J401" pin="5" pinfunction="Pin_5_5" pintype="passive"/>
       <node ref="U101" pin="20" pinfunction="~{VALID2}_20" pintype="open_collector"/>
     </net>
-    <net code="64" name="/VALID_DTAP_N" class="Default">
+    <net code="67" name="/VALID_DTAP_N" class="Default">
       <node ref="J401" pin="7" pinfunction="Pin_7_7" pintype="passive"/>
       <node ref="U201" pin="6" pinfunction="~{VALID1}_6" pintype="open_collector"/>
     </net>
-    <net code="65" name="/VALID_GOLD_N" class="Default">
+    <net code="68" name="/VALID_GOLD_N" class="Default">
       <node ref="J401" pin="8" pinfunction="Pin_8_8" pintype="passive"/>
       <node ref="U201" pin="7" pinfunction="~{VALID2}_7" pintype="open_collector"/>
     </net>
-    <net code="66" name="Net-(C105-Pad1)" class="Default">
+    <net code="69" name="Net-(C105-Pad1)" class="Default">
       <node ref="C105" pin="1" pintype="passive"/>
       <node ref="R105" pin="2" pintype="passive"/>
     </net>
-    <net code="67" name="Net-(C205-Pad1)" class="Default">
+    <net code="70" name="Net-(C205-Pad1)" class="Default">
       <node ref="C205" pin="1" pintype="passive"/>
       <node ref="R205" pin="2" pintype="passive"/>
     </net>
-    <net code="68" name="unconnected-(U101-CASOUT-Pad14)" class="Default">
+    <net code="71" name="unconnected-(U101-CASOUT-Pad14)" class="Default">
       <node ref="U101" pin="14" pinfunction="CASOUT_14" pintype="output+no_connect"/>
     </net>
-    <net code="69" name="unconnected-(U201-CAS-Pad9)" class="Default">
+    <net code="72" name="unconnected-(U201-CAS-Pad9)" class="Default">
       <node ref="U201" pin="9" pinfunction="CAS_9" pintype="output+no_connect"/>
     </net>
-    <net code="70" name="unconnected-(U301-CTR-Pad1)" class="Default">
+    <net code="73" name="unconnected-(U301-CTR-Pad1)" class="Default">
       <node ref="U301" pin="1" pinfunction="CTR_1" pintype="input+no_connect"/>
     </net>
-    <net code="71" name="unconnected-(U301-CTS-Pad3)" class="Default">
+    <net code="74" name="unconnected-(U301-CTS-Pad3)" class="Default">
       <node ref="U301" pin="3" pinfunction="CTS_3" pintype="input+no_connect"/>
     </net>
   </nets>

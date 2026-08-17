@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Generate the Radxa CM5 ProComm seamless selector and power telemetry."""
 
+from contextlib import contextmanager
 from pathlib import Path
 import sys
 import uuid as _uuid
@@ -20,6 +21,27 @@ def _deterministic_uuid4() -> _uuid.UUID:
 
 
 _uuid.uuid4 = _deterministic_uuid4
+
+
+@contextmanager
+def isolated_uuid_namespace(tag: str):
+    """Allocate UUIDs for new blocks without shifting established objects."""
+    counter = 0
+    previous_uuid4 = _uuid.uuid4
+
+    def isolated_uuid4() -> _uuid.UUID:
+        nonlocal counter
+        counter += 1
+        return _uuid.uuid5(
+            _uuid.NAMESPACE_URL,
+            f"radxa-cm5-procomm:power-selector:extension:{tag}:{counter}",
+        )
+
+    _uuid.uuid4 = isolated_uuid4
+    try:
+        yield
+    finally:
+        _uuid.uuid4 = previous_uuid4
 
 sys.path.insert(0, "/tmp/radxa-cm5-kicad-deps")
 from kicad_sch_api import create_schematic, get_symbol_cache
@@ -48,6 +70,9 @@ sch.set_title_block(
 
 
 def add(lib, ref, value, xy, footprint="", mpn="", manufacturer="", datasheet="", rotation=0):
+    if not mpn and value in PRODUCTION_PASSIVE_PARTS:
+        manufacturer, mpn, passive_datasheet = PRODUCTION_PASSIVE_PARTS[value]
+        datasheet = datasheet or passive_datasheet
     c = sch.components.add(lib, ref, value, position=xy, footprint=footprint or None, rotation=rotation)
     if mpn:
         c.add_property("MPN", mpn, hidden=True)
@@ -59,6 +84,14 @@ def add(lib, ref, value, xy, footprint="", mpn="", manufacturer="", datasheet=""
         c.add_property("Reference", ref, hidden=True)
         c.add_property("Value", value, hidden=True)
     return c
+
+
+def lock_component_pin_uuids(component) -> None:
+    """Assign pin UUIDs now so KiCad's serializer cannot shift later objects."""
+    if component.pin_uuids:
+        return
+    for pin in component.pins:
+        component.pin_uuids[str(pin.number)] = str(_uuid.uuid4())
 
 
 def pin_xy(c, pin):
@@ -111,6 +144,29 @@ def title(text, xy, size=2.0):
 def note(text, xy, size=1.1):
     x, y = xy
     sch.texts.add(text, (x + 25 if x < 50 else x, y), size=size)
+
+
+NEW_DIVIDER_REFS = {"R106", "R206", "R507"}
+
+
+def add_divider_resistor(
+    ref, value, net_1, net_2, x, y, label_y, label_size, separator="  ",
+):
+    """Add a threshold divider part while preserving established UUID order."""
+    def create(is_extension=False):
+        resistor = add("Device:R", ref, value, (x, y), R0603, rotation=90)
+        two_pin(resistor, net_1, net_2)
+        resistor.add_property("Reference", ref, hidden=True)
+        resistor.add_property("Value", value, hidden=True)
+        sch.texts.add(f"{ref}{separator}{value}", (x, label_y), size=label_size)
+        if is_extension:
+            lock_component_pin_uuids(resistor)
+
+    if ref in NEW_DIVIDER_REFS:
+        with isolated_uuid_namespace(f"divider-{ref.lower()}"):
+            create(is_extension=True)
+    else:
+        create()
 
 
 def tie_pins(c, pins, name, stub_dy, rotation=0):
@@ -167,6 +223,55 @@ LFPAK56E = "PowerSelector:LFPAK56E_SOT1023"
 CAP10 = "Capacitor_SMD:CP_Elec_10x10"
 CAP_G16 = "PowerSelector:CP_Panasonic_EEH-ZS_G16_10x16.8"
 CAP_SNAPIN_30 = "Capacitor_THT:CP_Radial_D30.0mm_P10.00mm_SnapIn"
+
+PANASONIC_ERA = "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf"
+YAGEO_RC = "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_14.pdf"
+MURATA_GRM = "https://www.murata.com/en-us/products/capacitor/mlcc/grm"
+PANASONIC_FK = "https://na.industrial.panasonic.com/products/capacitors/aluminum-electrolytic-capacitors/series/133493"
+
+# Every formerly unqualified passive on this generated sheet is selected here.
+# Divider totals use standard E96 series pairs so exact thresholds do not rely
+# on difficult-to-source E192 megaohm values.
+PRODUCTION_PASSIVE_PARTS = {
+    "1.69R 1%": ("Yageo", "RC0603FR-071R69L", YAGEO_RC),
+    "2.40R 1%": ("Yageo", "RC0603FR-072R4L", YAGEO_RC),
+    "10R 1%": ("Yageo", "RC0603FR-0710RL", YAGEO_RC),
+    "100R 1%": ("Yageo", "RC0603FR-07100RL", YAGEO_RC),
+    "6.81k 1%": ("Yageo", "RC0603FR-076K81L", YAGEO_RC),
+    "47k": ("Yageo", "RC0603FR-0747KL", YAGEO_RC),
+    "100k": ("Yageo", "RC0603FR-07100KL", YAGEO_RC),
+    "3.01k 0.1%": ("Panasonic", "ERA3AEB3011V", PANASONIC_ERA),
+    "4.22k 0.1%": ("Panasonic", "ERA3AEB4221V", PANASONIC_ERA),
+    "9.10k 0.1%": ("Panasonic", "ERA3AEB9101V", PANASONIC_ERA),
+    "10.0k 0.1%": ("Panasonic", "ERA3AEB1002V", PANASONIC_ERA),
+    "12.1k 0.1%": ("Panasonic", "ERA3AEB1212V", PANASONIC_ERA),
+    "15.8k 0.1%": ("Panasonic", "ERA3AEB1582V", PANASONIC_ERA),
+    "18.2k 0.1%": ("Panasonic", "ERA3AEB1822V", PANASONIC_ERA),
+    "26.1k 0.1%": ("Panasonic", "ERA3AEB2612V", PANASONIC_ERA),
+    "28.0k 0.1%": ("Panasonic", "ERA3AEB2802V", PANASONIC_ERA),
+    "31.6k 0.1%": ("Panasonic", "ERA3AEB3162V", PANASONIC_ERA),
+    "55.6k 0.1%": ("Panasonic", "ERA3AEB5562V", PANASONIC_ERA),
+    "56.2k 0.1%": ("Panasonic", "ERA3AEB5622V", PANASONIC_ERA),
+    "107k 0.1%": ("Panasonic", "ERA3AEB1073V", PANASONIC_ERA),
+    "176k 0.1%": ("Panasonic", "ERA3AEB1763V", PANASONIC_ERA),
+    "909k 0.1%": ("Panasonic", "ERA3AEB9093V", PANASONIC_ERA),
+    "953k 0.1%": ("Panasonic", "ERA3AEB9533V", PANASONIC_ERA),
+    "100nF": ("Murata", "GRM188R71E104KA01D", MURATA_GRM),
+    "100nF 10V X7R": ("Murata", "GRM188R71E104KA01D", MURATA_GRM),
+    "100nF 16V": ("Murata", "GRM188R71E104KA01D", MURATA_GRM),
+    "100nF 50V": ("Murata", "GRM188R71H104KA93D", MURATA_GRM),
+    "1nF C0G": ("Murata", "GRM1885C1H102JA01D", MURATA_GRM),
+    "1nF 50V C0G": ("Murata", "GRM1885C1H102JA01D", MURATA_GRM),
+    "10nF 100V": ("Murata", "GRM188R72A103KA01D", MURATA_GRM),
+    "47nF 50V": ("Murata", "GRM188R71H473KA61D", MURATA_GRM),
+    "470nF 50V": ("Murata", "GRM188R71H474KA12D", MURATA_GRM),
+    "1uF": ("Murata", "GRM188R71A105KA61D", MURATA_GRM),
+    "1uF 16V": ("Murata", "GRM188R71E105KA12D", MURATA_GRM),
+    "1uF 50V X7R": ("Murata", "GRM32RR71H105KA01L", MURATA_GRM),
+    "10uF 50V": ("Murata", "GRM32ER71H106KA12L", MURATA_GRM),
+    "10uF 50V X7R": ("Murata", "GRM32ER71H106KA12L", MURATA_GRM),
+    "100uF 63V": ("Panasonic", "EEEFK1J101L", PANASONIC_FK),
+}
 
 
 # ---------------------------------------------------------------------------
@@ -435,29 +540,25 @@ title("E. VALID-VOLTAGE WINDOWS (0.5 V COMPARATOR TAPS)", (95, 177))
 note("Physical order is VIN - R4 - UVF - R3 - UVR - R2 - OV - R1 - GND.", (95, 181))
 
 divider24 = [
-    ("R104", "1.06M 0.1%", "V24_FUSED", "UVF_24", 28),
-    ("R103", "3.01k 0.1%", "UVF_24", "UVR_24", 58),
-    ("R102", "9.10k 0.1%", "UVR_24", "OV_24", 88),
+    ("R104", "953k 0.1%", "V24_FUSED", "V24_RTOP_MID", 22),
+    ("R106", "107k 0.1%", "V24_RTOP_MID", "UVF_24", 46),
+    ("R103", "3.01k 0.1%", "UVF_24", "UVR_24", 70),
+    ("R102", "9.10k 0.1%", "UVR_24", "OV_24", 94),
     ("R101", "18.2k 0.1%", "OV_24", "GND", 118),
 ]
 for ref, val, a, b, x in divider24:
-    r = add("Device:R", ref, val, (x, 200), R0603, rotation=90)
-    two_pin(r, a, b)
-    r.add_property("Reference", ref, hidden=True); r.add_property("Value", val, hidden=True)
-    sch.texts.add(f"{ref}  {val}", (x, 207), size=0.75)
+    add_divider_resistor(ref, val, a, b, x, 200, 207, 0.75)
 note("24 V: OV=29.95 V, UV rising=19.97 V, UV falling=17.99 V", (20, 213))
 
 dividerbat = [
-    ("R204", "965k 0.1%", "BAT_FUSED", "UVF_BAT", 158),
-    ("R203", "4.22k 0.1%", "UVF_BAT", "UVR_BAT", 188),
-    ("R202", "15.8k 0.1%", "UVR_BAT", "OV_BAT", 218),
+    ("R204", "953k 0.1%", "BAT_FUSED", "BAT_RTOP_MID", 148),
+    ("R206", "12.1k 0.1%", "BAT_RTOP_MID", "UVF_BAT", 173),
+    ("R203", "4.22k 0.1%", "UVF_BAT", "UVR_BAT", 198),
+    ("R202", "15.8k 0.1%", "UVR_BAT", "OV_BAT", 223),
     ("R201", "28.0k 0.1%", "OV_BAT", "GND", 248),
 ]
 for ref, val, a, b, x in dividerbat:
-    r = add("Device:R", ref, val, (x, 200), R0603, rotation=90)
-    two_pin(r, a, b)
-    r.add_property("Reference", ref, hidden=True); r.add_property("Value", val, hidden=True)
-    note(f"{ref}  {val}", (x, 207), 0.75)
+    add_divider_resistor(ref, val, a, b, x, 200, 207, 0.75)
 note("Battery: OV=18.09 V, UV rising=11.58 V, UV falling=10.57 V", (150, 213))
 
 
@@ -696,7 +797,7 @@ c531.add_property("Reference", "C531", hidden=True)
 c532 = add("Device:C", "C532", "1nF C0G", (370, 348), C0603)
 two_pin(c532, "TMR_PRE", "GND")
 c532.add_property("Reference", "C532", hidden=True)
-c533 = add("Device:C_Polarized", "C533", "100uF 35V", (390, 348), CAP10)
+c533 = add("Device:C_Polarized", "C533", "100uF 63V", (390, 348), CAP10)
 two_pin(c533, "BAT_SELECTED", "GND")
 c533.add_property("Reference", "C533", hidden=True)
 note("C532 = 1 nF: about 16 ms source validation", (292, 375), 0.8)
@@ -704,15 +805,13 @@ note("R511/R521 + C511/C521 limit higher-voltage-source inrush; verify SOA on pr
 note("D511/D521: anode at controller G pin, cathode at MOSFET gate for fast turn-off", (292, 383), 0.8)
 
 dtap_div = [
-    ("R503", "919k 0.1%", "DTAP_FUSED", "UV_DTAP", 415),
-    ("R502", "26.1k 0.1%", "UV_DTAP", "OV_DTAP", 465),
-    ("R501", "55.6k 0.1%", "OV_DTAP", "GND", 515),
+    ("R503", "909k 0.1%", "DTAP_FUSED", "DTAP_RTOP_MID", 400),
+    ("R507", "10.0k 0.1%", "DTAP_RTOP_MID", "UV_DTAP", 440),
+    ("R502", "26.1k 0.1%", "UV_DTAP", "OV_DTAP", 480),
+    ("R501", "55.6k 0.1%", "OV_DTAP", "GND", 520),
 ]
 for ref, val, a, b, x in dtap_div:
-    r = add("Device:R", ref, val, (x, 320), R0603, rotation=90)
-    two_pin(r, a, b)
-    r.add_property("Reference", ref, hidden=True); r.add_property("Value", val, hidden=True)
-    note(f"{ref} {val}", (x, 330), 0.65)
+    add_divider_resistor(ref, val, a, b, x, 320, 330, 0.65, separator=" ")
 note("D-Tap actual: UV rise 12.62 V, UV fall 12.25 V, OV rise 18.00 V", (415, 340), 0.82)
 
 gold_div = [

@@ -39,5 +39,5 @@ The exact harness components are in `POWER_SWITCH_BOM.csv`. Use four 22 AWG stra
 2. Repeat with only D-Tap, only Gold Mount, and all sources present.
 3. Unplug J204 and verify the board fails OFF.
 4. While ON, remove and restore rear 24 V and verify automatic source transfer does not reset the CM5.
-5. Record `RAW_OUT`, 5.15 V, both SHDN nodes and CM5 reset during switching with an oscilloscope.
+5. Record `RAW_OUT`, `SYS_4V0`, `IO_5V0`, both SHDN nodes and CM5 reset during switching with an oscilloscope.
 6. Define the operating instruction for safe CM5 shutdown before moving the maintained switch to OFF, because hard removal of power can corrupt writable storage.

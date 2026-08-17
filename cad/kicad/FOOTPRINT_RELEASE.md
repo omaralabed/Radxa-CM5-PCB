@@ -84,12 +84,12 @@ microsection, and part-fit records pass the criteria in
 
 | Function | Manufacturer / part | Footprint | Evidence | State |
 |---|---|---|---|---|
-| 5.15 V buck MOSFET, high side | onsemi `NVMFS6B25NLT1G` | `CM5Carrier:onsemi_DFN5_5x6_488AA_GSD` | onsemi case 488AA recommended soldering footprint | Drawing-derived G/S/D remap locked; first-article stencil and thermal review open |
-| 5.15 V buck MOSFET, low side | onsemi `FDWS86068-F085` | `CM5Carrier:onsemi_DFNW8_5p2x6p3_507AU_GSD` | onsemi case 507AU recommended land pattern | Drawing-derived G/S/D remap locked; first-article stencil and thermal review open |
+| 4.006 V CM5 buck MOSFET, high side | onsemi `NVMFS6B25NLT1G` | `CM5Carrier:onsemi_DFN5_5x6_488AA_GSD` | onsemi case 488AA recommended soldering footprint | Drawing-derived G/S/D remap locked; first-article stencil and thermal review open |
+| 4.006 V CM5 buck MOSFET, low side | onsemi `FDWS86068-F085` | `CM5Carrier:onsemi_DFNW8_5p2x6p3_507AU_GSD` | onsemi case 507AU recommended land pattern | Drawing-derived G/S/D remap locked; first-article stencil and thermal review open |
 | 12 V buck-boost MOSFETs | TI `CSD18532Q5B`, `CSD17573Q5B` | `CM5Carrier:TI_DNK0008A_GSD` | TI DNK0008A / VSON-CLIP package land pattern | Repeated source/drain terminals remapped to the three-pin symbol and machine checked |
 | Radio/network buck regulators | TI `LM61460RJR`, `LM61440RJR` | `CM5Carrier:TI_RJR0014A` | TI drawing 4223976/H, RJR0014A example board layout | All 14 pads, including four L-shaped lands, are drawing-derived and machine checked |
 | Wi-Fi load switch | TI `TPS22990DMLR` | `CM5Carrier:TI_DML0010A` | TI drawing 4222524/A | Exposed VIN land and all ten terminals machine checked |
-| 5.15 V inductor | TDK `SPM10065VC-3R3M-D` | `CM5Carrier:TDK_SPM10065VC` | TDK recommended land dimensions | Locked |
+| 4.006 V CM5 buck inductor | TDK `SPM10065VC-3R3M-D` | `CM5Carrier:TDK_SPM10065VC` | TDK recommended land dimensions | Locked |
 | 12 V buck-boost inductor | Wurth `74439370047` | `CM5Carrier:Wurth_74439370047` | Wurth manufacturer drawing | Locked |
 | 12 V current shunts | Susumu `KRL6432E-M-R006-F-T1`, `KRL11050-C-R004-F-T1` | project KRL6432E/KRL11050 lands | Susumu KRL recommended land tables | Locked |
 

@@ -1,4 +1,4 @@
-ERC report (2026-08-16T03:08:55, Encoding UTF8)
+ERC report (2026-08-16T22:23:06, Encoding UTF8)
 Report includes: Errors, Warnings
 
 ***** Sheet /
@@ -97,7 +97,7 @@ Report includes: Errors, Warnings
     @(322.58 mm, 43.18 mm): Label 'PCIE_UP_CLKREQ_N'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(322.58 mm, 48.26 mm): Label 'HDMI_5V_OPTION'
+    @(322.58 mm, 48.26 mm): Label 'IO_5V0'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
     @(322.58 mm, 53.34 mm): Label 'PCIE_UP_REFCLK_P'

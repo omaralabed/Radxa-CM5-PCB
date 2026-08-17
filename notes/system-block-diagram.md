@@ -20,7 +20,7 @@ flowchart LR
   BAT --> MAINSEL
   MAINSEL --> RAW["Protected raw DC<br/>telemetry / 27.2 mF hold-up bank<br/>no-blink transfer"]
 
-  RAW --> SYS5["LM5146 SYS_5V15<br/>5.15 V / 12 A"]
+  RAW --> SYS4["LM5146 SYS_4V0<br/>4.006 V / 12 A"]
   RAW --> WIFI33["LM61440 WIFI_3V3<br/>3.3 V / 4 A"]
   RAW --> MODEM38["LM61460 MODEM_3V8<br/>3.8 V / 6 A + eFuse"]
   RAW --> AUDIO["Clean audio rails<br/>+/-15 V, 5 V, 3.3 V"]
@@ -29,10 +29,13 @@ flowchart LR
   RAW --> ETHPWR["NET_3V3 4 A<br/>PCIE_1V0 2 A"]
 
   AUX12 --> DISP["Fused DISPLAY_12V harness<br/>12 V / 2.5 A"]
+  AUX12 --> DISPIO["Fused DISPLAY_IO_12V<br/>TPS62913 IO_5V0 / 2 A"]
   AUX12 --> FAN["Protected FAN_CPU_12V<br/>12 V / 3 A Delta CPU fan"]
   AUX12 --> FANREST["Protected FAN_AUX_12V<br/>12 V / 3 A"]
 
-  SYS5 --> CM5["Radxa CM5<br/>eMMC only"]
+  SYS4 --> CM5["Radxa CM5 VCC_SYSIN<br/>eMMC only"]
+  DISPIO --> CM5
+  DISPIO --> DISPLAYIO["CM5 5V_HDMI pin 106<br/>fused HDMI + touch USB"]
   WIFI33 --> WIFI["Mini PCIe Wi-Fi AP<br/>AW7915-NP1 4T4R<br/>4 antennas"]
   MODEM38 --> WWAN["M.2 B-Key WWAN<br/>SIM8260G-M2 target<br/>3042/3052 support"]
   AUDIO --> ADC["AK5558VN ADC<br/>8-ch balanced in"]

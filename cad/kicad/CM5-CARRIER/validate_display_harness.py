@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import csv
+import math
 import os
 from pathlib import Path
 import subprocess
@@ -61,7 +62,7 @@ def main() -> int:
     checks.append(
         check(
             "display-harness controlled BOM",
-            len(rows) == 13 and complete,
+            len(rows) == 24 and complete,
             f"{len(rows)} rows; every manufacturer, MPN, and footprint field is complete",
         )
     )
@@ -83,6 +84,13 @@ def main() -> int:
         "F802": ("1206L110/16WR", "Fuse:Fuse_1206_3216Metric"),
         "C801": ("GRM188R61E106MA73D", "Capacitor_SMD:C_0603_1608Metric"),
         "R801": ("RC0603FR-072K2L", "Resistor_SMD:R_0603_1608Metric"),
+        "U805": (
+            "TPS62913RPUT",
+            "Package_DFN_QFN:Texas_RPU0010A_VQFN-HR-10_2x2mm_P0.5mm",
+        ),
+        "L805": ("XGL4030-222MEC", "Inductor_SMD:L_Coilcraft_XxL4040"),
+        "R805": ("TNPW060326K1BEEA", "Resistor_SMD:R_0603_1608Metric"),
+        "R806": ("TNPW06034K99BEEA", "Resistor_SMD:R_0603_1608Metric"),
     }
     for reference, (mpn, footprint) in expected_parts.items():
         row = by_ref.get(reference, {})
@@ -113,7 +121,7 @@ def main() -> int:
         "7": "HDMI_D0_P", "8": "GND", "9": "HDMI_D0_N",
         "10": "HDMI_CLK_P", "11": "GND", "12": "HDMI_CLK_N",
         "13": "HDMI_CEC", "14": "HDMI_HEAC_P", "15": "HDMI_DDC_SCL",
-        "16": "HDMI_DDC_SDA", "17": "GND", "18": "HDMI_5V_OPTION",
+        "16": "HDMI_DDC_SDA", "17": "GND", "18": "HDMI_5V_OUT",
         "19": "HDMI_HPD", "SH": "CHASSIS_GND",
     }
     checks.append(
@@ -141,6 +149,32 @@ def main() -> int:
         )
     )
 
+    io5_expected = {
+        "1": "DISPLAY_IO_12V", "2": "IO5V0_SW", "3": "IO_5V0",
+        "4": "GND", "5": "IO_5V0_PG", "6": "DISPLAY_IO_12V",
+        "7": "GND", "8": "IO5V0_NRSS", "9": "IO5V0_FB",
+        "10": "IO5V0_SCONF",
+    }
+    io5_actual = 0.8 * (1.0 + 26.1 / 4.99)
+    checks.append(
+        check(
+            "dedicated IO_5V0 regulator contract",
+            all(net_map.get(("U805", pin)) == net for pin, net in io5_expected.items())
+            and math.isclose(io5_actual, 5.0, rel_tol=0.005),
+            f"TPS62913 is wired from DISPLAY_IO_12V and set to {io5_actual:.3f} V",
+        )
+    )
+    checks.append(
+        check(
+            "separate HDMI and touch 5 V protection",
+            net_map.get(("F801", "1")) == "IO_5V0"
+            and net_map.get(("F801", "2")) == "HDMI_5V_OUT"
+            and net_map.get(("F802", "1")) == "IO_5V0"
+            and net_map.get(("F802", "2")) == "TOUCH_USB_5V",
+            "IO_5V0 independently feeds the 0.10 A HDMI and 1.10 A touch polyfuses",
+        )
+    )
+
     display_power_expected = {
         "1": "DISPLAY_12V", "2": "DISPLAY_12V", "3": "GND", "4": "GND",
     }
@@ -157,8 +191,9 @@ def main() -> int:
             "display power architecture",
             "No local display eFuse" in schematic_text
             and "2.5 A continuous / 30 W branch" in schematic_text
+            and "DISPLAY_IO_12V" in schematic_text
             and not any("EFUSE" in row["Value"].upper() for row in rows),
-            "simple upstream-fused 12 V branch; no dedicated display eFuse",
+            "separate fused 12 V monitor and IO buck branches; no dedicated display eFuse",
         )
     )
     checks.append(

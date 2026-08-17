@@ -47,7 +47,7 @@ current, and the tray-supported retention clamp must be proven before release.
 
 | Rail | Rating | Controller / protection | Starting implementation |
 | --- | ---: | --- | --- |
-| `SYS_5V15` | 5.15 V / 12 A | TI `LM5146RGYR` | 300 kHz, 3.3 uH TDK `SPM10065VC-3R3M-D`, onsemi `NVMFS6B25NLT1G` high side and `FDWS86068-F085` low side, five 47 uF output ceramics, 9.58 V typical turn-on UVLO |
+| `SYS_4V0` | 4.006 V nominal / 12 A | TI `LM5146RGYR` | Follows Radxa's 4 V RK806 recommendation; 300 kHz, 3.3 uH TDK `SPM10065VC-3R3M-D`, onsemi `NVMFS6B25NLT1G` high side and `FDWS86068-F085` low side, five 47 uF output ceramics, 9.58 V typical turn-on UVLO |
 | `AUX_12V` | Revised A1 starting point: 12 V / 8 A | TI `LM5176PWP` | 6 mOhm output sense gives about 8.33 A nominal limit. Recalculate MOSFET loss, magnetics, shunts, compensation, copper, and thermal design before routing. |
 | `MODEM_3V8_PRE` | 3.8 V / 6 A | TI `LM61460RJR` | 400 kHz, 4.7 uH Coilcraft `XAL7070-472MEC`, 100 k / 35.7 k feedback |
 | `MODEM_3V8` | 3.8 V / 6 A limit | TI `TPS259827LNRGER` | 255 ohm 1% `ILIM`, 1320 uF local polymer bulk; weak-signal transmit validation mandatory |
@@ -57,7 +57,8 @@ current, and the tray-supported retention clamp must be proven before release.
 | `LOGIC_3V3` | 3.3 V / 3 A | TI `LM61440RJR` | 400 kHz, 4.7 uH `XAL7070-472MEC` |
 | `PCIE_1V0` | 1.0 V / 2 A | TI `TPS62913RPUT` | 2.2 MHz random spread spectrum, 2.2 uH `XGL4030-222MEC`, 1.24 k / 4.99 k feedback |
 | `LOGIC_1V8` | 1.8 V / 1.5 A | TI `TPS62913RPUT` | 2.2 MHz random spread spectrum, 2.2 uH `XGL4030-222MEC`, 6.19 k / 4.99 k feedback |
-| `HEADSET_3V3` | 3.3 V / 1 A | TI `TPS62913RPUT` | 2.2 MHz random spread spectrum, 2.2 uH `XGL4030-222MEC`, 15.6 k / 4.99 k feedback |
+| `IO_5V0` | 4.984 V nominal / 2 A | TI `TPS62913RPUT` on Display-Harness | Fed from separately fused `DISPLAY_IO_12V`; supplies CM5 U13-B pin 106 plus independent HDMI and USB-touch polyfuses |
+| `HEADSET_3V3` | 3.3 V / 250 mA | TI `LP5907MFX-3.3/NOPB` | Dedicated low-noise LDO from `SYS_4V0`; actual headset peak current remains a bench gate |
 | `AUDIO_PRE_5V5` | 5.5 V / 1 A | TI `TPS62913RPUT` | Fed from `AUDIO_12V`; 2.2 MHz random spread spectrum; 29.4 k / 4.99 k feedback |
 | `AUDIO_P15V/N15V` | +/-15 V / 20 W class | Traco `TRI 20-1223` | Isolated converter mounted with the AUDIO-8X8 assembly |
 | `ADC_5V_A` / `DAC_5V_A` | clean 5 V | TI `TPS7A2050PDBVR` | Separate converter LDOs from `AUDIO_PRE_5V5` |
@@ -69,6 +70,7 @@ current, and the tray-supported retention clamp must be proven before release.
 | Branch | Locked requirement | Protection |
 | --- | --- | --- |
 | `DISPLAY_12V` | 12 V / 2.5 A, 25 W monitor | Littelfuse `0453003.MR` 3 A time-lag fuse; no dedicated display eFuse by requirement |
+| `DISPLAY_IO_12V` | Input to the 2 A `IO_5V0` buck | Littelfuse `0453002.MR` 2 A time-lag fuse; separate from monitor power |
 | `NIGHT_LIGHT_12V` | Two 12 V / 0.25 W YIS LS102W panel lights plus capacitive switch | Littelfuse `0453.250MR` 0.25 A fast fuse; hardware-only branch from `AUX_12V` |
 | `FAN_CPU_12V` | Locked Delta CPU fan, 12 V / 3 A branch | Independent 3 A time-lag branch plus 2 A hold local protection. |
 | `FAN_AUX_12V` | Modem plus two Delta `THA0412AD-TZW3` enclosure fans, 12 V / 3 A branch | Independent 3 A time-lag branch; 1 A hold local protection per load, subject to final modem-fan inrush measurement. |
@@ -76,9 +78,10 @@ current, and the tray-supported retention clamp must be proven before release.
 
 ## Startup And Reset Order
 
-1. A valid `RAW_OUT_LOAD` starts `SYS_5V15`, `AUX_12V`, `LOGIC_3V3`, and the radio
+1. A valid `RAW_OUT_LOAD` starts `SYS_4V0`, `AUX_12V`, `LOGIC_3V3`, and the radio
    pre-regulators through their local UVLO networks.
-2. `SYS_5V15_PG` permits `LOGIC_1V8` and `PCIE_1V0` startup.
+2. `SYS_4V0_PG` permits `LOGIC_1V8` and `PCIE_1V0` startup. `IO_5V0` starts from
+   the separately fused `DISPLAY_IO_12V` branch and feeds CM5 pin 106.
 3. PCIe reset remains asserted until `NET_3V3_PG` and `PCIE_1V0_PG` are valid.
 4. Thermal-IO enables the final Wi-Fi and modem rails only after controller and
    temperature checks.
@@ -104,8 +107,11 @@ Delayed load reduction may occur only after the transfer is complete.
 
 - Validate every regulator at 10.5 V, 13 V, 16.8 V, 24 V, and 30 V input where
   applicable, including startup into maximum capacitance.
-- Measure loop response/Bode margin for `SYS_5V15` and `AUX_12V` on the final
+- Measure loop response/Bode margin for `SYS_4V0` and `AUX_12V` on the final
   PCB; update compensation from measured plant behavior.
+- Verify `SYS_4V0` tolerance, connector drop, startup overshoot, and CM5
+  stability against the official Radxa carrier guidance at full CPU/GPU/NPU load.
+- Verify `IO_5V0` at CM5 U13-B pin 106 and at the monitor end of the USB cable.
 - Measure efficiency and component temperature at continuous and transient
   loads with the enclosure closed.
 - Test modem attach and sustained uplink at weak signal while monitoring
@@ -139,5 +145,6 @@ Delayed load reduction may occur only after the transfer is complete.
 - TI TPS62913: https://www.ti.com/product/TPS62913
 - TI TPS25982: https://www.ti.com/lit/ds/symlink/tps25982.pdf
 - TI TPS22990: https://www.ti.com/lit/ds/symlink/tps22990.pdf
+- Radxa CM5 carrier design note: https://dl.radxa.com/cm5/radxa_cm5_carrier_board_design_note.pdf
 - Traco TRI 20: https://www.tracopower.com/tri20-datasheet
 - Wurth 74439370047: https://www.we-online.com/components/products/datasheet/74439370047.pdf

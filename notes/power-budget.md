@@ -68,8 +68,8 @@ not the production target.
 
 | Load group | Rail / source | Typical W | Continuous design W | Peak / transient W | Confidence | Notes |
 | --- | --- | ---: | ---: | ---: | --- | --- |
-| Radxa CM5 module, eMMC, CPU/GPU/NPU | 5.15 V system | 12.0 | 25.0 | 30.0 | Estimate | Must verify on selected CM5 SKU and OS load. |
-| Carrier logic, clocks, sensors, LEDs, GPIO, RTC | 5.15 V / 3.3 V / 1.8 V | 2.0 | 4.0 | 5.0 | Estimate | Includes housekeeping, not radios/audio power. |
+| Radxa CM5 module, eMMC, CPU/GPU/NPU | `SYS_4V0` | 12.0 | 25.0 | 30.0 | Estimate | All six VCC_SYSIN pins at 4.006 V; verify on selected CM5 SKU and OS load. |
+| Carrier logic, clocks, sensors, LEDs, GPIO, RTC | 4.0 V / 3.3 V / 1.8 V | 2.0 | 4.0 | 5.0 | Estimate | Includes housekeeping, not radios/audio power. |
 | Main 8x8 audio: AK5558VN, AK4458VN, balanced line stages | clean audio rails | 5.0 | 10.0 | 12.0 | Estimate | Final +/- analog rail current depends on line level and load. |
 | ES8316 headset codec, headphone amp, mic bias/preamp | dedicated low-noise headset regulator | 0.8 | 2.0 | 3.0 | Estimate | Separate headset sound card with real headphone drive, mic input conditioning, and its own clean regulator path. |
 | Native WAN1 Ethernet magnetics/LEDs/support | Ethernet rails | 1.0 | 1.5 | 2.0 | Estimate | Depends on final PHY/magnetics implementation. |
@@ -194,13 +194,14 @@ bench validation.
 
 | Rail | First sizing target | Main loads | Notes |
 | --- | ---: | --- | --- |
-| `SYS_5V15` | 5.15 V / 12 A | CM5, carrier logic, selected 5 V loads | Captured with `LM5146RGYR`, external MOSFETs, and a 3.3 uH / 28.6 A inductor. |
+| `SYS_4V0` | 4.006 V / 12 A | All six CM5 VCC_SYSIN pins and controlled low-voltage converters | Captured with `LM5146RGYR`, external MOSFETs, and a 3.3 uH / 28.6 A inductor. |
+| `IO_5V0` | 4.984 V / 2 A | CM5 pin 106, HDMI pin 18, and touch USB VBUS | `TPS62913` from fused `DISPLAY_IO_12V`; HDMI and touch outputs are separately fused. |
 | `AUX_12V` | 12 V / 8 A minimum revision target | Display, locked CPU fan, enclosure/modem fans, audio handoff, and night lights | Revised capture uses an 8 A stage target and about 8.33 A output limit; losses, compensation, copper, and thermal behavior still require calculation and bench qualification before routing. |
 | `WIFI_3V3` | 3.3 V / 4 A | AW7915-NP1 4T4R AP module | Separate `LM61440` rail with controlled load switch and local bulk. |
 | `MODEM_3V8` | 3.8 V / 6 A converter | SIM8260G-M2-class M.2 modem | `LM61460` plus `TPS25982`; 5 A minimum usable load and at least 1000 uF initial local bulk. |
 | `NET_3V3` / `PCIE_1V0` | 3.3 V / 4 A and 1.0 V / 2 A | PI7C9X2G608GP and three LAN7430 controllers | Separate from Wi-Fi; obey PCIe-switch power sequence and reset timing. |
 | `AUDIO_BIPOLAR` / `AKM_5V_A` | +/-15 V, 20 W class; clean 5 V | AKM converters, THAT/OPA stages | `TRI 20-1223` plus separate `TPS7A20` clean ADC, DAC, and AKM rails. |
-| `HEADSET_3V3` | 3.3 V / 1 A plus clean 1.8 V | ES8316, headphone amplifier, mic bias/preamp | `TPS62913` pre-rail plus `TPS7A2018` local LDO. |
+| `HEADSET_3V3` | 3.3 V / 250 mA plus clean 1.8 V | ES8316, headphone amplifier, mic bias/preamp | Separate `LP5907MFX-3.3/NOPB` from `SYS_4V0` plus `TPS7A2018` local LDO. |
 | `DISPLAY_12V` | 12 V / 2.5 A branch | 15.6-inch JUNEBOX HDMI touchscreen and USB touch | Simple fused harness branch from `AUX_12V`; no dedicated display eFuse/current limiter. Rated load is 25 W / 2.08 A; verify startup and max-brightness current. |
 | `NIGHT_LIGHT_12V` | 12 V / 0.25 A protected branch | Two YIS LS102W warm-white panel lights and E-Switch CS touch control | About 0.6 W expected; included inside the existing miscellaneous-margin allocation. |
 | `FAN_CPU_12V` | 12 V / 3 A branch | Delta `FFB0412EN-00Y2E` | Independently protected branch from `AUX_12V`; 25 kHz PWM and tach feedback. |
@@ -214,10 +215,9 @@ selected.
 
 ```text
 24V_PSU / protected raw DC
-  -> SYS_5V15 high-current buck
-       -> Radxa CM5 5 V input
-       -> controlled downstream 5 V service/USB loads
-       -> local quiet LDOs where 5 V-derived analog/control rails are acceptable
+  -> SYS_4V0 high-current buck
+       -> all six Radxa CM5 VCC_SYSIN pins at 4.006 V
+       -> controlled downstream low-voltage converters
   -> LOGIC_3V3 buck, 3.3 V / 3 A
        -> carrier logic, level shifters, sensors, LEDs, I/O control
        -> do not share as the main Wi-Fi AP supply
@@ -232,6 +232,9 @@ selected.
        -> PCIE_1V0 point-of-load buck, 1.0 V / 2 A
   -> AUX_12V LM5176 buck-boost, revised 12 V / 8 A minimum target
        -> fused DISPLAY_12V harness branch, 12 V / 2.5 A
+       -> fused DISPLAY_IO_12V -> TPS62913 IO_5V0, 4.984 V / 2 A
+            -> CM5 5V_HDMI pin 106
+            -> separately fused HDMI pin 18 and touch USB VBUS
        -> fused NIGHT_LIGHT_12V hardware branch, 12 V / 0.25 A
        -> protected FAN_CPU_12V branch, 12 V / 3 A
        -> protected FAN_AUX_12V branch, 12 V / 3 A
@@ -243,7 +246,8 @@ selected.
 
 | Rail | Suggested first target | Reason |
 | --- | ---: | --- |
-| `SYS_5V15` | 5.15 V / 12 A continuous | CM5 plus controlled 5 V support loads, with headroom for CPU/GPU/NPU stress. |
+| `SYS_4V0` | 4.006 V / 12 A continuous | CM5 VCC_SYSIN with headroom for CPU/GPU/NPU stress; follows Radxa's 4 V recommendation. |
+| `IO_5V0` | 4.984 V / 2 A | Required CM5 HDMI-side supply plus separately fused HDMI and touch-USB power. |
 | `LOGIC_3V3` | 3.3 V / 3 A continuous | Carrier logic and low-power peripherals only; keep radios on separate rails. |
 | `LOGIC_1V8` | 1.8 V / 1.5 A continuous | Control, reference, codec, PCIe/Ethernet support rails as selected. |
 | `AUX_12V` | 12 V / 8 A minimum revision target | Buck-boost backbone for display, fan, audio, and night-light branches during backup transfer. Recalculate and bench-qualify the revised A1 power stage. |

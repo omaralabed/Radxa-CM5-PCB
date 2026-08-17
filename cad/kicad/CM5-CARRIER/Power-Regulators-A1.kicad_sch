@@ -4948,7 +4948,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "24.0k 0.1%"
+		(property "Value" "20.0k 0.1%"
 			(at 420.37 190.5 90)
 			(effects
 				(font
@@ -4975,7 +4975,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "TNPW060324K0BEEA"
+		(property "MPN" "TNPW060320K0BEEA"
 			(at 422.91 195.5799 0)
 			(effects
 				(font
@@ -5018,7 +5018,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "4.42k 0.1%"
+		(property "Value" "4.99k 0.1%"
 			(at 464.82 190.5 90)
 			(effects
 				(font
@@ -5045,7 +5045,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "TNPW06034K42BEEA"
+		(property "MPN" "TNPW06034K99BEEA"
 			(at 467.36 195.5799 0)
 			(effects
 				(font
@@ -15461,6 +15461,76 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:Fuse")
+		(at 1169.67 619.76 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "f930207a-d297-5f31-b300-f9722450a349")
+		(property "Reference" "F1185"
+			(at 1171.702 619.76 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2A time-lag"
+			(at 1167.765 619.76 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Fuse:Fuse_Littelfuse-NANO2-451_453"
+			(at 1167.892 619.76 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Littelfuse"
+			(at 1172.21 624.8399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "0453002.MR"
+			(at 1172.21 624.8399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ba9b6b07-5171-54ea-8b92-e5f8cab6f9a8")
+		)
+		(pin "2"
+			(uuid "bfb55f09-1eb6-571d-82aa-216b2cf07b20")
+		)
+		(instances
+			(project "Power-Regulators-A1"
+				(path "/d6d0e65e-868d-5bca-b21c-3fa1f886a196"
+					(reference "F1185")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "CM5Carrier:TRI20_1223")
 		(at 929.64 735.33 0)
 		(unit 1)
@@ -15607,7 +15677,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "SYS_5V15"
+		(property "Value" "SYS_4V0"
 			(at 439.42 784.86 0.0000)
 			(effects
 				(font
@@ -16035,7 +16105,7 @@
 		)
 		(uuid "ab9c4ce2-99d5-5a3a-b290-12181c915679")
 	)
-	(label "SYS_5V15_PG"
+	(label "SYS_4V0_PG"
 		(at 425.45 97.79 0.0000)
 		(effects
 			(font
@@ -16175,7 +16245,7 @@
 		)
 		(uuid "5aa16bb8-a859-5ddc-8774-24f1ad4cc628")
 	)
-	(label "SYS_5V15"
+	(label "SYS_4V0"
 		(at 420.37 186.69 0.0000)
 		(effects
 			(font
@@ -16405,7 +16475,7 @@
 		)
 		(uuid "704d13f1-612b-5358-8680-c3c7e742e2b0")
 	)
-	(label "SYS_5V15"
+	(label "SYS_4V0"
 		(at 650.24 114.3 0.0000)
 		(effects
 			(font
@@ -16415,7 +16485,7 @@
 		)
 		(uuid "c8bbfefe-dfe6-57dc-9318-fd6ea29cef69")
 	)
-	(label "SYS_5V15"
+	(label "SYS_4V0"
 		(at 619.76 186.69 0.0000)
 		(effects
 			(font
@@ -16435,7 +16505,7 @@
 		)
 		(uuid "3d93ba9f-2331-5749-99a1-a98c67bb6d67")
 	)
-	(label "SYS_5V15"
+	(label "SYS_4V0"
 		(at 650.24 186.69 0.0000)
 		(effects
 			(font
@@ -16455,7 +16525,7 @@
 		)
 		(uuid "0faf9897-08f5-5297-8602-efecef0e6c91")
 	)
-	(label "SYS_5V15"
+	(label "SYS_4V0"
 		(at 679.45 186.69 0.0000)
 		(effects
 			(font
@@ -16475,7 +16545,7 @@
 		)
 		(uuid "b62b6245-0923-5442-908b-0edb761da443")
 	)
-	(label "SYS_5V15"
+	(label "SYS_4V0"
 		(at 709.93 186.69 0.0000)
 		(effects
 			(font
@@ -16495,7 +16565,7 @@
 		)
 		(uuid "d209f4f2-dd2e-51e3-a128-879b88127bf6")
 	)
-	(label "SYS_5V15"
+	(label "SYS_4V0"
 		(at 740.41 186.69 0.0000)
 		(effects
 			(font
@@ -19685,7 +19755,7 @@
 		)
 		(uuid "77642a79-6d6f-530b-9846-0a5a3581c8fb")
 	)
-	(label "SYS_5V15"
+	(label "SYS_4V0"
 		(at 590.55 617.22 0.0000)
 		(effects
 			(font
@@ -19815,7 +19885,7 @@
 		)
 		(uuid "c3824ecf-41fa-5540-a90f-a68d66678be9")
 	)
-	(label "SYS_5V15"
+	(label "SYS_4V0"
 		(at 480.06 670.56 0.0000)
 		(effects
 			(font
@@ -19835,7 +19905,7 @@
 		)
 		(uuid "75cdb961-121f-5ff0-b4f8-ba9028a0befa")
 	)
-	(label "SYS_5V15"
+	(label "SYS_4V0"
 		(at 505.46 670.56 0.0000)
 		(effects
 			(font
@@ -19985,7 +20055,7 @@
 		)
 		(uuid "3e482304-320b-53ce-83f8-72f339a19115")
 	)
-	(label "SYS_5V15"
+	(label "SYS_4V0"
 		(at 820.42 617.22 0.0000)
 		(effects
 			(font
@@ -20115,7 +20185,7 @@
 		)
 		(uuid "d923b1fb-7d26-52b7-9751-7b1c014992fc")
 	)
-	(label "SYS_5V15"
+	(label "SYS_4V0"
 		(at 709.93 670.56 0.0000)
 		(effects
 			(font
@@ -20135,7 +20205,7 @@
 		)
 		(uuid "50455e79-3748-562b-bba1-29ac9f620b70")
 	)
-	(label "SYS_5V15"
+	(label "SYS_4V0"
 		(at 735.33 670.56 0.0000)
 		(effects
 			(font
@@ -20335,6 +20405,26 @@
 		)
 		(uuid "ac67cd5f-f4da-5e70-a66f-409fb9beb27a")
 	)
+	(label "AUX_12V"
+		(at 1169.67 615.95 0.0000)
+		(effects
+			(font
+				(size 0.7 0.7)
+			)
+			(justify left bottom)
+		)
+		(uuid "9a0b0c87-b4ca-520c-b541-308c20ff78bc")
+	)
+	(label "DISPLAY_IO_12V"
+		(at 1169.67 623.57 0.0000)
+		(effects
+			(font
+				(size 0.7 0.7)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8c3fb9e-db49-5324-9c44-04fd3ea1c6e5")
+	)
 	(label "AUDIO_12V"
 		(at 909.32 727.71 0.0000)
 		(effects
@@ -20395,7 +20485,7 @@
 		)
 		(uuid "b027c85f-40bd-5311-a8c5-d5dd2591c713")
 	)
-	(label "SYS_5V15"
+	(label "SYS_4V0"
 		(at 439.42 779.78 0.0000)
 		(effects
 			(font
@@ -20435,7 +20525,7 @@
 		)
 		(uuid "222d1fad-2c13-5ff5-8b02-7210ec01d78d")
 	)
-	(label "SYS_5V15"
+	(label "SYS_4V0"
 		(at 464.82 834.39 0.0000)
 		(effects
 			(font
@@ -20518,7 +20608,7 @@
 		)
 		(uuid "d0e8bd12-f576-5c84-9270-3fdf0f68af5f")
 	)
-	(text "2. SYS_5V15 / 12 A SYNCHRONOUS BUCK"
+	(text "2. SYS_4V0 / 12 A SYNCHRONOUS BUCK"
 		(exclude_from_sim no)
 		(at 320 18 0.0000)
 		(effects
@@ -20529,7 +20619,7 @@
 		)
 		(uuid "dbf082e5-08d9-5366-89e2-e6371d684dc6")
 	)
-	(text "TI 5 V / 12 A reference adapted to 5.144 V. 300 kHz; target loop crossover about 20 kHz."
+	(text "4.006 V nominal follows Radxa RK806 guidance. 300 kHz; target loop crossover about 20 kHz."
 		(exclude_from_sim no)
 		(at 320 280 0.0000)
 		(effects
@@ -20674,7 +20764,7 @@
 		)
 		(uuid "df063d85-9c98-50c1-95af-4c2bf97967c7")
 	)
-	(text "RAW valid -> SYS_5V15, AUX_12V, LOGIC_3V3 and radio pre-regulators start from local UVLO."
+	(text "RAW valid -> SYS_4V0, AUX_12V, LOGIC_3V3 and radio pre-regulators start from local UVLO."
 		(exclude_from_sim no)
 		(at 35 760 0.0000)
 		(effects
@@ -20684,7 +20774,7 @@
 		)
 		(uuid "45c888be-25fb-5160-a4df-ae26ca360a49")
 	)
-	(text "SYS_5V15_PG enables LOGIC_1V8 and PCIE_1V0; hold PCIe reset until NET_3V3_PG and PCIE_1V0_PG are both valid."
+	(text "SYS_4V0_PG enables LOGIC_1V8 and PCIE_1V0; hold PCIe reset until NET_3V3_PG and PCIE_1V0_PG are both valid."
 		(exclude_from_sim no)
 		(at 35 771 0.0000)
 		(effects

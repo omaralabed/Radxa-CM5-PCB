@@ -51,7 +51,7 @@ class Stage:
 
 
 STAGES = (
-    Stage("SYS_5V15", "LM5146RGYR", 10.5, 30.0, 5.15, 12.0, 30.0, 38.0, 0.94, 300.0, 3.3, 29.2),
+    Stage("SYS_4V0", "LM5146RGYR", 10.5, 30.0, 4.0, 12.0, 30.0, 38.0, 0.94, 300.0, 3.3, 29.2),
     Stage("AUX_12V", "LM5176PWP", 10.5, 30.0, 12.0, 8.0, 76.0, 84.0, 0.90, 300.0, 4.7, 20.9),
     Stage("MODEM_3V8", "LM61460RJR", 10.5, 30.0, 3.8, 6.0, 12.0, 20.0, 0.90, 400.0, 4.7, 15.2),
     Stage("WIFI_3V3", "LM61440RJR", 10.5, 30.0, 3.3, 4.0, 9.0, 10.0, 0.90, 400.0, 4.7, 15.2),
@@ -159,8 +159,8 @@ def validate_controlled_artifacts(checks: list[bool]) -> None:
     checks.append(
         check(
             "Power-Regulators production BOM",
-            len(rows) == 150 and complete and key_parts_ok,
-            f"{len(rows)} rows (expected 150); all MPN/footprint fields complete; controlled power parts agree",
+            len(rows) == 151 and complete and key_parts_ok,
+            f"{len(rows)} rows (expected 151); all MPN/footprint fields complete; controlled power parts agree",
         )
     )
 
@@ -202,7 +202,7 @@ def main() -> int:
             )
 
     feedback = (
-        ("SYS_5V15", 5.15, actual_output(0.8, 24.0, 4.42)),
+        ("SYS_4V0", 4.0, actual_output(0.8, 20.0, 4.99)),
         ("AUX_12V", 12.0, actual_output(0.8, 280.0, 20.0)),
         ("MODEM_3V8", 3.8, actual_output(1.0, 100.0, 35.7)),
         ("WIFI/NET/LOGIC_3V3", 3.3, actual_output(1.0, 100.0, 43.2)),
@@ -220,8 +220,8 @@ def main() -> int:
         )
 
     pol_specs = (
-        ("PCIE_1V0", 5.15, 1.0, 2.0),
-        ("LOGIC_1V8", 5.15, 1.8, 1.5),
+        ("PCIE_1V0", 4.0, 1.0, 2.0),
+        ("LOGIC_1V8", 4.0, 1.8, 1.5),
     )
     for rail, vin, vout, rating_a in pol_specs:
         ripple = buck_ripple(vin, vout, 2.2, 2200.0)
@@ -247,7 +247,7 @@ def main() -> int:
     sys_uvlo_off = sys_uvlo_on - 69.8e3 * 10e-6
     checks.append(
         check(
-            "SYS_5V15 UVLO window",
+            "SYS_4V0 UVLO window",
             sys_uvlo_on < 10.5 and sys_uvlo_off < sys_uvlo_on,
             f"{sys_uvlo_on:.2f} V typical on / {sys_uvlo_off:.2f} V typical off",
         )

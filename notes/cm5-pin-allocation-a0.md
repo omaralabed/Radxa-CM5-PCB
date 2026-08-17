@@ -139,21 +139,23 @@ bus-level resource allocation itself is locked.
 ## Power And Service Pins
 
 - Connect all six U13-A `VCC_SYSIN` pins: 77, 79, 81, 83, 85, and 87.
+- Drive those six pins from `SYS_4V0`; the nominal calculated setpoint is
+  4.006 V. This follows the Radxa carrier design note's 4 V recommendation for
+  RK806 efficiency and peak performance.
 - Set U13-A pin 78 `GPIO_VREF` to the selected 3.3 V I/O domain. Do not expose
   any assigned CM5 GPIO to 5 V.
-- U13-B pin 106 `5V_HDMI` follows the official rule: it may be no-connect when
-  `VCC_SYSIN` is a 5 V-class input, but requires a 5 V source when CM5 input is
-  below 5 V. Keep a controlled DNP/link option until the CM5 input setpoint and
-  tolerance are formally verified.
+- U13-B pin 106 `5V_HDMI` receives `IO_5V0` because `VCC_SYSIN` is below 5 V.
+  The same 4.984 V rail supplies separately fused HDMI source 5 V and USB-touch
+  VBUS branches.
 - Keep U13-A pins 92 (`RESET_L`), 93 (`SARADC_VIN0_BOOT`), and 99 (`PWRON_L`)
   accessible internally for bring-up and recovery. They are not top-panel
   controls.
 - J1 pin 26 (`SARADC_VIN1_KEY/RECOVERY`) remains an internal service input.
 
-The existing 5.15 V target is not released solely by this pin table. Confirm
-the complete allowed `VCC_SYSIN` range, regulator tolerance, remote-sense
-overshoot, hot-plug transient, and CM5 connector drop before fixing the final
-setpoint.
+Bench qualification must still confirm regulator tolerance, remote-sense
+overshoot, hot-plug transient, CM5 connector drop, and full-load stability.
+The schematic nominal is locked at 4.006 V; changing it requires a new CM5
+power and HDMI-pin audit.
 
 ## Schematic Integration Actions
 
@@ -175,5 +177,5 @@ setpoint.
 
 This A0 allocation is suitable for continuing schematic capture. It is not a
 fabrication release. Close the conditional items in the workbook, complete the
-monitor USB2 touch test, verify CM5 input-voltage limits, and run ERC plus a
+monitor USB2 touch test, verify the 4 V CM5 input rail under load, and run ERC plus a
 net-by-net connector audit before layout begins.

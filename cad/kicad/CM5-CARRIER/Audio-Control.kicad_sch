@@ -12450,7 +12450,7 @@
 		)
 		(uuid "136be3e4-70b4-5051-af2a-35b373768ca9")
 	)
-	(label "SYS_5V15"
+	(label "SYS_4V0"
 		(at 137.16 697.23 0.0000)
 		(effects
 			(font
@@ -12530,7 +12530,7 @@
 		)
 		(uuid "01245f27-a95c-5634-b5a2-0650a5950bf3")
 	)
-	(label "SYS_5V15"
+	(label "SYS_4V0"
 		(at 80.01 760.73 0.0000)
 		(effects
 			(font
@@ -13630,7 +13630,7 @@
 		)
 		(uuid "e8e1f0e0-9e7d-5cf9-a27e-b6d4f96f96d9")
 	)
-	(label "SYS_5V15"
+	(label "SYS_4V0"
 		(at 80.01 825.5 0.0000)
 		(effects
 			(font

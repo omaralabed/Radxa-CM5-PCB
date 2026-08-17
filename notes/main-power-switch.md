@@ -74,6 +74,6 @@ the harness outside the guarded AC mains zone.
 3. Unplug J204 and verify the power selector fails OFF.
 4. With the switch ON and backup valid, remove and restore primary 24 V; confirm
    no CM5 reset, audio mute, network reset, or display blink.
-5. Scope `PROTECTED_RAW`, `SYS_5V15`, `SHDN_MAIN`, `SHDN_PRE`, and CM5 reset.
+5. Scope `PROTECTED_RAW`, `SYS_4V0`, `IO_5V0`, `SHDN_MAIN`, `SHDN_PRE`, and CM5 reset.
 6. Require an orderly software shutdown before the operator moves the rocker to
    OFF to protect writable eMMC data.

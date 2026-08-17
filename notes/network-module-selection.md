@@ -77,7 +77,8 @@ hardware revision.
 
 ## Wi-Fi AP Selection
 
-Primary validation module:
+Locked Rev A module, with production release gated by
+`docs/qualification/wifi-aw7915-np1-a1.md`:
 
 - AsiaRF `AW7915-NP1`
 - MediaTek `MT7915AN`
@@ -88,6 +89,8 @@ Primary validation module:
   radio chains
 - Supply: 3.3 V, 3 A recommended; design for 9 W thermal/power margin
 - Linux driver support required in target Radxa kernel/OpenWrt image
+- Vendor page and orderability checked 2026-08-16; controlled procurement line
+  is recorded in `docs/radio_module_bom_a1.csv`
 
 Why this over the Radxa A8:
 
@@ -228,6 +231,7 @@ placement rules are in `rev-a-hardware-architecture.md`.
 - Diodes PI7C9X2G608GP: https://www.diodes.com/part/view/PI7C9X2G608GP
 - Microchip LAN7430: https://www.microchip.com/en-us/product/lan7430
 - AsiaRF AW7915-NP1: https://asiarf.com/product/wifi-6-11ax-4t4r-mini-pcie-module-mt7915-aw7915-np1/
+- AsiaRF AW7915-NP1 datasheet: https://asiarf.com/wp-content/uploads/2026/06/260701_Datasheet_AW7915-NP1_V1-1P.pdf
 - Molex 0679101002 host socket: https://www.digikey.com/en/products/detail/molex/0679101002/2405684
 - Linux Wireless MediaTek driver support: https://wireless.docs.kernel.org/en/latest/en/users/drivers/mediatek.html
 - Radxa Wireless A8: https://www.radxa.com/products/accessories/wireless-module-a8/

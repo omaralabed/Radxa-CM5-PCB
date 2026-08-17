@@ -1,4 +1,4 @@
-ERC report (2026-08-16T18:36:10, Encoding UTF8)
+ERC report (2026-08-16T22:23:14, Encoding UTF8)
 Report includes: Errors, Warnings
 
 ***** Sheet /
@@ -28,7 +28,7 @@ Report includes: Errors, Warnings
     @(410.21 mm, 580.39 mm): Label 'WIFI_3V3_PG'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(425.45 mm, 97.79 mm): Label 'SYS_5V15_PG'
+    @(425.45 mm, 97.79 mm): Label 'SYS_4V0_PG'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
     @(549.91 mm, 612.14 mm): Label 'PCIE1V0_EN'
@@ -68,8 +68,11 @@ Report includes: Errors, Warnings
 [isolated_pin_label]: Label connected to only one pin
     ; warning
     @(1125.22 mm, 623.57 mm): Label 'FAN_AUX_12V'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(1169.67 mm, 623.57 mm): Label 'DISPLAY_IO_12V'
 
- ** ERC messages: 22  Errors 0  Warnings 22
+ ** ERC messages: 23  Errors 0  Warnings 23
 
  ** Ignored checks:
     - Global label only appears once in the schematic

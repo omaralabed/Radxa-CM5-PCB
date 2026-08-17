@@ -15,10 +15,10 @@
 | `CM5-Core-Allocated.kicad_sch` | Exact dual 100-pin CM5 mezzanine connectors plus 100-pad underside contact field, 76 assigned functions, VCC_SYSIN, power-on, reset, recovery, boot, GPIO reference, and debug UART |
 | `Network-PCIe.kicad_sch` | Native WAN1, PI7C9X2G608GP in 606 mode, three LAN7430 PCIe endpoints, four Wurth 74991114412 1 GbE MagJacks, PHY-side ESD, and the AW7915-NP1 4T4R interface through a Molex 0679101002 Mini PCIe socket |
 | `WWAN-SIM.kicad_sch` | TE 2199230-3 M.2 B-key socket, USB3 and USB2, modem control signals, supply filtering/protection, FSA2567 dual-SIM mux, and two nano-SIM holders |
-| `Display-Harness.kicad_sch` | Molex 208658-1001 HDMI, Wurth 692122030100 USB-A touch, ESD, and 12 V / 2.5 A monitor harness |
+| `Display-Harness.kicad_sch` | Molex 208658-1001 HDMI, Wurth 692122030100 USB-A touch, ESD, dedicated 4.984 V / 2 A display-interface rail, and 12 V / 2.5 A monitor harness |
 | `Audio-Control.kicad_sch` | I2S0/TDM LVDS transport with 3.3 V PCA9517A bus isolation, explicit 3.3 V/1.8 V I2S1 and I2C translation, ES8316 codec enable/decoupling, TPA6132A2 at 0 dB, Kycon CTIA map, one headset-ground bond, and dedicated clean rails |
 | `Thermal-IO.kicad_sch` | PCA9306 control-bus translation, two TCA9535 expanders, EMC2305 fan controller, three TMP117 temperature zones, status outputs, and four independently controlled PWM/tach fan headers; intake/exhaust are Delta `THA0412AD-TZW3` at 1 kHz PWM |
-| `Power-Regulators-A1.kicad_sch` | Protected raw input from floor-mounted PWR-SELECT, `SYS_5V15`, revised 8 A `AUX_12V` starting design, dedicated `FAN_CPU_12V` and `FAN_AUX_12V` branches, modem/Wi-Fi/network/logic rails, point-of-load rails, display/audio branches, isolated bipolar audio power, clean AKM/headset LDOs, sequencing, and rail test points |
+| `Power-Regulators-A1.kicad_sch` | Protected raw input from floor-mounted PWR-SELECT, `SYS_4V0`, revised 8 A `AUX_12V` starting design, dedicated `FAN_CPU_12V` and `FAN_AUX_12V` branches, modem/Wi-Fi/network/logic rails, point-of-load rails, display/audio branches, isolated bipolar audio power, clean AKM/headset LDOs, sequencing, and rail test points |
 | `../AUDIO-8X8/Audio-8x8.kicad_sch` | Eight XLR inputs, eight XLR outputs, direct shield-to-chassis strategy, and one controlled chassis-to-AGND RF/static bond |
 | `../AUDIO-8X8/Audio-TDM-Clock.kicad_sch` | 30-conductor carrier harness, four terminated SN65LVDT2 clock/data receivers, one SN65LVDS1 ADC-return driver, reset/mute defaults, and the locked 48 kHz TDM256 clock contract |
 | `../AUDIO-8X8/AK5558-ADC.kicad_sch` | Exact AK5558VN 64-pin capture, eight differential inputs, references and bypassing, slave-mode/TDM256 straps, and I2C address `0x10` |
@@ -46,7 +46,8 @@
 | Fan controller | Microchip EMC2305-1-AP-TR |
 | Enclosure fans | Delta THA0412AD-TZW3, two devices; independent 1 kHz PWM/tach |
 | Temperature sensors | TI TMP117, three devices |
-| 5.15 V system converter | TI LM5146RGYR with external MOSFETs |
+| 4.006 V CM5 system converter | TI LM5146RGYR with external MOSFETs |
+| 4.984 V display-interface converter | TI TPS62913RPUT |
 | 12 V buck-boost | TI LM5176PWP |
 | Radio/network direct bucks | TI LM61460RJR and LM61440RJR |
 | Low-noise point-of-load bucks | TI TPS62913RPUT |

@@ -18,6 +18,9 @@ The touchscreen will be mounted in the Pelican iM2300 lid.
   no dedicated electronic display eFuse/current limiter. Keep this branch at
   12 V / 2.5 A for the monitor's 25 W / 2.08 A nominal rating, then verify
   startup and full-brightness current on the received sample.
+- Dedicated `IO_5V0` from a TPS62913 buck supplies CM5 U13-B pin 106, HDMI
+  source 5 V, and USB-touch VBUS. It is fed from a separate fused
+  `DISPLAY_IO_12V` branch and does not add an electronic monitor-power eFuse.
 - Lid-to-base `H03` bundle for HDMI, USB touch, and display power. Start each
   cable at 1000 +/- 25 mm finished length for the first mechanical article.
 
@@ -52,6 +55,8 @@ The touchscreen will be mounted in the Pelican iM2300 lid.
   at the panel's hinge edge. Do not use an enclosed hole farther inside the
   top panel for this harness.
 - Add USB ESD protection and current limiting if the port/header supplies power.
+- Complete `docs/qualification/display-touch-usb2-a1.md` before interface
+  release. The carrier intentionally leaves USB SuperSpeed contacts unconnected.
 - Confirm whether the touchscreen needs separate display power beyond USB.
 - Transport closure is qualified with the Gold-mount battery removed and all
   eight released compact hinged antennas installed and folded inboard. The
