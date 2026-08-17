@@ -35,7 +35,7 @@ The factory cut drawing can be released only after:
 | Intake filter guard | 1 | Qualtek `09150-F/30` | Selected for intake; 40 mm frame, 30 PPI media |
 | Exhaust guard | 1 | Qualtek `09150-G` | Selected 40 mm finger guard; pair with a custom formed 5052-H32 downward splash hood |
 | Modem fan | 1 | Delta `AFB0412SHB-SP04` | Selected 40 x 40 x 15 mm, 12 V, four-wire PWM/tach fan; exact modem heatsink remains module-dependent |
-| Nano-SIM holders | 2 | Wurth `693043020611` | Selected electrically; requires vertical service daughterboard |
+| Nano-SIM holders | 2 | Wurth `693043020611` | Selected; horizontal SIM-SERVICE daughterboard plugs directly into carrier through 2.5 mm Hirose DF40 pair |
 | Wi-Fi RF pigtails | 4 | TE `2016695-4` | Conditional on AW7915-NP1 IPEX receptacle and 200 mm route check |
 | Cellular RF pigtails | 4 | TE `2016694-4` | Conditional on modem receptacle and 200 mm route check |
 | Wi-Fi fold-down antennas | 4 | Taoglas `GW.05.0153` | Controlled validation candidate; 62.3 x 10 mm, hinged RP-SMA(M), preliminary folded height 29.4 mm; sample closure and RF test required |
@@ -97,11 +97,12 @@ custom frame, not by PCB laminate, standoffs, solder joints, or `J203`.
 
 ### SIM orientation
 
-Wurth `693043020611` is a right-angle, push-pull Nano-SIM holder. On a
-horizontal carrier PCB it accepts the card from the side, so it cannot align
-directly with the two top-facing slots in the panel drawing. Use a small
-vertical SIM service daughterboard with two holders, ESD protection, card
-labels, and a keyed cable/board-to-board connection to the carrier.
+Wurth `693043020611` is a push-pull Nano-SIM holder with card travel parallel
+to its PCB. The two holders live on a 76 x 40 mm horizontal SIM-SERVICE
+daughterboard immediately below the panel guide. Its B.Cu Hirose
+`DF40HC(2.5)-20DS-0.4V(51)` receptacle plugs directly into carrier
+`DF40C-20DP-0.4V(51)` J702. Four 2.50 mm precision supports carry card and
+vibration loads; there is no SIM cable harness.
 
 ### C14 current marking
 

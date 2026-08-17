@@ -1,4 +1,4 @@
-ERC report (2026-08-17T08:37:12, Encoding UTF8)
+ERC report (2026-08-17T15:46:55, Encoding UTF8)
 Report includes: Errors, Warnings
 
 ***** Sheet /
@@ -25,6 +25,12 @@ Report includes: Errors, Warnings
     @(132.08 mm, 102.87 mm): Global Label 'PCIE_UP_REFCLK_P'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
+    @(219.71 mm, 96.52 mm): Global Label 'WAN1_LED0'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(219.71 mm, 99.06 mm): Global Label 'WAN1_LED1'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
     @(219.71 mm, 519.43 mm): Global Label 'PCIE_1V0_PG'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
@@ -35,12 +41,6 @@ Report includes: Errors, Warnings
 [isolated_pin_label]: Label connected to only one pin
     ; warning
     @(229.87 mm, 365.76 mm): Global Label 'PCIE_UP_CLKREQ_N'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(255.27 mm, 90.17 mm): Global Label 'WAN1_LED0'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(255.27 mm, 95.25 mm): Global Label 'WAN1_LED1'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
     @(284.48 mm, 406.40 mm): Global Label 'PCIE_UP_TX_P_CM5'

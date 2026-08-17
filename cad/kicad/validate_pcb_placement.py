@@ -40,7 +40,14 @@ BOARD_CONTRACTS = {
         "schematic": ROOT / "cad/kicad/CM5-CARRIER/CM5-Carrier.kicad_sch",
         "size": (166.0, 268.0),
         "layers": 10,
-        "schematic_footprints": 507,
+        "schematic_footprints": 504,
+    },
+    "SIM-SERVICE": {
+        "board": ROOT / "cad/kicad/SIM-SERVICE/Sim-Service.kicad_pcb",
+        "schematic": ROOT / "cad/kicad/SIM-SERVICE/Sim-Service.kicad_sch",
+        "size": (76.0, 40.0),
+        "layers": 4,
+        "schematic_footprints": 5,
     },
     "PWR-SELECT": {
         "board": ROOT / "cad/kicad/PWR-SELECT/PowerSelector.kicad_pcb",
@@ -135,7 +142,7 @@ def side_contract(
     internal = [item for reference, item in footprints.items() if reference not in controlled]
     if name == "AUDIO-8X8":
         return all(item.GetLayer() == pcbnew.B_Cu for item in internal)
-    if name == "CM5-CARRIER":
+    if name in {"CM5-CARRIER", "SIM-SERVICE"}:
         return all(item.GetLayer() == pcbnew.F_Cu for item in internal)
     sides = {item.GetLayer() for item in internal}
     return sides == {pcbnew.F_Cu, pcbnew.B_Cu}
@@ -150,7 +157,12 @@ def source_footprint(identifier: str) -> pcbnew.FOOTPRINT:
     return footprint
 
 
-def pad_signature(footprint: pcbnew.FOOTPRINT) -> tuple:
+def pad_signature(
+    footprint: pcbnew.FOOTPRINT,
+    *,
+    mirror_y: bool = False,
+    include_layers: bool = True,
+) -> tuple:
     """Return all mating-relevant local pad and hole geometry."""
     records = []
     for pad in footprint.Pads():
@@ -161,8 +173,12 @@ def pad_signature(footprint: pcbnew.FOOTPRINT) -> tuple:
             (
                 pad.GetNumber(),
                 round(pcbnew.ToMM(relative.x), 6),
-                round(pcbnew.ToMM(relative.y), 6),
-                round(pad.GetFPRelativeOrientation().AsDegrees() % 360.0, 6),
+                round((-1.0 if mirror_y else 1.0) * pcbnew.ToMM(relative.y), 6),
+                round(
+                    ((-1.0 if mirror_y else 1.0) * pad.GetFPRelativeOrientation().AsDegrees())
+                    % 360.0,
+                    6,
+                ),
                 round(pcbnew.ToMM(size.x), 6),
                 round(pcbnew.ToMM(size.y), 6),
                 round(pcbnew.ToMM(drill.x), 6),
@@ -170,7 +186,7 @@ def pad_signature(footprint: pcbnew.FOOTPRINT) -> tuple:
                 int(pad.GetShape()),
                 int(pad.GetDrillShape()),
                 int(pad.GetAttribute()),
-                pad.GetLayerSet().FmtHex(),
+                pad.GetLayerSet().FmtHex() if include_layers else "MIRRORED_SIDE",
             )
         )
     return tuple(sorted(records))
@@ -185,7 +201,15 @@ def validate_source_pad_geometry(
     for reference, (_, _, _, _, identifier) in expected.items():
         if reference in excluded:
             continue
-        if pad_signature(footprints[reference]) != pad_signature(source_footprint(identifier)):
+        actual = footprints[reference]
+        source = source_footprint(identifier)
+        if actual.GetLayer() == pcbnew.B_Cu and source.GetLayer() != pcbnew.B_Cu:
+            if pad_signature(actual, include_layers=False) != pad_signature(
+                source, mirror_y=True, include_layers=False
+            ):
+                return False
+            continue
+        if pad_signature(actual) != pad_signature(source):
             return False
     return True
 
@@ -194,6 +218,7 @@ def support_contract() -> dict[str, dict[str, tuple[float, float]]]:
     supports: dict[str, dict[str, tuple[float, float]]] = {
         "AUDIO-8X8": {},
         "CM5-CARRIER": {},
+        "SIM-SERVICE": {},
     }
     with SUPPORT_CSV.open(newline="") as stream:
         for row in csv.DictReader(stream):
@@ -201,6 +226,12 @@ def support_contract() -> dict[str, dict[str, tuple[float, float]]]:
                 float(row["x_board_mm"]),
                 float(row["y_board_mm"]),
             )
+    # SIM-SERVICE is a horizontal daughterboard directly above the carrier.
+    # These four holes align with CM5-CARRIER SD1-SD4 through 2.50 mm sleeves.
+    supports["SIM-SERVICE"] = {
+        "S1": (5.5, 5.5), "S2": (70.5, 5.5),
+        "S3": (27.0, 34.5), "S4": (49.0, 34.5),
+    }
     return supports
 
 
@@ -275,15 +306,28 @@ def fixed_audio_contract() -> dict[str, tuple[float, float, float, str, str]]:
 
 def fixed_carrier_contract() -> dict[str, tuple[float, float, float, str, str]]:
     return {
-        "J610": (39.715, 32.700, 0.0, "F.Cu", "CM5Carrier:T_Wurth_WE-RJ45LAN_74991114412"),
-        "J611": (109.715, 32.700, 0.0, "F.Cu", "CM5Carrier:T_Wurth_WE-RJ45LAN_74991114412"),
-        "J612": (39.715, 66.700, 0.0, "F.Cu", "CM5Carrier:T_Wurth_WE-RJ45LAN_74991114412"),
-        "J613": (109.715, 66.700, 0.0, "F.Cu", "CM5Carrier:T_Wurth_WE-RJ45LAN_74991114412"),
-        "J702": (85.000, 120.000, 0.0, "F.Cu", "CM5Carrier:J_Wurth_WR-CRD_693043020611"),
-        "J703": (134.000, 120.000, 0.0, "F.Cu", "CM5Carrier:J_Wurth_WR-CRD_693043020611"),
+        "J610": (34.000, 36.675, 0.0, "F.Cu", "CM5Carrier:Bel_V8BR_1AX1_GH"),
+        "J611": (104.000, 36.675, 0.0, "F.Cu", "CM5Carrier:Bel_V8BR_1AX1_GH"),
+        "J612": (34.000, 70.675, 0.0, "F.Cu", "CM5Carrier:Bel_V8BR_1AX1_GH"),
+        "J613": (104.000, 70.675, 0.0, "F.Cu", "CM5Carrier:Bel_V8BR_1AX1_GH"),
+        "J702": (
+            89.500, 96.000, 0.0, "F.Cu",
+            "CM5Carrier:Hirose_DF40C-20DP-0.4V_2x10-1MP_P0.4mm",
+        ),
         "J501": (127.000, 245.000, 90.0, "B.Cu", "CM5Carrier:Radxa_CM5_U33A_DF40C_100DS_OFFICIAL"),
         "J502": (127.000, 245.000, 90.0, "B.Cu", "CM5Carrier:Radxa_CM5_U33B_DF40C_100DS_OFFICIAL"),
         "J503": (152.415, 233.595, 180.0, "B.Cu", "CM5Carrier:Radxa_CM5_J24_DF40C_100DS_OFFICIAL"),
+    }
+
+
+def fixed_sim_service_contract() -> dict[str, tuple[float, float, float, str, str]]:
+    return {
+        "J1": (
+            38.000, 8.000, 0.0, "B.Cu",
+            "CM5Carrier:Hirose_DF40HC(2.5)-20DS-0.4V_2x10_P0.4mm",
+        ),
+        "J2": (13.500, 32.000, 0.0, "F.Cu", "CM5Carrier:J_Wurth_WR-CRD_693043020611"),
+        "J3": (62.500, 32.000, 0.0, "F.Cu", "CM5Carrier:J_Wurth_WR-CRD_693043020611"),
     }
 
 
@@ -337,7 +381,8 @@ def validate_board(name: str, contract: dict, supports: dict[str, tuple[float, f
     fixed = (
         fixed_audio_contract()
         if name == "AUDIO-8X8"
-        else fixed_carrier_contract() if name == "CM5-CARRIER" else {}
+        else fixed_carrier_contract() if name == "CM5-CARRIER"
+        else fixed_sim_service_contract() if name == "SIM-SERVICE" else {}
     )
     expected_locked = set(fixed) | set(supports)
     actual_locked = {reference for reference, item in footprints.items() if item.IsLocked()}
@@ -372,7 +417,7 @@ def validate_board(name: str, contract: dict, supports: dict[str, tuple[float, f
         check(
             f"{name} assembly side",
             side_contract(name, footprints, expected_locked),
-            "audio B.Cu; carrier F.Cu; selector split F.Cu/B.Cu",
+            "audio B.Cu; carrier/service F.Cu; selector split F.Cu/B.Cu",
         ),
         check(
             f"{name} same-side courtyards",

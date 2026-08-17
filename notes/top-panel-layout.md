@@ -107,8 +107,8 @@ Left audio zone:
 - AUDIO-8X8 and CM5-CARRIER use the controlled independent support patterns
   `A1-A6` and `C1-C6` from the A2 mechanical release package.
 - The four RJ45 bodies require a zero-preload panel capture bracket. The
-  headset and dual SIM interfaces use four-M3 supported service daughterboards
-  with panel guides/bezels and short flexible carrier harnesses.
+  headset uses its supported service assembly. The dual-SIM interface uses a
+  four-M3 supported horizontal daughterboard with a direct Hirose DF40 socket.
 
 Network/radio/service zone:
 
@@ -117,9 +117,9 @@ Network/radio/service zone:
 - `LAN1`
 - `LAN2`
 - Cellular SIM/eSIM service access if panel-accessible
-- Two top-facing Nano-SIM positions require a small vertical service
-  daughterboard. The Wurth `693043020611` right-angle holder cannot sit flat on
-  the horizontal main carrier and accept a card through the top panel.
+- Two top-facing Nano-SIM positions are carried on the 76 x 40 mm horizontal
+  SIM-SERVICE board directly above the carrier. The panel guide aligns each
+  card path with the Wurth `693043020611` mouth.
 - USB recovery connector remains internal and is not exposed on the top panel
 - Debug UART remains on an internal keyed 3.3 V service header
 - Status LEDs

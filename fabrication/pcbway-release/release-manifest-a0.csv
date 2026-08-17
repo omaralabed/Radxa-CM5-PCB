@@ -50,6 +50,6 @@ M009,mechanical,YES,MISSING,04-mechanical/inspection/IM2300-Mechanical-FAI.pdf,F
 H001,harness-test,YES,OPEN,../harnesses/H01-PSU-24V.md,Controlled prototype work instruction,Final released length and connector retention still required
 H002,harness-test,YES,OPEN,../harnesses/H02-PSU-AC.md,Controlled prototype work instruction,Final released length PE routing and touch-safe guard still required
 H003,harness-test,YES,OPEN,../harnesses/H03-Lid-Display-Bundle.md,Controlled prototype work instruction,Final length follows full lid and 300 mm panel-lift test
-H004,harness-test,YES,MISSING,05-harness-test/Interboard-and-RF-Harnesses.pdf,Released TDM RF fan sensor switch SIM and service harness set,Include pin wire connector length label and test tables
+H004,harness-test,YES,MISSING,05-harness-test/Interboard-and-RF-Harnesses.pdf,Released TDM RF fan sensor switch and service harness set; dual SIM is direct socketed board-to-board,Include pin wire connector length label and test tables plus DF40 mate inspection
 H005,harness-test,YES,MISSING,05-harness-test/Final-System-Acceptance.pdf,Complete electrical audio RF network thermal vibration closure and safety ATP,Numeric pass fail limits required
 H006,harness-test,YES,MISSING,05-harness-test/Firmware-and-Programming.zip,Versioned boot firmware device tree fan policy telemetry service and checksums,Include programming and recovery steps

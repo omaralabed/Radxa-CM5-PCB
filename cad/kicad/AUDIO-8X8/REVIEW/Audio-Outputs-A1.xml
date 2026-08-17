@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/Users/viewvision/Desktop/Radxa CM5 PCB/cad/kicad/AUDIO-8X8/Audio-Outputs.kicad_sch</source>
-    <date>2026-08-17T08:37:37</date>
+    <date>2026-08-17T15:47:22</date>
     <tool>Eeschema 10.0.5-rc1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -42,7 +42,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>237d98d4-c26f-5fce-aa90-f2962d7312e2</tstamps>
+      <tstamps>79a39f4a-f36a-5bd0-b148-5e05d0e40d59</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -70,7 +70,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>d7fc5f79-6880-5679-903b-e0fd375396ac</tstamps>
+      <tstamps>cd2d2427-6308-59f2-8a06-299d51df890b</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -98,7 +98,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>88d147ac-40db-538c-b461-2e6ac7ee8f89</tstamps>
+      <tstamps>54360af2-b993-514b-910e-d89915e2082f</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -126,7 +126,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>33943251-35a6-5303-a9f4-5dbf5fb8ea8e</tstamps>
+      <tstamps>d06493e1-635f-5206-bfa3-9613e4c4965c</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -154,7 +154,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>4c437a62-facf-5775-9ad1-ba0020af1dbd</tstamps>
+      <tstamps>ad4422fb-3781-5bfc-ae6f-4818bdbf943a</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -182,7 +182,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>c3b3b4b0-13fc-5390-907d-f210ff87f360</tstamps>
+      <tstamps>d951d697-bd2c-5c11-a88f-ed504db77257</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -210,7 +210,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>871a0226-6cbf-5eb6-82d8-f1e3f301f6b1</tstamps>
+      <tstamps>70174f1f-4b30-5eab-b49b-079298f6f2ff</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -238,7 +238,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>c3e813cb-ee03-5c0f-9138-ed01efca2bf5</tstamps>
+      <tstamps>4e639f40-a9ab-5726-ab9e-b52e004da3bc</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -266,7 +266,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>56b961ad-b252-5e94-83b2-5c0f7c69027e</tstamps>
+      <tstamps>33943251-35a6-5303-a9f4-5dbf5fb8ea8e</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -294,7 +294,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>4080f91d-b34c-541b-bb87-ae96394a19a5</tstamps>
+      <tstamps>4c437a62-facf-5775-9ad1-ba0020af1dbd</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -322,7 +322,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>4e639f40-a9ab-5726-ab9e-b52e004da3bc</tstamps>
+      <tstamps>7e83537e-82aa-5975-8640-9fe8279b49d3</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -350,7 +350,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>e1a9271e-9896-5f7b-9317-9abe141da97f</tstamps>
+      <tstamps>8cd3f95e-4eab-500e-8460-8ac550206443</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -378,7 +378,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>406cb316-8580-5b61-a95d-4cc5a1b165d9</tstamps>
+      <tstamps>e516a4f5-bb8c-5532-a58b-43abb21cedb7</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -406,7 +406,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>75c7f927-6f13-5d4f-9bac-944bce141539</tstamps>
+      <tstamps>b3bd7fc4-14ee-5563-9298-efb9aad442d1</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -434,7 +434,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>b3e2478f-5b55-58b6-bc3f-5a354e9bba60</tstamps>
+      <tstamps>910a2455-64e6-585a-963d-0128504701b7</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -462,7 +462,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>a224f11a-4cc1-5624-8a0a-c9e5ed271a52</tstamps>
+      <tstamps>59c83fd3-9394-52fb-95ba-f517c2d33ff3</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -490,7 +490,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>bd98ad9f-112a-52a6-9f95-2993ec4ef617</tstamps>
+      <tstamps>55fd9787-22fa-52ce-ae6b-4192f696d072</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -518,7 +518,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>46dd345c-d49d-5b55-8e8c-d6f42ca40d22</tstamps>
+      <tstamps>3854fc6c-6be0-5e93-b7d4-31431fa17c96</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -546,7 +546,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>402c128b-9ba7-5c36-b51c-c0352a12969a</tstamps>
+      <tstamps>e0051e0a-106b-57da-9e63-21e66dbee70e</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -574,7 +574,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>70332298-0588-5d70-b7ed-fb3af00acac6</tstamps>
+      <tstamps>b3e2478f-5b55-58b6-bc3f-5a354e9bba60</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -602,7 +602,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>ae0a4810-5c54-5648-adb9-0e0059d5e7ae</tstamps>
+      <tstamps>a224f11a-4cc1-5624-8a0a-c9e5ed271a52</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -630,7 +630,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>e0051e0a-106b-57da-9e63-21e66dbee70e</tstamps>
+      <tstamps>1c3462b4-77b2-5be3-b38c-707abcf7f7cf</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -658,7 +658,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>9cb52069-7fb4-5970-a7f1-73ae96d3ede7</tstamps>
+      <tstamps>c90b2cfd-e1c0-5e6e-9c9b-875c7d4fcc03</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -686,7 +686,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>99c7f85d-a3c9-5d50-9081-72dbb337cb23</tstamps>
+      <tstamps>55710408-c4a1-56e1-852e-7822e4025240</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -714,7 +714,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>f397b37a-71ff-5e26-ad1a-fc8f7bb1562f</tstamps>
+      <tstamps>b1f4b203-9e13-5760-8ba7-cb73186c01d8</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -742,7 +742,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>01db78e7-faed-55a4-aaa0-c0e3df46152e</tstamps>
+      <tstamps>ef9c8598-d189-5f2b-a1ad-1214e58e3b25</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -770,7 +770,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>5942512b-f46b-5376-85c4-0080212d21b0</tstamps>
+      <tstamps>6f35fa38-a66e-5dfc-aac1-034aa53e747d</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -798,7 +798,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>cf45d45d-3f52-574d-94d0-22fa3b2c095f</tstamps>
+      <tstamps>37b16d18-2535-5cce-909a-6f1288c0058a</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -826,7 +826,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>41ce3f23-d9f3-581d-b123-219459102002</tstamps>
+      <tstamps>91990fee-379e-5e28-9032-9bca8eb61175</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -854,7 +854,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>0588be9f-8df8-5b61-8cc2-972c5736ef13</tstamps>
+      <tstamps>0b80e9d4-5a1f-521c-adff-acdc013b9991</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -882,7 +882,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>cc7b2581-785e-50b1-b0f4-ff3bd1018287</tstamps>
+      <tstamps>01db78e7-faed-55a4-aaa0-c0e3df46152e</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -910,7 +910,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>928928d0-3665-5ff8-87f6-49428e1a1595</tstamps>
+      <tstamps>5942512b-f46b-5376-85c4-0080212d21b0</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -938,7 +938,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>0b80e9d4-5a1f-521c-adff-acdc013b9991</tstamps>
+      <tstamps>d53d4dc5-0cf4-547f-95f6-570afbe36a0f</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -966,7 +966,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>38bc276e-0490-5c8d-ad8f-1b39f7d48574</tstamps>
+      <tstamps>13c2e72a-298c-5338-9554-1ff0ad81ee5b</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -994,7 +994,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>01d96332-e36b-583d-89ca-c6b58701f515</tstamps>
+      <tstamps>b4af5cda-da77-56fb-bce4-f517ac0a62b6</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1022,7 +1022,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>f2086be4-d75d-55c2-88f7-0297a19c0a0d</tstamps>
+      <tstamps>df7d96cc-5777-5d97-a475-6c6e7fa58912</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1050,7 +1050,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>b4bed83e-4f08-5b38-a12b-6a1417a394da</tstamps>
+      <tstamps>23112911-842f-58f1-93d9-3a6b147fabc9</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1078,7 +1078,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>21c0fb6e-ba76-55ff-8f45-9aab7151dc71</tstamps>
+      <tstamps>1066b219-0d2c-5d12-aa0c-7de4d9b55f09</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1106,7 +1106,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>048c8ab0-49ae-5f6c-abe7-56bf04f13f8f</tstamps>
+      <tstamps>6cd9dc30-436b-517a-939f-6248fb272589</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1134,7 +1134,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>1c169eba-e1fe-57da-b039-b4b9fa79cbcb</tstamps>
+      <tstamps>d524cb95-8ee4-5228-88ca-b084eea3cfdc</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1162,7 +1162,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>b219e1e0-99ae-5757-ac67-da51083a0966</tstamps>
+      <tstamps>60189f67-5264-5dae-9f4b-747239a06fac</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1190,7 +1190,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>ff58a9b5-d54e-5f14-92e5-99c7291b1eb5</tstamps>
+      <tstamps>b4bed83e-4f08-5b38-a12b-6a1417a394da</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1218,7 +1218,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>f16cab8e-da8a-5813-8b9b-8bfcf134e3b6</tstamps>
+      <tstamps>21c0fb6e-ba76-55ff-8f45-9aab7151dc71</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1246,7 +1246,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>60189f67-5264-5dae-9f4b-747239a06fac</tstamps>
+      <tstamps>8493176c-763a-5eae-a6d8-4e77bba9ffd7</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1274,7 +1274,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>a17f4766-6fb7-5ce9-9d07-1295fe8af61b</tstamps>
+      <tstamps>b14c4d8e-7cd3-55b7-bd24-7c10443274a0</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1302,7 +1302,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>92fde1c9-9c4c-5020-8e0d-a75e44168621</tstamps>
+      <tstamps>60ad4dcf-f2fc-5117-8452-26ba958f9313</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1330,7 +1330,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>42d19177-5f60-5b76-86bc-f444798f74fa</tstamps>
+      <tstamps>bbf987ee-b672-582b-be52-448662c62e73</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1358,7 +1358,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>03516d29-a8f1-5c3e-8875-bd686bddf56a</tstamps>
+      <tstamps>d4f9521a-3a35-5d05-a7fd-6c2730aad71f</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1386,7 +1386,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>39b7abdb-9931-5bc8-9435-e2b3156a3f34</tstamps>
+      <tstamps>38759c4a-368a-54f7-8c68-cbaecf81567d</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1414,7 +1414,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>4a2e96a2-a4e8-5b1a-a097-4a9e70ceb482</tstamps>
+      <tstamps>085fc01f-b846-5153-bce4-5851656adecf</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1442,7 +1442,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>145e74a8-c4d0-5387-9c41-5c612a8a3eeb</tstamps>
+      <tstamps>048cc560-c272-5509-a91d-82b0dd0ee15e</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1470,7 +1470,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>a615a068-eae8-5214-b748-8bf050093154</tstamps>
+      <tstamps>be8a9bb9-beec-5b69-90c1-0e1657941031</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1498,7 +1498,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>824929a9-0596-581e-b0aa-11c3effed3ee</tstamps>
+      <tstamps>03516d29-a8f1-5c3e-8875-bd686bddf56a</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1526,7 +1526,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>22244cfb-6460-58ab-8973-625e6eb8316a</tstamps>
+      <tstamps>39b7abdb-9931-5bc8-9435-e2b3156a3f34</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1554,7 +1554,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>be8a9bb9-beec-5b69-90c1-0e1657941031</tstamps>
+      <tstamps>5ecf3137-29f5-5c2d-8ac5-f7f0c3d5d0a3</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1582,7 +1582,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>bdc4053d-00a2-521a-a61c-5b78890d7a11</tstamps>
+      <tstamps>66de0522-0fb6-5ea9-9c4d-dff7c1eadad1</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1610,7 +1610,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>dfbabd0a-f800-54f2-8f97-6b1e9715882c</tstamps>
+      <tstamps>175cd8fc-4e62-5ac0-b1ab-f65848a5472a</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1638,7 +1638,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>27762e60-9223-5628-869f-5fc8b8df3714</tstamps>
+      <tstamps>0e3da47f-5fef-5f46-9f0d-64b829c22407</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1666,7 +1666,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>0ab15993-0efa-5e75-94d6-49abeb5c99c8</tstamps>
+      <tstamps>e892d897-3ae6-5177-80e0-3f80f7bd82b0</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1694,7 +1694,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>f885486b-59c4-5613-b606-b5d3cab0b81d</tstamps>
+      <tstamps>9e018e26-734f-592c-820d-a89bea6407de</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1722,7 +1722,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>19714e53-1cff-5d8a-a984-e70df7c2068d</tstamps>
+      <tstamps>d9043904-6a08-512a-98b3-51dc8de0d393</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1750,7 +1750,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>392f3816-5903-5897-b25e-5fd6be82440f</tstamps>
+      <tstamps>bd196513-3cf5-5381-86d5-c621c0ef1be8</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1778,7 +1778,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>3d038bc8-e2e5-53a2-beca-82a58cf197a8</tstamps>
+      <tstamps>e3d354b4-0a8e-5b03-8a7f-77f3bb6ad943</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1806,7 +1806,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>f676287a-fe5d-53d3-b0b9-6b7a4640b931</tstamps>
+      <tstamps>0ab15993-0efa-5e75-94d6-49abeb5c99c8</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1834,7 +1834,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>26ca97b3-74de-5f3c-b03c-22beb532680e</tstamps>
+      <tstamps>f885486b-59c4-5613-b606-b5d3cab0b81d</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1862,7 +1862,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>e3d354b4-0a8e-5b03-8a7f-77f3bb6ad943</tstamps>
+      <tstamps>214c7724-a225-5829-80b7-c27ec20d8274</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1890,7 +1890,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>1834331a-21c8-5cfd-9616-0eb2abaf2820</tstamps>
+      <tstamps>ec63244b-6abc-5896-8036-58cd5ee9a04e</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1918,7 +1918,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>ba39c690-3dfc-56bd-a840-ec945de80f72</tstamps>
+      <tstamps>2fab25a7-3ca0-5991-a150-d1b628b55ab3</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1946,7 +1946,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>a25477c3-0728-506e-83f2-99db0486a192</tstamps>
+      <tstamps>352709cf-5ab2-57af-a845-2fedc931d03e</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1974,7 +1974,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>2c5fa538-11b4-55bc-8ef6-1bf0e84afd0e</tstamps>
+      <tstamps>3eac501d-2344-5154-a236-d071cb5d7e19</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2002,7 +2002,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>e73e5b3b-8676-505f-8a67-8f5a2de1187a</tstamps>
+      <tstamps>3bbe9029-d5b7-5737-ae7f-4fa67b66aec9</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2030,7 +2030,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>486cbebd-88c4-5930-b4f5-43a2955ed7b8</tstamps>
+      <tstamps>d9ea6989-59b7-5e31-9547-02df868548d2</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2058,7 +2058,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>d9f57b66-352e-552c-927b-8358e9a75733</tstamps>
+      <tstamps>744cb5fa-56f0-5f36-b41b-55b460bb8f87</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2086,7 +2086,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>866cf10b-83a2-56a9-b064-0feef705d4a0</tstamps>
+      <tstamps>c91c858c-a1c4-5fc5-83e7-687e6ed06756</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2114,7 +2114,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>33aa13dd-7119-5f6c-a577-3d0a01823efc</tstamps>
+      <tstamps>2c5fa538-11b4-55bc-8ef6-1bf0e84afd0e</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2142,7 +2142,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>b2eb78f0-6762-5b70-8be2-b0448f0e6606</tstamps>
+      <tstamps>e73e5b3b-8676-505f-8a67-8f5a2de1187a</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2170,7 +2170,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>c91c858c-a1c4-5fc5-83e7-687e6ed06756</tstamps>
+      <tstamps>c3c2b1bf-947d-5c55-96b3-ebc12717886d</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2198,7 +2198,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>8a6f9f9e-cadc-5f24-93d7-4fc00453a603</tstamps>
+      <tstamps>a76cdbaa-1183-54dd-b9a8-c2d32e4d208c</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2226,7 +2226,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>580769f9-7c14-59c0-81af-2af98b66fa23</tstamps>
+      <tstamps>0d7c1c8f-c4c0-59b9-9bce-ae62c8ac4d3c</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2254,7 +2254,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>94c4c204-2f15-5e91-b7d3-9eaa0ac0a8e5</tstamps>
+      <tstamps>87240a25-7fa2-5190-b192-d626ed49e70d</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2282,7 +2282,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>7d8ff330-6431-594c-996e-1a88a8207157</tstamps>
+      <tstamps>72221d65-eab2-5301-a7f5-00692e57911a</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2310,7 +2310,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>2cd285fd-0826-513e-af36-e93f6897ccb8</tstamps>
+      <tstamps>a713ebf5-c2a6-5c7f-90cb-ef3017f53480</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2338,7 +2338,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>c6d7d0d0-2c98-5f65-9139-574c4666e544</tstamps>
+      <tstamps>ae013791-e7ed-565d-a731-5a1cc21a1fc9</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2366,7 +2366,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>6e578dae-b31a-5e3e-bcf3-3738731c1889</tstamps>
+      <tstamps>9b2d189d-5d07-5e0d-833b-b36e6464edb4</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2394,7 +2394,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>ff7f2350-7f62-51c9-a04c-8d05a36be7e9</tstamps>
+      <tstamps>7d5f3ec1-a4ff-5b0e-a363-556358786e74</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2422,7 +2422,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>af8874dd-4f7c-53ca-a079-1bb3a7ca1c88</tstamps>
+      <tstamps>7d8ff330-6431-594c-996e-1a88a8207157</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2450,7 +2450,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>85b02a95-f1b6-54cd-acbc-430fb9ac89e7</tstamps>
+      <tstamps>2cd285fd-0826-513e-af36-e93f6897ccb8</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2478,7 +2478,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>7d5f3ec1-a4ff-5b0e-a363-556358786e74</tstamps>
+      <tstamps>d8fbb2c0-836c-53f8-b830-2e4cbcad853e</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2506,7 +2506,7 @@
       <property name="ki_keywords" value="diode"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>d6ff93cf-6de4-5750-bc5e-ddd142643f45</tstamps>
+      <tstamps>c3b3b4b0-13fc-5390-907d-f210ff87f360</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2534,7 +2534,7 @@
       <property name="ki_keywords" value="diode"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>93b30645-c897-50f9-9447-4c50a64f03e2</tstamps>
+      <tstamps>f1970775-8702-5fca-a983-d78338ed54b6</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2562,7 +2562,7 @@
       <property name="ki_keywords" value="diode"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>d951d697-bd2c-5c11-a88f-ed504db77257</tstamps>
+      <tstamps>9fe1d90f-5b23-55b8-bb4c-3310b1f8ed2e</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2590,7 +2590,7 @@
       <property name="ki_keywords" value="diode"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>70174f1f-4b30-5eab-b49b-079298f6f2ff</tstamps>
+      <tstamps>c6e4e58e-6831-59b0-aaa0-e62bc3e8d218</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2618,7 +2618,7 @@
       <property name="ki_keywords" value="diode"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>f1970775-8702-5fca-a983-d78338ed54b6</tstamps>
+      <tstamps>4b5cb2c2-90dd-5398-b0ea-2c197a219d95</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2646,7 +2646,7 @@
       <property name="ki_keywords" value="diode"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>aa4b6d99-c6ff-579b-93ef-2c6699984dfd</tstamps>
+      <tstamps>bd98ad9f-112a-52a6-9f95-2993ec4ef617</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2674,7 +2674,7 @@
       <property name="ki_keywords" value="diode"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>20584ec6-5f98-5516-915d-913053a3883b</tstamps>
+      <tstamps>cacc92b8-7e09-580f-8af0-bd993da9aa92</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2702,7 +2702,7 @@
       <property name="ki_keywords" value="diode"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>55fd9787-22fa-52ce-ae6b-4192f696d072</tstamps>
+      <tstamps>846ea643-3574-5b3a-9dcf-46bbf749156d</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2730,7 +2730,7 @@
       <property name="ki_keywords" value="diode"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>3854fc6c-6be0-5e93-b7d4-31431fa17c96</tstamps>
+      <tstamps>6c270de9-2f1c-54a0-a0ac-78deeae3d08e</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2758,7 +2758,7 @@
       <property name="ki_keywords" value="diode"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>cacc92b8-7e09-580f-8af0-bd993da9aa92</tstamps>
+      <tstamps>65bd7869-67f0-5395-bd2e-e2c953000e92</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2786,7 +2786,7 @@
       <property name="ki_keywords" value="diode"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>7303e6d6-6044-5ef2-9cdd-064b2ea932d9</tstamps>
+      <tstamps>cf45d45d-3f52-574d-94d0-22fa3b2c095f</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2814,7 +2814,7 @@
       <property name="ki_keywords" value="diode"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>0cb2f12e-ef71-5c6b-bc2b-0510569bc2cd</tstamps>
+      <tstamps>5c00e942-4e59-5732-9375-669643ac44bd</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2842,7 +2842,7 @@
       <property name="ki_keywords" value="diode"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>37b16d18-2535-5cce-909a-6f1288c0058a</tstamps>
+      <tstamps>72bc087f-10b6-5fb6-98e0-eb9212586880</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2870,7 +2870,7 @@
       <property name="ki_keywords" value="diode"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>91990fee-379e-5e28-9032-9bca8eb61175</tstamps>
+      <tstamps>bf5d5c7a-ca41-56e0-ada5-ce41e3b2736e</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2898,7 +2898,7 @@
       <property name="ki_keywords" value="diode"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>5c00e942-4e59-5732-9375-669643ac44bd</tstamps>
+      <tstamps>1dec5aa8-c786-5417-8212-b3f05fabafae</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2926,7 +2926,7 @@
       <property name="ki_keywords" value="diode"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>959290ec-b808-56d2-a6a1-6ddbe2f6b08e</tstamps>
+      <tstamps>048c8ab0-49ae-5f6c-abe7-56bf04f13f8f</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2954,7 +2954,7 @@
       <property name="ki_keywords" value="diode"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>50c309f6-d4b8-54a9-b389-f951fb22a5ea</tstamps>
+      <tstamps>d4274bce-3a0c-5711-bf04-1d6c679d2007</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2982,7 +2982,7 @@
       <property name="ki_keywords" value="diode"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>6cd9dc30-436b-517a-939f-6248fb272589</tstamps>
+      <tstamps>8a8ed15d-95f6-5012-b0d6-28ee6893cdaf</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3010,7 +3010,7 @@
       <property name="ki_keywords" value="diode"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>d524cb95-8ee4-5228-88ca-b084eea3cfdc</tstamps>
+      <tstamps>0844e650-cb65-560c-a572-3c4142ed77a1</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3038,7 +3038,7 @@
       <property name="ki_keywords" value="diode"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>d4274bce-3a0c-5711-bf04-1d6c679d2007</tstamps>
+      <tstamps>913fd04c-a2fa-5b95-8fe8-f7d918c847f0</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3066,7 +3066,7 @@
       <property name="ki_keywords" value="diode"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>f8d89774-a08f-553c-b365-a6e5d8458e8a</tstamps>
+      <tstamps>4a2e96a2-a4e8-5b1a-a097-4a9e70ceb482</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3094,7 +3094,7 @@
       <property name="ki_keywords" value="diode"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>3a4c5d98-c823-54f5-ab8e-77d4dbcdcc77</tstamps>
+      <tstamps>20326212-3db0-5ccb-84de-e5e9522c7fe3</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3122,7 +3122,7 @@
       <property name="ki_keywords" value="diode"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>085fc01f-b846-5153-bce4-5851656adecf</tstamps>
+      <tstamps>bcd93396-a63c-5eab-b66e-653c0ad09aed</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3150,7 +3150,7 @@
       <property name="ki_keywords" value="diode"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>048cc560-c272-5509-a91d-82b0dd0ee15e</tstamps>
+      <tstamps>6fa8c61b-d5fb-55bb-a7a2-49a80bbc49c3</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3178,7 +3178,7 @@
       <property name="ki_keywords" value="diode"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>20326212-3db0-5ccb-84de-e5e9522c7fe3</tstamps>
+      <tstamps>8cba4683-71cb-5009-8a1c-2ee03561a437</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3206,7 +3206,7 @@
       <property name="ki_keywords" value="diode"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>7b68d465-dcd4-54d2-a087-e83649f518b5</tstamps>
+      <tstamps>19714e53-1cff-5d8a-a984-e70df7c2068d</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3234,7 +3234,7 @@
       <property name="ki_keywords" value="diode"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>73ac769e-3e5b-5f69-a444-f670bd8af355</tstamps>
+      <tstamps>cf878390-c033-5fb6-9fb5-740050204372</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3262,7 +3262,7 @@
       <property name="ki_keywords" value="diode"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>d9043904-6a08-512a-98b3-51dc8de0d393</tstamps>
+      <tstamps>39a92fe6-c51b-525b-8481-8fba29491f2d</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3290,7 +3290,7 @@
       <property name="ki_keywords" value="diode"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>bd196513-3cf5-5381-86d5-c621c0ef1be8</tstamps>
+      <tstamps>cbde4f54-b99e-53e7-a3ce-5f0e8936c514</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3318,7 +3318,7 @@
       <property name="ki_keywords" value="diode"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>cf878390-c033-5fb6-9fb5-740050204372</tstamps>
+      <tstamps>226fad76-746d-5465-9b88-e6e3497fdea5</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3346,7 +3346,7 @@
       <property name="ki_keywords" value="diode"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>f666d7f5-f988-5081-ad01-8f23414cc2a9</tstamps>
+      <tstamps>486cbebd-88c4-5930-b4f5-43a2955ed7b8</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3374,7 +3374,7 @@
       <property name="ki_keywords" value="diode"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>d90efd9c-bdba-571b-876e-bf3f43561b13</tstamps>
+      <tstamps>44ddd41d-78f1-50c8-8bce-27508dc8f0f3</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3402,7 +3402,7 @@
       <property name="ki_keywords" value="diode"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>d9ea6989-59b7-5e31-9547-02df868548d2</tstamps>
+      <tstamps>cf5b3670-1d37-58c0-8a9a-b14deeca9704</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3430,7 +3430,7 @@
       <property name="ki_keywords" value="diode"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>744cb5fa-56f0-5f36-b41b-55b460bb8f87</tstamps>
+      <tstamps>b138fc23-88ca-54c9-909d-693ca05e8a1a</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3458,7 +3458,7 @@
       <property name="ki_keywords" value="diode"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>44ddd41d-78f1-50c8-8bce-27508dc8f0f3</tstamps>
+      <tstamps>7523b874-7a31-5bf8-8732-f8c95af45193</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3486,7 +3486,7 @@
       <property name="ki_keywords" value="diode"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>d9aa776e-d391-5ec6-8398-b3a0ed1a9e3a</tstamps>
+      <tstamps>c6d7d0d0-2c98-5f65-9139-574c4666e544</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3514,7 +3514,7 @@
       <property name="ki_keywords" value="diode"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>3086b1d2-1d4c-587e-a800-39a88ce78736</tstamps>
+      <tstamps>89772ed7-eebe-50bc-a13c-15e5b5b38e59</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3542,7 +3542,7 @@
       <property name="ki_keywords" value="diode"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>ae013791-e7ed-565d-a731-5a1cc21a1fc9</tstamps>
+      <tstamps>5a079d34-c98e-5c3e-b0d0-07defdfd7c90</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3570,7 +3570,7 @@
       <property name="ki_keywords" value="diode"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>9b2d189d-5d07-5e0d-833b-b36e6464edb4</tstamps>
+      <tstamps>ab207df7-4155-5a17-b306-ed8571c52de7</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3598,7 +3598,7 @@
       <property name="ki_keywords" value="diode"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>89772ed7-eebe-50bc-a13c-15e5b5b38e59</tstamps>
+      <tstamps>1af89098-6498-54fa-86c5-0f1791d608f6</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3624,7 +3624,7 @@
       <property name="Sheetname" value="Audio-Outputs"/>
       <property name="Sheetfile" value="Audio-Outputs.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>7e83537e-82aa-5975-8640-9fe8279b49d3</tstamps>
+      <tstamps>aaf098e7-d2e6-56e3-9baa-33416f2b45d4</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3656,7 +3656,7 @@
       <property name="Sheetname" value="Audio-Outputs"/>
       <property name="Sheetfile" value="Audio-Outputs.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>1c3462b4-77b2-5be3-b38c-707abcf7f7cf</tstamps>
+      <tstamps>12ec67fd-c1a0-5088-a3e4-21535ece8dbd</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3688,7 +3688,7 @@
       <property name="Sheetname" value="Audio-Outputs"/>
       <property name="Sheetfile" value="Audio-Outputs.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>d53d4dc5-0cf4-547f-95f6-570afbe36a0f</tstamps>
+      <tstamps>43e7098b-14cc-5b75-b5bf-bebdc08f3734</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3720,7 +3720,7 @@
       <property name="Sheetname" value="Audio-Outputs"/>
       <property name="Sheetfile" value="Audio-Outputs.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>8493176c-763a-5eae-a6d8-4e77bba9ffd7</tstamps>
+      <tstamps>dbe521a5-c035-56e9-82df-a1df560ecaec</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3752,7 +3752,7 @@
       <property name="Sheetname" value="Audio-Outputs"/>
       <property name="Sheetfile" value="Audio-Outputs.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>5ecf3137-29f5-5c2d-8ac5-f7f0c3d5d0a3</tstamps>
+      <tstamps>d4b83371-c1b9-5e96-a224-f03bec3684c4</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3784,7 +3784,7 @@
       <property name="Sheetname" value="Audio-Outputs"/>
       <property name="Sheetfile" value="Audio-Outputs.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>214c7724-a225-5829-80b7-c27ec20d8274</tstamps>
+      <tstamps>d44a4cbd-7ef6-569c-9b3f-8f4e2d0ed40b</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3816,7 +3816,7 @@
       <property name="Sheetname" value="Audio-Outputs"/>
       <property name="Sheetfile" value="Audio-Outputs.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>c3c2b1bf-947d-5c55-96b3-ebc12717886d</tstamps>
+      <tstamps>f2bd7bb6-6230-5ab6-aa09-f565e50ec9bb</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3848,7 +3848,7 @@
       <property name="Sheetname" value="Audio-Outputs"/>
       <property name="Sheetfile" value="Audio-Outputs.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>d8fbb2c0-836c-53f8-b830-2e4cbcad853e</tstamps>
+      <tstamps>35f21027-3ca9-577a-8448-b14fa9af56d1</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3882,7 +3882,7 @@
       <property name="ki_keywords" value="L ferrite bead inductor filter"/>
       <property name="ki_fp_filters" value="Inductor_* L_* *Ferrite*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>04bf1589-15ea-5283-afa9-35cba120717f</tstamps>
+      <tstamps>871a0226-6cbf-5eb6-82d8-f1e3f301f6b1</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3910,7 +3910,7 @@
       <property name="ki_keywords" value="L ferrite bead inductor filter"/>
       <property name="ki_fp_filters" value="Inductor_* L_* *Ferrite*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>f04cfca5-7432-5826-a398-fe60dbc46743</tstamps>
+      <tstamps>93b30645-c897-50f9-9447-4c50a64f03e2</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3938,7 +3938,7 @@
       <property name="ki_keywords" value="L ferrite bead inductor filter"/>
       <property name="ki_fp_filters" value="Inductor_* L_* *Ferrite*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>4fceb65f-7f8f-5be9-a6e0-5522d03bb621</tstamps>
+      <tstamps>46dd345c-d49d-5b55-8e8c-d6f42ca40d22</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3966,7 +3966,7 @@
       <property name="ki_keywords" value="L ferrite bead inductor filter"/>
       <property name="ki_fp_filters" value="Inductor_* L_* *Ferrite*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>3fa263e6-197f-54f9-961a-55d65cabb910</tstamps>
+      <tstamps>20584ec6-5f98-5516-915d-913053a3883b</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3994,7 +3994,7 @@
       <property name="ki_keywords" value="L ferrite bead inductor filter"/>
       <property name="ki_fp_filters" value="Inductor_* L_* *Ferrite*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>cb7cec29-5575-5241-8d8f-e6af7885c691</tstamps>
+      <tstamps>41ce3f23-d9f3-581d-b123-219459102002</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4022,7 +4022,7 @@
       <property name="ki_keywords" value="L ferrite bead inductor filter"/>
       <property name="ki_fp_filters" value="Inductor_* L_* *Ferrite*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>edc43f04-8631-5c45-9d30-cdd8696ed43c</tstamps>
+      <tstamps>0cb2f12e-ef71-5c6b-bc2b-0510569bc2cd</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4050,7 +4050,7 @@
       <property name="ki_keywords" value="L ferrite bead inductor filter"/>
       <property name="ki_fp_filters" value="Inductor_* L_* *Ferrite*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>e8ef27c4-49da-583e-ada5-7d2f96a7d9f4</tstamps>
+      <tstamps>1c169eba-e1fe-57da-b039-b4b9fa79cbcb</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4078,7 +4078,7 @@
       <property name="ki_keywords" value="L ferrite bead inductor filter"/>
       <property name="ki_fp_filters" value="Inductor_* L_* *Ferrite*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>f4ac617a-a755-5e40-8d51-200cf97c975d</tstamps>
+      <tstamps>50c309f6-d4b8-54a9-b389-f951fb22a5ea</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4106,7 +4106,7 @@
       <property name="ki_keywords" value="L ferrite bead inductor filter"/>
       <property name="ki_fp_filters" value="Inductor_* L_* *Ferrite*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>0e491ab3-b925-500a-97dd-ddcfb4d67bda</tstamps>
+      <tstamps>145e74a8-c4d0-5387-9c41-5c612a8a3eeb</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4134,7 +4134,7 @@
       <property name="ki_keywords" value="L ferrite bead inductor filter"/>
       <property name="ki_fp_filters" value="Inductor_* L_* *Ferrite*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>6fa285f7-9463-5387-80b2-9b1f25c68a8f</tstamps>
+      <tstamps>3a4c5d98-c823-54f5-ab8e-77d4dbcdcc77</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4162,7 +4162,7 @@
       <property name="ki_keywords" value="L ferrite bead inductor filter"/>
       <property name="ki_fp_filters" value="Inductor_* L_* *Ferrite*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>c64533cd-3bd6-5e27-9c9f-ab5b580d09df</tstamps>
+      <tstamps>392f3816-5903-5897-b25e-5fd6be82440f</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4190,7 +4190,7 @@
       <property name="ki_keywords" value="L ferrite bead inductor filter"/>
       <property name="ki_fp_filters" value="Inductor_* L_* *Ferrite*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>5c4c8a76-c8b3-5a2c-8034-935def02b978</tstamps>
+      <tstamps>73ac769e-3e5b-5f69-a444-f670bd8af355</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4218,7 +4218,7 @@
       <property name="ki_keywords" value="L ferrite bead inductor filter"/>
       <property name="ki_fp_filters" value="Inductor_* L_* *Ferrite*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>8ff244ae-953a-5741-90cb-4e8890c27da2</tstamps>
+      <tstamps>d9f57b66-352e-552c-927b-8358e9a75733</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4246,7 +4246,7 @@
       <property name="ki_keywords" value="L ferrite bead inductor filter"/>
       <property name="ki_fp_filters" value="Inductor_* L_* *Ferrite*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>c13b963a-faaf-5772-9a9c-db95f884e2ba</tstamps>
+      <tstamps>d90efd9c-bdba-571b-876e-bf3f43561b13</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4274,7 +4274,7 @@
       <property name="ki_keywords" value="L ferrite bead inductor filter"/>
       <property name="ki_fp_filters" value="Inductor_* L_* *Ferrite*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>a50407a7-305b-5516-a57e-2f2c8f899d0d</tstamps>
+      <tstamps>6e578dae-b31a-5e3e-bcf3-3738731c1889</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4302,7 +4302,7 @@
       <property name="ki_keywords" value="L ferrite bead inductor filter"/>
       <property name="ki_fp_filters" value="Inductor_* L_* *Ferrite*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>9f7f2ec6-00ef-5297-9ae7-6d654a8b213a</tstamps>
+      <tstamps>3086b1d2-1d4c-587e-a800-39a88ce78736</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4330,7 +4330,7 @@
       <property name="ki_keywords" value="N-Channel Switching MOSFET"/>
       <property name="ki_fp_filters" value="SOT?23*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>aaf098e7-d2e6-56e3-9baa-33416f2b45d4</tstamps>
+      <tstamps>3e21a9a3-b2bd-51b0-8d65-22f17d62c6c1</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4359,7 +4359,7 @@
       <property name="ki_keywords" value="N-Channel Switching MOSFET"/>
       <property name="ki_fp_filters" value="SOT?23*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>12ec67fd-c1a0-5088-a3e4-21535ece8dbd</tstamps>
+      <tstamps>0e0af93e-ea24-56c9-b6f6-238cab4cdf5d</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4388,7 +4388,7 @@
       <property name="ki_keywords" value="N-Channel Switching MOSFET"/>
       <property name="ki_fp_filters" value="SOT?23*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>43e7098b-14cc-5b75-b5bf-bebdc08f3734</tstamps>
+      <tstamps>49b84217-5ca4-5d1b-9b2f-51262e0eb984</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4417,7 +4417,7 @@
       <property name="ki_keywords" value="N-Channel Switching MOSFET"/>
       <property name="ki_fp_filters" value="SOT?23*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>dbe521a5-c035-56e9-82df-a1df560ecaec</tstamps>
+      <tstamps>a7c6b9d9-7efd-5265-8ca1-36100fd01ce8</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4446,7 +4446,7 @@
       <property name="ki_keywords" value="N-Channel Switching MOSFET"/>
       <property name="ki_fp_filters" value="SOT?23*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>d4b83371-c1b9-5e96-a224-f03bec3684c4</tstamps>
+      <tstamps>9e9beb1c-0230-5779-9f13-424864c3b8bc</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4475,7 +4475,7 @@
       <property name="ki_keywords" value="N-Channel Switching MOSFET"/>
       <property name="ki_fp_filters" value="SOT?23*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>d44a4cbd-7ef6-569c-9b3f-8f4e2d0ed40b</tstamps>
+      <tstamps>0bf71184-fc87-54fd-bb87-96f79b5af6ec</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4504,7 +4504,7 @@
       <property name="ki_keywords" value="N-Channel Switching MOSFET"/>
       <property name="ki_fp_filters" value="SOT?23*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>f2bd7bb6-6230-5ab6-aa09-f565e50ec9bb</tstamps>
+      <tstamps>2d9b524c-4104-5c7d-91d2-26621e36da18</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4533,7 +4533,7 @@
       <property name="ki_keywords" value="N-Channel Switching MOSFET"/>
       <property name="ki_fp_filters" value="SOT?23*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>35f21027-3ca9-577a-8448-b14fa9af56d1</tstamps>
+      <tstamps>135d17b6-aef1-59ba-93bf-f53c2566bad8</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4562,7 +4562,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>368bfc17-acea-5cb8-8678-f5c54b3e98e0</tstamps>
+      <tstamps>e95b119a-c8c0-5749-8f1d-e80e733a3802</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4590,7 +4590,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>48c8f16f-df7f-53ae-b6cd-a72dbf9bf2ad</tstamps>
+      <tstamps>237d98d4-c26f-5fce-aa90-f2962d7312e2</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4618,7 +4618,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>7c19d8a4-c11c-5f01-ac4d-027e0946f4cb</tstamps>
+      <tstamps>d7fc5f79-6880-5679-903b-e0fd375396ac</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4646,7 +4646,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>e95b119a-c8c0-5749-8f1d-e80e733a3802</tstamps>
+      <tstamps>cdeed1e9-c47d-5395-b208-e1197fb3fd1d</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4674,7 +4674,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>bbe80174-e5ce-5475-ad2c-3a24fabcf6f0</tstamps>
+      <tstamps>f38370de-dcc2-577d-8dd8-588001b6f1a9</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4702,7 +4702,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>4484542c-f75f-5d1f-a516-674c248902d7</tstamps>
+      <tstamps>2c573c53-91d1-5910-a4c5-6015c290fdae</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4730,7 +4730,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>f38370de-dcc2-577d-8dd8-588001b6f1a9</tstamps>
+      <tstamps>d161321b-b2e0-55da-b67a-3587a90b0ccd</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4758,7 +4758,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>2d217c40-66ab-58da-96ed-3fa122d9cb4e</tstamps>
+      <tstamps>8345a7ca-67ef-5cd7-99d2-47c3edd275d8</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4786,7 +4786,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>ad31da0c-1781-5be6-9085-a2b6d00d6c9d</tstamps>
+      <tstamps>e1a9271e-9896-5f7b-9317-9abe141da97f</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4814,7 +4814,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>425a9751-db11-585d-9461-2969b8a38eaf</tstamps>
+      <tstamps>406cb316-8580-5b61-a95d-4cc5a1b165d9</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4842,7 +4842,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>8345a7ca-67ef-5cd7-99d2-47c3edd275d8</tstamps>
+      <tstamps>59c2f80f-2fbe-51d1-a52e-120f8c06c83a</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4870,7 +4870,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>d02099ca-1f50-5918-994d-e641a4a46c42</tstamps>
+      <tstamps>3b99ad1b-67d3-5f2d-8961-37de5cc65c4c</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4898,7 +4898,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>c3b23ac2-274b-5b8e-beb1-310cf0d02e3c</tstamps>
+      <tstamps>477e1442-7fb9-5209-9493-608a3e0b8cf8</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4926,7 +4926,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>3b99ad1b-67d3-5f2d-8961-37de5cc65c4c</tstamps>
+      <tstamps>bedfd078-88d2-5eeb-b4f6-f44c1d86d022</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4954,7 +4954,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>6e3a7653-1b39-55c9-a121-c1f8776d00df</tstamps>
+      <tstamps>9711a551-22c1-5102-9733-bdbe2b0d2280</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -4982,7 +4982,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>8c24bd9d-f1c9-5f37-b928-2be669f3e175</tstamps>
+      <tstamps>9cb52069-7fb4-5970-a7f1-73ae96d3ede7</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5010,7 +5010,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>f4a118ab-a341-5288-a16e-b11f2f912940</tstamps>
+      <tstamps>99c7f85d-a3c9-5d50-9081-72dbb337cb23</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5038,7 +5038,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>9711a551-22c1-5102-9733-bdbe2b0d2280</tstamps>
+      <tstamps>d5bb4111-e254-55fb-911f-bcb9ff6dec65</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5066,7 +5066,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>0c250f29-75a3-5e2c-94e0-df9b9a79f969</tstamps>
+      <tstamps>a6e587e1-2971-5ad4-a019-8e39ed02aff2</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5094,7 +5094,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>2aeae972-5a9a-52ab-ae34-b610b52edb96</tstamps>
+      <tstamps>9acc8e4e-33b1-56a9-877b-e79273c3375e</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5122,7 +5122,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>a6e587e1-2971-5ad4-a019-8e39ed02aff2</tstamps>
+      <tstamps>3d1e94f1-08cb-50a7-be98-96781b5168da</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5150,7 +5150,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>ece17053-abb6-5300-87fd-b611cfd2c736</tstamps>
+      <tstamps>bc769139-ad81-543f-83f8-2954afceff4f</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5178,7 +5178,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>bd77a416-c572-5ebc-97c5-2417b0894007</tstamps>
+      <tstamps>38bc276e-0490-5c8d-ad8f-1b39f7d48574</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5206,7 +5206,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>068d928e-cee3-5497-9696-a5ad3889f8de</tstamps>
+      <tstamps>01d96332-e36b-583d-89ca-c6b58701f515</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5234,7 +5234,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>bc769139-ad81-543f-83f8-2954afceff4f</tstamps>
+      <tstamps>7d366438-2c88-5882-aae0-22578f46e5c2</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5262,7 +5262,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>fac8e883-4eba-555a-a918-30073edeac1e</tstamps>
+      <tstamps>c7b81548-7367-5637-b3a0-2b0aadfde9ba</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5290,7 +5290,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>f299598c-e2fe-562d-a19c-9b0149be6b91</tstamps>
+      <tstamps>ee158f62-f9cd-54eb-9fef-8de8ae3c8054</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5318,7 +5318,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>c7b81548-7367-5637-b3a0-2b0aadfde9ba</tstamps>
+      <tstamps>765023f1-8899-5dcc-b6fb-60e5f95736a6</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5346,7 +5346,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>1fd704af-52cd-5a88-89a9-d3b4b68ffc3e</tstamps>
+      <tstamps>f86bfd19-e6df-59c1-82bf-6eb97ce71785</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5374,7 +5374,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>fa285c98-5335-5931-916c-2e77960e94d8</tstamps>
+      <tstamps>a17f4766-6fb7-5ce9-9d07-1295fe8af61b</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5402,7 +5402,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>d910a817-4afe-5951-afb2-07542579e5b1</tstamps>
+      <tstamps>92fde1c9-9c4c-5020-8e0d-a75e44168621</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5430,7 +5430,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>f86bfd19-e6df-59c1-82bf-6eb97ce71785</tstamps>
+      <tstamps>ff256f66-7748-591e-a5f2-fb06945f0c35</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5458,7 +5458,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>738f71a6-4678-5c9b-8444-f7ec318cfd27</tstamps>
+      <tstamps>72fb7859-7e98-52cd-a7a6-9bb32c7b0697</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5486,7 +5486,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>c2a5b343-57c7-5aef-803e-b25b2d50ed72</tstamps>
+      <tstamps>46c1c473-7857-5191-9e74-6926cd9301cc</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5514,7 +5514,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>72fb7859-7e98-52cd-a7a6-9bb32c7b0697</tstamps>
+      <tstamps>8c64b377-c8b0-5907-8641-d66c8bfb902f</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5542,7 +5542,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>dec786e4-25a7-5c8d-b6bb-512b1eb20155</tstamps>
+      <tstamps>2fab6c38-c4ed-55a1-9e77-74ada296f78f</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5570,7 +5570,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>d15c61d5-fa59-5e3f-91ca-03b1c4fee2a3</tstamps>
+      <tstamps>bdc4053d-00a2-521a-a61c-5b78890d7a11</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5598,7 +5598,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>30ca2900-5fa8-5a34-be24-7970b3ab6210</tstamps>
+      <tstamps>dfbabd0a-f800-54f2-8f97-6b1e9715882c</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5626,7 +5626,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>2fab6c38-c4ed-55a1-9e77-74ada296f78f</tstamps>
+      <tstamps>438046bd-3e19-5c9d-818b-fa1ded45a0ec</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5654,7 +5654,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>34a521e5-ea23-568d-b426-d476d49b5445</tstamps>
+      <tstamps>f6db68b8-000b-51dc-9d63-7f22e72fbacf</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5682,7 +5682,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>0343eb99-efc3-5260-b6ef-29432fcb4586</tstamps>
+      <tstamps>1a2c23be-be70-5fb5-b2cc-511056ab995d</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5710,7 +5710,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>f6db68b8-000b-51dc-9d63-7f22e72fbacf</tstamps>
+      <tstamps>3ca51a28-ec1d-5caf-9e83-e24a5f331ab8</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5738,7 +5738,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>10a8ea02-d607-542f-89ee-eb08dc0ba203</tstamps>
+      <tstamps>7cc8468d-2d8f-598c-ad00-2d55104c8fe4</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5766,7 +5766,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>3f9f07a0-291f-5466-b985-2b815f64094e</tstamps>
+      <tstamps>1834331a-21c8-5cfd-9616-0eb2abaf2820</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5794,7 +5794,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>36e75c4d-1d92-5aef-8534-cfe04036ff5d</tstamps>
+      <tstamps>ba39c690-3dfc-56bd-a840-ec945de80f72</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5822,7 +5822,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>7cc8468d-2d8f-598c-ad00-2d55104c8fe4</tstamps>
+      <tstamps>098b3e0b-a7cf-5b62-ab5e-af93f6ade36a</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5850,7 +5850,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>6239ba84-4c0c-57d6-90fb-129a9f5ea01f</tstamps>
+      <tstamps>d95e2edf-fdc9-53b0-b8e8-a7cf24e41d5d</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5878,7 +5878,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>75f11fd2-c256-513a-b7ab-bd60ca916ebf</tstamps>
+      <tstamps>cd220613-006b-5c3d-80f2-45a5eca6afdd</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5906,7 +5906,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>d95e2edf-fdc9-53b0-b8e8-a7cf24e41d5d</tstamps>
+      <tstamps>7d831b0e-6cdd-5dec-b67c-9ad06f4ab4eb</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5934,7 +5934,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>b4950f96-997d-5d41-b7bb-45ff61f43601</tstamps>
+      <tstamps>33f0ff32-2cb7-59d2-8f23-6e9a87563a38</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5962,7 +5962,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>b09795f0-83de-583b-8523-a4d2434cf4e0</tstamps>
+      <tstamps>8a6f9f9e-cadc-5f24-93d7-4fc00453a603</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5990,7 +5990,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>4cc18652-0a78-5129-ad49-4b72371da9d7</tstamps>
+      <tstamps>580769f9-7c14-59c0-81af-2af98b66fa23</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -6018,7 +6018,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>33f0ff32-2cb7-59d2-8f23-6e9a87563a38</tstamps>
+      <tstamps>5edbeeae-3a14-5c5d-8651-1ea3dd9c428c</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -6046,7 +6046,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>98509e25-2a6a-57d8-9608-08c44e1d80d3</tstamps>
+      <tstamps>e48515c1-24a2-59c6-b38c-6f5797e355d5</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -6074,7 +6074,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>d39a7de2-e1b3-54a9-bcb2-9a33aa0d08c1</tstamps>
+      <tstamps>3f25e9c6-bfa3-5cea-92c4-b37a2ed0aa42</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -6102,7 +6102,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>e48515c1-24a2-59c6-b38c-6f5797e355d5</tstamps>
+      <tstamps>b02eb286-2754-5953-bb66-86cdfe41eeac</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -6128,7 +6128,7 @@
       <property name="Sheetname" value="Audio-Outputs"/>
       <property name="Sheetfile" value="Audio-Outputs.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>cdeed1e9-c47d-5395-b208-e1197fb3fd1d</tstamps>
+      <tstamps>bbe80174-e5ce-5475-ad2c-3a24fabcf6f0</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -6160,7 +6160,7 @@
       <property name="Sheetname" value="Audio-Outputs"/>
       <property name="Sheetfile" value="Audio-Outputs.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>59c2f80f-2fbe-51d1-a52e-120f8c06c83a</tstamps>
+      <tstamps>d02099ca-1f50-5918-994d-e641a4a46c42</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -6192,7 +6192,7 @@
       <property name="Sheetname" value="Audio-Outputs"/>
       <property name="Sheetfile" value="Audio-Outputs.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>d5bb4111-e254-55fb-911f-bcb9ff6dec65</tstamps>
+      <tstamps>0c250f29-75a3-5e2c-94e0-df9b9a79f969</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -6224,7 +6224,7 @@
       <property name="Sheetname" value="Audio-Outputs"/>
       <property name="Sheetfile" value="Audio-Outputs.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>7d366438-2c88-5882-aae0-22578f46e5c2</tstamps>
+      <tstamps>fac8e883-4eba-555a-a918-30073edeac1e</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -6256,7 +6256,7 @@
       <property name="Sheetname" value="Audio-Outputs"/>
       <property name="Sheetfile" value="Audio-Outputs.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>ff256f66-7748-591e-a5f2-fb06945f0c35</tstamps>
+      <tstamps>738f71a6-4678-5c9b-8444-f7ec318cfd27</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -6288,7 +6288,7 @@
       <property name="Sheetname" value="Audio-Outputs"/>
       <property name="Sheetfile" value="Audio-Outputs.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>438046bd-3e19-5c9d-818b-fa1ded45a0ec</tstamps>
+      <tstamps>34a521e5-ea23-568d-b426-d476d49b5445</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -6320,7 +6320,7 @@
       <property name="Sheetname" value="Audio-Outputs"/>
       <property name="Sheetfile" value="Audio-Outputs.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>098b3e0b-a7cf-5b62-ab5e-af93f6ade36a</tstamps>
+      <tstamps>6239ba84-4c0c-57d6-90fb-129a9f5ea01f</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -6352,7 +6352,7 @@
       <property name="Sheetname" value="Audio-Outputs"/>
       <property name="Sheetfile" value="Audio-Outputs.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>5edbeeae-3a14-5c5d-8651-1ea3dd9c428c</tstamps>
+      <tstamps>98509e25-2a6a-57d8-9608-08c44e1d80d3</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -6384,7 +6384,7 @@
       <property name="Sheetname" value="Audio-Outputs"/>
       <property name="Sheetfile" value="Audio-Outputs.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>54360af2-b993-514b-910e-d89915e2082f</tstamps>
+      <tstamps>c3e813cb-ee03-5c0f-9138-ed01efca2bf5</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -6416,7 +6416,7 @@
       <property name="Sheetname" value="Audio-Outputs"/>
       <property name="Sheetfile" value="Audio-Outputs.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>b3bd7fc4-14ee-5563-9298-efb9aad442d1</tstamps>
+      <tstamps>402c128b-9ba7-5c36-b51c-c0352a12969a</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -6448,7 +6448,7 @@
       <property name="Sheetname" value="Audio-Outputs"/>
       <property name="Sheetfile" value="Audio-Outputs.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>b1f4b203-9e13-5760-8ba7-cb73186c01d8</tstamps>
+      <tstamps>0588be9f-8df8-5b61-8cc2-972c5736ef13</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -6480,7 +6480,7 @@
       <property name="Sheetname" value="Audio-Outputs"/>
       <property name="Sheetfile" value="Audio-Outputs.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>df7d96cc-5777-5d97-a475-6c6e7fa58912</tstamps>
+      <tstamps>b219e1e0-99ae-5757-ac67-da51083a0966</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -6512,7 +6512,7 @@
       <property name="Sheetname" value="Audio-Outputs"/>
       <property name="Sheetfile" value="Audio-Outputs.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>bbf987ee-b672-582b-be52-448662c62e73</tstamps>
+      <tstamps>a615a068-eae8-5214-b748-8bf050093154</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -6544,7 +6544,7 @@
       <property name="Sheetname" value="Audio-Outputs"/>
       <property name="Sheetfile" value="Audio-Outputs.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>0e3da47f-5fef-5f46-9f0d-64b829c22407</tstamps>
+      <tstamps>3d038bc8-e2e5-53a2-beca-82a58cf197a8</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -6576,7 +6576,7 @@
       <property name="Sheetname" value="Audio-Outputs"/>
       <property name="Sheetfile" value="Audio-Outputs.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>352709cf-5ab2-57af-a845-2fedc931d03e</tstamps>
+      <tstamps>866cf10b-83a2-56a9-b064-0feef705d4a0</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -6608,7 +6608,7 @@
       <property name="Sheetname" value="Audio-Outputs"/>
       <property name="Sheetfile" value="Audio-Outputs.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>87240a25-7fa2-5190-b192-d626ed49e70d</tstamps>
+      <tstamps>ff7f2350-7f62-51c9-a04c-8d05a36be7e9</tstamps>
       <units>
         <unit name="A">
           <pins>

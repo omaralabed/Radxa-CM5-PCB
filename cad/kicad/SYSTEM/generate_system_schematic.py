@@ -70,6 +70,7 @@ SHEETS = [
     ("PWR-SELECT", "../PWR-SELECT/PowerSelector.kicad_sch", "2"),
     ("CM5-CARRIER Connected Root", "../CM5-CARRIER/CM5-Carrier.kicad_sch", "3"),
     ("AUDIO-8X8 Connected Root", "../AUDIO-8X8/Audio-8x8.kicad_sch", "11"),
+    ("SIM-SERVICE Connected Root", "../SIM-SERVICE/Sim-Service.kicad_sch", "18"),
 ]
 
 
@@ -455,9 +456,9 @@ def add_compute_external_io(schematic: ksa.Schematic) -> None:
             f"NANO-SIM {index + 1}",
             (590 + index * 120, 550),
             {
-                1: f"SIM{index + 1}_VCC", 2: f"SIM{index + 1}_RST",
-                3: f"SIM{index + 1}_CLK", 4: f"SIM{index + 1}_IO",
-                5: "GND", 6: f"SIM{index + 1}_DET",
+                1: f"SIM{index + 1}_VCC", 2: f"SIM{index + 1}_RESET",
+                3: f"SIM{index + 1}_CLK", 4: f"SIM{index + 1}_DATA",
+                5: "GND", 6: "CHASSIS_GND",
             },
             label_size=0.46,
         )
@@ -551,7 +552,7 @@ def build_schematic() -> None:
         company="ProComm",
         comments={
             1: "Top sheet is the electrical system interconnect; nested roots expose all detailed circuits",
-            2: "PWR-SELECT, CM5-CARRIER, and AUDIO-8X8 are authoritative physical PCB netlists",
+            2: "PWR-SELECT, CM5-CARRIER, AUDIO-8X8, and SIM-SERVICE are authoritative physical PCB netlists",
             3: "System connector representations are excluded from BOM and board update",
             4: "ENGINEERING PCB LAYOUT AUTHORIZED; FABRICATION RELEASE HELD",
         },
@@ -567,7 +568,7 @@ def build_schematic() -> None:
     add_text(
         schematic,
         "scope",
-        "Page 1 shows system harness interconnects. The three physical board roots contain the complete connected component-level circuits.",
+        "Page 1 shows system harness interconnects. The four physical board roots contain the complete connected component-level circuits.",
         (400, 38),
         size=1.15,
     )

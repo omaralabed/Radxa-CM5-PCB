@@ -1,0 +1,5 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "CM5Carrier")(type "KiCad")(uri "${KIPRJMOD}/../CM5-CARRIER/CM5Carrier.pretty")(options "")(descr "Shared carrier and service-board footprints"))
+  (lib (name "ProCommMechanical")(type "KiCad")(uri "${KIPRJMOD}/../ProCommMechanical.pretty")(options "")(descr "Controlled ProComm supports"))
+)

@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "CM5Carrier")(type "KiCad")(uri "${KIPRJMOD}/../CM5-CARRIER/CM5Carrier.kicad_sym")(options "")(descr "Shared carrier and service-board symbols"))
+)

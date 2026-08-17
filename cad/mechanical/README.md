@@ -47,6 +47,9 @@ rules, PSU airflow wash, and corrected panel-thickness logic.
 - `pcb-and-connector-support-detail-rev-a.svg`: factory detail for supports
   `A1-A6` and `C1-C6`, panel-flanged connectors, and custom capture brackets
   that keep plug/unplug and downward loads out of PCB laminate and solder.
+- `sim-service-daughterboard-stack-rev-b.svg`: exact horizontal 76 x 40 mm
+  SIM-SERVICE relationship to carrier J702, four `SD1-SD4` / `S1-S4` support
+  pairs, 2.50 mm Hirose DF40 mating height, and panel-clearance/load proof.
 
 These drawings are fit studies, not fabrication releases. Replace nominal case,
 monitor, connector, PCB, heatsink, fan, PSU, battery-dock, and harness envelopes

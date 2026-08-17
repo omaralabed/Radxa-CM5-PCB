@@ -160,9 +160,9 @@ Reference ProComm implementation details to reuse/adapt:
 - Software-controlled modem power-cycle path
 - Dual-SIM switching with `FSA2567MPX` between two Wurth `693043020611`
   Nano-SIM holders, if still validated with the selected modem
-- Mount those right-angle holders on a small vertical service daughterboard so
-  card insertion aligns with the two top-panel SIM openings; do not mount them
-  flat on the horizontal carrier
+- Mount those holders on the controlled horizontal SIM-SERVICE daughterboard.
+  Four supports and an insulating guide align card insertion to the two panel
+  openings; a 20-pin Hirose DF40 pair directly connects it to the carrier.
 - Four cellular/GNSS RF pigtails from the modem directly to rear-panel SMA
   bulkheads
 

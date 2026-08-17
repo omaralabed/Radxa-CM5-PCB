@@ -193,6 +193,7 @@ if rg -q '^\[(multiple_net_names|pin_not_driven|power_pin_not_driven|pin_to_pin|
 fi
 
 review_child_sheet "${SCRIPT_DIR}/CM5-CARRIER/Thermal-IO.kicad_sch" "Thermal-IO-A1"
+review_sheet "${SCRIPT_DIR}/SIM-SERVICE/Sim-Service.kicad_sch" "Sim-Service-A1"
 review_sheet "${SCRIPT_DIR}/AUDIO-8X8/Audio-8x8.kicad_sch" "Audio-8x8-A1"
 review_child_sheet "${SCRIPT_DIR}/AUDIO-8X8/Audio-TDM-Clock.kicad_sch" "Audio-TDM-Clock-A1"
 review_sheet "${SCRIPT_DIR}/AUDIO-8X8/AK5558-ADC.kicad_sch" "AK5558-ADC-A1"
@@ -214,6 +215,9 @@ review_sheet "${SCRIPT_DIR}/AUDIO-8X8/Audio-Power.kicad_sch" "Audio-Power-A1"
     --output "${REVIEW_TMP}/Audio-Control-A1.xml" \
     "${SCRIPT_DIR}/CM5-CARRIER/Audio-Control.kicad_sch"
 "${KICAD_CLI}" sch export netlist --format kicadxml \
+    --output "${REVIEW_TMP}/Sim-Service-A1.xml" \
+    "${SCRIPT_DIR}/SIM-SERVICE/Sim-Service.kicad_sch"
+"${KICAD_CLI}" sch export netlist --format kicadxml \
     --output "${REVIEW_TMP}/Audio-8x8-A1.xml" \
     "${SCRIPT_DIR}/AUDIO-8X8/Audio-8x8.kicad_sch"
 for sheet in Audio-TDM-Clock AK5558-ADC AK4458-DAC Audio-Inputs Audio-Outputs Audio-Power; do
@@ -230,6 +234,8 @@ install_xml_if_changed "${REVIEW_TMP}/Thermal-IO-A1.xml" \
     "${SCRIPT_DIR}/CM5-CARRIER/REVIEW/Thermal-IO-A1.xml"
 install_xml_if_changed "${REVIEW_TMP}/Audio-Control-A1.xml" \
     "${SCRIPT_DIR}/CM5-CARRIER/REVIEW/Audio-Control-A1.xml"
+install_xml_if_changed "${REVIEW_TMP}/Sim-Service-A1.xml" \
+    "${SCRIPT_DIR}/SIM-SERVICE/REVIEW/Sim-Service-A1.xml"
 install_xml_if_changed "${REVIEW_TMP}/Audio-8x8-A1.xml" \
     "${SCRIPT_DIR}/AUDIO-8X8/REVIEW/Audio-8x8-A1.xml"
 for sheet in Audio-TDM-Clock AK5558-ADC AK4458-DAC Audio-Inputs Audio-Outputs Audio-Power; do
@@ -276,6 +282,9 @@ python3 "${SCRIPT_DIR}/export_schematic_bom.py" \
     --schematic "${SCRIPT_DIR}/CM5-CARRIER/Audio-Control.kicad_sch" \
     --output "${PROJECT_ROOT}/docs/audio_control_bom_a1.csv" \
     --exclude U900
+python3 "${SCRIPT_DIR}/export_schematic_bom.py" \
+    --schematic "${SCRIPT_DIR}/SIM-SERVICE/Sim-Service.kicad_sch" \
+    --output "${PROJECT_ROOT}/docs/sim_service_bom_a1.csv"
 python3 "${SCRIPT_DIR}/PWR-SELECT/validate_power_selector.py"
 python3 "${SCRIPT_DIR}/CM5-CARRIER/validate_cm5_pin_allocation.py"
 python3 "${SCRIPT_DIR}/CM5-CARRIER/validate_power_regulators.py"
@@ -284,6 +293,7 @@ python3 "${SCRIPT_DIR}/CM5-CARRIER/validate_network_pcie.py"
 python3 "${SCRIPT_DIR}/CM5-CARRIER/validate_wwan_sim.py"
 python3 "${SCRIPT_DIR}/CM5-CARRIER/validate_display_harness.py"
 python3 "${SCRIPT_DIR}/CM5-CARRIER/validate_audio_control.py"
+python3 "${SCRIPT_DIR}/SIM-SERVICE/validate_sim_service.py"
 python3 "${SCRIPT_DIR}/AUDIO-8X8/export_audio_8x8_bom.py"
 python3 "${SCRIPT_DIR}/AUDIO-8X8/validate_audio_8x8.py"
 python3 "${SCRIPT_DIR}/validate_interface_contracts.py"
@@ -294,9 +304,9 @@ SYSTEM_PDF="${REVIEW_TMP}/Radxa-CM5-ProComm-System.pdf"
 "${KICAD_CLI}" sch export pdf \
     --output "${SYSTEM_PDF}" \
     "${SCRIPT_DIR}/SYSTEM/Radxa-CM5-ProComm-System.kicad_sch"
-if [[ "$(pdfinfo "${SYSTEM_PDF}" | awk '/^Pages:/ {print $2}')" != "17" ]]; then
-    printf 'Complete-system schematic export does not contain 17 pages.\n' >&2
+if [[ "$(pdfinfo "${SYSTEM_PDF}" | awk '/^Pages:/ {print $2}')" != "18" ]]; then
+    printf 'Complete-system schematic export does not contain 18 pages.\n' >&2
     exit 1
 fi
 
-printf 'Detailed capture review passed: connected board roots have zero ERC errors; child-sheet context findings match the explicit allowlist; the system project exports 17 pages.\n'
+printf 'Detailed capture review passed: connected board roots have zero ERC errors; child-sheet context findings match the explicit allowlist; the system project exports 18 pages.\n'

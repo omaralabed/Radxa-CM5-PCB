@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the WWAN, dual-SIM, and RF harness capture."""
+"""Validate the WWAN, direct-socket dual-SIM, and RF capture."""
 
 from __future__ import annotations
 
@@ -63,22 +63,21 @@ def main() -> int:
     checks.append(
         check(
             "WWAN/SIM controlled BOM",
-            len(rows) == 26 and len(board_rows) == 22 and complete,
+            len(rows) == 23 and len(board_rows) == 19 and complete,
             f"{len(board_rows)} board parts plus four off-board RF pigtail assemblies",
         )
     )
 
     expected = {
         "J701": ("2199230-3", "CM5Carrier:TE_2199230-3_M2_Key_B_4.2mm"),
-        "J702": ("693043020611", "CM5Carrier:J_Wurth_WR-CRD_693043020611"),
+        "J702": (
+            "DF40C-20DP-0.4V(51)",
+            "CM5Carrier:Hirose_DF40C-20DP-0.4V_2x10-1MP_P0.4mm",
+        ),
         "U702": ("TPD4E05U06DQAR", "Package_SON:USON-10_2.5x1.0mm_P0.5mm"),
         "U704": (
             "FSA2567MPX",
             "Package_DFN_QFN:WQFN-16-1EP_3x3mm_P0.5mm_EP1.68x1.68mm",
-        ),
-        "U705": (
-            "TPD3F303DPVR",
-            "Package_SON:Texas_R-PUSON-N8_USON-8-1EP_1.6x2.1mm_P0.5mm_EP0.4x1.7mm",
         ),
         "C701": ("6SVP220MX", "Capacitor_SMD:CP_Elec_8x6.9"),
         "C702": ("6SVP220MX", "Capacitor_SMD:CP_Elec_8x6.9"),
@@ -129,19 +128,23 @@ def main() -> int:
         )
     )
 
-    for reference, prefix in (("U705", "SIM1"), ("U706", "SIM2")):
-        expected_nets = {
-            "1": f"{prefix}_DATA", "2": f"{prefix}_CLK", "3": f"{prefix}_RESET",
-            "5": f"{prefix}_VCC", "6": f"{prefix}_RESET_RAW",
-            "7": f"{prefix}_CLK_RAW", "8": f"{prefix}_DATA_RAW", "9": "GND",
-        }
-        checks.append(
-            check(
-                f"{prefix} protected interface",
-                all(net_map.get((reference, pin)) == net for pin, net in expected_nets.items()),
-                "TPD3F303 filters RESET/CLK/DATA and clamps SIM VCC",
-            )
+    daughterboard_expected = {
+        "1": "GND", "2": "CHASSIS_GND",
+        "3": "SIM1_VCC", "4": "SIM1_RESET_RAW", "5": "GND",
+        "6": "SIM1_CLK_RAW", "7": "GND", "8": "SIM1_DATA_RAW",
+        "9": "SIM2_VCC", "10": "SIM2_RESET_RAW", "11": "GND",
+        "12": "SIM2_CLK_RAW", "13": "GND", "14": "SIM2_DATA_RAW",
+        "15": "GND", "16": "CHASSIS_GND", "17": "GND",
+        "18": "CHASSIS_GND", "19": "GND", "20": "CHASSIS_GND",
+    }
+    checks.append(
+        check(
+            "direct dual-SIM daughterboard socket",
+            all(net_map.get(("J702", pin)) == net for pin, net in daughterboard_expected.items())
+            and "There is no SIM cable harness" in schematic_text,
+            "20-way DF40 plug carries two UIM channels with interleaved ground/chassis returns",
         )
+    )
 
     test_refs = {f"TP72{index:02d}" for index in range(1, 9)}
     test_nets = {net_map.get((reference, "1"), "") for reference in test_refs}

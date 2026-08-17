@@ -115,8 +115,8 @@ Use two user-accessible Nano-SIM slots:
   `FSA2567MPX` to switch UIM power, reset, clock, and data between two SIM
   holders.
 - Reference SIM holder: Wurth `693043020611`.
-- Because this is a right-angle, side-entry holder, use a vertical service
-  daughterboard for the two top-facing panel slots.
+- Mount both holders on the supported horizontal SIM-SERVICE daughterboard;
+  the panel guide aligns their card mouths with the top-facing service slots.
 - The selected Wurth holder has no card-detect contact in the old design; if it
   is reused, software must not require hot-swap/card-detect.
 - Only one SIM is active at a time unless the modem guide explicitly allows

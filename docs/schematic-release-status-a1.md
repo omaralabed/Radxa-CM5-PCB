@@ -4,22 +4,22 @@
 
 **Electrical capture is complete. Engineering PCB layout is authorized.**
 
-The native KiCad source consists of sixteen controlled sheets across
-`PWR-SELECT`, `CM5-CARRIER`, and `AUDIO-8X8`. The complete deterministic review
+The native KiCad source consists of seventeen controlled sheets across
+`PWR-SELECT`, `CM5-CARRIER`, `AUDIO-8X8`, and `SIM-SERVICE`. The complete deterministic review
 gate passes without source drift. Open
 `cad/kicad/SYSTEM/Radxa-CM5-ProComm-System.kicad_pro` for one native KiCad
 entry point to the complete design. Page 1 is the real system electrical
-interconnect and pages 2-17 contain the component-level circuits. Its system
+interconnect and pages 2-18 contain the component-level circuits. Its system
 representations cannot update a PCB.
 
 ## Passed Gates
 
-- All three electrically authoritative board roots: `0 errors / 0 warnings`.
+- All four electrically authoritative board roots: `0 errors / 0 warnings`.
   Standalone child-sheet context findings match the review script's exact
   allowlist; any new or changed finding fails the gate.
 - Complete-system project: page 1 contains 58 electrical symbols and 294 named
-  pin interconnects; all sixteen source sheets are present, and its A2 PDF
-  export contains exactly 17 pages.
+  pin interconnects; all seventeen source sheets are present, and its A2 PDF
+  export contains exactly 18 pages.
 - PWR-SELECT: zero ERC errors/warnings, 186 critical checks, 111 exact BOM
   components, reverse-polarity controls, source thresholds, telemetry ranges,
   current limit, and hold-up calculations pass.
@@ -31,8 +31,10 @@ representations cannot update a PCB.
 - Power-Regulators-A1: 49 regulator, inductor, rail, source-current, and hold-up
   checks pass; the production BOM has 163 controlled rows.
 - Thermal-IO: 22 part, sensor-grade, fan-protection, and hot-current checks pass.
-- Network-PCIe: 29 controlled-part and architecture checks pass.
-- WWAN-SIM: 23 modem, SIM, local supply-network, protection, and RF-harness
+- Network-PCIe: 30 controlled-part and architecture checks pass.
+- WWAN-SIM: 21 modem, SIM, local supply-network, protection, and RF-harness
+  checks pass.
+- SIM-SERVICE: 6 direct socket, protected dual-SIM, and mechanical declaration
   checks pass.
 - Display-Harness: 20 HDMI, USB touch, 12 V monitor, and IO-5 V checks pass.
 - Audio-Control: 22 TDM, I2S1, ES8316, headset-amplifier, CTIA, and grounding
@@ -44,7 +46,7 @@ representations cannot update a PCB.
 
 ## Physical Gates Before Fabrication Release
 
-The root-counted component audit covers 1203 unique schematic components. Ten routing blockers are
+The root-counted component audit covers 1200 unique schematic components. Ten routing blockers are
 deliberately retained for physical evidence:
 
 - AK5558VN exposed-pad/via/stencil coupon and X-ray signoff;
@@ -56,7 +58,7 @@ but remains blocked from production until its sample, plated-hole, bezel,
 switch-polarity, and CTIA coupon pass. Total production blockers: 11.
 
 Mechanical A2 remains `HOLD_FOR_MEASUREMENT` for factory release. Rev L board
-envelopes and the controlled A1-A6/C1-C6 support coordinates authorize
+envelopes and the controlled A1-A6/C1-C6 plus SD1-SD4/S1-S4 support coordinates authorize
 engineering placement and routing now. Exact connector Z datums, sidewall
 machining, panel cut files, and final manufacturing outputs cannot be released
 until M001-M080 is completed and the mechanical validator passes.

@@ -2,7 +2,7 @@
 	(version 20250114)
 	(generator "eeschema")
 	(generator_version "9.0")
-	(uuid "fbbde700-f608-59a7-bff5-748780e82007")
+	(uuid "81b251d3-8a60-55b0-8d10-52d599663581")
 	(paper "A1")
 	(title_block
 		(title "ProComm AUDIO-8X8 - Local Power, Sequencing, and Ground Star")
@@ -2047,7 +2047,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "55428fe0-b5b8-5e02-81fd-0549ca1cf097")
+		(uuid "1cd0e3e8-0bfe-53c6-beff-0b2fd3d64d97")
 		(property "Reference" "J102"
 			(at 71.12 92.71 0.0000)
 			(effects
@@ -2094,20 +2094,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "dffc0313-368f-526a-89c0-5ed5713b8515")
+			(uuid "badc68ca-08b0-5265-b748-04dd14a097dc")
 		)
 		(pin "2"
-			(uuid "9381cc1f-2f03-54a2-af90-77d625d4b0cb")
+			(uuid "4075089a-5390-5a90-bd23-dec847bbc34a")
 		)
 		(pin "3"
-			(uuid "b0b2fae3-a551-5768-b6d6-a13f5f3d6933")
+			(uuid "58759950-0cda-5669-b61d-02382db2093c")
 		)
 		(pin "4"
-			(uuid "5fbe193a-5b6b-56ed-a3e6-ae0093160efc")
+			(uuid "2a030dcc-5c7d-5d08-973e-b00c012e6f2c")
 		)
 		(instances
 			(project "Audio-Power"
-				(path "/fbbde700-f608-59a7-bff5-748780e82007"
+				(path "/81b251d3-8a60-55b0-8d10-52d599663581"
 					(reference "J102")
 					(unit 1)
 				)
@@ -2123,7 +2123,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "957d1df3-7e7a-5691-a158-e81841609078")
+		(uuid "f55efa91-c2a7-5e81-a25d-8dd5e76fc341")
 		(property "Reference" "F601"
 			(at 146.812 72.39 90)
 			(effects
@@ -2170,14 +2170,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "705ce37d-f62f-53b4-ae2b-e4199c50989b")
+			(uuid "03eea2e7-e185-53bf-93df-59d450ba24f5")
 		)
 		(pin "2"
-			(uuid "299cef98-49d9-5363-b818-8d65ffd2c526")
+			(uuid "61049f6f-d4c5-504e-b9e4-7c2b73aeb8ac")
 		)
 		(instances
 			(project "Audio-Power"
-				(path "/fbbde700-f608-59a7-bff5-748780e82007"
+				(path "/81b251d3-8a60-55b0-8d10-52d599663581"
 					(reference "F601")
 					(unit 1)
 				)
@@ -2193,7 +2193,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "033b3098-7c9f-5c3a-ae3e-4438e05c01e7")
+		(uuid "9c687d34-01f2-52fc-a8cf-25eafc682a7a")
 		(property "Reference" "R601"
 			(at 146.812 118.11 90)
 			(effects
@@ -2240,14 +2240,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "e859a7fe-3061-52cf-b071-7f9a2faed771")
+			(uuid "bcccd981-e8cb-5f27-b783-76dc0d2a8379")
 		)
 		(pin "2"
-			(uuid "6a471f96-b2be-5d80-ba9d-04f5aa88edd1")
+			(uuid "8c19ddbd-49d8-5c88-984c-2654a7dcb81c")
 		)
 		(instances
 			(project "Audio-Power"
-				(path "/fbbde700-f608-59a7-bff5-748780e82007"
+				(path "/81b251d3-8a60-55b0-8d10-52d599663581"
 					(reference "R601")
 					(unit 1)
 				)
@@ -2263,7 +2263,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "5ad790db-31b6-508d-9639-66c40a91ecae")
+		(uuid "eb56ed23-3cad-5d10-8478-f694aeebd4d1")
 		(property "Reference" "C601"
 			(at 205.105 92.71 0.0000)
 			(effects
@@ -2310,14 +2310,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "837fa6b1-7028-51c9-bb38-3eb9ccf1b422")
+			(uuid "d348ee53-ea41-5b9b-bab2-3996d24cb0ab")
 		)
 		(pin "2"
-			(uuid "badc68ca-08b0-5265-b748-04dd14a097dc")
+			(uuid "c596a395-c624-5aea-89df-a9a9ede9e805")
 		)
 		(instances
 			(project "Audio-Power"
-				(path "/fbbde700-f608-59a7-bff5-748780e82007"
+				(path "/81b251d3-8a60-55b0-8d10-52d599663581"
 					(reference "C601")
 					(unit 1)
 				)
@@ -2333,7 +2333,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "f55efa91-c2a7-5e81-a25d-8dd5e76fc341")
+		(uuid "cef664f3-9d4c-5660-810b-d500f701774d")
 		(property "Reference" "C602"
 			(at 255.905 92.71 0.0000)
 			(effects
@@ -2380,14 +2380,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "4075089a-5390-5a90-bd23-dec847bbc34a")
+			(uuid "023279e2-b9e8-5d4c-8464-a8c97ce8b357")
 		)
 		(pin "2"
-			(uuid "58759950-0cda-5669-b61d-02382db2093c")
+			(uuid "f2a57d29-cfee-554e-9045-1dd2380ebf51")
 		)
 		(instances
 			(project "Audio-Power"
-				(path "/fbbde700-f608-59a7-bff5-748780e82007"
+				(path "/81b251d3-8a60-55b0-8d10-52d599663581"
 					(reference "C602")
 					(unit 1)
 				)
@@ -2403,7 +2403,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "9c687d34-01f2-52fc-a8cf-25eafc682a7a")
+		(uuid "a384d085-b49d-5335-9d3c-40064bdcfe31")
 		(property "Reference" "C603"
 			(at 305.435 92.71 0.0000)
 			(effects
@@ -2450,14 +2450,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "2a030dcc-5c7d-5d08-973e-b00c012e6f2c")
+			(uuid "99979b3a-3d85-5048-9203-ea8be31459f3")
 		)
 		(pin "2"
-			(uuid "03eea2e7-e185-53bf-93df-59d450ba24f5")
+			(uuid "fc3ed0db-d3c7-543d-9043-f27286d120e6")
 		)
 		(instances
 			(project "Audio-Power"
-				(path "/fbbde700-f608-59a7-bff5-748780e82007"
+				(path "/81b251d3-8a60-55b0-8d10-52d599663581"
 					(reference "C603")
 					(unit 1)
 				)
@@ -2473,7 +2473,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "cef664f3-9d4c-5660-810b-d500f701774d")
+		(uuid "d1c7f2ec-cc69-580b-b387-2df26fad46d4")
 		(property "Reference" "U601"
 			(at 157.48 254 0.0000)
 			(effects
@@ -2520,23 +2520,23 @@
 			)
 		)
 		(pin "1"
-			(uuid "61049f6f-d4c5-504e-b9e4-7c2b73aeb8ac")
+			(uuid "b65e601c-e4e6-5266-b610-363054079ea8")
 		)
 		(pin "2"
-			(uuid "bcccd981-e8cb-5f27-b783-76dc0d2a8379")
+			(uuid "b1c48e76-e0fe-5297-a3f6-37352d400c50")
 		)
 		(pin "3"
-			(uuid "8c19ddbd-49d8-5c88-984c-2654a7dcb81c")
+			(uuid "de3b4465-4bcb-585d-9cca-06b7b12da74b")
 		)
 		(pin "4"
-			(uuid "d348ee53-ea41-5b9b-bab2-3996d24cb0ab")
+			(uuid "91bbf5c8-5a3e-5b77-94f9-181b317dfbdc")
 		)
 		(pin "5"
-			(uuid "c596a395-c624-5aea-89df-a9a9ede9e805")
+			(uuid "354e198c-e35d-5009-bbc6-54507fc25bd4")
 		)
 		(instances
 			(project "Audio-Power"
-				(path "/fbbde700-f608-59a7-bff5-748780e82007"
+				(path "/81b251d3-8a60-55b0-8d10-52d599663581"
 					(reference "U601")
 					(unit 1)
 				)
@@ -2552,7 +2552,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "f728080f-7d1e-597d-982f-690173bf76c0")
+		(uuid "12c5dc29-23b7-5867-878f-158a24fdfac1")
 		(property "Reference" "C610"
 			(at 285.115 227.33 0.0000)
 			(effects
@@ -2599,14 +2599,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "023279e2-b9e8-5d4c-8464-a8c97ce8b357")
+			(uuid "6603f8bf-dcd9-5d14-b998-891c5fdb9868")
 		)
 		(pin "2"
-			(uuid "f2a57d29-cfee-554e-9045-1dd2380ebf51")
+			(uuid "bc5aec64-9836-5d7f-aa86-30992e7162b2")
 		)
 		(instances
 			(project "Audio-Power"
-				(path "/fbbde700-f608-59a7-bff5-748780e82007"
+				(path "/81b251d3-8a60-55b0-8d10-52d599663581"
 					(reference "C610")
 					(unit 1)
 				)
@@ -2622,7 +2622,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "d1c7f2ec-cc69-580b-b387-2df26fad46d4")
+		(uuid "6076f6b2-fd3f-59ec-a3ff-32d62f0d0de6")
 		(property "Reference" "C611"
 			(at 346.075 227.33 0.0000)
 			(effects
@@ -2669,14 +2669,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "99979b3a-3d85-5048-9203-ea8be31459f3")
+			(uuid "1839c13f-cb39-5b17-b962-8d42b1f615f1")
 		)
 		(pin "2"
-			(uuid "fc3ed0db-d3c7-543d-9043-f27286d120e6")
+			(uuid "f9556e37-8407-556b-b789-8f0b2be09db1")
 		)
 		(instances
 			(project "Audio-Power"
-				(path "/fbbde700-f608-59a7-bff5-748780e82007"
+				(path "/81b251d3-8a60-55b0-8d10-52d599663581"
 					(reference "C611")
 					(unit 1)
 				)
@@ -2692,7 +2692,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "ddc4857a-05ec-5f53-ac46-760520546379")
+		(uuid "3f03c932-0e46-538f-a2d8-603c38cb6776")
 		(property "Reference" "C612"
 			(at 285.115 273.05 0.0000)
 			(effects
@@ -2739,14 +2739,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "b65e601c-e4e6-5266-b610-363054079ea8")
+			(uuid "c010b348-c4f5-526f-9e16-df104b63f00f")
 		)
 		(pin "2"
-			(uuid "b1c48e76-e0fe-5297-a3f6-37352d400c50")
+			(uuid "7e5b046a-5afb-59e5-b742-e2858c0d1ce9")
 		)
 		(instances
 			(project "Audio-Power"
-				(path "/fbbde700-f608-59a7-bff5-748780e82007"
+				(path "/81b251d3-8a60-55b0-8d10-52d599663581"
 					(reference "C612")
 					(unit 1)
 				)
@@ -2762,7 +2762,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "12c5dc29-23b7-5867-878f-158a24fdfac1")
+		(uuid "4a151120-cb0c-53ff-b0c6-01d05120fed2")
 		(property "Reference" "C613"
 			(at 346.075 273.05 0.0000)
 			(effects
@@ -2809,14 +2809,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "de3b4465-4bcb-585d-9cca-06b7b12da74b")
+			(uuid "e4ad5f3a-9ea4-5eb5-b600-9cef6efe5f24")
 		)
 		(pin "2"
-			(uuid "91bbf5c8-5a3e-5b77-94f9-181b317dfbdc")
+			(uuid "11c11a6e-c6a2-5e4d-8db7-b473c620a9da")
 		)
 		(instances
 			(project "Audio-Power"
-				(path "/fbbde700-f608-59a7-bff5-748780e82007"
+				(path "/81b251d3-8a60-55b0-8d10-52d599663581"
 					(reference "C613")
 					(unit 1)
 				)
@@ -2832,7 +2832,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "1f4b7c6a-2f63-56b2-8238-072919de1a7d")
+		(uuid "83229b71-fb94-5a7d-aefe-d0b1343d5fce")
 		(property "Reference" "U602"
 			(at 501.65 114.3 0.0000)
 			(effects
@@ -2879,38 +2879,38 @@
 			)
 		)
 		(pin "1"
-			(uuid "354e198c-e35d-5009-bbc6-54507fc25bd4")
+			(uuid "04f70974-9861-57aa-9a90-f9bb7b144485")
 		)
 		(pin "2"
-			(uuid "6603f8bf-dcd9-5d14-b998-891c5fdb9868")
+			(uuid "e2f3f984-eefe-513c-a890-d27d678a277f")
 		)
 		(pin "3"
-			(uuid "bc5aec64-9836-5d7f-aa86-30992e7162b2")
+			(uuid "01daa735-ce44-5f92-8e32-fedcbe008098")
 		)
 		(pin "4"
-			(uuid "1839c13f-cb39-5b17-b962-8d42b1f615f1")
+			(uuid "34a70e01-17d2-5625-9497-e2600b6fee5f")
 		)
 		(pin "5"
-			(uuid "f9556e37-8407-556b-b789-8f0b2be09db1")
+			(uuid "4201273e-5291-5596-93e7-62448932c512")
 		)
 		(pin "6"
-			(uuid "c010b348-c4f5-526f-9e16-df104b63f00f")
+			(uuid "03fc3c25-6455-523f-9bf5-5d9498fed525")
 		)
 		(pin "7"
-			(uuid "7e5b046a-5afb-59e5-b742-e2858c0d1ce9")
+			(uuid "733b822f-6c86-50fc-b821-a7bdc23e9f24")
 		)
 		(pin "8"
-			(uuid "e4ad5f3a-9ea4-5eb5-b600-9cef6efe5f24")
+			(uuid "74b4f494-6d5c-5ab5-bb8a-83edc1534ef8")
 		)
 		(pin "9"
-			(uuid "11c11a6e-c6a2-5e4d-8db7-b473c620a9da")
+			(uuid "d3e3dd28-c94f-5652-b714-f7135def01b6")
 		)
 		(pin "10"
-			(uuid "04f70974-9861-57aa-9a90-f9bb7b144485")
+			(uuid "790eab03-9d5d-502b-9656-e9b3346d67b0")
 		)
 		(instances
 			(project "Audio-Power"
-				(path "/fbbde700-f608-59a7-bff5-748780e82007"
+				(path "/81b251d3-8a60-55b0-8d10-52d599663581"
 					(reference "U602")
 					(unit 1)
 				)
@@ -2926,7 +2926,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "41e45bdc-c440-54a7-9ef8-78fbb08873bc")
+		(uuid "3dcfad36-2a30-58c1-b067-7a34acbd5199")
 		(property "Reference" "L601"
 			(at 608.33 72.39 90)
 			(effects
@@ -2973,14 +2973,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "e2f3f984-eefe-513c-a890-d27d678a277f")
+			(uuid "f5049903-42f9-56c3-a646-20d10e546d8e")
 		)
 		(pin "2"
-			(uuid "01daa735-ce44-5f92-8e32-fedcbe008098")
+			(uuid "f460953f-279b-5c0a-bdff-b47f83a4cf8a")
 		)
 		(instances
 			(project "Audio-Power"
-				(path "/fbbde700-f608-59a7-bff5-748780e82007"
+				(path "/81b251d3-8a60-55b0-8d10-52d599663581"
 					(reference "L601")
 					(unit 1)
 				)
@@ -2996,7 +2996,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "44d8a400-9e53-5ac2-a73c-98f69724af06")
+		(uuid "8153083f-f005-5ae2-9459-69f981609568")
 		(property "Reference" "R610"
 			(at 611.632 110.49 90)
 			(effects
@@ -3043,14 +3043,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "34a70e01-17d2-5625-9497-e2600b6fee5f")
+			(uuid "a00525c2-d1ac-56b6-a3ae-584188e9f86b")
 		)
 		(pin "2"
-			(uuid "4201273e-5291-5596-93e7-62448932c512")
+			(uuid "f16c7793-be48-5581-a9f3-16cdb1a959be")
 		)
 		(instances
 			(project "Audio-Power"
-				(path "/fbbde700-f608-59a7-bff5-748780e82007"
+				(path "/81b251d3-8a60-55b0-8d10-52d599663581"
 					(reference "R610")
 					(unit 1)
 				)
@@ -3066,7 +3066,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "f6279adc-476d-5d3f-bbba-8ee0c9dcd992")
+		(uuid "719ab5f4-da7e-5c39-9ae1-7fb5b4267a6e")
 		(property "Reference" "R611"
 			(at 676.402 110.49 90)
 			(effects
@@ -3113,14 +3113,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "03fc3c25-6455-523f-9bf5-5d9498fed525")
+			(uuid "1c41a0e9-14e2-567d-b124-3c9379d19cd1")
 		)
 		(pin "2"
-			(uuid "733b822f-6c86-50fc-b821-a7bdc23e9f24")
+			(uuid "3d7b4131-eaa2-552d-ae46-70ad319a3b3a")
 		)
 		(instances
 			(project "Audio-Power"
-				(path "/fbbde700-f608-59a7-bff5-748780e82007"
+				(path "/81b251d3-8a60-55b0-8d10-52d599663581"
 					(reference "R611")
 					(unit 1)
 				)
@@ -3136,7 +3136,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "3dcfad36-2a30-58c1-b067-7a34acbd5199")
+		(uuid "82d836e4-7d20-5ba8-9e4b-f5e9cb778add")
 		(property "Reference" "C620"
 			(at 610.235 152.4 0.0000)
 			(effects
@@ -3183,14 +3183,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "74b4f494-6d5c-5ab5-bb8a-83edc1534ef8")
+			(uuid "415a85e2-8ac3-5be7-83f9-ff81f4cf831f")
 		)
 		(pin "2"
-			(uuid "d3e3dd28-c94f-5652-b714-f7135def01b6")
+			(uuid "d4c1bd95-0d74-526b-b3a2-caf9e78bfce5")
 		)
 		(instances
 			(project "Audio-Power"
-				(path "/fbbde700-f608-59a7-bff5-748780e82007"
+				(path "/81b251d3-8a60-55b0-8d10-52d599663581"
 					(reference "C620")
 					(unit 1)
 				)
@@ -3206,7 +3206,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "8153083f-f005-5ae2-9459-69f981609568")
+		(uuid "6aecba48-081d-56f0-a760-bc2b4222b84a")
 		(property "Reference" "R612"
 			(at 676.402 149.86 90)
 			(effects
@@ -3253,14 +3253,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "790eab03-9d5d-502b-9656-e9b3346d67b0")
+			(uuid "c9a3a239-e57c-5047-9707-be67ab87ef7f")
 		)
 		(pin "2"
-			(uuid "f5049903-42f9-56c3-a646-20d10e546d8e")
+			(uuid "1dfc7eae-9b22-5376-a41b-6a84dfc22661")
 		)
 		(instances
 			(project "Audio-Power"
-				(path "/fbbde700-f608-59a7-bff5-748780e82007"
+				(path "/81b251d3-8a60-55b0-8d10-52d599663581"
 					(reference "R612")
 					(unit 1)
 				)
@@ -3276,7 +3276,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "719ab5f4-da7e-5c39-9ae1-7fb5b4267a6e")
+		(uuid "38976cc8-ca96-5062-9552-7d61ceba720f")
 		(property "Reference" "R613"
 			(at 742.442 72.39 90)
 			(effects
@@ -3323,14 +3323,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "f460953f-279b-5c0a-bdff-b47f83a4cf8a")
+			(uuid "1e888be2-9a58-5df6-8326-b7c86d586133")
 		)
 		(pin "2"
-			(uuid "a00525c2-d1ac-56b6-a3ae-584188e9f86b")
+			(uuid "acb1b294-02a4-56bf-a7ef-5d56fc63bc72")
 		)
 		(instances
 			(project "Audio-Power"
-				(path "/fbbde700-f608-59a7-bff5-748780e82007"
+				(path "/81b251d3-8a60-55b0-8d10-52d599663581"
 					(reference "R613")
 					(unit 1)
 				)
@@ -3346,7 +3346,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "82d836e4-7d20-5ba8-9e4b-f5e9cb778add")
+		(uuid "47d5cce9-8c05-5207-9ffa-f893cb045e89")
 		(property "Reference" "C621"
 			(at 450.215 177.8 0.0000)
 			(effects
@@ -3393,14 +3393,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "f16c7793-be48-5581-a9f3-16cdb1a959be")
+			(uuid "1e67ab4a-048c-52c2-b34b-f14068d095a2")
 		)
 		(pin "2"
-			(uuid "1c41a0e9-14e2-567d-b124-3c9379d19cd1")
+			(uuid "7012aaa1-65ff-5e3d-ad94-fa64f84372c0")
 		)
 		(instances
 			(project "Audio-Power"
-				(path "/fbbde700-f608-59a7-bff5-748780e82007"
+				(path "/81b251d3-8a60-55b0-8d10-52d599663581"
 					(reference "C621")
 					(unit 1)
 				)
@@ -3416,7 +3416,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "6aecba48-081d-56f0-a760-bc2b4222b84a")
+		(uuid "915a804a-9c98-59d0-9e4b-ff54e51cfbc3")
 		(property "Reference" "C622"
 			(at 501.015 177.8 0.0000)
 			(effects
@@ -3463,14 +3463,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "3d7b4131-eaa2-552d-ae46-70ad319a3b3a")
+			(uuid "3916d55b-05e6-53c9-92fa-fb75bedf27bc")
 		)
 		(pin "2"
-			(uuid "415a85e2-8ac3-5be7-83f9-ff81f4cf831f")
+			(uuid "3abf2de8-a603-59a0-8f91-0b132b7a6417")
 		)
 		(instances
 			(project "Audio-Power"
-				(path "/fbbde700-f608-59a7-bff5-748780e82007"
+				(path "/81b251d3-8a60-55b0-8d10-52d599663581"
 					(reference "C622")
 					(unit 1)
 				)
@@ -3486,7 +3486,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "38976cc8-ca96-5062-9552-7d61ceba720f")
+		(uuid "2d4f7abd-0189-51cc-91b6-b889aed2cfc6")
 		(property "Reference" "C623"
 			(at 610.235 201.93 0.0000)
 			(effects
@@ -3533,14 +3533,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "d4c1bd95-0d74-526b-b3a2-caf9e78bfce5")
+			(uuid "e50676f0-7e2e-59a6-aeb0-ac448401d064")
 		)
 		(pin "2"
-			(uuid "c9a3a239-e57c-5047-9707-be67ab87ef7f")
+			(uuid "2e0a6a4e-e174-57f7-8ad8-783ce09995c9")
 		)
 		(instances
 			(project "Audio-Power"
-				(path "/fbbde700-f608-59a7-bff5-748780e82007"
+				(path "/81b251d3-8a60-55b0-8d10-52d599663581"
 					(reference "C623")
 					(unit 1)
 				)
@@ -3556,7 +3556,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "47d5cce9-8c05-5207-9ffa-f893cb045e89")
+		(uuid "40312eb9-30cf-57be-b4cf-f1f4f471eb38")
 		(property "Reference" "C624"
 			(at 671.195 201.93 0.0000)
 			(effects
@@ -3603,14 +3603,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "1dfc7eae-9b22-5376-a41b-6a84dfc22661")
+			(uuid "6ed69ae5-2e56-5b26-80b9-14d7de5d9607")
 		)
 		(pin "2"
-			(uuid "1e888be2-9a58-5df6-8326-b7c86d586133")
+			(uuid "2824cc87-bde2-5980-b20c-b21a961ba63f")
 		)
 		(instances
 			(project "Audio-Power"
-				(path "/fbbde700-f608-59a7-bff5-748780e82007"
+				(path "/81b251d3-8a60-55b0-8d10-52d599663581"
 					(reference "C624")
 					(unit 1)
 				)
@@ -3626,7 +3626,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "020a9ece-a757-5657-bcd1-e409e93285bb")
+		(uuid "b03a8e7c-f588-5dbf-b4df-6c2f47a9e76d")
 		(property "Reference" "U603"
 			(at 528.32 326.39 0.0000)
 			(effects
@@ -3673,47 +3673,47 @@
 			)
 		)
 		(pin "1"
-			(uuid "acb1b294-02a4-56bf-a7ef-5d56fc63bc72")
-		)
-		(pin "2"
-			(uuid "1e67ab4a-048c-52c2-b34b-f14068d095a2")
-		)
-		(pin "3"
-			(uuid "7012aaa1-65ff-5e3d-ad94-fa64f84372c0")
-		)
-		(pin "4"
-			(uuid "3916d55b-05e6-53c9-92fa-fb75bedf27bc")
-		)
-		(pin "5"
-			(uuid "3abf2de8-a603-59a0-8f91-0b132b7a6417")
-		)
-		(pin "6"
-			(uuid "e50676f0-7e2e-59a6-aeb0-ac448401d064")
-		)
-		(pin "7"
-			(uuid "2e0a6a4e-e174-57f7-8ad8-783ce09995c9")
-		)
-		(pin "8"
-			(uuid "6ed69ae5-2e56-5b26-80b9-14d7de5d9607")
-		)
-		(pin "9"
-			(uuid "2824cc87-bde2-5980-b20c-b21a961ba63f")
-		)
-		(pin "10"
 			(uuid "346780d0-ba02-5760-a0af-bfd9f50e9b40")
 		)
-		(pin "11"
+		(pin "2"
 			(uuid "3740f097-d2b7-534a-acfa-bd91b56300cf")
 		)
-		(pin "12"
+		(pin "3"
 			(uuid "7b92d34f-892b-5969-8698-4d066b1b93ff")
 		)
-		(pin "13"
+		(pin "4"
 			(uuid "1787f39e-5585-5581-88cb-dae7edd87bcc")
+		)
+		(pin "5"
+			(uuid "aa7b7715-ce60-505f-ad87-f2b6b458d9fb")
+		)
+		(pin "6"
+			(uuid "fad07c8c-f1ad-5b71-8898-67412e595b5e")
+		)
+		(pin "7"
+			(uuid "2f754b7e-4e5d-5667-9c04-676486a66a13")
+		)
+		(pin "8"
+			(uuid "7c7a3fd4-8abb-5e10-8bbd-27a89813f8dc")
+		)
+		(pin "9"
+			(uuid "c4de781d-634a-5b39-8af0-e5029b17fb31")
+		)
+		(pin "10"
+			(uuid "99f47bdb-8f2f-55c6-997a-124aa67f0019")
+		)
+		(pin "11"
+			(uuid "9ce45475-cdda-58b3-924c-691d83c7cd73")
+		)
+		(pin "12"
+			(uuid "501a58ec-0461-5eef-884d-4e20b92cc372")
+		)
+		(pin "13"
+			(uuid "7f6241f6-2d49-5403-9770-e12ace6d53f9")
 		)
 		(instances
 			(project "Audio-Power"
-				(path "/fbbde700-f608-59a7-bff5-748780e82007"
+				(path "/81b251d3-8a60-55b0-8d10-52d599663581"
 					(reference "U603")
 					(unit 1)
 				)
@@ -3729,7 +3729,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "3cca0755-d51c-5e67-abf2-d5beef88ed65")
+		(uuid "1c12943e-5f43-5af0-9a4e-70b238ec7d30")
 		(property "Reference" "R630"
 			(at 626.872 278.13 90)
 			(effects
@@ -3776,14 +3776,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "aa7b7715-ce60-505f-ad87-f2b6b458d9fb")
+			(uuid "164d43fb-499d-5cc0-9bda-95d94e7f40e5")
 		)
 		(pin "2"
-			(uuid "fad07c8c-f1ad-5b71-8898-67412e595b5e")
+			(uuid "8188b3a9-7d6f-5b69-bdfc-ed8e26292295")
 		)
 		(instances
 			(project "Audio-Power"
-				(path "/fbbde700-f608-59a7-bff5-748780e82007"
+				(path "/81b251d3-8a60-55b0-8d10-52d599663581"
 					(reference "R630")
 					(unit 1)
 				)
@@ -3799,7 +3799,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "93ee16a3-b771-550a-a9bd-884452af4e73")
+		(uuid "74f309f1-a4ca-5165-ba13-860751006db8")
 		(property "Reference" "R631"
 			(at 691.642 278.13 90)
 			(effects
@@ -3846,14 +3846,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "2f754b7e-4e5d-5667-9c04-676486a66a13")
+			(uuid "a9f786f5-4da8-50d0-96d7-28d6a2973c89")
 		)
 		(pin "2"
-			(uuid "7c7a3fd4-8abb-5e10-8bbd-27a89813f8dc")
+			(uuid "12066ac0-3654-5bbf-aadc-f45183c5effe")
 		)
 		(instances
 			(project "Audio-Power"
-				(path "/fbbde700-f608-59a7-bff5-748780e82007"
+				(path "/81b251d3-8a60-55b0-8d10-52d599663581"
 					(reference "R631")
 					(unit 1)
 				)
@@ -3869,7 +3869,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "c98d08ea-cc9c-508b-ad04-32a834ce42f6")
+		(uuid "601b81ca-43aa-5acd-8668-77a19cd553d4")
 		(property "Reference" "C630"
 			(at 755.015 280.67 0.0000)
 			(effects
@@ -3916,14 +3916,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "c4de781d-634a-5b39-8af0-e5029b17fb31")
+			(uuid "c78caf57-2382-5064-ada9-7811a4af05b1")
 		)
 		(pin "2"
-			(uuid "99f47bdb-8f2f-55c6-997a-124aa67f0019")
+			(uuid "d8fc0eb1-3d35-5caa-bf4b-a1204776a078")
 		)
 		(instances
 			(project "Audio-Power"
-				(path "/fbbde700-f608-59a7-bff5-748780e82007"
+				(path "/81b251d3-8a60-55b0-8d10-52d599663581"
 					(reference "C630")
 					(unit 1)
 				)
@@ -3939,7 +3939,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "1c12943e-5f43-5af0-9a4e-70b238ec7d30")
+		(uuid "d62683c3-6895-517c-8fc4-8b3725ec9158")
 		(property "Reference" "R632"
 			(at 626.872 361.95 90)
 			(effects
@@ -3986,14 +3986,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "9ce45475-cdda-58b3-924c-691d83c7cd73")
+			(uuid "026f99bf-bfef-516c-ac36-acd47c4dc8d8")
 		)
 		(pin "2"
-			(uuid "501a58ec-0461-5eef-884d-4e20b92cc372")
+			(uuid "fb6a8228-e365-5edc-9c35-b6c9ca1f7937")
 		)
 		(instances
 			(project "Audio-Power"
-				(path "/fbbde700-f608-59a7-bff5-748780e82007"
+				(path "/81b251d3-8a60-55b0-8d10-52d599663581"
 					(reference "R632")
 					(unit 1)
 				)
@@ -4009,7 +4009,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "74f309f1-a4ca-5165-ba13-860751006db8")
+		(uuid "83a5169d-c128-5ee1-b29d-288a34c297b6")
 		(property "Reference" "R633"
 			(at 691.642 361.95 90)
 			(effects
@@ -4056,14 +4056,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "7f6241f6-2d49-5403-9770-e12ace6d53f9")
+			(uuid "ca1013d1-66f7-5637-9f5c-bb7b8f8f47fa")
 		)
 		(pin "2"
-			(uuid "164d43fb-499d-5cc0-9bda-95d94e7f40e5")
+			(uuid "b99ab61c-0730-5a76-9170-9d64c3b3c6f1")
 		)
 		(instances
 			(project "Audio-Power"
-				(path "/fbbde700-f608-59a7-bff5-748780e82007"
+				(path "/81b251d3-8a60-55b0-8d10-52d599663581"
 					(reference "R633")
 					(unit 1)
 				)
@@ -4079,7 +4079,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "601b81ca-43aa-5acd-8668-77a19cd553d4")
+		(uuid "42d6ac30-1b99-523d-8cb7-c264b91cb915")
 		(property "Reference" "R634"
 			(at 756.412 361.95 90)
 			(effects
@@ -4126,14 +4126,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "8188b3a9-7d6f-5b69-bdfc-ed8e26292295")
+			(uuid "bbc17c6f-72f3-5d69-8f70-726354a4693e")
 		)
 		(pin "2"
-			(uuid "a9f786f5-4da8-50d0-96d7-28d6a2973c89")
+			(uuid "6e2587a8-8064-5ec2-ba14-4327acb8b35b")
 		)
 		(instances
 			(project "Audio-Power"
-				(path "/fbbde700-f608-59a7-bff5-748780e82007"
+				(path "/81b251d3-8a60-55b0-8d10-52d599663581"
 					(reference "R634")
 					(unit 1)
 				)
@@ -4149,7 +4149,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "d62683c3-6895-517c-8fc4-8b3725ec9158")
+		(uuid "2a1e012b-6db5-5304-a473-29749993cd15")
 		(property "Reference" "C631"
 			(at 455.295 280.67 0.0000)
 			(effects
@@ -4196,14 +4196,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "12066ac0-3654-5bbf-aadc-f45183c5effe")
+			(uuid "947316a4-1710-5326-92ad-6cc67338bb50")
 		)
 		(pin "2"
-			(uuid "c78caf57-2382-5064-ada9-7811a4af05b1")
+			(uuid "df76159a-b151-59c5-a2b3-c9d13479ba26")
 		)
 		(instances
 			(project "Audio-Power"
-				(path "/fbbde700-f608-59a7-bff5-748780e82007"
+				(path "/81b251d3-8a60-55b0-8d10-52d599663581"
 					(reference "C631")
 					(unit 1)
 				)
@@ -4219,7 +4219,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "83a5169d-c128-5ee1-b29d-288a34c297b6")
+		(uuid "ca9dd5d2-fc68-53ec-a138-23bbb3c182d8")
 		(property "Reference" "C632"
 			(at 455.295 364.49 0.0000)
 			(effects
@@ -4266,14 +4266,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "d8fc0eb1-3d35-5caa-bf4b-a1204776a078")
+			(uuid "9d3c0de5-ebd2-556e-a544-c4add115b234")
 		)
 		(pin "2"
-			(uuid "026f99bf-bfef-516c-ac36-acd47c4dc8d8")
+			(uuid "8d7147d1-5290-5fc9-836b-6077b2b210d9")
 		)
 		(instances
 			(project "Audio-Power"
-				(path "/fbbde700-f608-59a7-bff5-748780e82007"
+				(path "/81b251d3-8a60-55b0-8d10-52d599663581"
 					(reference "C632")
 					(unit 1)
 				)
@@ -4289,7 +4289,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "a0d5ad17-6f0e-5826-84b4-352ae68644a9")
+		(uuid "d02fa86a-76c3-5413-a066-2969f3ff48b4")
 		(property "Reference" "U604"
 			(at 528.32 441.96 0.0000)
 			(effects
@@ -4336,47 +4336,47 @@
 			)
 		)
 		(pin "1"
-			(uuid "fb6a8228-e365-5edc-9c35-b6c9ca1f7937")
-		)
-		(pin "2"
-			(uuid "ca1013d1-66f7-5637-9f5c-bb7b8f8f47fa")
-		)
-		(pin "3"
-			(uuid "b99ab61c-0730-5a76-9170-9d64c3b3c6f1")
-		)
-		(pin "4"
-			(uuid "bbc17c6f-72f3-5d69-8f70-726354a4693e")
-		)
-		(pin "5"
-			(uuid "6e2587a8-8064-5ec2-ba14-4327acb8b35b")
-		)
-		(pin "6"
-			(uuid "947316a4-1710-5326-92ad-6cc67338bb50")
-		)
-		(pin "7"
-			(uuid "df76159a-b151-59c5-a2b3-c9d13479ba26")
-		)
-		(pin "8"
-			(uuid "9d3c0de5-ebd2-556e-a544-c4add115b234")
-		)
-		(pin "9"
-			(uuid "8d7147d1-5290-5fc9-836b-6077b2b210d9")
-		)
-		(pin "10"
 			(uuid "171f28e5-06fb-5327-a168-4bb1e6ecc0c3")
 		)
-		(pin "11"
+		(pin "2"
 			(uuid "0797e9ee-987a-52e7-b1bc-ebd555f47bb2")
 		)
-		(pin "12"
+		(pin "3"
 			(uuid "a5d84564-8509-5a1d-8ca9-b95c29046424")
 		)
-		(pin "13"
+		(pin "4"
 			(uuid "188713de-564c-5cf5-bc0d-dac199955ca1")
+		)
+		(pin "5"
+			(uuid "9363c50b-86fb-58a2-8977-564daf258c20")
+		)
+		(pin "6"
+			(uuid "517edfa7-8603-56f3-885a-2b7b4ebb1fa3")
+		)
+		(pin "7"
+			(uuid "d0b7b230-2fa2-5737-bddc-dcc489cb7371")
+		)
+		(pin "8"
+			(uuid "e5456e6d-1dec-5b7a-a762-fed7f10f2552")
+		)
+		(pin "9"
+			(uuid "ac5ce77a-e72a-5ec8-805d-4ca7359dcd6c")
+		)
+		(pin "10"
+			(uuid "8aad984e-5cff-55a9-bb56-990dd5a3cf9e")
+		)
+		(pin "11"
+			(uuid "af041d74-3aec-58f7-b9f2-2d7adbe19bd4")
+		)
+		(pin "12"
+			(uuid "91e3aef7-239f-5c84-9ecf-da1b4f2b5e0f")
+		)
+		(pin "13"
+			(uuid "d77c2f33-7721-5b63-98b3-12ca49a3d389")
 		)
 		(instances
 			(project "Audio-Power"
-				(path "/fbbde700-f608-59a7-bff5-748780e82007"
+				(path "/81b251d3-8a60-55b0-8d10-52d599663581"
 					(reference "U604")
 					(unit 1)
 				)
@@ -4392,7 +4392,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "c2c15425-be65-5a51-a885-9460e232309f")
+		(uuid "57b72ff2-41a3-5b3d-9b89-e34012cdecce")
 		(property "Reference" "R650"
 			(at 626.872 392.43 90)
 			(effects
@@ -4439,14 +4439,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "9363c50b-86fb-58a2-8977-564daf258c20")
+			(uuid "7f1f0d54-fffd-54f3-954f-35cce4191e88")
 		)
 		(pin "2"
-			(uuid "517edfa7-8603-56f3-885a-2b7b4ebb1fa3")
+			(uuid "0a5e1750-ae46-533d-980f-5561986f2573")
 		)
 		(instances
 			(project "Audio-Power"
-				(path "/fbbde700-f608-59a7-bff5-748780e82007"
+				(path "/81b251d3-8a60-55b0-8d10-52d599663581"
 					(reference "R650")
 					(unit 1)
 				)
@@ -4462,7 +4462,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "f5482447-ce6b-50e1-b1d2-c7e16fb971a3")
+		(uuid "807351a0-ac2c-518a-ba18-e7f89b50b95c")
 		(property "Reference" "R651"
 			(at 691.642 392.43 90)
 			(effects
@@ -4509,14 +4509,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "d0b7b230-2fa2-5737-bddc-dcc489cb7371")
+			(uuid "5a7aaa87-f436-5172-bb1a-de1c93c2b647")
 		)
 		(pin "2"
-			(uuid "e5456e6d-1dec-5b7a-a762-fed7f10f2552")
+			(uuid "fe5cea7c-006a-5d21-ab0a-fd80c52a0b54")
 		)
 		(instances
 			(project "Audio-Power"
-				(path "/fbbde700-f608-59a7-bff5-748780e82007"
+				(path "/81b251d3-8a60-55b0-8d10-52d599663581"
 					(reference "R651")
 					(unit 1)
 				)
@@ -4532,7 +4532,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "11d2d8d0-a187-5c70-ab45-b2e09fec89b6")
+		(uuid "57173156-22f1-5e9c-9807-4c2a7489615a")
 		(property "Reference" "C650"
 			(at 755.015 394.97 0.0000)
 			(effects
@@ -4579,14 +4579,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "ac5ce77a-e72a-5ec8-805d-4ca7359dcd6c")
+			(uuid "b6776966-14a2-5757-afa2-b875fb2e1066")
 		)
 		(pin "2"
-			(uuid "8aad984e-5cff-55a9-bb56-990dd5a3cf9e")
+			(uuid "a8f2e5da-fb29-5538-a55d-7fe7d2ecf81c")
 		)
 		(instances
 			(project "Audio-Power"
-				(path "/fbbde700-f608-59a7-bff5-748780e82007"
+				(path "/81b251d3-8a60-55b0-8d10-52d599663581"
 					(reference "C650")
 					(unit 1)
 				)
@@ -4602,7 +4602,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "57b72ff2-41a3-5b3d-9b89-e34012cdecce")
+		(uuid "20007a32-a92a-5521-bf8d-90643c407a1f")
 		(property "Reference" "R652"
 			(at 626.872 477.52 90)
 			(effects
@@ -4649,14 +4649,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "af041d74-3aec-58f7-b9f2-2d7adbe19bd4")
+			(uuid "38d7c897-6445-5ead-bd74-c0c2675e62f4")
 		)
 		(pin "2"
-			(uuid "91e3aef7-239f-5c84-9ecf-da1b4f2b5e0f")
+			(uuid "ec44f168-2920-5845-ac31-582e1f3f758f")
 		)
 		(instances
 			(project "Audio-Power"
-				(path "/fbbde700-f608-59a7-bff5-748780e82007"
+				(path "/81b251d3-8a60-55b0-8d10-52d599663581"
 					(reference "R652")
 					(unit 1)
 				)
@@ -4672,7 +4672,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "807351a0-ac2c-518a-ba18-e7f89b50b95c")
+		(uuid "a9688d66-e62a-5b50-ac5d-c095631c795e")
 		(property "Reference" "R653"
 			(at 691.642 477.52 90)
 			(effects
@@ -4719,14 +4719,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "d77c2f33-7721-5b63-98b3-12ca49a3d389")
+			(uuid "4367c2fb-5147-5dbd-8cb5-c3b8e9d4b0fe")
 		)
 		(pin "2"
-			(uuid "7f1f0d54-fffd-54f3-954f-35cce4191e88")
+			(uuid "283e639f-e6b8-5cdc-ad5d-f5729f8a0c02")
 		)
 		(instances
 			(project "Audio-Power"
-				(path "/fbbde700-f608-59a7-bff5-748780e82007"
+				(path "/81b251d3-8a60-55b0-8d10-52d599663581"
 					(reference "R653")
 					(unit 1)
 				)
@@ -4742,7 +4742,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "57173156-22f1-5e9c-9807-4c2a7489615a")
+		(uuid "b801cf81-6d4a-5247-b4f4-6ef2da96f111")
 		(property "Reference" "R654"
 			(at 756.412 477.52 90)
 			(effects
@@ -4789,14 +4789,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "0a5e1750-ae46-533d-980f-5561986f2573")
+			(uuid "3f7ba865-7f1c-5911-9a58-4f226c6c8fb1")
 		)
 		(pin "2"
-			(uuid "5a7aaa87-f436-5172-bb1a-de1c93c2b647")
+			(uuid "b5a60057-f7e3-51ba-a9d2-f2d41e8344d2")
 		)
 		(instances
 			(project "Audio-Power"
-				(path "/fbbde700-f608-59a7-bff5-748780e82007"
+				(path "/81b251d3-8a60-55b0-8d10-52d599663581"
 					(reference "R654")
 					(unit 1)
 				)
@@ -4812,7 +4812,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "20007a32-a92a-5521-bf8d-90643c407a1f")
+		(uuid "fa6f0e8f-4246-5ec2-a377-d2ef46404624")
 		(property "Reference" "C651"
 			(at 455.295 394.97 0.0000)
 			(effects
@@ -4859,14 +4859,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "fe5cea7c-006a-5d21-ab0a-fd80c52a0b54")
+			(uuid "bbd1856e-0ef5-5e65-8b84-b85c4ffde2d0")
 		)
 		(pin "2"
-			(uuid "b6776966-14a2-5757-afa2-b875fb2e1066")
+			(uuid "0db4f2bb-d8b0-58c6-af48-e6ab407e2af6")
 		)
 		(instances
 			(project "Audio-Power"
-				(path "/fbbde700-f608-59a7-bff5-748780e82007"
+				(path "/81b251d3-8a60-55b0-8d10-52d599663581"
 					(reference "C651")
 					(unit 1)
 				)
@@ -4882,7 +4882,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "a9688d66-e62a-5b50-ac5d-c095631c795e")
+		(uuid "d6e81b83-7035-5179-a77c-8f079cd95559")
 		(property "Reference" "C652"
 			(at 455.295 480.06 0.0000)
 			(effects
@@ -4929,14 +4929,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "a8f2e5da-fb29-5538-a55d-7fe7d2ecf81c")
+			(uuid "7c3756fe-c64d-59f2-8cf3-939ee25d6766")
 		)
 		(pin "2"
-			(uuid "38d7c897-6445-5ead-bd74-c0c2675e62f4")
+			(uuid "70b40586-09a6-58d5-a1a1-3a4f5f571d7d")
 		)
 		(instances
 			(project "Audio-Power"
-				(path "/fbbde700-f608-59a7-bff5-748780e82007"
+				(path "/81b251d3-8a60-55b0-8d10-52d599663581"
 					(reference "C652")
 					(unit 1)
 				)
@@ -4952,7 +4952,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "1a60c71c-e014-53ac-8c52-bb8ac92f5a35")
+		(uuid "f798f98d-6257-5bd0-9500-8989847ba039")
 		(property "Reference" "U605"
 			(at 157.48 408.94 0.0000)
 			(effects
@@ -4999,23 +4999,23 @@
 			)
 		)
 		(pin "1"
-			(uuid "ec44f168-2920-5845-ac31-582e1f3f758f")
+			(uuid "e9b8b000-21de-5f81-8f1c-cdc62f97da95")
 		)
 		(pin "2"
-			(uuid "4367c2fb-5147-5dbd-8cb5-c3b8e9d4b0fe")
+			(uuid "1f220ad2-c2e9-5f63-85ce-3cbee14d226b")
 		)
 		(pin "3"
-			(uuid "283e639f-e6b8-5cdc-ad5d-f5729f8a0c02")
+			(uuid "9239a5db-f8eb-5199-88f8-0edfa42d7696")
 		)
 		(pin "4"
-			(uuid "3f7ba865-7f1c-5911-9a58-4f226c6c8fb1")
+			(uuid "488e868b-c08e-5463-bed4-7bf5caaa05eb")
 		)
 		(pin "5"
-			(uuid "b5a60057-f7e3-51ba-a9d2-f2d41e8344d2")
+			(uuid "65088840-0757-58bc-84da-0a088f735a06")
 		)
 		(instances
 			(project "Audio-Power"
-				(path "/fbbde700-f608-59a7-bff5-748780e82007"
+				(path "/81b251d3-8a60-55b0-8d10-52d599663581"
 					(reference "U605")
 					(unit 1)
 				)
@@ -5031,7 +5031,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "a3548646-57cf-5e3f-a369-6a4ae5a6b823")
+		(uuid "538cd059-ae90-5e74-8a1c-d44f5e54ad5c")
 		(property "Reference" "C670"
 			(at 90.805 441.96 0.0000)
 			(effects
@@ -5078,14 +5078,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "bbd1856e-0ef5-5e65-8b84-b85c4ffde2d0")
+			(uuid "44974169-7eaf-5562-a3ec-1a51677b4b02")
 		)
 		(pin "2"
-			(uuid "0db4f2bb-d8b0-58c6-af48-e6ab407e2af6")
+			(uuid "5be458dd-255e-5f4c-94eb-685fe7b7032b")
 		)
 		(instances
 			(project "Audio-Power"
-				(path "/fbbde700-f608-59a7-bff5-748780e82007"
+				(path "/81b251d3-8a60-55b0-8d10-52d599663581"
 					(reference "C670")
 					(unit 1)
 				)
@@ -5101,7 +5101,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "f798f98d-6257-5bd0-9500-8989847ba039")
+		(uuid "bbabf4a0-0ec8-5a7e-ba29-d197dafe4e4a")
 		(property "Reference" "C671"
 			(at 260.985 441.96 0.0000)
 			(effects
@@ -5148,14 +5148,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "7c3756fe-c64d-59f2-8cf3-939ee25d6766")
+			(uuid "91b2d4cd-2364-5df8-9868-dbd0608fea23")
 		)
 		(pin "2"
-			(uuid "70b40586-09a6-58d5-a1a1-3a4f5f571d7d")
+			(uuid "bd6b0e41-7cd4-5112-9c15-e53e43fa4d09")
 		)
 		(instances
 			(project "Audio-Power"
-				(path "/fbbde700-f608-59a7-bff5-748780e82007"
+				(path "/81b251d3-8a60-55b0-8d10-52d599663581"
 					(reference "C671")
 					(unit 1)
 				)
@@ -5171,7 +5171,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "4043fabd-3f98-5472-8fd3-605768102e5b")
+		(uuid "b5366925-3261-53fa-a9c8-82f5c828c624")
 		(property "Reference" "C672"
 			(at 320.675 441.96 0.0000)
 			(effects
@@ -5218,14 +5218,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "e9b8b000-21de-5f81-8f1c-cdc62f97da95")
+			(uuid "363aa529-eb58-572e-bcd1-5b3305885d41")
 		)
 		(pin "2"
-			(uuid "1f220ad2-c2e9-5f63-85ce-3cbee14d226b")
+			(uuid "efee687c-36ef-5b36-a9bb-c04760e8e70d")
 		)
 		(instances
 			(project "Audio-Power"
-				(path "/fbbde700-f608-59a7-bff5-748780e82007"
+				(path "/81b251d3-8a60-55b0-8d10-52d599663581"
 					(reference "C672")
 					(unit 1)
 				)
@@ -5241,7 +5241,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "538cd059-ae90-5e74-8a1c-d44f5e54ad5c")
+		(uuid "e636c590-8464-5279-a4ab-a4302be48505")
 		(property "Reference" "R670"
 			(at 92.202 485.14 90)
 			(effects
@@ -5288,14 +5288,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "9239a5db-f8eb-5199-88f8-0edfa42d7696")
+			(uuid "9375a090-6468-50c1-9461-873fd43b89a2")
 		)
 		(pin "2"
-			(uuid "488e868b-c08e-5463-bed4-7bf5caaa05eb")
+			(uuid "bdae5670-1f15-5d35-9eaf-2e3199a3879a")
 		)
 		(instances
 			(project "Audio-Power"
-				(path "/fbbde700-f608-59a7-bff5-748780e82007"
+				(path "/81b251d3-8a60-55b0-8d10-52d599663581"
 					(reference "R670")
 					(unit 1)
 				)
@@ -5311,7 +5311,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "bbabf4a0-0ec8-5a7e-ba29-d197dafe4e4a")
+		(uuid "9392f965-9aeb-547c-9c02-b4565dfe3a82")
 		(property "Reference" "R671"
 			(at 162.052 485.14 90)
 			(effects
@@ -5358,14 +5358,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "65088840-0757-58bc-84da-0a088f735a06")
+			(uuid "7e689be2-2434-56b8-adfe-1102fb1b06a9")
 		)
 		(pin "2"
-			(uuid "44974169-7eaf-5562-a3ec-1a51677b4b02")
+			(uuid "49b92025-68d3-5aa2-ae9d-a4ede290a5e3")
 		)
 		(instances
 			(project "Audio-Power"
-				(path "/fbbde700-f608-59a7-bff5-748780e82007"
+				(path "/81b251d3-8a60-55b0-8d10-52d599663581"
 					(reference "R671")
 					(unit 1)
 				)
@@ -5381,7 +5381,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "b5366925-3261-53fa-a9c8-82f5c828c624")
+		(uuid "d8e99d88-eebe-56f6-b1e2-874db66b5b73")
 		(property "Reference" "C673"
 			(at 230.505 487.68 0.0000)
 			(effects
@@ -5428,14 +5428,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "5be458dd-255e-5f4c-94eb-685fe7b7032b")
+			(uuid "058fbee8-0745-5b08-a37e-e9b56b378a2a")
 		)
 		(pin "2"
-			(uuid "91b2d4cd-2364-5df8-9868-dbd0608fea23")
+			(uuid "d412185c-ddbd-57f9-b624-34fccdf9bb83")
 		)
 		(instances
 			(project "Audio-Power"
-				(path "/fbbde700-f608-59a7-bff5-748780e82007"
+				(path "/81b251d3-8a60-55b0-8d10-52d599663581"
 					(reference "C673")
 					(unit 1)
 				)
@@ -5451,7 +5451,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "e4face98-bec1-54f9-8284-14fff0e91aa1")
+		(uuid "c5b3d7fd-2263-53e3-a057-d53a9f81c093")
 		(property "Reference" "#FLG601"
 			(at 364.49 559.435 0.0000)
 			(effects
@@ -5471,11 +5471,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "bd6b0e41-7cd4-5112-9c15-e53e43fa4d09")
+			(uuid "0fe9028a-8767-5abb-9810-b27f16e38a46")
 		)
 		(instances
 			(project "Audio-Power"
-				(path "/fbbde700-f608-59a7-bff5-748780e82007"
+				(path "/81b251d3-8a60-55b0-8d10-52d599663581"
 					(reference "#FLG601")
 					(unit 1)
 				)
@@ -5491,7 +5491,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "b0a367a4-d232-59ae-b212-ab306fe7db69")
+		(uuid "d5a20d48-a2fb-5bdb-94c1-d312103eff73")
 		(property "Reference" "#FLG602"
 			(at 425.45 559.435 0.0000)
 			(effects
@@ -5511,11 +5511,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "363aa529-eb58-572e-bcd1-5b3305885d41")
+			(uuid "ec7c7db4-584f-5d98-af77-7a4b724d2641")
 		)
 		(instances
 			(project "Audio-Power"
-				(path "/fbbde700-f608-59a7-bff5-748780e82007"
+				(path "/81b251d3-8a60-55b0-8d10-52d599663581"
 					(reference "#FLG602")
 					(unit 1)
 				)
@@ -5531,7 +5531,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "d8e99d88-eebe-56f6-b1e2-874db66b5b73")
+		(uuid "ad9fb180-85dd-5517-b3c6-304c4578909c")
 		(property "Reference" "#FLG603"
 			(at 485.14 559.435 0.0000)
 			(effects
@@ -5551,11 +5551,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "efee687c-36ef-5b36-a9bb-c04760e8e70d")
+			(uuid "54ec2ba9-a257-5050-858e-f1aca1506dc9")
 		)
 		(instances
 			(project "Audio-Power"
-				(path "/fbbde700-f608-59a7-bff5-748780e82007"
+				(path "/81b251d3-8a60-55b0-8d10-52d599663581"
 					(reference "#FLG603")
 					(unit 1)
 				)
@@ -5571,7 +5571,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "e363a539-e282-5062-87f6-4e03239c2ffa")
+		(uuid "6cf45332-b553-5ceb-8ec2-a604b117269c")
 		(property "Reference" "#FLG604"
 			(at 544.83 559.435 0.0000)
 			(effects
@@ -5591,11 +5591,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "9375a090-6468-50c1-9461-873fd43b89a2")
+			(uuid "326b5590-172f-5144-a444-eadfb7ec513e")
 		)
 		(instances
 			(project "Audio-Power"
-				(path "/fbbde700-f608-59a7-bff5-748780e82007"
+				(path "/81b251d3-8a60-55b0-8d10-52d599663581"
 					(reference "#FLG604")
 					(unit 1)
 				)
@@ -5611,7 +5611,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "3e90de93-8fa5-50c0-911f-8a9125b8aefa")
+		(uuid "c7d9bbe0-cfd2-502c-9ca2-6943edf72ffd")
 		(property "Reference" "#FLG605"
 			(at 604.52 559.435 0.0000)
 			(effects
@@ -5631,11 +5631,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "bdae5670-1f15-5d35-9eaf-2e3199a3879a")
+			(uuid "4afcda1a-9166-5ec1-8878-423fefb9ecc7")
 		)
 		(instances
 			(project "Audio-Power"
-				(path "/fbbde700-f608-59a7-bff5-748780e82007"
+				(path "/81b251d3-8a60-55b0-8d10-52d599663581"
 					(reference "#FLG605")
 					(unit 1)
 				)
@@ -5651,7 +5651,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "c0567696-35ae-55f8-a17a-f572df8bb486")
+		(uuid "83a8a36d-9cf5-5fb8-b87a-42fc3b229ad8")
 		(property "Reference" "#FLG606"
 			(at 364.49 579.755 0.0000)
 			(effects
@@ -5671,11 +5671,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "7e689be2-2434-56b8-adfe-1102fb1b06a9")
+			(uuid "34a79002-f20f-51fe-b8e2-74ea49091afb")
 		)
 		(instances
 			(project "Audio-Power"
-				(path "/fbbde700-f608-59a7-bff5-748780e82007"
+				(path "/81b251d3-8a60-55b0-8d10-52d599663581"
 					(reference "#FLG606")
 					(unit 1)
 				)
@@ -5691,7 +5691,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "0a77146a-fa0a-5a74-ad5c-421fbaf78c37")
+		(uuid "e7773825-b252-50d4-93d1-27278e0b8a73")
 		(property "Reference" "#FLG607"
 			(at 425.45 579.755 0.0000)
 			(effects
@@ -5711,11 +5711,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "49b92025-68d3-5aa2-ae9d-a4ede290a5e3")
+			(uuid "90f60376-c080-5942-881d-c86487517c95")
 		)
 		(instances
 			(project "Audio-Power"
-				(path "/fbbde700-f608-59a7-bff5-748780e82007"
+				(path "/81b251d3-8a60-55b0-8d10-52d599663581"
 					(reference "#FLG607")
 					(unit 1)
 				)
@@ -5731,7 +5731,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "35a5cf99-4cef-5088-92f5-69c531f26953")
+		(uuid "9381cc1f-2f03-54a2-af90-77d625d4b0cb")
 		(property "Reference" "#FLG608"
 			(at 485.14 579.755 0.0000)
 			(effects
@@ -5751,11 +5751,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "058fbee8-0745-5b08-a37e-e9b56b378a2a")
+			(uuid "d67fc9cc-8d6a-56b6-84a6-17d410f3fb89")
 		)
 		(instances
 			(project "Audio-Power"
-				(path "/fbbde700-f608-59a7-bff5-748780e82007"
+				(path "/81b251d3-8a60-55b0-8d10-52d599663581"
 					(reference "#FLG608")
 					(unit 1)
 				)
@@ -5771,7 +5771,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "c21a022d-cae3-535b-8e5c-42a4650a7c99")
+		(uuid "5fbe193a-5b6b-56ed-a3e6-ae0093160efc")
 		(property "Reference" "#FLG609"
 			(at 544.83 579.755 0.0000)
 			(effects
@@ -5791,11 +5791,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "d412185c-ddbd-57f9-b624-34fccdf9bb83")
+			(uuid "7b9e7548-3f99-520f-a8b5-dd85fc488d78")
 		)
 		(instances
 			(project "Audio-Power"
-				(path "/fbbde700-f608-59a7-bff5-748780e82007"
+				(path "/81b251d3-8a60-55b0-8d10-52d599663581"
 					(reference "#FLG609")
 					(unit 1)
 				)
@@ -5811,7 +5811,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "23c49b35-b065-57cc-8933-2db31190de1a")
+		(uuid "299cef98-49d9-5363-b818-8d65ffd2c526")
 		(property "Reference" "#FLG610"
 			(at 604.52 579.755 0.0000)
 			(effects
@@ -5831,11 +5831,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "0fe9028a-8767-5abb-9810-b27f16e38a46")
+			(uuid "f86cdd9c-8266-5835-8521-0f5b3d6db8ff")
 		)
 		(instances
 			(project "Audio-Power"
-				(path "/fbbde700-f608-59a7-bff5-748780e82007"
+				(path "/81b251d3-8a60-55b0-8d10-52d599663581"
 					(reference "#FLG610")
 					(unit 1)
 				)
@@ -5851,7 +5851,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "b65308d5-3be4-5678-a40c-ebb7c5e11370")
+		(uuid "82f76d74-a003-5e39-9bc8-edb728ad59e5")
 	)
 	(global_label "AUDIO_12V_IN"
 		(shape bidirectional)
@@ -5862,7 +5862,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "6face08a-fab6-5f91-a798-26d5b9186474")
+		(uuid "5ad790db-31b6-508d-9639-66c40a91ecae")
 	)
 	(global_label "GND"
 		(shape bidirectional)
@@ -5873,7 +5873,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "f6831030-0dad-5df3-98ec-cf6f72710f70")
+		(uuid "d6855d86-9f7d-53a9-a809-cf32d6592977")
 	)
 	(global_label "GND"
 		(shape bidirectional)
@@ -5884,7 +5884,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "8a3971db-13f5-585a-a185-948ee1c4fa0f")
+		(uuid "06b4264b-d901-56fa-9110-a05fe12310ff")
 	)
 	(global_label "AUDIO_12V_IN"
 		(shape bidirectional)
@@ -5895,7 +5895,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "0967ae62-caec-50eb-bc10-60bf33793037")
+		(uuid "c8092352-98e4-5275-ab98-d9ba4cdba140")
 	)
 	(global_label "AUDIO_12V"
 		(shape bidirectional)
@@ -5906,7 +5906,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "81b251d3-8a60-55b0-8d10-52d599663581")
+		(uuid "19e63af5-a32b-57bc-becd-59559e04dedd")
 	)
 	(global_label "GND"
 		(shape bidirectional)
@@ -5917,7 +5917,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "1cd0e3e8-0bfe-53c6-beff-0b2fd3d64d97")
+		(uuid "a92e8aa8-4b40-530f-bd5b-69d55dfd6ebc")
 	)
 	(global_label "AGND"
 		(shape bidirectional)
@@ -5928,7 +5928,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "82f76d74-a003-5e39-9bc8-edb728ad59e5")
+		(uuid "91cacc25-77cb-5530-a0af-3605ea630116")
 	)
 	(global_label "AUDIO_12V"
 		(shape bidirectional)
@@ -5939,7 +5939,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "d6855d86-9f7d-53a9-a809-cf32d6592977")
+		(uuid "800cb691-bf54-5e59-93b5-71f143314607")
 	)
 	(global_label "AGND"
 		(shape bidirectional)
@@ -5950,7 +5950,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "06b4264b-d901-56fa-9110-a05fe12310ff")
+		(uuid "7f92af0a-8c37-56ef-b241-6397444fc207")
 	)
 	(global_label "AUDIO_12V"
 		(shape bidirectional)
@@ -5961,7 +5961,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "c8092352-98e4-5275-ab98-d9ba4cdba140")
+		(uuid "aca41ff8-4644-5c11-9c84-0bb491d014dc")
 	)
 	(global_label "AGND"
 		(shape bidirectional)
@@ -5972,7 +5972,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "19e63af5-a32b-57bc-becd-59559e04dedd")
+		(uuid "8d081992-ae42-5ca4-8885-a1f7a789895c")
 	)
 	(global_label "AUDIO_12V"
 		(shape bidirectional)
@@ -5983,7 +5983,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "a92e8aa8-4b40-530f-bd5b-69d55dfd6ebc")
+		(uuid "e773d598-f878-5860-9f2e-75feccab2bde")
 	)
 	(global_label "AGND"
 		(shape bidirectional)
@@ -5994,7 +5994,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "91cacc25-77cb-5530-a0af-3605ea630116")
+		(uuid "098c81d8-7e07-5528-ac20-2ff573028790")
 	)
 	(global_label "AUDIO_12V"
 		(shape bidirectional)
@@ -6005,7 +6005,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "aca41ff8-4644-5c11-9c84-0bb491d014dc")
+		(uuid "8bad1943-241d-534c-a4db-8fc7ae3771cd")
 	)
 	(global_label "AGND"
 		(shape bidirectional)
@@ -6016,7 +6016,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "8d081992-ae42-5ca4-8885-a1f7a789895c")
+		(uuid "4710dcf7-9e0f-54a7-84a3-66c2818264f8")
 	)
 	(global_label "AUDIO_P15V"
 		(shape bidirectional)
@@ -6027,7 +6027,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "a384d085-b49d-5335-9d3c-40064bdcfe31")
+		(uuid "ddc4857a-05ec-5f53-ac46-760520546379")
 	)
 	(global_label "AGND"
 		(shape bidirectional)
@@ -6038,7 +6038,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "e773d598-f878-5860-9f2e-75feccab2bde")
+		(uuid "0715108a-15d6-5973-a606-cebd75a7e4e1")
 	)
 	(global_label "AUDIO_N15V"
 		(shape bidirectional)
@@ -6049,7 +6049,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "098c81d8-7e07-5528-ac20-2ff573028790")
+		(uuid "2b2e1c56-98a6-57ec-b63d-661bee5652ed")
 	)
 	(global_label "AUDIO_P15V"
 		(shape bidirectional)
@@ -6060,7 +6060,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "d701b87f-87fd-57de-8714-6f828593ee02")
+		(uuid "d69d6ac1-bd6c-554f-8c94-ca8db71d046d")
 	)
 	(global_label "AGND"
 		(shape bidirectional)
@@ -6071,7 +6071,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "8b21f9ba-7f03-58c2-8e94-25dd7f486a52")
+		(uuid "195c5b79-9000-5714-8dc0-7c4b6202c041")
 	)
 	(global_label "AUDIO_N15V"
 		(shape bidirectional)
@@ -6082,7 +6082,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "8bad1943-241d-534c-a4db-8fc7ae3771cd")
+		(uuid "5f4bcb42-533c-5b2d-aa5d-f485753f9fb3")
 	)
 	(global_label "AGND"
 		(shape bidirectional)
@@ -6093,7 +6093,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "4710dcf7-9e0f-54a7-84a3-66c2818264f8")
+		(uuid "1f4b7c6a-2f63-56b2-8238-072919de1a7d")
 	)
 	(global_label "AUDIO_P15V"
 		(shape bidirectional)
@@ -6104,7 +6104,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "0715108a-15d6-5973-a606-cebd75a7e4e1")
+		(uuid "d0d80b5a-1f8d-51f0-a30d-775971d18c66")
 	)
 	(global_label "AGND"
 		(shape bidirectional)
@@ -6115,7 +6115,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "2b2e1c56-98a6-57ec-b63d-661bee5652ed")
+		(uuid "d1e3b045-e2d8-55c0-a35a-5b3b58360e9a")
 	)
 	(global_label "AUDIO_N15V"
 		(shape bidirectional)
@@ -6126,7 +6126,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "d69d6ac1-bd6c-554f-8c94-ca8db71d046d")
+		(uuid "cf95eb63-6ad7-5b41-8b7b-4182aa5f4d81")
 	)
 	(global_label "AGND"
 		(shape bidirectional)
@@ -6137,7 +6137,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "195c5b79-9000-5714-8dc0-7c4b6202c041")
+		(uuid "68c035e7-c345-5491-8a3e-de9d10a29b65")
 	)
 	(global_label "AUDIO_ENABLE"
 		(shape bidirectional)
@@ -6148,7 +6148,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "3f03c932-0e46-538f-a2d8-603c38cb6776")
+		(uuid "1dbafe25-0b88-5e7e-abf4-f5cd0e69d0d1")
 	)
 	(global_label "AUDIO_5V5_SW"
 		(shape bidirectional)
@@ -6159,7 +6159,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "d0d80b5a-1f8d-51f0-a30d-775971d18c66")
+		(uuid "41e45bdc-c440-54a7-9ef8-78fbb08873bc")
 	)
 	(global_label "AUDIO_5V5_PRE"
 		(shape bidirectional)
@@ -6170,7 +6170,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "d1e3b045-e2d8-55c0-a35a-5b3b58360e9a")
+		(uuid "b9b6ec24-0c40-5d25-9c91-996d8136f211")
 	)
 	(global_label "AGND"
 		(shape bidirectional)
@@ -6181,7 +6181,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "4a151120-cb0c-53ff-b0c6-01d05120fed2")
+		(uuid "c95412d1-6e8c-572d-a6d6-bec5fb9a99cd")
 	)
 	(global_label "AUDIO_5V5_PG"
 		(shape bidirectional)
@@ -6192,7 +6192,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "cf95eb63-6ad7-5b41-8b7b-4182aa5f4d81")
+		(uuid "44d8a400-9e53-5ac2-a73c-98f69724af06")
 	)
 	(global_label "AUDIO_12V"
 		(shape bidirectional)
@@ -6203,7 +6203,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "68c035e7-c345-5491-8a3e-de9d10a29b65")
+		(uuid "9dd28a5c-6315-57aa-a62b-5f69071724b1")
 	)
 	(global_label "AGND"
 		(shape bidirectional)
@@ -6214,7 +6214,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "d82c19bf-5afd-58fc-83b2-94b9586d562f")
+		(uuid "4ce4b400-ea0b-575f-affd-3949d2e52ce9")
 	)
 	(global_label "AUDIO_5V5_NRSS"
 		(shape bidirectional)
@@ -6225,7 +6225,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "05d7262e-8fa4-5732-86de-8dba893132fc")
+		(uuid "f6279adc-476d-5d3f-bbba-8ee0c9dcd992")
 	)
 	(global_label "AUDIO_5V5_FB"
 		(shape bidirectional)
@@ -6236,7 +6236,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "83229b71-fb94-5a7d-aefe-d0b1343d5fce")
+		(uuid "3d9b31b9-9fbc-50f8-b225-81a65b2115b8")
 	)
 	(global_label "AUDIO_5V5_SCONF"
 		(shape bidirectional)
@@ -6247,7 +6247,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "1dbafe25-0b88-5e7e-abf4-f5cd0e69d0d1")
+		(uuid "ff8b30c5-4b90-5800-9127-104c1067f799")
 	)
 	(global_label "AUDIO_5V5_SW"
 		(shape bidirectional)
@@ -6258,7 +6258,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "b9b6ec24-0c40-5d25-9c91-996d8136f211")
+		(uuid "39e97b0c-e64d-546d-9eda-77b7ba81c495")
 	)
 	(global_label "AUDIO_5V5_PRE"
 		(shape bidirectional)
@@ -6269,7 +6269,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "c95412d1-6e8c-572d-a6d6-bec5fb9a99cd")
+		(uuid "0d7f680f-a997-5570-900a-9eecee48e907")
 	)
 	(global_label "AUDIO_5V5_PRE"
 		(shape bidirectional)
@@ -6280,7 +6280,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "9dd28a5c-6315-57aa-a62b-5f69071724b1")
+		(uuid "c42ff20c-7d6f-5f4d-b394-78eb8295fdfb")
 	)
 	(global_label "AUDIO_5V5_FB"
 		(shape bidirectional)
@@ -6291,7 +6291,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "4ce4b400-ea0b-575f-affd-3949d2e52ce9")
+		(uuid "744c7089-e759-530d-b537-4846e6705c79")
 	)
 	(global_label "AUDIO_5V5_FB"
 		(shape bidirectional)
@@ -6302,7 +6302,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "3d9b31b9-9fbc-50f8-b225-81a65b2115b8")
+		(uuid "5e56ce9d-3039-5538-99ab-d2ba4b87d15f")
 	)
 	(global_label "AGND"
 		(shape bidirectional)
@@ -6313,7 +6313,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "ff8b30c5-4b90-5800-9127-104c1067f799")
+		(uuid "c184b043-6d46-521e-8818-2dd556f455e5")
 	)
 	(global_label "AUDIO_5V5_NRSS"
 		(shape bidirectional)
@@ -6324,7 +6324,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "39e97b0c-e64d-546d-9eda-77b7ba81c495")
+		(uuid "591e3c42-be95-53bc-9050-135dd29b9901")
 	)
 	(global_label "AGND"
 		(shape bidirectional)
@@ -6335,7 +6335,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "0d7f680f-a997-5570-900a-9eecee48e907")
+		(uuid "2c84edde-6d33-5b92-a7ab-944454d064e0")
 	)
 	(global_label "AUDIO_5V5_SCONF"
 		(shape bidirectional)
@@ -6346,7 +6346,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "c42ff20c-7d6f-5f4d-b394-78eb8295fdfb")
+		(uuid "72555e18-c1f3-5988-8f3d-17a783197b9f")
 	)
 	(global_label "AGND"
 		(shape bidirectional)
@@ -6357,7 +6357,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "744c7089-e759-530d-b537-4846e6705c79")
+		(uuid "cf803bc9-1cee-5fe7-9138-7ad4945dde48")
 	)
 	(global_label "AUDIO_5V5_PRE"
 		(shape bidirectional)
@@ -6368,7 +6368,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "5e56ce9d-3039-5538-99ab-d2ba4b87d15f")
+		(uuid "5da2dfbd-28d8-5d09-b525-ba47e39a9e28")
 	)
 	(global_label "AUDIO_5V5_PG"
 		(shape bidirectional)
@@ -6379,7 +6379,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "c184b043-6d46-521e-8818-2dd556f455e5")
+		(uuid "ced29fdf-a09a-586f-895b-e62dc8cf5bbd")
 	)
 	(global_label "AUDIO_12V"
 		(shape bidirectional)
@@ -6390,7 +6390,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "591e3c42-be95-53bc-9050-135dd29b9901")
+		(uuid "a0a4eeb0-33c0-5e27-afb7-2cd8e5e2b1e7")
 	)
 	(global_label "AGND"
 		(shape bidirectional)
@@ -6401,7 +6401,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "2c84edde-6d33-5b92-a7ab-944454d064e0")
+		(uuid "50970df7-0608-52f0-8ba8-95aadf69a3e8")
 	)
 	(global_label "AUDIO_12V"
 		(shape bidirectional)
@@ -6412,7 +6412,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "72555e18-c1f3-5988-8f3d-17a783197b9f")
+		(uuid "a517c956-c0ee-5923-9087-9e69bb4ef238")
 	)
 	(global_label "AGND"
 		(shape bidirectional)
@@ -6423,7 +6423,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "cf803bc9-1cee-5fe7-9138-7ad4945dde48")
+		(uuid "020a9ece-a757-5657-bcd1-e409e93285bb")
 	)
 	(global_label "AUDIO_5V5_PRE"
 		(shape bidirectional)
@@ -6434,7 +6434,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "5da2dfbd-28d8-5d09-b525-ba47e39a9e28")
+		(uuid "72506fb6-8531-5b7c-aa37-1e20e95149b8")
 	)
 	(global_label "AGND"
 		(shape bidirectional)
@@ -6445,7 +6445,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "ced29fdf-a09a-586f-895b-e62dc8cf5bbd")
+		(uuid "f2ca8b01-3631-5ef4-8807-8d43e20b2f24")
 	)
 	(global_label "AUDIO_5V5_PRE"
 		(shape bidirectional)
@@ -6456,7 +6456,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "a0a4eeb0-33c0-5e27-afb7-2cd8e5e2b1e7")
+		(uuid "a5cebf2e-0a79-5fb8-9cb2-efbb1ec7c814")
 	)
 	(global_label "AGND"
 		(shape bidirectional)
@@ -6467,7 +6467,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "50970df7-0608-52f0-8ba8-95aadf69a3e8")
+		(uuid "20b1584c-388b-5b27-8d14-42c8b0d7e9f7")
 	)
 	(global_label "AUDIO_5V5_PRE"
 		(shape bidirectional)
@@ -6478,7 +6478,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "2d4f7abd-0189-51cc-91b6-b889aed2cfc6")
+		(uuid "0c1682d6-2d1d-5a18-b0df-ee3e81c38fa3")
 	)
 	(global_label "AUDIO_5V5_PRE"
 		(shape bidirectional)
@@ -6489,7 +6489,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "72506fb6-8531-5b7c-aa37-1e20e95149b8")
+		(uuid "6b4e62a4-29bb-5368-a66c-12b704d7c91c")
 	)
 	(global_label "AUDIO_5V5_PRE"
 		(shape bidirectional)
@@ -6500,7 +6500,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "f2ca8b01-3631-5ef4-8807-8d43e20b2f24")
+		(uuid "43f4c1d0-ded2-5eb2-b113-1e92e580d524")
 	)
 	(global_label "AUDIO_5V5_PG"
 		(shape bidirectional)
@@ -6511,7 +6511,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "40312eb9-30cf-57be-b4cf-f1f4f471eb38")
+		(uuid "9f8aa63b-99b4-578d-a814-7c7894fa09a4")
 	)
 	(global_label "ADC_5V_PG"
 		(shape bidirectional)
@@ -6522,7 +6522,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "a5cebf2e-0a79-5fb8-9cb2-efbb1ec7c814")
+		(uuid "3cca0755-d51c-5e67-abf2-d5beef88ed65")
 	)
 	(global_label "ADC_5V_ILIM"
 		(shape bidirectional)
@@ -6533,7 +6533,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "20b1584c-388b-5b27-8d14-42c8b0d7e9f7")
+		(uuid "24f05892-28e4-528c-9303-f38a85571f5a")
 	)
 	(global_label "ADC_5V_PGFB"
 		(shape bidirectional)
@@ -6544,7 +6544,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "20c3fd33-422f-524e-b914-757700801742")
+		(uuid "fa49b5ae-23e2-597e-ba73-5b1484f71cde")
 	)
 	(global_label "ADC_5V_SET"
 		(shape bidirectional)
@@ -6555,7 +6555,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "c159ea31-8373-55a3-8e6d-a06d929b6056")
+		(uuid "93ee16a3-b771-550a-a9bd-884452af4e73")
 	)
 	(global_label "AGND"
 		(shape bidirectional)
@@ -6566,7 +6566,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "b03a8e7c-f588-5dbf-b4df-6c2f47a9e76d")
+		(uuid "fbf712a1-0f8e-5359-88b1-0df6a6c8efbe")
 	)
 	(global_label "ADC_5V_A"
 		(shape bidirectional)
@@ -6577,7 +6577,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "0c1682d6-2d1d-5a18-b0df-ee3e81c38fa3")
+		(uuid "125bf544-f6c1-51e5-ab74-43faba3d1c0a")
 	)
 	(global_label "ADC_5V_A"
 		(shape bidirectional)
@@ -6588,7 +6588,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "6b4e62a4-29bb-5368-a66c-12b704d7c91c")
+		(uuid "c98d08ea-cc9c-508b-ad04-32a834ce42f6")
 	)
 	(global_label "ADC_5V_A"
 		(shape bidirectional)
@@ -6599,7 +6599,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "43f4c1d0-ded2-5eb2-b113-1e92e580d524")
+		(uuid "596f6ad9-535b-567f-8efe-e8e1cf4a18aa")
 	)
 	(global_label "AGND"
 		(shape bidirectional)
@@ -6610,7 +6610,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "9f8aa63b-99b4-578d-a814-7c7894fa09a4")
+		(uuid "81ca8704-bbd1-556c-ad77-6318441c1e19")
 	)
 	(global_label "ADC_5V_ILIM"
 		(shape bidirectional)
@@ -6621,7 +6621,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "24f05892-28e4-528c-9303-f38a85571f5a")
+		(uuid "e12aa9cd-7a78-5a21-bd01-a5c03ceb5b35")
 	)
 	(global_label "AGND"
 		(shape bidirectional)
@@ -6632,7 +6632,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "fa49b5ae-23e2-597e-ba73-5b1484f71cde")
+		(uuid "c7efc1a9-f67a-572b-b656-9289373bb0b6")
 	)
 	(global_label "ADC_5V_SET"
 		(shape bidirectional)
@@ -6643,7 +6643,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "fbf712a1-0f8e-5359-88b1-0df6a6c8efbe")
+		(uuid "4be6f112-12f0-5a54-964e-02a86acd0f12")
 	)
 	(global_label "AGND"
 		(shape bidirectional)
@@ -6654,7 +6654,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "125bf544-f6c1-51e5-ab74-43faba3d1c0a")
+		(uuid "8a9f6600-5772-5c5b-baf7-596943fa42e9")
 	)
 	(global_label "ADC_5V_SET"
 		(shape bidirectional)
@@ -6665,7 +6665,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "596f6ad9-535b-567f-8efe-e8e1cf4a18aa")
+		(uuid "d6d4abc5-2549-5870-b4c5-10f55f4b78eb")
 	)
 	(global_label "AGND"
 		(shape bidirectional)
@@ -6676,7 +6676,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "81ca8704-bbd1-556c-ad77-6318441c1e19")
+		(uuid "d786580a-0cd1-55de-ac2f-51639a44f465")
 	)
 	(global_label "ADC_5V_A"
 		(shape bidirectional)
@@ -6687,7 +6687,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "e12aa9cd-7a78-5a21-bd01-a5c03ceb5b35")
+		(uuid "c53ff302-a9fb-5822-bda7-648cd5a498ed")
 	)
 	(global_label "ADC_5V_PGFB"
 		(shape bidirectional)
@@ -6698,7 +6698,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "c7efc1a9-f67a-572b-b656-9289373bb0b6")
+		(uuid "bebc48ac-5c88-580d-a2fa-881b8e037c72")
 	)
 	(global_label "ADC_5V_PGFB"
 		(shape bidirectional)
@@ -6709,7 +6709,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "4be6f112-12f0-5a54-964e-02a86acd0f12")
+		(uuid "37bf3055-9cdf-55b3-8630-fb74425abedb")
 	)
 	(global_label "AGND"
 		(shape bidirectional)
@@ -6720,7 +6720,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "8a9f6600-5772-5c5b-baf7-596943fa42e9")
+		(uuid "196370d5-c317-5f33-a02e-e9ae101902b2")
 	)
 	(global_label "ADC_5V_A"
 		(shape bidirectional)
@@ -6731,7 +6731,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "d6d4abc5-2549-5870-b4c5-10f55f4b78eb")
+		(uuid "a0d5ad17-6f0e-5826-84b4-352ae68644a9")
 	)
 	(global_label "ADC_5V_PG"
 		(shape bidirectional)
@@ -6742,7 +6742,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "d786580a-0cd1-55de-ac2f-51639a44f465")
+		(uuid "d5960932-2ad9-51a9-813b-c149ac1ee6fb")
 	)
 	(global_label "AUDIO_5V5_PRE"
 		(shape bidirectional)
@@ -6753,7 +6753,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "c53ff302-a9fb-5822-bda7-648cd5a498ed")
+		(uuid "91790c13-14bf-5734-b475-75b9b29b79c4")
 	)
 	(global_label "AGND"
 		(shape bidirectional)
@@ -6764,7 +6764,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "bebc48ac-5c88-580d-a2fa-881b8e037c72")
+		(uuid "e89b51dd-a919-5965-a1dd-ab2659fad415")
 	)
 	(global_label "ADC_5V_A"
 		(shape bidirectional)
@@ -6775,7 +6775,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "37bf3055-9cdf-55b3-8630-fb74425abedb")
+		(uuid "4f235577-ce92-5891-99f2-a767eb7b6f31")
 	)
 	(global_label "AGND"
 		(shape bidirectional)
@@ -6786,7 +6786,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "196370d5-c317-5f33-a02e-e9ae101902b2")
+		(uuid "536ab03e-ee1e-5b8a-b8cf-e47d575899f7")
 	)
 	(global_label "AUDIO_5V5_PRE"
 		(shape bidirectional)
@@ -6797,7 +6797,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "d5960932-2ad9-51a9-813b-c149ac1ee6fb")
+		(uuid "59f98867-0022-56ab-8f06-6153afedb34f")
 	)
 	(global_label "AUDIO_5V5_PRE"
 		(shape bidirectional)
@@ -6808,7 +6808,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "2a1e012b-6db5-5304-a473-29749993cd15")
+		(uuid "7b1a0b7b-8a1c-52dd-80bc-34e270bc7f9c")
 	)
 	(global_label "AUDIO_5V5_PRE"
 		(shape bidirectional)
@@ -6819,7 +6819,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "91790c13-14bf-5734-b475-75b9b29b79c4")
+		(uuid "ab707e17-b510-5c8e-8801-15d6c5968f9a")
 	)
 	(global_label "AUDIO_5V5_PG"
 		(shape bidirectional)
@@ -6830,7 +6830,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "e89b51dd-a919-5965-a1dd-ab2659fad415")
+		(uuid "8edcd126-622b-5d9f-9ac4-95f6468a99e7")
 	)
 	(global_label "DAC_5V_PG"
 		(shape bidirectional)
@@ -6841,7 +6841,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "ca9dd5d2-fc68-53ec-a138-23bbb3c182d8")
+		(uuid "c2c15425-be65-5a51-a885-9460e232309f")
 	)
 	(global_label "DAC_5V_ILIM"
 		(shape bidirectional)
@@ -6852,7 +6852,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "4f235577-ce92-5891-99f2-a767eb7b6f31")
+		(uuid "606d6450-a2ad-56c8-98ce-c28a6250c52d")
 	)
 	(global_label "DAC_5V_PGFB"
 		(shape bidirectional)
@@ -6863,7 +6863,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "536ab03e-ee1e-5b8a-b8cf-e47d575899f7")
+		(uuid "3418bedb-74ef-564d-a32a-06fc72f6e83a")
 	)
 	(global_label "DAC_5V_SET"
 		(shape bidirectional)
@@ -6874,7 +6874,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "f7bd31f2-e259-587d-b1dd-b0ab025b758a")
+		(uuid "f5482447-ce6b-50e1-b1d2-c7e16fb971a3")
 	)
 	(global_label "AGND"
 		(shape bidirectional)
@@ -6885,7 +6885,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "d02fa86a-76c3-5413-a066-2969f3ff48b4")
+		(uuid "982e64d0-8de2-5b3c-b776-1ee37cf29106")
 	)
 	(global_label "DAC_5V_A"
 		(shape bidirectional)
@@ -6896,7 +6896,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "59f98867-0022-56ab-8f06-6153afedb34f")
+		(uuid "9249d869-ac37-58a0-9c88-f48714295455")
 	)
 	(global_label "DAC_5V_A"
 		(shape bidirectional)
@@ -6907,7 +6907,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "7b1a0b7b-8a1c-52dd-80bc-34e270bc7f9c")
+		(uuid "11d2d8d0-a187-5c70-ab45-b2e09fec89b6")
 	)
 	(global_label "DAC_5V_A"
 		(shape bidirectional)
@@ -6918,7 +6918,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "ab707e17-b510-5c8e-8801-15d6c5968f9a")
+		(uuid "9146b14a-2f4e-521c-a743-6216fdc644af")
 	)
 	(global_label "AGND"
 		(shape bidirectional)
@@ -6929,7 +6929,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "8edcd126-622b-5d9f-9ac4-95f6468a99e7")
+		(uuid "c9f3724b-8339-5a13-be05-2d75fd2d10e9")
 	)
 	(global_label "DAC_5V_ILIM"
 		(shape bidirectional)
@@ -6940,7 +6940,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "606d6450-a2ad-56c8-98ce-c28a6250c52d")
+		(uuid "34d7fa7e-fa4e-532a-b815-ec7d851c22a6")
 	)
 	(global_label "AGND"
 		(shape bidirectional)
@@ -6951,7 +6951,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "3418bedb-74ef-564d-a32a-06fc72f6e83a")
+		(uuid "965cf467-1a1d-5428-a7a1-cd2938d63a9d")
 	)
 	(global_label "DAC_5V_SET"
 		(shape bidirectional)
@@ -6962,7 +6962,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "982e64d0-8de2-5b3c-b776-1ee37cf29106")
+		(uuid "b1687b8b-73c5-57b3-9961-bceaf6603168")
 	)
 	(global_label "AGND"
 		(shape bidirectional)
@@ -6973,7 +6973,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "9249d869-ac37-58a0-9c88-f48714295455")
+		(uuid "701e1566-9d2a-5b6c-aaa3-14f7aff50af9")
 	)
 	(global_label "DAC_5V_SET"
 		(shape bidirectional)
@@ -6984,7 +6984,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "9146b14a-2f4e-521c-a743-6216fdc644af")
+		(uuid "350ab5ff-7f88-50ce-93e9-d2692afc8012")
 	)
 	(global_label "AGND"
 		(shape bidirectional)
@@ -6995,7 +6995,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "c9f3724b-8339-5a13-be05-2d75fd2d10e9")
+		(uuid "1d814ac8-f511-5a7e-a88a-763bfe82d39c")
 	)
 	(global_label "DAC_5V_A"
 		(shape bidirectional)
@@ -7006,7 +7006,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "34d7fa7e-fa4e-532a-b815-ec7d851c22a6")
+		(uuid "eacad56d-8abf-512e-b766-2838d51e2223")
 	)
 	(global_label "DAC_5V_PGFB"
 		(shape bidirectional)
@@ -7017,7 +7017,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "965cf467-1a1d-5428-a7a1-cd2938d63a9d")
+		(uuid "9802e084-8ae9-51f3-ac88-db96956e17b3")
 	)
 	(global_label "DAC_5V_PGFB"
 		(shape bidirectional)
@@ -7028,7 +7028,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "b1687b8b-73c5-57b3-9961-bceaf6603168")
+		(uuid "2e3c9f2d-ef29-59f6-8905-374224524726")
 	)
 	(global_label "AGND"
 		(shape bidirectional)
@@ -7039,7 +7039,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "701e1566-9d2a-5b6c-aaa3-14f7aff50af9")
+		(uuid "7a38356c-b9c8-54a1-811c-0693cc684a75")
 	)
 	(global_label "DAC_5V_A"
 		(shape bidirectional)
@@ -7050,7 +7050,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "350ab5ff-7f88-50ce-93e9-d2692afc8012")
+		(uuid "799b8367-6d3e-54b2-8c4d-59f2238784fa")
 	)
 	(global_label "DAC_5V_PG"
 		(shape bidirectional)
@@ -7061,7 +7061,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "1d814ac8-f511-5a7e-a88a-763bfe82d39c")
+		(uuid "1a60c71c-e014-53ac-8c52-bb8ac92f5a35")
 	)
 	(global_label "AUDIO_5V5_PRE"
 		(shape bidirectional)
@@ -7072,7 +7072,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "eacad56d-8abf-512e-b766-2838d51e2223")
+		(uuid "e4906ac7-e0e6-585a-977f-7b3cb1e65e71")
 	)
 	(global_label "AGND"
 		(shape bidirectional)
@@ -7083,7 +7083,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "9802e084-8ae9-51f3-ac88-db96956e17b3")
+		(uuid "c8e6e503-7247-53d9-8c6b-8819b8aa031a")
 	)
 	(global_label "DAC_5V_A"
 		(shape bidirectional)
@@ -7094,7 +7094,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "2e3c9f2d-ef29-59f6-8905-374224524726")
+		(uuid "f0d87d69-3e63-5d11-b422-814e1f3cae85")
 	)
 	(global_label "AGND"
 		(shape bidirectional)
@@ -7105,7 +7105,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "7a38356c-b9c8-54a1-811c-0693cc684a75")
+		(uuid "a3548646-57cf-5e3f-a369-6a4ae5a6b823")
 	)
 	(global_label "AUDIO_5V5_PRE"
 		(shape bidirectional)
@@ -7116,7 +7116,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "fa6f0e8f-4246-5ec2-a377-d2ef46404624")
+		(uuid "72b7fb62-33b3-5443-b03b-cb8bba97a20e")
 	)
 	(global_label "AGND"
 		(shape bidirectional)
@@ -7127,7 +7127,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "e4906ac7-e0e6-585a-977f-7b3cb1e65e71")
+		(uuid "5b8fa5e3-3659-52dd-95a0-858ec869bb0d")
 	)
 	(global_label "AUDIO_5V5_PG"
 		(shape bidirectional)
@@ -7138,7 +7138,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "c8e6e503-7247-53d9-8c6b-8819b8aa031a")
+		(uuid "4043fabd-3f98-5472-8fd3-605768102e5b")
 	)
 	(global_label "AKM_3V3_D"
 		(shape bidirectional)
@@ -7149,7 +7149,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "d6e81b83-7035-5179-a77c-8f079cd95559")
+		(uuid "b124f243-7491-5b12-ad2e-dc1693ea7db2")
 	)
 	(global_label "AUDIO_5V5_PRE"
 		(shape bidirectional)
@@ -7160,7 +7160,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "5a5d16a2-1e3a-5889-b098-b4bcdfe5ebb8")
+		(uuid "3ec55ac8-0ab6-5121-9d36-790b32a19289")
 	)
 	(global_label "AGND"
 		(shape bidirectional)
@@ -7171,7 +7171,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "1ffc05b5-d56e-569d-952c-71b1ef007c8f")
+		(uuid "7d07fb26-b2b0-5a6e-946b-68af21f84c63")
 	)
 	(global_label "AKM_3V3_D"
 		(shape bidirectional)
@@ -7182,7 +7182,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "72b7fb62-33b3-5443-b03b-cb8bba97a20e")
+		(uuid "f135d1a4-e0bf-56fe-87e7-0230e5df08d7")
 	)
 	(global_label "AGND"
 		(shape bidirectional)
@@ -7193,7 +7193,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "5b8fa5e3-3659-52dd-95a0-858ec869bb0d")
+		(uuid "734dfe98-47b2-5643-9757-830cbd9f3ac6")
 	)
 	(global_label "AKM_3V3_D"
 		(shape bidirectional)
@@ -7204,7 +7204,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "b124f243-7491-5b12-ad2e-dc1693ea7db2")
+		(uuid "0f147856-6bf8-50fc-a6b5-fda83e56f3f6")
 	)
 	(global_label "AGND"
 		(shape bidirectional)
@@ -7215,7 +7215,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "c211e7a7-d63e-5367-8480-372372e0da60")
+		(uuid "22739f1e-0b39-508c-9358-d94ded13b387")
 	)
 	(global_label "ADC_5V_A"
 		(shape bidirectional)
@@ -7226,7 +7226,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "3ec55ac8-0ab6-5121-9d36-790b32a19289")
+		(uuid "f56e8a6c-e9ce-5c70-90cb-2418be0d801c")
 	)
 	(global_label "VCM_2V5"
 		(shape bidirectional)
@@ -7237,7 +7237,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "7d07fb26-b2b0-5a6e-946b-68af21f84c63")
+		(uuid "e4face98-bec1-54f9-8284-14fff0e91aa1")
 	)
 	(global_label "VCM_2V5"
 		(shape bidirectional)
@@ -7248,7 +7248,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "f135d1a4-e0bf-56fe-87e7-0230e5df08d7")
+		(uuid "b0a367a4-d232-59ae-b212-ab306fe7db69")
 	)
 	(global_label "AGND"
 		(shape bidirectional)
@@ -7259,7 +7259,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "734dfe98-47b2-5643-9757-830cbd9f3ac6")
+		(uuid "c56559fa-2e45-54f7-a84c-85c2549c06bc")
 	)
 	(global_label "VCM_2V5"
 		(shape bidirectional)
@@ -7270,7 +7270,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "0f147856-6bf8-50fc-a6b5-fda83e56f3f6")
+		(uuid "cd6f8710-fbc2-5024-8116-2186db344674")
 	)
 	(global_label "AGND"
 		(shape bidirectional)
@@ -7281,7 +7281,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "22739f1e-0b39-508c-9358-d94ded13b387")
+		(uuid "e363a539-e282-5062-87f6-4e03239c2ffa")
 	)
 	(global_label "AUDIO_12V_IN"
 		(shape bidirectional)
@@ -7292,7 +7292,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "9392f965-9aeb-547c-9c02-b4565dfe3a82")
+		(uuid "c0567696-35ae-55f8-a17a-f572df8bb486")
 	)
 	(global_label "AUDIO_12V"
 		(shape bidirectional)
@@ -7303,7 +7303,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "c56559fa-2e45-54f7-a84c-85c2549c06bc")
+		(uuid "0a77146a-fa0a-5a74-ad5c-421fbaf78c37")
 	)
 	(global_label "GND"
 		(shape bidirectional)
@@ -7314,7 +7314,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "cd6f8710-fbc2-5024-8116-2186db344674")
+		(uuid "35a5cf99-4cef-5088-92f5-69c531f26953")
 	)
 	(global_label "AGND"
 		(shape bidirectional)
@@ -7325,7 +7325,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "6f4c1883-5265-583c-840f-053e944ffdd7")
+		(uuid "c21a022d-cae3-535b-8e5c-42a4650a7c99")
 	)
 	(global_label "AUDIO_P15V"
 		(shape bidirectional)
@@ -7336,7 +7336,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "c5b3d7fd-2263-53e3-a057-d53a9f81c093")
+		(uuid "23c49b35-b065-57cc-8933-2db31190de1a")
 	)
 	(global_label "AUDIO_N15V"
 		(shape bidirectional)
@@ -7347,7 +7347,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "d5a20d48-a2fb-5bdb-94c1-d312103eff73")
+		(uuid "31c469cb-74ce-52b3-8791-700ecef5ac3e")
 	)
 	(global_label "AUDIO_5V5_PRE"
 		(shape bidirectional)
@@ -7358,7 +7358,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "ad9fb180-85dd-5517-b3c6-304c4578909c")
+		(uuid "dffc0313-368f-526a-89c0-5ed5713b8515")
 	)
 	(global_label "AKM_3V3_D"
 		(shape bidirectional)
@@ -7369,7 +7369,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "6cf45332-b553-5ceb-8ec2-a604b117269c")
+		(uuid "b0b2fae3-a551-5768-b6d6-a13f5f3d6933")
 	)
 	(global_label "VCM_2V5"
 		(shape bidirectional)
@@ -7380,7 +7380,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "c7d9bbe0-cfd2-502c-9ca2-6943edf72ffd")
+		(uuid "705ce37d-f62f-53b4-ae2b-e4199c50989b")
 	)
 	(global_label "AUDIO_ENABLE"
 		(shape bidirectional)
@@ -7391,11 +7391,11 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "83a8a36d-9cf5-5fb8-b87a-42fc3b229ad8")
+		(uuid "e859a7fe-3061-52cf-b071-7f9a2faed771")
 	)
 	(no_connect
 		(at 195.58 389.89)
-		(uuid "f0d87d69-3e63-5d11-b422-814e1f3cae85")
+		(uuid "c211e7a7-d63e-5367-8480-372372e0da60")
 	)
 	(text "1. AUDIO_12V ENTRY AND SINGLE GROUND STAR"
 		(exclude_from_sim no)
@@ -7406,7 +7406,7 @@
 				(bold yes)
 			)
 		)
-		(uuid "c0d0c6e3-c45a-5e17-9e7b-e906950be5b2")
+		(uuid "033b3098-7c9f-5c3a-ae3e-4438e05c01e7")
 	)
 	(text "R601 is a wide 2512 zero-ohm star: no fan, RF, Ethernet, or chassis current may share the AGND side."
 		(exclude_from_sim no)
@@ -7416,7 +7416,7 @@
 				(size 0.82 0.82)
 			)
 		)
-		(uuid "eb56ed23-3cad-5d10-8478-f694aeebd4d1")
+		(uuid "f728080f-7d1e-597d-982f-690173bf76c0")
 	)
 	(text "AUDIO_12V source is separately fused on CM5-CARRIER; F601 protects this removable board and harness locally."
 		(exclude_from_sim no)
@@ -7426,7 +7426,7 @@
 				(size 0.82 0.82)
 			)
 		)
-		(uuid "800cb691-bf54-5e59-93b5-71f143314607")
+		(uuid "d701b87f-87fd-57de-8714-6f828593ee02")
 	)
 	(text "2. ISOLATED BIPOLAR LINE-STAGE RAILS"
 		(exclude_from_sim no)
@@ -7437,7 +7437,7 @@
 				(bold yes)
 			)
 		)
-		(uuid "7f92af0a-8c37-56ef-b241-6397444fc207")
+		(uuid "8b21f9ba-7f03-58c2-8e94-25dd7f486a52")
 	)
 	(text "TRI20: 9-18 V input, +/-15 V at 670 mA per rail, 89% typical; place 4.7 uF directly at each output pin."
 		(exclude_from_sim no)
@@ -7447,7 +7447,7 @@
 				(size 0.82 0.82)
 			)
 		)
-		(uuid "6076f6b2-fd3f-59ec-a3ff-32d62f0d0de6")
+		(uuid "d82c19bf-5afd-58fc-83b2-94b9586d562f")
 	)
 	(text "3. QUIET 5.5 V PRE-RAIL"
 		(exclude_from_sim no)
@@ -7458,7 +7458,7 @@
 				(bold yes)
 			)
 		)
-		(uuid "5f4bcb42-533c-5b2d-aa5d-f485753f9fb3")
+		(uuid "05d7262e-8fa4-5732-86de-8dba893132fc")
 	)
 	(text "TPS62913: 2.2 MHz low-noise mode; 29.4k/4.99k feedback; 470 nF NR/SS; verify ripple below the AKM rail budget."
 		(exclude_from_sim no)
@@ -7468,7 +7468,7 @@
 				(size 0.8 0.8)
 			)
 		)
-		(uuid "915a804a-9c98-59d0-9e4b-ff54e51cfbc3")
+		(uuid "20c3fd33-422f-524e-b914-757700801742")
 	)
 	(text "4. SEPARATE ADC AND DAC 5 V LT3045 RAILS"
 		(exclude_from_sim no)
@@ -7479,7 +7479,7 @@
 				(bold yes)
 			)
 		)
-		(uuid "a517c956-c0ee-5923-9087-9e69bb4ef238")
+		(uuid "c159ea31-8373-55a3-8e6d-a06d929b6056")
 	)
 	(text "ADC_5V_A: 4.99 V nominal, 300 mA limit, PG threshold about 4.5 V"
 		(exclude_from_sim no)
@@ -7489,7 +7489,7 @@
 				(size 0.7 0.7)
 			)
 		)
-		(uuid "42d6ac30-1b99-523d-8cb7-c264b91cb915")
+		(uuid "f7bd31f2-e259-587d-b1dd-b0ab025b758a")
 	)
 	(text "DAC_5V_A: 4.99 V nominal, 300 mA limit, PG threshold about 4.5 V"
 		(exclude_from_sim no)
@@ -7499,7 +7499,7 @@
 				(size 0.7 0.7)
 			)
 		)
-		(uuid "b801cf81-6d4a-5247-b4f4-6ef2da96f111")
+		(uuid "5a5d16a2-1e3a-5889-b098-b4bcdfe5ebb8")
 	)
 	(text "5. AKM DIGITAL RAIL AND 2.5 V INPUT COMMON MODE"
 		(exclude_from_sim no)
@@ -7510,7 +7510,7 @@
 				(bold yes)
 			)
 		)
-		(uuid "799b8367-6d3e-54b2-8c4d-59f2238784fa")
+		(uuid "1ffc05b5-d56e-569d-952c-71b1ef007c8f")
 	)
 	(text "VCM_2V5 is a quiet divider reference for the eight ADC input op-amps only; no external load is permitted."
 		(exclude_from_sim no)
@@ -7520,7 +7520,7 @@
 				(size 0.76 0.76)
 			)
 		)
-		(uuid "e636c590-8464-5279-a4ab-a4302be48505")
+		(uuid "6f4c1883-5265-583c-840f-053e944ffdd7")
 	)
 	(text "6. ERC SOURCES AND SEQUENCING CONTRACT"
 		(exclude_from_sim no)
@@ -7531,7 +7531,7 @@
 				(bold yes)
 			)
 		)
-		(uuid "f56e8a6c-e9ce-5c70-90cb-2418be0d801c")
+		(uuid "3e90de93-8fa5-50c0-911f-8a9125b8aefa")
 	)
 	(text "Release order: AUDIO_ENABLE -> 5V5_PG -> LT3045 PGs + AKM 3V3 valid -> clocks -> resets -> carrier unmute command."
 		(exclude_from_sim no)
@@ -7541,7 +7541,7 @@
 				(size 0.72 0.72)
 			)
 		)
-		(uuid "31c469cb-74ce-52b3-8791-700ecef5ac3e")
+		(uuid "6a471f96-b2be-5d80-ba9d-04f5aa88edd1")
 	)
 	(text "U106 on Audio-TDM-Clock hardware-gates DAC unmute and every output relay with ADC_5V_PG and DAC_5V_PG."
 		(exclude_from_sim no)
@@ -7551,7 +7551,7 @@
 				(size 0.72 0.72)
 			)
 		)
-		(uuid "e7773825-b252-50d4-93d1-27278e0b8a73")
+		(uuid "837fa6b1-7028-51c9-bb38-3eb9ccf1b422")
 	)
 	(sheet_instances
 		(path "/"

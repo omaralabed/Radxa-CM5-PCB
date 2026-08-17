@@ -112,9 +112,19 @@ def validate_package(
     }
     for board, (spec, prefix, count) in board_specs.items():
         board_rows = [row for row in supports if row["board"] == board]
+        main_rows = [
+            row for row in board_rows
+            if row["support_id"].startswith(prefix)
+            and row["support_id"][len(prefix):].isdigit()
+        ]
         expected_ids = [f"{prefix}{index}" for index in range(1, count + 1)]
-        require(len(board_rows) == count, f"{board} has exactly six controlled supports", failures)
-        require(sorted(row["support_id"] for row in board_rows) == expected_ids, f"{board} support IDs are contiguous", failures)
+        require(len(main_rows) == count, f"{board} has exactly six primary controlled supports", failures)
+        require(sorted(row["support_id"] for row in main_rows) == expected_ids, f"{board} primary support IDs are contiguous", failures)
+        require(
+            sorted(row["support_id"] for row in board_rows) == sorted(spec.get("support_ids", [])),
+            f"{board} support CSV matches the mechanical-release support list",
+            failures,
+        )
         origin = spec.get("board_origin_panel_mm", [])
         size = spec.get("board_size_mm", [])
         require(len(origin) == 2 and len(size) == 2, f"{board} support datum and board size are defined", failures)
@@ -135,10 +145,47 @@ def validate_package(
             require(abs(float(row["hole_diameter_mm"]) - 3.4) < 0.001, f'{row["support_id"]} uses a 3.4 mm finished NPTH', failures)
             require(float(row["copper_keepout_diameter_mm"]) >= 8.0, f'{row["support_id"]} has at least an 8 mm copper keepout', failures)
             require(float(row["component_keepout_diameter_mm"]) >= 10.0, f'{row["support_id"]} has at least a 10 mm component keepout', failures)
-            require(row["hardware"] == "M3_CAPTIVE_METAL_STANDOFF", f'{row["support_id"]} uses a rigid captive M3 metal standoff', failures)
-        ordered_y = sorted(y_rows)
+            expected_hardware = (
+                "M3_PRECISION_SLEEVE_2P50MM"
+                if row["support_id"].startswith("SD")
+                else "M3_CAPTIVE_METAL_STANDOFF"
+            )
+            require(
+                row["hardware"] == expected_hardware,
+                f'{row["support_id"]} uses the controlled support hardware',
+                failures,
+            )
+        ordered_y = sorted({float(row["y_board_mm"]) for row in main_rows})
         spans = [right - left for left, right in zip(ordered_y, ordered_y[1:])]
         require(len(ordered_y) >= 3 and max(spans, default=0.0) <= 128.0, f"{board} uses at least three support rows with no span above 128 mm", failures)
+
+    sim_stack = support_spec.get("sim_service_daughterboard", {})
+    sim_carrier_rows = [row for row in supports if row["support_id"].startswith("SD")]
+    require(
+        sorted(row["support_id"] for row in sim_carrier_rows) == ["SD1", "SD2", "SD3", "SD4"],
+        "SIM-SERVICE uses four carrier-side precision supports",
+        failures,
+    )
+    require(
+        sim_stack.get("carrier_support_ids") == ["SD1", "SD2", "SD3", "SD4"],
+        "SIM-SERVICE carrier support IDs are controlled",
+        failures,
+    )
+    require(
+        sim_stack.get("daughterboard_support_ids") == ["S1", "S2", "S3", "S4"],
+        "SIM-SERVICE daughterboard support IDs are controlled",
+        failures,
+    )
+    require(
+        abs(float(sim_stack.get("mated_board_spacing_mm", 0.0)) - 2.5) < 0.001,
+        "SIM-SERVICE socket stack is exactly 2.5 mm nominal",
+        failures,
+    )
+    require(
+        "no SIM harness" in sim_stack.get("electrical_interface", ""),
+        "SIM-SERVICE is a direct socketed board with no cable harness",
+        failures,
+    )
 
     # Support component keepouts must not touch the verified Neutrik courtyards.
     audio_rows = [row for row in supports if row["board"] == "AUDIO-8X8"]

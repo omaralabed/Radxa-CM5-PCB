@@ -83,7 +83,7 @@ def main() -> int:
             "LAN7430T-I/Y9X",
             "Package_DFN_QFN:QFN-48-1EP_7x7mm_P0.5mm_EP5.3x5.3mm_ThermalVias",
         ),
-        "J610": ("74991114412", "CM5Carrier:T_Wurth_WE-RJ45LAN_74991114412"),
+        "J610": ("V8BR-1AX1-GH", "CM5Carrier:Bel_V8BR_1AX1_GH"),
         "J620": ("0679101002", "CM5Carrier:Molex_0679101002_Mini_PCIe"),
         "L6111": ("VLS3012HBX-3R3M-N", "CM5Carrier:TDK_VLS3012HBX"),
         "Y611": (
@@ -114,8 +114,8 @@ def main() -> int:
             "ABM8-25.000MHZ-10-D1G-T",
             {"Y611", "Y612", "Y613"},
         ),
-        "Wurth integrated-magnetics jacks": (
-            "74991114412",
+        "Bel vertical integrated-magnetics jacks": (
+            "V8BR-1AX1-GH",
             {"J610", "J611", "J612", "J613"},
         ),
         "low-capacitance Ethernet ESD arrays": (
@@ -248,6 +248,42 @@ def main() -> int:
             "LAN7430 electrical pin and PCIe contract",
             lan_contract_ok,
             "all endpoint power pins, deterministic PM straps, reset pull-ups, rail ferrites, and TX coupling networks match the datasheet checklist",
+        )
+    )
+
+    magjack_contract_ok = True
+    for reference, prefix in (
+        ("J610", "WAN1"), ("J611", "WAN2"),
+        ("J612", "LAN1"), ("J613", "LAN2"),
+    ):
+        mdi = ("0", "1", "2", "3") if reference == "J610" else ("A", "B", "C", "D")
+        expected_pin_nets = {
+            "1": "GND", "6": "GND", "7": "GND", "12": "GND",
+            "11": f"{prefix}_MDI_{mdi[0]}_P" if reference != "J610" else f"{prefix}_MDI{mdi[0]}_P",
+            "10": f"{prefix}_MDI_{mdi[0]}_N" if reference != "J610" else f"{prefix}_MDI{mdi[0]}_N",
+            "4": f"{prefix}_MDI_{mdi[1]}_P" if reference != "J610" else f"{prefix}_MDI{mdi[1]}_P",
+            "5": f"{prefix}_MDI_{mdi[1]}_N" if reference != "J610" else f"{prefix}_MDI{mdi[1]}_N",
+            "3": f"{prefix}_MDI_{mdi[2]}_P" if reference != "J610" else f"{prefix}_MDI{mdi[2]}_P",
+            "2": f"{prefix}_MDI_{mdi[2]}_N" if reference != "J610" else f"{prefix}_MDI{mdi[2]}_N",
+            "8": f"{prefix}_MDI_{mdi[3]}_P" if reference != "J610" else f"{prefix}_MDI{mdi[3]}_P",
+            "9": f"{prefix}_MDI_{mdi[3]}_N" if reference != "J610" else f"{prefix}_MDI{mdi[3]}_N",
+            "17": f"{prefix}_LED0", "18": f"{prefix}_LED_A1",
+            "19": f"{prefix}_LED1", "20": f"{prefix}_LED_A2",
+            "21": "CHASSIS_GND", "22": "CHASSIS_GND",
+        }
+        magjack_contract_ok &= all(
+            net_map.get((reference, pin)) == net
+            for pin, net in expected_pin_nets.items()
+        )
+        magjack_contract_ok &= all(
+            net_map.get((reference, pin), "").startswith("unconnected-")
+            for pin in ("13", "14", "15", "16")
+        )
+    checks.append(
+        check(
+            "vertical Bel MagJack pin contract",
+            magjack_contract_ok,
+            "all four V8BR PHY pairs, grounded PHY center taps, NC PoE center taps, LEDs, and chassis leads match the Bel drawing",
         )
     )
     checks.append(

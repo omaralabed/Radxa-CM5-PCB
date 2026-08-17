@@ -166,8 +166,8 @@ Start from the Radxa CM5 IO reference design and remove anything not needed.
 - XLR placement should use the extracted legacy ProComm XLR geometry in `notes/xlr-bank-reference.md`, then verify final Neutrik mechanical drawings, latch orientation, panel cutouts, and label clearance.
 - Top-panel connector placement must fit inside the source-checked 17.00 in x 11.733 in nominal base bezel reference after real connector cutouts, cable clearance, panel fasteners, gasket/lip, and case taper are included.
 - Top panel layout should follow the existing ProComm field unit reference: left-side XLR audio connector bank, headset/service area, antennas, vents, and right-side electronics area.
-- Top-facing SIM access must use a vertical service daughterboard or a different
-  top-entry mechanism; do not place the selected side-entry Wurth holder flat
-  beneath the panel openings.
+- Top-facing SIM access uses the controlled horizontal SIM-SERVICE
+  daughterboard, insulating panel guide, four structural M3 supports, and
+  direct 20-pin Hirose DF40 connection to the carrier. No SIM harness is used.
 - Pelican iM2300 starts sealed, but the selected sidewall intake/exhaust makes
   this product intentionally vented. Validate ingress and 45 C thermal behavior.

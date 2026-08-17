@@ -1,5 +1,4 @@
 (sym_lib_table
   (version 7)
   (lib (name "CM5Carrier")(type "KiCad")(uri "${KIPRJMOD}/CM5Carrier.kicad_sym")(options "")(descr "Radxa CM5 carrier-local symbols"))
-  (lib (name "WurthRJ45")(type "KiCad")(uri "${KIPRJMOD}/WurthRJ45.kicad_sym")(options "")(descr "Wurth manufacturer RJ45 symbols"))
 )

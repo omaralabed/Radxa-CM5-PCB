@@ -1,0 +1,6 @@
+Reference,Value,Footprint,Manufacturer,MPN,Assembly,Qty,DNP
+J1,DUAL_SIM_B2B_RECEPTACLE,CM5Carrier:Hirose_DF40HC(2.5)-20DS-0.4V_2x10_P0.4mm,Hirose Electric,DF40HC(2.5)-20DS-0.4V(51),,1,
+J2,SIM1_NANO_SIM,CM5Carrier:J_Wurth_WR-CRD_693043020611,Wurth Elektronik,693043020611,,1,
+J3,SIM2_NANO_SIM,CM5Carrier:J_Wurth_WR-CRD_693043020611,Wurth Elektronik,693043020611,,1,
+U1,TPD3F303DPV,Package_SON:Texas_R-PUSON-N8_USON-8-1EP_1.6x2.1mm_P0.5mm_EP0.4x1.7mm,Texas Instruments,TPD3F303DPVR,,1,
+U2,TPD3F303DPV,Package_SON:Texas_R-PUSON-N8_USON-8-1EP_1.6x2.1mm_P0.5mm_EP0.4x1.7mm,Texas Instruments,TPD3F303DPVR,,1,

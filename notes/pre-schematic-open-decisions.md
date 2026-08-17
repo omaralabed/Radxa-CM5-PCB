@@ -108,9 +108,9 @@ interface baseline into complete detailed schematics.
 - Status LED functions are selected; finish color, drive, light-pipe, label,
   and panel location details. Top-panel indicators are now the Bulgin `DX06`
   12 V wire-lead family listed in `panel-mounted-parts-selection.md`.
-- The two top-facing SIM openings require a vertical SIM service daughterboard;
-  the selected Wurth `693043020611` side-entry holder cannot be mounted flat
-  below those openings.
+- The two top-facing SIM openings use a horizontal 76 x 40 mm SIM-SERVICE
+  daughterboard. It plugs directly into carrier J702 through a 20-pin Hirose
+  DF40 2.5 mm stack and is restrained by four matched M3 supports.
 - RTC battery or supercap requirement.
 - Hardware watchdog requirement.
 - Factory-test pads and programming headers.

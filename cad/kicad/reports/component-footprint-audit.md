@@ -4,8 +4,8 @@ Generated once from each physical board root so hierarchical child components ar
 
 ## Current gate
 
-- Components audited: 1203
-- Route-ready components: 1188
+- Components audited: 1200
+- Route-ready components: 1185
 - Intentional non-board symbols: 5
 - Routing blockers: 10
 - Production/BOM blockers: 11
@@ -17,7 +17,7 @@ A routing blocker has no footprint, references an unresolved footprint, or still
 | Sheet | Components | Routing blockers | Production blockers |
 |---|---:|---:|---:|
 | PWR-SELECT | 111 | 0 | 0 |
-| CM5-Carrier | 518 | 0 | 1 |
+| CM5-Carrier | 515 | 0 | 1 |
 | Audio-8x8 | 574 | 10 | 10 |
 
 ## Gate commands

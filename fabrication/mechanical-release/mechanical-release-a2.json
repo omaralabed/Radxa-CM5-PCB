@@ -146,8 +146,18 @@
     "cm5_carrier": {
       "board_origin_panel_mm": [219.0, 15.0],
       "board_size_mm": [166.0, 268.0],
-      "support_ids": ["C1", "C2", "C3", "C4", "C5", "C6"],
+      "support_ids": ["C1", "C2", "SD1", "SD2", "SD3", "SD4", "C3", "C4", "C5", "C6"],
       "maximum_longitudinal_span_mm": 128.0
+    },
+    "sim_service_daughterboard": {
+      "board_origin_panel_mm": [270.5, 103.0],
+      "board_size_mm": [76.0, 40.0],
+      "carrier_support_ids": ["SD1", "SD2", "SD3", "SD4"],
+      "daughterboard_support_ids": ["S1", "S2", "S3", "S4"],
+      "mated_board_spacing_mm": 2.5,
+      "hardware": "four precision 2.50 +/-0.05 mm metal spacer sleeves with M3 SEMS screws and prevailing-torque locknuts",
+      "electrical_interface": "Hirose DF40C-20DP carrier plug directly mated to DF40HC(2.5)-20DS daughterboard receptacle; no SIM harness",
+      "load_rule": "panel guide and four supports carry all SIM insertion, extraction, and vibration load; DF40 is signal-only"
     },
     "heavy_assembly_rule": "CM5 and modem heatsink/fan assemblies require separate rigid brackets tied into carrier or frame supports; board-to-board and M.2 connectors are not structural."
   },

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="1080" viewBox="0 0 420 270" role="img" aria-labelledby="title desc">
+  <title id="title">Direct-socket dual-SIM daughterboard stack Rev B</title>
+  <desc id="desc">Dimensioned plan and section showing the horizontal 76 by 40 millimeter SIM board directly plugged into the CM5 carrier using a 2.5 millimeter Hirose DF40 board-to-board pair and four structural spacer sleeves.</desc>
+  <defs>
+    <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M10 0H0V10" fill="none" stroke="#2b3239" stroke-width=".25"/></pattern>
+    <marker id="arrow" markerWidth="7" markerHeight="7" refX="3.5" refY="3.5" orient="auto-start-reverse"><path d="M7 3.5L0 0V7Z" fill="#b8c2cc"/></marker>
+    <style>
+      .page{fill:#111418}.grid{fill:url(#grid)}.panel{fill:#59636c;stroke:#e2e7eb;stroke-width:.7}.carrier{fill:#173d2a;stroke:#69d391;stroke-width:.8}.sim{fill:#183b4a;stroke:#5dd2e3;stroke-width:.8}.socket{fill:#1a2130;stroke:#76a7f7;stroke-width:.7}.holder{fill:#d8dde1;stroke:#76a7f7;stroke-width:.6}.guide{fill:#17263d;stroke:#76a7f7;stroke-width:.7}.hole{fill:#080a0c;stroke:#f4d8a2;stroke-width:.55}.sleeve{fill:#b3bac1;stroke:#f4d8a2;stroke-width:.45}.dim{fill:none;stroke:#aab3bd;stroke-width:.4;marker-start:url(#arrow);marker-end:url(#arrow)}.load{fill:none;stroke:#f4d8a2;stroke-width:1.2;marker-end:url(#arrow)}
+      .title{fill:#f6f8fa;font:700 7px -apple-system,BlinkMacSystemFont,"Segoe UI",Arial}.sub{fill:#b5bec7;font:3px -apple-system,BlinkMacSystemFont,"Segoe UI",Arial}.head{fill:#f6f8fa;font:700 4px -apple-system,BlinkMacSystemFont,"Segoe UI",Arial}.label{fill:#e9eef2;font:650 3px -apple-system,BlinkMacSystemFont,"Segoe UI",Arial}.small{fill:#bac4cd;font:2.55px -apple-system,BlinkMacSystemFont,"Segoe UI",Arial}.tiny{fill:#aeb8c2;font:2.15px -apple-system,BlinkMacSystemFont,"Segoe UI",Arial}.warn{fill:#f4d8a2;font:700 2.7px -apple-system,BlinkMacSystemFont,"Segoe UI",Arial}.center{text-anchor:middle}text{letter-spacing:0}
+    </style>
+  </defs>
+  <rect class="page" width="420" height="270"/><rect class="grid" width="420" height="270" opacity=".5"/>
+  <text class="title" x="12" y="14">DUAL-SIM DIRECT-SOCKET DAUGHTERBOARD STACK</text>
+  <text class="sub" x="12" y="21">REV B | HORIZONTAL BOARD | HIROSE DF40 20-PIN / 2.50 MM STACK | FOUR STRUCTURAL M3 SUPPORTS | NO SIM CABLE HARNESS</text>
+
+  <text class="head" x="16" y="32">A. DAUGHTERBOARD TOP VIEW</text>
+  <rect class="sim" x="16" y="40" width="190" height="100" rx="2"/>
+  <text class="label" x="22" y="48">SIM-SERVICE 76 x 40 x 1.6 MM / 4 LAYERS</text>
+  <rect class="holder" x="37" y="82" width="31" height="31" rx="1"/><rect class="holder" x="160" y="82" width="31" height="31" rx="1"/>
+  <path d="M37 113H68M160 113H191" stroke="#76a7f7" stroke-width="1.5"/>
+  <text class="label center" x="52.5" y="78">J2 / SIM 1</text><text class="label center" x="175.5" y="78">J3 / SIM 2</text>
+  <text class="tiny center" x="52.5" y="121">CARD OUT</text><text class="tiny center" x="175.5" y="121">CARD OUT</text>
+  <rect class="socket" x="101" y="54" width="20" height="11" rx="1"/><text class="tiny center" x="111" y="71">J1 ON B.Cu</text>
+  <circle class="hole" cx="30" cy="54" r="3"/><circle class="hole" cx="192" cy="54" r="3"/>
+  <circle class="hole" cx="84" cy="126" r="3"/><circle class="hole" cx="139" cy="126" r="3"/>
+  <text class="tiny" x="33" y="55">S1</text><text class="tiny" x="182" y="55">S2</text><text class="tiny" x="88" y="127">S3</text><text class="tiny" x="143" y="127">S4</text>
+  <line x1="52.5" y1="131" x2="52.5" y2="137" stroke="#66717c" stroke-width=".3"/><line x1="175.5" y1="131" x2="175.5" y2="137" stroke="#66717c" stroke-width=".3"/><line class="dim" x1="54.5" y1="135" x2="173.5" y2="135"/><text class="small center" x="114" y="139">49.0 MM HOLDER C-C</text>
+
+  <text class="head" x="224" y="32">B. CARRIER MATING DATUMS</text>
+  <rect class="carrier" x="224" y="40" width="180" height="100" rx="2"/>
+  <text class="tiny" x="230" y="48">CM5-CARRIER LOCAL COORDINATES</text>
+  <rect class="socket" x="303" y="61" width="22" height="12" rx="1"/><text class="label center" x="314" y="80">J702 PLUG (89.5, 96.0)</text>
+  <circle class="hole" cx="257" cy="61" r="3"/><circle class="hole" cx="370" cy="61" r="3"/>
+  <circle class="hole" cx="294" cy="125" r="3"/><circle class="hole" cx="332" cy="125" r="3"/>
+  <text class="tiny" x="261" y="62">SD1 57,93.5</text><text class="tiny" x="337" y="62">SD2 122,93.5</text>
+  <text class="tiny" x="266" y="133">SD3 78.5,122.5</text><text class="tiny" x="335" y="133">SD4 100.5,122.5</text>
+  <text class="small" x="230" y="93">Daughterboard origin on carrier: (51.5, 88.0)</text>
+  <text class="small" x="230" y="101">Panel origin: carrier (219,15), SIM board (270.5,103)</text>
+  <text class="small" x="230" y="109">J702/J1 and all four supports are fixed datums.</text>
+
+  <text class="head" x="16" y="158">C. STACK SECTION THROUGH J702 / J1</text>
+  <rect class="panel" x="25" y="174" width="180" height="8" rx="1"/><text class="tiny" x="25" y="171">3.175 MM TOP PANEL / UNDERSIDE DATUM</text>
+  <rect class="guide" x="68" y="182" width="42" height="7" rx="1"/><text class="tiny" x="115" y="187">UL94 V-0 CARD GUIDE</text>
+  <rect class="sim" x="30" y="190" width="170" height="6"/><text class="tiny" x="33" y="194">SIM PCB 1.60</text>
+  <rect class="holder" x="70" y="184" width="38" height="6"/><text class="tiny" x="74" y="188">WURTH HOLDER 1.20 MAX</text>
+  <rect class="socket" x="137" y="196" width="26" height="10"/><text class="tiny center" x="150" y="203">DF40 2.50</text>
+  <rect class="carrier" x="30" y="206" width="170" height="6"/><text class="tiny" x="33" y="210">CM5-CARRIER 1.60</text>
+  <rect class="sleeve" x="48" y="196" width="8" height="10"/><rect class="sleeve" x="184" y="196" width="8" height="10"/>
+  <text class="tiny" x="38" y="220">2.50 +/-0.05 MM PRECISION SLEEVES; M3 SEMS + PREVAILING-TORQUE LOCKNUTS</text>
+  <line class="dim" x1="213" y1="182" x2="213" y2="206"/><text class="small" x="218" y="196">5.825 carrier F.Cu to panel underside</text>
+  <text class="small" x="25" y="230">Nominal remaining clearance: 5.825 - 2.50 - 1.60 - 1.20 = 0.525 mm.</text>
+  <text class="warn" x="25" y="237">VERIFY FULL TOLERANCE STACK WITH ONE ASSEMBLED COUPON BEFORE PANEL RELEASE.</text>
+
+  <text class="head" x="230" y="158">D. LOAD PATH / ASSEMBLY</text>
+  <path class="load" d="M245 179V202"/><text class="warn" x="250" y="181">SIM CARD PUSH</text>
+  <path class="load" d="M245 203H276"/><text class="warn" x="280" y="205">GUIDE + 4 SLEEVES</text>
+  <text class="small" x="230" y="216">1. Place carrier DF40 plug J702 at locked datum.</text>
+  <text class="small" x="230" y="223">2. Fit four 2.50 mm sleeves at SD1-SD4.</text>
+  <text class="small" x="230" y="230">3. Mate daughterboard J1 without rocking or side load.</text>
+  <text class="small" x="230" y="237">4. Install all four M3 fasteners before card testing.</text>
+  <text class="small" x="230" y="244">5. Proof each slot at 40 N insertion / 20 N extraction.</text>
+  <text class="small" x="230" y="251">6. Maximum visible PCB motion during proof: 0.25 mm.</text>
+  <text class="warn" x="230" y="260">THE DF40 CONNECTOR IS ELECTRICAL ONLY; IT IS NOT A STRUCTURAL SUPPORT.</text>
+</svg>

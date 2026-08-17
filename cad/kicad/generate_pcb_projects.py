@@ -80,10 +80,29 @@ SPECS = (
         (
             ("C1", 6.0, 6.0),
             ("C2", 160.0, 6.0),
+            ("SD1", 57.0, 93.5),
+            ("SD2", 122.0, 93.5),
+            ("SD3", 78.5, 122.5),
+            ("SD4", 100.5, 122.5),
             ("C3", 6.0, 134.0),
             ("C4", 112.0, 134.0),
             ("C5", 6.0, 262.0),
             ("C6", 160.0, 190.0),
+        ),
+    ),
+    BoardSpec(
+        "SIM-SERVICE",
+        ROOT / "cad/kicad/SIM-SERVICE/Sim-Service.kicad_sch",
+        ROOT / "cad/kicad/SIM-SERVICE/Sim-Service.kicad_pcb",
+        76.0,
+        40.0,
+        4,
+        "S",
+        (
+            ("S1", 5.5, 5.5),
+            ("S2", 70.5, 5.5),
+            ("S3", 27.0, 34.5),
+            ("S4", 49.0, 34.5),
         ),
     ),
     BoardSpec(
@@ -352,8 +371,8 @@ def place_carrier_verified(board: pcbnew.BOARD, footprints: dict[str, pcbnew.FOO
     placed = place_cm5_assembly_bottom(board, footprints, 127.0, 245.0)
 
     # Rev L opening centers are board-local (34,39), (104,39), (34,73),
-    # and (104,73). Wurth 74991114412 body center is (-5.715,+6.300)
-    # from its official land-pattern origin.
+    # and (104,73). The official Bel housing center is (0,+2.325) from
+    # the exact V8BR-1AX1-GH land-pattern origin.
     rj45_centers = {
         "J610": (34.0, 39.0),
         "J611": (104.0, 39.0),
@@ -361,20 +380,38 @@ def place_carrier_verified(board: pcbnew.BOARD, footprints: dict[str, pcbnew.FOO
         "J613": (104.0, 73.0),
     }
     for ref, (cx, cy) in rj45_centers.items():
-        place(footprints[ref], cx + 5.715, cy - 6.300, 0.0, True)
+        place(footprints[ref], cx, cy - 2.325, 0.0, True)
         placed.add(ref)
 
-    # The Wurth nano-SIM footprint origin is the exact holder center; the Rev L
-    # service apertures are centered at these same controlled board datums.
-    for ref, center in {"J702": (85.0, 120.0), "J703": (134.0, 120.0)}.items():
-        place(footprints[ref], *center, 0.0, True)
-        placed.add(ref)
+    # The SIM-SERVICE receptacle is on the daughterboard B.Cu and mates at
+    # this exact top-side carrier datum. Four nearby SD supports carry every
+    # card and vibration load; the 2.5 mm DF40 pair is not structural.
+    place(footprints["J702"], 89.5, 96.0, 0.0, True)
+    placed.add("J702")
 
     add_rect(board, 13.0, 19.0, 135.0, 74.0)
     add_rect(board, 99.5, 225.0, 55.0, 40.0)
-    add_text(board, "LOCKED RJ45 BODY CENTERS", 14.0, 18.0, size_mm=0.75)
+    add_text(board, "LOCKED VERTICAL BEL RJ45 BODY CENTERS", 14.0, 18.0, size_mm=0.75)
     add_text(board, "LOCKED OFFICIAL RADXA CM5 B.Cu MATE", 100.0, 224.0, size_mm=0.75)
     return placed
+
+
+def place_sim_service_verified(
+    board: pcbnew.BOARD,
+    footprints: dict[str, pcbnew.FOOTPRINT],
+) -> set[str]:
+    # The horizontal SIM daughterboard sits 2.5 mm above the carrier. J1 is on
+    # B.Cu and mates directly to carrier J702; the Wurth holders remain on F.Cu
+    # with both card mouths at +Y and the locked 49 mm panel-center pitch.
+    place(footprints["J1"], 38.0, 8.0, 0.0, False)
+    footprints["J1"].Flip(footprints["J1"].GetPosition(), pcbnew.FLIP_DIRECTION_LEFT_RIGHT)
+    place(footprints["J1"], 38.0, 8.0, 0.0, True)
+    place(footprints["J2"], 13.5, 32.0, 0.0, True)
+    place(footprints["J3"], 62.5, 32.0, 0.0, True)
+    add_text(board, "PANEL / CARD SERVICE EDGE", 38.0, 38.5, size_mm=0.75, bold=True)
+    add_text(board, "SIM 1", 13.5, 37.0, size_mm=0.70, bold=True)
+    add_text(board, "SIM 2", 62.5, 37.0, size_mm=0.70, bold=True)
+    return {"J1", "J2", "J3"}
 
 
 def footprint_side(footprint: pcbnew.FOOTPRINT) -> int:
@@ -607,6 +644,20 @@ def place_carrier_engineered(
     return locked | {item.GetReference() for items in assignments.values() for item in items}
 
 
+def place_sim_service_engineered(
+    board: pcbnew.BOARD,
+    footprints: dict[str, pcbnew.FOOTPRINT],
+    locked: set[str],
+) -> set[str]:
+    # Keep the two protection/filter ICs directly behind their own sockets.
+    # This is a deliberate short protected segment, not a general auto-pack.
+    place(footprints["U1"], 13.5, 20.0, 0.0)
+    place(footprints["U2"], 62.5, 20.0, 0.0)
+    move_internal_fields_to_fab(footprints["U1"])
+    move_internal_fields_to_fab(footprints["U2"])
+    return locked | {"U1", "U2"}
+
+
 def place_power_selector_engineered(
     board: pcbnew.BOARD,
     footprints: dict[str, pcbnew.FOOTPRINT],
@@ -660,6 +711,9 @@ def add_engineering_zones(spec: BoardSpec, board: pcbnew.BOARD) -> None:
         add_text(board, "F.Cu SERVICE / WWAN / DISPLAY / AUDIO / THERMAL", 3.0, 97.5, size_mm=0.7, bold=True)
         add_text(board, "F.Cu POWER CONVERSION", 3.0, 168.5, size_mm=0.7, bold=True)
         add_text(board, "F.Cu CM5 SUPPORT; CM5 MATE LOCKED ON B.Cu", 3.0, 228.5, size_mm=0.7, bold=True)
+    elif spec.name == "SIM-SERVICE":
+        add_rect(board, 5.0, 13.0, 66.0, 25.0)
+        add_text(board, "HORIZONTAL DIRECT-SOCKET DAUGHTERBOARD; SIM MOUTHS +Y", 38.0, 1.5, size_mm=0.65, bold=True)
     else:
         add_text(board, "F.Cu POWER HARDWARE / B.Cu CONTROL; MOUNT DATUM PENDING", 4.0, 8.0, size_mm=0.8, bold=True)
 
@@ -673,11 +727,15 @@ def generate(spec: BoardSpec, netlist_path: Path) -> None:
         locked = place_audio_verified(board, footprints)
     elif spec.name == "CM5-CARRIER":
         locked = place_carrier_verified(board, footprints)
+    elif spec.name == "SIM-SERVICE":
+        locked = place_sim_service_verified(board, footprints)
     add_engineering_zones(spec, board)
     if spec.name == "AUDIO-8X8":
         placed = place_audio_engineered(board, footprints, sheets, locked)
     elif spec.name == "CM5-CARRIER":
         placed = place_carrier_engineered(board, footprints, sheets, locked)
+    elif spec.name == "SIM-SERVICE":
+        placed = place_sim_service_engineered(board, footprints, locked)
     else:
         placed = place_power_selector_engineered(board, footprints)
     if placed != set(footprints):

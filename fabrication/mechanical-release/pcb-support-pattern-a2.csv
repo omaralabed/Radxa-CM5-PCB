@@ -7,6 +7,10 @@ AUDIO-8X8,A5,32.0,262.0,47.0,277.0,3.4,8.0,10.0,M3_CAPTIVE_METAL_STANDOFF,Top pa
 AUDIO-8X8,A6,73.0,262.0,88.0,277.0,3.4,8.0,10.0,M3_CAPTIVE_METAL_STANDOFF,Right support column clears the verified NC3FAV courtyard; top panel to rigid standoff to PCB
 CM5-CARRIER,C1,6.0,6.0,225.0,21.0,3.4,8.0,10.0,M3_CAPTIVE_METAL_STANDOFF,Top panel to rigid standoff to carrier PCB
 CM5-CARRIER,C2,160.0,6.0,379.0,21.0,3.4,8.0,10.0,M3_CAPTIVE_METAL_STANDOFF,Top panel to rigid standoff to carrier PCB
+CM5-CARRIER,SD1,57.0,93.5,276.0,108.5,3.4,8.0,10.0,M3_PRECISION_SLEEVE_2P50MM,Aligns SIM-SERVICE S1; carries daughterboard and card insertion load
+CM5-CARRIER,SD2,122.0,93.5,341.0,108.5,3.4,8.0,10.0,M3_PRECISION_SLEEVE_2P50MM,Aligns SIM-SERVICE S2; carries daughterboard and card insertion load
+CM5-CARRIER,SD3,78.5,122.5,297.5,137.5,3.4,8.0,10.0,M3_PRECISION_SLEEVE_2P50MM,Aligns SIM-SERVICE S3; carries daughterboard and card insertion load
+CM5-CARRIER,SD4,100.5,122.5,319.5,137.5,3.4,8.0,10.0,M3_PRECISION_SLEEVE_2P50MM,Aligns SIM-SERVICE S4; carries daughterboard and card insertion load
 CM5-CARRIER,C3,6.0,134.0,225.0,149.0,3.4,8.0,10.0,M3_CAPTIVE_METAL_STANDOFF,Center support prevents connector and harness loads from flexing carrier
 CM5-CARRIER,C4,112.0,134.0,331.0,149.0,3.4,8.0,10.0,M3_CAPTIVE_METAL_STANDOFF,Center support clears the modem cooling keepout and prevents carrier flex
 CM5-CARRIER,C5,6.0,262.0,225.0,277.0,3.4,8.0,10.0,M3_CAPTIVE_METAL_STANDOFF,Top panel to rigid standoff to carrier PCB

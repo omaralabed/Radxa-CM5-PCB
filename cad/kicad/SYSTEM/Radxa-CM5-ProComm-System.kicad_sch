@@ -10,7 +10,7 @@
 		(rev "A2")
 		(company "ProComm")
 		(comment 1 "Top sheet is the electrical system interconnect; nested roots expose all detailed circuits")
-		(comment 2 "PWR-SELECT, CM5-CARRIER, and AUDIO-8X8 are authoritative physical PCB netlists")
+		(comment 2 "PWR-SELECT, CM5-CARRIER, AUDIO-8X8, and SIM-SERVICE are authoritative physical PCB netlists")
 		(comment 3 "System connector representations are excluded from BOM and board update")
 		(comment 4 "ENGINEERING PCB LAYOUT AUTHORIZED; FABRICATION RELEASE HELD")
 	)
@@ -11945,7 +11945,7 @@
 		)
 		(uuid "9349de06-c8ea-5037-a7c8-e16f806deecd")
 	)
-	(label "SIM1_RST"
+	(label "SIM1_RESET"
 		(at 579.12 547.37 0.0000)
 		(effects
 			(font
@@ -11965,7 +11965,7 @@
 		)
 		(uuid "7928c346-971b-55f6-90cd-261e0c8faf9a")
 	)
-	(label "SIM1_IO"
+	(label "SIM1_DATA"
 		(at 579.12 552.45 0.0000)
 		(effects
 			(font
@@ -11985,7 +11985,7 @@
 		)
 		(uuid "dda0d06f-6cc4-5e51-a178-86d0664c93b3")
 	)
-	(label "SIM1_DET"
+	(label "CHASSIS_GND"
 		(at 579.12 557.53 0.0000)
 		(effects
 			(font
@@ -12005,7 +12005,7 @@
 		)
 		(uuid "42290ff2-9910-5c0b-9fb7-1c4e309f80f8")
 	)
-	(label "SIM2_RST"
+	(label "SIM2_RESET"
 		(at 698.5 547.37 0.0000)
 		(effects
 			(font
@@ -12025,7 +12025,7 @@
 		)
 		(uuid "8cd98557-369b-5797-83f1-c36ccbb4891e")
 	)
-	(label "SIM2_IO"
+	(label "SIM2_DATA"
 		(at 698.5 552.45 0.0000)
 		(effects
 			(font
@@ -12045,7 +12045,7 @@
 		)
 		(uuid "df769da0-e4d0-5d34-aa27-017b8b0ae776")
 	)
-	(label "SIM2_DET"
+	(label "CHASSIS_GND"
 		(at 698.5 557.53 0.0000)
 		(effects
 			(font
@@ -12626,7 +12626,7 @@
 		)
 		(uuid "cfda8836-2690-5d11-aa26-8aa990162ac3")
 	)
-	(text "Page 1 shows system harness interconnects. The three physical board roots contain the complete connected component-level circuits."
+	(text "Page 1 shows system harness interconnects. The four physical board roots contain the complete connected component-level circuits."
 		(exclude_from_sim no)
 		(at 400 38 0.0000)
 		(effects
@@ -12943,6 +12943,48 @@
 			(project "Radxa-CM5-ProComm-System"
 				(path "/8ee1d215-def5-50f5-8d2f-a9585b61ca2c"
 					(page "11")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 895 700)
+		(size 245 20)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.3)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "2e4573a2-5285-541c-b0bf-d0078fc9c573")
+		(property "Sheetname" "SIM-SERVICE Connected Root"
+			(at 895 699.2884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "../SIM-SERVICE/Sim-Service.kicad_sch"
+			(at 895 720.5846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Radxa-CM5-ProComm-System"
+				(path "/8ee1d215-def5-50f5-8d2f-a9585b61ca2c"
+					(page "18")
 				)
 			)
 		)

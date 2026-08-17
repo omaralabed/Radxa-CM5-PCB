@@ -67,14 +67,17 @@ ROOT = Path(__file__).resolve().parent
 WORKSPACE = ROOT.parent.parent
 CM5_PINOUT = WORKSPACE / "docs" / "radxa_cm5_v2210_pinout.xlsx"
 CM5_LOCAL_LIBRARY = ROOT / "CM5-CARRIER" / "CM5Carrier.kicad_sym"
-CM5_WURTH_LIBRARY = ROOT / "CM5-CARRIER" / "WurthRJ45.kicad_sym"
 CM5_LOCAL_FOOTPRINTS = ROOT / "CM5-CARRIER" / "CM5Carrier.pretty"
 CM5_LOCAL_3DMODELS = ROOT / "CM5-CARRIER" / "CM5Carrier.3dshapes"
 COMPONENT_REFERENCES = WORKSPACE / "references" / "components"
-WURTH_74991114412 = COMPONENT_REFERENCES / "wurth" / "74991114412"
+BEL_V8BR_1AX1_GH = COMPONENT_REFERENCES / "bel" / "V8BR-1AX1-GH"
 LEGACY_CELLULAR_FOOTPRINTS = (
     WORKSPACE.parent / "ProComm enclosure and PCB boards" /
     "ADVANCED_SCHEMATIC_WORK" / "ProComm_RevF.pretty"
+)
+LEGACY_CELLULAR_MODELS = (
+    WORKSPACE.parent / "ProComm enclosure and PCB boards" /
+    "ADVANCED_SCHEMATIC_WORK" / "ProComm_RevF.3dshapes"
 )
 KICAD_TEMPLATE = Path(
     "/Applications/KiCad/KiCad.app/Contents/SharedSupport/template/"
@@ -97,6 +100,14 @@ MF_2X4 = "Connector_Molex:Molex_Micro-Fit_3.0_43045-0812_2x04_P3.00mm_Vertical"
 JST_GH_4 = "Connector_JST:JST_GH_BM04B-GHS-TBT_1x04-1MP_P1.25mm_Vertical"
 JST_GH_5 = "Connector_JST:JST_GH_BM05B-GHS-TBT_1x05-1MP_P1.25mm_Vertical"
 JST_GH_6 = "Connector_JST:JST_GH_BM06B-GHS-TBT_1x06-1MP_P1.25mm_Vertical"
+DF40_SIM_PLUG = (
+    "CM5Carrier:"
+    "Hirose_DF40C-20DP-0.4V_2x10-1MP_P0.4mm"
+)
+DF40_SIM_RECEPTACLE = (
+    "CM5Carrier:"
+    "Hirose_DF40HC(2.5)-20DS-0.4V_2x10_P0.4mm"
+)
 PICO_6 = "Connector_Molex:Molex_PicoBlade_53047-0610_1x06_P1.25mm_Vertical"
 PICO_8 = "Connector_Molex:Molex_PicoBlade_53047-0810_1x08_P1.25mm_Vertical"
 R_0603 = "Resistor_SMD:R_0603_1608Metric"
@@ -742,6 +753,24 @@ def write_cm5_local_library() -> dict[str, list[tuple[int, str]]]:
 
     local_symbols = (
         (
+            "Bel_V8BR_1AX1_GH",
+            "J",
+            "V8BR-1AX1-GH",
+            "CM5Carrier:Bel_V8BR_1AX1_GH",
+            "https://www.belfuse.com/media/drawings/products/magjack%20ICMs/dr-MAG-V8BR-1AX1-GH.pdf",
+            "Vertical 1000BASE-T MagJack with exposed PHY and cable center taps",
+            (
+                (1, "TRCT3"), (2, "TRD3-"), (3, "TRD3+"),
+                (4, "TRD2+"), (5, "TRD2-"), (6, "TRCT2"),
+                (7, "TRCT4"), (8, "TRD4+"), (9, "TRD4-"),
+                (10, "TRD1-"), (11, "TRD1+"), (12, "TRCT1"),
+                (13, "VC12"), (14, "VC36"), (15, "VC45"),
+                (16, "VC78"), (17, "LED1-"), (18, "LED1+"),
+                (19, "LED2-"), (20, "LED2+"),
+                (21, "SHIELD"), (22, "SHIELD"),
+            ),
+        ),
+        (
             "LM5146RGY",
             "U",
             "LM5146RGYR",
@@ -1131,15 +1160,10 @@ def write_cm5_local_library() -> dict[str, list[tuple[int, str]]]:
     lines.append(")")
     CM5_LOCAL_LIBRARY.parent.mkdir(parents=True, exist_ok=True)
     CM5_LOCAL_LIBRARY.write_text("\n".join(lines) + "\n")
-    shutil.copyfile(
-        WURTH_74991114412 / "Transformer_Wurth_WE-RJ45LAN.kicad_sym",
-        CM5_WURTH_LIBRARY,
-    )
     (CM5_LOCAL_LIBRARY.parent / "sym-lib-table").write_text(
         '(sym_lib_table\n'
         '  (version 7)\n'
         '  (lib (name "CM5Carrier")(type "KiCad")(uri "${KIPRJMOD}/CM5Carrier.kicad_sym")(options "")(descr "Radxa CM5 carrier-local symbols"))\n'
-        '  (lib (name "WurthRJ45")(type "KiCad")(uri "${KIPRJMOD}/WurthRJ45.kicad_sym")(options "")(descr "Wurth manufacturer RJ45 symbols"))\n'
         ')\n'
     )
     audio_folder = ROOT / "AUDIO-8X8"
@@ -1148,6 +1172,14 @@ def write_cm5_local_library() -> dict[str, list[tuple[int, str]]]:
         '(sym_lib_table\n'
         '  (version 7)\n'
         '  (lib (name "CM5Carrier")(type "KiCad")(uri "${KIPRJMOD}/../CM5-CARRIER/CM5Carrier.kicad_sym")(options "")(descr "Shared Radxa CM5 carrier and audio symbols"))\n'
+        ')\n'
+    )
+    sim_folder = ROOT / "SIM-SERVICE"
+    sim_folder.mkdir(parents=True, exist_ok=True)
+    (sim_folder / "sym-lib-table").write_text(
+        '(sym_lib_table\n'
+        '  (version 7)\n'
+        '  (lib (name "CM5Carrier")(type "KiCad")(uri "${KIPRJMOD}/../CM5-CARRIER/CM5Carrier.kicad_sym")(options "")(descr "Shared carrier and service-board symbols"))\n'
         ')\n'
     )
     return pinout
@@ -1447,13 +1479,24 @@ def write_cm5_local_footprints() -> None:
         if not source.exists():
             raise FileNotFoundError(f"Controlled connector footprint missing: {source}")
         shutil.copyfile(source, CM5_LOCAL_FOOTPRINTS / filename)
-    shutil.copyfile(
-        WURTH_74991114412 / "T_Wurth_WE-RJ45LAN_74991114412.kicad_mod",
-        CM5_LOCAL_FOOTPRINTS / "T_Wurth_WE-RJ45LAN_74991114412.kicad_mod",
+    sim_footprint = CM5_LOCAL_FOOTPRINTS / "J_Wurth_WR-CRD_693043020611.kicad_mod"
+    sim_footprint.write_text(
+        sim_footprint.read_text().replace(
+            '${KIPRJMOD}/ProComm_RevF.3dshapes/J_Wurth_WR-CRD_693043020611.step',
+            '${KIPRJMOD}/../CM5-CARRIER/CM5Carrier.3dshapes/J_Wurth_WR-CRD_693043020611.step',
+        )
     )
     shutil.copyfile(
-        WURTH_74991114412 / "T_Wurth_WE-RJ45LAN_74991114412.step",
-        CM5_LOCAL_3DMODELS / "T_Wurth_WE-RJ45LAN_74991114412.step",
+        BEL_V8BR_1AX1_GH / "Bel_V8BR_1AX1_GH.kicad_mod",
+        CM5_LOCAL_FOOTPRINTS / "Bel_V8BR_1AX1_GH.kicad_mod",
+    )
+    shutil.copyfile(
+        BEL_V8BR_1AX1_GH / "Bel_V8BR_1AX1_GH.step",
+        CM5_LOCAL_3DMODELS / "Bel_V8BR_1AX1_GH.step",
+    )
+    shutil.copyfile(
+        LEGACY_CELLULAR_MODELS / "J_Wurth_WR-CRD_693043020611.step",
+        CM5_LOCAL_3DMODELS / "J_Wurth_WR-CRD_693043020611.step",
     )
     write_molex_0679101002_footprint()
     write_kycon_stx_353k7a_footprint()
@@ -1467,6 +1510,15 @@ def write_cm5_local_footprints() -> None:
         '  (version 7)\n'
         '  (lib (name "CM5Carrier")(type "KiCad")(uri "${KIPRJMOD}/CM5Carrier.pretty")(options "")(descr "Radxa CM5 carrier-local footprints"))\n'
         '  (lib (name "ProCommMechanical")(type "KiCad")(uri "${KIPRJMOD}/../ProCommMechanical.pretty")(options "")(descr "Controlled ProComm support and mechanical footprints"))\n'
+        ')\n'
+    )
+    sim_folder = ROOT / "SIM-SERVICE"
+    sim_folder.mkdir(parents=True, exist_ok=True)
+    (sim_folder / "fp-lib-table").write_text(
+        '(fp_lib_table\n'
+        '  (version 7)\n'
+        '  (lib (name "CM5Carrier")(type "KiCad")(uri "${KIPRJMOD}/../CM5-CARRIER/CM5Carrier.pretty")(options "")(descr "Shared carrier and service-board footprints"))\n'
+        '  (lib (name "ProCommMechanical")(type "KiCad")(uri "${KIPRJMOD}/../ProCommMechanical.pretty")(options "")(descr "Controlled ProComm supports"))\n'
         ')\n'
     )
     (ROOT / "AUDIO-8X8" / "fp-lib-table").write_text(
@@ -2118,9 +2170,12 @@ def write_molex_0679101002_footprint() -> None:
 def create_project(folder: Path, name: str) -> None:
     folder.mkdir(parents=True, exist_ok=True)
     project_path = folder / f"{name}.kicad_pro"
+    existing = json.loads(project_path.read_text()) if project_path.exists() else {}
     shutil.copyfile(KICAD_TEMPLATE, project_path)
     data = json.loads(project_path.read_text())
     data["meta"]["filename"] = project_path.name
+    if existing.get("schematic", {}).get("top_level_sheets"):
+        data["schematic"]["top_level_sheets"] = existing["schematic"]["top_level_sheets"]
     project_path.write_text(json.dumps(data, indent=2) + "\n")
 
 
@@ -2732,23 +2787,26 @@ def build_network_pcie_sheet() -> Path:
     ) -> None:
         jack = add_symbol(
             schematic,
-            "WurthRJ45:74991114412",
+            "CM5Carrier:Bel_V8BR_1AX1_GH",
             reference,
-            "74991114412",
+            "V8BR-1AX1-GH",
             (x, y),
-            "CM5Carrier:T_Wurth_WE-RJ45LAN_74991114412",
-            "Wurth Elektronik",
-            "74991114412",
+            "CM5Carrier:Bel_V8BR_1AX1_GH",
+            "Bel",
+            "V8BR-1AX1-GH",
         )
-        label_pin_auto(schematic, jack, 1, "GND", 0.56)
-        for pin, net_name in zip(range(2, 10), mdi_nets):
+        for pin in (1, 6, 7, 12):
+            label_pin_auto(schematic, jack, pin, "GND", 0.56)
+        for pin, net_name in zip((11, 10, 4, 5, 3, 2, 8, 9), mdi_nets):
             label_pin_auto(schematic, jack, pin, net_name, 0.54)
-        label_pin_auto(schematic, jack, "S1", "CHASSIS_GND", 0.54)
-        label_pin_auto(schematic, jack, "S2", "CHASSIS_GND", 0.54)
-        label_pin_auto(schematic, jack, 11, f"{prefix}_LED_A1", 0.54)
-        label_pin_auto(schematic, jack, 12, led_sinks[0], 0.54)
-        label_pin_auto(schematic, jack, 13, f"{prefix}_LED_A2", 0.54)
-        label_pin_auto(schematic, jack, 14, led_sinks[1], 0.54)
+        for pin in (13, 14, 15, 16):
+            schematic.no_connects.add(pin_xy(jack, pin))
+        label_pin_auto(schematic, jack, 17, led_sinks[0], 0.54)
+        label_pin_auto(schematic, jack, 18, f"{prefix}_LED_A1", 0.54)
+        label_pin_auto(schematic, jack, 19, led_sinks[1], 0.54)
+        label_pin_auto(schematic, jack, 20, f"{prefix}_LED_A2", 0.54)
+        label_pin_auto(schematic, jack, 21, "CHASSIS_GND", 0.54)
+        label_pin_auto(schematic, jack, 22, "CHASSIS_GND", 0.54)
 
         place_ethernet_esd(esd_references[0], mdi_nets[:4], (x - 52, y + 4))
         place_ethernet_esd(esd_references[1], mdi_nets[4:], (x + 52, y + 4))
@@ -2760,7 +2818,7 @@ def build_network_pcie_sheet() -> Path:
             label_two_pin_device(schematic, resistor, "NET_3V3", anode_net)
         note(
             schematic,
-            f"{prefix}: 74991114412 voltage-mode 1 GbE; shields direct to chassis, PHY-side residual ESD",
+            f"{prefix}: vertical V8BR-1AX1-GH; PHY CTs to GND, PoE CTs NC, shield to chassis",
             (x - 72, y + 59),
             0.66,
         )
@@ -2895,7 +2953,7 @@ def build_network_pcie_sheet() -> Path:
             f"J{reference[1:]}",
             prefix,
             x,
-            245,
+            310,
             (
                 f"{prefix}_MDI_A_P", f"{prefix}_MDI_A_N",
                 f"{prefix}_MDI_B_P", f"{prefix}_MDI_B_N",
@@ -2911,7 +2969,7 @@ def build_network_pcie_sheet() -> Path:
     place_lan("U612", "LAN1", 555)
     place_lan("U613", "LAN2", 760)
 
-    heading(schematic, "3. WI-FI AP MINI PCIE 4T4R", (650, 315), 1.7)
+    heading(schematic, "3. WI-FI AP MINI PCIE 4T4R", (650, 380), 1.7)
     wifi = add_symbol(
         schematic,
         "CM5Carrier:Mini_PCIe_52",
@@ -3138,43 +3196,29 @@ def build_wwan_sim_sheet() -> Path:
     note(schematic, "Physical SIM 1 uses FSA2567 channel 2 and physical SIM 2 uses channel 1 to implement that default.", (470, 230), 0.76)
     note(schematic, "The control domain tracks MODEM_UIM_PWR, preventing a fixed 3.3 V overdrive when the SIM rail is 1.8 V.", (470, 220), 0.82)
 
-    def place_sim(reference: str, index: int, x: float) -> None:
-        prefix = f"SIM{index}"
-        holder = add_symbol(
-            schematic,
-            "CM5Carrier:Wurth_Nano_SIM_693043020611",
-            reference,
-            "693043020611",
-            (x, 105),
-            "CM5Carrier:J_Wurth_WR-CRD_693043020611",
-            "Wurth Elektronik",
-            "693043020611",
-        )
-        holder_nets = {
-            "C1": f"{prefix}_VCC", "C2": f"{prefix}_RESET",
-            "C3": f"{prefix}_CLK", "C5": "GND", "C7": f"{prefix}_DATA",
-            "S1": "CHASSIS_GND", "S2": "CHASSIS_GND", "S3": "CHASSIS_GND",
-            "S4": "CHASSIS_GND", "S5": "CHASSIS_GND", "S6": "CHASSIS_GND",
-        }
-        for pin, net_name in holder_nets.items():
-            label_pin_auto(schematic, holder, pin, net_name, 0.59)
-        schematic.no_connects.add(pin_xy(holder, "C6"))
-        sim_filter = add_symbol(
-            schematic, "Power_Protection:TPD3F303DPV", f"U{704 + index}",
-            "TPD3F303DPV", (x, 210), manufacturer="Texas Instruments", mpn="TPD3F303DPVR",
-        )
-        for pin, net_name in {
-            1: f"{prefix}_DATA", 2: f"{prefix}_CLK", 3: f"{prefix}_RESET",
-            5: f"{prefix}_VCC", 6: f"{prefix}_RESET_RAW",
-            7: f"{prefix}_CLK_RAW", 8: f"{prefix}_DATA_RAW", 9: "GND",
-        }.items():
-            label_pin_auto(schematic, sim_filter, pin, net_name, 0.6)
-        schematic.no_connects.add(pin_xy(sim_filter, 4))
-        note(schematic, f"{prefix}: TPD3F303 filters RESET/CLK/DATA and clamps VCC beside the holder; shell bonds to CHASSIS_GND.", (x - 65, 265), 0.75)
-
-    heading(schematic, "4. TWO FIELD-ACCESSIBLE NANO-SIM HOLDERS", (610, 20), 1.65)
-    place_sim("J702", 1, 650)
-    place_sim("J703", 2, 755)
+    heading(schematic, "4. DIRECT DUAL-SIM DAUGHTERBOARD SOCKET", (610, 20), 1.65)
+    sim_socket = add_connector(
+        schematic,
+        "Connector_Generic:Conn_02x10_Odd_Even",
+        "J702",
+        "DUAL_SIM_B2B_PLUG",
+        (690, 145),
+        {
+            1: "GND", 2: "CHASSIS_GND",
+            3: "SIM1_VCC", 4: "SIM1_RESET_RAW", 5: "GND",
+            6: "SIM1_CLK_RAW", 7: "GND", 8: "SIM1_DATA_RAW",
+            9: "SIM2_VCC", 10: "SIM2_RESET_RAW", 11: "GND",
+            12: "SIM2_CLK_RAW", 13: "GND", 14: "SIM2_DATA_RAW",
+            15: "GND", 16: "CHASSIS_GND", 17: "GND",
+            18: "CHASSIS_GND", 19: "GND", 20: "CHASSIS_GND",
+        },
+        DF40_SIM_PLUG,
+        "Hirose Electric",
+        "DF40C-20DP-0.4V(51)",
+    )
+    lock_component_pin_uuids(sim_socket)
+    note(schematic, "J702 plugs directly into SIM-SERVICE J1. There is no SIM cable harness; the horizontal daughterboard is fixed by four precision supports.", (610, 245), 0.75)
+    note(schematic, "The 2.5 mm DF40 stack carries signals only. Four interleaved returns plus six auxiliary ground/chassis pins control loop area and shield impedance.", (610, 258), 0.75)
     for reference, net_name, x in (
         ("#FLG0705", "SIM1_VCC", 650),
         ("#FLG0706", "SIM2_VCC", 755),
@@ -3222,6 +3266,110 @@ def build_wwan_sim_sheet() -> Path:
         label_pin_auto(schematic, test_point, 1, net_name, 0.52)
     note(schematic, "Control outputs originate at the system GPIO expander. FULL_CARD_POWER_OFF and RESET require final modem-specific timing validation.", (45, 445), 0.82)
     note(schematic, "TP7201-TP7208 are copper factory probes. USB 2/3 has no branch or generic test header.", (45, 455), 0.82)
+    output = folder / f"{name}.kicad_sch"
+    save_generated_schematic(schematic, output)
+    return output
+
+
+def build_sim_service_sheet() -> Path:
+    """Capture the guided horizontal dual-SIM service daughterboard."""
+    folder = ROOT / "SIM-SERVICE"
+    name = "Sim-Service"
+    create_project(folder, name)
+    schematic = create_schematic(name)
+    schematic.set_paper_size("A3")
+    schematic.set_title_block(
+        title="Radxa CM5 ProComm - Direct-Socket Dual-SIM Daughterboard",
+        date="2026-08-17",
+        rev="A1",
+        company="ProComm",
+        comments={
+            1: "Horizontal daughterboard; both SIM holders face the top-panel service windows",
+            2: "Four M3 precision spacers and the panel guide carry insertion/removal force",
+            3: "TPD3F303 devices sit immediately behind their respective SIM holders",
+            4: "J1 directly mates with the 20-way DF40 plug at CM5-CARRIER J702",
+        },
+    )
+
+    heading(schematic, "1. DIRECT CARRIER SOCKET", (35, 20), 1.7)
+    carrier_socket = add_connector(
+        schematic,
+        "Connector_Generic:Conn_02x10_Odd_Even",
+        "J1",
+        "DUAL_SIM_B2B_RECEPTACLE",
+        (90, 105),
+        {
+            1: "GND", 2: "CHASSIS_GND",
+            3: "SIM1_VCC", 4: "SIM1_RESET_RAW", 5: "GND",
+            6: "SIM1_CLK_RAW", 7: "GND", 8: "SIM1_DATA_RAW",
+            9: "SIM2_VCC", 10: "SIM2_RESET_RAW", 11: "GND",
+            12: "SIM2_CLK_RAW", 13: "GND", 14: "SIM2_DATA_RAW",
+            15: "GND", 16: "CHASSIS_GND", 17: "GND",
+            18: "CHASSIS_GND", 19: "GND", 20: "CHASSIS_GND",
+        },
+        DF40_SIM_RECEPTACLE,
+        "Hirose Electric",
+        "DF40HC(2.5)-20DS-0.4V(51)",
+    )
+    lock_component_pin_uuids(carrier_socket)
+    note(schematic, "Direct pin-for-pin mate to CM5-CARRIER J702; no wire harness exists in the dual-SIM path.", (35, 190), 0.78)
+    for reference, net_name, x in (
+        ("#FLG0001", "SIM1_VCC", 55),
+        ("#FLG0002", "SIM2_VCC", 105),
+        ("#FLG0003", "GND", 155),
+    ):
+        power_flag = add_symbol(schematic, "power:PWR_FLAG", reference, "PWR_FLAG", (x, 225))
+        label_pin_auto(schematic, power_flag, 1, net_name, 0.60)
+
+    def place_sim_channel(index: int, x: float) -> None:
+        prefix = f"SIM{index}"
+        holder = add_symbol(
+            schematic,
+            "CM5Carrier:Wurth_Nano_SIM_693043020611",
+            f"J{index + 1}",
+            f"{prefix}_NANO_SIM",
+            (x, 95),
+            "CM5Carrier:J_Wurth_WR-CRD_693043020611",
+            "Wurth Elektronik",
+            "693043020611",
+        )
+        for pin, net_name in {
+            "C1": f"{prefix}_VCC",
+            "C2": f"{prefix}_RESET",
+            "C3": f"{prefix}_CLK",
+            "C5": "GND",
+            "C7": f"{prefix}_DATA",
+            "S1": "CHASSIS_GND", "S2": "CHASSIS_GND",
+            "S3": "CHASSIS_GND", "S4": "CHASSIS_GND",
+            "S5": "CHASSIS_GND", "S6": "CHASSIS_GND",
+        }.items():
+            label_pin_auto(schematic, holder, pin, net_name, 0.62)
+        schematic.no_connects.add(pin_xy(holder, "C6"))
+
+        protection = add_symbol(
+            schematic,
+            "Power_Protection:TPD3F303DPV",
+            f"U{index}",
+            "TPD3F303DPV",
+            (x, 210),
+            manufacturer="Texas Instruments",
+            mpn="TPD3F303DPVR",
+        )
+        for pin, net_name in {
+            1: f"{prefix}_DATA", 2: f"{prefix}_CLK", 3: f"{prefix}_RESET",
+            5: f"{prefix}_VCC", 6: f"{prefix}_RESET_RAW",
+            7: f"{prefix}_CLK_RAW", 8: f"{prefix}_DATA_RAW", 9: "GND",
+        }.items():
+            label_pin_auto(schematic, protection, pin, net_name, 0.62)
+        schematic.no_connects.add(pin_xy(protection, 4))
+        note(schematic, f"{prefix}: holder shield to chassis; C6/VPP intentionally NC", (x - 55, 260), 0.72)
+
+    heading(schematic, "2. GUIDED TOP-FACING NANO-SIM HOLDERS", (190, 20), 1.7)
+    place_sim_channel(1, 245)
+    place_sim_channel(2, 430)
+    note(schematic, "Socket mouths face the daughterboard service edge. Do not rotate either socket independently during PCB placement.", (190, 285), 0.80)
+    note(schematic, "The PCB lies parallel to the carrier and top panel. Four supports and the service guide, not J1 or solder joints, react card force.", (190, 298), 0.80)
+
     output = folder / f"{name}.kicad_sch"
     save_generated_schematic(schematic, output)
     return output
@@ -5806,10 +5954,11 @@ def main() -> None:
     write_cm5_local_footprints()
     symbol_cache = get_symbol_cache()
     symbol_cache.add_library_path(CM5_LOCAL_LIBRARY)
-    symbol_cache.add_library_path(CM5_WURTH_LIBRARY)
     carrier = build_carrier()
     with isolated_uuid_namespace("cm5-core-official-mating-geometry"):
         cm5_core = build_cm5_core_sheet(pinout)
+    with isolated_uuid_namespace("horizontal-direct-socket-dual-sim-service-board"):
+        sim_service = build_sim_service_sheet()
     # The original CM5 core occupied 670 IDs in the stable global sequence.
     # Keep that historical reservation so a local mechanical correction does
     # not rewrite UUIDs in every unrelated downstream schematic.
@@ -5820,6 +5969,7 @@ def main() -> None:
         cm5_core,
         build_network_pcie_sheet(),
         build_wwan_sim_sheet(),
+        sim_service,
         build_display_harness_sheet(),
         build_audio_control_sheet(),
         build_power_regulators_sheet(),

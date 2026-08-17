@@ -20,6 +20,9 @@ The controlled support coordinates are in
 - AUDIO-8X8: six supports `A1` through `A6` in three two-point rows.
 - CM5-CARRIER: six supports `C1` through `C6` at four Y stations so the
   center/right supports clear the modem and CM5 cooling cartridges.
+- SIM-SERVICE: four matched support pairs `SD1/S1` through `SD4/S4` use
+  2.50 +/-0.05 mm precision sleeves between the carrier and daughterboard.
+  These are additional to the six primary carrier standoffs.
 - Maximum longitudinal distance between support rows: 128 mm.
 - PCB mounting hole: 3.4 mm finished NPTH for M3 hardware.
 - All-layer copper keepout: 8.0 mm diameter, centered on each hole.
@@ -62,10 +65,12 @@ test using actual MagJacks and latched Ethernet plugs.
 ### Headset And SIM Service
 
 Mount the CTIA headset jack on a small four-M3-supported service daughterboard
-with a panel capture bezel. Mount both Nano-SIM holders on a guided four-M3
-service daughterboard with a panel guide/cover. These assemblies connect to the
-carrier with short flexible harnesses, so repeated plug or card operation
-cannot bend the main carrier.
+with a panel capture bezel. Mount both Nano-SIM holders on the horizontal
+76 x 40 mm SIM-SERVICE board. Its B.Cu Hirose
+`DF40HC(2.5)-20DS-0.4V(51)` receptacle plugs directly into carrier J702
+`DF40C-20DP-0.4V(51)`. Four aligned 2.50 mm precision spacer sleeves and the
+panel guide carry all card and vibration load. The DF40 pair carries signals
+only, and no SIM cable harness is permitted.
 
 ### Other Panel Interfaces
 
@@ -81,8 +86,11 @@ loading a connector.
 
 ## Factory Inspection
 
-1. Verify every `A1-A6` and `C1-C6` coordinate against the support CSV.
-2. Confirm all twelve holes are NPTH and free of copper within 8.0 mm diameter.
+1. Verify every `A1-A6`, `C1-C6`, and carrier-side `SD1-SD4` coordinate against
+   the support CSV. Verify daughterboard `S1-S4` against the SIM stack drawing.
+2. Confirm the twelve primary long-board holes and all eight matched
+   SIM-stack holes are 3.4 mm NPTH and free of copper within 8.0 mm diameter.
+   Gauge the four SIM spacer sleeves at 2.50 +/-0.05 mm before assembly.
 3. Torque and witness-mark all PCB, flange, bracket, bulkhead, and backplate
    fasteners; keep these fastener systems independent.
 4. Measure worst-case mating, unmating, and downward hand force with actual
@@ -90,7 +98,10 @@ loading a connector.
    the corresponding axis. No visible PCB flex, connector-body movement,
    solder-joint loading, continuity interruption, or permanent panel set is
    allowed. Do not exceed a connector manufacturer's stated proof-load limit.
-5. Perform the released vibration and transport tests with representative cable
+5. Mate SIM-SERVICE J1 straight down onto carrier J702 with the four sleeves in
+   place. Reject any assembly that requires rocking, side load, or screw force
+   to pull the Hirose pair into alignment. The socket is electrical only.
+6. Perform the released vibration and transport tests with representative cable
    masses and with all heavy heatsink/fan assemblies mechanically restrained.
 
 Routing remains blocked until the RJ45 capture bracket and headset/SIM service

@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/Users/viewvision/Desktop/Radxa CM5 PCB/cad/kicad/AUDIO-8X8/Audio-TDM-Clock.kicad_sch</source>
-    <date>2026-08-17T08:37:36</date>
+    <date>2026-08-17T15:47:21</date>
     <tool>Eeschema 10.0.5-rc1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -42,7 +42,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>b8a4df78-9476-5dd0-8431-fbb22db57d8b</tstamps>
+      <tstamps>4eb60fe5-038a-5f08-97e7-bd62d0fa9f58</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -70,7 +70,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>12690b4f-07f1-5732-ba49-edf17cf55fca</tstamps>
+      <tstamps>388a3bd7-7b16-546a-8565-8cea7892eafc</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -98,7 +98,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>771af076-62f0-53c5-9032-1bf28276a1ed</tstamps>
+      <tstamps>93e7cc0c-2e6d-578a-b53c-5a97f39b3467</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -126,7 +126,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>c61fafab-3557-5b18-a279-1db11019dd1d</tstamps>
+      <tstamps>724bda43-3b5f-50f4-81f5-91da29832af4</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -154,7 +154,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>7f46adfe-ff5b-5b71-98d6-63b1fcffa4fa</tstamps>
+      <tstamps>447a036e-14cb-5163-9773-8868c3688b11</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -182,7 +182,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>21ffcef8-5769-56e4-a5bc-587ffa7653c0</tstamps>
+      <tstamps>4cd45b9c-574b-5f63-aa11-8aca3f31b273</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -210,7 +210,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>27ca35c9-dc3e-592b-9061-879c9d106c43</tstamps>
+      <tstamps>f55eff60-ab6b-55e8-ad99-08d5f607aa0c</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -238,7 +238,7 @@
       <property name="ki_keywords" value="connector"/>
       <property name="ki_fp_filters" value="Connector*:*_2x??_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>88867151-6c3b-5452-a2d0-ff0ca9de47a4</tstamps>
+      <tstamps>5e7dcda3-ae08-5324-8d46-5f9ba9f5a47e</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -294,7 +294,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>9d27452d-7084-57ae-a932-fff619203735</tstamps>
+      <tstamps>c61cc72b-1e43-5244-bc0b-bb7bb27d94ed</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -322,7 +322,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>f0f0c613-9aff-534a-846e-22cbdc777c63</tstamps>
+      <tstamps>c7703d61-12e5-544b-ad8e-e8e44d7c84b6</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -350,7 +350,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>0fdd5f03-8fa7-52c0-8813-f1e9493ff4b7</tstamps>
+      <tstamps>651030ed-d416-5dfe-8bbc-0d928ffa7e39</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -378,7 +378,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>c61cc72b-1e43-5244-bc0b-bb7bb27d94ed</tstamps>
+      <tstamps>aab72a37-e37f-5547-b993-0c4761761738</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -406,7 +406,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>c7703d61-12e5-544b-ad8e-e8e44d7c84b6</tstamps>
+      <tstamps>a3ccbf62-f5a8-5897-894e-faa931ea30eb</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -434,7 +434,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>651030ed-d416-5dfe-8bbc-0d928ffa7e39</tstamps>
+      <tstamps>cf33f36b-659f-5b55-b074-4e9ddbaf5f10</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -462,7 +462,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>b3d39283-6411-5ef8-8229-4fa5abd02a0c</tstamps>
+      <tstamps>b99cf47c-2daf-5acd-8ac7-521d74723419</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -490,7 +490,7 @@
       <property name="ki_keywords" value="LVDS Receiver TI"/>
       <property name="ki_fp_filters" value="*SOIC*3.9x4.9mm*P1.27mm*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>8f8a98cc-b1b4-5ae5-ab3c-4095b7b181f7</tstamps>
+      <tstamps>b8a4df78-9476-5dd0-8431-fbb22db57d8b</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -524,7 +524,7 @@
       <property name="ki_keywords" value="LVDS Receiver TI"/>
       <property name="ki_fp_filters" value="*SOIC*3.9x4.9mm*P1.27mm*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>50d1701d-89a7-599c-b89a-dc06b5da9007</tstamps>
+      <tstamps>12690b4f-07f1-5732-ba49-edf17cf55fca</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -558,7 +558,7 @@
       <property name="ki_keywords" value="LVDS Receiver TI"/>
       <property name="ki_fp_filters" value="*SOIC*3.9x4.9mm*P1.27mm*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>efc35f9e-66c4-520e-ad83-dff703f7aaee</tstamps>
+      <tstamps>771af076-62f0-53c5-9032-1bf28276a1ed</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -592,7 +592,7 @@
       <property name="ki_keywords" value="LVDS Receiver TI"/>
       <property name="ki_fp_filters" value="*SOIC*3.9x4.9mm*P1.27mm*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>5971a172-c8ae-5c3a-994a-063ef19ae0ff</tstamps>
+      <tstamps>c61fafab-3557-5b18-a279-1db11019dd1d</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -626,7 +626,7 @@
       <property name="ki_keywords" value="LVDS Driver TI"/>
       <property name="ki_fp_filters" value="*SOIC*3.9x4.9mm*P1.27mm*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>e54a6a05-617f-514e-a2e2-fa4c41957c0b</tstamps>
+      <tstamps>7f46adfe-ff5b-5b71-98d6-63b1fcffa4fa</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -660,7 +660,7 @@
       <property name="ki_keywords" value="Single Gate AND triple LVC CMOS"/>
       <property name="ki_fp_filters" value="SOT* SG-*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>e26bae7c-1813-53a1-97b4-053320e8b6c6</tstamps>
+      <tstamps>5a0cf19c-bdf5-5953-aa82-8be2ba5c3029</tstamps>
       <units>
         <unit name="A">
           <pins>

@@ -82,8 +82,9 @@ frame, tray, panel, and case.
 6. Enter measured minimum/maximum values in
    `mechanical-release-a2.json`, attach measurement photos or inspection
    records, and run `validate_mechanical_release.py --release`.
-7. Rev L nominal board envelopes and the controlled A1-A6/C1-C6 support pattern
-   authorize engineering PCB placement and routing. Only after the release
+7. Rev L nominal board envelopes, the controlled A1-A6/C1-C6 primary support
+   pattern, and the SD1-SD4/S1-S4 direct SIM-stack pattern authorize
+   engineering PCB placement and routing. Only after the release
    validator passes may the exact panel outline, connector Z datums, panel
    screw coordinates, and production machining files be frozen for fabrication.
 
@@ -135,6 +136,10 @@ frame, tray, panel, and case.
   finished NPTH, 8.0 mm all-layer copper keepout, 10.0 mm component keepout,
   and a rigid captive metal M3 standoff. Maximum longitudinal support-row span
   is 128 mm. Do not soft-float either PCB.
+- Plug the horizontal SIM-SERVICE daughterboard directly into carrier J702
+  through the specified Hirose DF40 plug/socket pair. Use all four matched
+  `SD1/S1` through `SD4/S4` M3 supports with 2.50 +/-0.05 mm precision sleeves.
+  No SIM cable harness is permitted, and the DF40 pair is not structural.
 - Every user-operated connector shall transfer plug, unplug, downward push,
   cable-side, and vibration loads to the panel or frame. Follow
   `connector-load-path-a2.csv`; solder-only retention is prohibited. Release
@@ -151,4 +156,6 @@ frame, tray, panel, and case.
 - `validate_mechanical_release.py`: package/release validator
 - `pcb-support-pattern-a2.csv`: controlled board and panel support coordinates
 - `connector-load-path-a2.csv`: controlled load path for each interface group
+- `sim-service-daughterboard-stack-a1.csv`: direct socket stack, support pairs,
+  connector datums, and panel-clearance calculation
 - `im2300-measurement-worksheet-a2.svg`: printable factory worksheet

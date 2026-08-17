@@ -1,0 +1,11 @@
+item,carrier_x_mm,carrier_y_mm,daughterboard_x_mm,daughterboard_y_mm,dimension_or_hole_mm,material_or_hardware,requirement
+SIM1_PANEL_CENTER,65.0,120.0,13.5,32.0,30.0x14.0,TOP_PANEL_REV_M,Panel absolute center 284.0 x 135.0 mm
+SIM2_PANEL_CENTER,114.0,120.0,62.5,32.0,30.0x14.0,TOP_PANEL_REV_M,Panel absolute center 333.0 x 135.0 mm
+J702_J1_MATE,89.5,96.0,38.0,8.0,2.50_MATED_HEIGHT,Hirose_DF40C_20DP_plus_DF40HC_2P5_20DS,Direct board-to-board connection with no SIM harness
+SD1_S1,57.0,93.5,5.5,5.5,3.4_NPTH,M3_PRECISION_SLEEVE_2P50MM,2.50 +/-0.05 mm sleeve carries structural load
+SD2_S2,122.0,93.5,70.5,5.5,3.4_NPTH,M3_PRECISION_SLEEVE_2P50MM,2.50 +/-0.05 mm sleeve carries structural load
+SD3_S3,78.5,122.5,27.0,34.5,3.4_NPTH,M3_PRECISION_SLEEVE_2P50MM,2.50 +/-0.05 mm sleeve carries structural load
+SD4_S4,100.5,122.5,49.0,34.5,3.4_NPTH,M3_PRECISION_SLEEVE_2P50MM,2.50 +/-0.05 mm sleeve carries structural load
+SIM_DAUGHTERBOARD,51.5,88.0,0.0,0.0,76.0x40.0x1.6,4_LAYER_FR4,Horizontal and parallel to carrier and panel
+PANEL_GUIDE,89.5,120.0,38.0,32.0,TWO_CHANNEL_UL94V0,INSULATING,Guide bridges panel windows to holder mouths and carries lateral card load
+STACK_CLEARANCE,89.5,96.0,38.0,8.0,0.525_NOMINAL,CLEAR_TO_PANEL_UNDERSIDE,5.825 gap minus 2.5 stack minus 1.6 PCB minus 1.2 holder; verify tolerance coupon

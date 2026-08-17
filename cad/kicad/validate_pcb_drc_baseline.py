@@ -37,13 +37,23 @@ CONTRACTS = {
         "parity": 406,
         "locked": {
             "J501", "J502", "J503", "J610", "J611", "J612", "J613",
-            "J702", "J703",
         }
         | {f"C{index}" for index in range(1, 7)},
         "allowed_error_refs": {"Q1110", "Q1111", "J910"},
         "allowed_error_types": {"shorting_items", "clearance", "solder_mask_bridge"},
         "allowed_warning_refs": set(),
         "allowed_warning_types": {"silk_over_copper"},
+    },
+    "SIM-SERVICE": {
+        "report": REPORTS / "Sim-Service-PCB-A1-DRC.json",
+        "violations": 0,
+        "unconnected": 42,
+        "parity": 5,
+        "locked": {"J1", "J2", "J3"} | {f"S{index}" for index in range(1, 5)},
+        "allowed_error_refs": set(),
+        "allowed_error_types": set(),
+        "allowed_warning_refs": set(),
+        "allowed_warning_types": set(),
     },
     "PWR-SELECT": {
         "report": REPORTS / "PowerSelector-PCB-A1-DRC.json",
