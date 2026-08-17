@@ -37,7 +37,7 @@ TDM_MAP = {
     "18": "AUD_I2C_SDA",
     "19": "AUD_ADC_RST_N",
     "20": "AUD_DAC_RST_N",
-    "21": "AUD_DAC_MUTE_N",
+    "21": "AUD_DAC_MUTE_CMD_N",
     "22": "AUD_IRQ_N",
     "23": "AUDIO_PRESENT_N",
     "24": "AUDIO_ENABLE",
@@ -94,7 +94,8 @@ status_map = {
     "7": "VALID_DTAP_N",
     "8": "VALID_GOLD_N",
 }
-audio_power_map = {"1": "AUDIO_12V", "2": "AUDIO_12V", "3": "GND", "4": "GND"}
+carrier_audio_power_map = {"1": "AUDIO_12V", "2": "AUDIO_12V", "3": "GND", "4": "GND"}
+audio_board_power_map = {"1": "AUDIO_12V_IN", "2": "AUDIO_12V_IN", "3": "GND", "4": "GND"}
 power_telemetry_selector_map = {
     "1": "MON_3V3",
     "2": "GND",
@@ -128,8 +129,8 @@ for sensor_ref in ("U1050", "U1051", "U1052"):
     assert_pin_map(f"{sensor_ref} shared alert", thermal_pins, sensor_ref, {"3": "TEMP_ALERT_N"})
 assert_pin_map("CM5-CARRIER TDM/control", carrier_pins, "J201", TDM_MAP)
 assert_pin_map("AUDIO-8X8 TDM/control", audio_pins, "J101", TDM_MAP)
-assert_pin_map("CM5-CARRIER audio power", carrier_pins, "J202", audio_power_map)
-assert_pin_map("AUDIO-8X8 audio power", audio_pins, "J102", audio_power_map)
+assert_pin_map("CM5-CARRIER audio power", carrier_pins, "J202", carrier_audio_power_map)
+assert_pin_map("AUDIO-8X8 audio power", audio_pins, "J102", audio_board_power_map)
 
 fan_maps = {
     "J401": {"1": "GND", "2": "CPU_FAN_12V", "3": "CPU_FAN_TACH", "4": "CPU_FAN_PWM"},
@@ -177,7 +178,7 @@ for channel in range(1, 9):
 print("PASS: PWR-SELECT raw-power, status, and telemetry interfaces match CM5-CARRIER")
 print("PASS: fan, temperature, and power-monitor alerts are allocated on TCA9535 U1001")
 print("PASS: CM5-CARRIER 30-pin buffered TDM/control interface matches AUDIO-8X8")
-print("PASS: separate AUDIO_12V interface matches on both boards")
+print("PASS: separate audio-power harness maps carrier AUDIO_12V to fused AUDIO_12V_IN entry")
 print("PASS: four independent fan headers include dedicated intake and exhaust channels")
 print("PASS: eight NC3MAV outputs and eight NC3FAV inputs have correct channel pin maps")
 print("PASS: 174 critical connector and control pin/net assignments checked")

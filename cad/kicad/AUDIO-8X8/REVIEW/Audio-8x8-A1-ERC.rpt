@@ -1,168 +1,21 @@
-ERC report (2026-08-16T03:09:02, Encoding UTF8)
+ERC report (2026-08-17T07:51:50, Encoding UTF8)
 Report includes: Errors, Warnings
 
 ***** Sheet /
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(69.85 mm, 46.99 mm): Label 'AOUT_CH1_HOT'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(69.85 mm, 54.61 mm): Label 'AOUT_CH1_COLD'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(69.85 mm, 86.36 mm): Label 'AOUT_CH2_HOT'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(69.85 mm, 93.98 mm): Label 'AOUT_CH2_COLD'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(69.85 mm, 124.46 mm): Label 'AOUT_CH3_HOT'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(69.85 mm, 132.08 mm): Label 'AOUT_CH3_COLD'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(69.85 mm, 163.83 mm): Label 'AOUT_CH4_HOT'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(69.85 mm, 171.45 mm): Label 'AOUT_CH4_COLD'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(69.85 mm, 203.20 mm): Label 'AOUT_CH5_HOT'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(69.85 mm, 210.82 mm): Label 'AOUT_CH5_COLD'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(69.85 mm, 242.57 mm): Label 'AOUT_CH6_HOT'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(69.85 mm, 250.19 mm): Label 'AOUT_CH6_COLD'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(69.85 mm, 280.67 mm): Label 'AOUT_CH7_HOT'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(69.85 mm, 288.29 mm): Label 'AOUT_CH7_COLD'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(69.85 mm, 320.04 mm): Label 'AOUT_CH8_HOT'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(69.85 mm, 327.66 mm): Label 'AOUT_CH8_COLD'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(134.62 mm, 54.61 mm): Label 'AIN_CH1_COLD'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(134.62 mm, 93.98 mm): Label 'AIN_CH2_COLD'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(134.62 mm, 132.08 mm): Label 'AIN_CH3_COLD'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(134.62 mm, 171.45 mm): Label 'AIN_CH4_COLD'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(134.62 mm, 210.82 mm): Label 'AIN_CH5_COLD'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(134.62 mm, 250.19 mm): Label 'AIN_CH6_COLD'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(134.62 mm, 288.29 mm): Label 'AIN_CH7_COLD'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(134.62 mm, 327.66 mm): Label 'AIN_CH8_COLD'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(165.10 mm, 46.99 mm): Label 'AIN_CH1_HOT'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(165.10 mm, 86.36 mm): Label 'AIN_CH2_HOT'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(165.10 mm, 124.46 mm): Label 'AIN_CH3_HOT'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(165.10 mm, 163.83 mm): Label 'AIN_CH4_HOT'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(165.10 mm, 203.20 mm): Label 'AIN_CH5_HOT'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(165.10 mm, 242.57 mm): Label 'AIN_CH6_HOT'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(165.10 mm, 280.67 mm): Label 'AIN_CH7_HOT'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(165.10 mm, 320.04 mm): Label 'AIN_CH8_HOT'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(279.40 mm, 54.61 mm): Label 'AUD_MCLK_P'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(279.40 mm, 59.69 mm): Label 'AUD_BCLK_P'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(279.40 mm, 62.23 mm): Label 'AUD_FSYNC_P'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(279.40 mm, 67.31 mm): Label 'AUD_DAC_SDIN_P'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(279.40 mm, 69.85 mm): Label 'AUD_ADC_SDOUT_P'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(279.40 mm, 74.93 mm): Label 'AUD_I2C_SCL'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(279.40 mm, 77.47 mm): Label 'AUD_ADC_RST_N'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(279.40 mm, 80.01 mm): Label 'AUD_DAC_MUTE_N'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(279.40 mm, 82.55 mm): Label 'AUDIO_PRESENT_N'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(279.40 mm, 85.09 mm): Label 'LOGIC_3V3'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(279.40 mm, 87.63 mm): Label 'TDM_SPARE_1'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(292.10 mm, 54.61 mm): Label 'AUD_MCLK_N'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(292.10 mm, 59.69 mm): Label 'AUD_BCLK_N'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(292.10 mm, 62.23 mm): Label 'AUD_FSYNC_N'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(292.10 mm, 67.31 mm): Label 'AUD_DAC_SDIN_N'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(292.10 mm, 69.85 mm): Label 'AUD_ADC_SDOUT_N'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(292.10 mm, 74.93 mm): Label 'AUD_I2C_SDA'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(292.10 mm, 77.47 mm): Label 'AUD_DAC_RST_N'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(292.10 mm, 80.01 mm): Label 'AUD_IRQ_N'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(292.10 mm, 82.55 mm): Label 'AUDIO_ENABLE'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(292.10 mm, 87.63 mm): Label 'TDM_SPARE_2'
 
- ** ERC messages: 53  Errors 0  Warnings 53
+***** Sheet /TDM / Clock / Control/
+
+***** Sheet /AK5558VN ADC/
+
+***** Sheet /AK4458VN DAC/
+
+***** Sheet /Balanced Inputs 1-8/
+
+***** Sheet /Balanced Outputs 1-8/
+
+***** Sheet /Audio Power/
+
+ ** ERC messages: 0  Errors 0  Warnings 0
 
  ** Ignored checks:
     - Global label only appears once in the schematic

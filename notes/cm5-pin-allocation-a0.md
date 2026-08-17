@@ -70,9 +70,12 @@ This selection consumes the `SPI0_M1` pin group and related
 ## Network And PCIe Pins
 
 - Native Ethernet MDI: U13-A pins 3, 4, 5, 6, 9, 10, 11, and 12.
-- Native Ethernet LEDs: U13-A pins 15, 17, and 19.
+- Native Ethernet LEDs: U13-A pins 17 and 19 drive the selected two-indicator
+  jack. Pin 15 remains owned by WAN1 but is an explicit no-connect in Rev A.
 - PCIe sidebands: U13-A pin 24 (`WAKE_N`), U13-B pin 102 (`CLKREQ_N`), and
-  U13-B pin 109 (`PERST_N`).
+  U13-B pin 109 (`PCIE_UP_PERST_CMD_N`). The command is AND-gated with
+  `NET_3V3_PG` and `PCIE_1V0_PG`; the switch receives the qualified
+  `PCIE_UP_PERST_N` signal.
 - PCIe reference clock: U13-B pins 110 and 112.
 - PCIe receive pair: U13-B pins 116 and 118.
 - PCIe transmit pair: U13-B pins 122 and 124.
@@ -115,9 +118,10 @@ Use the full `HDMI_TX0` video group on U13-B:
 - HPD: pin 153.
 - DDC SDA/SCL: pins 199/200.
 
-Pins 145/147 are the HDMI sideband/HEAC pair. Keep them reserved and do not
-repurpose them until the final HDMI connector implementation decides whether
-they are routed or left unpopulated.
+Pins 145/147 are the HDMI sideband/HEAC pair. Rev A routes SBDP on pin 145 to
+HDMI connector pin 14 and assigns SBDN on pin 147 as an explicit no-connect
+because the selected display does not use HEAC/ARC return. Neither contact may
+be repurposed without a new display-interface review.
 
 ## Control And GPIO Policy
 

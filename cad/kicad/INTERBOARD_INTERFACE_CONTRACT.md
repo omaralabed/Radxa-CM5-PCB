@@ -15,8 +15,8 @@ signal-integrity, vibration, current, keying, and cable-bend checks are complete
 | ---: | --- |
 | 1 | `RAW_OUT_LOAD` |
 | 2 | `RAW_OUT_LOAD` |
-| 3 | `GND` |
-| 4 | `GND` |
+| 3 | `GND` | `GND` |
+| 4 | `GND` | `GND` |
 
 The connector, contacts, wire gauge, copper and temperature rise must be
 validated at 15 A. Do not assume the nominal per-contact rating survives the
@@ -76,7 +76,7 @@ differential-pair support and positive retention.
 | 15, 16 | `GND`, `GND` | Reference |
 | 17, 18 | `AUD_I2C_SCL`, `AUD_I2C_SDA` | Bidirectional control |
 | 19, 20 | `AUD_ADC_RST_N`, `AUD_DAC_RST_N` | Output |
-| 21, 22 | `AUD_DAC_MUTE_N`, `AUD_IRQ_N` | Output, input |
+| 21, 22 | `AUD_DAC_MUTE_CMD_N`, `AUD_IRQ_N` | Output, input |
 | 23, 24 | `AUDIO_PRESENT_N`, `AUDIO_ENABLE` | Input, output |
 | 25, 26 | `LOGIC_3V3`, `GND` | Low-current interface reference only |
 | 27, 28 | `TDM_SPARE_1`, `TDM_SPARE_2` | Reserved |
@@ -84,22 +84,27 @@ differential-pair support and positive retention.
 
 The five TDM signals use line drivers/receivers at the connectors. Do not route
 raw single-ended CM5 I2S clocks over a long unshielded harness.
+`AUD_DAC_MUTE_CMD_N` is only a carrier request. On AUDIO-8X8, U106 permits
+`AUDIO_SAFE_UNMUTE_N` to rise only when that request, `ADC_5V_PG`, and
+`DAC_5V_PG` are all high. The hardware-qualified result drives both the AK4458
+mute input and all eight output-relay MOSFET gates.
 
 ## CM5-CARRIER To AUDIO-8X8 Power
 
 `CM5-CARRIER J202` mates with `AUDIO-8X8 J102` using a separate four-circuit
 Micro-Fit 3.0 harness.
 
-| Pin | Net |
-| ---: | --- |
-| 1 | `AUDIO_12V` |
-| 2 | `AUDIO_12V` |
+| Pin | Carrier net | AUDIO-8X8 entry net |
+| ---: | --- | --- |
+| 1 | `AUDIO_12V` | `AUDIO_12V_IN` |
+| 2 | `AUDIO_12V` | `AUDIO_12V_IN` |
 | 3 | `GND` |
 | 4 | `GND` |
 
 Audio power must not share conductors with fans, display, Wi-Fi, modem or
-Ethernet power. Local AUDIO-8X8 conversion produces the clean bipolar and AKM
-rails.
+Ethernet power. `AUDIO_12V_IN` exists only between J102 and the local 3 A fuse;
+the protected side is named `AUDIO_12V`. Local AUDIO-8X8 conversion produces
+the clean bipolar and AKM rails.
 
 ## Carrier Fan Connectors
 

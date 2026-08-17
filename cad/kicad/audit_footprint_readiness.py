@@ -29,47 +29,21 @@ REPORT_DIR = ROOT / "reports"
 SCHEMATICS = (
     ("PWR-SELECT", ROOT / "PWR-SELECT" / "PowerSelector.kicad_sch"),
     ("CM5-Carrier", ROOT / "CM5-CARRIER" / "CM5-Carrier.kicad_sch"),
-    ("CM5-Core-Allocated", ROOT / "CM5-CARRIER" / "CM5-Core-Allocated.kicad_sch"),
-    ("Network-PCIe", ROOT / "CM5-CARRIER" / "Network-PCIe.kicad_sch"),
-    ("WWAN-SIM", ROOT / "CM5-CARRIER" / "WWAN-SIM.kicad_sch"),
-    ("Display-Harness", ROOT / "CM5-CARRIER" / "Display-Harness.kicad_sch"),
-    ("Audio-Control", ROOT / "CM5-CARRIER" / "Audio-Control.kicad_sch"),
-    ("Power-Regulators-A1", ROOT / "CM5-CARRIER" / "Power-Regulators-A1.kicad_sch"),
-    ("Thermal-IO", ROOT / "CM5-CARRIER" / "Thermal-IO.kicad_sch"),
     ("Audio-8x8", ROOT / "AUDIO-8X8" / "Audio-8x8.kicad_sch"),
-    ("Audio-TDM-Clock", ROOT / "AUDIO-8X8" / "Audio-TDM-Clock.kicad_sch"),
-    ("AK5558-ADC", ROOT / "AUDIO-8X8" / "AK5558-ADC.kicad_sch"),
-    ("AK4458-DAC", ROOT / "AUDIO-8X8" / "AK4458-DAC.kicad_sch"),
-    ("Audio-Inputs", ROOT / "AUDIO-8X8" / "Audio-Inputs.kicad_sch"),
-    ("Audio-Outputs", ROOT / "AUDIO-8X8" / "Audio-Outputs.kicad_sch"),
-    ("Audio-Power", ROOT / "AUDIO-8X8" / "Audio-Power.kicad_sch"),
 )
 
 # This typed port exists only to make cross-sheet ERC direction checks useful.
 INTENTIONAL_NON_BOARD = {
-    ("Audio-Control", "U900"): "Typed CM5 off-sheet audio interface",
-    ("Power-Regulators-A1", "U1180"): "TRI 20-1223 is physically mounted on AUDIO-8X8",
-    ("WWAN-SIM", "J711"): "ECT 818033349 off-board RF pigtail/bulkhead harness",
-    ("WWAN-SIM", "J712"): "ECT 818033349 off-board RF pigtail/bulkhead harness",
-    ("WWAN-SIM", "J713"): "ECT 818033349 off-board RF pigtail/bulkhead harness",
-    ("WWAN-SIM", "J714"): "ECT 818033349 off-board RF pigtail/bulkhead harness",
+    ("CM5-Carrier", "U900"): "Typed CM5 off-sheet audio interface",
+    ("CM5-Carrier", "J711"): "ECT 818033349 off-board RF pigtail/bulkhead harness",
+    ("CM5-Carrier", "J712"): "ECT 818033349 off-board RF pigtail/bulkhead harness",
+    ("CM5-Carrier", "J713"): "ECT 818033349 off-board RF pigtail/bulkhead harness",
+    ("CM5-Carrier", "J714"): "ECT 818033349 off-board RF pigtail/bulkhead harness",
 }
 
 # Copper probe lands are deliberate PCB features, not purchased components.
 # They remain route-ready but are not production-BOM line items.
 NO_BOM_BOARD_FEATURES = {
-    ("Power-Regulators-A1", "TP1190"): "Copper-only rail probe pad",
-    ("Power-Regulators-A1", "TP1191"): "Copper-only rail probe pad",
-    ("Power-Regulators-A1", "TP1192"): "Copper-only rail probe pad",
-    ("Power-Regulators-A1", "TP1193"): "Copper-only rail probe pad",
-    ("WWAN-SIM", "TP7201"): "Copper-only modem-control probe pad",
-    ("WWAN-SIM", "TP7202"): "Copper-only modem-control probe pad",
-    ("WWAN-SIM", "TP7203"): "Copper-only modem-control probe pad",
-    ("WWAN-SIM", "TP7204"): "Copper-only modem-control probe pad",
-    ("WWAN-SIM", "TP7205"): "Copper-only modem-control probe pad",
-    ("WWAN-SIM", "TP7206"): "Copper-only modem-control probe pad",
-    ("WWAN-SIM", "TP7207"): "Copper-only modem-power probe pad",
-    ("WWAN-SIM", "TP7208"): "Copper-only modem-ground probe pad",
     ("Audio-8x8", "J901"): "Two-pad copper access feature for chassis-bond verification",
 }
 
@@ -78,16 +52,16 @@ NO_BOM_BOARD_FEATURES = {
 # assembly check because escape routing and thermal-via geometry depend on it.
 ROUTING_COUPON_REQUIRED = {
     (
-        "AK5558-ADC",
+        "Audio-8x8",
         "U201",
     ): "AK5558VN Coupon A1 artwork is ready; exposed-pad, thermal-via, stencil, X-ray, and assembly sign-off still required",
     (
-        "AK4458-DAC",
+        "Audio-8x8",
         "U301",
     ): "AK4458VN Coupon A1 artwork is ready; exposed-pad, thermal-via, stencil, X-ray, and assembly sign-off still required",
     **{
         (
-            "Audio-Outputs",
+            "Audio-8x8",
             f"K{reference}",
         ): "Panasonic TQ2 Coupon A1 artwork is ready; sample insertion, seating, and pin-map sign-off still required"
         for reference in range(501, 509)
@@ -98,7 +72,7 @@ ROUTING_COUPON_REQUIRED = {
 # release remains blocked until the named physical verification is complete.
 PRODUCTION_COUPON_REQUIRED = {
     (
-        "Audio-Control",
+        "CM5-Carrier",
         "J910",
     ): "Kycon Coupon A1 artwork is ready; exact sample insertion, seating, CTIA map, and plated-hole sign-off still required",
 }
@@ -221,6 +195,8 @@ def audit_rows() -> list[dict[str, str]]:
                 mpn = field(comp, "MPN")
                 exemption = INTENTIONAL_NON_BOARD.get((sheet, reference), "")
                 no_bom_feature = NO_BOM_BOARD_FEATURES.get((sheet, reference), "")
+                if reference.startswith("TP"):
+                    no_bom_feature = "Copper-only electrical test point"
                 routing_coupon_gate = ROUTING_COUPON_REQUIRED.get((sheet, reference), "")
                 coupon_gate = PRODUCTION_COUPON_REQUIRED.get((sheet, reference), "")
                 resolved = footprint_file(sheet, footprint)
@@ -312,7 +288,7 @@ def write_reports(rows: list[dict[str, str]]) -> tuple[int, int]:
     markdown = [
         "# Component and Footprint Audit",
         "",
-        "Generated from all sixteen native KiCad sheets. This report is deterministic and contains no audit timestamp.",
+        "Generated once from each physical board root so hierarchical child components are not double-counted. This report is deterministic and contains no audit timestamp.",
         "",
         "## Current gate",
         "",

@@ -28,11 +28,11 @@ SHEETS = (
     "Audio-Power",
 )
 EXPECTED_COMPONENT_COUNTS = {
-    "Audio-TDM-Clock": 18,
-    "AK5558-ADC": 36,
+    "Audio-TDM-Clock": 21,
+    "AK5558-ADC": 38,
     "AK4458-DAC": 23,
-    "Audio-Inputs": 176,
-    "Audio-Outputs": 200,
+    "Audio-Inputs": 192,
+    "Audio-Outputs": 232,
     "Audio-Power": 47,
 }
 
@@ -135,18 +135,32 @@ def validate() -> list[str]:
     for reference in ("U101", "U102", "U103", "U104"):
         require_component(tdm_components, reference, "SN65LVDT2D", "SN65LVDT2DR", checks)
     require_component(tdm_components, "U105", "SN65LVDS1D", "SN65LVDS1DR", checks)
+    require_component(
+        tdm_components, "U106", "SN74LVC1G11DBVR", "SN74LVC1G11DBVR", checks
+    )
     tdm_connector_map = {
         1: "AUD_MCLK_P", 2: "AUD_MCLK_N", 3: "GND", 4: "GND",
         5: "AUD_BCLK_P", 6: "AUD_BCLK_N", 7: "AUD_FSYNC_P", 8: "AUD_FSYNC_N",
         9: "GND", 10: "GND", 11: "AUD_DAC_SDIN_P", 12: "AUD_DAC_SDIN_N",
         13: "AUD_ADC_SDOUT_P", 14: "AUD_ADC_SDOUT_N", 15: "GND", 16: "GND",
         17: "AUD_I2C_SCL", 18: "AUD_I2C_SDA", 19: "AUD_ADC_RST_N",
-        20: "AUD_DAC_RST_N", 21: "AUD_DAC_MUTE_N", 22: "AUD_IRQ_N",
+        20: "AUD_DAC_RST_N", 21: "AUD_DAC_MUTE_CMD_N", 22: "AUD_IRQ_N",
         23: "AUDIO_PRESENT_N", 24: "AUDIO_ENABLE", 25: "LOGIC_3V3", 26: "GND",
         27: "TDM_SPARE_1", 28: "TDM_SPARE_2", 29: "GND", 30: "GND",
     }
     for pin, net in tdm_connector_map.items():
         require_pin(tdm_nets, "J101", pin, net, checks)
+    for pin, net in {
+        1: "AUD_DAC_MUTE_CMD_N", 2: "AGND", 3: "ADC_5V_PG",
+        4: "AUDIO_SAFE_UNMUTE_N", 5: "AKM_3V3_D", 6: "DAC_5V_PG",
+    }.items():
+        require_pin(tdm_nets, "U106", pin, net, checks)
+    require_component(tdm_components, "R117", "100k 1%", "RC0603FR-07100KL", checks)
+    require_pin(tdm_nets, "R117", 1, "AUDIO_SAFE_UNMUTE_N", checks)
+    require_pin(tdm_nets, "R117", 2, "AGND", checks)
+    require_component(tdm_components, "C107", "100nF", "C1005X7R1H104K050BB", checks)
+    require_pin(tdm_nets, "C107", 1, "AKM_3V3_D", checks)
+    require_pin(tdm_nets, "C107", 2, "AGND", checks)
 
     adc_components, adc_nets = parsed["AK5558-ADC"]
     require_component(adc_components, "U201", "AK5558VN", "AK5558VN", checks)
@@ -185,12 +199,27 @@ def validate() -> list[str]:
     require_pin(adc_nets, "R242", 2, "AGND", checks)
     require_pin(adc_nets, "R243", 1, "ADC_CAD1", checks)
     require_pin(adc_nets, "R243", 2, "AGND", checks)
+    require_component(adc_components, "C281", "4.7uF", "GRM21BR71A475KA73L", checks)
+    for reference, rail in (
+        ("C282", "ADC_5V_A"), ("C284", "AKM_3V3_D"),
+        ("C286", "ADC_5V_A"),
+    ):
+        require_component(adc_components, reference, "100nF", "C1005X7R1H104K050BB", checks)
+        require_pin(adc_nets, reference, 1, rail, checks)
+        require_pin(adc_nets, reference, 2, "AGND", checks)
+    for reference, rail in (
+        ("C283", "ADC_5V_A"), ("C285", "AKM_3V3_D"),
+        ("C287", "ADC_5V_A"),
+    ):
+        require_component(adc_components, reference, "10uF", "GRM188R71A106KA73D", checks)
+        require_pin(adc_nets, reference, 1, rail, checks)
+        require_pin(adc_nets, reference, 2, "AGND", checks)
 
     dac_components, dac_nets = parsed["AK4458-DAC"]
     require_component(dac_components, "U301", "AK4458VN", "AK4458VN", checks)
     for pin, net in {
         1: "AKM_MCLK", 2: "AKM_BCLK", 3: "AKM_FSYNC", 4: "DAC_TDM_IN",
-        11: "AUD_DAC_MUTE_N", 13: "AUD_I2C_SDA", 14: "AUD_I2C_SCL",
+        11: "AUDIO_SAFE_UNMUTE_N", 13: "AUD_I2C_SDA", 14: "AUD_I2C_SCL",
         17: "DAC_I2C_MODE", 31: "DAC_5V_A", 44: "DAC_LDOE",
         45: "AKM_3V3_D", 47: "DAC_VDD18", 48: "AUD_DAC_RST_N", 49: "AGND",
     }.items():
@@ -204,6 +233,12 @@ def validate() -> list[str]:
     for index in range(1, 5):
         require_pin(dac_nets, f"R{350 + index}", 1, "DAC_5V_A", checks)
         require_pin(dac_nets, f"R{350 + index}", 2, f"DAC_VREFH{index}", checks)
+        require_component(
+            dac_components, f"R{350 + index}", "10R", "RC0603FR-0710RL", checks
+        )
+        require_component(
+            dac_components, f"C{360 + index}", "220uF 6.3V polymer", "6SVP220MX", checks
+        )
     require_pin(dac_nets, "R323", 1, "AKM_3V3_D", checks)
     require_pin(dac_nets, "R323", 2, "DAC_CAD0", checks)
     require_pin(dac_nets, "R331", 1, "DAC_CAD1", checks)
@@ -228,6 +263,10 @@ def validate() -> list[str]:
         require_pin(input_nets, f"R{base + 11}", 2, f"ADC_CH{channel}N", checks)
         require_pin(input_nets, f"C{base + 4}", 1, f"ADC_CH{channel}P", checks)
         require_pin(input_nets, f"C{base + 4}", 2, f"ADC_CH{channel}N", checks)
+        require_pin(input_nets, f"C{base + 6}", 1, "AUDIO_P15V", checks)
+        require_pin(input_nets, f"C{base + 6}", 2, "AGND", checks)
+        require_pin(input_nets, f"C{base + 7}", 1, "AUDIO_N15V", checks)
+        require_pin(input_nets, f"C{base + 7}", 2, "AGND", checks)
 
     output_components, output_nets = parsed["Audio-Outputs"]
     output_mpns = Counter(field(component, "MPN") for component in output_components.values())
@@ -236,12 +275,20 @@ def validate() -> list[str]:
     require(output_mpns["TQ2-12V"] == 8, "Audio-Outputs has eight fail-silent TQ2 relays", checks)
     require(output_mpns["2N7002K-7"] == 8, "Audio-Outputs has eight independent relay sinks", checks)
     for channel in range(1, 9):
+        base = 5000 + channel * 40
+        for offset, rail in (
+            (7, "AUDIO_P15V"), (8, "AUDIO_N15V"),
+            (9, "AUDIO_P15V"), (10, "AUDIO_N15V"),
+        ):
+            require_pin(output_nets, f"C{base + offset}", 1, rail, checks)
+            require_pin(output_nets, f"C{base + offset}", 2, "AGND", checks)
         relay = f"K{500 + channel}"
         require_pin(output_nets, relay, 1, "AUDIO_12V", checks)
         require_pin(output_nets, relay, 2, "AGND", checks)
         require_pin(output_nets, relay, 9, "AGND", checks)
         require_pin(output_nets, relay, 4, f"AOUT{channel}_RELAY_N", checks)
         require_pin(output_nets, relay, 7, f"AOUT{channel}_RELAY_P", checks)
+        require_pin(output_nets, f"Q{500 + channel}", 1, "AUDIO_SAFE_UNMUTE_N", checks)
         base = 5000 + channel * 40
         require_pin(output_nets, f"L{base}", 1, f"AOUT{channel}_RELAY_N", checks)
         require_pin(output_nets, f"L{base}", 2, f"AOUT_CH{channel}_COLD", checks)
@@ -254,6 +301,8 @@ def validate() -> list[str]:
     require_component(power_components, "U603", "LT3045IMSE", "LT3045IMSE#TRPBF", checks)
     require_component(power_components, "U604", "LT3045IMSE", "LT3045IMSE#TRPBF", checks)
     require_component(power_components, "U605", "TPS7A2033PDBVR", "TPS7A2033PDBVR", checks)
+    require_pin(power_nets, "U602", 3, "AUDIO_5V5_PRE", checks)
+    require_pin(power_nets, "U602", 7, "AGND", checks)
     require_pin(power_nets, "J102", 1, "AUDIO_12V_IN", checks)
     require_pin(power_nets, "J102", 2, "AUDIO_12V_IN", checks)
     require_pin(power_nets, "F601", 2, "AUDIO_12V", checks)

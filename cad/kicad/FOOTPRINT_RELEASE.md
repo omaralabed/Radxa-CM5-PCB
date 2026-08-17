@@ -100,8 +100,8 @@ The BOM is regenerated from the KiCad netlist by `export_schematic_bom.py`.
 ## Open gate
 
 Power-Regulators-A1 has zero routing or production-part blockers. Across the
-complete sixteen-sheet suite, the controlled audit currently reports 1038
-components, ten routing blockers, and 11 production blockers. PCB placement
+three physical board roots, the controlled audit currently reports 1203
+unique components, ten routing blockers, and 11 production blockers. PCB placement
 and routing remain on hold until the routing count is zero. See
 `reports/component-footprint-audit.md` and
 `reports/component-footprint-audit.csv`. Assigning a plausible package without

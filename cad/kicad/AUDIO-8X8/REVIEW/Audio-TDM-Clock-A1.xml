@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/Users/viewvision/Desktop/Radxa CM5 PCB/cad/kicad/AUDIO-8X8/Audio-TDM-Clock.kicad_sch</source>
-    <date>2026-08-16T18:36:21</date>
+    <date>2026-08-17T08:37:36</date>
     <tool>Eeschema 10.0.5-rc1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -42,7 +42,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>9c26d635-3f0c-5acb-b56c-0de78730d261</tstamps>
+      <tstamps>b8a4df78-9476-5dd0-8431-fbb22db57d8b</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -70,7 +70,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>c6e8fe71-b87a-540e-8586-9001ee023631</tstamps>
+      <tstamps>12690b4f-07f1-5732-ba49-edf17cf55fca</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -98,7 +98,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>d062f8b3-fbf3-507d-b593-89195332c901</tstamps>
+      <tstamps>771af076-62f0-53c5-9032-1bf28276a1ed</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -126,7 +126,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>b456afca-3c68-5b08-bf88-7083843ea087</tstamps>
+      <tstamps>c61fafab-3557-5b18-a279-1db11019dd1d</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -154,7 +154,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>eb7758a3-60cf-52cb-b020-fda324733600</tstamps>
+      <tstamps>7f46adfe-ff5b-5b71-98d6-63b1fcffa4fa</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -182,7 +182,35 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>9c46b4fa-74a6-5d9d-82d1-97cd1f7b0fe6</tstamps>
+      <tstamps>21ffcef8-5769-56e4-a5bc-587ffa7653c0</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C107">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Manufacturer">TDK</field>
+        <field name="MPN">C1005X7R1H104K050BB</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="TDK"/>
+      <property name="MPN" value="C1005X7R1H104K050BB"/>
+      <property name="Sheetname" value="Audio-TDM-Clock"/>
+      <property name="Sheetfile" value="Audio-TDM-Clock.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>27ca35c9-dc3e-592b-9061-879c9d106c43</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -210,7 +238,7 @@
       <property name="ki_keywords" value="connector"/>
       <property name="ki_fp_filters" value="Connector*:*_2x??_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>ffc89bd5-1297-557f-b322-e16d0e6afe46</tstamps>
+      <tstamps>88867151-6c3b-5452-a2d0-ff0ca9de47a4</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -266,7 +294,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>42c9151a-8f42-559e-8570-420ec85e5868</tstamps>
+      <tstamps>9d27452d-7084-57ae-a932-fff619203735</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -294,7 +322,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>acd0639c-ebe1-57cd-94f1-9071ab9887a8</tstamps>
+      <tstamps>f0f0c613-9aff-534a-846e-22cbdc777c63</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -322,7 +350,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>318e7274-a28a-547f-a2b5-c297a904c9d7</tstamps>
+      <tstamps>0fdd5f03-8fa7-52c0-8813-f1e9493ff4b7</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -350,7 +378,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>5e74c371-de8a-5dbe-bd11-44746e643d45</tstamps>
+      <tstamps>c61cc72b-1e43-5244-bc0b-bb7bb27d94ed</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -378,7 +406,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>9d88296d-6f25-5fba-bddf-c6f7c6a5b516</tstamps>
+      <tstamps>c7703d61-12e5-544b-ad8e-e8e44d7c84b6</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -406,7 +434,35 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>8e873807-daa7-5498-8d92-7932402e6c98</tstamps>
+      <tstamps>651030ed-d416-5dfe-8bbc-0d928ffa7e39</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R117">
+      <value>100k 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-07100KL</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0603FR-07100KL"/>
+      <property name="Sheetname" value="Audio-TDM-Clock"/>
+      <property name="Sheetfile" value="Audio-TDM-Clock.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b3d39283-6411-5ef8-8229-4fa5abd02a0c</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -434,7 +490,7 @@
       <property name="ki_keywords" value="LVDS Receiver TI"/>
       <property name="ki_fp_filters" value="*SOIC*3.9x4.9mm*P1.27mm*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>09103178-b7de-5eda-9cac-2d7ef4430e74</tstamps>
+      <tstamps>8f8a98cc-b1b4-5ae5-ab3c-4095b7b181f7</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -468,7 +524,7 @@
       <property name="ki_keywords" value="LVDS Receiver TI"/>
       <property name="ki_fp_filters" value="*SOIC*3.9x4.9mm*P1.27mm*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>48f35ec5-b447-5a3e-858a-23c5dfbbb29d</tstamps>
+      <tstamps>50d1701d-89a7-599c-b89a-dc06b5da9007</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -502,7 +558,7 @@
       <property name="ki_keywords" value="LVDS Receiver TI"/>
       <property name="ki_fp_filters" value="*SOIC*3.9x4.9mm*P1.27mm*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>025d3a12-c33e-52fd-9d17-deaa13d70873</tstamps>
+      <tstamps>efc35f9e-66c4-520e-ad83-dff703f7aaee</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -536,7 +592,7 @@
       <property name="ki_keywords" value="LVDS Receiver TI"/>
       <property name="ki_fp_filters" value="*SOIC*3.9x4.9mm*P1.27mm*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>eee6fc4e-fda1-50bd-b85c-bb207069f085</tstamps>
+      <tstamps>5971a172-c8ae-5c3a-994a-063ef19ae0ff</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -570,7 +626,7 @@
       <property name="ki_keywords" value="LVDS Driver TI"/>
       <property name="ki_fp_filters" value="*SOIC*3.9x4.9mm*P1.27mm*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>e328d825-8319-50b6-8024-bc98848cc5a9</tstamps>
+      <tstamps>e54a6a05-617f-514e-a2e2-fa4c41957c0b</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -586,8 +642,63 @@
         </unit>
       </units>
     </comp>
+    <comp ref="U106">
+      <value>SN74LVC1G11DBVR</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23-6</footprint>
+      <fields>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="MPN">SN74LVC1G11DBVR</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-6</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="74xGxx" part="74LVC1G11" description="Single AND 3-Input Gate, Low-Voltage CMOS"/>
+      <property name="Manufacturer" value="Texas Instruments"/>
+      <property name="MPN" value="SN74LVC1G11DBVR"/>
+      <property name="Sheetname" value="Audio-TDM-Clock"/>
+      <property name="Sheetfile" value="Audio-TDM-Clock.kicad_sch"/>
+      <property name="ki_keywords" value="Single Gate AND triple LVC CMOS"/>
+      <property name="ki_fp_filters" value="SOT* SG-*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e26bae7c-1813-53a1-97b4-053320e8b6c6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="6"/>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="5"/>
+            <pin num="2"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
   </components>
   <libparts>
+    <libpart lib="74xGxx" part="74LVC1G11">
+      <description>Single AND 3-Input Gate, Low-Voltage CMOS</description>
+      <docs>http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf</docs>
+      <footprints>
+        <fp>SOT*</fp>
+        <fp>SG-*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">74LVC1G11</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf</field>
+        <field name="Description">Single AND 3-Input Gate, Low-Voltage CMOS</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="input"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="" type="input"/>
+        <pin num="4" name="" type="output"/>
+        <pin num="5" name="VCC" type="power_in"/>
+        <pin num="6" name="" type="input"/>
+      </pins>
+    </libpart>
     <libpart lib="Connector_Generic" part="Conn_02x15_Odd_Even">
       <description>Generic connector, double row, 02x15, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)</description>
       <footprints>
@@ -717,6 +828,9 @@
     </libpart>
   </libparts>
   <libraries>
+    <library logical="74xGxx">
+      <uri>${KICAD10_SYMBOL_DIR}/74xGxx.kicad_sym</uri>
+    </library>
     <library logical="Connector_Generic">
       <uri>${KICAD10_SYMBOL_DIR}/Connector_Generic.kicad_sym</uri>
     </library>
@@ -728,33 +842,40 @@
     </library>
   </libraries>
   <nets>
-    <net code="1" name="/ADC_TDM_OUT" class="Default">
+    <net code="1" name="ADC_5V_PG" class="Default">
+      <node ref="U106" pin="3" pintype="input"/>
+    </net>
+    <net code="2" name="ADC_TDM_OUT" class="Default">
       <node ref="U105" pin="2" pinfunction="D_2" pintype="input"/>
     </net>
-    <net code="2" name="/AGND" class="Default">
+    <net code="3" name="AGND" class="Default">
       <node ref="C101" pin="2" pintype="passive"/>
       <node ref="C102" pin="2" pintype="passive"/>
       <node ref="C103" pin="2" pintype="passive"/>
       <node ref="C104" pin="2" pintype="passive"/>
       <node ref="C105" pin="2" pintype="passive"/>
       <node ref="C106" pin="2" pintype="passive"/>
+      <node ref="C107" pin="2" pintype="passive"/>
       <node ref="R111" pin="2" pintype="passive"/>
       <node ref="R112" pin="2" pintype="passive"/>
       <node ref="R113" pin="2" pintype="passive"/>
       <node ref="R114" pin="2" pintype="passive"/>
+      <node ref="R117" pin="2" pintype="passive"/>
       <node ref="U101" pin="5" pinfunction="GND_5" pintype="power_in"/>
       <node ref="U102" pin="5" pinfunction="GND_5" pintype="power_in"/>
       <node ref="U103" pin="5" pinfunction="GND_5" pintype="power_in"/>
       <node ref="U104" pin="5" pinfunction="GND_5" pintype="power_in"/>
       <node ref="U105" pin="4" pinfunction="GND_4" pintype="power_in"/>
+      <node ref="U106" pin="2" pinfunction="GND_2" pintype="power_in"/>
     </net>
-    <net code="3" name="/AKM_3V3_D" class="Default">
+    <net code="4" name="AKM_3V3_D" class="Default">
       <node ref="C101" pin="1" pintype="passive"/>
       <node ref="C102" pin="1" pintype="passive"/>
       <node ref="C103" pin="1" pintype="passive"/>
       <node ref="C104" pin="1" pintype="passive"/>
       <node ref="C105" pin="1" pintype="passive"/>
       <node ref="C106" pin="1" pintype="passive"/>
+      <node ref="C107" pin="1" pintype="passive"/>
       <node ref="R115" pin="1" pintype="passive"/>
       <node ref="R116" pin="1" pintype="passive"/>
       <node ref="U101" pin="8" pinfunction="V_{CC}_8" pintype="power_in"/>
@@ -762,90 +883,99 @@
       <node ref="U103" pin="8" pinfunction="V_{CC}_8" pintype="power_in"/>
       <node ref="U104" pin="8" pinfunction="V_{CC}_8" pintype="power_in"/>
       <node ref="U105" pin="1" pinfunction="V_{CC}_1" pintype="power_in"/>
+      <node ref="U106" pin="5" pinfunction="VCC_5" pintype="power_in"/>
     </net>
-    <net code="4" name="/AKM_BCLK" class="Default">
+    <net code="5" name="AKM_BCLK" class="Default">
       <node ref="U102" pin="7" pinfunction="R_7" pintype="output"/>
     </net>
-    <net code="5" name="/AKM_FSYNC" class="Default">
+    <net code="6" name="AKM_FSYNC" class="Default">
       <node ref="U103" pin="7" pinfunction="R_7" pintype="output"/>
     </net>
-    <net code="6" name="/AKM_MCLK" class="Default">
+    <net code="7" name="AKM_MCLK" class="Default">
       <node ref="U101" pin="7" pinfunction="R_7" pintype="output"/>
     </net>
-    <net code="7" name="/AUDIO_ENABLE" class="Default">
+    <net code="8" name="AUDIO_ENABLE" class="Default">
       <node ref="J101" pin="24" pinfunction="Pin_24_24" pintype="passive"/>
     </net>
-    <net code="8" name="/AUDIO_PRESENT_N" class="Default">
+    <net code="9" name="AUDIO_PRESENT_N" class="Default">
       <node ref="J101" pin="23" pinfunction="Pin_23_23" pintype="passive"/>
       <node ref="R114" pin="1" pintype="passive"/>
     </net>
-    <net code="9" name="/AUD_ADC_RST_N" class="Default">
+    <net code="10" name="AUDIO_SAFE_UNMUTE_N" class="Default">
+      <node ref="R117" pin="1" pintype="passive"/>
+      <node ref="U106" pin="4" pintype="output"/>
+    </net>
+    <net code="11" name="AUD_ADC_RST_N" class="Default">
       <node ref="J101" pin="19" pinfunction="Pin_19_19" pintype="passive"/>
       <node ref="R111" pin="1" pintype="passive"/>
     </net>
-    <net code="10" name="/AUD_ADC_SDOUT_N" class="Default">
+    <net code="12" name="AUD_ADC_SDOUT_N" class="Default">
       <node ref="J101" pin="14" pinfunction="Pin_14_14" pintype="passive"/>
       <node ref="U105" pin="8" pinfunction="Z_8" pintype="output"/>
     </net>
-    <net code="11" name="/AUD_ADC_SDOUT_P" class="Default">
+    <net code="13" name="AUD_ADC_SDOUT_P" class="Default">
       <node ref="J101" pin="13" pinfunction="Pin_13_13" pintype="passive"/>
       <node ref="U105" pin="7" pinfunction="Y_7" pintype="output"/>
     </net>
-    <net code="12" name="/AUD_BCLK_N" class="Default">
+    <net code="14" name="AUD_BCLK_N" class="Default">
       <node ref="J101" pin="6" pinfunction="Pin_6_6" pintype="passive"/>
       <node ref="U102" pin="1" pinfunction="B_1" pintype="input"/>
     </net>
-    <net code="13" name="/AUD_BCLK_P" class="Default">
+    <net code="15" name="AUD_BCLK_P" class="Default">
       <node ref="J101" pin="5" pinfunction="Pin_5_5" pintype="passive"/>
       <node ref="U102" pin="2" pinfunction="A_2" pintype="input"/>
     </net>
-    <net code="14" name="/AUD_DAC_MUTE_N" class="Default">
+    <net code="16" name="AUD_DAC_MUTE_CMD_N" class="Default">
       <node ref="J101" pin="21" pinfunction="Pin_21_21" pintype="passive"/>
       <node ref="R113" pin="1" pintype="passive"/>
+      <node ref="U106" pin="1" pintype="input"/>
     </net>
-    <net code="15" name="/AUD_DAC_RST_N" class="Default">
+    <net code="17" name="AUD_DAC_RST_N" class="Default">
       <node ref="J101" pin="20" pinfunction="Pin_20_20" pintype="passive"/>
       <node ref="R112" pin="1" pintype="passive"/>
     </net>
-    <net code="16" name="/AUD_DAC_SDIN_N" class="Default">
+    <net code="18" name="AUD_DAC_SDIN_N" class="Default">
       <node ref="J101" pin="12" pinfunction="Pin_12_12" pintype="passive"/>
       <node ref="U104" pin="1" pinfunction="B_1" pintype="input"/>
     </net>
-    <net code="17" name="/AUD_DAC_SDIN_P" class="Default">
+    <net code="19" name="AUD_DAC_SDIN_P" class="Default">
       <node ref="J101" pin="11" pinfunction="Pin_11_11" pintype="passive"/>
       <node ref="U104" pin="2" pinfunction="A_2" pintype="input"/>
     </net>
-    <net code="18" name="/AUD_FSYNC_N" class="Default">
+    <net code="20" name="AUD_FSYNC_N" class="Default">
       <node ref="J101" pin="8" pinfunction="Pin_8_8" pintype="passive"/>
       <node ref="U103" pin="1" pinfunction="B_1" pintype="input"/>
     </net>
-    <net code="19" name="/AUD_FSYNC_P" class="Default">
+    <net code="21" name="AUD_FSYNC_P" class="Default">
       <node ref="J101" pin="7" pinfunction="Pin_7_7" pintype="passive"/>
       <node ref="U103" pin="2" pinfunction="A_2" pintype="input"/>
     </net>
-    <net code="20" name="/AUD_I2C_SCL" class="Default">
+    <net code="22" name="AUD_I2C_SCL" class="Default">
       <node ref="J101" pin="17" pinfunction="Pin_17_17" pintype="passive"/>
       <node ref="R115" pin="2" pintype="passive"/>
     </net>
-    <net code="21" name="/AUD_I2C_SDA" class="Default">
+    <net code="23" name="AUD_I2C_SDA" class="Default">
       <node ref="J101" pin="18" pinfunction="Pin_18_18" pintype="passive"/>
       <node ref="R116" pin="2" pintype="passive"/>
     </net>
-    <net code="22" name="/AUD_IRQ_N" class="Default">
+    <net code="24" name="AUD_IRQ_N" class="Default">
       <node ref="J101" pin="22" pinfunction="Pin_22_22" pintype="passive"/>
     </net>
-    <net code="23" name="/AUD_MCLK_N" class="Default">
+    <net code="25" name="AUD_MCLK_N" class="Default">
       <node ref="J101" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
       <node ref="U101" pin="1" pinfunction="B_1" pintype="input"/>
     </net>
-    <net code="24" name="/AUD_MCLK_P" class="Default">
+    <net code="26" name="AUD_MCLK_P" class="Default">
       <node ref="J101" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
       <node ref="U101" pin="2" pinfunction="A_2" pintype="input"/>
     </net>
-    <net code="25" name="/DAC_TDM_IN" class="Default">
+    <net code="27" name="DAC_5V_PG" class="Default">
+      <node ref="U106" pin="6" pintype="input"/>
+    </net>
+    <net code="28" name="DAC_TDM_IN" class="Default">
       <node ref="U104" pin="7" pinfunction="R_7" pintype="output"/>
     </net>
-    <net code="26" name="/GND" class="Default">
+    <net code="29" name="GND" class="Default">
       <node ref="J101" pin="10" pinfunction="Pin_10_10" pintype="passive"/>
       <node ref="J101" pin="15" pinfunction="Pin_15_15" pintype="passive"/>
       <node ref="J101" pin="16" pinfunction="Pin_16_16" pintype="passive"/>
@@ -856,58 +986,58 @@
       <node ref="J101" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
       <node ref="J101" pin="9" pinfunction="Pin_9_9" pintype="passive"/>
     </net>
-    <net code="27" name="/LOGIC_3V3" class="Default">
+    <net code="30" name="LOGIC_3V3" class="Default">
       <node ref="J101" pin="25" pinfunction="Pin_25_25" pintype="passive"/>
     </net>
-    <net code="28" name="/TDM_SPARE_1" class="Default">
+    <net code="31" name="TDM_SPARE_1" class="Default">
       <node ref="J101" pin="27" pinfunction="Pin_27_27" pintype="passive"/>
     </net>
-    <net code="29" name="/TDM_SPARE_2" class="Default">
+    <net code="32" name="TDM_SPARE_2" class="Default">
       <node ref="J101" pin="28" pinfunction="Pin_28_28" pintype="passive"/>
     </net>
-    <net code="30" name="unconnected-(U101-NC-Pad3)" class="Default">
+    <net code="33" name="unconnected-(U101-NC-Pad3)" class="Default">
       <node ref="U101" pin="3" pinfunction="NC_3" pintype="passive+no_connect"/>
     </net>
-    <net code="31" name="unconnected-(U101-NC-Pad4)" class="Default">
+    <net code="34" name="unconnected-(U101-NC-Pad4)" class="Default">
       <node ref="U101" pin="4" pinfunction="NC_4" pintype="passive+no_connect"/>
     </net>
-    <net code="32" name="unconnected-(U101-NC-Pad6)" class="Default">
+    <net code="35" name="unconnected-(U101-NC-Pad6)" class="Default">
       <node ref="U101" pin="6" pinfunction="NC_6" pintype="passive+no_connect"/>
     </net>
-    <net code="33" name="unconnected-(U102-NC-Pad3)" class="Default">
+    <net code="36" name="unconnected-(U102-NC-Pad3)" class="Default">
       <node ref="U102" pin="3" pinfunction="NC_3" pintype="passive+no_connect"/>
     </net>
-    <net code="34" name="unconnected-(U102-NC-Pad4)" class="Default">
+    <net code="37" name="unconnected-(U102-NC-Pad4)" class="Default">
       <node ref="U102" pin="4" pinfunction="NC_4" pintype="passive+no_connect"/>
     </net>
-    <net code="35" name="unconnected-(U102-NC-Pad6)" class="Default">
+    <net code="38" name="unconnected-(U102-NC-Pad6)" class="Default">
       <node ref="U102" pin="6" pinfunction="NC_6" pintype="passive+no_connect"/>
     </net>
-    <net code="36" name="unconnected-(U103-NC-Pad3)" class="Default">
+    <net code="39" name="unconnected-(U103-NC-Pad3)" class="Default">
       <node ref="U103" pin="3" pinfunction="NC_3" pintype="passive+no_connect"/>
     </net>
-    <net code="37" name="unconnected-(U103-NC-Pad4)" class="Default">
+    <net code="40" name="unconnected-(U103-NC-Pad4)" class="Default">
       <node ref="U103" pin="4" pinfunction="NC_4" pintype="passive+no_connect"/>
     </net>
-    <net code="38" name="unconnected-(U103-NC-Pad6)" class="Default">
+    <net code="41" name="unconnected-(U103-NC-Pad6)" class="Default">
       <node ref="U103" pin="6" pinfunction="NC_6" pintype="passive+no_connect"/>
     </net>
-    <net code="39" name="unconnected-(U104-NC-Pad3)" class="Default">
+    <net code="42" name="unconnected-(U104-NC-Pad3)" class="Default">
       <node ref="U104" pin="3" pinfunction="NC_3" pintype="passive+no_connect"/>
     </net>
-    <net code="40" name="unconnected-(U104-NC-Pad4)" class="Default">
+    <net code="43" name="unconnected-(U104-NC-Pad4)" class="Default">
       <node ref="U104" pin="4" pinfunction="NC_4" pintype="passive+no_connect"/>
     </net>
-    <net code="41" name="unconnected-(U104-NC-Pad6)" class="Default">
+    <net code="44" name="unconnected-(U104-NC-Pad6)" class="Default">
       <node ref="U104" pin="6" pinfunction="NC_6" pintype="passive+no_connect"/>
     </net>
-    <net code="42" name="unconnected-(U105-NC-Pad3)" class="Default">
+    <net code="45" name="unconnected-(U105-NC-Pad3)" class="Default">
       <node ref="U105" pin="3" pinfunction="NC_3" pintype="passive+no_connect"/>
     </net>
-    <net code="43" name="unconnected-(U105-NC-Pad5)" class="Default">
+    <net code="46" name="unconnected-(U105-NC-Pad5)" class="Default">
       <node ref="U105" pin="5" pinfunction="NC_5" pintype="passive+no_connect"/>
     </net>
-    <net code="44" name="unconnected-(U105-NC-Pad6)" class="Default">
+    <net code="47" name="unconnected-(U105-NC-Pad6)" class="Default">
       <node ref="U105" pin="6" pinfunction="NC_6" pintype="passive+no_connect"/>
     </net>
   </nets>

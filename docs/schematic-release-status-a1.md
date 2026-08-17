@@ -14,8 +14,9 @@ representations cannot update a PCB.
 
 ## Passed Gates
 
-- All sixteen sheets: zero ERC errors after controlled classification of
-  intentional off-sheet labels and unused package pins.
+- All three electrically authoritative board roots: `0 errors / 0 warnings`.
+  Standalone child-sheet context findings match the review script's exact
+  allowlist; any new or changed finding fails the gate.
 - Complete-system project: page 1 contains 58 electrical symbols and 294 named
   pin interconnects; all sixteen source sheets are present, and its A2 PDF
   export contains exactly 17 pages.
@@ -24,22 +25,26 @@ representations cannot update a PCB.
   current limit, and hold-up calculations pass.
 - CM5-CARRIER/AUDIO-8X8 interface contract: 174 critical connector and control
   pin/net assignments pass.
-- Power-Regulators-A1: 44 regulator, inductor, rail, source-current, and hold-up
-  checks pass; the production BOM has 151 controlled rows.
-- Thermal-IO: 15 part, sensor-grade, fan-protection, and hot-current checks pass.
-- Network-PCIe: 21 controlled-part and architecture checks pass.
-- WWAN-SIM: 14 modem, SIM, protection, and RF-harness checks pass.
+- CM5 allocation: all 76 owned contacts reconcile across the generator,
+  controlled workbook, official Radxa source, and exported netlist; 74 are
+  connected and two are explicitly assigned no-connects.
+- Power-Regulators-A1: 49 regulator, inductor, rail, source-current, and hold-up
+  checks pass; the production BOM has 163 controlled rows.
+- Thermal-IO: 22 part, sensor-grade, fan-protection, and hot-current checks pass.
+- Network-PCIe: 29 controlled-part and architecture checks pass.
+- WWAN-SIM: 23 modem, SIM, local supply-network, protection, and RF-harness
+  checks pass.
 - Display-Harness: 20 HDMI, USB touch, 12 V monitor, and IO-5 V checks pass.
 - Audio-Control: 22 TDM, I2S1, ES8316, headset-amplifier, CTIA, and grounding
   checks pass.
-- AUDIO-8X8: 381 checks across seven detailed sheets pass; the generated BOM
-  has 500 rows.
+- AUDIO-8X8: 581 checks across seven detailed sheets pass; the generated BOM
+  has 553 rows.
 - Cross-board XLR, fan, temperature, telemetry, source-control, TDM, and audio
   power assignments pass.
 
 ## Physical Gates Before PCB
 
-The component audit covers 1038 schematic components. Ten routing blockers are
+The root-counted component audit covers 1203 unique schematic components. Ten routing blockers are
 deliberately retained for physical evidence:
 
 - AK5558VN exposed-pad/via/stencil coupon and X-ray signoff;

@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/Users/viewvision/Desktop/Radxa CM5 PCB/cad/kicad/AUDIO-8X8/AK5558-ADC.kicad_sch</source>
-    <date>2026-08-16T18:36:21</date>
+    <date>2026-08-17T08:37:36</date>
     <tool>Eeschema 10.0.5-rc1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -42,7 +42,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>df51495d-cd87-5567-932b-6dcf491814e0</tstamps>
+      <tstamps>992ef63e-bdbc-57ae-9951-ef51eb76af11</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -70,7 +70,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>3fb41967-ff99-52ea-9c89-dc41aa67c1be</tstamps>
+      <tstamps>c2b014b4-11d4-59af-b38e-956533979208</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -98,7 +98,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>593b51b7-47d0-5e50-af55-0fdc0a1afa99</tstamps>
+      <tstamps>87f2a2d9-e7fd-584c-b292-c95600c01857</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -126,7 +126,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>59292c3d-cc71-5dd9-bbe1-0bba518ec63b</tstamps>
+      <tstamps>fab96443-93fb-5e54-b7bf-2d449c08e978</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -154,7 +154,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="CP_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>559f86ce-734d-54ca-8669-a3d17ae2a9d1</tstamps>
+      <tstamps>0542948e-9d36-517e-879d-15f5043f04fe</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -182,7 +182,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="CP_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>46a26a74-2f1d-5bba-b9d8-11ed889fbef3</tstamps>
+      <tstamps>990316c0-c4c5-5f7b-aeac-15344a508135</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -210,7 +210,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="CP_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>bcb1c3bd-b681-568e-9329-7062a29f7450</tstamps>
+      <tstamps>d21b4097-035d-5a2c-9c9b-fb1fce4a6d28</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -238,7 +238,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="CP_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>fbcf936d-674e-530f-b9ae-a22e55e2f002</tstamps>
+      <tstamps>2566d382-defb-5bc9-8e43-66caf343900e</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -249,24 +249,24 @@
       </units>
     </comp>
     <comp ref="C281">
-      <value>1uF</value>
-      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <value>4.7uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
       <fields>
         <field name="Manufacturer">Murata</field>
-        <field name="MPN">GRM188R71A105KA61D</field>
-        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="MPN">GRM21BR71A475KA73L</field>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <property name="Manufacturer" value="Murata"/>
-      <property name="MPN" value="GRM188R71A105KA61D"/>
+      <property name="MPN" value="GRM21BR71A475KA73L"/>
       <property name="Sheetname" value="AK5558-ADC"/>
       <property name="Sheetfile" value="AK5558-ADC.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>d6e8bc14-c7e3-5b87-b9b3-ea4cd71930d0</tstamps>
+      <tstamps>bd63e09b-e7c5-5ff2-8496-a89699034d4a</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -294,7 +294,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>74326db3-6183-5ab7-96d2-151ff0594a22</tstamps>
+      <tstamps>452f8cde-3388-5406-a2d3-06892e4f8706</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -305,24 +305,24 @@
       </units>
     </comp>
     <comp ref="C283">
-      <value>4.7uF</value>
-      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <value>10uF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <fields>
         <field name="Manufacturer">Murata</field>
-        <field name="MPN">GRM21BR71A475KA73L</field>
-        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="MPN">GRM188R71A106KA73D</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <property name="Manufacturer" value="Murata"/>
-      <property name="MPN" value="GRM21BR71A475KA73L"/>
+      <property name="MPN" value="GRM188R71A106KA73D"/>
       <property name="Sheetname" value="AK5558-ADC"/>
       <property name="Sheetfile" value="AK5558-ADC.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>702cee79-85e0-5b12-95ba-6cc56468a5b0</tstamps>
+      <tstamps>7723a5e9-3801-5780-8617-20ede563ab9c</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -350,7 +350,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>904a0766-ad12-5103-854b-88bfc47934a1</tstamps>
+      <tstamps>3161e756-d372-5f85-8a5f-b41e18c7db66</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -361,24 +361,80 @@
       </units>
     </comp>
     <comp ref="C285">
-      <value>4.7uF</value>
-      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <value>10uF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <fields>
         <field name="Manufacturer">Murata</field>
-        <field name="MPN">GRM21BR71A475KA73L</field>
-        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="MPN">GRM188R71A106KA73D</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <property name="Manufacturer" value="Murata"/>
-      <property name="MPN" value="GRM21BR71A475KA73L"/>
+      <property name="MPN" value="GRM188R71A106KA73D"/>
       <property name="Sheetname" value="AK5558-ADC"/>
       <property name="Sheetfile" value="AK5558-ADC.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>6d7717e8-c492-57e5-80a2-fc54d692dd54</tstamps>
+      <tstamps>5d21a724-272e-5fad-8450-3745fd1a5741</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C286">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Manufacturer">TDK</field>
+        <field name="MPN">C1005X7R1H104K050BB</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="TDK"/>
+      <property name="MPN" value="C1005X7R1H104K050BB"/>
+      <property name="Sheetname" value="AK5558-ADC"/>
+      <property name="Sheetfile" value="AK5558-ADC.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8b3fb8fb-6463-5c33-ba9a-5775df43a607</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C287">
+      <value>10uF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Murata</field>
+        <field name="MPN">GRM188R71A106KA73D</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="MPN" value="GRM188R71A106KA73D"/>
+      <property name="Sheetname" value="AK5558-ADC"/>
+      <property name="Sheetfile" value="AK5558-ADC.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5c963d14-8d36-57f0-a40f-a0d84d8fbe9d</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -406,7 +462,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>eef6c276-209e-5280-a2c6-d22c87295cdd</tstamps>
+      <tstamps>cf635fd7-4b50-5c91-a499-02d71af32edc</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -434,7 +490,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>61b2110c-15e3-5a53-8b9c-3006249017b3</tstamps>
+      <tstamps>1f013fe4-6978-5843-b198-26f0c503ecfa</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -462,7 +518,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>09ab51c0-97a0-58a3-80ec-bdd4543d8d24</tstamps>
+      <tstamps>09a1f205-4d54-508f-9802-90bc4672b6e4</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -490,7 +546,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>096cbba8-ca25-5d2d-8668-64bc48c1f759</tstamps>
+      <tstamps>b5685396-27c3-5ba1-b6d9-8bcc0b123bb5</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -518,7 +574,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>687e2421-6b7f-5252-bcc5-01f4a7b2fd93</tstamps>
+      <tstamps>00f1128a-4e7a-5fc6-96d9-703cc1d7f804</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -546,7 +602,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>9794c411-6316-53be-abe0-cf957d9ffecf</tstamps>
+      <tstamps>41607ef3-3e2c-50b1-bb0a-2a2de8e8040d</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -574,7 +630,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>28a795bd-1b40-503e-ac71-40f1f1ffc019</tstamps>
+      <tstamps>016c1e95-b40d-5367-9cb6-bd9ba795c561</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -602,7 +658,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>f6bd58f0-0b0a-5f71-af3e-299ab7fa3ce5</tstamps>
+      <tstamps>c1203485-6e05-5764-8365-395178c23920</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -630,7 +686,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>5281c6dc-1cc1-55bc-ab14-7f823f8cba88</tstamps>
+      <tstamps>aac15a14-6c81-5a23-8cba-d2a8551317ba</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -658,7 +714,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>ab672d58-7a47-5a0d-a305-ef800971d55e</tstamps>
+      <tstamps>a6801a66-befe-5638-a018-fef39e598aee</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -686,7 +742,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>56928a03-bb3c-55f7-91b0-c6300d8e22b6</tstamps>
+      <tstamps>b457efb2-e6e8-5467-b456-1068ac5a81ff</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -714,7 +770,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>249cf731-1172-5b14-b19c-5f3e17ac252d</tstamps>
+      <tstamps>0bb11908-51f3-520b-9b4e-c3374b7f498b</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -742,7 +798,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>f576067d-0972-5c71-b442-545a94883eee</tstamps>
+      <tstamps>0edcb39e-1be4-5779-9483-0714f0e12658</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -770,7 +826,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>fa7b0520-19eb-5e98-812e-1ba189f10018</tstamps>
+      <tstamps>fdd922d9-1162-5481-aee3-28a7ee1beaf0</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -798,7 +854,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>68741e01-5a63-592f-ba69-fca36ae666f1</tstamps>
+      <tstamps>e19a8525-4909-5377-882d-815093a08c93</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -826,7 +882,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>a4644ab2-c996-5598-88c1-8270859d73ad</tstamps>
+      <tstamps>0a11c9c0-e1e8-5ec0-904d-1759198a6ad1</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -854,7 +910,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>11bfd6e6-4d1e-5a13-a349-492aa9c59a79</tstamps>
+      <tstamps>d289b490-260f-521e-891b-3744dd514bd9</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -882,7 +938,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>e40c62da-dcb6-521d-aadc-807dac49647e</tstamps>
+      <tstamps>faadd1df-b96a-57cd-92d5-a3b28eb3a515</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -910,7 +966,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>b4f5c6c8-7089-5683-9cc1-5aa3050696c1</tstamps>
+      <tstamps>b960efcc-4d02-5e99-b9aa-e6a768afc5f5</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -938,7 +994,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>0ce213f5-1d71-5266-83fb-9f12e4a69052</tstamps>
+      <tstamps>c62be2be-dd80-50ed-9f63-540628ac8a3a</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -966,7 +1022,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>e22ed48e-f031-5134-8099-db2f1a838bbe</tstamps>
+      <tstamps>7b31c9d7-6f47-5e7b-8789-ef81e5f321f0</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -994,7 +1050,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>825546df-6d47-5b05-91f4-59738d6c62cb</tstamps>
+      <tstamps>a760c736-9aee-50d2-979a-f02a17b76a14</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1020,7 +1076,7 @@
       <property name="Sheetname" value="AK5558-ADC"/>
       <property name="Sheetfile" value="AK5558-ADC.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>c4ae79a9-6ca6-5941-851d-b1c7c22869a4</tstamps>
+      <tstamps>8fc15dfe-0c24-5e1c-98ea-a9a2b6dff5b3</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1234,9 +1290,11 @@
     </library>
   </libraries>
   <nets>
-    <net code="1" name="/ADC_5V_A" class="Default">
+    <net code="1" name="ADC_5V_A" class="Default">
       <node ref="C282" pin="1" pintype="passive"/>
       <node ref="C283" pin="1" pintype="passive"/>
+      <node ref="C286" pin="1" pintype="passive"/>
+      <node ref="C287" pin="1" pintype="passive"/>
       <node ref="R261" pin="1" pintype="passive"/>
       <node ref="R262" pin="1" pintype="passive"/>
       <node ref="R263" pin="1" pintype="passive"/>
@@ -1244,173 +1302,158 @@
       <node ref="U201" pin="15" pinfunction="AVDD2_15" pintype="passive"/>
       <node ref="U201" pin="2" pinfunction="AVDD1_2" pintype="passive"/>
     </net>
-    <net code="2" name="/ADC_CAD0" class="Default">
+    <net code="2" name="ADC_CAD0" class="Default">
       <node ref="R242" pin="1" pintype="passive"/>
       <node ref="U201" pin="44" pinfunction="CKS1/CAD0_I2C/CSN_44" pintype="passive"/>
     </net>
-    <net code="3" name="/ADC_CAD1" class="Default">
+    <net code="3" name="ADC_CAD1" class="Default">
       <node ref="R243" pin="1" pintype="passive"/>
       <node ref="U201" pin="46" pinfunction="CKS3/CAD1_46" pintype="passive"/>
     </net>
-    <net code="4" name="/ADC_CH1N" class="Default">
+    <net code="4" name="ADC_CH1N" class="Default">
       <node ref="U201" pin="60" pinfunction="AIN1N_60" pintype="passive"/>
     </net>
-    <net code="5" name="/ADC_CH1P" class="Default">
+    <net code="5" name="ADC_CH1P" class="Default">
       <node ref="U201" pin="59" pinfunction="AIN1P_59" pintype="passive"/>
     </net>
-    <net code="6" name="/ADC_CH2N" class="Default">
+    <net code="6" name="ADC_CH2N" class="Default">
       <node ref="U201" pin="63" pinfunction="AIN2N_63" pintype="passive"/>
     </net>
-    <net code="7" name="/ADC_CH2P" class="Default">
+    <net code="7" name="ADC_CH2P" class="Default">
       <node ref="U201" pin="64" pinfunction="AIN2P_64" pintype="passive"/>
     </net>
-    <net code="8" name="/ADC_CH3N" class="Default">
+    <net code="8" name="ADC_CH3N" class="Default">
       <node ref="U201" pin="4" pinfunction="AIN3N_4" pintype="passive"/>
     </net>
-    <net code="9" name="/ADC_CH3P" class="Default">
+    <net code="9" name="ADC_CH3P" class="Default">
       <node ref="U201" pin="3" pinfunction="AIN3P_3" pintype="passive"/>
     </net>
-    <net code="10" name="/ADC_CH4N" class="Default">
+    <net code="10" name="ADC_CH4N" class="Default">
       <node ref="U201" pin="7" pinfunction="AIN4N_7" pintype="passive"/>
     </net>
-    <net code="11" name="/ADC_CH4P" class="Default">
+    <net code="11" name="ADC_CH4P" class="Default">
       <node ref="U201" pin="8" pinfunction="AIN4P_8" pintype="passive"/>
     </net>
-    <net code="12" name="/ADC_CH5N" class="Default">
+    <net code="12" name="ADC_CH5N" class="Default">
       <node ref="U201" pin="10" pinfunction="AIN5N_10" pintype="passive"/>
     </net>
-    <net code="13" name="/ADC_CH5P" class="Default">
+    <net code="13" name="ADC_CH5P" class="Default">
       <node ref="U201" pin="9" pinfunction="AIN5P_9" pintype="passive"/>
     </net>
-    <net code="14" name="/ADC_CH6N" class="Default">
+    <net code="14" name="ADC_CH6N" class="Default">
       <node ref="U201" pin="13" pinfunction="AIN6N_13" pintype="passive"/>
     </net>
-    <net code="15" name="/ADC_CH6P" class="Default">
+    <net code="15" name="ADC_CH6P" class="Default">
       <node ref="U201" pin="14" pinfunction="AIN6P_14" pintype="passive"/>
     </net>
-    <net code="16" name="/ADC_CH7N" class="Default">
+    <net code="16" name="ADC_CH7N" class="Default">
       <node ref="U201" pin="18" pinfunction="AIN7N_18" pintype="passive"/>
     </net>
-    <net code="17" name="/ADC_CH7P" class="Default">
+    <net code="17" name="ADC_CH7P" class="Default">
       <node ref="U201" pin="17" pinfunction="AIN7P_17" pintype="passive"/>
     </net>
-    <net code="18" name="/ADC_CH8N" class="Default">
+    <net code="18" name="ADC_CH8N" class="Default">
       <node ref="U201" pin="21" pinfunction="AIN8N_21" pintype="passive"/>
     </net>
-    <net code="19" name="/ADC_CH8P" class="Default">
+    <net code="19" name="ADC_CH8P" class="Default">
       <node ref="U201" pin="22" pinfunction="AIN8P_22" pintype="passive"/>
     </net>
-    <net code="20" name="/ADC_DIF0" class="Default">
+    <net code="20" name="ADC_DIF0" class="Default">
       <node ref="R224" pin="2" pintype="passive"/>
       <node ref="U201" pin="49" pinfunction="DIF0/DSDSEL0_49" pintype="passive"/>
     </net>
-    <net code="21" name="/ADC_DIF1" class="Default">
+    <net code="21" name="ADC_DIF1" class="Default">
       <node ref="R225" pin="2" pintype="passive"/>
       <node ref="U201" pin="50" pinfunction="DIF1/DSDSEL1_50" pintype="passive"/>
     </net>
-    <net code="22" name="/ADC_DP" class="Default">
+    <net code="22" name="ADC_DP" class="Default">
       <node ref="R248" pin="1" pintype="passive"/>
       <node ref="U201" pin="55" pinfunction="DP_55" pintype="passive"/>
     </net>
-    <net code="23" name="/ADC_DSDOL4_NC" class="Default">
-      <node ref="U201" pin="40" pinfunction="DSDOL4_40" pintype="passive"/>
-    </net>
-    <net code="24" name="/ADC_DSDOR4_NC" class="Default">
-      <node ref="U201" pin="41" pinfunction="DSDOR4_41" pintype="passive"/>
-    </net>
-    <net code="25" name="/ADC_HPFE" class="Default">
+    <net code="23" name="ADC_HPFE" class="Default">
       <node ref="R249" pin="1" pintype="passive"/>
       <node ref="U201" pin="56" pinfunction="HPFE/DCKS_56" pintype="passive"/>
     </net>
-    <net code="26" name="/ADC_I2C_MODE" class="Default">
+    <net code="24" name="ADC_I2C_MODE" class="Default">
       <node ref="R227" pin="2" pintype="passive"/>
       <node ref="U201" pin="54" pinfunction="I2C_54" pintype="passive"/>
     </net>
-    <net code="27" name="/ADC_LDOE" class="Default">
+    <net code="25" name="ADC_LDOE" class="Default">
       <node ref="R228" pin="2" pintype="passive"/>
       <node ref="U201" pin="57" pinfunction="LDOE_57" pintype="passive"/>
     </net>
-    <net code="28" name="/ADC_MSN" class="Default">
+    <net code="26" name="ADC_MSN" class="Default">
       <node ref="R241" pin="1" pintype="passive"/>
       <node ref="U201" pin="32" pinfunction="MSN_32" pintype="passive"/>
     </net>
-    <net code="29" name="/ADC_ODP" class="Default">
+    <net code="27" name="ADC_ODP" class="Default">
       <node ref="R250" pin="1" pintype="passive"/>
       <node ref="U201" pin="58" pinfunction="ODP_58" pintype="passive"/>
     </net>
-    <net code="30" name="/ADC_PSN" class="Default">
+    <net code="28" name="ADC_PSN" class="Default">
       <node ref="R247" pin="1" pintype="passive"/>
       <node ref="U201" pin="53" pinfunction="PSN/CAD0_SPI_53" pintype="passive"/>
     </net>
-    <net code="31" name="/ADC_PW0" class="Default">
+    <net code="29" name="ADC_PW0" class="Default">
       <node ref="R221" pin="2" pintype="passive"/>
       <node ref="U201" pin="29" pinfunction="PW0_29" pintype="passive"/>
     </net>
-    <net code="32" name="/ADC_PW1" class="Default">
+    <net code="30" name="ADC_PW1" class="Default">
       <node ref="R222" pin="2" pintype="passive"/>
       <node ref="U201" pin="30" pinfunction="PW1_30" pintype="passive"/>
     </net>
-    <net code="33" name="/ADC_PW2" class="Default">
+    <net code="31" name="ADC_PW2" class="Default">
       <node ref="R223" pin="2" pintype="passive"/>
       <node ref="U201" pin="31" pinfunction="PW2_31" pintype="passive"/>
     </net>
-    <net code="34" name="/ADC_SDTO2_NC" class="Default">
-      <node ref="U201" pin="37" pinfunction="SDTO2/DSDOR2_37" pintype="passive"/>
-    </net>
-    <net code="35" name="/ADC_SDTO3_NC" class="Default">
-      <node ref="U201" pin="38" pinfunction="SDTO3/DSDOL3_38" pintype="passive"/>
-    </net>
-    <net code="36" name="/ADC_SDTO4_NC" class="Default">
-      <node ref="U201" pin="39" pinfunction="SDTO4/DSDOR3_39" pintype="passive"/>
-    </net>
-    <net code="37" name="/ADC_SD_PMOD" class="Default">
+    <net code="32" name="ADC_SD_PMOD" class="Default">
       <node ref="R245" pin="1" pintype="passive"/>
       <node ref="U201" pin="48" pinfunction="SD/PMOD_48" pintype="passive"/>
     </net>
-    <net code="38" name="/ADC_SLOW" class="Default">
+    <net code="33" name="ADC_SLOW" class="Default">
       <node ref="R244" pin="1" pintype="passive"/>
       <node ref="U201" pin="47" pinfunction="SLOW/DCKB_47" pintype="passive"/>
     </net>
-    <net code="39" name="/ADC_TDM0" class="Default">
+    <net code="34" name="ADC_TDM0" class="Default">
       <node ref="R246" pin="1" pintype="passive"/>
       <node ref="U201" pin="51" pinfunction="TDM0_51" pintype="passive"/>
     </net>
-    <net code="40" name="/ADC_TDM1" class="Default">
+    <net code="35" name="ADC_TDM1" class="Default">
       <node ref="R226" pin="2" pintype="passive"/>
       <node ref="U201" pin="52" pinfunction="TDM1_52" pintype="passive"/>
     </net>
-    <net code="41" name="/ADC_TDM_OUT" class="Default">
+    <net code="36" name="ADC_TDM_OUT" class="Default">
       <node ref="U201" pin="36" pinfunction="SDTO1/DSDOL2_36" pintype="passive"/>
     </net>
-    <net code="42" name="/ADC_VDD18" class="Default">
+    <net code="37" name="ADC_VDD18" class="Default">
       <node ref="C281" pin="1" pintype="passive"/>
       <node ref="U201" pin="27" pinfunction="VDD18_27" pintype="passive"/>
     </net>
-    <net code="43" name="/ADC_VREFH1" class="Default">
+    <net code="38" name="ADC_VREFH1" class="Default">
       <node ref="C261" pin="1" pintype="passive"/>
       <node ref="C271" pin="1" pintype="passive"/>
       <node ref="R261" pin="2" pintype="passive"/>
       <node ref="U201" pin="62" pinfunction="VREFH1_62" pintype="passive"/>
     </net>
-    <net code="44" name="/ADC_VREFH2" class="Default">
+    <net code="39" name="ADC_VREFH2" class="Default">
       <node ref="C262" pin="1" pintype="passive"/>
       <node ref="C272" pin="1" pintype="passive"/>
       <node ref="R262" pin="2" pintype="passive"/>
       <node ref="U201" pin="6" pinfunction="VREFH2_6" pintype="passive"/>
     </net>
-    <net code="45" name="/ADC_VREFH3" class="Default">
+    <net code="40" name="ADC_VREFH3" class="Default">
       <node ref="C263" pin="1" pintype="passive"/>
       <node ref="C273" pin="1" pintype="passive"/>
       <node ref="R263" pin="2" pintype="passive"/>
       <node ref="U201" pin="11" pinfunction="VREFH3_11" pintype="passive"/>
     </net>
-    <net code="46" name="/ADC_VREFH4" class="Default">
+    <net code="41" name="ADC_VREFH4" class="Default">
       <node ref="C264" pin="1" pintype="passive"/>
       <node ref="C274" pin="1" pintype="passive"/>
       <node ref="R264" pin="2" pintype="passive"/>
       <node ref="U201" pin="19" pinfunction="VREFH4_19" pintype="passive"/>
     </net>
-    <net code="47" name="/AGND" class="Default">
+    <net code="42" name="AGND" class="Default">
       <node ref="C261" pin="2" pintype="passive"/>
       <node ref="C262" pin="2" pintype="passive"/>
       <node ref="C263" pin="2" pintype="passive"/>
@@ -1424,6 +1467,8 @@
       <node ref="C283" pin="2" pintype="passive"/>
       <node ref="C284" pin="2" pintype="passive"/>
       <node ref="C285" pin="2" pintype="passive"/>
+      <node ref="C286" pin="2" pintype="passive"/>
+      <node ref="C287" pin="2" pintype="passive"/>
       <node ref="R241" pin="2" pintype="passive"/>
       <node ref="R242" pin="2" pintype="passive"/>
       <node ref="R243" pin="2" pintype="passive"/>
@@ -1445,7 +1490,7 @@
       <node ref="U201" pin="61" pinfunction="VREFL1_61" pintype="passive"/>
       <node ref="U201" pin="65" pinfunction="EP_65" pintype="passive"/>
     </net>
-    <net code="48" name="/AKM_3V3_D" class="Default">
+    <net code="43" name="AKM_3V3_D" class="Default">
       <node ref="C284" pin="1" pintype="passive"/>
       <node ref="C285" pin="1" pintype="passive"/>
       <node ref="R221" pin="1" pintype="passive"/>
@@ -1458,26 +1503,41 @@
       <node ref="R228" pin="1" pintype="passive"/>
       <node ref="U201" pin="25" pinfunction="TVDD_25" pintype="passive"/>
     </net>
-    <net code="49" name="/AKM_BCLK" class="Default">
+    <net code="44" name="AKM_BCLK" class="Default">
       <node ref="U201" pin="33" pinfunction="BICK/DCLK_33" pintype="passive"/>
     </net>
-    <net code="50" name="/AKM_FSYNC" class="Default">
+    <net code="45" name="AKM_FSYNC" class="Default">
       <node ref="U201" pin="34" pinfunction="LRCK/DSDOL1_34" pintype="passive"/>
     </net>
-    <net code="51" name="/AKM_MCLK" class="Default">
+    <net code="46" name="AKM_MCLK" class="Default">
       <node ref="U201" pin="24" pinfunction="MCLK_24" pintype="passive"/>
     </net>
-    <net code="52" name="/AUD_ADC_RST_N" class="Default">
+    <net code="47" name="AUD_ADC_RST_N" class="Default">
       <node ref="U201" pin="28" pinfunction="PDN_28" pintype="passive"/>
     </net>
-    <net code="53" name="/AUD_I2C_SCL" class="Default">
+    <net code="48" name="AUD_I2C_SCL" class="Default">
       <node ref="U201" pin="45" pinfunction="CKS2/SCL/CCLK_45" pintype="passive"/>
     </net>
-    <net code="54" name="/AUD_I2C_SDA" class="Default">
+    <net code="49" name="AUD_I2C_SDA" class="Default">
       <node ref="U201" pin="43" pinfunction="CKS0/SDA/CDTI_43" pintype="passive"/>
     </net>
-    <net code="55" name="/AUD_IRQ_N" class="Default">
+    <net code="50" name="AUD_IRQ_N" class="Default">
       <node ref="U201" pin="42" pinfunction="OVF_42" pintype="passive"/>
+    </net>
+    <net code="51" name="unconnected-(U201-DSDOL4-Pad40)" class="Default">
+      <node ref="U201" pin="40" pinfunction="DSDOL4_40" pintype="passive+no_connect"/>
+    </net>
+    <net code="52" name="unconnected-(U201-DSDOR4-Pad41)" class="Default">
+      <node ref="U201" pin="41" pinfunction="DSDOR4_41" pintype="passive+no_connect"/>
+    </net>
+    <net code="53" name="unconnected-(U201-SDTO2/DSDOR2-Pad37)" class="Default">
+      <node ref="U201" pin="37" pinfunction="SDTO2/DSDOR2_37" pintype="passive+no_connect"/>
+    </net>
+    <net code="54" name="unconnected-(U201-SDTO3/DSDOL3-Pad38)" class="Default">
+      <node ref="U201" pin="38" pinfunction="SDTO3/DSDOL3_38" pintype="passive+no_connect"/>
+    </net>
+    <net code="55" name="unconnected-(U201-SDTO4/DSDOR3-Pad39)" class="Default">
+      <node ref="U201" pin="39" pinfunction="SDTO4/DSDOR3_39" pintype="passive+no_connect"/>
     </net>
   </nets>
 </export>

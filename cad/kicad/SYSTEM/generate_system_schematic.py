@@ -40,7 +40,7 @@ TDM_MAP = {
     9: "GND", 10: "GND", 11: "AUD_DAC_SDIN_P", 12: "AUD_DAC_SDIN_N",
     13: "AUD_ADC_SDOUT_P", 14: "AUD_ADC_SDOUT_N", 15: "GND", 16: "GND",
     17: "AUD_I2C_SCL", 18: "AUD_I2C_SDA", 19: "AUD_ADC_RST_N",
-    20: "AUD_DAC_RST_N", 21: "AUD_DAC_MUTE_N", 22: "AUD_IRQ_N",
+    20: "AUD_DAC_RST_N", 21: "AUD_DAC_MUTE_CMD_N", 22: "AUD_IRQ_N",
     23: "AUDIO_PRESENT_N", 24: "AUDIO_ENABLE", 25: "LOGIC_3V3", 26: "GND",
     27: "TDM_SPARE_1", 28: "TDM_SPARE_2", 29: "GND", 30: "GND",
 }
@@ -68,21 +68,8 @@ USB_TOUCH_MAP = {1: "TOUCH_USB_5V", 2: "TOUCH_USB_DM", 3: "TOUCH_USB_DP", 4: "GN
 
 SHEETS = [
     ("PWR-SELECT", "../PWR-SELECT/PowerSelector.kicad_sch", "2"),
-    ("CM5 Interface Contract", "../CM5-CARRIER/CM5-Carrier.kicad_sch", "3"),
-    ("CM5 Pin Allocation", "../CM5-CARRIER/CM5-Core-Allocated.kicad_sch", "4"),
-    ("Network / PCIe / Wi-Fi", "../CM5-CARRIER/Network-PCIe.kicad_sch", "5"),
-    ("WWAN / Dual SIM", "../CM5-CARRIER/WWAN-SIM.kicad_sch", "6"),
-    ("Display Harness", "../CM5-CARRIER/Display-Harness.kicad_sch", "7"),
-    ("Headset / Audio Control", "../CM5-CARRIER/Audio-Control.kicad_sch", "8"),
-    ("Power Regulators", "../CM5-CARRIER/Power-Regulators-A1.kicad_sch", "9"),
-    ("Thermal / Fans / IO", "../CM5-CARRIER/Thermal-IO.kicad_sch", "10"),
-    ("AUDIO-8X8 Interface", "../AUDIO-8X8/Audio-8x8.kicad_sch", "11"),
-    ("TDM / Clock / Control", "../AUDIO-8X8/Audio-TDM-Clock.kicad_sch", "12"),
-    ("AK5558VN ADC", "../AUDIO-8X8/AK5558-ADC.kicad_sch", "13"),
-    ("AK4458VN DAC", "../AUDIO-8X8/AK4458-DAC.kicad_sch", "14"),
-    ("Balanced Inputs 1-8", "../AUDIO-8X8/Audio-Inputs.kicad_sch", "15"),
-    ("Balanced Outputs 1-8", "../AUDIO-8X8/Audio-Outputs.kicad_sch", "16"),
-    ("Audio Power", "../AUDIO-8X8/Audio-Power.kicad_sch", "17"),
+    ("CM5-CARRIER Connected Root", "../CM5-CARRIER/CM5-Carrier.kicad_sch", "3"),
+    ("AUDIO-8X8 Connected Root", "../AUDIO-8X8/Audio-8x8.kicad_sch", "11"),
 ]
 
 
@@ -518,7 +505,7 @@ def add_detailed_sheets(schematic: ksa.Schematic) -> None:
     add_text(
         schematic,
         "detail-title",
-        "DETAILED ELECTRICAL CIRCUIT PAGES - DOUBLE-CLICK A SHEET TO OPEN",
+        "PHYSICAL BOARD ROOTS - EACH ROOT CONTAINS ITS CONNECTED DETAILED PAGES",
         (390, 674),
         size=1.7,
         bold=True,
@@ -563,8 +550,8 @@ def build_schematic() -> None:
         rev="A2",
         company="ProComm",
         comments={
-            1: "Top sheet is the electrical system interconnect; pages 2-17 contain detailed circuits",
-            2: "Three physical PCB netlists remain separate",
+            1: "Top sheet is the electrical system interconnect; nested roots expose all detailed circuits",
+            2: "PWR-SELECT, CM5-CARRIER, and AUDIO-8X8 are authoritative physical PCB netlists",
             3: "System connector representations are excluded from BOM and board update",
             4: "PCB ROUTING HELD FOR PHYSICAL RELEASE GATES",
         },
@@ -580,7 +567,7 @@ def build_schematic() -> None:
     add_text(
         schematic,
         "scope",
-        "Page 1 shows real electrical pin/net interconnects. Pages 2-17 contain the complete component-level circuits for PWR-SELECT, CM5-CARRIER, and AUDIO-8X8.",
+        "Page 1 shows system harness interconnects. The three physical board roots contain the complete connected component-level circuits.",
         (400, 38),
         size=1.15,
     )

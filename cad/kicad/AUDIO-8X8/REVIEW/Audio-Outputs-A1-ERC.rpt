@@ -1,57 +1,60 @@
-ERC report (2026-08-16T18:36:19, Encoding UTF8)
+ERC report (2026-08-17T07:51:58, Encoding UTF8)
 Report includes: Errors, Warnings
 
 ***** Sheet /
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(795.02 mm, 100.33 mm): Symbol Q501 Pin 1 [G, Input, Line]
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(69.85 mm, 80.01 mm): Label 'DAC_CH1P'
+    @(69.85 mm, 80.01 mm): Global Label 'DAC_CH1P'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(69.85 mm, 111.76 mm): Label 'DAC_CH1N'
+    @(69.85 mm, 111.76 mm): Global Label 'DAC_CH1N'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(69.85 mm, 166.37 mm): Label 'DAC_CH2P'
+    @(69.85 mm, 166.37 mm): Global Label 'DAC_CH2P'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(69.85 mm, 198.12 mm): Label 'DAC_CH2N'
+    @(69.85 mm, 198.12 mm): Global Label 'DAC_CH2N'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(69.85 mm, 252.73 mm): Label 'DAC_CH3P'
+    @(69.85 mm, 252.73 mm): Global Label 'DAC_CH3P'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(69.85 mm, 284.48 mm): Label 'DAC_CH3N'
+    @(69.85 mm, 284.48 mm): Global Label 'DAC_CH3N'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(69.85 mm, 337.82 mm): Label 'DAC_CH4P'
+    @(69.85 mm, 337.82 mm): Global Label 'DAC_CH4P'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(69.85 mm, 369.57 mm): Label 'DAC_CH4N'
+    @(69.85 mm, 369.57 mm): Global Label 'DAC_CH4N'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(69.85 mm, 424.18 mm): Label 'DAC_CH5P'
+    @(69.85 mm, 424.18 mm): Global Label 'DAC_CH5P'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(69.85 mm, 455.93 mm): Label 'DAC_CH5N'
+    @(69.85 mm, 455.93 mm): Global Label 'DAC_CH5N'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(69.85 mm, 510.54 mm): Label 'DAC_CH6P'
+    @(69.85 mm, 510.54 mm): Global Label 'DAC_CH6P'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(69.85 mm, 542.29 mm): Label 'DAC_CH6N'
+    @(69.85 mm, 542.29 mm): Global Label 'DAC_CH6N'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(69.85 mm, 595.63 mm): Label 'DAC_CH7P'
+    @(69.85 mm, 595.63 mm): Global Label 'DAC_CH7P'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(69.85 mm, 628.65 mm): Label 'DAC_CH7N'
+    @(69.85 mm, 628.65 mm): Global Label 'DAC_CH7N'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(69.85 mm, 681.99 mm): Label 'DAC_CH8P'
+    @(69.85 mm, 681.99 mm): Global Label 'DAC_CH8P'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(69.85 mm, 713.74 mm): Label 'DAC_CH8N'
+    @(69.85 mm, 713.74 mm): Global Label 'DAC_CH8N'
 
- ** ERC messages: 16  Errors 0  Warnings 16
+ ** ERC messages: 17  Errors 1  Warnings 16
 
  ** Ignored checks:
     - Global label only appears once in the schematic

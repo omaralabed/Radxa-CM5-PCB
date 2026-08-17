@@ -1,12 +1,12 @@
 # Component and Footprint Audit
 
-Generated from all sixteen native KiCad sheets. This report is deterministic and contains no audit timestamp.
+Generated once from each physical board root so hierarchical child components are not double-counted. This report is deterministic and contains no audit timestamp.
 
 ## Current gate
 
-- Components audited: 1038
-- Route-ready components: 1022
-- Intentional non-board symbols: 6
+- Components audited: 1203
+- Route-ready components: 1188
+- Intentional non-board symbols: 5
 - Routing blockers: 10
 - Production/BOM blockers: 11
 
@@ -17,21 +17,8 @@ A routing blocker has no footprint, references an unresolved footprint, or still
 | Sheet | Components | Routing blockers | Production blockers |
 |---|---:|---:|---:|
 | PWR-SELECT | 111 | 0 | 0 |
-| CM5-Carrier | 9 | 0 | 0 |
-| CM5-Core-Allocated | 7 | 0 | 0 |
-| Network-PCIe | 64 | 0 | 0 |
-| WWAN-SIM | 23 | 0 | 0 |
-| Display-Harness | 24 | 0 | 0 |
-| Audio-Control | 57 | 0 | 1 |
-| Power-Regulators-A1 | 156 | 0 | 0 |
-| Thermal-IO | 66 | 0 | 0 |
-| Audio-8x8 | 21 | 0 | 0 |
-| Audio-TDM-Clock | 18 | 0 | 0 |
-| AK5558-ADC | 36 | 1 | 1 |
-| AK4458-DAC | 23 | 1 | 1 |
-| Audio-Inputs | 176 | 0 | 0 |
-| Audio-Outputs | 200 | 8 | 8 |
-| Audio-Power | 47 | 0 | 0 |
+| CM5-Carrier | 518 | 0 | 1 |
+| Audio-8x8 | 574 | 10 | 10 |
 
 ## Gate commands
 

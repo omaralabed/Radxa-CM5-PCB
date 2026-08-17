@@ -1,27 +1,36 @@
-ERC report (2026-08-16T18:36:09, Encoding UTF8)
+ERC report (2026-08-17T07:51:44, Encoding UTF8)
 Report includes: Errors, Warnings
 
 ***** Sheet /
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(137.16 mm, 697.23 mm): Symbol U910 Pin 1 [IN, Power input, Line]
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(144.78 mm, 82.55 mm): Symbol U901 Pin 4 [VCC, Power input, Line]
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(144.78 mm, 128.27 mm): Symbol U901 Pin 5 [GND, Power input, Line]
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(449.58 mm, 139.70 mm): Label 'AUD_ADC_RST_N'
+    @(449.58 mm, 139.70 mm): Global Label 'AUD_ADC_RST_N'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(449.58 mm, 142.24 mm): Label 'AUD_DAC_MUTE_N'
+    @(449.58 mm, 142.24 mm): Global Label 'AUD_DAC_MUTE_CMD_N'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(449.58 mm, 144.78 mm): Label 'AUDIO_PRESENT_N'
+    @(449.58 mm, 144.78 mm): Global Label 'AUDIO_PRESENT_N'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(449.58 mm, 149.86 mm): Label 'TDM_SPARE_1'
+    @(449.58 mm, 149.86 mm): Global Label 'TDM_SPARE_1'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(462.28 mm, 139.70 mm): Label 'AUD_DAC_RST_N'
+    @(462.28 mm, 139.70 mm): Global Label 'AUD_DAC_RST_N'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(462.28 mm, 149.86 mm): Label 'TDM_SPARE_2'
+    @(462.28 mm, 149.86 mm): Global Label 'TDM_SPARE_2'
 
- ** ERC messages: 6  Errors 0  Warnings 6
+ ** ERC messages: 9  Errors 3  Warnings 6
 
  ** Ignored checks:
     - Global label only appears once in the schematic

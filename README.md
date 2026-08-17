@@ -84,12 +84,15 @@ under `references/procomm-field-unit/`.
   audio level, connector protection, antenna placement, service access, and
   AC safety/EMC direction are locked in `notes/rev-a-hardware-architecture.md`.
 - The native KiCad 10 A1 suite under `cad/kicad/` now contains sixteen reviewed
-  schematic sheets across `PWR-SELECT`, `CM5-CARRIER`, and `AUDIO-8X8`. The
+  controlled schematic sheets across `PWR-SELECT`, `CM5-CARRIER`, and
+  `AUDIO-8X8`. The
   source/status/telemetry, carrier/audio, fan, temperature-alert, and XLR
   interfaces have 174 critical connector and control pin/net assignments
-  machine-validated. All sixteen sheets report zero ERC errors. The controlled
-  audit covers 1038 components and intentionally blocks routing on ten audio
-  package coupons; no production PCB routing has begun.
+  machine-validated. Each of the three electrically authoritative board roots
+  reports `0 errors / 0 warnings`; isolated child-sheet context findings match
+  a strict explicit allowlist. The controlled audit covers 1203 unique
+  components and intentionally blocks routing on ten audio package coupons;
+  no production PCB routing has begun.
 - Footprint Coupon A1 is now a controlled 100 x 80 mm, six-layer KiCad board
   with zero DRC violations. It compares open, bottom-tented, and selective
   Type VII exposed-pad vias for AK5558VN/AK4458VN and includes physical fit

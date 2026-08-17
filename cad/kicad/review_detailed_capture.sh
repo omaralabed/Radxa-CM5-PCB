@@ -92,13 +92,98 @@ review_sheet() {
     install_pdf_if_changed "${pdf_tmp}" "${review_dir}/${review_stem}.pdf" "${review_stem}"
 }
 
+review_child_sheet() {
+    local schematic="$1"
+    local review_stem="$2"
+    local review_dir report_tmp pdf_tmp
+    review_dir="$(dirname "${schematic}")/REVIEW"
+    mkdir -p "${review_dir}"
+    report_tmp="${REVIEW_TMP}/${review_stem}-ERC.rpt"
+    pdf_tmp="${REVIEW_TMP}/${review_stem}.pdf"
+
+    "${KICAD_CLI}" sch erc --format report --units mm \
+        --output "${report_tmp}" "${schematic}"
+    "${KICAD_CLI}" sch export pdf \
+        --output "${pdf_tmp}" "${schematic}"
+
+    python3 - "${report_tmp}" "${review_stem}" <<'PY'
+from pathlib import Path
+import re
+import sys
+
+report = Path(sys.argv[1]).read_text()
+stem = sys.argv[2]
+expected = {
+    "Network-PCIe-A1": {
+        ("pin_not_driven", "U606", "1"),
+        ("pin_not_driven", "U606", "3"),
+        ("pin_not_driven", "U606", "6"),
+        ("power_pin_not_driven", "U606", "2"),
+        ("power_pin_not_driven", "U606", "5"),
+    },
+    "Thermal-IO-A1": {
+        ("power_pin_not_driven", "U1000", "1"),
+    },
+    "WWAN-SIM-A1": {
+        ("power_pin_not_driven", "J701", "3"),
+    },
+    "Display-Harness-A1": {
+        ("power_pin_not_driven", "J801", "2"),
+    },
+    "Audio-Control-A1": {
+        ("power_pin_not_driven", "U901", "4"),
+        ("power_pin_not_driven", "U901", "5"),
+        ("power_pin_not_driven", "U910", "1"),
+    },
+    "Audio-TDM-Clock-A1": {
+        ("power_pin_not_driven", "U101", "5"),
+        ("power_pin_not_driven", "U101", "8"),
+        ("pin_not_driven", "U105", "2"),
+        ("pin_not_driven", "U106", "3"),
+        ("pin_not_driven", "U106", "6"),
+    },
+    "Audio-Outputs-A1": {
+        ("pin_not_driven", "Q501", "1"),
+    },
+}[stem]
+
+actual = set()
+current_rule = None
+current_is_error = False
+for line in report.splitlines():
+    rule = re.match(r"^\[([^]]+)\]", line)
+    if rule:
+        current_rule = rule.group(1)
+        current_is_error = False
+        continue
+    if line.strip() == "; error":
+        current_is_error = True
+        continue
+    if current_rule and current_is_error:
+        pin = re.search(r"Symbol\s+(\S+)\s+Pin\s+(\S+)\s+\[", line)
+        if pin:
+            actual.add((current_rule, pin.group(1), pin.group(2)))
+
+if actual != expected:
+    missing = sorted(expected - actual)
+    unexpected = sorted(actual - expected)
+    raise SystemExit(
+        f"{stem} child-context ERC mismatch; missing={missing}, unexpected={unexpected}"
+    )
+print(f"PASS: {stem} has only {len(expected)} explicitly allowed off-sheet-context ERC findings")
+PY
+
+    install_report_if_changed "${report_tmp}" "${review_dir}/${review_stem}-ERC.rpt"
+    install_pdf_if_changed "${pdf_tmp}" "${review_dir}/${review_stem}.pdf" "${review_stem}"
+}
+
 review_sheet "${SCRIPT_DIR}/PWR-SELECT/PowerSelector.kicad_sch" "PowerSelector-A0"
 review_sheet "${SCRIPT_DIR}/CM5-CARRIER/CM5-Carrier.kicad_sch" "CM5-Carrier-A1"
 review_sheet "${SCRIPT_DIR}/CM5-CARRIER/CM5-Core-Allocated.kicad_sch" "CM5-Core-Allocated-A1"
-review_sheet "${SCRIPT_DIR}/CM5-CARRIER/Network-PCIe.kicad_sch" "Network-PCIe-A1"
-review_sheet "${SCRIPT_DIR}/CM5-CARRIER/WWAN-SIM.kicad_sch" "WWAN-SIM-A1"
-review_sheet "${SCRIPT_DIR}/CM5-CARRIER/Display-Harness.kicad_sch" "Display-Harness-A1"
-review_sheet "${SCRIPT_DIR}/CM5-CARRIER/Audio-Control.kicad_sch" "Audio-Control-A1"
+review_child_sheet "${SCRIPT_DIR}/CM5-CARRIER/Network-PCIe.kicad_sch" "Network-PCIe-A1"
+review_child_sheet "${SCRIPT_DIR}/CM5-CARRIER/WWAN-SIM.kicad_sch" "WWAN-SIM-A1"
+review_child_sheet "${SCRIPT_DIR}/CM5-CARRIER/Display-Harness.kicad_sch" "Display-Harness-A1"
+review_child_sheet "${SCRIPT_DIR}/CM5-CARRIER/Audio-Control.kicad_sch" "Audio-Control-A1"
 review_sheet "${SCRIPT_DIR}/CM5-CARRIER/Power-Regulators-A1.kicad_sch" "Power-Regulators-A1"
 
 POWER_ERC="${SCRIPT_DIR}/CM5-CARRIER/REVIEW/Power-Regulators-A1-ERC.rpt"
@@ -107,13 +192,13 @@ if rg -q '^\[(multiple_net_names|pin_not_driven|power_pin_not_driven|pin_to_pin|
     exit 1
 fi
 
-review_sheet "${SCRIPT_DIR}/CM5-CARRIER/Thermal-IO.kicad_sch" "Thermal-IO-A1"
+review_child_sheet "${SCRIPT_DIR}/CM5-CARRIER/Thermal-IO.kicad_sch" "Thermal-IO-A1"
 review_sheet "${SCRIPT_DIR}/AUDIO-8X8/Audio-8x8.kicad_sch" "Audio-8x8-A1"
-review_sheet "${SCRIPT_DIR}/AUDIO-8X8/Audio-TDM-Clock.kicad_sch" "Audio-TDM-Clock-A1"
+review_child_sheet "${SCRIPT_DIR}/AUDIO-8X8/Audio-TDM-Clock.kicad_sch" "Audio-TDM-Clock-A1"
 review_sheet "${SCRIPT_DIR}/AUDIO-8X8/AK5558-ADC.kicad_sch" "AK5558-ADC-A1"
 review_sheet "${SCRIPT_DIR}/AUDIO-8X8/AK4458-DAC.kicad_sch" "AK4458-DAC-A1"
 review_sheet "${SCRIPT_DIR}/AUDIO-8X8/Audio-Inputs.kicad_sch" "Audio-Inputs-A1"
-review_sheet "${SCRIPT_DIR}/AUDIO-8X8/Audio-Outputs.kicad_sch" "Audio-Outputs-A1"
+review_child_sheet "${SCRIPT_DIR}/AUDIO-8X8/Audio-Outputs.kicad_sch" "Audio-Outputs-A1"
 review_sheet "${SCRIPT_DIR}/AUDIO-8X8/Audio-Power.kicad_sch" "Audio-Power-A1"
 
 "${KICAD_CLI}" sch export netlist --format kicadxml \
@@ -158,14 +243,18 @@ python3 "${SCRIPT_DIR}/export_schematic_bom.py" \
 python3 "${SCRIPT_DIR}/export_schematic_bom.py" \
     --schematic "${SCRIPT_DIR}/CM5-CARRIER/Power-Regulators-A1.kicad_sch" \
     --output "${PROJECT_ROOT}/docs/power_regulator_bom_a1.csv" \
-    --exclude U1180 \
     --exclude TP1190 \
     --exclude TP1191 \
     --exclude TP1192 \
-    --exclude TP1193
+    --exclude TP1193 \
+    --exclude TP1194 \
+    --exclude TP1195
 python3 "${SCRIPT_DIR}/export_schematic_bom.py" \
     --schematic "${SCRIPT_DIR}/CM5-CARRIER/Thermal-IO.kicad_sch" \
-    --output "${PROJECT_ROOT}/docs/thermal_io_bom_a1.csv"
+    --output "${PROJECT_ROOT}/docs/thermal_io_bom_a1.csv" \
+    --exclude TP1001 \
+    --exclude TP1002 \
+    --exclude TP1003
 python3 "${SCRIPT_DIR}/export_schematic_bom.py" \
     --schematic "${SCRIPT_DIR}/CM5-CARRIER/Network-PCIe.kicad_sch" \
     --output "${PROJECT_ROOT}/docs/network_pcie_bom_a1.csv"
@@ -188,6 +277,7 @@ python3 "${SCRIPT_DIR}/export_schematic_bom.py" \
     --output "${PROJECT_ROOT}/docs/audio_control_bom_a1.csv" \
     --exclude U900
 python3 "${SCRIPT_DIR}/PWR-SELECT/validate_power_selector.py"
+python3 "${SCRIPT_DIR}/CM5-CARRIER/validate_cm5_pin_allocation.py"
 python3 "${SCRIPT_DIR}/CM5-CARRIER/validate_power_regulators.py"
 python3 "${SCRIPT_DIR}/CM5-CARRIER/validate_thermal_io.py"
 python3 "${SCRIPT_DIR}/CM5-CARRIER/validate_network_pcie.py"
@@ -209,4 +299,4 @@ if [[ "$(pdfinfo "${SYSTEM_PDF}" | awk '/^Pages:/ {print $2}')" != "17" ]]; then
     exit 1
 fi
 
-printf 'Detailed capture review passed: all sixteen sheets have zero ERC errors and the system project exports 17 pages.\n'
+printf 'Detailed capture review passed: connected board roots have zero ERC errors; child-sheet context findings match the explicit allowlist; the system project exports 17 pages.\n'

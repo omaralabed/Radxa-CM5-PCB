@@ -1,55 +1,55 @@
-ERC report (2026-08-16T18:36:18, Encoding UTF8)
+ERC report (2026-08-17T07:51:56, Encoding UTF8)
 Report includes: Errors, Warnings
 
 ***** Sheet /
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(69.85 mm, 82.55 mm): Label 'AIN_CH1_HOT'
+    @(69.85 mm, 82.55 mm): Global Label 'AIN_CH1_HOT'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(69.85 mm, 110.49 mm): Label 'AIN_CH1_COLD'
+    @(69.85 mm, 110.49 mm): Global Label 'AIN_CH1_COLD'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(69.85 mm, 167.64 mm): Label 'AIN_CH2_HOT'
+    @(69.85 mm, 167.64 mm): Global Label 'AIN_CH2_HOT'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(69.85 mm, 195.58 mm): Label 'AIN_CH2_COLD'
+    @(69.85 mm, 195.58 mm): Global Label 'AIN_CH2_COLD'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(69.85 mm, 254.00 mm): Label 'AIN_CH3_HOT'
+    @(69.85 mm, 254.00 mm): Global Label 'AIN_CH3_HOT'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(69.85 mm, 281.94 mm): Label 'AIN_CH3_COLD'
+    @(69.85 mm, 281.94 mm): Global Label 'AIN_CH3_COLD'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(69.85 mm, 340.36 mm): Label 'AIN_CH4_HOT'
+    @(69.85 mm, 340.36 mm): Global Label 'AIN_CH4_HOT'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(69.85 mm, 368.30 mm): Label 'AIN_CH4_COLD'
+    @(69.85 mm, 368.30 mm): Global Label 'AIN_CH4_COLD'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(69.85 mm, 426.72 mm): Label 'AIN_CH5_HOT'
+    @(69.85 mm, 426.72 mm): Global Label 'AIN_CH5_HOT'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(69.85 mm, 454.66 mm): Label 'AIN_CH5_COLD'
+    @(69.85 mm, 454.66 mm): Global Label 'AIN_CH5_COLD'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(69.85 mm, 511.81 mm): Label 'AIN_CH6_HOT'
+    @(69.85 mm, 511.81 mm): Global Label 'AIN_CH6_HOT'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(69.85 mm, 539.75 mm): Label 'AIN_CH6_COLD'
+    @(69.85 mm, 539.75 mm): Global Label 'AIN_CH6_COLD'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(69.85 mm, 598.17 mm): Label 'AIN_CH7_HOT'
+    @(69.85 mm, 598.17 mm): Global Label 'AIN_CH7_HOT'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(69.85 mm, 626.11 mm): Label 'AIN_CH7_COLD'
+    @(69.85 mm, 626.11 mm): Global Label 'AIN_CH7_COLD'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(69.85 mm, 684.53 mm): Label 'AIN_CH8_HOT'
+    @(69.85 mm, 684.53 mm): Global Label 'AIN_CH8_HOT'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(69.85 mm, 712.47 mm): Label 'AIN_CH8_COLD'
+    @(69.85 mm, 712.47 mm): Global Label 'AIN_CH8_COLD'
 
  ** ERC messages: 16  Errors 0  Warnings 16
 

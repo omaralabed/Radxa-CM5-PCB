@@ -6,14 +6,22 @@ from __future__ import annotations
 from dataclasses import dataclass
 import csv
 import math
+import os
 from pathlib import Path
 import re
+import subprocess
+import tempfile
+import xml.etree.ElementTree as ET
 
 
 ROOT = Path(__file__).resolve().parent
 WORKSPACE = ROOT.parent.parent.parent
 FOOTPRINTS = ROOT / "CM5Carrier.pretty"
 BOM = WORKSPACE / "docs" / "power_regulator_bom_a1.csv"
+SCHEMATIC = ROOT / "Power-Regulators-A1.kicad_sch"
+KICAD_CLI = Path(
+    os.environ.get("KICAD_CLI", "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli")
+)
 
 
 @dataclass(frozen=True)
@@ -80,6 +88,29 @@ def required_capacitance_mf(load_w: float, time_ms: float, v_start: float, v_end
 def check(name: str, condition: bool, detail: str) -> bool:
     print(f"{'PASS' if condition else 'FAIL'}  {name}: {detail}")
     return condition
+
+
+def export_net_map() -> dict[tuple[str, str], str]:
+    with tempfile.TemporaryDirectory(prefix="radxa-power-validation-") as temp:
+        output = Path(temp) / "Power-Regulators-A1.xml"
+        result = subprocess.run(
+            [
+                str(KICAD_CLI), "sch", "export", "netlist", "--format", "kicadxml",
+                "--output", str(output), str(SCHEMATIC),
+            ],
+            check=False,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True,
+        )
+        if result.returncode:
+            raise RuntimeError(f"KiCad netlist export failed:\n{result.stderr.strip()}")
+        root = ET.parse(output)
+        return {
+            (node.attrib["ref"], node.attrib["pin"]): net.attrib["name"].lstrip("/")
+            for net in root.findall("./nets/net")
+            for node in net.findall("node")
+        }
 
 
 def validate_controlled_artifacts(checks: list[bool]) -> None:
@@ -159,8 +190,64 @@ def validate_controlled_artifacts(checks: list[bool]) -> None:
     checks.append(
         check(
             "Power-Regulators production BOM",
-            len(rows) == 151 and complete and key_parts_ok,
-            f"{len(rows)} rows (expected 151); all MPN/footprint fields complete; controlled power parts agree",
+            len(rows) == 163 and complete and key_parts_ok,
+            f"{len(rows)} rows (expected 163); all MPN/footprint fields complete; controlled power parts agree",
+        )
+    )
+
+    net_map = export_net_map()
+    checks.append(
+        check(
+            "LM614 radio/network/logic enable ownership",
+            all(
+                net_map.get((reference, pin)) == "RAW_OUT_LOAD"
+                for reference in ("U1130", "U1140", "U1150", "U1160")
+                for pin in ("7", "8")
+            ),
+            "VIN and EN/SYNC are tied to the protected raw rail on all four always-on pre-regulators",
+        )
+    )
+    checks.append(
+        check(
+            "PCIe POL sequencing",
+            all(net_map.get((reference, "1")) == "SYS_4V0_PG" for reference in ("U1170", "U1171")),
+            "PCIE_1V0 and LOGIC_1V8 remain disabled until SYS_4V0 power-good is high",
+        )
+    )
+    pg_pullups = {
+        "R1117": "SYS_4V0_PG", "R1129": "AUX_12V_PG",
+        "R1134": "MODEM_3V8_PRE_PG", "R1144": "WIFI_3V3_PRE_PG",
+        "R1154": "NET_3V3_PG", "R1164": "LOGIC_3V3_PG",
+        "R1137": "MODEM_3V8_PG", "R1149": "WIFI_3V3_PG",
+        "R11703": "PCIE_1V0_PG", "R11713": "LOGIC_1V8_PG",
+    }
+    checks.append(
+        check(
+            "open-drain power-good pull-ups",
+            all(
+                net_map.get((reference, "1")) == "LOGIC_3V3"
+                and net_map.get((reference, "2")) == signal
+                for reference, signal in pg_pullups.items()
+            ),
+            f"{len(pg_pullups)} monitored power-good nets have controlled 10 k pull-ups",
+        )
+    )
+    checks.append(
+        check(
+            "radio final-rail safe defaults",
+            net_map.get(("R1139", "1")) == "MODEM_POWER_EN"
+            and net_map.get(("R1139", "2")) == "GND"
+            and net_map.get(("R1148", "1")) == "WIFI_POWER_EN"
+            and net_map.get(("R1148", "2")) == "GND",
+            "100 k pull-downs keep modem and Wi-Fi final load switches off during controller reset",
+        )
+    )
+    checks.append(
+        check(
+            "power telemetry test access",
+            net_map.get(("TP1194", "1")) == "MODEM_IMON"
+            and net_map.get(("TP1195", "1")) == "SYS_SYNCOUT_TP",
+            "modem current monitor and system sync/output monitor have dedicated factory probes",
         )
     )
 

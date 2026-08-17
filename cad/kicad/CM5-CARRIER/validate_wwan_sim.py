@@ -63,7 +63,7 @@ def main() -> int:
     checks.append(
         check(
             "WWAN/SIM controlled BOM",
-            len(rows) == 15 and len(board_rows) == 11 and complete,
+            len(rows) == 26 and len(board_rows) == 22 and complete,
             f"{len(board_rows)} board parts plus four off-board RF pigtail assemblies",
         )
     )
@@ -80,7 +80,16 @@ def main() -> int:
             "TPD3F303DPVR",
             "Package_SON:Texas_R-PUSON-N8_USON-8-1EP_1.6x2.1mm_P0.5mm_EP0.4x1.7mm",
         ),
-        "C703": ("GRM188R61E106MA73D", "Capacitor_SMD:C_0603_1608Metric"),
+        "C701": ("6SVP220MX", "Capacitor_SMD:CP_Elec_8x6.9"),
+        "C702": ("6SVP220MX", "Capacitor_SMD:CP_Elec_8x6.9"),
+        "C703": ("C1005X7R1H104K050BB", "Capacitor_SMD:C_0402_1005Metric"),
+        "C704": ("GRM1885C1H682JA01D", "Capacitor_SMD:C_0603_1608Metric"),
+        "C705": ("GRM1555C1H221JA01D", "Capacitor_SMD:C_0402_1005Metric"),
+        "C706": ("GRM1555C1H680JA01D", "Capacitor_SMD:C_0402_1005Metric"),
+        "C710": ("GRM1555C1H150JA01D", "Capacitor_SMD:C_0402_1005Metric"),
+        "C711": ("GRM1555C1H9R1BA01D", "Capacitor_SMD:C_0402_1005Metric"),
+        "C712": ("GRM1555C1H4R7BA01D", "Capacitor_SMD:C_0402_1005Metric"),
+        "D701": ("SMF4L5.0AT1G", "Diode_SMD:D_SOD-123F"),
         "R701": ("RC0603FR-07100KL", "Resistor_SMD:R_0603_1608Metric"),
     }
     for reference, (mpn, footprint) in expected.items():
@@ -147,10 +156,17 @@ def main() -> int:
     )
     checks.append(
         check(
-            "single modem bulk-bank ownership",
-            "C701" not in by_ref and "C702" not in by_ref
-            and "C1189-C1192 provide 1320 uF" in schematic_text,
-            "large low-ESR storage remains on Power-Regulators; WWAN keeps local HF bypass only",
+            "RM520N-GL socket-local VCC reference network",
+            {f"C{reference}" for reference in range(701, 713)}.issubset(by_ref)
+            and net_map.get(("D701", "1")) == "MODEM_3V8"
+            and net_map.get(("D701", "2")) == "GND"
+            and all(
+                net_map.get((f"C{reference}", "1")) == "MODEM_3V8"
+                and net_map.get((f"C{reference}", "2")) == "GND"
+                for reference in range(701, 713)
+            )
+            and "C1189-C1192 retain 1320 uF upstream bulk" in schematic_text,
+            "two local 220 uF banks, the full HF ladder, and a 5 V TVS supplement the upstream regulator bulk",
         )
     )
 

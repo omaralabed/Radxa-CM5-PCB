@@ -19,7 +19,7 @@ Pin,Carrier interface,Audio interface,Net,Conductor class,Pair or return group,A
 18,J901,J101,AUD_I2C_SDA,Low-speed insulated conductor,CTRL,Route away from P1-P5 after breakout
 19,J901,J101,AUD_ADC_RST_N,Low-speed insulated conductor,CTRL,No branch or test stub in harness
 20,J901,J101,AUD_DAC_RST_N,Low-speed insulated conductor,CTRL,No branch or test stub in harness
-21,J901,J101,AUD_DAC_MUTE_N,Low-speed insulated conductor,CTRL,No branch or test stub in harness
+21,J901,J101,AUD_DAC_MUTE_CMD_N,Low-speed insulated conductor,CTRL,Carrier request only; local U106 qualifies both DAC unmute and relay closure with ADC/DAC power-good
 22,J901,J101,AUD_IRQ_N,Low-speed insulated conductor,CTRL,No branch or test stub in harness
 23,J901,J101,AUDIO_PRESENT_N,Low-speed insulated conductor,CTRL,No branch or test stub in harness
 24,J901,J101,AUDIO_ENABLE,Low-speed insulated conductor,CTRL,No branch or test stub in harness

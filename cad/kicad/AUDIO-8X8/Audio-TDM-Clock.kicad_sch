@@ -2,7 +2,7 @@
 	(version 20250114)
 	(generator "eeschema")
 	(generator_version "9.0")
-	(uuid "6ff059fa-3f1c-526a-9745-4ec386fbde03")
+	(uuid "266cf186-0dff-5dda-b52b-b921157a0ebd")
 	(paper "A1")
 	(title_block
 		(title "ProComm AUDIO-8X8 - TDM, Clock, and Control Interface")
@@ -1961,6 +1961,225 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "74xGxx:74LVC1G11"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at -5.08 10.16 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "74LVC1G11"
+				(at 7.62 -10.16 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Single AND 3-Input Gate, Low-Voltage CMOS"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "Single Gate AND triple LVC CMOS"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "SOT* SG-*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "74LVC1G11_0_1"
+				(arc
+					(start 0 6.35)
+					(mid 6.3224 0)
+					(end 0 -6.35)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -6.35) (xy -7.62 -6.35) (xy -7.62 6.35) (xy 0 6.35)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "74LVC1G11_1_1"
+				(pin input line
+					(at -15.24 0 0)
+					(length 7.62)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -10.16 90)
+					(length 3.81)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -15.24 -5.08 0)
+					(length 7.62)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 12.7 0 180)
+					(length 6.35)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 10.16 270)
+					(length 3.81)
+					(name "VCC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -15.24 5.08 0)
+					(length 7.62)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "power:PWR_FLAG"
 			(power global)
 			(pin_numbers
@@ -2086,7 +2305,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "ffc89bd5-1297-557f-b322-e16d0e6afe46")
+		(uuid "88867151-6c3b-5452-a2d0-ff0ca9de47a4")
 		(property "Reference" "J101"
 			(at 116.84 135.89 0.0000)
 			(effects
@@ -2133,98 +2352,98 @@
 			)
 		)
 		(pin "1"
-			(uuid "97ab192d-a599-560e-8aa7-740d17219838")
+			(uuid "f55eff60-ab6b-55e8-ad99-08d5f607aa0c")
 		)
 		(pin "2"
-			(uuid "0cd84c1c-615c-5612-a2da-8a9a920821c6")
+			(uuid "925a7669-1845-5927-978c-b46de08e027e")
 		)
 		(pin "3"
-			(uuid "5803dfe0-d174-5029-a8ab-c35fa12e6c88")
+			(uuid "ddc0a622-9f2d-5aae-824b-31414b9c14a1")
 		)
 		(pin "4"
-			(uuid "705565c4-b232-59a1-957d-cc430217683d")
+			(uuid "7a88ed71-7c34-5884-a55b-79ecf73b24de")
 		)
 		(pin "5"
-			(uuid "849a20e2-4b1f-57f7-b46b-c5ca8cd79dd9")
+			(uuid "749fa97f-053b-504f-92f7-e38e5931bb04")
 		)
 		(pin "6"
-			(uuid "7c844b83-e908-59c9-96a9-1a3cc537b37d")
+			(uuid "f3653ca6-37b2-5125-a9ff-3efa7223a154")
 		)
 		(pin "7"
-			(uuid "245b5ab7-820d-5ce4-9bf8-dd3ae44d08bc")
+			(uuid "0596ab9a-04f0-567e-bc53-3d62cd130a5a")
 		)
 		(pin "8"
-			(uuid "6d57a137-0858-5de1-beb8-aa042c251d9e")
+			(uuid "c66a228e-a0be-5572-b437-afb06c60e61e")
 		)
 		(pin "9"
-			(uuid "3c8de233-aa28-5041-9d30-e4f4f67c32a5")
+			(uuid "448ed8bb-a198-5fbb-a467-a67fccaa1f98")
 		)
 		(pin "10"
-			(uuid "02622111-364e-5c12-a7bd-52964581ef84")
+			(uuid "ce3596f6-df64-5333-973f-f8aaab54c597")
 		)
 		(pin "11"
-			(uuid "fb829a8f-33c2-5d7d-af43-7085e75dfd9d")
+			(uuid "60a86bf5-1741-50b5-b2ee-8cad4b478b1c")
 		)
 		(pin "12"
-			(uuid "6db8a840-0722-5337-8d7c-41ffba466f18")
+			(uuid "6cab38df-b123-5324-bb2d-274ea1f1fa00")
 		)
 		(pin "13"
-			(uuid "7805d515-2ecc-5523-ae0c-d45541e1a005")
+			(uuid "d582db6a-623b-57f0-8a61-16ec503f1402")
 		)
 		(pin "14"
-			(uuid "b8b00457-fd7a-50cb-9696-8de2ead2e810")
+			(uuid "2d969c8d-ba10-5c22-afb7-7b92d9dc6830")
 		)
 		(pin "15"
-			(uuid "f8948d95-792b-5ecc-b891-b260b5f79ae7")
+			(uuid "3afd285b-3d03-5324-a31f-e8cb11629e21")
 		)
 		(pin "16"
-			(uuid "a620003a-f882-5ddb-9aa5-e6f10cfdc6ae")
+			(uuid "3ca88d96-6623-5e9c-a45f-1c6dec96fdb7")
 		)
 		(pin "17"
-			(uuid "d28ed340-6929-5d37-8513-26c9cd1e8a22")
+			(uuid "54150a80-cbc4-5485-b08b-533115854110")
 		)
 		(pin "18"
-			(uuid "5b70cb98-198b-5ddd-948f-aea33078f713")
+			(uuid "59fad503-9a11-576b-90a5-ac236578a993")
 		)
 		(pin "19"
-			(uuid "bbaaa329-80fc-5d30-adbe-0bc04995bc7d")
+			(uuid "b2a2cd19-2338-5080-883e-fd81ebbd179d")
 		)
 		(pin "20"
-			(uuid "4e2ed77f-89be-566a-a8f5-57f2d11c265e")
+			(uuid "85813a16-b428-5344-a743-00ee643825d1")
 		)
 		(pin "21"
-			(uuid "5ccb42b0-c9ad-5fd8-90b9-5c938d77a850")
+			(uuid "e9334094-1c25-51b9-a2ee-60cd9002e637")
 		)
 		(pin "22"
-			(uuid "cb46a72f-0ac0-5b5a-92fb-355702077958")
+			(uuid "41b9a518-4aa4-5894-a5ed-0af4fc20019e")
 		)
 		(pin "23"
-			(uuid "d3a0f538-39f4-562b-8476-ea2278775b77")
+			(uuid "f9e7dcd0-3efd-5d68-94ce-e4cf56c110e1")
 		)
 		(pin "24"
-			(uuid "1e8e9676-37f2-5b08-9b4b-17c2f5abdf06")
+			(uuid "c46df2c1-809d-513e-bb47-92ae72483828")
 		)
 		(pin "25"
-			(uuid "5c8bb40d-7c56-51ba-9b1d-9c11990a9a9e")
+			(uuid "207f7aa7-2e0e-5cf7-9c2d-0118b2bf1bb2")
 		)
 		(pin "26"
-			(uuid "4b4c2b98-b3c7-57fb-a8e3-6b5cea2a06cf")
+			(uuid "8bbae83f-29e5-559c-898f-bf61b1eefd48")
 		)
 		(pin "27"
-			(uuid "e636b139-4d00-5d0e-bcdf-4143b7feaad0")
+			(uuid "40ff04b5-90cd-5625-ad82-9f722dcc7b64")
 		)
 		(pin "28"
-			(uuid "f2b7d719-31bb-5ea1-9c3c-ede20c55603d")
+			(uuid "076604c2-5b9e-51db-9b4c-89586ad408a4")
 		)
 		(pin "29"
-			(uuid "a28868ee-4ef6-521e-ba53-c0c89ea81118")
+			(uuid "5d05ed23-457e-5a21-ba17-78afffd4b06a")
 		)
 		(pin "30"
-			(uuid "6da9b563-9798-5cd7-98b4-8cadbac6a73d")
+			(uuid "0ce4a750-cfaf-5aaf-a3ad-91c7ab78c2a5")
 		)
 		(instances
 			(project "Audio-TDM-Clock"
-				(path "/6ff059fa-3f1c-526a-9745-4ec386fbde03"
+				(path "/266cf186-0dff-5dda-b52b-b921157a0ebd"
 					(reference "J101")
 					(unit 1)
 				)
@@ -2240,7 +2459,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "09103178-b7de-5eda-9cac-2d7ef4430e74")
+		(uuid "8f8a98cc-b1b4-5ae5-ab3c-4095b7b181f7")
 		(property "Reference" "U101"
 			(at 241.3 114.3 0.0000)
 			(effects
@@ -2287,32 +2506,32 @@
 			)
 		)
 		(pin "1"
-			(uuid "8c0b4bd0-de21-59cb-a57c-d95ab42b803d")
+			(uuid "3d88b4b9-0528-5405-b288-c4817019d190")
 		)
 		(pin "2"
-			(uuid "e71cd620-2405-57ac-8569-f14f9b2ec7f6")
+			(uuid "6b547478-a6f9-5ef0-8e96-acf6a890c383")
 		)
 		(pin "3"
-			(uuid "4eee64cf-6c49-52ff-89af-28dc14a3f68a")
+			(uuid "520d57ac-5990-5047-9c8a-c205ef200c38")
 		)
 		(pin "4"
-			(uuid "f3be4ccc-d071-546c-a379-52f2fc880236")
+			(uuid "f0bf6523-cb89-5307-96e8-f781f6faa794")
 		)
 		(pin "5"
-			(uuid "08ed8731-842a-5a4d-883a-1d44ead97b2e")
+			(uuid "0aab055e-93be-5518-988f-1fe0b6840f0a")
 		)
 		(pin "6"
-			(uuid "858a4f03-6074-5726-9d85-5983663cfe0d")
+			(uuid "c9f40011-e92a-5703-af20-54d46ab07d25")
 		)
 		(pin "7"
-			(uuid "5538300c-f49e-5d63-8fb5-04da38721a9c")
+			(uuid "4d989c4d-2121-53a8-a6a0-cea9f81f3f29")
 		)
 		(pin "8"
-			(uuid "3dfc367f-27fa-56b4-90d4-9166d33e08ac")
+			(uuid "35a30c51-2914-509d-b5d9-a7686fe23a35")
 		)
 		(instances
 			(project "Audio-TDM-Clock"
-				(path "/6ff059fa-3f1c-526a-9745-4ec386fbde03"
+				(path "/266cf186-0dff-5dda-b52b-b921157a0ebd"
 					(reference "U101")
 					(unit 1)
 				)
@@ -2328,7 +2547,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "9c26d635-3f0c-5acb-b56c-0de78730d261")
+		(uuid "b8a4df78-9476-5dd0-8431-fbb22db57d8b")
 		(property "Reference" "C101"
 			(at 250.825 167.64 0.0000)
 			(effects
@@ -2375,14 +2594,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "f8355bfe-5abe-5f75-8a8d-77a65e461651")
+			(uuid "0a958dc8-89e2-5d6b-8d6e-4958990ccbb8")
 		)
 		(pin "2"
-			(uuid "9e502d8f-cd5a-55b8-873c-a3a622a02105")
+			(uuid "6a4fd9a7-50d4-5d97-abe6-c8c9e3fadfe9")
 		)
 		(instances
 			(project "Audio-TDM-Clock"
-				(path "/6ff059fa-3f1c-526a-9745-4ec386fbde03"
+				(path "/266cf186-0dff-5dda-b52b-b921157a0ebd"
 					(reference "C101")
 					(unit 1)
 				)
@@ -2398,7 +2617,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "48f35ec5-b447-5a3e-858a-23c5dfbbb29d")
+		(uuid "50d1701d-89a7-599c-b89a-dc06b5da9007")
 		(property "Reference" "U102"
 			(at 381 114.3 0.0000)
 			(effects
@@ -2445,32 +2664,32 @@
 			)
 		)
 		(pin "1"
-			(uuid "ac631165-3027-5043-8cf5-0deb83b35f39")
+			(uuid "873680a6-015e-52dd-9e91-61d89e53aaf9")
 		)
 		(pin "2"
-			(uuid "f97d11c4-4453-5332-ab95-05e6b9d58db3")
+			(uuid "eda30afd-aefa-5e7f-9cff-0c87879befd5")
 		)
 		(pin "3"
-			(uuid "9a596913-97e3-5eda-bfda-eb7fc2f89022")
+			(uuid "864c3849-2f48-54dc-9407-f85f384c197a")
 		)
 		(pin "4"
-			(uuid "05a54f29-bdae-525e-8d28-15e6a477eb7e")
+			(uuid "deaac250-14e9-5139-997e-a494797aebba")
 		)
 		(pin "5"
-			(uuid "e6c78bf8-6905-5838-bb47-156ee8118426")
+			(uuid "41d5d13f-e7f2-5b00-9a96-91acddd84d8b")
 		)
 		(pin "6"
-			(uuid "be713075-6ad3-5aa4-9571-b27aa2879a54")
+			(uuid "e5188b42-0461-5fe8-b575-27321509141e")
 		)
 		(pin "7"
-			(uuid "b595c470-d235-5079-b402-30d76ccaa69a")
+			(uuid "c406ba42-1598-51c8-8991-c8e6fd8590cd")
 		)
 		(pin "8"
-			(uuid "c1c5154a-64f1-5abc-bc04-c876e0a415a6")
+			(uuid "d8138ff1-42fb-5a22-8295-f3e2c9ed86d8")
 		)
 		(instances
 			(project "Audio-TDM-Clock"
-				(path "/6ff059fa-3f1c-526a-9745-4ec386fbde03"
+				(path "/266cf186-0dff-5dda-b52b-b921157a0ebd"
 					(reference "U102")
 					(unit 1)
 				)
@@ -2486,7 +2705,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "c6e8fe71-b87a-540e-8586-9001ee023631")
+		(uuid "12690b4f-07f1-5732-ba49-edf17cf55fca")
 		(property "Reference" "C102"
 			(at 390.525 167.64 0.0000)
 			(effects
@@ -2533,14 +2752,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "b3abbb15-b95f-51e8-a34f-d33f59840a97")
+			(uuid "f7daf1a2-d75c-51a7-a07a-2e70427344b0")
 		)
 		(pin "2"
-			(uuid "36f65deb-b3ea-5d03-854f-6e0be1961c9f")
+			(uuid "bb0acc67-1bbd-5a02-b410-5089e13e69d8")
 		)
 		(instances
 			(project "Audio-TDM-Clock"
-				(path "/6ff059fa-3f1c-526a-9745-4ec386fbde03"
+				(path "/266cf186-0dff-5dda-b52b-b921157a0ebd"
 					(reference "C102")
 					(unit 1)
 				)
@@ -2556,7 +2775,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "025d3a12-c33e-52fd-9d17-deaa13d70873")
+		(uuid "efc35f9e-66c4-520e-ad83-dff703f7aaee")
 		(property "Reference" "U103"
 			(at 520.7 114.3 0.0000)
 			(effects
@@ -2603,32 +2822,32 @@
 			)
 		)
 		(pin "1"
-			(uuid "49c1ca34-24c7-53c4-94aa-e66ae8338fe3")
+			(uuid "8da90c06-f565-5d16-a4c3-7ec847a1ef28")
 		)
 		(pin "2"
-			(uuid "c7e4fd09-5b35-519a-876b-ff81b3aa737f")
+			(uuid "da124f0b-c327-5a44-ad78-fa848ea36993")
 		)
 		(pin "3"
-			(uuid "a2125302-293d-5b23-9467-f7952c3f8e69")
+			(uuid "39b1e7d9-c394-5240-9089-8877ff3c123f")
 		)
 		(pin "4"
-			(uuid "02717197-c0fa-56eb-a5ec-fd99f0087bb2")
+			(uuid "7869ff88-1046-585a-8f27-bb73087347ee")
 		)
 		(pin "5"
-			(uuid "9143f2d2-0834-5629-8e00-1ee04b5e7a7d")
+			(uuid "01995127-b955-58e3-b605-57ad53627418")
 		)
 		(pin "6"
-			(uuid "cd9cf345-0d87-5ac9-8143-0a00de3f195b")
+			(uuid "ce4160df-94be-5c21-ad54-38fad2dfb80c")
 		)
 		(pin "7"
-			(uuid "7a71f272-f9f9-5bd4-a97c-7313e5a9fb3e")
+			(uuid "bd97da1f-c7fa-516d-8d5b-26024afe1fc3")
 		)
 		(pin "8"
-			(uuid "d1c20519-f1fb-57ec-8f5c-47349bccb09b")
+			(uuid "b0faae85-821d-54f3-b7e1-1033b5dd502c")
 		)
 		(instances
 			(project "Audio-TDM-Clock"
-				(path "/6ff059fa-3f1c-526a-9745-4ec386fbde03"
+				(path "/266cf186-0dff-5dda-b52b-b921157a0ebd"
 					(reference "U103")
 					(unit 1)
 				)
@@ -2644,7 +2863,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "d062f8b3-fbf3-507d-b593-89195332c901")
+		(uuid "771af076-62f0-53c5-9032-1bf28276a1ed")
 		(property "Reference" "C103"
 			(at 530.225 167.64 0.0000)
 			(effects
@@ -2691,14 +2910,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "695af4f0-d39b-5a98-86ee-a6f0d4ce9021")
+			(uuid "37ecec5c-e6e6-59cd-8858-7deb58914054")
 		)
 		(pin "2"
-			(uuid "fe9d27da-95e9-5519-8f59-33dc54e4e018")
+			(uuid "0ec5f8d4-aa34-5e28-a6a1-eb40a084a6fd")
 		)
 		(instances
 			(project "Audio-TDM-Clock"
-				(path "/6ff059fa-3f1c-526a-9745-4ec386fbde03"
+				(path "/266cf186-0dff-5dda-b52b-b921157a0ebd"
 					(reference "C103")
 					(unit 1)
 				)
@@ -2714,7 +2933,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "eee6fc4e-fda1-50bd-b85c-bb207069f085")
+		(uuid "5971a172-c8ae-5c3a-994a-063ef19ae0ff")
 		(property "Reference" "U104"
 			(at 661.67 114.3 0.0000)
 			(effects
@@ -2761,32 +2980,32 @@
 			)
 		)
 		(pin "1"
-			(uuid "39f47a5d-06e8-5889-8fca-ac89dd0ff5cd")
+			(uuid "7e0985c5-b687-5167-af56-342074e8c4a7")
 		)
 		(pin "2"
-			(uuid "f8f3d28d-96eb-5504-b42a-a1969454aea3")
+			(uuid "2cf0aafd-881d-58ce-9c5f-fe24788bf165")
 		)
 		(pin "3"
-			(uuid "72a9ebd4-7e13-5370-bfb3-62194d9fb00c")
+			(uuid "ff712d36-fcc4-5794-98a8-8b5899fd40ae")
 		)
 		(pin "4"
-			(uuid "7063af6f-c3d4-52ab-a5e5-f5d0ea8b1424")
+			(uuid "0d922aa1-06b2-5e2c-bd63-bbb79f5069f0")
 		)
 		(pin "5"
-			(uuid "2b55331c-faca-5fb9-a25d-9f3625cbea8d")
+			(uuid "23be65a7-e543-58f1-985c-da8e8f7e7597")
 		)
 		(pin "6"
-			(uuid "c57fe0c4-527a-5693-bd24-88f6238ca5b3")
+			(uuid "4375bd45-968f-58f4-984a-66abcb2111b5")
 		)
 		(pin "7"
-			(uuid "4869ad04-9640-5b23-a52c-d79790e3f616")
+			(uuid "215d250e-7dd4-5e56-b929-f152cfbe0ac8")
 		)
 		(pin "8"
-			(uuid "611bb5c2-ae44-5ef8-9904-77308aff4e94")
+			(uuid "27fc7ace-20ef-58d6-a70c-b7b6d0072d90")
 		)
 		(instances
 			(project "Audio-TDM-Clock"
-				(path "/6ff059fa-3f1c-526a-9745-4ec386fbde03"
+				(path "/266cf186-0dff-5dda-b52b-b921157a0ebd"
 					(reference "U104")
 					(unit 1)
 				)
@@ -2802,7 +3021,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "b456afca-3c68-5b08-bf88-7083843ea087")
+		(uuid "c61fafab-3557-5b18-a279-1db11019dd1d")
 		(property "Reference" "C104"
 			(at 671.195 167.64 0.0000)
 			(effects
@@ -2849,14 +3068,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "00bc8a8a-ad6e-5d2f-93b4-3aa30d55b758")
+			(uuid "2fdcca7b-5aa9-535c-b699-8703e3b6f3c4")
 		)
 		(pin "2"
-			(uuid "83578cf6-5706-5fec-b7a0-8c8f287dd8c2")
+			(uuid "4eb21917-82aa-5598-83b0-c85a18643fe1")
 		)
 		(instances
 			(project "Audio-TDM-Clock"
-				(path "/6ff059fa-3f1c-526a-9745-4ec386fbde03"
+				(path "/266cf186-0dff-5dda-b52b-b921157a0ebd"
 					(reference "C104")
 					(unit 1)
 				)
@@ -2872,7 +3091,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "e328d825-8319-50b6-8024-bc98848cc5a9")
+		(uuid "e54a6a05-617f-514e-a2e2-fa4c41957c0b")
 		(property "Reference" "U105"
 			(at 341.63 318.77 0.0000)
 			(effects
@@ -2919,32 +3138,32 @@
 			)
 		)
 		(pin "1"
-			(uuid "010d9834-64b4-58fc-bc80-98de734ad627")
+			(uuid "2fcc6289-af14-5c93-b149-34239e360622")
 		)
 		(pin "2"
-			(uuid "8dab4681-fc7c-5c2d-8bd3-d66258fff358")
+			(uuid "0713ab93-1c25-5e5d-a75d-0c52532adac4")
 		)
 		(pin "3"
-			(uuid "ac66b8ec-58a5-5a7e-b60d-97cb3cf27caa")
+			(uuid "e0047b8a-0fcf-5c56-b50c-7b299462afa7")
 		)
 		(pin "4"
-			(uuid "d6b01e8b-420b-5c0e-ba65-4164d5b6c160")
+			(uuid "f2331429-f0ef-5284-a2f2-bba73222781a")
 		)
 		(pin "5"
-			(uuid "80e39edd-b922-5052-b09e-dd889059653f")
+			(uuid "01823328-831b-5306-a91a-0ea7897a2119")
 		)
 		(pin "6"
-			(uuid "d9aec633-5179-526d-a3fc-4df1b8948c24")
+			(uuid "9b7e3b9c-cc6a-587b-a71f-e9d20bd7f990")
 		)
 		(pin "7"
-			(uuid "3a83b0ac-94bf-59ab-a57b-f981dcefd813")
+			(uuid "f93ab913-ffda-5472-9a81-3d560b8d4791")
 		)
 		(pin "8"
-			(uuid "51d42a08-6470-55ca-977b-a94309f0bc41")
+			(uuid "a5f4afa9-aedd-5cf6-957a-2de38617b96c")
 		)
 		(instances
 			(project "Audio-TDM-Clock"
-				(path "/6ff059fa-3f1c-526a-9745-4ec386fbde03"
+				(path "/266cf186-0dff-5dda-b52b-b921157a0ebd"
 					(reference "U105")
 					(unit 1)
 				)
@@ -2960,7 +3179,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "eb7758a3-60cf-52cb-b020-fda324733600")
+		(uuid "7f46adfe-ff5b-5b71-98d6-63b1fcffa4fa")
 		(property "Reference" "C105"
 			(at 300.355 382.27 0.0000)
 			(effects
@@ -3007,14 +3226,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "3df93129-34ef-5f6f-a9d1-91546c2abb2e")
+			(uuid "2efbf0a9-ca1b-53c2-a895-9562c8069083")
 		)
 		(pin "2"
-			(uuid "9fd9d757-34c3-5945-a24f-e67dbe597dea")
+			(uuid "5a9fff64-aa9d-58bc-882c-88a97d2c0aae")
 		)
 		(instances
 			(project "Audio-TDM-Clock"
-				(path "/6ff059fa-3f1c-526a-9745-4ec386fbde03"
+				(path "/266cf186-0dff-5dda-b52b-b921157a0ebd"
 					(reference "C105")
 					(unit 1)
 				)
@@ -3030,7 +3249,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "9c46b4fa-74a6-5d9d-82d1-97cd1f7b0fe6")
+		(uuid "21ffcef8-5769-56e4-a5bc-587ffa7653c0")
 		(property "Reference" "C106"
 			(at 405.765 382.27 0.0000)
 			(effects
@@ -3077,14 +3296,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "ffcd4ffe-cd53-5a65-840b-88c136ba46d9")
+			(uuid "98007de4-a72b-5d51-b288-6779e8f2017d")
 		)
 		(pin "2"
-			(uuid "a33cbb88-8c13-52e1-8719-54ab642b182d")
+			(uuid "4408eb9c-7a24-5039-908c-cd782a3a2c78")
 		)
 		(instances
 			(project "Audio-TDM-Clock"
-				(path "/6ff059fa-3f1c-526a-9745-4ec386fbde03"
+				(path "/266cf186-0dff-5dda-b52b-b921157a0ebd"
 					(reference "C106")
 					(unit 1)
 				)
@@ -3100,7 +3319,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "42c9151a-8f42-559e-8570-420ec85e5868")
+		(uuid "9d27452d-7084-57ae-a932-fff619203735")
 		(property "Reference" "R111"
 			(at 502.412 309.88 90)
 			(effects
@@ -3147,14 +3366,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "877d9042-8134-5235-88ef-ced9ebc88f88")
+			(uuid "a4934786-bdd9-5f02-a4f8-1b0cd831d57f")
 		)
 		(pin "2"
-			(uuid "3dbb937a-c712-58ab-8ad9-bed09e71c2b1")
+			(uuid "9e15c456-6f28-5596-a2ad-ea3c31506c42")
 		)
 		(instances
 			(project "Audio-TDM-Clock"
-				(path "/6ff059fa-3f1c-526a-9745-4ec386fbde03"
+				(path "/266cf186-0dff-5dda-b52b-b921157a0ebd"
 					(reference "R111")
 					(unit 1)
 				)
@@ -3170,7 +3389,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "acd0639c-ebe1-57cd-94f1-9071ab9887a8")
+		(uuid "f0f0c613-9aff-534a-846e-22cbdc777c63")
 		(property "Reference" "R112"
 			(at 592.582 309.88 90)
 			(effects
@@ -3217,14 +3436,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "a5d7448a-0b95-523d-a421-ea22eb279f14")
+			(uuid "206be61a-2deb-5f76-9815-5e95119defbd")
 		)
 		(pin "2"
-			(uuid "286d4087-acff-5b78-8b62-9ad4007ea3c0")
+			(uuid "d2b32d71-4a71-5192-a788-5a70eb259c90")
 		)
 		(instances
 			(project "Audio-TDM-Clock"
-				(path "/6ff059fa-3f1c-526a-9745-4ec386fbde03"
+				(path "/266cf186-0dff-5dda-b52b-b921157a0ebd"
 					(reference "R112")
 					(unit 1)
 				)
@@ -3240,7 +3459,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "318e7274-a28a-547f-a2b5-c297a904c9d7")
+		(uuid "0fdd5f03-8fa7-52c0-8813-f1e9493ff4b7")
 		(property "Reference" "R113"
 			(at 681.482 309.88 90)
 			(effects
@@ -3287,14 +3506,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "563a10b1-a1fc-56cc-adc9-e2d90dfa2a2c")
+			(uuid "c698dc39-a9e1-57f6-9ffc-a2fcdd5e3e09")
 		)
 		(pin "2"
-			(uuid "5b2c33d9-7d3a-5aab-b0a7-3e90fff9c386")
+			(uuid "258f2343-b2cb-56e7-943a-ea5a895109af")
 		)
 		(instances
 			(project "Audio-TDM-Clock"
-				(path "/6ff059fa-3f1c-526a-9745-4ec386fbde03"
+				(path "/266cf186-0dff-5dda-b52b-b921157a0ebd"
 					(reference "R113")
 					(unit 1)
 				)
@@ -3310,7 +3529,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "5e74c371-de8a-5dbe-bd11-44746e643d45")
+		(uuid "c61cc72b-1e43-5244-bc0b-bb7bb27d94ed")
 		(property "Reference" "R114"
 			(at 771.652 309.88 90)
 			(effects
@@ -3357,14 +3576,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "2b1532a3-eeba-5a5d-a7e1-aeaf93c14397")
+			(uuid "ce874c79-db09-5e5a-b689-757dc95d698e")
 		)
 		(pin "2"
-			(uuid "b84d4242-7506-5e52-911c-dd6a1b84f9e6")
+			(uuid "33c44a32-3001-591f-acf1-4e02dab8d58e")
 		)
 		(instances
 			(project "Audio-TDM-Clock"
-				(path "/6ff059fa-3f1c-526a-9745-4ec386fbde03"
+				(path "/266cf186-0dff-5dda-b52b-b921157a0ebd"
 					(reference "R114")
 					(unit 1)
 				)
@@ -3380,7 +3599,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "9d88296d-6f25-5fba-bddf-c6f7c6a5b516")
+		(uuid "c7703d61-12e5-544b-ad8e-e8e44d7c84b6")
 		(property "Reference" "R115"
 			(at 582.422 389.89 90)
 			(effects
@@ -3427,14 +3646,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "3c2d4975-95f3-5782-9a91-dcfe35792e23")
+			(uuid "5bee96f9-70b2-5114-89f2-b5272a6f9e06")
 		)
 		(pin "2"
-			(uuid "82f4499a-c66e-5060-a50b-f3353e4bb8d2")
+			(uuid "861cf1c8-ff1c-5d25-b7cf-a4fd9782cad1")
 		)
 		(instances
 			(project "Audio-TDM-Clock"
-				(path "/6ff059fa-3f1c-526a-9745-4ec386fbde03"
+				(path "/266cf186-0dff-5dda-b52b-b921157a0ebd"
 					(reference "R115")
 					(unit 1)
 				)
@@ -3450,7 +3669,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "8e873807-daa7-5498-8d92-7932402e6c98")
+		(uuid "651030ed-d416-5dfe-8bbc-0d928ffa7e39")
 		(property "Reference" "R116"
 			(at 701.802 389.89 90)
 			(effects
@@ -3497,14 +3716,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "5933116e-5b91-5301-9300-e55feaeb432c")
+			(uuid "cb52194c-2e0c-54b3-9578-d625e28e2940")
 		)
 		(pin "2"
-			(uuid "d018c352-9ed5-5153-a682-95891ceb8d83")
+			(uuid "b1cff866-81c2-595b-a145-a26319c9f0ec")
 		)
 		(instances
 			(project "Audio-TDM-Clock"
-				(path "/6ff059fa-3f1c-526a-9745-4ec386fbde03"
+				(path "/266cf186-0dff-5dda-b52b-b921157a0ebd"
 					(reference "R116")
 					(unit 1)
 				)
@@ -3512,40 +3731,222 @@
 		)
 	)
 	(symbol
-		(lib_id "power:PWR_FLAG")
-		(at 609.6 420.37 0)
+		(lib_id "74xGxx:74LVC1G11")
+		(at 650.24 515.62 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "41aa6e8e-0483-5422-8bb0-d7f77ff81f5c")
-		(property "Reference" "#FLG101"
-			(at 609.6 422.275 0.0000)
+		(uuid "e26bae7c-1813-53a1-97b4-053320e8b6c6")
+		(property "Reference" "U106"
+			(at 645.16 525.78 0.0000)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
-		(property "Value" "PWR_FLAG"
-			(at 609.6 415.29 0)
+		(property "Value" "SN74LVC1G11DBVR"
+			(at 657.86 505.46 0.0000)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-6"
+			(at 650.24 515.62 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Texas Instruments"
+			(at 652.78 520.6999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "SN74LVC1G11DBVR"
+			(at 652.78 520.6999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
-			(uuid "9d0d611e-c2ac-526b-9843-b6932206b97e")
+			(uuid "6b8866f2-46d6-51ff-a58d-0fc2ffab0143")
+		)
+		(pin "2"
+			(uuid "b8b1a8ce-2ccc-5c90-bf93-67198bb31d7a")
+		)
+		(pin "3"
+			(uuid "eaedb93c-3429-5913-aaa3-ee07c62b188b")
+		)
+		(pin "4"
+			(uuid "99163b71-9b4e-51dc-ab04-455b37b85a41")
+		)
+		(pin "5"
+			(uuid "01991d97-1398-5376-962b-fa4ec66475e5")
+		)
+		(pin "6"
+			(uuid "8e2e9600-73d5-584f-ac3d-9b756c8f3d38")
 		)
 		(instances
 			(project "Audio-TDM-Clock"
-				(path "/6ff059fa-3f1c-526a-9745-4ec386fbde03"
-					(reference "#FLG101")
+				(path "/266cf186-0dff-5dda-b52b-b921157a0ebd"
+					(reference "U106")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 745.49 500.38 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "b3d39283-6411-5ef8-8229-4fa5abd02a0c")
+		(property "Reference" "R117"
+			(at 747.522 500.38 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100k 1%"
+			(at 745.49 500.38 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 743.712 500.38 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 748.03 505.4599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RC0603FR-07100KL"
+			(at 748.03 505.4599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "55857113-11b7-56d9-a3c2-304a8ae8a17c")
+		)
+		(pin "2"
+			(uuid "a4bf5723-2fbc-5f3f-acb9-1b584bd30739")
+		)
+		(instances
+			(project "Audio-TDM-Clock"
+				(path "/266cf186-0dff-5dda-b52b-b921157a0ebd"
+					(reference "R117")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 745.49 544.83 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "27ca35c9-dc3e-592b-9061-879c9d106c43")
+		(property "Reference" "C107"
+			(at 746.125 547.37 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100nF"
+			(at 746.125 542.29 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 746.4552 541.02 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "TDK"
+			(at 748.03 549.9099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "C1005X7R1H104K050BB"
+			(at 748.03 549.9099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b3ab7a1c-95d0-5a82-8252-9c74683e906b")
+		)
+		(pin "2"
+			(uuid "ecf8456f-10bb-54fc-b1c5-4ec98580ea86")
+		)
+		(instances
+			(project "Audio-TDM-Clock"
+				(path "/266cf186-0dff-5dda-b52b-b921157a0ebd"
+					(reference "C107")
 					(unit 1)
 				)
 			)
@@ -3553,16 +3954,16 @@
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
-		(at 679.45 420.37 0)
+		(at 534.67 524.51 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced no)
-		(uuid "f07bbc86-6bbf-5e15-95d8-3cb4e8ef357d")
-		(property "Reference" "#FLG102"
-			(at 679.45 422.275 0.0000)
+		(uuid "23b85b00-d7e7-5c7e-bdcf-1f4433ab2243")
+		(property "Reference" "#FLG0101"
+			(at 534.67 526.415 0.0000)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3572,7 +3973,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 679.45 415.29 0)
+			(at 534.67 519.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3580,58 +3981,19 @@
 			)
 		)
 		(pin "1"
-			(uuid "005e2661-e7ba-52b1-8c06-8ad400f2a073")
+			(uuid "435bc1eb-8122-576f-adf2-3d6fc85d7108")
 		)
 		(instances
 			(project "Audio-TDM-Clock"
-				(path "/6ff059fa-3f1c-526a-9745-4ec386fbde03"
-					(reference "#FLG102")
+				(path "/266cf186-0dff-5dda-b52b-b921157a0ebd"
+					(reference "#FLG0101")
 					(unit 1)
 				)
 			)
 		)
 	)
-	(symbol
-		(lib_id "power:PWR_FLAG")
-		(at 750.57 420.37 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced no)
-		(uuid "3f513426-e548-54f1-a737-30e5ced608f2")
-		(property "Reference" "#FLG103"
-			(at 750.57 422.275 0.0000)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Value" "PWR_FLAG"
-			(at 750.57 415.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "c641b244-4221-5f1b-b47e-762ff4c3add7")
-		)
-		(instances
-			(project "Audio-TDM-Clock"
-				(path "/6ff059fa-3f1c-526a-9745-4ec386fbde03"
-					(reference "#FLG103")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(label "AUD_MCLK_P"
+	(global_label "AUD_MCLK_P"
+		(shape bidirectional)
 		(at 110.49 97.79 0.0000)
 		(effects
 			(font
@@ -3639,9 +4001,10 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "3bd49417-7a6c-51e2-b30d-91b66f332587")
+		(uuid "630d317b-0dd3-59c7-ac85-7e5dec460293")
 	)
-	(label "AUD_MCLK_N"
+	(global_label "AUD_MCLK_N"
+		(shape bidirectional)
 		(at 123.19 97.79 0.0000)
 		(effects
 			(font
@@ -3649,9 +4012,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "c82b2564-98af-5bc9-9a5d-f62cf3731cf8")
+		(uuid "632df35a-0258-527a-9d80-e94c723ef1f9")
 	)
-	(label "GND"
+	(global_label "GND"
+		(shape bidirectional)
 		(at 110.49 100.33 0.0000)
 		(effects
 			(font
@@ -3659,9 +4023,10 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "85cd7672-435e-54b7-b32e-36668f45bdd9")
+		(uuid "16562129-8b17-5157-99d0-ec7bf031e94b")
 	)
-	(label "GND"
+	(global_label "GND"
+		(shape bidirectional)
 		(at 123.19 100.33 0.0000)
 		(effects
 			(font
@@ -3669,9 +4034,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "0b4896ce-6b44-5684-a35f-15249b33a5bd")
+		(uuid "8a884744-4d3d-5e4c-92f6-adac2065e654")
 	)
-	(label "AUD_BCLK_P"
+	(global_label "AUD_BCLK_P"
+		(shape bidirectional)
 		(at 110.49 102.87 0.0000)
 		(effects
 			(font
@@ -3679,9 +4045,10 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "806df64b-9d39-597a-92a4-a23b3244464f")
+		(uuid "9ef80429-e421-5763-a14f-02c960e8beba")
 	)
-	(label "AUD_BCLK_N"
+	(global_label "AUD_BCLK_N"
+		(shape bidirectional)
 		(at 123.19 102.87 0.0000)
 		(effects
 			(font
@@ -3689,9 +4056,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "a4709597-dc70-57b9-b9aa-fb85e4356c7c")
+		(uuid "6e1ba24c-059c-5eff-97ff-cfee919c6f2c")
 	)
-	(label "AUD_FSYNC_P"
+	(global_label "AUD_FSYNC_P"
+		(shape bidirectional)
 		(at 110.49 105.41 0.0000)
 		(effects
 			(font
@@ -3699,9 +4067,10 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "8d157e38-ac5d-5f19-9ee8-27ad1ba09d2c")
+		(uuid "eeb072c8-d9a3-536f-abab-dce987f4da60")
 	)
-	(label "AUD_FSYNC_N"
+	(global_label "AUD_FSYNC_N"
+		(shape bidirectional)
 		(at 123.19 105.41 0.0000)
 		(effects
 			(font
@@ -3709,9 +4078,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "49e2d4a5-1589-57d1-a42d-5fbcd208e89a")
+		(uuid "70265d93-3091-5ab0-8782-627b3d0c64b7")
 	)
-	(label "GND"
+	(global_label "GND"
+		(shape bidirectional)
 		(at 110.49 107.95 0.0000)
 		(effects
 			(font
@@ -3719,9 +4089,10 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "ebbf8a4e-6fe0-55ec-a5f2-7a08ed9110a9")
+		(uuid "5e7dcda3-ae08-5324-8d46-5f9ba9f5a47e")
 	)
-	(label "GND"
+	(global_label "GND"
+		(shape bidirectional)
 		(at 123.19 107.95 0.0000)
 		(effects
 			(font
@@ -3729,9 +4100,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "e3bdf987-a44e-5d4e-996d-1c08e25f9217")
+		(uuid "73f60240-fa26-50af-b8c5-a6880bc6e4b8")
 	)
-	(label "AUD_DAC_SDIN_P"
+	(global_label "AUD_DAC_SDIN_P"
+		(shape bidirectional)
 		(at 110.49 110.49 0.0000)
 		(effects
 			(font
@@ -3739,9 +4111,10 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "312144be-1af4-5c64-a0be-ae69be7b388b")
+		(uuid "cfae4a04-b5e0-55f6-917a-a99c70b2342e")
 	)
-	(label "AUD_DAC_SDIN_N"
+	(global_label "AUD_DAC_SDIN_N"
+		(shape bidirectional)
 		(at 123.19 110.49 0.0000)
 		(effects
 			(font
@@ -3749,9 +4122,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "32b2bdf3-0b1f-556a-ae9e-bef3cb99ab56")
+		(uuid "df0d27d9-8407-54cd-9da1-06704018fe62")
 	)
-	(label "AUD_ADC_SDOUT_P"
+	(global_label "AUD_ADC_SDOUT_P"
+		(shape bidirectional)
 		(at 110.49 113.03 0.0000)
 		(effects
 			(font
@@ -3759,9 +4133,10 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "ae2eb79d-fa95-5e28-a67f-b7ca6237c7b4")
+		(uuid "26e60d6a-0d03-5e10-9d4b-07ea47278b85")
 	)
-	(label "AUD_ADC_SDOUT_N"
+	(global_label "AUD_ADC_SDOUT_N"
+		(shape bidirectional)
 		(at 123.19 113.03 0.0000)
 		(effects
 			(font
@@ -3769,9 +4144,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "f44fc5e2-35b4-5728-affe-a90894db97b5")
+		(uuid "b41df7d0-6134-5afd-8e1c-5ddb04925c2e")
 	)
-	(label "GND"
+	(global_label "GND"
+		(shape bidirectional)
 		(at 110.49 115.57 0.0000)
 		(effects
 			(font
@@ -3779,9 +4155,10 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "b06c9c07-155b-5596-840b-e3525447ac7b")
+		(uuid "65b6f683-a283-5df3-b8ff-d8513d8027cb")
 	)
-	(label "GND"
+	(global_label "GND"
+		(shape bidirectional)
 		(at 123.19 115.57 0.0000)
 		(effects
 			(font
@@ -3789,9 +4166,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "2a8524f8-3016-5d7d-8702-412a8fc84b25")
+		(uuid "43efe391-32ef-5a80-8e10-ee82291660d0")
 	)
-	(label "AUD_I2C_SCL"
+	(global_label "AUD_I2C_SCL"
+		(shape bidirectional)
 		(at 110.49 118.11 0.0000)
 		(effects
 			(font
@@ -3799,9 +4177,10 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "c3a3550e-a309-57b3-897b-091b0ba35a6d")
+		(uuid "89a106ce-728d-5bc8-bddf-02e53a88a461")
 	)
-	(label "AUD_I2C_SDA"
+	(global_label "AUD_I2C_SDA"
+		(shape bidirectional)
 		(at 123.19 118.11 0.0000)
 		(effects
 			(font
@@ -3809,9 +4188,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "122dbc46-23b1-5e7a-a893-79427ff65721")
+		(uuid "e61ed6be-a4a1-5929-ad3e-ad7480f16fca")
 	)
-	(label "AUD_ADC_RST_N"
+	(global_label "AUD_ADC_RST_N"
+		(shape bidirectional)
 		(at 110.49 120.65 0.0000)
 		(effects
 			(font
@@ -3819,9 +4199,10 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "0eddef04-e451-570e-8fdd-b283cf50f581")
+		(uuid "9b3ac192-a20b-5173-abb3-bfb01e5eee89")
 	)
-	(label "AUD_DAC_RST_N"
+	(global_label "AUD_DAC_RST_N"
+		(shape bidirectional)
 		(at 123.19 120.65 0.0000)
 		(effects
 			(font
@@ -3829,9 +4210,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "3bcda1fd-c133-562e-90bc-6b56e3b89c92")
+		(uuid "8e7f1a15-83f6-5988-a443-95c9b0997e09")
 	)
-	(label "AUD_DAC_MUTE_N"
+	(global_label "AUD_DAC_MUTE_CMD_N"
+		(shape bidirectional)
 		(at 110.49 123.19 0.0000)
 		(effects
 			(font
@@ -3839,9 +4221,10 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "3e22f579-3981-57b5-8108-e1750f4aee9b")
+		(uuid "797c8a73-e341-5b20-ba90-8b2cc974eb99")
 	)
-	(label "AUD_IRQ_N"
+	(global_label "AUD_IRQ_N"
+		(shape bidirectional)
 		(at 123.19 123.19 0.0000)
 		(effects
 			(font
@@ -3849,9 +4232,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "101b3b54-9a20-5d89-bfe3-b151d732e1f0")
+		(uuid "333bbd9f-e600-504f-9283-a88abbae3ef7")
 	)
-	(label "AUDIO_PRESENT_N"
+	(global_label "AUDIO_PRESENT_N"
+		(shape bidirectional)
 		(at 110.49 125.73 0.0000)
 		(effects
 			(font
@@ -3859,9 +4243,10 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "1e9460fb-7cb4-5087-867c-ff89576b9ea1")
+		(uuid "c73f0c17-3528-5156-b3d2-ce7a858d3da4")
 	)
-	(label "AUDIO_ENABLE"
+	(global_label "AUDIO_ENABLE"
+		(shape bidirectional)
 		(at 123.19 125.73 0.0000)
 		(effects
 			(font
@@ -3869,9 +4254,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "1d661e1f-265b-5043-9dc7-aaa96130f04c")
+		(uuid "596ee33c-0845-59ec-9c81-9bcb525442cc")
 	)
-	(label "LOGIC_3V3"
+	(global_label "LOGIC_3V3"
+		(shape bidirectional)
 		(at 110.49 128.27 0.0000)
 		(effects
 			(font
@@ -3879,9 +4265,10 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "163a4c78-41b3-5884-b892-db2ec224a93f")
+		(uuid "b4b0d3ab-e9ad-5c12-915b-92b63da57cdb")
 	)
-	(label "GND"
+	(global_label "GND"
+		(shape bidirectional)
 		(at 123.19 128.27 0.0000)
 		(effects
 			(font
@@ -3889,9 +4276,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "da656fe1-3cae-5275-98f2-6da03bea6fff")
+		(uuid "30154dba-0091-589c-8e1f-5452c8b62346")
 	)
-	(label "TDM_SPARE_1"
+	(global_label "TDM_SPARE_1"
+		(shape bidirectional)
 		(at 110.49 130.81 0.0000)
 		(effects
 			(font
@@ -3899,9 +4287,10 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "a8728ed7-d5a6-51fc-8448-b1085af8aa30")
+		(uuid "99d719da-4111-576b-9fc0-68cd33f8af65")
 	)
-	(label "TDM_SPARE_2"
+	(global_label "TDM_SPARE_2"
+		(shape bidirectional)
 		(at 123.19 130.81 0.0000)
 		(effects
 			(font
@@ -3909,9 +4298,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "e2b3ed19-55f9-5306-8392-6a642260773a")
+		(uuid "91db4952-b940-5754-8edb-25be4d776a7d")
 	)
-	(label "GND"
+	(global_label "GND"
+		(shape bidirectional)
 		(at 110.49 133.35 0.0000)
 		(effects
 			(font
@@ -3919,9 +4309,10 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "b626ec3c-4de6-5275-b716-649339035cca")
+		(uuid "6816abdb-8c60-5a41-bfa4-66ba92415b4f")
 	)
-	(label "GND"
+	(global_label "GND"
+		(shape bidirectional)
 		(at 123.19 133.35 0.0000)
 		(effects
 			(font
@@ -3929,9 +4320,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "8c833ae1-ffac-5cfd-bcda-15b278305444")
+		(uuid "b20ffd65-c471-5dd6-bf10-f8a175f6e316")
 	)
-	(label "AUD_MCLK_N"
+	(global_label "AUD_MCLK_N"
+		(shape bidirectional)
 		(at 237.49 107.95 0.0000)
 		(effects
 			(font
@@ -3939,9 +4331,10 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "49f90dac-ec0d-5ae4-9d7f-12b774387c57")
+		(uuid "2bf6b02f-7f8b-58db-9eed-85c4ea4f1d31")
 	)
-	(label "AUD_MCLK_P"
+	(global_label "AUD_MCLK_P"
+		(shape bidirectional)
 		(at 237.49 102.87 0.0000)
 		(effects
 			(font
@@ -3949,9 +4342,10 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "7ff360a6-907b-5607-b2ac-d5698324bc23")
+		(uuid "e862849e-e238-5bf0-ba54-da36be846e46")
 	)
-	(label "AGND"
+	(global_label "AGND"
+		(shape bidirectional)
 		(at 250.19 115.57 0.0000)
 		(effects
 			(font
@@ -3959,9 +4353,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "705f0144-571e-51c4-937a-1887fa9d8223")
+		(uuid "d196999e-597a-521e-b92b-68152c005707")
 	)
-	(label "AKM_MCLK"
+	(global_label "AKM_MCLK"
+		(shape bidirectional)
 		(at 262.89 105.41 0.0000)
 		(effects
 			(font
@@ -3969,9 +4364,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "e79a60c8-aa25-5f69-baf9-02c273d33897")
+		(uuid "546c4cf0-420b-5a8f-b4b5-23fb4190cea6")
 	)
-	(label "AKM_3V3_D"
+	(global_label "AKM_3V3_D"
+		(shape bidirectional)
 		(at 250.19 95.25 0.0000)
 		(effects
 			(font
@@ -3979,9 +4375,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "24022fb8-1886-5752-bc80-e351dc1a6f72")
+		(uuid "fa596bb2-a250-5415-a665-e84b2061406e")
 	)
-	(label "AKM_3V3_D"
+	(global_label "AKM_3V3_D"
+		(shape bidirectional)
 		(at 250.19 161.29 0.0000)
 		(effects
 			(font
@@ -3989,9 +4386,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "b6ae3515-c417-528d-b8a7-25fb1937e397")
+		(uuid "059ec27a-3774-5af1-851c-213b7397fb15")
 	)
-	(label "AGND"
+	(global_label "AGND"
+		(shape bidirectional)
 		(at 250.19 168.91 0.0000)
 		(effects
 			(font
@@ -3999,9 +4397,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "491e1b35-a9be-5da6-8fe2-9bed016406e7")
+		(uuid "00ba13ee-7dce-524c-889c-94f67fc117cd")
 	)
-	(label "AUD_BCLK_N"
+	(global_label "AUD_BCLK_N"
+		(shape bidirectional)
 		(at 377.19 107.95 0.0000)
 		(effects
 			(font
@@ -4009,9 +4408,10 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "5301f63f-c880-5d9a-8bcb-54c7b69f8242")
+		(uuid "ebe2957f-82e0-5d1f-bd0f-6f2d4d9e0279")
 	)
-	(label "AUD_BCLK_P"
+	(global_label "AUD_BCLK_P"
+		(shape bidirectional)
 		(at 377.19 102.87 0.0000)
 		(effects
 			(font
@@ -4019,9 +4419,10 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "5d614be4-876d-5ad0-81ae-92e14d2a92cb")
+		(uuid "4ba353f8-a466-53d5-978f-69cb046106ce")
 	)
-	(label "AGND"
+	(global_label "AGND"
+		(shape bidirectional)
 		(at 389.89 115.57 0.0000)
 		(effects
 			(font
@@ -4029,9 +4430,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "b3262e35-c2f6-54c3-a9f8-b74624034539")
+		(uuid "e00eb945-f892-533e-bdc9-5eb3f97d258d")
 	)
-	(label "AKM_BCLK"
+	(global_label "AKM_BCLK"
+		(shape bidirectional)
 		(at 402.59 105.41 0.0000)
 		(effects
 			(font
@@ -4039,9 +4441,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "cc3027c6-4668-58b5-8809-64fb29df4b57")
+		(uuid "09a8ace1-b66d-5a31-b8f8-2195623f9187")
 	)
-	(label "AKM_3V3_D"
+	(global_label "AKM_3V3_D"
+		(shape bidirectional)
 		(at 389.89 95.25 0.0000)
 		(effects
 			(font
@@ -4049,9 +4452,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "c38b83e5-d7a7-5c42-990a-5bdfbe6d405c")
+		(uuid "4eb60fe5-038a-5f08-97e7-bd62d0fa9f58")
 	)
-	(label "AKM_3V3_D"
+	(global_label "AKM_3V3_D"
+		(shape bidirectional)
 		(at 389.89 161.29 0.0000)
 		(effects
 			(font
@@ -4059,9 +4463,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "fda73e21-219a-5735-91ad-870fe8487fdb")
+		(uuid "183d2e61-3a9b-5ac2-b9be-8759b5913df2")
 	)
-	(label "AGND"
+	(global_label "AGND"
+		(shape bidirectional)
 		(at 389.89 168.91 0.0000)
 		(effects
 			(font
@@ -4069,9 +4474,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "31477e0d-f030-5fad-ab8a-424845ae9042")
+		(uuid "b7de2c9a-05de-5f8f-ab1f-8587aced99e0")
 	)
-	(label "AUD_FSYNC_N"
+	(global_label "AUD_FSYNC_N"
+		(shape bidirectional)
 		(at 516.89 107.95 0.0000)
 		(effects
 			(font
@@ -4079,9 +4485,10 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "0385659a-4614-5985-9faa-2c7bb20bdb87")
+		(uuid "74f7f0bd-e5ed-5d77-92ab-0e1e4eeab777")
 	)
-	(label "AUD_FSYNC_P"
+	(global_label "AUD_FSYNC_P"
+		(shape bidirectional)
 		(at 516.89 102.87 0.0000)
 		(effects
 			(font
@@ -4089,9 +4496,10 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "e817e3fb-6b60-550d-8502-76943e8cba9e")
+		(uuid "f9785768-e644-57f1-9bd5-83516bfbd4bb")
 	)
-	(label "AGND"
+	(global_label "AGND"
+		(shape bidirectional)
 		(at 529.59 115.57 0.0000)
 		(effects
 			(font
@@ -4099,9 +4507,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "7817e44b-65be-5b40-a4bd-1aa222dbf704")
+		(uuid "66496987-aba5-5a18-b1b3-73029628a9fe")
 	)
-	(label "AKM_FSYNC"
+	(global_label "AKM_FSYNC"
+		(shape bidirectional)
 		(at 542.29 105.41 0.0000)
 		(effects
 			(font
@@ -4109,9 +4518,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "a33d1fd1-ed2d-535a-b4a4-7f3931144808")
+		(uuid "9deb5253-42fc-519f-8eed-e8882866f5a0")
 	)
-	(label "AKM_3V3_D"
+	(global_label "AKM_3V3_D"
+		(shape bidirectional)
 		(at 529.59 95.25 0.0000)
 		(effects
 			(font
@@ -4119,9 +4529,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "c5e495bf-1b35-55fa-85e5-6bd4fe15a003")
+		(uuid "388a3bd7-7b16-546a-8565-8cea7892eafc")
 	)
-	(label "AKM_3V3_D"
+	(global_label "AKM_3V3_D"
+		(shape bidirectional)
 		(at 529.59 161.29 0.0000)
 		(effects
 			(font
@@ -4129,9 +4540,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "5fdae2d9-4fbd-5ce2-8efb-29e9a0b179d3")
+		(uuid "bef2b426-93bf-5e02-83f9-3ed27ed8e48e")
 	)
-	(label "AGND"
+	(global_label "AGND"
+		(shape bidirectional)
 		(at 529.59 168.91 0.0000)
 		(effects
 			(font
@@ -4139,9 +4551,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "c5baedb6-e188-567a-8fa5-58997636fdc9")
+		(uuid "9572f16e-81af-5112-9dd7-1c0c55d558fc")
 	)
-	(label "AUD_DAC_SDIN_N"
+	(global_label "AUD_DAC_SDIN_N"
+		(shape bidirectional)
 		(at 657.86 107.95 0.0000)
 		(effects
 			(font
@@ -4149,9 +4562,10 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "4d29c714-4f4f-5741-ba55-9355a70ebfbb")
+		(uuid "0b79af70-3c10-52f7-8c0e-906e4843f32c")
 	)
-	(label "AUD_DAC_SDIN_P"
+	(global_label "AUD_DAC_SDIN_P"
+		(shape bidirectional)
 		(at 657.86 102.87 0.0000)
 		(effects
 			(font
@@ -4159,9 +4573,10 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "336629c9-0f93-5705-b554-16cca85abc60")
+		(uuid "18bd6a62-af4a-5dca-bb7b-c271d0728112")
 	)
-	(label "AGND"
+	(global_label "AGND"
+		(shape bidirectional)
 		(at 670.56 115.57 0.0000)
 		(effects
 			(font
@@ -4169,9 +4584,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "9be489dc-8bf1-5eb5-949c-c514408a886a")
+		(uuid "6322d61f-8b63-58f5-b46a-c05b2c7e7091")
 	)
-	(label "DAC_TDM_IN"
+	(global_label "DAC_TDM_IN"
+		(shape bidirectional)
 		(at 683.26 105.41 0.0000)
 		(effects
 			(font
@@ -4179,9 +4595,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "95d664e5-4b2d-5463-afea-838708bc2a53")
+		(uuid "eb6f7ccb-cf58-5366-8304-d590e4c9ecfe")
 	)
-	(label "AKM_3V3_D"
+	(global_label "AKM_3V3_D"
+		(shape bidirectional)
 		(at 670.56 95.25 0.0000)
 		(effects
 			(font
@@ -4189,9 +4606,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "6efcebf4-bb38-56b7-899b-a31d11a05ec3")
+		(uuid "93e7cc0c-2e6d-578a-b53c-5a97f39b3467")
 	)
-	(label "AKM_3V3_D"
+	(global_label "AKM_3V3_D"
+		(shape bidirectional)
 		(at 670.56 161.29 0.0000)
 		(effects
 			(font
@@ -4199,9 +4617,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "a8581fb1-838a-5ba4-8f81-ffe1ac6f0f74")
+		(uuid "4576ec1d-cfae-51fb-b266-42280edab6ca")
 	)
-	(label "AGND"
+	(global_label "AGND"
+		(shape bidirectional)
 		(at 670.56 168.91 0.0000)
 		(effects
 			(font
@@ -4209,9 +4628,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "7277b9bf-7b60-5f8e-bdfb-1d1f3ceb38b7")
+		(uuid "7f6e480f-86f7-5a03-b423-a5fccfdab0fe")
 	)
-	(label "AKM_3V3_D"
+	(global_label "AKM_3V3_D"
+		(shape bidirectional)
 		(at 350.52 299.72 0.0000)
 		(effects
 			(font
@@ -4219,9 +4639,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "daa7c6e0-d839-5eb6-b902-b50485e1d177")
+		(uuid "b8212bcc-2d01-5ae1-9586-c011dc8f6a8f")
 	)
-	(label "ADC_TDM_OUT"
+	(global_label "ADC_TDM_OUT"
+		(shape bidirectional)
 		(at 337.82 309.88 0.0000)
 		(effects
 			(font
@@ -4229,9 +4650,10 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "4dff85d0-3c97-5e7e-9c85-4004d40a76f4")
+		(uuid "c08e30f3-7654-5125-ae67-8396c49ea1a3")
 	)
-	(label "AGND"
+	(global_label "AGND"
+		(shape bidirectional)
 		(at 350.52 320.04 0.0000)
 		(effects
 			(font
@@ -4239,9 +4661,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "8e39f93c-4c36-584e-a07d-d008d3752afb")
+		(uuid "684b5e9c-f976-5932-87ca-005bf85463e7")
 	)
-	(label "AUD_ADC_SDOUT_P"
+	(global_label "AUD_ADC_SDOUT_P"
+		(shape bidirectional)
 		(at 363.22 307.34 0.0000)
 		(effects
 			(font
@@ -4249,9 +4672,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "f64e271f-a777-578d-85d2-2cdb0e8891e4")
+		(uuid "724bda43-3b5f-50f4-81f5-91da29832af4")
 	)
-	(label "AUD_ADC_SDOUT_N"
+	(global_label "AUD_ADC_SDOUT_N"
+		(shape bidirectional)
 		(at 363.22 312.42 0.0000)
 		(effects
 			(font
@@ -4259,9 +4683,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "68104f27-1c9e-5219-b5b6-136175a43dc7")
+		(uuid "561584cf-bf39-594a-92ab-662297e73b4d")
 	)
-	(label "AKM_3V3_D"
+	(global_label "AKM_3V3_D"
+		(shape bidirectional)
 		(at 299.72 375.92 0.0000)
 		(effects
 			(font
@@ -4269,9 +4694,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "3c356aac-bc27-5b05-b57e-28bd48ad1763")
+		(uuid "beffa5af-b92e-50f2-8f27-676bc20468ba")
 	)
-	(label "AGND"
+	(global_label "AGND"
+		(shape bidirectional)
 		(at 299.72 383.54 0.0000)
 		(effects
 			(font
@@ -4279,9 +4705,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "8a3a6b61-c36b-5dd8-8b65-05b3d989d26a")
+		(uuid "bc9a9312-c41e-5324-af74-b0c7ecbf458e")
 	)
-	(label "AKM_3V3_D"
+	(global_label "AKM_3V3_D"
+		(shape bidirectional)
 		(at 405.13 375.92 0.0000)
 		(effects
 			(font
@@ -4289,9 +4716,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "4ae9d716-1d34-5401-8e8d-6521c268355a")
+		(uuid "998898a6-38a4-5eda-885b-028d5ee697cb")
 	)
-	(label "AGND"
+	(global_label "AGND"
+		(shape bidirectional)
 		(at 405.13 383.54 0.0000)
 		(effects
 			(font
@@ -4299,9 +4727,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "3b9fb6e0-ffca-5041-af84-b4bff030c5b9")
+		(uuid "3c1a2814-46fa-5355-81d2-928b40148632")
 	)
-	(label "AUD_ADC_RST_N"
+	(global_label "AUD_ADC_RST_N"
+		(shape bidirectional)
 		(at 500.38 306.07 0.0000)
 		(effects
 			(font
@@ -4309,9 +4738,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "0bfa69f7-b970-50ac-99a1-3d479f11cf76")
+		(uuid "cfc5a0f9-faa5-56dc-b81d-7371fe9b01dc")
 	)
-	(label "AGND"
+	(global_label "AGND"
+		(shape bidirectional)
 		(at 500.38 313.69 0.0000)
 		(effects
 			(font
@@ -4319,9 +4749,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "40ba343a-9e73-5a83-b670-195202ec5461")
+		(uuid "447a036e-14cb-5163-9773-8868c3688b11")
 	)
-	(label "AUD_DAC_RST_N"
+	(global_label "AUD_DAC_RST_N"
+		(shape bidirectional)
 		(at 590.55 306.07 0.0000)
 		(effects
 			(font
@@ -4329,9 +4760,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "c1d5e82f-c4dd-546b-828a-1f81de871d1c")
+		(uuid "f264104c-c6ab-5595-81fa-dd73e3deb65d")
 	)
-	(label "AGND"
+	(global_label "AGND"
+		(shape bidirectional)
 		(at 590.55 313.69 0.0000)
 		(effects
 			(font
@@ -4339,9 +4771,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "9405c0e8-4094-5ed2-8323-d01ae1573d22")
+		(uuid "4cd45b9c-574b-5f63-aa11-8aca3f31b273")
 	)
-	(label "AUD_DAC_MUTE_N"
+	(global_label "AUD_DAC_MUTE_CMD_N"
+		(shape bidirectional)
 		(at 679.45 306.07 0.0000)
 		(effects
 			(font
@@ -4349,9 +4782,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "a8553caa-fd3f-5800-8f7f-cf4132e3baf0")
+		(uuid "48e0b02d-3b7c-5867-8868-8e28b3f9a2b0")
 	)
-	(label "AGND"
+	(global_label "AGND"
+		(shape bidirectional)
 		(at 679.45 313.69 0.0000)
 		(effects
 			(font
@@ -4359,9 +4793,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "bd8fae22-b9a8-550e-815d-357621d60d67")
+		(uuid "509faa7b-4285-51e3-a93a-116349d396b0")
 	)
-	(label "AUDIO_PRESENT_N"
+	(global_label "AUDIO_PRESENT_N"
+		(shape bidirectional)
 		(at 769.62 306.07 0.0000)
 		(effects
 			(font
@@ -4369,9 +4804,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "db9da8fd-55b0-5336-930b-4b6957e16a47")
+		(uuid "21e86602-d619-5702-87f3-f7ebae0b264e")
 	)
-	(label "AGND"
+	(global_label "AGND"
+		(shape bidirectional)
 		(at 769.62 313.69 0.0000)
 		(effects
 			(font
@@ -4379,9 +4815,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "9767ad0c-f2aa-559f-8c88-eedf1ba32d59")
+		(uuid "6cd06bce-a95a-5b95-86c2-3f455f87384b")
 	)
-	(label "AKM_3V3_D"
+	(global_label "AKM_3V3_D"
+		(shape bidirectional)
 		(at 580.39 386.08 0.0000)
 		(effects
 			(font
@@ -4389,9 +4826,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "93b06d9e-5f57-53ba-b0be-28db7ae9ee6b")
+		(uuid "365ba094-65df-50eb-9988-69069ae1ce33")
 	)
-	(label "AUD_I2C_SCL"
+	(global_label "AUD_I2C_SCL"
+		(shape bidirectional)
 		(at 580.39 393.7 0.0000)
 		(effects
 			(font
@@ -4399,9 +4837,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "1bfba6ee-4e8d-5e80-8627-970cfe68513a")
+		(uuid "1e79eb0d-533f-5adc-8239-ba67afe6f3a5")
 	)
-	(label "AKM_3V3_D"
+	(global_label "AKM_3V3_D"
+		(shape bidirectional)
 		(at 699.77 386.08 0.0000)
 		(effects
 			(font
@@ -4409,9 +4848,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "68b78a75-e97c-5637-80f1-3eaad80e4f07")
+		(uuid "d9b9d935-930a-5036-bb0c-4c1a8e58a424")
 	)
-	(label "AUD_I2C_SDA"
+	(global_label "AUD_I2C_SDA"
+		(shape bidirectional)
 		(at 699.77 393.7 0.0000)
 		(effects
 			(font
@@ -4419,97 +4859,188 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "687914ed-802b-58e8-994c-8380c9d8dab2")
+		(uuid "e30bb88c-7b1b-564f-9037-84d0bfc674c4")
 	)
-	(label "AKM_3V3_D"
-		(at 609.6 420.37 0.0000)
+	(global_label "AUD_DAC_MUTE_CMD_N"
+		(shape bidirectional)
+		(at 635 515.62 0.0000)
 		(effects
 			(font
-				(size 0.58 0.58)
+				(size 0.54 0.54)
+			)
+			(justify right bottom)
+		)
+		(uuid "eeb40fe4-111a-5346-abff-f158e13aaae2")
+	)
+	(global_label "AGND"
+		(shape bidirectional)
+		(at 650.24 525.78 0.0000)
+		(effects
+			(font
+				(size 0.54 0.54)
 			)
 			(justify left bottom)
 		)
-		(uuid "d0f5d602-f0b2-5c5d-a225-06fb53cc72f0")
+		(uuid "a3ccbf62-f5a8-5897-894e-faa931ea30eb")
 	)
-	(label "AGND"
-		(at 679.45 420.37 0.0000)
+	(global_label "ADC_5V_PG"
+		(shape bidirectional)
+		(at 635 520.7 0.0000)
 		(effects
 			(font
-				(size 0.58 0.58)
+				(size 0.54 0.54)
+			)
+			(justify right bottom)
+		)
+		(uuid "a945ee4b-ec94-5aa6-9de2-9de202807c63")
+	)
+	(global_label "AUDIO_SAFE_UNMUTE_N"
+		(shape bidirectional)
+		(at 662.94 515.62 0.0000)
+		(effects
+			(font
+				(size 0.54 0.54)
 			)
 			(justify left bottom)
 		)
-		(uuid "eb7f3603-572c-5dc6-b75e-d62d1257bb2b")
+		(uuid "479bbe29-0719-5562-a8b0-52054b51b47a")
 	)
-	(label "ADC_TDM_OUT"
-		(at 750.57 420.37 0.0000)
+	(global_label "AKM_3V3_D"
+		(shape bidirectional)
+		(at 650.24 505.46 0.0000)
 		(effects
 			(font
-				(size 0.58 0.58)
+				(size 0.54 0.54)
 			)
 			(justify left bottom)
 		)
-		(uuid "1901ba24-2824-50ba-b9e2-0bb523c72572")
+		(uuid "cf33f36b-659f-5b55-b074-4e9ddbaf5f10")
+	)
+	(global_label "DAC_5V_PG"
+		(shape bidirectional)
+		(at 635 510.54 0.0000)
+		(effects
+			(font
+				(size 0.54 0.54)
+			)
+			(justify right bottom)
+		)
+		(uuid "714aa2fe-0a78-5b04-8df7-2d2bfb314531")
+	)
+	(global_label "AUDIO_SAFE_UNMUTE_N"
+		(shape bidirectional)
+		(at 745.49 496.57 0.0000)
+		(effects
+			(font
+				(size 0.7 0.7)
+			)
+			(justify left bottom)
+		)
+		(uuid "00a38b64-0fef-5632-97e0-f250548d5293")
+	)
+	(global_label "AGND"
+		(shape bidirectional)
+		(at 745.49 504.19 0.0000)
+		(effects
+			(font
+				(size 0.7 0.7)
+			)
+			(justify left bottom)
+		)
+		(uuid "5a0cf19c-bdf5-5953-aa82-8be2ba5c3029")
+	)
+	(global_label "AKM_3V3_D"
+		(shape bidirectional)
+		(at 745.49 541.02 0.0000)
+		(effects
+			(font
+				(size 0.7 0.7)
+			)
+			(justify left bottom)
+		)
+		(uuid "a4659899-f9b7-5a59-82b3-9274463e471c")
+	)
+	(global_label "AGND"
+		(shape bidirectional)
+		(at 745.49 548.64 0.0000)
+		(effects
+			(font
+				(size 0.7 0.7)
+			)
+			(justify left bottom)
+		)
+		(uuid "888d7f94-aeb4-5790-8c12-3280219b3cb7")
+	)
+	(global_label "AUD_DAC_MUTE_CMD_N"
+		(shape bidirectional)
+		(at 534.67 524.51 0.0000)
+		(effects
+			(font
+				(size 0.54 0.54)
+			)
+			(justify left bottom)
+		)
+		(uuid "c55c5d7a-4b82-5dbe-ace9-796e32870f48")
 	)
 	(no_connect
 		(at 255.27 115.57)
-		(uuid "3d45400c-57bf-5de9-b200-ed7892873afe")
+		(uuid "55752eba-3f65-5274-b59b-9b4e95a2962e")
 	)
 	(no_connect
 		(at 252.73 115.57)
-		(uuid "7cacd992-fbe2-53c4-bc88-185c1b3c0c0a")
+		(uuid "88bdbe2c-68c0-5ba3-be78-b83e49402400")
 	)
 	(no_connect
 		(at 257.81 115.57)
-		(uuid "ef7330ed-f5af-54ae-9fbb-472ed6acc7c8")
+		(uuid "396a4810-be2a-5d18-bb76-253ff24fa81d")
 	)
 	(no_connect
 		(at 394.97 115.57)
-		(uuid "46b114d3-8f23-5606-8056-7e8f769085ec")
+		(uuid "ce7c8846-76f7-5c96-acf7-6b5c146c78bd")
 	)
 	(no_connect
 		(at 392.43 115.57)
-		(uuid "e0999bf4-8014-578f-90c8-33ff257dced3")
+		(uuid "c8e153ee-2b99-5979-bfc1-51ef61bf470f")
 	)
 	(no_connect
 		(at 397.51 115.57)
-		(uuid "e6bcec14-5f0e-5238-9f1a-3ec931707802")
+		(uuid "f075c165-86c1-5a14-9c58-1b11c05db116")
 	)
 	(no_connect
 		(at 534.67 115.57)
-		(uuid "077d88a4-09c5-56df-8906-2a5c08e59d9f")
+		(uuid "559c25b1-48eb-503a-a261-8bc86f243136")
 	)
 	(no_connect
 		(at 532.13 115.57)
-		(uuid "b0bb89fd-30c8-5773-9503-8555965f017d")
+		(uuid "0fa109e2-e031-5b27-aa1d-7b5c404dee1d")
 	)
 	(no_connect
 		(at 537.21 115.57)
-		(uuid "f45fdaa1-bec4-534e-b522-e33788f26e68")
+		(uuid "37a21df5-4207-54db-badd-cad26f600464")
 	)
 	(no_connect
 		(at 675.64 115.57)
-		(uuid "09dcc024-8642-551c-b719-09381212b5a6")
+		(uuid "652db88a-a4bd-5fb9-ae4c-8605f834b34e")
 	)
 	(no_connect
 		(at 673.1 115.57)
-		(uuid "64d7e6bb-50ce-5491-b608-4d3df0a3e0c3")
+		(uuid "994cc001-17ce-514a-ab68-fe9912cd1275")
 	)
 	(no_connect
 		(at 678.18 115.57)
-		(uuid "1b23cdaa-034b-5ef5-b4a2-5933a95655dd")
+		(uuid "dc5f7255-2d0e-5121-9b89-ac33c065695f")
 	)
 	(no_connect
 		(at 353.06 320.04)
-		(uuid "d01d6ea6-ff62-5cf6-8f83-10c7f3d2636e")
+		(uuid "b55929a7-ca16-5922-bd82-91951ae402a4")
 	)
 	(no_connect
 		(at 355.6 320.04)
-		(uuid "83c93a67-df24-510a-87d6-05cbb528991c")
+		(uuid "6220fccb-f2ff-5189-a93b-b5055e22eaa9")
 	)
 	(no_connect
 		(at 358.14 320.04)
-		(uuid "b3888d66-4dac-5c6a-a98c-f65f1296bada")
+		(uuid "96f1aabc-e6db-513d-87cb-654e342d9233")
 	)
 	(text "1. LOCKED CARRIER HARNESS"
 		(exclude_from_sim no)
@@ -4520,7 +5051,7 @@
 				(bold yes)
 			)
 		)
-		(uuid "e6ded655-88aa-5e6a-a94c-6bba0dcdb892")
+		(uuid "a4c7e377-957b-562b-9bb2-c45b96fd333d")
 	)
 	(text "Harness length and pair assignment are controlled by docs/audio_tdm_harness_a1.csv."
 		(exclude_from_sim no)
@@ -4530,7 +5061,7 @@
 				(size 0.85 0.85)
 			)
 		)
-		(uuid "efb657dc-5914-5a2c-ba2a-047df8006d6c")
+		(uuid "f2c1f9aa-535f-5f09-86c3-b9d2618610c4")
 	)
 	(text "2. TERMINATED LVDS RECEIVERS"
 		(exclude_from_sim no)
@@ -4541,7 +5072,7 @@
 				(bold yes)
 			)
 		)
-		(uuid "0e2f6a52-a8f4-57c8-baa5-50bf8a9e3c70")
+		(uuid "b100ec13-9cf2-5f06-833c-78492ac79c9d")
 	)
 	(text "MCLK: integrated 110 ohm termination"
 		(exclude_from_sim no)
@@ -4551,7 +5082,7 @@
 				(size 0.78 0.78)
 			)
 		)
-		(uuid "d9034926-4a4a-52a2-a682-e52841cfe372")
+		(uuid "96306c9c-d5fe-5086-ac6f-ead038f068e9")
 	)
 	(text "BCLK: integrated 110 ohm termination"
 		(exclude_from_sim no)
@@ -4561,7 +5092,7 @@
 				(size 0.78 0.78)
 			)
 		)
-		(uuid "b05054bf-5bca-5074-9951-680586ebd180")
+		(uuid "b7906c9d-5f4b-5594-bad1-bd7aa06db2ad")
 	)
 	(text "FSYNC: integrated 110 ohm termination"
 		(exclude_from_sim no)
@@ -4571,7 +5102,7 @@
 				(size 0.78 0.78)
 			)
 		)
-		(uuid "4adea9db-d732-58a7-a755-5c887645410d")
+		(uuid "08b73111-52ce-517c-930f-aaf4a70770e2")
 	)
 	(text "DAC_SDIN: integrated 110 ohm termination"
 		(exclude_from_sim no)
@@ -4581,7 +5112,7 @@
 				(size 0.78 0.78)
 			)
 		)
-		(uuid "72b54f87-315a-58da-aba2-4ef63b0e59c3")
+		(uuid "12096962-7e44-5883-89bf-156c23465798")
 	)
 	(text "3. ADC RETURN LVDS DRIVER"
 		(exclude_from_sim no)
@@ -4592,7 +5123,7 @@
 				(bold yes)
 			)
 		)
-		(uuid "8ade672a-8cab-54c8-a63c-5cb200653a41")
+		(uuid "63cc8865-463c-556b-b8cd-f59a5813ee8c")
 	)
 	(text "4. CONTROL DEFAULTS AND POWER STATE"
 		(exclude_from_sim no)
@@ -4603,37 +5134,58 @@
 				(bold yes)
 			)
 		)
-		(uuid "f3dbb96a-f468-58b8-90ac-61672d2051d8")
+		(uuid "2f744cc4-8083-51cc-a8a3-82e731de129d")
 	)
-	(text "Reset and mute default asserted while the harness is absent or the carrier is unpowered."
+	(text "5. HARDWARE FAIL-SILENT GATE"
 		(exclude_from_sim no)
-		(at 525 445 0.0000)
+		(at 525 430 0.0000)
 		(effects
 			(font
-				(size 0.88 0.88)
+				(size 1.6 1.6)
+				(bold yes)
 			)
 		)
-		(uuid "43b3eeb7-45e0-501a-bbcc-86e60f7634a7")
+		(uuid "aab72a37-e37f-5547-b993-0c4761761738")
 	)
-	(text "AUDIO_ENABLE is consumed by the local audio-power sequence; firmware releases resets only after all PG signals and clocks are valid."
+	(text "U106 permits DAC unmute and relay closure only when the carrier command, ADC_5V_PG, and DAC_5V_PG are all high."
 		(exclude_from_sim no)
-		(at 525 460 0.0000)
+		(at 525 585 0.0000)
 		(effects
 			(font
-				(size 0.88 0.88)
+				(size 0.78 0.78)
 			)
 		)
-		(uuid "12b028a3-890f-5552-8419-771fb4574ee5")
+		(uuid "1c6e12b1-f14a-55b2-8c10-8358eda025d1")
+	)
+	(text "Any power-good loss forces AUDIO_SAFE_UNMUTE_N low in hardware; R117 keeps mute/relays asserted if AKM_3V3_D is absent."
+		(exclude_from_sim no)
+		(at 525 598 0.0000)
+		(effects
+			(font
+				(size 0.78 0.78)
+			)
+		)
+		(uuid "b99cf47c-2daf-5acd-8ac7-521d74723419")
+	)
+	(text "SN74LVC1G11 inputs tolerate the 5 V PG pull-ups and Ioff prevents back-powering while its 3.3 V supply is off."
+		(exclude_from_sim no)
+		(at 525 611 0.0000)
+		(effects
+			(font
+				(size 0.78 0.78)
+			)
+		)
+		(uuid "6e06b467-fdc7-5a72-9cde-8773f70a4add")
 	)
 	(text "Route AKM_MCLK, AKM_BCLK, AKM_FSYNC, DAC_TDM_IN, and ADC_TDM_OUT as short referenced single-ended traces after the translators."
 		(exclude_from_sim no)
-		(at 525 475 0.0000)
+		(at 525 624 0.0000)
 		(effects
 			(font
-				(size 0.88 0.88)
+				(size 0.78 0.78)
 			)
 		)
-		(uuid "92dd5043-411a-5b5f-bb13-bb7c5350d56e")
+		(uuid "89649889-8423-5477-8053-935d4201c37c")
 	)
 	(sheet_instances
 		(path "/"

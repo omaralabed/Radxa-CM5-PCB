@@ -172,7 +172,7 @@ loops.
 ## PCB And Routing Preconditions
 
 - Do not route until the final panel connector Z datum is measured.
-- The current footprint audit covers 1038 components and reports 10 routing
+- The current footprint audit covers 1203 unique physical-board components and reports 10 routing
   blockers and 11 production blockers. The routing blockers are the two AKM
   exposed-pad package coupons and eight Panasonic TQ2 relay fit coupons. The
   additional production blocker is the Kycon headset-jack physical coupon; see

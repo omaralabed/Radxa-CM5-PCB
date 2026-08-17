@@ -1,79 +1,79 @@
-ERC report (2026-08-16T18:36:17, Encoding UTF8)
+ERC report (2026-08-17T07:51:55, Encoding UTF8)
 Report includes: Errors, Warnings
 
 ***** Sheet /
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(229.87 mm, 138.43 mm): Label 'AKM_MCLK'
+    @(229.87 mm, 138.43 mm): Global Label 'AKM_MCLK'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(229.87 mm, 140.97 mm): Label 'AKM_FSYNC'
+    @(229.87 mm, 140.97 mm): Global Label 'AKM_FSYNC'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(229.87 mm, 151.13 mm): Label 'AUD_DAC_MUTE_N'
+    @(229.87 mm, 151.13 mm): Global Label 'AUDIO_SAFE_UNMUTE_N'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(229.87 mm, 153.67 mm): Label 'AUD_I2C_SDA'
+    @(229.87 mm, 153.67 mm): Global Label 'AUD_I2C_SDA'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(229.87 mm, 161.29 mm): Label 'DAC_CH1N'
+    @(229.87 mm, 161.29 mm): Global Label 'DAC_CH1N'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(229.87 mm, 166.37 mm): Label 'DAC_CH2P'
+    @(229.87 mm, 166.37 mm): Global Label 'DAC_CH2P'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(229.87 mm, 168.91 mm): Label 'DAC_CH3N'
+    @(229.87 mm, 168.91 mm): Global Label 'DAC_CH3N'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(229.87 mm, 173.99 mm): Label 'DAC_CH4P'
+    @(229.87 mm, 173.99 mm): Global Label 'DAC_CH4P'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(229.87 mm, 179.07 mm): Label 'DAC_CH5N'
+    @(229.87 mm, 179.07 mm): Global Label 'DAC_CH5N'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(229.87 mm, 184.15 mm): Label 'DAC_CH6P'
+    @(229.87 mm, 184.15 mm): Global Label 'DAC_CH6P'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(229.87 mm, 186.69 mm): Label 'DAC_CH7N'
+    @(229.87 mm, 186.69 mm): Global Label 'DAC_CH7N'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(229.87 mm, 191.77 mm): Label 'DAC_CH8P'
+    @(229.87 mm, 191.77 mm): Global Label 'DAC_CH8P'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(270.51 mm, 138.43 mm): Label 'AKM_BCLK'
+    @(270.51 mm, 138.43 mm): Global Label 'AKM_BCLK'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(270.51 mm, 140.97 mm): Label 'DAC_TDM_IN'
+    @(270.51 mm, 140.97 mm): Global Label 'DAC_TDM_IN'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(270.51 mm, 153.67 mm): Label 'AUD_I2C_SCL'
+    @(270.51 mm, 153.67 mm): Global Label 'AUD_I2C_SCL'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(270.51 mm, 158.75 mm): Label 'DAC_CH1P'
+    @(270.51 mm, 158.75 mm): Global Label 'DAC_CH1P'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(270.51 mm, 163.83 mm): Label 'DAC_CH2N'
+    @(270.51 mm, 163.83 mm): Global Label 'DAC_CH2N'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(270.51 mm, 166.37 mm): Label 'DAC_CH3P'
+    @(270.51 mm, 166.37 mm): Global Label 'DAC_CH3P'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(270.51 mm, 171.45 mm): Label 'DAC_CH4N'
+    @(270.51 mm, 171.45 mm): Global Label 'DAC_CH4N'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(270.51 mm, 176.53 mm): Label 'DAC_CH5P'
+    @(270.51 mm, 176.53 mm): Global Label 'DAC_CH5P'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(270.51 mm, 181.61 mm): Label 'DAC_CH6N'
+    @(270.51 mm, 181.61 mm): Global Label 'DAC_CH6N'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(270.51 mm, 184.15 mm): Label 'DAC_CH7P'
+    @(270.51 mm, 184.15 mm): Global Label 'DAC_CH7P'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(270.51 mm, 189.23 mm): Label 'DAC_CH8N'
+    @(270.51 mm, 189.23 mm): Global Label 'DAC_CH8N'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(270.51 mm, 196.85 mm): Label 'AUD_DAC_RST_N'
+    @(270.51 mm, 196.85 mm): Global Label 'AUD_DAC_RST_N'
 
  ** ERC messages: 24  Errors 0  Warnings 24
 

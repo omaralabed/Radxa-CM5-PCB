@@ -27,8 +27,9 @@
 - `CM5-CARRIER/CM5-Carrier.kicad_pro`: carrier interface overview and shared
   interboard connector contract.
 - `CM5-CARRIER/CM5-Core-Allocated.kicad_pro`: exact 300-contact CM5 connector
-  representation with all 76 locked allocations, power/service controls, and
-  debug UART.
+  representation with all 76 allocation-ledger contacts owned: 74 connected
+  and two explicit assigned no-connects, plus power/service controls and debug
+  UART.
 - `CM5-CARRIER/Network-PCIe.kicad_pro`: native WAN1, PI7C9X2G608GP PCIe switch,
   three LAN7430 endpoints, four protected MagJacks, and the AW7915-NP1 4T4R
   Wi-Fi interface through a Molex 0679101002 Mini PCIe socket.
@@ -99,6 +100,7 @@ KICAD=/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli
   cad/kicad/AUDIO-8X8/Audio-8x8.kicad_sch
 
 python3 cad/kicad/PWR-SELECT/validate_power_selector.py
+python3 cad/kicad/CM5-CARRIER/validate_cm5_pin_allocation.py
 python3 cad/kicad/CM5-CARRIER/validate_power_regulators.py
 python3 cad/kicad/AUDIO-8X8/validate_audio_8x8.py
 python3 cad/kicad/validate_interface_contracts.py
@@ -106,7 +108,8 @@ python3 cad/kicad/audit_footprint_readiness.py
 python3 cad/kicad/export_schematic_bom.py \
   --schematic cad/kicad/CM5-CARRIER/Power-Regulators-A1.kicad_sch \
   --output docs/power_regulator_bom_a1.csv \
-  --exclude U1180 --exclude TP1190 --exclude TP1191 --exclude TP1192 --exclude TP1193
+  --exclude TP1190 --exclude TP1191 --exclude TP1192 --exclude TP1193 \
+  --exclude TP1194 --exclude TP1195
 python3 cad/kicad/AUDIO-8X8/export_audio_8x8_bom.py
 ```
 
@@ -138,24 +141,26 @@ assignments, including all three selector harnesses, power/temperature alerts,
 the 30-pin buffered TDM/control link, separate audio power, four fan headers,
 and all 16 XLR connectors.
 
-The footprint audit covers every component on all sixteen sheets. Its default mode
-updates the controlled CSV and Markdown reports. Use `--routing` to enforce the
-placement/routing gate and `--release` to additionally require a manufacturer
-and MPN for every board-mounted item. The drawing-backed connector evidence and
-the Molex 0679101002 datum contract are recorded in
+The footprint audit covers every component once through the three physical
+board roots; hierarchical child sheets are not double-counted. Its default
+mode updates the controlled CSV and Markdown reports. Use `--routing` to
+enforce the placement/routing gate and `--release` to additionally require a
+manufacturer and MPN for every board-mounted item. The drawing-backed
+connector evidence and the Molex 0679101002 datum contract are recorded in
 [`FOOTPRINT_RELEASE.md`](FOOTPRINT_RELEASE.md).
 
-The current audit covers 1038 components. Ten items intentionally block PCB
+The current audit covers 1203 components. Ten items intentionally block PCB
 routing until physical coupons are approved: the two AKM exposed-pad packages
 and eight Panasonic TQ2 relay lands. The stricter production audit also holds
 the Kycon headset jack coupon, for 11 production blockers total.
 
-Every A1 detailed sheet and AUDIO-8X8 currently reports zero ERC errors. The
-remaining warnings are isolated off-sheet interface labels or deliberately
-unused package pins and are classified in
-`CM5-CARRIER/DETAILED_CAPTURE_STATUS.md`. The AUDIO-8X8 XLR shield pins now bond
-directly to `XLR_CHASSIS`; one controlled 1 Mohm / 4.7 nF bond joins chassis to
-`AGND` for static and RF control.
+The three electrically authoritative board roots (`PowerSelector`,
+`CM5-Carrier`, and `Audio-8x8`) each report `0 errors / 0 warnings`. Standalone
+child-sheet reports can contain expected off-sheet context findings; the review
+script compares every one against an exact allowlist and fails on any drift.
+The classification is recorded in `CM5-CARRIER/DETAILED_CAPTURE_STATUS.md`.
+The AUDIO-8X8 XLR shield pins bond directly to `XLR_CHASSIS`; one controlled
+1 Mohm / 4.7 nF bond joins chassis to `AGND` for static and RF control.
 
 After every generated or manual schematic revision, export the full sheet to
 PDF and inspect the dense areas at high resolution. Labels, wires, symbol
@@ -164,10 +169,11 @@ Electrical validation does not replace this visual readability gate.
 
 ## Next Engineering Order
 
-1. Close the controlled footprint/MPN audit for Thermal-IO, Network-PCIe,
-   WWAN-SIM, Display-Harness, and Audio-Control. Power-Regulators-A1 is closed
-   at the schematic/BOM footprint gate but still requires first-article,
-   copper-current, thermal, loop-response, and compensation review.
+1. Close the ten routing-critical AKM/TQ2 footprint coupons and the Kycon
+   production coupon. All other schematic components currently resolve to a
+   controlled footprint and production part; power and high-current lands
+   still require first-article, copper-current, thermal, loop-response, and
+   compensation review.
 2. Complete selector shunt/current-limit tolerance, hold-up/precharge, SOA,
    telemetry calibration, and 15 A thermal review, then create its PCB.
 3. Release the measured enclosure datums, custom four-side frame drawing, and

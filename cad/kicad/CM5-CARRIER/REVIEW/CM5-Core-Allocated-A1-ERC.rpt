@@ -1,186 +1,180 @@
-ERC report (2026-08-16T22:23:06, Encoding UTF8)
+ERC report (2026-08-17T08:26:09, Encoding UTF8)
 Report includes: Errors, Warnings
 
 ***** Sheet /
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(77.47 mm, 45.72 mm): Label 'WAN1_MDI3_P'
+    @(77.47 mm, 45.72 mm): Global Label 'WAN1_MDI3_P'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(77.47 mm, 48.26 mm): Label 'WAN1_MDI3_N'
+    @(77.47 mm, 48.26 mm): Global Label 'WAN1_MDI3_N'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(77.47 mm, 53.34 mm): Label 'WAN1_MDI2_N'
+    @(77.47 mm, 53.34 mm): Global Label 'WAN1_MDI2_N'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(77.47 mm, 55.88 mm): Label 'WAN1_MDI2_P'
+    @(77.47 mm, 55.88 mm): Global Label 'WAN1_MDI2_P'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(77.47 mm, 60.96 mm): Label 'WAN1_LED2'
+    @(77.47 mm, 63.50 mm): Global Label 'WAN1_LED1'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(77.47 mm, 63.50 mm): Label 'WAN1_LED1'
+    @(77.47 mm, 66.04 mm): Global Label 'WAN1_LED0'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(77.47 mm, 66.04 mm): Label 'WAN1_LED0'
+    @(77.47 mm, 81.28 mm): Global Label 'HS_SDOUT_TO_CODEC'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(77.47 mm, 81.28 mm): Label 'HS_SDOUT_TO_CODEC'
+    @(133.35 mm, 45.72 mm): Global Label 'WAN1_MDI1_P'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(133.35 mm, 45.72 mm): Label 'WAN1_MDI1_P'
+    @(133.35 mm, 48.26 mm): Global Label 'WAN1_MDI1_N'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(133.35 mm, 48.26 mm): Label 'WAN1_MDI1_N'
+    @(133.35 mm, 53.34 mm): Global Label 'WAN1_MDI0_N'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(133.35 mm, 53.34 mm): Label 'WAN1_MDI0_N'
+    @(133.35 mm, 55.88 mm): Global Label 'WAN1_MDI0_P'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(133.35 mm, 55.88 mm): Label 'WAN1_MDI0_P'
+    @(133.35 mm, 66.04 mm): Global Label 'AUD_IRQ_N'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(133.35 mm, 66.04 mm): Label 'AUD_IRQ_N'
+    @(133.35 mm, 71.12 mm): Global Label 'PCIE_UP_WAKE_N'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(133.35 mm, 71.12 mm): Label 'PCIE_UP_WAKE_N'
+    @(133.35 mm, 76.20 mm): Global Label 'HS_BCLK'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(133.35 mm, 76.20 mm): Label 'HS_BCLK'
+    @(133.35 mm, 78.74 mm): Global Label 'HS_LRCK'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(133.35 mm, 78.74 mm): Label 'HS_LRCK'
+    @(133.35 mm, 83.82 mm): Global Label 'AUD_DAC_SDIN'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(133.35 mm, 83.82 mm): Label 'AUD_DAC_SDIN'
+    @(133.35 mm, 99.06 mm): Global Label 'AUD_BCLK'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(133.35 mm, 99.06 mm): Label 'AUD_BCLK'
+    @(133.35 mm, 101.60 mm): Global Label 'AUD_FSYNC'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(133.35 mm, 101.60 mm): Label 'AUD_FSYNC'
+    @(133.35 mm, 104.14 mm): Global Label 'AUD_MCLK'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(133.35 mm, 104.14 mm): Label 'AUD_MCLK'
+    @(133.35 mm, 109.22 mm): Global Label 'AUD_ADC_SDOUT'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(133.35 mm, 109.22 mm): Label 'AUD_ADC_SDOUT'
+    @(133.35 mm, 142.24 mm): Global Label 'SYS_I2C7_SCL'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(133.35 mm, 142.24 mm): Label 'SYS_I2C7_SCL'
+    @(133.35 mm, 144.78 mm): Global Label 'SYS_I2C7_SDA'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(133.35 mm, 144.78 mm): Label 'SYS_I2C7_SDA'
+    @(133.35 mm, 167.64 mm): Global Label 'HS_MCLK'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(133.35 mm, 167.64 mm): Label 'HS_MCLK'
+    @(266.70 mm, 53.34 mm): Global Label 'PCIE_UP_PERST_CMD_N'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(266.70 mm, 53.34 mm): Label 'PCIE_UP_PERST_N'
+    @(266.70 mm, 99.06 mm): Global Label 'HDMI_HEAC_P'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(266.70 mm, 99.06 mm): Label 'HDMI_HEAC_P'
+    @(266.70 mm, 106.68 mm): Global Label 'HDMI_CEC'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(266.70 mm, 101.60 mm): Label 'HDMI_HEAC_N'
+    @(266.70 mm, 109.22 mm): Global Label 'HDMI_HPD'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(266.70 mm, 106.68 mm): Label 'HDMI_CEC'
+    @(266.70 mm, 167.64 mm): Global Label 'HDMI_DDC_SDA'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(266.70 mm, 109.22 mm): Label 'HDMI_HPD'
+    @(322.58 mm, 43.18 mm): Global Label 'PCIE_UP_CLKREQ_N'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(266.70 mm, 167.64 mm): Label 'HDMI_DDC_SDA'
+    @(322.58 mm, 48.26 mm): Global Label 'IO_5V0'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(322.58 mm, 43.18 mm): Label 'PCIE_UP_CLKREQ_N'
+    @(322.58 mm, 53.34 mm): Global Label 'PCIE_UP_REFCLK_P'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(322.58 mm, 48.26 mm): Label 'IO_5V0'
+    @(322.58 mm, 55.88 mm): Global Label 'PCIE_UP_REFCLK_N'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(322.58 mm, 53.34 mm): Label 'PCIE_UP_REFCLK_P'
+    @(322.58 mm, 60.96 mm): Global Label 'PCIE_UP_RX_P_CM5'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(322.58 mm, 55.88 mm): Label 'PCIE_UP_REFCLK_N'
+    @(322.58 mm, 63.50 mm): Global Label 'PCIE_UP_RX_N_CM5'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(322.58 mm, 60.96 mm): Label 'PCIE_UP_RX_P_CM5'
+    @(322.58 mm, 68.58 mm): Global Label 'PCIE_UP_TX_P_CM5'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(322.58 mm, 63.50 mm): Label 'PCIE_UP_RX_N_CM5'
+    @(322.58 mm, 71.12 mm): Global Label 'PCIE_UP_TX_N_CM5'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(322.58 mm, 68.58 mm): Label 'PCIE_UP_TX_P_CM5'
+    @(322.58 mm, 129.54 mm): Global Label 'HDMI_D2_P'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(322.58 mm, 71.12 mm): Label 'PCIE_UP_TX_N_CM5'
+    @(322.58 mm, 132.08 mm): Global Label 'HDMI_D2_N'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(322.58 mm, 129.54 mm): Label 'HDMI_D2_P'
+    @(322.58 mm, 137.16 mm): Global Label 'HDMI_D1_P'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(322.58 mm, 132.08 mm): Label 'HDMI_D2_N'
+    @(322.58 mm, 139.70 mm): Global Label 'HDMI_D1_N'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(322.58 mm, 137.16 mm): Label 'HDMI_D1_P'
+    @(322.58 mm, 144.78 mm): Global Label 'HDMI_D0_P'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(322.58 mm, 139.70 mm): Label 'HDMI_D1_N'
+    @(322.58 mm, 147.32 mm): Global Label 'HDMI_D0_N'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(322.58 mm, 144.78 mm): Label 'HDMI_D0_P'
+    @(322.58 mm, 152.40 mm): Global Label 'HDMI_CLK_P'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(322.58 mm, 147.32 mm): Label 'HDMI_D0_N'
+    @(322.58 mm, 154.94 mm): Global Label 'HDMI_CLK_N'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(322.58 mm, 152.40 mm): Label 'HDMI_CLK_P'
+    @(322.58 mm, 167.64 mm): Global Label 'HDMI_DDC_SCL'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(322.58 mm, 154.94 mm): Label 'HDMI_CLK_N'
+    @(457.20 mm, 99.06 mm): Global Label 'TOUCH_USB_DP'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(322.58 mm, 167.64 mm): Label 'HDMI_DDC_SCL'
+    @(457.20 mm, 101.60 mm): Global Label 'TOUCH_USB_DM'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(457.20 mm, 99.06 mm): Label 'TOUCH_USB_DP'
+    @(457.20 mm, 106.68 mm): Global Label 'WWAN_USB3_TX_P'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(457.20 mm, 101.60 mm): Label 'TOUCH_USB_DM'
+    @(457.20 mm, 109.22 mm): Global Label 'WWAN_USB3_TX_N'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(457.20 mm, 106.68 mm): Label 'WWAN_USB3_TX_P'
+    @(457.20 mm, 114.30 mm): Global Label 'WWAN_USB3_RX_P'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(457.20 mm, 109.22 mm): Label 'WWAN_USB3_TX_N'
+    @(457.20 mm, 116.84 mm): Global Label 'WWAN_USB3_RX_N'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(457.20 mm, 114.30 mm): Label 'WWAN_USB3_RX_P'
+    @(457.20 mm, 121.92 mm): Global Label 'WWAN_USB2_DP'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(457.20 mm, 116.84 mm): Label 'WWAN_USB3_RX_N'
+    @(457.20 mm, 124.46 mm): Global Label 'WWAN_USB2_DM'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(457.20 mm, 121.92 mm): Label 'WWAN_USB2_DP'
+    @(513.08 mm, 45.72 mm): Global Label 'HS_I2C_SDA'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(457.20 mm, 124.46 mm): Label 'WWAN_USB2_DM'
+    @(513.08 mm, 48.26 mm): Global Label 'HS_I2C_SCL'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(513.08 mm, 45.72 mm): Label 'HS_I2C_SDA'
+    @(513.08 mm, 86.36 mm): Global Label 'HS_JACK_DET_N'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(513.08 mm, 48.26 mm): Label 'HS_I2C_SCL'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(513.08 mm, 86.36 mm): Label 'HS_JACK_DET_N'
-[isolated_pin_label]: Label connected to only one pin
-    ; warning
-    @(513.08 mm, 91.44 mm): Label 'HS_SDIN_FROM_CODEC'
+    @(513.08 mm, 91.44 mm): Global Label 'HS_SDIN_FROM_CODEC'
 
- ** ERC messages: 59  Errors 0  Warnings 59
+ ** ERC messages: 57  Errors 0  Warnings 57
 
  ** Ignored checks:
     - Global label only appears once in the schematic

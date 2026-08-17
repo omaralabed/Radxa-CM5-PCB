@@ -10,7 +10,7 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 SCHEMATIC = HERE / "Radxa-CM5-ProComm-System.kicad_sch"
 PROJECT = HERE / "Radxa-CM5-ProComm-System.kicad_pro"
-EXPECTED_PAGES = {str(page) for page in range(1, 18)}
+EXPECTED_DIRECT_PAGES = {"1", "2", "3", "11"}
 EXPECTED_ROOT_SYMBOLS = 58
 EXPECTED_ROOT_WIRES = 294
 EXPECTED_ROOT_LABELS = 294
@@ -45,13 +45,13 @@ def main() -> int:
 
     if not PROJECT.exists():
         failures.append("system project file is missing")
-    if len(filenames) != 16:
-        failures.append(f"expected 16 sheet files, found {len(filenames)}")
+    if len(filenames) != 3:
+        failures.append(f"expected 3 physical board roots, found {len(filenames)}")
     if len(set(filenames)) != len(filenames):
         failures.append("sheet filenames are not unique")
-    if page_numbers != EXPECTED_PAGES:
+    if page_numbers != EXPECTED_DIRECT_PAGES:
         failures.append(
-            f"expected root and child pages {sorted(EXPECTED_PAGES)}, "
+            f"expected root and direct board pages {sorted(EXPECTED_DIRECT_PAGES)}, "
             f"found {sorted(page_numbers)}"
         )
     for filename in filenames:
@@ -72,23 +72,36 @@ def main() -> int:
     missing_nets = sorted(net for net in CRITICAL_NETS if f'"{net}"' not in text)
     if missing_nets:
         failures.append(f"missing critical system nets: {missing_nets}")
-    excluded_count = 16 + EXPECTED_ROOT_SYMBOLS
+    excluded_count = 3 + EXPECTED_ROOT_SYMBOLS
     if text.count("(in_bom no)") != excluded_count:
-        failures.append("system representations and all sixteen sheets must be excluded from BOM")
+        failures.append("system representations and all three board roots must be excluded from BOM")
     if text.count("(on_board no)") != excluded_count:
-        failures.append("system representations and all sixteen sheets must be excluded from board update")
+        failures.append("system representations and all three board roots must be excluded from board update")
     if "Top sheet is the electrical system interconnect" not in text:
         failures.append("electrical system-interconnect title-block declaration is missing")
-    if "Three physical PCB netlists remain separate" not in text:
-        failures.append("physical-board boundary warning is missing")
+    if "authoritative physical PCB netlists" not in text:
+        failures.append("physical-board authority declaration is missing")
+
+    nested_expectations = {
+        HERE.parent / "CM5-CARRIER" / "CM5-Carrier.kicad_sch": 7,
+        HERE.parent / "AUDIO-8X8" / "Audio-8x8.kicad_sch": 6,
+    }
+    for root_schematic, expected_count in nested_expectations.items():
+        root_text = root_schematic.read_text(encoding="utf-8")
+        child_count = len(re.findall(r'\(property "Sheetfile" "([^"]+)"', root_text))
+        if child_count != expected_count:
+            failures.append(
+                f"{root_schematic.name} expected {expected_count} connected children, "
+                f"found {child_count}"
+            )
 
     if failures:
         for failure in failures:
             print(f"FAIL: {failure}")
         return 1
     print("PASS: page 1 contains 58 real electrical symbols and 294 named pin interconnects")
-    print("PASS: pages 2-17 contain all 16 reviewed component-level circuit sheets")
-    print("PASS: PWR-SELECT, CM5-CARRIER, and AUDIO-8X8 remain separate PCB netlists")
+    print("PASS: three physical board roots expose all 13 nested detailed circuit sheets")
+    print("PASS: PWR-SELECT, CM5-CARRIER, and AUDIO-8X8 are authoritative PCB netlists")
     print("PASS: system representations are excluded from BOM and board update")
     return 0
 

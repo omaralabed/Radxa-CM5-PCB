@@ -62,7 +62,7 @@ def main() -> int:
     checks.append(
         check(
             "display-harness controlled BOM",
-            len(rows) == 24 and complete,
+            len(rows) == 22 and complete,
             f"{len(rows)} rows; every manufacturer, MPN, and footprint field is complete",
         )
     )
@@ -83,7 +83,6 @@ def main() -> int:
         "F801": ("0603L010YR", "Fuse:Fuse_0603_1608Metric"),
         "F802": ("1206L110/16WR", "Fuse:Fuse_1206_3216Metric"),
         "C801": ("GRM188R61E106MA73D", "Capacitor_SMD:C_0603_1608Metric"),
-        "R801": ("RC0603FR-072K2L", "Resistor_SMD:R_0603_1608Metric"),
         "U805": (
             "TPS62913RPUT",
             "Package_DFN_QFN:Texas_RPU0010A_VQFN-HR-10_2x2mm_P0.5mm",
@@ -129,6 +128,17 @@ def main() -> int:
             "HDMI Type-A pin contract",
             all(net_map.get(("J801", pin)) == net for pin, net in hdmi_expected.items()),
             "TMDS, DDC, CEC, HPD, 5 V, ground, and shell nets match the Type-A allocation",
+        )
+    )
+    checks.append(
+        check(
+            "Radxa-reference direct HDMI DDC",
+            "R801" not in by_ref
+            and "R802" not in by_ref
+            and net_map.get(("J801", "15")) == "HDMI_DDC_SCL"
+            and net_map.get(("J801", "16")) == "HDMI_DDC_SDA"
+            and "do not add duplicate carrier pull-ups" in schematic_text,
+            "DDC reaches the CM5 5 V DDC nets without duplicate carrier pull-ups",
         )
     )
 

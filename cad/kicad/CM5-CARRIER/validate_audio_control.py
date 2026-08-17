@@ -74,7 +74,7 @@ def main() -> int:
     checks.append(
         check(
             "audio-control controlled BOM",
-            len(rows) == 56 and complete and "U900" not in by_ref,
+            len(rows) == 57 and complete and "U900" not in by_ref,
             f"{len(rows)} board parts; off-sheet U900 excluded; all production fields complete",
         )
     )
@@ -140,10 +140,14 @@ def main() -> int:
                     "1": "HEADSET_AGND", "2": "HEADSET_1V8",
                     "3": "HS_CODEC_I2C_SCL", "4": "HS_CODEC_I2C_SDA",
                     "5": "HS_I2C_SDA", "6": "HS_I2C_SCL",
-                    "7": "LOGIC_3V3", "8": "LOGIC_3V3",
+                    "7": "HS_I2C_BIAS", "8": "HS_I2C_BIAS",
                 },
-            ),
-            "PCA9306 separates CM5 3.3 V I2C from the ES8316 1.8 V bus",
+            )
+            and pins_match(
+                net_map, "R909", {"1": "LOGIC_3V3", "2": "HS_I2C_BIAS"}
+            )
+            and by_ref.get("R909", {}).get("MPN") == "RC0603FR-07200KL",
+            "PCA9306 VREF2/EN bias follows the NXP 200k always-enabled circuit",
         )
     )
 

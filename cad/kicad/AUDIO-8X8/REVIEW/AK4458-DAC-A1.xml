@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/Users/viewvision/Desktop/Radxa CM5 PCB/cad/kicad/AUDIO-8X8/AK4458-DAC.kicad_sch</source>
-    <date>2026-08-16T18:36:21</date>
+    <date>2026-08-17T08:37:36</date>
     <tool>Eeschema 10.0.5-rc1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -42,7 +42,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>797c8a73-e341-5b20-ba90-8b2cc974eb99</tstamps>
+      <tstamps>9c73ca6f-71f1-5ded-8311-28cf8c3edbd7</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -70,7 +70,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>f2c1f9aa-535f-5f09-86c3-b9d2618610c4</tstamps>
+      <tstamps>b8f4656d-62f6-5181-b4ef-9f5e1f929c9a</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -98,7 +98,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>396a4810-be2a-5d18-bb76-253ff24fa81d</tstamps>
+      <tstamps>25fa34a2-43eb-5e97-a2be-b7d1e5bae3af</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -126,7 +126,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>4eb60fe5-038a-5f08-97e7-bd62d0fa9f58</tstamps>
+      <tstamps>97332579-e1ea-50a2-ac46-44579c9cd446</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -137,24 +137,24 @@
       </units>
     </comp>
     <comp ref="C361">
-      <value>100uF 6.3V polymer</value>
-      <footprint>Capacitor_SMD:CP_Elec_6.3x5.8</footprint>
+      <value>220uF 6.3V polymer</value>
+      <footprint>Capacitor_SMD:CP_Elec_8x6.9</footprint>
       <fields>
         <field name="Manufacturer">Panasonic</field>
-        <field name="MPN">6SVP100M</field>
-        <field name="Footprint">Capacitor_SMD:CP_Elec_6.3x5.8</field>
+        <field name="MPN">6SVP220MX</field>
+        <field name="Footprint">Capacitor_SMD:CP_Elec_8x6.9</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C_Polarized" description="Polarized capacitor"/>
       <property name="Manufacturer" value="Panasonic"/>
-      <property name="MPN" value="6SVP100M"/>
+      <property name="MPN" value="6SVP220MX"/>
       <property name="Sheetname" value="AK4458-DAC"/>
       <property name="Sheetfile" value="AK4458-DAC.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="CP_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>596ee33c-0845-59ec-9c81-9bcb525442cc</tstamps>
+      <tstamps>237ec052-7790-54bb-8d35-88b171897f1b</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -165,24 +165,24 @@
       </units>
     </comp>
     <comp ref="C362">
-      <value>100uF 6.3V polymer</value>
-      <footprint>Capacitor_SMD:CP_Elec_6.3x5.8</footprint>
+      <value>220uF 6.3V polymer</value>
+      <footprint>Capacitor_SMD:CP_Elec_8x6.9</footprint>
       <fields>
         <field name="Manufacturer">Panasonic</field>
-        <field name="MPN">6SVP100M</field>
-        <field name="Footprint">Capacitor_SMD:CP_Elec_6.3x5.8</field>
+        <field name="MPN">6SVP220MX</field>
+        <field name="Footprint">Capacitor_SMD:CP_Elec_8x6.9</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C_Polarized" description="Polarized capacitor"/>
       <property name="Manufacturer" value="Panasonic"/>
-      <property name="MPN" value="6SVP100M"/>
+      <property name="MPN" value="6SVP220MX"/>
       <property name="Sheetname" value="AK4458-DAC"/>
       <property name="Sheetfile" value="AK4458-DAC.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="CP_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>2bf6b02f-7f8b-58db-9eed-85c4ea4f1d31</tstamps>
+      <tstamps>856995c1-1a8e-5668-949c-3856324eaf3c</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -193,24 +193,24 @@
       </units>
     </comp>
     <comp ref="C363">
-      <value>100uF 6.3V polymer</value>
-      <footprint>Capacitor_SMD:CP_Elec_6.3x5.8</footprint>
+      <value>220uF 6.3V polymer</value>
+      <footprint>Capacitor_SMD:CP_Elec_8x6.9</footprint>
       <fields>
         <field name="Manufacturer">Panasonic</field>
-        <field name="MPN">6SVP100M</field>
-        <field name="Footprint">Capacitor_SMD:CP_Elec_6.3x5.8</field>
+        <field name="MPN">6SVP220MX</field>
+        <field name="Footprint">Capacitor_SMD:CP_Elec_8x6.9</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C_Polarized" description="Polarized capacitor"/>
       <property name="Manufacturer" value="Panasonic"/>
-      <property name="MPN" value="6SVP100M"/>
+      <property name="MPN" value="6SVP220MX"/>
       <property name="Sheetname" value="AK4458-DAC"/>
       <property name="Sheetfile" value="AK4458-DAC.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="CP_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>00ba13ee-7dce-524c-889c-94f67fc117cd</tstamps>
+      <tstamps>df709c1e-b4f0-521c-b3ae-c903547a136a</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -221,24 +221,24 @@
       </units>
     </comp>
     <comp ref="C364">
-      <value>100uF 6.3V polymer</value>
-      <footprint>Capacitor_SMD:CP_Elec_6.3x5.8</footprint>
+      <value>220uF 6.3V polymer</value>
+      <footprint>Capacitor_SMD:CP_Elec_8x6.9</footprint>
       <fields>
         <field name="Manufacturer">Panasonic</field>
-        <field name="MPN">6SVP100M</field>
-        <field name="Footprint">Capacitor_SMD:CP_Elec_6.3x5.8</field>
+        <field name="MPN">6SVP220MX</field>
+        <field name="Footprint">Capacitor_SMD:CP_Elec_8x6.9</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C_Polarized" description="Polarized capacitor"/>
       <property name="Manufacturer" value="Panasonic"/>
-      <property name="MPN" value="6SVP100M"/>
+      <property name="MPN" value="6SVP220MX"/>
       <property name="Sheetname" value="AK4458-DAC"/>
       <property name="Sheetfile" value="AK4458-DAC.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="CP_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>f075c165-86c1-5a14-9c58-1b11c05db116</tstamps>
+      <tstamps>ce195587-1665-5cd0-9752-380ee7940bca</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -266,7 +266,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>b7906c9d-5f4b-5594-bad1-bd7aa06db2ad</tstamps>
+      <tstamps>be856dcd-b99d-54b5-98e6-312db1fb9b02</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -294,7 +294,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>f9785768-e644-57f1-9bd5-83516bfbd4bb</tstamps>
+      <tstamps>731dcab2-9e4f-59af-a48b-41e84b4ba047</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -305,24 +305,24 @@
       </units>
     </comp>
     <comp ref="C373">
-      <value>4.7uF</value>
-      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <value>10uF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <fields>
         <field name="Manufacturer">Murata</field>
-        <field name="MPN">GRM21BR71A475KA73L</field>
-        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="MPN">GRM188R71A106KA73D</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <property name="Manufacturer" value="Murata"/>
-      <property name="MPN" value="GRM21BR71A475KA73L"/>
+      <property name="MPN" value="GRM188R71A106KA73D"/>
       <property name="Sheetname" value="AK4458-DAC"/>
       <property name="Sheetfile" value="AK4458-DAC.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>388a3bd7-7b16-546a-8565-8cea7892eafc</tstamps>
+      <tstamps>757ea742-f06e-54e0-8e43-3aa9dca4a0f3</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -350,7 +350,7 @@
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>37a21df5-4207-54db-badd-cad26f600464</tstamps>
+      <tstamps>3c7ecf02-3f83-5e73-a76a-fc6bd7deedf9</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -361,24 +361,24 @@
       </units>
     </comp>
     <comp ref="C375">
-      <value>4.7uF</value>
-      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <value>10uF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <fields>
         <field name="Manufacturer">Murata</field>
-        <field name="MPN">GRM21BR71A475KA73L</field>
-        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="MPN">GRM188R71A106KA73D</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <property name="Manufacturer" value="Murata"/>
-      <property name="MPN" value="GRM21BR71A475KA73L"/>
+      <property name="MPN" value="GRM188R71A106KA73D"/>
       <property name="Sheetname" value="AK4458-DAC"/>
       <property name="Sheetfile" value="AK4458-DAC.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>9572f16e-81af-5112-9dd7-1c0c55d558fc</tstamps>
+      <tstamps>343b7f73-0d03-512d-8eb3-e7d4e5fc3ce1</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -406,7 +406,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>88867151-6c3b-5452-a2d0-ff0ca9de47a4</tstamps>
+      <tstamps>8b36da1e-a42a-56fa-998d-90184c76aa8a</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -434,7 +434,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>16562129-8b17-5157-99d0-ec7bf031e94b</tstamps>
+      <tstamps>6f446483-1422-5512-981c-2749feff8d62</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -462,7 +462,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>6e1ba24c-059c-5eff-97ff-cfee919c6f2c</tstamps>
+      <tstamps>02081320-fc06-52ff-8796-3972c556b416</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -490,7 +490,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>5e7dcda3-ae08-5324-8d46-5f9ba9f5a47e</tstamps>
+      <tstamps>8d6c6699-f93b-5769-be18-1ceeb86c57c1</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -518,7 +518,7 @@
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>df0d27d9-8407-54cd-9da1-06704018fe62</tstamps>
+      <tstamps>a4ffe7a6-8844-55a4-9853-1e3d4be93824</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -529,24 +529,24 @@
       </units>
     </comp>
     <comp ref="R351">
-      <value>20R</value>
+      <value>10R</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <fields>
         <field name="Manufacturer">Yageo</field>
-        <field name="MPN">RC0603FR-0720RL</field>
+        <field name="MPN">RC0603FR-0710RL</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Manufacturer" value="Yageo"/>
-      <property name="MPN" value="RC0603FR-0720RL"/>
+      <property name="MPN" value="RC0603FR-0710RL"/>
       <property name="Sheetname" value="AK4458-DAC"/>
       <property name="Sheetfile" value="AK4458-DAC.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>e61ed6be-a4a1-5929-ad3e-ad7480f16fca</tstamps>
+      <tstamps>35399707-0be7-54b3-82b6-122478f3beee</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -557,24 +557,24 @@
       </units>
     </comp>
     <comp ref="R352">
-      <value>20R</value>
+      <value>10R</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <fields>
         <field name="Manufacturer">Yageo</field>
-        <field name="MPN">RC0603FR-0720RL</field>
+        <field name="MPN">RC0603FR-0710RL</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Manufacturer" value="Yageo"/>
-      <property name="MPN" value="RC0603FR-0720RL"/>
+      <property name="MPN" value="RC0603FR-0710RL"/>
       <property name="Sheetname" value="AK4458-DAC"/>
       <property name="Sheetfile" value="AK4458-DAC.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>91db4952-b940-5754-8edb-25be4d776a7d</tstamps>
+      <tstamps>217c9510-7601-5f4c-bae1-b92f998442a7</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -585,24 +585,24 @@
       </units>
     </comp>
     <comp ref="R353">
-      <value>20R</value>
+      <value>10R</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <fields>
         <field name="Manufacturer">Yageo</field>
-        <field name="MPN">RC0603FR-0720RL</field>
+        <field name="MPN">RC0603FR-0710RL</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Manufacturer" value="Yageo"/>
-      <property name="MPN" value="RC0603FR-0720RL"/>
+      <property name="MPN" value="RC0603FR-0710RL"/>
       <property name="Sheetname" value="AK4458-DAC"/>
       <property name="Sheetfile" value="AK4458-DAC.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>fa596bb2-a250-5415-a665-e84b2061406e</tstamps>
+      <tstamps>88572923-5ed3-518d-b6c2-a9a06e5a6c24</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -613,24 +613,24 @@
       </units>
     </comp>
     <comp ref="R354">
-      <value>20R</value>
+      <value>10R</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <fields>
         <field name="Manufacturer">Yageo</field>
-        <field name="MPN">RC0603FR-0720RL</field>
+        <field name="MPN">RC0603FR-0710RL</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Manufacturer" value="Yageo"/>
-      <property name="MPN" value="RC0603FR-0720RL"/>
+      <property name="MPN" value="RC0603FR-0710RL"/>
       <property name="Sheetname" value="AK4458-DAC"/>
       <property name="Sheetfile" value="AK4458-DAC.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>4ba353f8-a466-53d5-978f-69cb046106ce</tstamps>
+      <tstamps>b18121b3-7381-5dd0-ad7e-7dd2cf160676</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -656,7 +656,7 @@
       <property name="Sheetname" value="AK4458-DAC"/>
       <property name="Sheetfile" value="AK4458-DAC.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>8612ccba-0458-5216-b36b-d2e80dbf5f90</tstamps>
+      <tstamps>b878565a-afff-53cf-b31d-66f0ce088650</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -838,7 +838,7 @@
     </library>
   </libraries>
   <nets>
-    <net code="1" name="/AGND" class="Default">
+    <net code="1" name="AGND" class="Default">
       <node ref="C351" pin="2" pintype="passive"/>
       <node ref="C352" pin="2" pintype="passive"/>
       <node ref="C353" pin="2" pintype="passive"/>
@@ -868,7 +868,7 @@
       <node ref="U301" pin="8" pinfunction="DSDR3_8" pintype="passive"/>
       <node ref="U301" pin="9" pinfunction="DSDL4_9" pintype="passive"/>
     </net>
-    <net code="2" name="/AKM_3V3_D" class="Default">
+    <net code="2" name="AKM_3V3_D" class="Default">
       <node ref="C374" pin="1" pintype="passive"/>
       <node ref="C375" pin="1" pintype="passive"/>
       <node ref="R321" pin="1" pintype="passive"/>
@@ -876,28 +876,28 @@
       <node ref="R323" pin="1" pintype="passive"/>
       <node ref="U301" pin="45" pinfunction="TVDD_45" pintype="passive"/>
     </net>
-    <net code="3" name="/AKM_BCLK" class="Default">
+    <net code="3" name="AKM_BCLK" class="Default">
       <node ref="U301" pin="2" pinfunction="BICK/DCLK_2" pintype="passive"/>
     </net>
-    <net code="4" name="/AKM_FSYNC" class="Default">
+    <net code="4" name="AKM_FSYNC" class="Default">
       <node ref="U301" pin="3" pinfunction="LRCK/DSDL1_3" pintype="passive"/>
     </net>
-    <net code="5" name="/AKM_MCLK" class="Default">
+    <net code="5" name="AKM_MCLK" class="Default">
       <node ref="U301" pin="1" pinfunction="MCLK_1" pintype="passive"/>
     </net>
-    <net code="6" name="/AUD_DAC_MUTE_N" class="Default">
+    <net code="6" name="AUDIO_SAFE_UNMUTE_N" class="Default">
       <node ref="U301" pin="11" pinfunction="DZF/SMUTE_11" pintype="passive"/>
     </net>
-    <net code="7" name="/AUD_DAC_RST_N" class="Default">
+    <net code="7" name="AUD_DAC_RST_N" class="Default">
       <node ref="U301" pin="48" pinfunction="PDN_48" pintype="passive"/>
     </net>
-    <net code="8" name="/AUD_I2C_SCL" class="Default">
+    <net code="8" name="AUD_I2C_SCL" class="Default">
       <node ref="U301" pin="14" pinfunction="SCL/CCLK/TDM1_14" pintype="passive"/>
     </net>
-    <net code="9" name="/AUD_I2C_SDA" class="Default">
+    <net code="9" name="AUD_I2C_SDA" class="Default">
       <node ref="U301" pin="13" pinfunction="SDA/CDTI/TDM0_13" pintype="passive"/>
     </net>
-    <net code="10" name="/DAC_5V_A" class="Default">
+    <net code="10" name="DAC_5V_A" class="Default">
       <node ref="C372" pin="1" pintype="passive"/>
       <node ref="C373" pin="1" pintype="passive"/>
       <node ref="R351" pin="1" pintype="passive"/>
@@ -906,100 +906,100 @@
       <node ref="R354" pin="1" pintype="passive"/>
       <node ref="U301" pin="31" pinfunction="AVDD_31" pintype="passive"/>
     </net>
-    <net code="11" name="/DAC_CAD0" class="Default">
+    <net code="11" name="DAC_CAD0" class="Default">
       <node ref="R323" pin="2" pintype="passive"/>
       <node ref="U301" pin="15" pinfunction="CAD0_I2C/CSN/DIF_15" pintype="passive"/>
     </net>
-    <net code="12" name="/DAC_CAD1" class="Default">
+    <net code="12" name="DAC_CAD1" class="Default">
       <node ref="R331" pin="1" pintype="passive"/>
       <node ref="U301" pin="12" pinfunction="CAD1/DCHAIN_12" pintype="passive"/>
     </net>
-    <net code="13" name="/DAC_CH1N" class="Default">
+    <net code="13" name="DAC_CH1N" class="Default">
       <node ref="U301" pin="19" pinfunction="AOUTL1N_19" pintype="passive"/>
     </net>
-    <net code="14" name="/DAC_CH1P" class="Default">
+    <net code="14" name="DAC_CH1P" class="Default">
       <node ref="U301" pin="18" pinfunction="AOUTL1P_18" pintype="passive"/>
     </net>
-    <net code="15" name="/DAC_CH2N" class="Default">
+    <net code="15" name="DAC_CH2N" class="Default">
       <node ref="U301" pin="22" pinfunction="AOUTR1N_22" pintype="passive"/>
     </net>
-    <net code="16" name="/DAC_CH2P" class="Default">
+    <net code="16" name="DAC_CH2P" class="Default">
       <node ref="U301" pin="23" pinfunction="AOUTR1P_23" pintype="passive"/>
     </net>
-    <net code="17" name="/DAC_CH3N" class="Default">
+    <net code="17" name="DAC_CH3N" class="Default">
       <node ref="U301" pin="25" pinfunction="AOUTL2N_25" pintype="passive"/>
     </net>
-    <net code="18" name="/DAC_CH3P" class="Default">
+    <net code="18" name="DAC_CH3P" class="Default">
       <node ref="U301" pin="24" pinfunction="AOUTL2P_24" pintype="passive"/>
     </net>
-    <net code="19" name="/DAC_CH4N" class="Default">
+    <net code="19" name="DAC_CH4N" class="Default">
       <node ref="U301" pin="28" pinfunction="AOUTR2N_28" pintype="passive"/>
     </net>
-    <net code="20" name="/DAC_CH4P" class="Default">
+    <net code="20" name="DAC_CH4P" class="Default">
       <node ref="U301" pin="29" pinfunction="AOUTR2P_29" pintype="passive"/>
     </net>
-    <net code="21" name="/DAC_CH5N" class="Default">
+    <net code="21" name="DAC_CH5N" class="Default">
       <node ref="U301" pin="33" pinfunction="AOUTL3N_33" pintype="passive"/>
     </net>
-    <net code="22" name="/DAC_CH5P" class="Default">
+    <net code="22" name="DAC_CH5P" class="Default">
       <node ref="U301" pin="32" pinfunction="AOUTL3P_32" pintype="passive"/>
     </net>
-    <net code="23" name="/DAC_CH6N" class="Default">
+    <net code="23" name="DAC_CH6N" class="Default">
       <node ref="U301" pin="36" pinfunction="AOUTR3N_36" pintype="passive"/>
     </net>
-    <net code="24" name="/DAC_CH6P" class="Default">
+    <net code="24" name="DAC_CH6P" class="Default">
       <node ref="U301" pin="37" pinfunction="AOUTR3P_37" pintype="passive"/>
     </net>
-    <net code="25" name="/DAC_CH7N" class="Default">
+    <net code="25" name="DAC_CH7N" class="Default">
       <node ref="U301" pin="39" pinfunction="AOUTL4N_39" pintype="passive"/>
     </net>
-    <net code="26" name="/DAC_CH7P" class="Default">
+    <net code="26" name="DAC_CH7P" class="Default">
       <node ref="U301" pin="38" pinfunction="AOUTL4P_38" pintype="passive"/>
     </net>
-    <net code="27" name="/DAC_CH8N" class="Default">
+    <net code="27" name="DAC_CH8N" class="Default">
       <node ref="U301" pin="42" pinfunction="AOUTR4N_42" pintype="passive"/>
     </net>
-    <net code="28" name="/DAC_CH8P" class="Default">
+    <net code="28" name="DAC_CH8P" class="Default">
       <node ref="U301" pin="43" pinfunction="AOUTR4P_43" pintype="passive"/>
     </net>
-    <net code="29" name="/DAC_I2C_MODE" class="Default">
+    <net code="29" name="DAC_I2C_MODE" class="Default">
       <node ref="R321" pin="2" pintype="passive"/>
       <node ref="U301" pin="17" pinfunction="I2C_17" pintype="passive"/>
     </net>
-    <net code="30" name="/DAC_LDOE" class="Default">
+    <net code="30" name="DAC_LDOE" class="Default">
       <node ref="R322" pin="2" pintype="passive"/>
       <node ref="U301" pin="44" pinfunction="LDOE_44" pintype="passive"/>
     </net>
-    <net code="31" name="/DAC_PS" class="Default">
+    <net code="31" name="DAC_PS" class="Default">
       <node ref="R332" pin="1" pintype="passive"/>
       <node ref="U301" pin="16" pinfunction="PS/CAD0_SPI_16" pintype="passive"/>
     </net>
-    <net code="32" name="/DAC_TDM_IN" class="Default">
+    <net code="32" name="DAC_TDM_IN" class="Default">
       <node ref="U301" pin="4" pinfunction="SDTI1/DSDR1_4" pintype="passive"/>
     </net>
-    <net code="33" name="/DAC_VDD18" class="Default">
+    <net code="33" name="DAC_VDD18" class="Default">
       <node ref="C371" pin="1" pintype="passive"/>
       <node ref="U301" pin="47" pinfunction="VDD18_47" pintype="passive"/>
     </net>
-    <net code="34" name="/DAC_VREFH1" class="Default">
+    <net code="34" name="DAC_VREFH1" class="Default">
       <node ref="C351" pin="1" pintype="passive"/>
       <node ref="C361" pin="1" pintype="passive"/>
       <node ref="R351" pin="2" pintype="passive"/>
       <node ref="U301" pin="21" pinfunction="VREFH1_21" pintype="passive"/>
     </net>
-    <net code="35" name="/DAC_VREFH2" class="Default">
+    <net code="35" name="DAC_VREFH2" class="Default">
       <node ref="C352" pin="1" pintype="passive"/>
       <node ref="C362" pin="1" pintype="passive"/>
       <node ref="R352" pin="2" pintype="passive"/>
       <node ref="U301" pin="27" pinfunction="VREFH2_27" pintype="passive"/>
     </net>
-    <net code="36" name="/DAC_VREFH3" class="Default">
+    <net code="36" name="DAC_VREFH3" class="Default">
       <node ref="C353" pin="1" pintype="passive"/>
       <node ref="C363" pin="1" pintype="passive"/>
       <node ref="R353" pin="2" pintype="passive"/>
       <node ref="U301" pin="34" pinfunction="VREFH3_34" pintype="passive"/>
     </net>
-    <net code="37" name="/DAC_VREFH4" class="Default">
+    <net code="37" name="DAC_VREFH4" class="Default">
       <node ref="C354" pin="1" pintype="passive"/>
       <node ref="C364" pin="1" pintype="passive"/>
       <node ref="R354" pin="2" pintype="passive"/>

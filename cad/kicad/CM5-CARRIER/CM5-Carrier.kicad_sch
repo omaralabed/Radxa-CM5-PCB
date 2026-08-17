@@ -3,16 +3,16 @@
 	(generator "eeschema")
 	(generator_version "9.0")
 	(uuid "fda5e2ef-3fac-50da-a742-8f95f72b231c")
-	(paper "A2")
+	(paper "A1")
 	(title_block
 		(title "Radxa CM5 ProComm Carrier - Interface Contract")
 		(date "2026-08-14")
 		(rev "A1")
 		(company "ProComm")
-		(comment 1 "Interface overview; detailed A1 capture is maintained in the named standalone sheets")
+		(comment 1 "Physical CM5-CARRIER root; nested detailed pages form one connected board netlist")
 		(comment 2 "Fan 1 intake, fan 2 exhaust; independent PWM/tach channels")
 		(comment 3 "Program audio crosses a buffered differential TDM link")
-		(comment 4 "NOT A FABRICATION RELEASE")
+		(comment 4 "Global labels are intentional inter-page nets; prototype qualification gates remain")
 	)
 	(lib_symbols
 		(symbol "Connector_Generic:Conn_02x02_Odd_Even"
@@ -1813,8 +1813,8 @@
 		(at 44.45 48.26 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
 		(dnp no)
 		(fields_autoplaced no)
 		(uuid "8234649f-4fc7-5dba-ad1f-283056d891b0")
@@ -1864,16 +1864,16 @@
 			)
 		)
 		(pin "1"
-			(uuid "22d57af7-54a0-5827-b755-4f8a1806f6a6")
+			(uuid "18d9d21b-805e-5cef-b7b2-bfcb1884676d")
 		)
 		(pin "2"
-			(uuid "8d185cd7-4b0c-594c-b71d-9bf1ce0f8e76")
+			(uuid "793f07bf-f1a5-590c-9cc7-b0e256be5095")
 		)
 		(pin "3"
-			(uuid "26e79050-b403-5ab2-96c2-07eddb5b3549")
+			(uuid "a9198f98-a50f-578b-9c1f-3b43c7543cea")
 		)
 		(pin "4"
-			(uuid "f5377ec7-d89e-5435-92b1-93f01023731a")
+			(uuid "a03bc464-ae88-5028-9d78-d3a5e2ee90c8")
 		)
 		(instances
 			(project "CM5-Carrier"
@@ -1940,28 +1940,28 @@
 			)
 		)
 		(pin "1"
-			(uuid "24de11fd-f100-5d68-9ad5-0a3d5b63091b")
+			(uuid "25bced2d-e275-5087-8f36-357cdf48267c")
 		)
 		(pin "2"
-			(uuid "93a6e058-aed8-58f3-b292-1e50402d2984")
+			(uuid "167977e7-ef85-5cbd-ac38-2d4e3269dbc4")
 		)
 		(pin "3"
-			(uuid "30b847c4-3795-523b-96bb-3f0920023172")
+			(uuid "9373e174-7e7a-5c77-94fe-948156c61865")
 		)
 		(pin "4"
-			(uuid "8d99406f-80b9-57c2-b633-bc5d2b17e411")
+			(uuid "b11b1ce3-ee33-5e0b-a5f0-b7c73fa11430")
 		)
 		(pin "5"
-			(uuid "d6f52805-3c91-59af-ba4c-9c3f509efc38")
+			(uuid "fe56ed7f-bb0c-5f38-8591-3d625b8b35ca")
 		)
 		(pin "6"
-			(uuid "18d9d21b-805e-5cef-b7b2-bfcb1884676d")
+			(uuid "536e7783-f7fa-58d3-9303-d0e8908c7788")
 		)
 		(pin "7"
-			(uuid "793f07bf-f1a5-590c-9cc7-b0e256be5095")
+			(uuid "e9c87cff-cc29-587e-96da-e09bef8c0b97")
 		)
 		(pin "8"
-			(uuid "a9198f98-a50f-578b-9c1f-3b43c7543cea")
+			(uuid "0bbb72e0-802b-5dbb-8393-2b5c505cbf50")
 		)
 		(instances
 			(project "CM5-Carrier"
@@ -2028,22 +2028,22 @@
 			)
 		)
 		(pin "1"
-			(uuid "a03bc464-ae88-5028-9d78-d3a5e2ee90c8")
+			(uuid "614da6e1-26da-5bdb-b3e9-ce7e7fd0ab3a")
 		)
 		(pin "2"
-			(uuid "25bced2d-e275-5087-8f36-357cdf48267c")
+			(uuid "53390ed0-461f-54a1-a7ab-cd70df8fedfb")
 		)
 		(pin "3"
-			(uuid "167977e7-ef85-5cbd-ac38-2d4e3269dbc4")
+			(uuid "51a98bc4-6095-54a9-bc54-bc4af8ee9c1b")
 		)
 		(pin "4"
-			(uuid "9373e174-7e7a-5c77-94fe-948156c61865")
+			(uuid "63288f0a-265e-5181-a392-9fee607a1f7a")
 		)
 		(pin "5"
-			(uuid "b11b1ce3-ee33-5e0b-a5f0-b7c73fa11430")
+			(uuid "2acaa378-e2c7-5cc6-a0db-73b09000de6b")
 		)
 		(pin "6"
-			(uuid "fe56ed7f-bb0c-5f38-8591-3d625b8b35ca")
+			(uuid "25c929b2-f822-506b-8809-017da099a29f")
 		)
 		(instances
 			(project "CM5-Carrier"
@@ -2059,8 +2059,8 @@
 		(at 69.85 160.02 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
 		(dnp no)
 		(fields_autoplaced no)
 		(uuid "18f2cd9b-fdc5-5939-9512-637399ba86ea")
@@ -2110,94 +2110,94 @@
 			)
 		)
 		(pin "1"
-			(uuid "536e7783-f7fa-58d3-9303-d0e8908c7788")
-		)
-		(pin "2"
-			(uuid "e9c87cff-cc29-587e-96da-e09bef8c0b97")
-		)
-		(pin "3"
-			(uuid "0bbb72e0-802b-5dbb-8393-2b5c505cbf50")
-		)
-		(pin "4"
-			(uuid "614da6e1-26da-5bdb-b3e9-ce7e7fd0ab3a")
-		)
-		(pin "5"
-			(uuid "53390ed0-461f-54a1-a7ab-cd70df8fedfb")
-		)
-		(pin "6"
-			(uuid "51a98bc4-6095-54a9-bc54-bc4af8ee9c1b")
-		)
-		(pin "7"
-			(uuid "63288f0a-265e-5181-a392-9fee607a1f7a")
-		)
-		(pin "8"
-			(uuid "2acaa378-e2c7-5cc6-a0db-73b09000de6b")
-		)
-		(pin "9"
-			(uuid "25c929b2-f822-506b-8809-017da099a29f")
-		)
-		(pin "10"
 			(uuid "ceb82fd5-3d5a-5829-915e-b7d2e4f43b12")
 		)
-		(pin "11"
+		(pin "2"
 			(uuid "9314e7f3-2d8a-54c5-9fc5-4bdea5c75fa6")
 		)
-		(pin "12"
+		(pin "3"
 			(uuid "d9438429-d59e-51da-8ac0-81da980a4632")
 		)
-		(pin "13"
+		(pin "4"
 			(uuid "79f50d29-08a6-5424-83e1-7a908b1c0dd9")
 		)
-		(pin "14"
+		(pin "5"
 			(uuid "bc879c54-1046-5ccb-8b04-f06621acab9a")
 		)
-		(pin "15"
+		(pin "6"
 			(uuid "5927e34f-4440-50f2-b19e-3fafaf30ceab")
 		)
-		(pin "16"
+		(pin "7"
 			(uuid "260fb344-aa96-5372-92f5-a1a76c34bb95")
 		)
-		(pin "17"
+		(pin "8"
 			(uuid "e86f4ed1-028e-5e93-959e-52c16d3c2a5a")
 		)
-		(pin "18"
+		(pin "9"
 			(uuid "a93846fe-05f5-5b6f-830e-a754778855d9")
 		)
-		(pin "19"
+		(pin "10"
 			(uuid "119d0a4a-0e98-5589-9201-26a5787630e1")
 		)
-		(pin "20"
+		(pin "11"
 			(uuid "4279d0d2-a8bd-5da2-84c7-f6e696646195")
 		)
-		(pin "21"
+		(pin "12"
 			(uuid "6f05c920-0eed-5370-843b-6205b3db28e8")
 		)
-		(pin "22"
+		(pin "13"
 			(uuid "c2392f93-0a01-5427-bf78-44776c51655f")
 		)
-		(pin "23"
+		(pin "14"
 			(uuid "9611a7f4-b2a6-5750-9f53-dbb08b93662b")
 		)
-		(pin "24"
+		(pin "15"
 			(uuid "da14044e-f4f5-5e1b-b716-50837fef6919")
 		)
-		(pin "25"
+		(pin "16"
 			(uuid "8c1269e4-7d6c-5701-9b7c-8be2378eaf74")
 		)
-		(pin "26"
+		(pin "17"
 			(uuid "1babca6d-6522-54f7-a456-5d2b821046d9")
 		)
-		(pin "27"
+		(pin "18"
 			(uuid "5d715aca-ff21-54b5-8336-b79fd148a995")
 		)
-		(pin "28"
+		(pin "19"
 			(uuid "0ce83ca3-26d2-5b54-992b-6b8e17e1dbf6")
 		)
-		(pin "29"
+		(pin "20"
 			(uuid "81d8cd1d-8aa8-59a3-9d9d-26113fa8a1b2")
 		)
-		(pin "30"
+		(pin "21"
 			(uuid "8c88bba2-8f7c-570e-b9bc-5d0646d5a4ca")
+		)
+		(pin "22"
+			(uuid "1eb18e95-6dd5-5494-82b9-b60b9f5e9fcb")
+		)
+		(pin "23"
+			(uuid "0f4e9ca2-d37b-50c5-8a12-57f5674e19cb")
+		)
+		(pin "24"
+			(uuid "b5127c88-0166-5461-a8f0-c1018c22a35b")
+		)
+		(pin "25"
+			(uuid "f92f84ee-d69a-5cdd-9fe3-7069e66b80c0")
+		)
+		(pin "26"
+			(uuid "f0295530-512a-550b-b1ba-384e82b1b13d")
+		)
+		(pin "27"
+			(uuid "b1f21e1c-b901-5b2c-b255-eeaccf917725")
+		)
+		(pin "28"
+			(uuid "b3a398f4-7224-55d3-b2cb-758235a9fb3e")
+		)
+		(pin "29"
+			(uuid "7a50cf06-c4d6-5bb8-a2f6-52a1c9f3f61c")
+		)
+		(pin "30"
+			(uuid "be607367-ebcf-5416-bcdb-daef09141731")
 		)
 		(instances
 			(project "CM5-Carrier"
@@ -2264,16 +2264,16 @@
 			)
 		)
 		(pin "1"
-			(uuid "1eb18e95-6dd5-5494-82b9-b60b9f5e9fcb")
+			(uuid "34e0f874-81d7-5067-9aaa-33f6e3f7eea5")
 		)
 		(pin "2"
-			(uuid "0f4e9ca2-d37b-50c5-8a12-57f5674e19cb")
+			(uuid "fbd87d9c-4ac7-5817-8f72-119152bd270d")
 		)
 		(pin "3"
-			(uuid "b5127c88-0166-5461-a8f0-c1018c22a35b")
+			(uuid "c9108f20-e3b1-59a5-b8c7-6a38d680eba6")
 		)
 		(pin "4"
-			(uuid "f92f84ee-d69a-5cdd-9fe3-7069e66b80c0")
+			(uuid "2fc75944-5a43-53b3-b20d-f1777eedd39f")
 		)
 		(instances
 			(project "CM5-Carrier"
@@ -2289,8 +2289,8 @@
 		(at 44.45 275.59 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
 		(dnp no)
 		(fields_autoplaced no)
 		(uuid "f65f0ed6-b7bd-5e1d-accc-c83125f76e33")
@@ -2340,16 +2340,16 @@
 			)
 		)
 		(pin "1"
-			(uuid "f0295530-512a-550b-b1ba-384e82b1b13d")
+			(uuid "2e623bf2-0925-5fd1-abd7-7049904a0eaf")
 		)
 		(pin "2"
-			(uuid "b1f21e1c-b901-5b2c-b255-eeaccf917725")
+			(uuid "de0d9ef5-82c4-5479-9461-a0ff00c77185")
 		)
 		(pin "3"
-			(uuid "b3a398f4-7224-55d3-b2cb-758235a9fb3e")
+			(uuid "fd0e4da7-abe8-5ba4-bbd7-4bda2c4d47f2")
 		)
 		(pin "4"
-			(uuid "7a50cf06-c4d6-5bb8-a2f6-52a1c9f3f61c")
+			(uuid "ea0f03c6-3528-5361-9656-d0d164fbfe52")
 		)
 		(instances
 			(project "CM5-Carrier"
@@ -2365,8 +2365,8 @@
 		(at 115.57 275.59 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
 		(dnp no)
 		(fields_autoplaced no)
 		(uuid "21fba185-b6cf-57b7-ab70-e2f6087efa79")
@@ -2416,16 +2416,16 @@
 			)
 		)
 		(pin "1"
-			(uuid "be607367-ebcf-5416-bcdb-daef09141731")
+			(uuid "787d2839-0cd1-5f61-b9d6-544df7610b93")
 		)
 		(pin "2"
-			(uuid "34e0f874-81d7-5067-9aaa-33f6e3f7eea5")
+			(uuid "a6d664b2-fbe8-59b3-aa54-c9459d30c357")
 		)
 		(pin "3"
-			(uuid "fbd87d9c-4ac7-5817-8f72-119152bd270d")
+			(uuid "a9ec5a1d-df79-5f77-9b9e-f3e28b7d519c")
 		)
 		(pin "4"
-			(uuid "c9108f20-e3b1-59a5-b8c7-6a38d680eba6")
+			(uuid "6c9138ea-007e-5fcf-a98f-7744e6aa7500")
 		)
 		(instances
 			(project "CM5-Carrier"
@@ -2441,8 +2441,8 @@
 		(at 185.42 275.59 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
 		(dnp no)
 		(fields_autoplaced no)
 		(uuid "67d92030-2e00-5783-acbf-8abacb819403")
@@ -2492,16 +2492,16 @@
 			)
 		)
 		(pin "1"
-			(uuid "2fc75944-5a43-53b3-b20d-f1777eedd39f")
+			(uuid "bac48452-e1ce-59fa-842a-037502151744")
 		)
 		(pin "2"
-			(uuid "2e623bf2-0925-5fd1-abd7-7049904a0eaf")
+			(uuid "9487b6da-cbef-52ac-8da5-cf0deaf07dd0")
 		)
 		(pin "3"
-			(uuid "de0d9ef5-82c4-5479-9461-a0ff00c77185")
+			(uuid "a45c8c9f-f363-5613-a9dd-cf21c4831522")
 		)
 		(pin "4"
-			(uuid "fd0e4da7-abe8-5ba4-bbd7-4bda2c4d47f2")
+			(uuid "af147591-7a47-5883-8257-27d6bf252e04")
 		)
 		(instances
 			(project "CM5-Carrier"
@@ -2517,8 +2517,8 @@
 		(at 255.27 275.59 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
 		(dnp no)
 		(fields_autoplaced no)
 		(uuid "1cd8a37a-ac4b-54f3-a8f0-4c7bad6e129d")
@@ -2568,16 +2568,16 @@
 			)
 		)
 		(pin "1"
-			(uuid "ea0f03c6-3528-5361-9656-d0d164fbfe52")
+			(uuid "ec0d220a-6833-5e90-bd6c-8bcb5b99dc43")
 		)
 		(pin "2"
-			(uuid "787d2839-0cd1-5f61-b9d6-544df7610b93")
+			(uuid "e2928471-edff-5505-b889-a97b65b801d9")
 		)
 		(pin "3"
-			(uuid "a6d664b2-fbe8-59b3-aa54-c9459d30c357")
+			(uuid "8d3e576f-f971-5bbf-80f6-2d37edf74ef1")
 		)
 		(pin "4"
-			(uuid "a9ec5a1d-df79-5f77-9b9e-f3e28b7d519c")
+			(uuid "6293cae8-0262-5b17-aba6-fd65fad49c43")
 		)
 		(instances
 			(project "CM5-Carrier"
@@ -2588,7 +2588,8 @@
 			)
 		)
 	)
-	(label "RAW_OUT_LOAD"
+	(global_label "RAW_OUT_LOAD"
+		(shape bidirectional)
 		(at 39.37 48.26 0.0000)
 		(effects
 			(font
@@ -2598,7 +2599,8 @@
 		)
 		(uuid "f1e0943e-25e6-5be2-98b7-89108281de2a")
 	)
-	(label "RAW_OUT_LOAD"
+	(global_label "RAW_OUT_LOAD"
+		(shape bidirectional)
 		(at 52.07 48.26 0.0000)
 		(effects
 			(font
@@ -2608,7 +2610,8 @@
 		)
 		(uuid "41de6733-b8fb-5fdd-8dfb-411112878fc6")
 	)
-	(label "GND"
+	(global_label "GND"
+		(shape bidirectional)
 		(at 39.37 50.8 0.0000)
 		(effects
 			(font
@@ -2618,7 +2621,8 @@
 		)
 		(uuid "fdbff25c-8af2-5ebe-ae20-8e292b7ef7bf")
 	)
-	(label "GND"
+	(global_label "GND"
+		(shape bidirectional)
 		(at 52.07 50.8 0.0000)
 		(effects
 			(font
@@ -2628,7 +2632,8 @@
 		)
 		(uuid "90326df4-a1bd-590d-893b-4d7ddd5692ed")
 	)
-	(label "GND"
+	(global_label "GND"
+		(shape bidirectional)
 		(at 114.3 41.91 0.0000)
 		(effects
 			(font
@@ -2638,7 +2643,8 @@
 		)
 		(uuid "c2a72431-b3b2-5799-bd92-70581c354b9a")
 	)
-	(label "CH_24V_N"
+	(global_label "CH_24V_N"
+		(shape bidirectional)
 		(at 114.3 44.45 0.0000)
 		(effects
 			(font
@@ -2648,7 +2654,8 @@
 		)
 		(uuid "fa6fa32e-01cd-5153-afd4-5e173e9682d3")
 	)
-	(label "CH_BAT_N"
+	(global_label "CH_BAT_N"
+		(shape bidirectional)
 		(at 114.3 46.99 0.0000)
 		(effects
 			(font
@@ -2658,7 +2665,8 @@
 		)
 		(uuid "ec5fe9a5-5159-5f0b-b488-8f774a95fec7")
 	)
-	(label "VALID_24V_N"
+	(global_label "VALID_24V_N"
+		(shape bidirectional)
 		(at 114.3 49.53 0.0000)
 		(effects
 			(font
@@ -2668,7 +2676,8 @@
 		)
 		(uuid "3cd3eaad-1da1-5044-b85a-fae255573545")
 	)
-	(label "VALID_BAT_N"
+	(global_label "VALID_BAT_N"
+		(shape bidirectional)
 		(at 114.3 52.07 0.0000)
 		(effects
 			(font
@@ -2678,7 +2687,8 @@
 		)
 		(uuid "820ed6d5-d8d0-5684-8ec6-263b14358062")
 	)
-	(label "BAT_LOW_N"
+	(global_label "BAT_LOW_N"
+		(shape bidirectional)
 		(at 114.3 54.61 0.0000)
 		(effects
 			(font
@@ -2688,7 +2698,8 @@
 		)
 		(uuid "88eece31-b3d2-58a2-8b5e-da5c690c2200")
 	)
-	(label "VALID_DTAP_N"
+	(global_label "VALID_DTAP_N"
+		(shape bidirectional)
 		(at 114.3 57.15 0.0000)
 		(effects
 			(font
@@ -2698,7 +2709,8 @@
 		)
 		(uuid "292f867b-ce60-5ca4-ad1b-9fd51964fbca")
 	)
-	(label "VALID_GOLD_N"
+	(global_label "VALID_GOLD_N"
+		(shape bidirectional)
 		(at 114.3 59.69 0.0000)
 		(effects
 			(font
@@ -2708,7 +2720,8 @@
 		)
 		(uuid "626fd1e4-bf34-5263-b819-e1fab847eea6")
 	)
-	(label "LOGIC_3V3"
+	(global_label "LOGIC_3V3"
+		(shape bidirectional)
 		(at 194.31 44.45 0.0000)
 		(effects
 			(font
@@ -2718,7 +2731,8 @@
 		)
 		(uuid "7bac4307-f0e1-572b-b576-573ea65b3dd0")
 	)
-	(label "GND"
+	(global_label "GND"
+		(shape bidirectional)
 		(at 194.31 46.99 0.0000)
 		(effects
 			(font
@@ -2728,7 +2742,8 @@
 		)
 		(uuid "28ecde38-3efc-5058-aac6-9b88355c6ec4")
 	)
-	(label "CTRL_I2C_SDA"
+	(global_label "CTRL_I2C_SDA"
+		(shape bidirectional)
 		(at 194.31 49.53 0.0000)
 		(effects
 			(font
@@ -2738,7 +2753,8 @@
 		)
 		(uuid "78029453-1fff-5d66-aaa1-b1d699a28c86")
 	)
-	(label "CTRL_I2C_SCL"
+	(global_label "CTRL_I2C_SCL"
+		(shape bidirectional)
 		(at 194.31 52.07 0.0000)
 		(effects
 			(font
@@ -2748,7 +2764,8 @@
 		)
 		(uuid "bb7c4970-c01e-5c4f-8bb5-9f2e39030c0a")
 	)
-	(label "PWR_MON_ALERT_N"
+	(global_label "PWR_MON_ALERT_N"
+		(shape bidirectional)
 		(at 194.31 54.61 0.0000)
 		(effects
 			(font
@@ -2758,7 +2775,8 @@
 		)
 		(uuid "abe62b71-0d1f-5fb4-9635-e358c262b9f2")
 	)
-	(label "GND"
+	(global_label "GND"
+		(shape bidirectional)
 		(at 194.31 57.15 0.0000)
 		(effects
 			(font
@@ -2768,7 +2786,8 @@
 		)
 		(uuid "6f0a938b-3af8-5201-96e4-fec9e2a89020")
 	)
-	(label "AUD_MCLK_P"
+	(global_label "AUD_MCLK_P"
+		(shape bidirectional)
 		(at 64.77 142.24 0.0000)
 		(effects
 			(font
@@ -2778,7 +2797,8 @@
 		)
 		(uuid "307f3e60-9e85-5928-8bae-04dbba3f9608")
 	)
-	(label "AUD_MCLK_N"
+	(global_label "AUD_MCLK_N"
+		(shape bidirectional)
 		(at 77.47 142.24 0.0000)
 		(effects
 			(font
@@ -2788,7 +2808,8 @@
 		)
 		(uuid "ac714b09-0d1d-5b72-a843-7e5ce9d89665")
 	)
-	(label "GND"
+	(global_label "GND"
+		(shape bidirectional)
 		(at 64.77 144.78 0.0000)
 		(effects
 			(font
@@ -2798,7 +2819,8 @@
 		)
 		(uuid "e5eba5ab-98ba-5448-89e7-e56af1e0b603")
 	)
-	(label "GND"
+	(global_label "GND"
+		(shape bidirectional)
 		(at 77.47 144.78 0.0000)
 		(effects
 			(font
@@ -2808,7 +2830,8 @@
 		)
 		(uuid "e89d9c16-614b-51c9-98a6-ce74e29a38b7")
 	)
-	(label "AUD_BCLK_P"
+	(global_label "AUD_BCLK_P"
+		(shape bidirectional)
 		(at 64.77 147.32 0.0000)
 		(effects
 			(font
@@ -2818,7 +2841,8 @@
 		)
 		(uuid "ea30159c-273a-5d92-b880-9e2ef607e917")
 	)
-	(label "AUD_BCLK_N"
+	(global_label "AUD_BCLK_N"
+		(shape bidirectional)
 		(at 77.47 147.32 0.0000)
 		(effects
 			(font
@@ -2828,7 +2852,8 @@
 		)
 		(uuid "adcdf938-fc1e-57e4-8acc-996be2c8012b")
 	)
-	(label "AUD_FSYNC_P"
+	(global_label "AUD_FSYNC_P"
+		(shape bidirectional)
 		(at 64.77 149.86 0.0000)
 		(effects
 			(font
@@ -2838,7 +2863,8 @@
 		)
 		(uuid "a75bfa62-763f-5569-9503-0debaab6be2f")
 	)
-	(label "AUD_FSYNC_N"
+	(global_label "AUD_FSYNC_N"
+		(shape bidirectional)
 		(at 77.47 149.86 0.0000)
 		(effects
 			(font
@@ -2848,7 +2874,8 @@
 		)
 		(uuid "e925cce5-e21a-5b73-94c3-81bf3a0a9c72")
 	)
-	(label "GND"
+	(global_label "GND"
+		(shape bidirectional)
 		(at 64.77 152.4 0.0000)
 		(effects
 			(font
@@ -2858,7 +2885,8 @@
 		)
 		(uuid "4e490523-7051-5f4c-b19e-7845a6808f12")
 	)
-	(label "GND"
+	(global_label "GND"
+		(shape bidirectional)
 		(at 77.47 152.4 0.0000)
 		(effects
 			(font
@@ -2868,7 +2896,8 @@
 		)
 		(uuid "514cc4e6-8a03-52e4-9bca-eb66c27a92a6")
 	)
-	(label "AUD_DAC_SDIN_P"
+	(global_label "AUD_DAC_SDIN_P"
+		(shape bidirectional)
 		(at 64.77 154.94 0.0000)
 		(effects
 			(font
@@ -2878,7 +2907,8 @@
 		)
 		(uuid "f1e2fa48-f1fc-5672-88d1-8a8b440656a7")
 	)
-	(label "AUD_DAC_SDIN_N"
+	(global_label "AUD_DAC_SDIN_N"
+		(shape bidirectional)
 		(at 77.47 154.94 0.0000)
 		(effects
 			(font
@@ -2888,7 +2918,8 @@
 		)
 		(uuid "2fb71d2c-5dc0-5537-ba2b-afb209309074")
 	)
-	(label "AUD_ADC_SDOUT_P"
+	(global_label "AUD_ADC_SDOUT_P"
+		(shape bidirectional)
 		(at 64.77 157.48 0.0000)
 		(effects
 			(font
@@ -2898,7 +2929,8 @@
 		)
 		(uuid "d55e0711-f619-5876-aa08-a37f0bcf83d0")
 	)
-	(label "AUD_ADC_SDOUT_N"
+	(global_label "AUD_ADC_SDOUT_N"
+		(shape bidirectional)
 		(at 77.47 157.48 0.0000)
 		(effects
 			(font
@@ -2908,7 +2940,8 @@
 		)
 		(uuid "4dac5ea8-8d64-5cfb-9b6b-4d8e0df8a638")
 	)
-	(label "GND"
+	(global_label "GND"
+		(shape bidirectional)
 		(at 64.77 160.02 0.0000)
 		(effects
 			(font
@@ -2918,7 +2951,8 @@
 		)
 		(uuid "254ebfd8-1d80-5674-af34-c8b6cc0c0fdf")
 	)
-	(label "GND"
+	(global_label "GND"
+		(shape bidirectional)
 		(at 77.47 160.02 0.0000)
 		(effects
 			(font
@@ -2928,7 +2962,8 @@
 		)
 		(uuid "bda53da8-6bc5-5f4e-bbc5-12c17149414b")
 	)
-	(label "AUD_I2C_SCL"
+	(global_label "AUD_I2C_SCL"
+		(shape bidirectional)
 		(at 64.77 162.56 0.0000)
 		(effects
 			(font
@@ -2938,7 +2973,8 @@
 		)
 		(uuid "62731a57-abac-55ae-b7dd-d60f65de4cdf")
 	)
-	(label "AUD_I2C_SDA"
+	(global_label "AUD_I2C_SDA"
+		(shape bidirectional)
 		(at 77.47 162.56 0.0000)
 		(effects
 			(font
@@ -2948,7 +2984,8 @@
 		)
 		(uuid "8d4ff3ac-0e4b-54e3-b44c-dafb55a89d99")
 	)
-	(label "AUD_ADC_RST_N"
+	(global_label "AUD_ADC_RST_N"
+		(shape bidirectional)
 		(at 64.77 165.1 0.0000)
 		(effects
 			(font
@@ -2958,7 +2995,8 @@
 		)
 		(uuid "2bb40c6f-e108-5c6b-b1cf-c14af2275dfe")
 	)
-	(label "AUD_DAC_RST_N"
+	(global_label "AUD_DAC_RST_N"
+		(shape bidirectional)
 		(at 77.47 165.1 0.0000)
 		(effects
 			(font
@@ -2968,7 +3006,8 @@
 		)
 		(uuid "fecc04d1-ab54-59be-8896-ab8c5f2735fb")
 	)
-	(label "AUD_DAC_MUTE_N"
+	(global_label "AUD_DAC_MUTE_CMD_N"
+		(shape bidirectional)
 		(at 64.77 167.64 0.0000)
 		(effects
 			(font
@@ -2978,7 +3017,8 @@
 		)
 		(uuid "da5a41e4-92ab-5ebe-b99f-5f3cda398c57")
 	)
-	(label "AUD_IRQ_N"
+	(global_label "AUD_IRQ_N"
+		(shape bidirectional)
 		(at 77.47 167.64 0.0000)
 		(effects
 			(font
@@ -2988,7 +3028,8 @@
 		)
 		(uuid "b3b1bf5e-c35d-523d-8504-a921e7d6e68c")
 	)
-	(label "AUDIO_PRESENT_N"
+	(global_label "AUDIO_PRESENT_N"
+		(shape bidirectional)
 		(at 64.77 170.18 0.0000)
 		(effects
 			(font
@@ -2998,7 +3039,8 @@
 		)
 		(uuid "9fa478f8-6de9-57a1-9ba0-0b7c2aecdb71")
 	)
-	(label "AUDIO_ENABLE"
+	(global_label "AUDIO_ENABLE"
+		(shape bidirectional)
 		(at 77.47 170.18 0.0000)
 		(effects
 			(font
@@ -3008,7 +3050,8 @@
 		)
 		(uuid "6898e1e9-904d-5579-981c-49de36de48c9")
 	)
-	(label "LOGIC_3V3"
+	(global_label "LOGIC_3V3"
+		(shape bidirectional)
 		(at 64.77 172.72 0.0000)
 		(effects
 			(font
@@ -3018,7 +3061,8 @@
 		)
 		(uuid "78077e87-1b83-5a3c-ae6e-614b33cc54a5")
 	)
-	(label "GND"
+	(global_label "GND"
+		(shape bidirectional)
 		(at 77.47 172.72 0.0000)
 		(effects
 			(font
@@ -3028,7 +3072,8 @@
 		)
 		(uuid "d3cc472d-756d-5480-ad42-428d030715bf")
 	)
-	(label "TDM_SPARE_1"
+	(global_label "TDM_SPARE_1"
+		(shape bidirectional)
 		(at 64.77 175.26 0.0000)
 		(effects
 			(font
@@ -3038,7 +3083,8 @@
 		)
 		(uuid "ddbfe9ec-a527-58a7-8479-aa5bf009286b")
 	)
-	(label "TDM_SPARE_2"
+	(global_label "TDM_SPARE_2"
+		(shape bidirectional)
 		(at 77.47 175.26 0.0000)
 		(effects
 			(font
@@ -3048,7 +3094,8 @@
 		)
 		(uuid "dd80e9bd-5236-52c6-a618-f96faf711431")
 	)
-	(label "GND"
+	(global_label "GND"
+		(shape bidirectional)
 		(at 64.77 177.8 0.0000)
 		(effects
 			(font
@@ -3058,7 +3105,8 @@
 		)
 		(uuid "96793eb8-4925-526b-86b3-1c5348952fda")
 	)
-	(label "GND"
+	(global_label "GND"
+		(shape bidirectional)
 		(at 77.47 177.8 0.0000)
 		(effects
 			(font
@@ -3068,7 +3116,8 @@
 		)
 		(uuid "e3e7c253-5ce3-59d5-a6c7-bde1693c28e4")
 	)
-	(label "AUDIO_12V"
+	(global_label "AUDIO_12V"
+		(shape bidirectional)
 		(at 160.02 154.94 0.0000)
 		(effects
 			(font
@@ -3078,7 +3127,8 @@
 		)
 		(uuid "f81a1994-f065-574b-94e7-15b47ded2e85")
 	)
-	(label "AUDIO_12V"
+	(global_label "AUDIO_12V"
+		(shape bidirectional)
 		(at 172.72 154.94 0.0000)
 		(effects
 			(font
@@ -3088,7 +3138,8 @@
 		)
 		(uuid "1c4a52b4-529f-5531-ae5b-e9ab0ba65a6c")
 	)
-	(label "GND"
+	(global_label "GND"
+		(shape bidirectional)
 		(at 160.02 157.48 0.0000)
 		(effects
 			(font
@@ -3098,7 +3149,8 @@
 		)
 		(uuid "f9bce151-76b1-5043-8b28-b40002aa9d86")
 	)
-	(label "GND"
+	(global_label "GND"
+		(shape bidirectional)
 		(at 172.72 157.48 0.0000)
 		(effects
 			(font
@@ -3108,7 +3160,8 @@
 		)
 		(uuid "8a13070e-028d-55f3-a9d1-4e7b2b988d5e")
 	)
-	(label "GND"
+	(global_label "GND"
+		(shape bidirectional)
 		(at 39.37 275.59 0.0000)
 		(effects
 			(font
@@ -3118,7 +3171,8 @@
 		)
 		(uuid "d389f8c9-bf22-56c6-b718-484422f441f8")
 	)
-	(label "CPU_FAN_12V"
+	(global_label "CPU_FAN_12V"
+		(shape bidirectional)
 		(at 52.07 275.59 0.0000)
 		(effects
 			(font
@@ -3128,7 +3182,8 @@
 		)
 		(uuid "d5ffe420-9d2c-5cb5-9942-0f599dac4c9d")
 	)
-	(label "CPU_FAN_TACH"
+	(global_label "CPU_FAN_TACH"
+		(shape bidirectional)
 		(at 39.37 278.13 0.0000)
 		(effects
 			(font
@@ -3138,7 +3193,8 @@
 		)
 		(uuid "912ccdc4-038e-5978-be69-b47a803560c9")
 	)
-	(label "CPU_FAN_PWM"
+	(global_label "CPU_FAN_PWM"
+		(shape bidirectional)
 		(at 52.07 278.13 0.0000)
 		(effects
 			(font
@@ -3148,7 +3204,8 @@
 		)
 		(uuid "c497920f-4ae4-56d9-acb4-c3e842ff4643")
 	)
-	(label "GND"
+	(global_label "GND"
+		(shape bidirectional)
 		(at 110.49 275.59 0.0000)
 		(effects
 			(font
@@ -3158,7 +3215,8 @@
 		)
 		(uuid "51f92c5a-dc3f-508b-ba9b-657c90185066")
 	)
-	(label "MODEM_FAN_12V"
+	(global_label "MODEM_FAN_12V"
+		(shape bidirectional)
 		(at 123.19 275.59 0.0000)
 		(effects
 			(font
@@ -3168,7 +3226,8 @@
 		)
 		(uuid "7a9699c9-6e99-5b0a-9773-0a44fc3f3be7")
 	)
-	(label "MODEM_FAN_TACH"
+	(global_label "MODEM_FAN_TACH"
+		(shape bidirectional)
 		(at 110.49 278.13 0.0000)
 		(effects
 			(font
@@ -3178,7 +3237,8 @@
 		)
 		(uuid "73bb2361-0d2c-57f4-a3cf-ca0c5f40a170")
 	)
-	(label "MODEM_FAN_PWM"
+	(global_label "MODEM_FAN_PWM"
+		(shape bidirectional)
 		(at 123.19 278.13 0.0000)
 		(effects
 			(font
@@ -3188,7 +3248,8 @@
 		)
 		(uuid "dcd670e1-230f-58f2-8fe0-1b0a08108c98")
 	)
-	(label "GND"
+	(global_label "GND"
+		(shape bidirectional)
 		(at 180.34 275.59 0.0000)
 		(effects
 			(font
@@ -3198,7 +3259,8 @@
 		)
 		(uuid "0b09db63-1b5c-5f53-8665-7f4b58b63c76")
 	)
-	(label "INTAKE_FAN_12V"
+	(global_label "INTAKE_FAN_12V"
+		(shape bidirectional)
 		(at 193.04 275.59 0.0000)
 		(effects
 			(font
@@ -3208,7 +3270,8 @@
 		)
 		(uuid "f2c53c64-f65e-5da4-aedb-ff31b45f5196")
 	)
-	(label "INTAKE_FAN_TACH"
+	(global_label "INTAKE_FAN_TACH"
+		(shape bidirectional)
 		(at 180.34 278.13 0.0000)
 		(effects
 			(font
@@ -3218,7 +3281,8 @@
 		)
 		(uuid "762d0ed1-8c67-50c0-85bf-3fde1dc81ad3")
 	)
-	(label "INTAKE_FAN_PWM"
+	(global_label "INTAKE_FAN_PWM"
+		(shape bidirectional)
 		(at 193.04 278.13 0.0000)
 		(effects
 			(font
@@ -3228,7 +3292,8 @@
 		)
 		(uuid "9abd44a3-46e4-5073-99ed-56ada1858c63")
 	)
-	(label "GND"
+	(global_label "GND"
+		(shape bidirectional)
 		(at 250.19 275.59 0.0000)
 		(effects
 			(font
@@ -3238,7 +3303,8 @@
 		)
 		(uuid "a5c754ac-b874-5793-a36c-87c66255c2b6")
 	)
-	(label "EXHAUST_FAN_12V"
+	(global_label "EXHAUST_FAN_12V"
+		(shape bidirectional)
 		(at 262.89 275.59 0.0000)
 		(effects
 			(font
@@ -3248,7 +3314,8 @@
 		)
 		(uuid "c9e10b55-4a38-5d80-96ae-f99a1bc20aea")
 	)
-	(label "EXHAUST_FAN_TACH"
+	(global_label "EXHAUST_FAN_TACH"
+		(shape bidirectional)
 		(at 250.19 278.13 0.0000)
 		(effects
 			(font
@@ -3258,7 +3325,8 @@
 		)
 		(uuid "193e06a1-9ae1-5459-bac9-367d44c0f09d")
 	)
-	(label "EXHAUST_FAN_PWM"
+	(global_label "EXHAUST_FAN_PWM"
+		(shape bidirectional)
 		(at 262.89 278.13 0.0000)
 		(effects
 			(font
@@ -3422,7 +3490,7 @@
 		)
 		(uuid "d3222ade-25c7-5bd2-8a8a-d3ca2185fffe")
 	)
-	(text "01 CM5-Core-Allocated: exact 300-contact CM5 symbol, 76 locked functions"
+	(text "01 CM5-Core-Allocated: exact 300-contact CM5 symbol, 76 owned contacts (74 connected, 2 assigned NC)"
 		(exclude_from_sim no)
 		(at 320 38 0.0000)
 		(effects
@@ -3522,7 +3590,7 @@
 		)
 		(uuid "d5e223a1-9d25-5170-94c5-ff44708725a0")
 	)
-	(text "11 Review: every detailed sheet has zero ERC errors; warnings are classified"
+	(text "11 Review: all three board roots have zero ERC violations; child context is allowlisted"
 		(exclude_from_sim no)
 		(at 320 128 0.0000)
 		(effects
@@ -3561,6 +3629,321 @@
 			)
 		)
 		(uuid "024f141d-fa4c-5d40-b21c-0bcb7feaa3b0")
+	)
+	(text "E. CONNECTED CM5-CARRIER HIERARCHY"
+		(exclude_from_sim no)
+		(at 610 22 0.0000)
+		(effects
+			(font
+				(size 1.65 1.65)
+				(bold yes)
+			)
+		)
+		(uuid "22d57af7-54a0-5827-b755-4f8a1806f6a6")
+	)
+	(text "J101/J201/J401-J404 are interface-only duplicates; the detailed-page connectors own the board footprints."
+		(exclude_from_sim no)
+		(at 585 390 0.0000)
+		(effects
+			(font
+				(size 0.82 0.82)
+			)
+		)
+		(uuid "d6f52805-3c91-59af-ba4c-9c3f509efc38")
+	)
+	(sheet
+		(at 605 45)
+		(size 165 30)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.3)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "8d185cd7-4b0c-594c-b71d-9bf1ce0f8e76")
+		(property "Sheetname" "CM5 Core / Allocated Pins"
+			(at 605 44.2884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "CM5-Core-Allocated.kicad_sch"
+			(at 605 75.5846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "CM5-Carrier"
+				(path "/fda5e2ef-3fac-50da-a742-8f95f72b231c"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 605 93)
+		(size 165 30)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.3)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "26e79050-b403-5ab2-96c2-07eddb5b3549")
+		(property "Sheetname" "Network / PCIe / Wi-Fi"
+			(at 605 92.2884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Network-PCIe.kicad_sch"
+			(at 605 123.5846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "CM5-Carrier"
+				(path "/fda5e2ef-3fac-50da-a742-8f95f72b231c"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 605 141)
+		(size 165 30)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.3)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "f5377ec7-d89e-5435-92b1-93f01023731a")
+		(property "Sheetname" "WWAN / Dual SIM"
+			(at 605 140.2884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "WWAN-SIM.kicad_sch"
+			(at 605 171.5846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "CM5-Carrier"
+				(path "/fda5e2ef-3fac-50da-a742-8f95f72b231c"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 605 189)
+		(size 165 30)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.3)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "24de11fd-f100-5d68-9ad5-0a3d5b63091b")
+		(property "Sheetname" "Display Harness"
+			(at 605 188.2884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Display-Harness.kicad_sch"
+			(at 605 219.5846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "CM5-Carrier"
+				(path "/fda5e2ef-3fac-50da-a742-8f95f72b231c"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 605 237)
+		(size 165 30)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.3)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "93a6e058-aed8-58f3-b292-1e50402d2984")
+		(property "Sheetname" "Audio Control / Headset"
+			(at 605 236.2884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Audio-Control.kicad_sch"
+			(at 605 267.5846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "CM5-Carrier"
+				(path "/fda5e2ef-3fac-50da-a742-8f95f72b231c"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 605 285)
+		(size 165 30)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.3)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "30b847c4-3795-523b-96bb-3f0920023172")
+		(property "Sheetname" "Power Regulators"
+			(at 605 284.2884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Power-Regulators-A1.kicad_sch"
+			(at 605 315.5846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "CM5-Carrier"
+				(path "/fda5e2ef-3fac-50da-a742-8f95f72b231c"
+					(page "7")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 605 333)
+		(size 165 30)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.3)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "8d99406f-80b9-57c2-b633-bc5d2b17e411")
+		(property "Sheetname" "Thermal / Fans / IO"
+			(at 605 332.2884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Thermal-IO.kicad_sch"
+			(at 605 363.5846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "CM5-Carrier"
+				(path "/fda5e2ef-3fac-50da-a742-8f95f72b231c"
+					(page "8")
+				)
+			)
+		)
 	)
 	(sheet_instances
 		(path "/"

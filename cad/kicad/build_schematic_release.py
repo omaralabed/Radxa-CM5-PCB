@@ -127,9 +127,12 @@ def cover_pdf() -> bytes:
         Paragraph(
             "This master set contains the controlled PWR-SELECT, CM5-CARRIER, "
             "and AUDIO-8X8 schematic review sheets. The complete automated gate "
-            "passes all sixteen sheets with zero ERC errors, 174 critical "
-            "cross-board interface checks, the full regulator and source-selector "
-            "calculation checks, and 381 AUDIO-8X8 checks.",
+            "gives all three authoritative board roots 0 ERC violations, matches "
+            "every standalone child-sheet context finding to an exact allowlist, "
+            "and passes 174 critical "
+            "cross-board interface checks, nine CM5 allocation/source checks, "
+            "the full regulator and source-selector calculation checks, and "
+            "581 AUDIO-8X8 checks.",
             body,
         ),
         Spacer(1, 0.08 * inch),
