@@ -92,14 +92,16 @@ under `references/procomm-field-unit/`.
   reports `0 errors / 0 warnings`; isolated child-sheet context findings match
   a strict explicit allowlist. The controlled audit covers 1203 unique
   components and intentionally blocks final routing on ten audio package
-  coupons. Native PCB-A0 files now carry the complete netlists, exact locked
-  mating geometry, and controlled support patterns; no production routing has
-  begun and all unverified footprints remain staged outside the outlines.
-- The three PCB-A0 baselines are checked by
+  coupons. Native PCB-A1 files now carry the complete netlists, exact locked
+  mating geometry, controlled support patterns, and deterministic in-board
+  functional placement for all 1,190 schematic footprints; production routing
+  has not begun.
+- The three PCB-A1 baselines are checked by
   `cad/kicad/validate_pcb_placement.py` and
   `cad/kicad/validate_pcb_drc_baseline.py`. Locked XLR, RJ45, SIM, CM5, and
   support geometry has zero DRC errors. See
-  `cad/kicad/PCB_LAYOUT_STATUS_A0.md` for the exact source and transform record.
+  `cad/kicad/PCB_LAYOUT_STATUS_A1.md` for the exact source, transform, placement,
+  DRC, and 3D-review record.
 - Footprint Coupon A1 is now a controlled 100 x 80 mm, six-layer KiCad board
   with zero DRC violations. It compares open, bottom-tented, and selective
   Type VII exposed-pad vias for AK5558VN/AK4458VN and includes physical fit

@@ -4,7 +4,7 @@
 
 - Native CAD tool: KiCad 10.0.5.
 - Capture milestone: A1 detailed CM5-carrier schematic suite.
-- PCB milestone: native PCB-A0 source-verified mating-placement baselines.
+- PCB milestone: native PCB-A1 in-board engineering-placement baselines.
 - These files are not a fabrication release.
 - Rev L nominal envelopes and controlled support coordinates authorize
   engineering carrier, audio, and selector PCB layout. Exact machining datums,
@@ -121,7 +121,7 @@ The complete A1 gate is automated:
 cad/kicad/review_detailed_capture.sh
 ```
 
-Generate and validate the native PCB-A0 baselines with KiCad's bundled Python:
+Generate and validate the native PCB-A1 baselines with KiCad's bundled Python:
 
 ```sh
 '/Applications/KiCad/KiCad.app/Contents/Frameworks/Python.framework/Versions/3.9/bin/python3' \
@@ -139,10 +139,10 @@ reports and the mechanical consistency gate, is automated as:
 cad/kicad/review_pcb_baseline.sh
 ```
 
-[`PCB_LAYOUT_STATUS_A0.md`](PCB_LAYOUT_STATUS_A0.md) records the no-guesswork
+[`PCB_LAYOUT_STATUS_A1.md`](PCB_LAYOUT_STATUS_A1.md) records the no-guesswork
 geometry sources, exact CM5 underside transform, PCBWay process rules, and the
-controlled DRC baseline. Unverified components remain outside each board
-outline until their package and placement datums are authoritative.
+controlled DRC/3D baseline. All schematic footprints are inside their correct
+board; preliminary package blockers remain explicit until qualification.
 
 After that gate passes, build the combined schematic review PDFs with:
 
@@ -202,7 +202,7 @@ Electrical validation does not replace this visual readability gate.
 2. Complete selector shunt/current-limit tolerance, hold-up/precharge, SOA,
    telemetry calibration, and 15 A thermal review, then create its PCB.
 3. Freeze the PCBWay-controlled impedance stackups. Continue placement and
-   routing from the native PCB-A0 files while enforcing the Rev L underside
+   routing from the native PCB-A1 files while enforcing the Rev L underside
    limits of 78 x 268 mm for `AUDIO-8X8` and 166 x 268 mm for `CM5-CARRIER`,
    support patterns `A1-A6` and `C1-C6`, and the 15 mm frame/screw keepout.
    Keep every connector and CM5 mating datum locked.

@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Validate native PCB-A0 outlines and every source-controlled placement.
+"""Validate native PCB-A1 outlines and engineering placement.
 
-Run with KiCad's bundled Python interpreter. This validator intentionally fails
-if an unverified schematic footprint enters a board outline.
+Run with KiCad's bundled Python interpreter. This validator fails if a schematic
+footprint leaves its board, violates the assembly-side contract, overlaps a
+same-side courtyard, or changes any source-controlled mating geometry.
 """
 
 from __future__ import annotations
@@ -68,6 +69,76 @@ def position(footprint: pcbnew.FOOTPRINT) -> tuple[float, float]:
 def fpid(footprint: pcbnew.FOOTPRINT) -> str:
     identifier = footprint.GetFPID()
     return f"{identifier.GetLibNickname()}:{identifier.GetLibItemName()}"
+
+
+def courtyard_bbox(footprint: pcbnew.FOOTPRINT) -> pcbnew.BOX2I:
+    footprint.BuildCourtyardCaches()
+    layer = pcbnew.B_CrtYd if footprint.GetLayer() == pcbnew.B_Cu else pcbnew.F_CrtYd
+    courtyard = footprint.GetCourtyard(layer)
+    return courtyard.BBox() if not courtyard.IsEmpty() else footprint.GetBoundingBox(False, False)
+
+
+def bbox_mm(footprint: pcbnew.FOOTPRINT) -> tuple[float, float, float, float]:
+    bbox = courtyard_bbox(footprint)
+    return (
+        pcbnew.ToMM(bbox.GetLeft()),
+        pcbnew.ToMM(bbox.GetTop()),
+        pcbnew.ToMM(bbox.GetRight()),
+        pcbnew.ToMM(bbox.GetBottom()),
+    )
+
+
+def internal_footprints_are_inside(
+    footprints: dict[str, pcbnew.FOOTPRINT],
+    controlled: set[str],
+    width: float,
+    height: float,
+) -> bool:
+    for reference, footprint in footprints.items():
+        if reference in controlled:
+            continue
+        left, top, right, bottom = bbox_mm(footprint)
+        if left < 0.50 or top < 0.50 or right > width - 0.50 or bottom > height - 0.50:
+            return False
+    return True
+
+
+def internal_courtyards_do_not_overlap(
+    footprints: dict[str, pcbnew.FOOTPRINT],
+    controlled: set[str],
+) -> bool:
+    references = sorted(footprints)
+    boxes = {reference: bbox_mm(footprints[reference]) for reference in references}
+    for index, reference in enumerate(references):
+        footprint = footprints[reference]
+        left, top, right, bottom = boxes[reference]
+        for other_reference in references[index + 1 :]:
+            if reference in controlled and other_reference in controlled:
+                continue
+            other = footprints[other_reference]
+            if footprint.GetLayer() != other.GetLayer():
+                continue
+            other_left, other_top, other_right, other_bottom = boxes[other_reference]
+            if (
+                min(right, other_right) - max(left, other_left) > 0.001
+                and min(bottom, other_bottom) - max(top, other_top) > 0.001
+            ):
+                return False
+    return True
+
+
+def side_contract(
+    name: str,
+    footprints: dict[str, pcbnew.FOOTPRINT],
+    controlled: set[str],
+) -> bool:
+    internal = [item for reference, item in footprints.items() if reference not in controlled]
+    if name == "AUDIO-8X8":
+        return all(item.GetLayer() == pcbnew.B_Cu for item in internal)
+    if name == "CM5-CARRIER":
+        return all(item.GetLayer() == pcbnew.F_Cu for item in internal)
+    sides = {item.GetLayer() for item in internal}
+    return sides == {pcbnew.F_Cu, pcbnew.B_Cu}
 
 
 def source_footprint(identifier: str) -> pcbnew.FOOTPRINT:
@@ -271,16 +342,12 @@ def validate_board(name: str, contract: dict, supports: dict[str, tuple[float, f
     expected_locked = set(fixed) | set(supports)
     actual_locked = {reference for reference, item in footprints.items() if item.IsLocked()}
     width, height = contract["size"]
-    staged_ok = all(
-        position(item)[0] > width
-        for reference, item in footprints.items()
-        if reference not in expected_locked
-    )
     schematic_count = schematic_footprint_count(contract["schematic"])
     settings = board.GetDesignSettings()
     source_geometry_exclusions = {"J501", "J502", "J503"}
     checks = [
         check(f"{name} outline", outline_is_exact(board, width, height), f"{width:.1f} x {height:.1f} mm rectangle"),
+        check(f"{name} revision", board.GetTitleBlock().GetRevision() == "PCB-A1", "PCB-A1 engineering placement"),
         check(f"{name} stack", board.GetCopperLayerCount() == contract["layers"] and near(pcbnew.ToMM(board.GetDesignSettings().GetBoardThickness()), 1.6), f"{contract['layers']} copper layers; 1.60 mm"),
         check(
             f"{name} PCBWay process rules",
@@ -297,8 +364,22 @@ def validate_board(name: str, contract: dict, supports: dict[str, tuple[float, f
             f"{len(set(fixed) - source_geometry_exclusions)} locked connector pad/hole patterns match their source libraries",
         ),
         check(f"{name} supports", validate_supports(footprints, supports), f"{len(supports)} exact CSV positions and 3.40 mm NPTH geometry"),
-        check(f"{name} staging", staged_ok, "every unverified schematic footprint is outside the board outline"),
-        check(f"{name} routing state", len(board.GetTracks()) == 0 and board.GetAreaCount() == 0, "no tracks, vias, or zones in PCB-A0 placement baseline"),
+        check(
+            f"{name} in-board placement",
+            internal_footprints_are_inside(footprints, expected_locked, width, height),
+            "every schematic footprint courtyard is inside its own board",
+        ),
+        check(
+            f"{name} assembly side",
+            side_contract(name, footprints, expected_locked),
+            "audio B.Cu; carrier F.Cu; selector split F.Cu/B.Cu",
+        ),
+        check(
+            f"{name} same-side courtyards",
+            internal_courtyards_do_not_overlap(footprints, expected_locked),
+            "no internal same-side courtyard collisions",
+        ),
+        check(f"{name} routing state", len(board.GetTracks()) == 0 and board.GetAreaCount() == 0, "no tracks, vias, or zones in PCB-A1 placement baseline"),
     ]
     return checks
 

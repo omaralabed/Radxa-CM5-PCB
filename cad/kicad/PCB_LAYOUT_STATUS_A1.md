@@ -1,27 +1,46 @@
-# Native PCB-A0 Placement Baseline
+# Native PCB-A1 Engineering Placement
 
 ## Release State
 
 **ENGINEERING PLACEMENT BASELINE - NOT ROUTED - NOT FABRICATION READY**
 
-The three native KiCad PCB files now exist and carry their complete schematic
-netlists. Only source-controlled mating connectors and controlled structural
-supports are inside the board outlines. Every other footprint is deliberately
-staged outside its board, so no tentative placement can be mistaken for an
-approved physical location.
+The three native KiCad PCB files carry their complete schematic netlists and
+all 1,190 schematic footprints are now inside their correct board outlines.
+Source-controlled mating connectors and structural supports remain locked.
+Internal parts have deterministic, functional engineering placements so the
+PCB editor and 3D viewer describe one physical assembly instead of off-board
+staging clouds.
+
+This is still an unrouted placement baseline. Internal component coordinates
+may move during power-integrity, signal-integrity, thermal, and routing review;
+locked mating datums and support holes may not move.
 
 ## No-Guesswork Geometry Rule
 
 - Never redraw, resize, move, or "clean up" a connector pad or hole to satisfy
   DRC. Correct the process rule or stop the release for manufacturer review.
-- A footprint enters the board only after its drawing or official reference
-  design fixes the local pad/hole pattern and the mechanical drawing fixes its
-  board datum.
+- Every footprint uses its actual selected package land pattern. External mating
+  parts enter only at drawing-controlled mechanical datums; internal placement
+  is an explicit engineering decision and is not represented as a factory datum.
 - The validators compare locked XLR, RJ45, and SIM pad positions, sizes,
   drills, shapes, orientations, attributes, and layer sets to their source
   libraries. The CM5 validator separately compares all 304 generated connector
   pad records to Radxa's official V2.20 PADS source.
-- Parts without authoritative geometry remain in the off-board staging area.
+- Preliminary package blockers remain clearly identified by the footprint audit
+  and must close before route freeze; no part is hidden outside a board.
+
+## Functional Placement
+
+- `AUDIO-8X8`: all non-XLR circuitry is on `B.Cu`, split into digital/AKM,
+  eight-channel analog, and isolated-power regions. The sixteen XLRs remain
+  locked on `F.Cu`.
+- `CM5-CARRIER`: unlocked circuitry is on `F.Cu`, split into network,
+  service/WWAN/display/audio/thermal, power-conversion, and CM5-support regions.
+  The exact CM5 mating assembly remains on `B.Cu`.
+- `PWR-SELECT`: high-current and through-hole hardware is on `F.Cu`; compact
+  control circuitry is on `B.Cu`.
+- Dense internal reference/value fields are carried on Fab layers. This keeps
+  the assembly data available without overlapping production silkscreen labels.
 
 ## Locked Mating Geometry
 
@@ -73,15 +92,25 @@ engineering disposition.
 
 | Board | Errors | Warnings | Meaning |
 |---|---:|---:|---|
-| AUDIO-8X8 | 0 | 8 | Expected library-mismatch notices because the overhanging male-XLR outline ink is moved from `F.SilkS` to `F.Fab`; pads and holes remain byte-for-byte equivalent by geometry signature |
-| CM5-CARRIER | 18 | 0 | Only staged `Q1110`, `Q1111`, and preliminary `J910`; no locked connector or support appears in a violation |
-| PWR-SELECT | 0 | 0 | Clean placement baseline; all parts remain staged |
+| AUDIO-8X8 | 69 | 76 | Errors are only KiCad opposite-side THT/NPTH-versus-XLR-courtyard notices; copper and support-hole clearances pass. Warnings are 68 placement silkscreen cleanups plus eight controlled male-XLR library notices. |
+| CM5-CARRIER | 18 | 74 | Errors remain confined to preliminary `Q1110`, `Q1111`, and `J910` lands. Warnings are placement silkscreen cleanup items. |
+| PWR-SELECT | 0 | 12 | No placement/copper errors; twelve silkscreen cleanup warnings. |
 
-Unconnected and schematic-parity findings are retained in the JSON reports;
-they are expected before placement/routing and are not excluded. Final release
-requires fully routed boards with zero real DRC errors, resolved parity, and
-signed exceptions only where an immutable manufacturer land pattern demands
-one.
+The audio courtyard notices come from KiCad checking through-hole pins against
+body courtyards on both assembly sides. The validator permits them only when a
+locked `F.Cu` XLR and an unlocked `B.Cu` part form the pair; ordinary pad,
+hole, and same-side courtyard conflicts remain hard failures. Unconnected and
+schematic-parity findings remain expected until routing. Final release still
+requires zero unresolved DRC errors, completed silkscreen cleanup, resolved
+parity, and signed exceptions only where immutable manufacturer geometry
+requires one.
+
+## 3D Review
+
+Controlled top and bottom renders for all three assemblies are under
+`cad/kicad/PCB-REVIEW/3D/`. Each render is generated from the native PCB file;
+the validator prevents any schematic footprint from returning to off-board
+staging.
 
 ## Rebuild And Check
 
