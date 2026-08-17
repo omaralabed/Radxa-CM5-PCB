@@ -172,9 +172,10 @@ loops.
 ## PCB And Routing Preconditions
 
 - Do not route until the final panel connector Z datum is measured.
-- The current footprint audit covers 527 components and reports 361 routing
-  blockers and 429 production blockers. These are unresolved exact-footprint,
-  pad-map, courtyard, 3D-model, or production-data gates; see
+- The current footprint audit covers 1038 components and reports 10 routing
+  blockers and 11 production blockers. The routing blockers are the two AKM
+  exposed-pad package coupons and eight Panasonic TQ2 relay fit coupons. The
+  additional production blocker is the Kycon headset-jack physical coupon; see
   `cad/kicad/reports/component-footprint-audit.md`. Zero ERC errors does not
   clear these blockers or authorize routing.
 - AUDIO-8X8: controlled `A1-A6` supports, panel-supported XLRs, controlled chassis

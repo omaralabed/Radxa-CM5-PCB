@@ -88,7 +88,7 @@ under `references/procomm-field-unit/`.
   source/status/telemetry, carrier/audio, fan, temperature-alert, and XLR
   interfaces have 174 critical connector and control pin/net assignments
   machine-validated. All sixteen sheets report zero ERC errors. The controlled
-  audit covers 1023 components and intentionally blocks routing on ten audio
+  audit covers 1038 components and intentionally blocks routing on ten audio
   package coupons; no production PCB routing has begun.
 - Footprint Coupon A1 is now a controlled 100 x 80 mm, six-layer KiCad board
   with zero DRC violations. It compares open, bottom-tented, and selective
@@ -96,6 +96,15 @@ under `references/procomm-field-unit/`.
   sites for the TQ2-12V relay and Kycon CTIA jack. The PCBWay-ready Gerber,
   drill, drawing, placement, render, BOM, inspection, and result package is in
   `fabrication/footprint-coupon-a1`; physical qualification remains pending.
+- The controlled PCBWay one-shot submission gate is under
+  `fabrication/pcbway-release/`. It inventories the three production PCBs,
+  complete PCBA outputs, mechanical machining release, harnesses, firmware,
+  tests, and physical signoffs. Its validator prevents a partial or internally
+  inconsistent factory upload.
+- The reviewed factory-facing schematic PDFs are under
+  `outputs/schematic-release-a1/`. The accompanying
+  `docs/schematic-release-status-a1.md` records the passed electrical gates and
+  the physical coupon/mechanical holds that must close before PCB placement.
 - The Radxa CM5 V2.21 A0 pin allocation is controlled in
   `notes/cm5-pin-allocation-a0.md` and
   `outputs/cm5-pin-allocation-a0/radxa_cm5_pin_allocation_a0.xlsx`. The audit

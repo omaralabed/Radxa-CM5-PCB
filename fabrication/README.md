@@ -2,6 +2,11 @@
 
 Place manufacturing outputs here when the design is ready.
 
+The controlled one-shot PCBWay release gate is under `pcbway-release/`. Its
+manifest covers all production PCBs, machined enclosure parts, harnesses,
+source files, test instructions, and physical signoffs. The archive builder
+will not run while any required release item is open or missing.
+
 Expected outputs:
 
 - Gerbers

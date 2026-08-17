@@ -1,0 +1,55 @@
+item_id,package,required,state,path_or_pattern,release_evidence,notes
+G001,global,YES,READY,../../cad/kicad/reports/component-footprint-audit.md,Current controlled component and footprint audit,Must report zero blockers at release
+G002,global,YES,OPEN,physical/footprint-coupon-a1-signed-results.pdf,Signed coupon result plus X-ray and microsection evidence,AK5558 AK4458 TQ2 and Kycon physical release
+G003,global,YES,OPEN,physical/mechanical-release-a2-signed.pdf,Completed M001-M080 and signed release,Actual iM2300 installation geometry controls all final machining and PCB mounts
+G004,global,YES,MISSING,global/pcbway-approved-stackups.pdf,PCBWay stackups with dielectric and impedance tables,Controlled impedance and copper current requirements for all boards
+G005,global,YES,MISSING,global/final-release-approval.pdf,Electrical mechanical thermal safety and manufacturing signatures,Authorizes archive upload
+G006,global,YES,READY,../../outputs/schematic-release-a1/Radxa-CM5-ProComm-Schematic-Release-A1.pdf,Reviewed complete sixteen-sheet schematic master,Electrical capture release only; PCB remains held
+C001,cm5-carrier,YES,MISSING,01-cm5-carrier/source/CM5-Carrier.kicad_pcb,Routed KiCad PCB source,No production layout exists yet
+C002,cm5-carrier,YES,MISSING,01-cm5-carrier/fabrication/CM5-Carrier-Gerber-Drill.zip,Gerber X2 or RS-274X plus plated and NPTH drill files,Include board outline and readme layer map
+C003,cm5-carrier,YES,MISSING,01-cm5-carrier/assembly/CM5-Carrier-BOM.csv,Board-level BOM with exact MPN alternates DNP and supply class,Designators must match CPL and drawings
+C004,cm5-carrier,YES,MISSING,01-cm5-carrier/assembly/CM5-Carrier-CPL.csv,Centroid X Y rotation side in mm,All placed SMT items
+C005,cm5-carrier,YES,MISSING,01-cm5-carrier/drawings/CM5-Carrier-Fabrication.pdf,Dimensions stackup impedance drills tolerances finish and notes,Controlled drawing
+C006,cm5-carrier,YES,MISSING,01-cm5-carrier/drawings/CM5-Carrier-Assembly.pdf,Top bottom designators polarity and special assembly notes,Include customer-supplied modules and DNP
+C007,cm5-carrier,YES,MISSING,01-cm5-carrier/mechanical/CM5-Carrier.step,Board and fitted component 3D model,Collision checked against released enclosure STEP
+C008,cm5-carrier,YES,MISSING,01-cm5-carrier/reports/CM5-Carrier-DRC.txt,Zero unresolved DRC report,Released rule set and stackup
+C009,cm5-carrier,YES,MISSING,01-cm5-carrier/reports/CM5-Carrier-SI-PI-Thermal.pdf,Signed PCIe USB3 Ethernet power integrity and thermal review,Include current density and regulator loop checks
+C010,cm5-carrier,YES,MISSING,01-cm5-carrier/test/CM5-Carrier-Test-and-Programming.pdf,Programming bring-up rail fan telemetry network display RF and functional test,Include limits and fixtures
+C011,cm5-carrier,YES,READY,../../outputs/schematic-release-a1/CM5-Carrier-Schematic-A1.pdf,Reviewed eight-sheet carrier schematic set,Controlled factory reference
+A001,audio-8x8,YES,MISSING,02-audio-8x8/source/Audio-8x8.kicad_pcb,Routed KiCad PCB source,No production layout exists yet
+A002,audio-8x8,YES,MISSING,02-audio-8x8/fabrication/Audio-8x8-Gerber-Drill.zip,Gerber X2 or RS-274X plus plated and NPTH drill files,Include board outline and readme layer map
+A003,audio-8x8,YES,MISSING,02-audio-8x8/assembly/Audio-8x8-BOM.csv,Board-level BOM with exact MPN alternates DNP and supply class,Designators must match CPL and drawings
+A004,audio-8x8,YES,MISSING,02-audio-8x8/assembly/Audio-8x8-CPL.csv,Centroid X Y rotation side in mm,All placed SMT items
+A005,audio-8x8,YES,MISSING,02-audio-8x8/drawings/Audio-8x8-Fabrication.pdf,Dimensions stackup impedance drills tolerances finish and notes,Controlled drawing
+A006,audio-8x8,YES,MISSING,02-audio-8x8/drawings/Audio-8x8-Assembly.pdf,Top bottom designators polarity relay XLR and special assembly notes,Include chassis shield handling
+A007,audio-8x8,YES,MISSING,02-audio-8x8/mechanical/Audio-8x8.step,Board and fitted component 3D model,Collision checked against released panel and supports
+A008,audio-8x8,YES,MISSING,02-audio-8x8/reports/Audio-8x8-DRC.txt,Zero unresolved DRC report,Released rule set and stackup
+A009,audio-8x8,YES,MISSING,02-audio-8x8/reports/Audio-8x8-Integrity-Thermal.pdf,Signed clock TDM grounding return path crosstalk and thermal review,Protect analog quiet zone
+A010,audio-8x8,YES,MISSING,02-audio-8x8/test/Audio-8x8-Acceptance.pdf,All-channel gain noise THD+N crosstalk mute and 600-ohm tests,Include fixtures and numeric limits
+A011,audio-8x8,YES,READY,../../outputs/schematic-release-a1/Audio-8x8-Schematic-A1.pdf,Reviewed seven-sheet audio schematic set,Controlled factory reference
+P001,pwr-select,YES,MISSING,03-pwr-select/source/PowerSelector.kicad_pcb,Routed KiCad PCB source,No production layout exists yet
+P002,pwr-select,YES,MISSING,03-pwr-select/fabrication/PowerSelector-Gerber-Drill.zip,Gerber X2 or RS-274X plus plated and NPTH drill files,Include board outline and readme layer map
+P003,pwr-select,YES,MISSING,03-pwr-select/assembly/PowerSelector-BOM.csv,Board-level BOM with exact MPN alternates DNP and supply class,Close all passive production MPNs
+P004,pwr-select,YES,MISSING,03-pwr-select/assembly/PowerSelector-CPL.csv,Centroid X Y rotation side in mm,All placed SMT items
+P005,pwr-select,YES,MISSING,03-pwr-select/drawings/PowerSelector-Fabrication.pdf,Dimensions copper weight drills tolerances finish and high-current notes,Controlled drawing
+P006,pwr-select,YES,MISSING,03-pwr-select/drawings/PowerSelector-Assembly.pdf,Top bottom designators polarity capacitor restraint and special notes,Show high-current hardware
+P007,pwr-select,YES,MISSING,03-pwr-select/mechanical/PowerSelector.step,Board and fitted component 3D model,Collision checked against released tray and harnesses
+P008,pwr-select,YES,MISSING,03-pwr-select/reports/PowerSelector-DRC.txt,Zero unresolved DRC report,Released high-current rule set
+P009,pwr-select,YES,MISSING,03-pwr-select/reports/PowerSelector-SOA-Thermal.pdf,Signed shunt tolerance current limit inrush SOA hold-up and thermal review,Validate 15 A class paths
+P010,pwr-select,YES,MISSING,03-pwr-select/test/PowerSelector-Acceptance.pdf,No-blink transfer calibration overload fault and backup load-shed tests,Include oscilloscope limits
+P011,pwr-select,YES,READY,../../outputs/schematic-release-a1/Power-Selector-Schematic-A1.pdf,Reviewed source-selector schematic set,Controlled factory reference
+M001,mechanical,YES,MISSING,04-mechanical/source/IM2300-Assembly.step,Released complete assembly STEP,Actual case and installed samples control fit
+M002,mechanical,YES,MISSING,04-mechanical/top-panel/IM2300-Top-Panel.dxf,Released 1:1 machining DXF,Concept SVG is not cut geometry
+M003,mechanical,YES,MISSING,04-mechanical/top-panel/IM2300-Top-Panel.pdf,Dimensioned drawing with datums tolerances material finish masks and inserts,Include every hole cutout and edge
+M004,mechanical,YES,MISSING,04-mechanical/frame/IM2300-Four-Side-Frame.dxf,Released support frame machining DXF,Panel screws independent of PCB mounts
+M005,mechanical,YES,MISSING,04-mechanical/frame/IM2300-Four-Side-Frame.pdf,Dimensioned support frame drawing,Include fasteners inserts PE bonds and sealing
+M006,mechanical,YES,MISSING,04-mechanical/tray/IM2300-Bottom-Tray.dxf,Released bottom equipment tray machining DXF,Controls PSU and selector support
+M007,mechanical,YES,MISSING,04-mechanical/tray/IM2300-Bottom-Tray.pdf,Dimensioned tray and PSU guard drawing,Include 48 mm installed guard limit
+M008,mechanical,YES,MISSING,04-mechanical/sidewalls/IM2300-Fan-Openings-and-Reinforcement.pdf,Released intake exhaust guards gaskets hoods and reinforcement,Includes HPX machining and sealing process
+M009,mechanical,YES,MISSING,04-mechanical/inspection/IM2300-Mechanical-FAI.pdf,Factory first-article inspection dimensions,References M001-M080 and closure test
+H001,harness-test,YES,OPEN,../harnesses/H01-PSU-24V.md,Controlled prototype work instruction,Final released length and connector retention still required
+H002,harness-test,YES,OPEN,../harnesses/H02-PSU-AC.md,Controlled prototype work instruction,Final released length PE routing and touch-safe guard still required
+H003,harness-test,YES,OPEN,../harnesses/H03-Lid-Display-Bundle.md,Controlled prototype work instruction,Final length follows full lid and 300 mm panel-lift test
+H004,harness-test,YES,MISSING,05-harness-test/Interboard-and-RF-Harnesses.pdf,Released TDM RF fan sensor switch SIM and service harness set,Include pin wire connector length label and test tables
+H005,harness-test,YES,MISSING,05-harness-test/Final-System-Acceptance.pdf,Complete electrical audio RF network thermal vibration closure and safety ATP,Numeric pass fail limits required
+H006,harness-test,YES,MISSING,05-harness-test/Firmware-and-Programming.zip,Versioned boot firmware device tree fan policy telemetry service and checksums,Include programming and recovery steps

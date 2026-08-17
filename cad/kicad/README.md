@@ -109,6 +109,17 @@ The complete A1 gate is automated:
 cad/kicad/review_detailed_capture.sh
 ```
 
+After that gate passes, build the combined schematic review PDFs with:
+
+```sh
+/Users/viewvision/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 \
+  cad/kicad/build_schematic_release.py
+```
+
+The controlled outputs and electrical/physical release distinction are under
+`../../outputs/schematic-release-a1/` and
+`../../docs/schematic-release-status-a1.md`.
+
 The generators use deterministic UUIDs. The review script writes temporary
 ERC, netlist, and PDF outputs, then updates controlled review artifacts only
 when their electrical content or rendered appearance changes. `pdftoppm` is
@@ -127,11 +138,10 @@ and MPN for every board-mounted item. The drawing-backed connector evidence and
 the Molex 0679101002 datum contract are recorded in
 [`FOOTPRINT_RELEASE.md`](FOOTPRINT_RELEASE.md).
 
-The current audit covers 1023 components. Ten items intentionally block PCB
+The current audit covers 1038 components. Ten items intentionally block PCB
 routing until physical coupons are approved: the two AKM exposed-pad packages
 and eight Panasonic TQ2 relay lands. The stricter production audit also holds
-67 PWR-SELECT passive rows without locked manufacturer/MPN evidence and the
-Kycon headset jack coupon, for 78 production blockers total.
+the Kycon headset jack coupon, for 11 production blockers total.
 
 Every A1 detailed sheet and AUDIO-8X8 currently reports zero ERC errors. The
 remaining warnings are isolated off-sheet interface labels or deliberately
