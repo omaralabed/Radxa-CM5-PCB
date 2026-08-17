@@ -11,6 +11,10 @@ if ! command -v pdftoppm >/dev/null 2>&1; then
     printf 'Missing required PDF renderer: pdftoppm\n' >&2
     exit 1
 fi
+if ! command -v pdfinfo >/dev/null 2>&1; then
+    printf 'Missing required PDF inspector: pdfinfo\n' >&2
+    exit 1
+fi
 
 REVIEW_TMP="$(mktemp -d "${TMPDIR:-/tmp}/radxa-cm5-review.XXXXXX")"
 trap 'rm -rf "${REVIEW_TMP}"' EXIT
@@ -63,6 +67,7 @@ install_pdf_if_changed() {
 
 python3 "${SCRIPT_DIR}/generate_interface_schematics.py"
 python3 "${SCRIPT_DIR}/PWR-SELECT/generate_power_selector.py"
+python3 "${SCRIPT_DIR}/SYSTEM/generate_system_schematic.py"
 
 review_sheet() {
     local schematic="$1"
@@ -192,6 +197,16 @@ python3 "${SCRIPT_DIR}/CM5-CARRIER/validate_audio_control.py"
 python3 "${SCRIPT_DIR}/AUDIO-8X8/export_audio_8x8_bom.py"
 python3 "${SCRIPT_DIR}/AUDIO-8X8/validate_audio_8x8.py"
 python3 "${SCRIPT_DIR}/validate_interface_contracts.py"
+python3 "${SCRIPT_DIR}/SYSTEM/validate_system_schematic.py"
 python3 "${SCRIPT_DIR}/audit_footprint_readiness.py"
 
-printf 'Detailed capture review passed: all sixteen sheets have zero ERC errors.\n'
+SYSTEM_PDF="${REVIEW_TMP}/Radxa-CM5-ProComm-System.pdf"
+"${KICAD_CLI}" sch export pdf \
+    --output "${SYSTEM_PDF}" \
+    "${SCRIPT_DIR}/SYSTEM/Radxa-CM5-ProComm-System.kicad_sch"
+if [[ "$(pdfinfo "${SYSTEM_PDF}" | awk '/^Pages:/ {print $2}')" != "17" ]]; then
+    printf 'Complete-system schematic export does not contain 17 pages.\n' >&2
+    exit 1
+fi
+
+printf 'Detailed capture review passed: all sixteen sheets have zero ERC errors and the system project exports 17 pages.\n'

@@ -1,0 +1,750 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "8ee1d215-def5-50f5-8d2f-a9585b61ca2c")
+	(paper "A2")
+	(title_block
+		(title "Radxa CM5 ProComm - Complete System Schematic")
+		(date "2026-08-17")
+		(rev "A1")
+		(company "ProComm")
+		(comment 1 "Navigation index for all sixteen reviewed sheets")
+		(comment 2 "Three physical PCB netlists remain separate")
+		(comment 3 "Use board projects for ERC, BOM, netlist, and PCB update")
+		(comment 4 "PCB ROUTING HELD FOR PHYSICAL RELEASE GATES")
+	)
+	(lib_symbols)
+	(text "COMPLETE SYSTEM SCHEMATIC - 16 REVIEWED DESIGN SHEETS"
+		(exclude_from_sim no)
+		(at 100 25 0.0000)
+		(effects
+			(font
+				(size 3 3)
+				(bold yes)
+			)
+		)
+		(uuid "cfda8836-2690-5d11-aa26-8aa990162ac3")
+	)
+	(text "Open this project to navigate the entire design from one KiCad file. The source selector, carrier, and audio board remain separate physical PCBs with separate ERC, BOM, netlist, and layout release gates."
+		(exclude_from_sim no)
+		(at 150 36 0.0000)
+		(effects
+			(font
+				(size 1.5 1.5)
+			)
+		)
+		(uuid "321c7b88-5428-5297-b6a2-7e760da7801d")
+	)
+	(text "POWER SOURCE AND NO-BLINK SELECTOR"
+		(exclude_from_sim no)
+		(at 65 53 0.0000)
+		(effects
+			(font
+				(size 1.8 1.8)
+				(bold yes)
+			)
+		)
+		(uuid "a98f9103-7e68-5cd8-afe2-7164e2dac732")
+	)
+	(text "CM5 CARRIER"
+		(exclude_from_sim no)
+		(at 30 128 0.0000)
+		(effects
+			(font
+				(size 1.8 1.8)
+				(bold yes)
+			)
+		)
+		(uuid "b626c1cb-cf09-5c71-8063-81ff2c6c0233")
+	)
+	(text "BALANCED AUDIO 8X8"
+		(exclude_from_sim no)
+		(at 30 278 0.0000)
+		(effects
+			(font
+				(size 1.8 1.8)
+				(bold yes)
+			)
+		)
+		(uuid "5c3eaf78-c0e4-57c9-a81b-f2a0f0590bc0")
+	)
+	(sheet
+		(at 30 63)
+		(size 120 34)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.35)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "ce0942e5-5f48-5b2b-8eb9-148914186030")
+		(property "Sheetname" "PWR-SELECT"
+			(at 30 62.2884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "../PWR-SELECT/PowerSelector.kicad_sch"
+			(at 30 97.5846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Radxa-CM5-ProComm-System"
+				(path "/8ee1d215-def5-50f5-8d2f-a9585b61ca2c"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 30 143)
+		(size 120 34)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.35)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "60180b12-eb3a-5e31-8cfe-6ebf03ea2b9b")
+		(property "Sheetname" "CM5 Interface Contract"
+			(at 30 142.2884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "../CM5-CARRIER/CM5-Carrier.kicad_sch"
+			(at 30 177.5846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Radxa-CM5-ProComm-System"
+				(path "/8ee1d215-def5-50f5-8d2f-a9585b61ca2c"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 165 143)
+		(size 120 34)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.35)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "1f501e23-25dd-526b-93b8-a24c028b7dbf")
+		(property "Sheetname" "CM5 Pin Allocation"
+			(at 165 142.2884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "../CM5-CARRIER/CM5-Core-Allocated.kicad_sch"
+			(at 165 177.5846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Radxa-CM5-ProComm-System"
+				(path "/8ee1d215-def5-50f5-8d2f-a9585b61ca2c"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 300 143)
+		(size 120 34)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.35)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "34c0f6c2-47b4-54f9-831f-21ef2a6f775d")
+		(property "Sheetname" "Network / PCIe / Wi-Fi"
+			(at 300 142.2884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "../CM5-CARRIER/Network-PCIe.kicad_sch"
+			(at 300 177.5846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Radxa-CM5-ProComm-System"
+				(path "/8ee1d215-def5-50f5-8d2f-a9585b61ca2c"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 435 143)
+		(size 120 34)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.35)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "ac4bebfa-cb01-5e58-ba42-625bb69c467a")
+		(property "Sheetname" "WWAN / Dual SIM"
+			(at 435 142.2884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "../CM5-CARRIER/WWAN-SIM.kicad_sch"
+			(at 435 177.5846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Radxa-CM5-ProComm-System"
+				(path "/8ee1d215-def5-50f5-8d2f-a9585b61ca2c"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 30 198)
+		(size 120 34)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.35)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "0738865f-0385-5a2f-8680-a9ffee6a9039")
+		(property "Sheetname" "Display Harness"
+			(at 30 197.2884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "../CM5-CARRIER/Display-Harness.kicad_sch"
+			(at 30 232.5846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Radxa-CM5-ProComm-System"
+				(path "/8ee1d215-def5-50f5-8d2f-a9585b61ca2c"
+					(page "7")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 165 198)
+		(size 120 34)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.35)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "a2745aa2-e445-535d-bf45-a73235b9af5e")
+		(property "Sheetname" "Headset / Audio Control"
+			(at 165 197.2884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "../CM5-CARRIER/Audio-Control.kicad_sch"
+			(at 165 232.5846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Radxa-CM5-ProComm-System"
+				(path "/8ee1d215-def5-50f5-8d2f-a9585b61ca2c"
+					(page "8")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 300 198)
+		(size 120 34)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.35)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "a3026f24-0c70-5b76-8cd6-753b1e98667d")
+		(property "Sheetname" "Power Regulators"
+			(at 300 197.2884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "../CM5-CARRIER/Power-Regulators-A1.kicad_sch"
+			(at 300 232.5846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Radxa-CM5-ProComm-System"
+				(path "/8ee1d215-def5-50f5-8d2f-a9585b61ca2c"
+					(page "9")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 435 198)
+		(size 120 34)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.35)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "5a020824-6afc-570e-a6c5-4ccd4084bd80")
+		(property "Sheetname" "Thermal / Fans / IO"
+			(at 435 197.2884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "../CM5-CARRIER/Thermal-IO.kicad_sch"
+			(at 435 232.5846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Radxa-CM5-ProComm-System"
+				(path "/8ee1d215-def5-50f5-8d2f-a9585b61ca2c"
+					(page "10")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 30 293)
+		(size 120 34)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.35)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "7e93279e-273c-528d-8c7e-14774865a7d5")
+		(property "Sheetname" "AUDIO-8X8 Interface"
+			(at 30 292.2884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "../AUDIO-8X8/Audio-8x8.kicad_sch"
+			(at 30 327.5846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Radxa-CM5-ProComm-System"
+				(path "/8ee1d215-def5-50f5-8d2f-a9585b61ca2c"
+					(page "11")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 165 293)
+		(size 120 34)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.35)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "6548786c-7747-55e1-b226-0233de868211")
+		(property "Sheetname" "TDM / Clock / Control"
+			(at 165 292.2884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "../AUDIO-8X8/Audio-TDM-Clock.kicad_sch"
+			(at 165 327.5846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Radxa-CM5-ProComm-System"
+				(path "/8ee1d215-def5-50f5-8d2f-a9585b61ca2c"
+					(page "12")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 300 293)
+		(size 120 34)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.35)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "659ef3df-9c17-525f-8ed2-2b3c60c42a31")
+		(property "Sheetname" "AK5558VN ADC"
+			(at 300 292.2884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "../AUDIO-8X8/AK5558-ADC.kicad_sch"
+			(at 300 327.5846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Radxa-CM5-ProComm-System"
+				(path "/8ee1d215-def5-50f5-8d2f-a9585b61ca2c"
+					(page "13")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 435 293)
+		(size 120 34)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.35)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "0a9a5584-cd66-50c8-ad8b-30e24878ca1d")
+		(property "Sheetname" "AK4458VN DAC"
+			(at 435 292.2884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "../AUDIO-8X8/AK4458-DAC.kicad_sch"
+			(at 435 327.5846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Radxa-CM5-ProComm-System"
+				(path "/8ee1d215-def5-50f5-8d2f-a9585b61ca2c"
+					(page "14")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 30 348)
+		(size 120 34)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.35)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "3e961987-a682-5a64-a76e-cdff50a5725f")
+		(property "Sheetname" "Balanced Inputs 1-8"
+			(at 30 347.2884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "../AUDIO-8X8/Audio-Inputs.kicad_sch"
+			(at 30 382.5846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Radxa-CM5-ProComm-System"
+				(path "/8ee1d215-def5-50f5-8d2f-a9585b61ca2c"
+					(page "15")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 165 348)
+		(size 120 34)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.35)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "17cff473-4d9b-5b4b-b3aa-dd00d2548e78")
+		(property "Sheetname" "Balanced Outputs 1-8"
+			(at 165 347.2884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "../AUDIO-8X8/Audio-Outputs.kicad_sch"
+			(at 165 382.5846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Radxa-CM5-ProComm-System"
+				(path "/8ee1d215-def5-50f5-8d2f-a9585b61ca2c"
+					(page "16")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 300 348)
+		(size 120 34)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.35)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "d35b6583-e324-5fcb-a22b-fa2f5d68eafd")
+		(property "Sheetname" "Audio Power"
+			(at 300 347.2884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "../AUDIO-8X8/Audio-Power.kicad_sch"
+			(at 300 382.5846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Radxa-CM5-ProComm-System"
+				(path "/8ee1d215-def5-50f5-8d2f-a9585b61ca2c"
+					(page "17")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)

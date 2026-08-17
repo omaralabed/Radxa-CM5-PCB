@@ -5,7 +5,8 @@
 **ELECTRICAL_CAPTURE_COMPLETE / PCB_ROUTING_HELD**
 
 This folder contains the factory-review PDF set generated from all sixteen
-controlled KiCad schematic sheets.
+controlled KiCad schematic sheets. The editable whole-system entry point is
+`../../cad/kicad/SYSTEM/Radxa-CM5-ProComm-System.kicad_pro`.
 
 - `Power-Selector-Schematic-A1.pdf`: no-blink primary/backup selector,
   hold-up, telemetry, and protected output.

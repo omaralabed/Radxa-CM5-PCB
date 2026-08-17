@@ -11,6 +11,11 @@
 
 ## Project Split
 
+- `SYSTEM/Radxa-CM5-ProComm-System.kicad_pro`: one native KiCad navigation
+  project for the complete sixteen-sheet design. Its sheet instances are
+  excluded from BOM and board update; the three physical PCB netlists remain
+  controlled by their board projects below.
+
 - `PWR-SELECT/PowerSelector.kicad_pro`: Radxa A1 source-selector capture with
   1.50 mOhm source-shunt starting values, three INA228 telemetry channels, and
   a delivered-load shunt. Four 6800 uF / 50 V Nichicon snap-ins plus 660 uF of
