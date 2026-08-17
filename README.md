@@ -91,8 +91,15 @@ under `references/procomm-field-unit/`.
   machine-validated. Each of the three electrically authoritative board roots
   reports `0 errors / 0 warnings`; isolated child-sheet context findings match
   a strict explicit allowlist. The controlled audit covers 1203 unique
-  components and intentionally blocks routing on ten audio package coupons;
-  no production PCB routing has begun.
+  components and intentionally blocks final routing on ten audio package
+  coupons. Native PCB-A0 files now carry the complete netlists, exact locked
+  mating geometry, and controlled support patterns; no production routing has
+  begun and all unverified footprints remain staged outside the outlines.
+- The three PCB-A0 baselines are checked by
+  `cad/kicad/validate_pcb_placement.py` and
+  `cad/kicad/validate_pcb_drc_baseline.py`. Locked XLR, RJ45, SIM, CM5, and
+  support geometry has zero DRC errors. See
+  `cad/kicad/PCB_LAYOUT_STATUS_A0.md` for the exact source and transform record.
 - Footprint Coupon A1 is now a controlled 100 x 80 mm, six-layer KiCad board
   with zero DRC violations. It compares open, bottom-tented, and selective
   Type VII exposed-pad vias for AK5558VN/AK4458VN and includes physical fit
@@ -190,7 +197,7 @@ under `references/procomm-field-unit/`.
 ## Remaining Detailed-Capture Work
 
 The architecture and native CAD tool are selected. Complete these engineering
-inputs before layout:
+inputs before production layout release:
 
 - Final CM5 `VCC_SYSIN` tolerance/setpoint release and monitor USB2 touch test
 - Six-layer-or-greater controlled-impedance PCB stackup from the fabricator

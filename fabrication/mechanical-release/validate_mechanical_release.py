@@ -65,6 +65,7 @@ def validate_package(
     require(hard.get("maximum_long_pcb_support_row_span_mm") <= 128.0, "long-PCB support-row span is limited to 128 mm", failures)
     require(hard.get("pcb_mount_finished_hole_diameter_mm") == 3.4, "PCB mount finished-hole target is 3.4 mm", failures)
     require(hard.get("pcb_mount_finished_hole_tolerance_mm") <= 0.1, "PCB mount finished-hole tolerance is at most 0.1 mm", failures)
+    require(hard.get("minimum_pcb_mount_hole_center_edge_distance_mm") >= 5.0, "PCB mount hole centers remain at least 5.0 mm from board edges", failures)
     require(hard.get("minimum_pcb_mount_copper_keepout_diameter_mm") >= 8.0, "PCB mount all-layer copper keepout is at least 8.0 mm", failures)
     require(hard.get("minimum_pcb_mount_component_keepout_diameter_mm") >= 10.0, "PCB mount component keepout is at least 10.0 mm", failures)
     require(hard.get("minimum_closed_lid_dynamic_clearance_mm") >= 12.7, "closed-lid dynamic clearance target is at least 12.7 mm / 0.50 in", failures)
@@ -120,14 +121,15 @@ def validate_package(
         if len(origin) != 2 or len(size) != 2:
             continue
         y_rows: set[float] = set()
+        minimum_edge_distance = float(support_spec.get("mount_interface", {}).get("minimum_hole_center_edge_distance_mm", 5.0))
         for row in board_rows:
             x_board = float(row["x_board_mm"])
             y_board = float(row["y_board_mm"])
             x_panel = float(row["x_panel_mm"])
             y_panel = float(row["y_panel_mm"])
             y_rows.add(y_board)
-            require(6.0 <= x_board <= float(size[0]) - 6.0, f'{row["support_id"]} keeps a 6 mm center distance from board X edges', failures)
-            require(6.0 <= y_board <= float(size[1]) - 6.0, f'{row["support_id"]} keeps a 6 mm center distance from board Y edges', failures)
+            require(minimum_edge_distance <= x_board <= float(size[0]) - minimum_edge_distance, f'{row["support_id"]} keeps the controlled center distance from board X edges', failures)
+            require(minimum_edge_distance <= y_board <= float(size[1]) - minimum_edge_distance, f'{row["support_id"]} keeps the controlled center distance from board Y edges', failures)
             require(abs(x_panel - (float(origin[0]) + x_board)) < 0.001, f'{row["support_id"]} panel X matches its board datum', failures)
             require(abs(y_panel - (float(origin[1]) + y_board)) < 0.001, f'{row["support_id"]} panel Y matches its board datum', failures)
             require(abs(float(row["hole_diameter_mm"]) - 3.4) < 0.001, f'{row["support_id"]} uses a 3.4 mm finished NPTH', failures)
@@ -138,15 +140,30 @@ def validate_package(
         spans = [right - left for left, right in zip(ordered_y, ordered_y[1:])]
         require(len(ordered_y) >= 3 and max(spans, default=0.0) <= 128.0, f"{board} uses at least three support rows with no span above 128 mm", failures)
 
-    # The AUDIO support keepouts must not touch the preliminary 22.8 mm XLR envelopes.
+    # Support component keepouts must not touch the verified Neutrik courtyards.
     audio_rows = [row for row in supports if row["board"] == "AUDIO-8X8"]
-    xlr_centers = [(x, y) for x in (11.4, 54.78) for y in (19.0, 51.0, 83.0, 115.0, 147.0, 179.0, 211.0, 243.0)]
+    xlr_courtyards = []
+    for y in (19.0, 51.0, 83.0, 115.0, 147.0, 179.0, 211.0, 243.0):
+        xlr_courtyards.append((-1.91, y - 13.3, 24.39, y + 14.5))  # NC3MAV
+        xlr_courtyards.append((41.49, y - 13.3, 67.79, y + 14.5))  # NC3FAV
+
+    def circle_clears_rect(x: float, y: float, radius: float, rect: tuple[float, float, float, float]) -> bool:
+        left, top, right, bottom = rect
+        nearest_x = min(max(x, left), right)
+        nearest_y = min(max(y, top), bottom)
+        return ((x - nearest_x) ** 2 + (y - nearest_y) ** 2) ** 0.5 >= radius
+
     audio_clear = all(
-        ((float(row["x_board_mm"]) - xlr_x) ** 2 + (float(row["y_board_mm"]) - xlr_y) ** 2) ** 0.5 >= 16.4
+        circle_clears_rect(
+            float(row["x_board_mm"]),
+            float(row["y_board_mm"]),
+            float(row["component_keepout_diameter_mm"]) / 2.0,
+            courtyard,
+        )
         for row in audio_rows
-        for xlr_x, xlr_y in xlr_centers
+        for courtyard in xlr_courtyards
     )
-    require(audio_clear, "AUDIO support component keepouts clear all preliminary XLR envelopes", failures)
+    require(audio_clear, "AUDIO support component keepouts clear all verified Neutrik courtyards", failures)
 
     carrier_rows = [row for row in supports if row["board"] == "CM5-CARRIER"]
     modem_center = (146.0, 127.0)

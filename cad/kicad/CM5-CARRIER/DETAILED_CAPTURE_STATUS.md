@@ -4,7 +4,7 @@
 
 - Revision: A1
 - Date: 2026-08-16
-- Scope: detailed CM5-carrier connectivity before PCB routing
+- Scope: detailed CM5-carrier connectivity and engineering PCB layout baseline
 - Source of truth: `../generate_interface_schematics.py`
 - Release state: engineering capture; not a fabrication release
 
@@ -12,7 +12,7 @@
 
 | Sheet | Locked content |
 | --- | --- |
-| `CM5-Core-Allocated.kicad_sch` | Exact dual 100-pin CM5 mezzanine connectors plus 100-pad underside contact field, 76 owned allocation contacts (74 connected and two assigned no-connects), VCC_SYSIN, power-on, reset, recovery, boot, GPIO reference, and debug UART |
+| `CM5-Core-Allocated.kicad_sch` | Exact U33-A, U33-B, and J24 100-contact mates, source-derived relative geometry, four grounded module mounts, 76 owned allocation contacts (74 connected and two assigned no-connects), VCC_SYSIN, power-on, reset, recovery, boot, GPIO reference, and debug UART |
 | `Network-PCIe.kicad_sch` | Native WAN1, PI7C9X2G608GP in 606 mode, three LAN7430 PCIe endpoints, four Wurth 74991114412 1 GbE MagJacks, PHY-side ESD, and the AW7915-NP1 4T4R interface through a Molex 0679101002 Mini PCIe socket |
 | `WWAN-SIM.kicad_sch` | TE 2199230-3 M.2 B-key socket, USB3 and USB2, modem control signals, supply filtering/protection, FSA2567 dual-SIM mux, and two nano-SIM holders |
 | `Display-Harness.kicad_sch` | Molex 208658-1001 HDMI, Wurth 692122030100 USB-A touch, ESD, dedicated 4.984 V / 2 A display-interface rail, and 12 V / 2.5 A monitor harness |
@@ -81,9 +81,12 @@ any added, removed, or changed finding fails the gate. Nothing is globally
 suppressed merely to reduce a count. `SYSTEM/Radxa-CM5-ProComm-System.kicad_sch`
 is a navigation/documentation overview and is not an authoritative PCB netlist.
 
-## Gates Before Routing
+## Gates Before Production Route Freeze
 
-1. Close the ten routing blockers in the controlled audit: AK5558 `U201`,
+Engineering placement and routing may proceed from Rev L. Keep the named local
+coupon regions provisional, then:
+
+1. Close the ten final-routing blockers in the controlled audit: AK5558 `U201`,
    AK4458 `U301`, and Panasonic relays `K501-K508`. Independently inspect the
    Molex 0679101002 and drawing-derived power lands during first article, then
    complete placement and thermal review.

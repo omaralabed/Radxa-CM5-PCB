@@ -1,24 +1,28 @@
 # Footprint Release Control
 
-This project does not permit PCB routing from schematic symbols that lack a resolved, drawing-backed footprint. Run:
+This project does not permit final production routing from schematic symbols
+that lack a resolved, drawing-backed footprint. Engineering board outlines,
+mechanical placement, component floorplanning, and routing outside a named
+local coupon region may proceed from the controlled nominal geometry. Run:
 
 ```sh
 python3 cad/kicad/audit_footprint_readiness.py --routing
 ```
 
-The command must pass before placement or routing begins. The stricter `--release` gate also requires a manufacturer and MPN for every board-mounted component.
+The command must pass before final route freeze. The stricter `--release` gate
+also requires a manufacturer and MPN for every board-mounted component.
 
 ## Locked connector evidence
 
 | Function | Manufacturer / part | Footprint | Evidence | State |
 |---|---|---|---|---|
 | Wi-Fi Mini PCIe socket | Molex 0679101002 / 67910-1002 | `CM5Carrier:Molex_0679101002_Mini_PCIe` | Molex production drawing SD-67910-001 revision C2 | Land pattern locked; first-article and 3D fit open |
-| Balanced output XLR, CH1-CH8 | Neutrik NC3MAV | `Connector_Audio:Jack_XLR_Neutrik_NC3MAV_Vertical` | Neutrik NC3MAV product drawing | Footprint assigned; panel/PCB fit remains in mechanical release |
-| Balanced input XLR, CH1-CH8 | Neutrik NC3FAV | `Connector_Audio:Jack_XLR_Neutrik_NC3FAV_Vertical` | Neutrik NC3FAV product drawing | Footprint assigned; panel/PCB fit remains in mechanical release |
-| Radxa CM5 board-to-board mates | Hirose DF40C-100DS-0.4V(51) | `Connector_Hirose_DF40:Hirose_DF40C-100DS-0.4V_2x50_P0.4mm` | Radxa CM5 V2.21 connector definition and Hirose package | Assigned; stack-height inspection open |
-| Ethernet MagJacks | Wurth 74991114412 | `CM5Carrier:T_Wurth_WE-RJ45LAN_74991114412` | Wurth manufacturer footprint and STEP | Locked |
+| Balanced output XLR, CH1-CH8 | Neutrik NC3MAV | `Connector_Audio:Jack_XLR_Neutrik_NC3MAV_Vertical` | Neutrik NC3MAV product drawing and KiCad source footprint | Pad/hole signature and Rev L face-center placement locked; overhanging outline is assembly data on `F.Fab` |
+| Balanced input XLR, CH1-CH8 | Neutrik NC3FAV | `Connector_Audio:Jack_XLR_Neutrik_NC3FAV_Vertical` | Neutrik NC3FAV product drawing and KiCad source footprint | Pad/hole signature and Rev L face-center placement locked |
+| Radxa CM5 board-to-board mates | 3x Hirose DF40C-100DS-0.4V(51) | Three `CM5Carrier:Radxa_CM5_*_DF40C_100DS_OFFICIAL` footprints | Pad, drill, module-mount, and relative-transform geometry extracted from Radxa IO V2.20 official PADS source; pin identity from V2.21 workbook; Hirose EDC3-311352-00 drawing | Source geometry locked. J24's child pad angle is restored to the native PADS decal angle after a documented KiCad importer double-rotation; coordinates and sizes are unchanged. Installed stack-height inspection remains open |
+| Ethernet MagJacks | Wurth 74991114412 | `CM5Carrier:T_Wurth_WE-RJ45LAN_74991114412` | Wurth manufacturer footprint and STEP | Pad/hole signature and Rev L opening-center placement locked; immutable 0.2312 mm NPTH-to-copper minimum requires the documented PCBWay process rule |
 | Cellular M.2 B-key socket | TE 2199230-3 | `CM5Carrier:TE_2199230-3_M2_Key_B_4.2mm` | TE customer drawing C-2199230 revision B4 | Locked; modem/heatsink envelope open |
-| Dual nano-SIM holders | Wurth 693043020611 | `CM5Carrier:J_Wurth_WR-CRD_693043020611` | Wurth manufacturer drawing | Locked |
+| Dual nano-SIM holders | Wurth 693043020611 | `CM5Carrier:J_Wurth_WR-CRD_693043020611` | Wurth manufacturer drawing | Pad/hole signature and Rev L service-center placement locked |
 | Program-audio TDM headers | Molex 87832-6423, two devices | `Connector_Molex_Milligrid:Molex_8783230xx_2x15_P2.0mm_Header_Vertical_Polarized_MountingPegs` | Molex 87832 production drawing; 30 circuits, pegs, polarization and 30 microinch gold | Locked; harness SI and vibration qualification open |
 | CTIA headset jack | Kycon STX-353K7A-6N-KTTR | `CM5Carrier:Kycon_STX-353K7A-6N-KTTR_PRELIMINARY` | Kycon component drawing defines terminal centers but no recommended PCB land | Coupon A1 artwork ready; production blocked pending physical sample and plated-hole result |
 
@@ -101,8 +105,9 @@ The BOM is regenerated from the KiCad netlist by `export_schematic_bom.py`.
 
 Power-Regulators-A1 has zero routing or production-part blockers. Across the
 three physical board roots, the controlled audit currently reports 1203
-unique components, ten routing blockers, and 11 production blockers. PCB placement
-and routing remain on hold until the routing count is zero. See
+unique components, ten local final-routing blockers, and 11 production blockers.
+Engineering placement and routing outside those local coupon regions may
+proceed; production route freeze remains held until the routing count is zero. See
 `reports/component-footprint-audit.md` and
 `reports/component-footprint-audit.csv`. Assigning a plausible package without
 a locked part drawing is not accepted as closure.

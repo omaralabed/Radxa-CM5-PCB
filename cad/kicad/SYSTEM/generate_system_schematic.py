@@ -553,7 +553,7 @@ def build_schematic() -> None:
             1: "Top sheet is the electrical system interconnect; nested roots expose all detailed circuits",
             2: "PWR-SELECT, CM5-CARRIER, and AUDIO-8X8 are authoritative physical PCB netlists",
             3: "System connector representations are excluded from BOM and board update",
-            4: "PCB ROUTING HELD FOR PHYSICAL RELEASE GATES",
+            4: "ENGINEERING PCB LAYOUT AUTHORIZED; FABRICATION RELEASE HELD",
         },
     )
     add_text(
@@ -590,7 +590,7 @@ def build_project() -> None:
     project["sheets"] = []
     project["text_variables"] = {
         "DESIGN_STATE": "ELECTRICAL_CAPTURE_COMPLETE",
-        "PCB_STATE": "ROUTING_HELD_FOR_PHYSICAL_GATES",
+        "PCB_STATE": "ENGINEERING_LAYOUT_AUTHORIZED",
     }
     PROJECT.write_text(json.dumps(project, indent=2) + "\n", encoding="utf-8")
 

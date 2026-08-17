@@ -4,11 +4,12 @@
 
 **HOLD_FOR_MEASUREMENT**
 
-This audit is the factory-facing mechanical and thermal gate before PCB
-routing. The Rev L top-panel connector placement remains the approved concept
-layout, but it is not a cut file. No production panel, sidewall, bottom tray,
-PCB outline, or mounting-hole pattern may be released until every row
-M001-M080 is complete and the A2 validator passes with the release option.
+This audit is the factory-facing mechanical and thermal gate before final
+machining and fabrication release. Rev L is the controlled nominal basis for
+engineering PCB envelopes, supports, placement, and routing, but it is not a
+panel cut file. No production panel, sidewall, bottom tray, or final machining
+pattern may be released until every row M001-M080 is complete and the A2
+validator passes with the release option.
 
 ## Corrections Made In A2
 
@@ -83,11 +84,10 @@ Local source drawings are archived in docs/mechanical-parts.
 
 ## Monitor And Closed-Lid Gate
 
-The display must be bought before lid CAD is released. A 15.6 inch 16:9 panel
-has an active image width of approximately 345 mm, so a published 302 mm body
-width cannot describe the selected 15.6 inch unit. The actual sample must be
-measured at its maximum body, screw head, button, connector, and cable-bend
-envelopes.
+The selected monitor's documented 396.24 x 203.20 x 20.32 mm body envelope
+controls engineering lid CAD. The received assembly remains a fabrication-fit
+verification for the direct-mount drilling pattern, screw engagement, gasket,
+connector retention, cable bends, lid position, and dynamic closure sweep.
 
 Use this closure equation:
 
@@ -169,15 +169,20 @@ loops.
 - The monitor branch remains 12 V / 2.5 A with a simple replaceable fuse, per
   the project decision.
 
-## PCB And Routing Preconditions
+## PCB Engineering And Release Rules
 
-- Do not route until the final panel connector Z datum is measured.
+- Engineering placement and routing may proceed from the controlled Rev L
+  board envelopes, A1-A6/C1-C6 support coordinates, and nominal connector
+  datums. Do not freeze production connector Z, final board-edge interfaces,
+  or manufacturing outputs until the installation measurements pass.
 - The current footprint audit covers 1203 unique physical-board components and reports 10 routing
-  blockers and 11 production blockers. The routing blockers are the two AKM
+  blockers and 11 production blockers. These are local final-routing and
+  production-release holds, not a global floorplanning hold. The blockers are the two AKM
   exposed-pad package coupons and eight Panasonic TQ2 relay fit coupons. The
   additional production blocker is the Kycon headset-jack physical coupon; see
   `cad/kicad/reports/component-footprint-audit.md`. Zero ERC errors does not
-  clear these blockers or authorize routing.
+  clear these blockers; keep their local escape, stencil, and fit regions
+  provisional until the coupon results pass.
 - AUDIO-8X8: controlled `A1-A6` supports, panel-supported XLRs, controlled chassis
   shield connection, no PWM/fan harness crossing the quiet boundary.
 - CM5-CARRIER: controlled `C1-C6` supports, 15 mm perimeter frame keepout, no B.Cu

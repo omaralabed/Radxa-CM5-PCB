@@ -12,7 +12,7 @@
 		(comment 1 "Top sheet is the electrical system interconnect; nested roots expose all detailed circuits")
 		(comment 2 "PWR-SELECT, CM5-CARRIER, and AUDIO-8X8 are authoritative physical PCB netlists")
 		(comment 3 "System connector representations are excluded from BOM and board update")
-		(comment 4 "PCB ROUTING HELD FOR PHYSICAL RELEASE GATES")
+		(comment 4 "ENGINEERING PCB LAYOUT AUTHORIZED; FABRICATION RELEASE HELD")
 	)
 	(lib_symbols
 		(symbol "Connector_Generic:Conn_01x03"

@@ -22,5 +22,7 @@ prototype-controlled until their finished lengths are verified in the first
 mechanical article.
 
 The current mechanical gate is `mechanical-release/` revision A2 and remains
-`HOLD_FOR_MEASUREMENT`. Production panel/tray/sidewall files and PCB mounting
-holes are prohibited until all M001-M080 checks and signoffs are complete.
+`HOLD_FOR_MEASUREMENT`. Rev L nominal envelopes and controlled PCB support
+coordinates may be used for engineering layout. Production panel, tray,
+sidewall, and final drilling files are prohibited until all M001-M080 checks
+and signoffs are complete.

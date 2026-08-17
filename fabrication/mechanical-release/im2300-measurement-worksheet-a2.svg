@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297mm" viewBox="0 0 420 297">
   <title>Radxa CM5 ProComm iM2300 Measurement Worksheet A2</title>
-  <desc>Factory-facing worksheet for measuring the actual Pelican iM2300 and custom panel frame before PCB routing.</desc>
+  <desc>Factory-facing worksheet for measuring the actual Pelican iM2300 and custom panel frame before final fabrication release.</desc>
   <defs>
     <style>
       .bg{fill:#11151a}.panel{fill:#171d23;stroke:#d7dee7;stroke-width:1}.frame{fill:none;stroke:#7f8b99;stroke-width:.6;stroke-dasharray:3 2}

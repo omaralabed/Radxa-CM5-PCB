@@ -4,10 +4,12 @@
 
 - Native CAD tool: KiCad 10.0.5.
 - Capture milestone: A1 detailed CM5-carrier schematic suite.
+- PCB milestone: native PCB-A0 source-verified mating-placement baselines.
 - These files are not a fabrication release.
-- Carrier and audio PCB files are intentionally deferred until the measured
-  panel geometry, board outlines, connector footprints, and controlled-
-  impedance stackup are released.
+- Rev L nominal envelopes and controlled support coordinates authorize
+  engineering carrier, audio, and selector PCB layout. Exact machining datums,
+  production connector Z, and fabricator-approved impedance tables remain
+  final-release gates.
 
 ## Project Split
 
@@ -27,9 +29,9 @@
 - `CM5-CARRIER/CM5-Carrier.kicad_pro`: carrier interface overview and shared
   interboard connector contract.
 - `CM5-CARRIER/CM5-Core-Allocated.kicad_pro`: exact 300-contact CM5 connector
-  representation with all 76 allocation-ledger contacts owned: 74 connected
-  and two explicit assigned no-connects, plus power/service controls and debug
-  UART.
+  representation with all 76 allocation-ledger contacts owned, three
+  official-source DF40 footprints, four grounded module mounts, plus
+  power/service controls and debug UART.
 - `CM5-CARRIER/Network-PCIe.kicad_pro`: native WAN1, PI7C9X2G608GP PCIe switch,
   three LAN7430 endpoints, four protected MagJacks, and the AW7915-NP1 4T4R
   Wi-Fi interface through a Molex 0679101002 Mini PCIe socket.
@@ -119,6 +121,29 @@ The complete A1 gate is automated:
 cad/kicad/review_detailed_capture.sh
 ```
 
+Generate and validate the native PCB-A0 baselines with KiCad's bundled Python:
+
+```sh
+'/Applications/KiCad/KiCad.app/Contents/Frameworks/Python.framework/Versions/3.9/bin/python3' \
+  cad/kicad/generate_pcb_projects.py
+python3 cad/kicad/CM5-CARRIER/validate_cm5_mating_geometry.py
+'/Applications/KiCad/KiCad.app/Contents/Frameworks/Python.framework/Versions/3.9/bin/python3' \
+  cad/kicad/validate_pcb_placement.py
+python3 cad/kicad/validate_pcb_drc_baseline.py
+```
+
+The same sequence, including regeneration of all three controlled DRC JSON
+reports and the mechanical consistency gate, is automated as:
+
+```sh
+cad/kicad/review_pcb_baseline.sh
+```
+
+[`PCB_LAYOUT_STATUS_A0.md`](PCB_LAYOUT_STATUS_A0.md) records the no-guesswork
+geometry sources, exact CM5 underside transform, PCBWay process rules, and the
+controlled DRC baseline. Unverified components remain outside each board
+outline until their package and placement datums are authoritative.
+
 After that gate passes, build the combined schematic review PDFs with:
 
 ```sh
@@ -176,12 +201,11 @@ Electrical validation does not replace this visual readability gate.
    compensation review.
 2. Complete selector shunt/current-limit tolerance, hold-up/precharge, SOA,
    telemetry calibration, and 15 A thermal review, then create its PCB.
-3. Release the measured enclosure datums, custom four-side frame drawing, and
-   controlled-impedance PCB stackup. Enforce the Rev L underside limits of 78
-   x 268 mm for `AUDIO-8X8` and 166 x 268 mm for `CM5-CARRIER`, with controlled
-   support patterns `A1-A6` and `C1-C6` and no board, copper, component, or
-   standoff entering the 15 mm frame/screw keepout, then
-   convert the schematic suite into the routed carrier hierarchy.
+3. Freeze the PCBWay-controlled impedance stackups. Continue placement and
+   routing from the native PCB-A0 files while enforcing the Rev L underside
+   limits of 78 x 268 mm for `AUDIO-8X8` and 166 x 268 mm for `CM5-CARRIER`,
+   support patterns `A1-A6` and `C1-C6`, and the 15 mm frame/screw keepout.
+   Keep every connector and CM5 mating datum locked.
 4. Approve the AK5558VN/AK4458VN exposed-pad and TQ2 relay coupons, then bench
    validate the locked 48 kHz TDM256 mode, +4/+24 dBu level plan, 600 ohm
    compatibility load, mute sequencing, crosstalk, noise, and THD+N.

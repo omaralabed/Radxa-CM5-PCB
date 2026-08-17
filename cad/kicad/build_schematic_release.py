@@ -121,7 +121,7 @@ def cover_pdf() -> bytes:
         Paragraph("Radxa CM5 ProComm", title),
         Paragraph("Schematic Release A1", styles["Heading1"]),
         Paragraph(
-            "ELECTRICAL CAPTURE COMPLETE - PCB ROUTING HELD FOR PHYSICAL RELEASE GATES",
+            "ELECTRICAL CAPTURE COMPLETE - ENGINEERING PCB LAYOUT AUTHORIZED",
             state,
         ),
         Paragraph(
@@ -176,10 +176,10 @@ def cover_pdf() -> bytes:
             ),
             Paragraph("Release Rule", styles["Heading2"]),
             Paragraph(
-                "Do not begin PCB placement or routing from this package until the "
-                "footprint coupon is signed, the mechanical release validator passes, "
-                "and the PCBWay stackups and impedance rules are frozen. Any electrical "
-                "change after this package requires regeneration and full review.",
+                "Engineering placement and routing may use the controlled Rev L nominal "
+                "envelopes and support pattern. Keep coupon-controlled local fanouts and "
+                "production machining provisional until the physical gates and PCBWay "
+                "stackups pass. Any electrical change requires regeneration and review.",
                 body,
             ),
             Spacer(1, 0.16 * inch),

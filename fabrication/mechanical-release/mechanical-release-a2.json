@@ -2,7 +2,8 @@
   "project": "Radxa CM5 ProComm iM2300",
   "revision": "A2",
   "release_state": "HOLD_FOR_MEASUREMENT",
-  "release_scope": "mechanical fit, thermal path, power-bay stack, and transport closure before PCB routing",
+  "engineering_pcb_layout_state": "ALLOWED_FROM_CONTROLLED_REV_L_NOMINAL_ENVELOPES",
+  "release_scope": "mechanical fit, thermal path, power-bay stack, transport closure, and exact machining datums before fabrication release",
   "datum_origin": "finished left panel edge B / finished hinge panel edge C / finished top-panel face A",
   "nominal_case_reference": {
     "interior_width_mm": 431.8,
@@ -129,6 +130,7 @@
     "mount_interface": {
       "hole_type": "NPTH",
       "finished_hole_diameter_mm": 3.4,
+      "minimum_hole_center_edge_distance_mm": 5.0,
       "all_layer_copper_keepout_diameter_mm": 8.0,
       "component_keepout_diameter_mm": 10.0,
       "hardware": "rigid captive metal M3 standoff plus M3 SEMS or captive-washer screw with field-serviceable locking feature",
@@ -177,6 +179,7 @@
     "maximum_long_pcb_support_row_span_mm": 128.0,
     "pcb_mount_finished_hole_diameter_mm": 3.4,
     "pcb_mount_finished_hole_tolerance_mm": 0.1,
+    "minimum_pcb_mount_hole_center_edge_distance_mm": 5.0,
     "minimum_pcb_mount_copper_keepout_diameter_mm": 8.0,
     "minimum_pcb_mount_component_keepout_diameter_mm": 10.0,
     "minimum_closed_lid_dynamic_clearance_mm": 12.7,

@@ -12,11 +12,12 @@ after `validate_release.py --release` passes.
 The current repository is not yet a production package:
 
 - the sixteen detailed schematic sheets pass ERC;
-- `CM5-CARRIER`, `AUDIO-8X8`, and `PWR-SELECT` do not yet have routed
-  `.kicad_pcb` files;
+- `CM5-CARRIER`, `AUDIO-8X8`, and `PWR-SELECT` now have native `.kicad_pcb`
+  placement baselines with complete netlists, but they are deliberately
+  unrouted and are not fabrication files;
 - no production-board Gerber, NC-drill, CPL, assembly-drawing, or board STEP
   outputs exist;
-- ten physical footprint-coupon results still block routing;
+- ten physical footprint-coupon results still block final route freeze and fabrication release;
 - 11 component rows still block production release;
 - mechanical release A2 remains `HOLD_FOR_MEASUREMENT`.
 

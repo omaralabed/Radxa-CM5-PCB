@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/Users/viewvision/Desktop/Radxa CM5 PCB/cad/kicad/CM5-CARRIER/CM5-Carrier.kicad_sch</source>
-    <date>2026-08-17T08:37:35</date>
+    <date>2026-08-17T10:33:40</date>
     <tool>Eeschema 10.0.5-rc1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -29,9 +29,9 @@
         <rev>A1</rev>
         <date>2026-08-13</date>
         <source>CM5-Core-Allocated.kicad_sch</source>
-        <comment number="1" value="Three 100-contact Hirose DF40C mates; all physical pin numbers follow CM5 V2.21"/>
+        <comment number="1" value="Three DF40C-100DS mates; pad geometry and relative placement come from Radxa IO V2.20"/>
         <comment number="2" value="76 contacts are owned: 74 connected and 2 assigned no-connect; all other functions are no-connect"/>
-        <comment number="3" value="All connector grounds join the carrier ground plane; allocated GPIO domain is 3.3 V"/>
+        <comment number="3" value="U33-A includes the four official grounded CM5 mounting pads; allocated GPIO domain is 3.3 V"/>
         <comment number="4" value="DETAILED CAPTURE BASELINE - verify CM5 voltage limits before release"/>
         <comment number="5" value=""/>
         <comment number="6" value=""/>
@@ -466,11 +466,11 @@
     </comp>
     <comp ref="J501">
       <value>RADXA CM5 U13-A MATE</value>
-      <footprint>Connector_Hirose_DF40:Hirose_DF40C-100DS-0.4V_2x50_P0.4mm</footprint>
+      <footprint>CM5Carrier:Radxa_CM5_U33A_DF40C_100DS_OFFICIAL</footprint>
       <fields>
         <field name="Manufacturer">Hirose</field>
         <field name="MPN">DF40C-100DS-0.4V(51)</field>
-        <field name="Footprint">Connector_Hirose_DF40:Hirose_DF40C-100DS-0.4V_2x50_P0.4mm</field>
+        <field name="Footprint">CM5Carrier:Radxa_CM5_U33A_DF40C_100DS_OFFICIAL</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -480,7 +480,7 @@
       <property name="Sheetname" value="CM5 Core / Allocated Pins"/>
       <property name="Sheetfile" value="CM5-Core-Allocated.kicad_sch"/>
       <sheetpath names="/CM5 Core / Allocated Pins/" tstamps="/8d185cd7-4b0c-594c-b71d-9bf1ce0f8e76/"/>
-      <tstamps>0f7b3b52-7e81-5eb3-8988-c9cd6fc531d2</tstamps>
+      <tstamps>2cda382a-59c8-5fcc-b064-e0ad745dfdc1</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -534,6 +534,8 @@
             <pin num="95"/>
             <pin num="97"/>
             <pin num="99"/>
+            <pin num="201"/>
+            <pin num="203"/>
             <pin num="2"/>
             <pin num="4"/>
             <pin num="6"/>
@@ -584,17 +586,19 @@
             <pin num="96"/>
             <pin num="98"/>
             <pin num="100"/>
+            <pin num="202"/>
+            <pin num="204"/>
           </pins>
         </unit>
       </units>
     </comp>
     <comp ref="J502">
       <value>RADXA CM5 U13-B MATE</value>
-      <footprint>Connector_Hirose_DF40:Hirose_DF40C-100DS-0.4V_2x50_P0.4mm</footprint>
+      <footprint>CM5Carrier:Radxa_CM5_U33B_DF40C_100DS_OFFICIAL</footprint>
       <fields>
         <field name="Manufacturer">Hirose</field>
         <field name="MPN">DF40C-100DS-0.4V(51)</field>
-        <field name="Footprint">Connector_Hirose_DF40:Hirose_DF40C-100DS-0.4V_2x50_P0.4mm</field>
+        <field name="Footprint">CM5Carrier:Radxa_CM5_U33B_DF40C_100DS_OFFICIAL</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -604,7 +608,7 @@
       <property name="Sheetname" value="CM5 Core / Allocated Pins"/>
       <property name="Sheetfile" value="CM5-Core-Allocated.kicad_sch"/>
       <sheetpath names="/CM5 Core / Allocated Pins/" tstamps="/8d185cd7-4b0c-594c-b71d-9bf1ce0f8e76/"/>
-      <tstamps>1d9bdcc1-abe0-54d4-b7f9-ca676b47d66d</tstamps>
+      <tstamps>c67c9d32-c043-5e29-b63b-fd50a56e1a20</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -714,11 +718,11 @@
     </comp>
     <comp ref="J503">
       <value>RADXA CM5 J1 MATE</value>
-      <footprint>Connector_Hirose_DF40:Hirose_DF40C-100DS-0.4V_2x50_P0.4mm</footprint>
+      <footprint>CM5Carrier:Radxa_CM5_J24_DF40C_100DS_OFFICIAL</footprint>
       <fields>
         <field name="Manufacturer">Hirose</field>
         <field name="MPN">DF40C-100DS-0.4V(51)</field>
-        <field name="Footprint">Connector_Hirose_DF40:Hirose_DF40C-100DS-0.4V_2x50_P0.4mm</field>
+        <field name="Footprint">CM5Carrier:Radxa_CM5_J24_DF40C_100DS_OFFICIAL</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -728,7 +732,7 @@
       <property name="Sheetname" value="CM5 Core / Allocated Pins"/>
       <property name="Sheetfile" value="CM5-Core-Allocated.kicad_sch"/>
       <sheetpath names="/CM5 Core / Allocated Pins/" tstamps="/8d185cd7-4b0c-594c-b71d-9bf1ce0f8e76/"/>
-      <tstamps>8989bf15-c634-5fc2-b8bb-10983e9c04dc</tstamps>
+      <tstamps>0a216100-43fa-5af1-9897-adf4f34373d5</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -854,7 +858,7 @@
       <property name="ki_keywords" value="connector"/>
       <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
       <sheetpath names="/CM5 Core / Allocated Pins/" tstamps="/8d185cd7-4b0c-594c-b71d-9bf1ce0f8e76/"/>
-      <tstamps>0ae1d44f-7bd7-588c-9b47-63063b14d97c</tstamps>
+      <tstamps>7f103a77-22a9-513a-a194-6e79bca35e27</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -886,7 +890,7 @@
       <property name="ki_keywords" value="connector"/>
       <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
       <sheetpath names="/CM5 Core / Allocated Pins/" tstamps="/8d185cd7-4b0c-594c-b71d-9bf1ce0f8e76/"/>
-      <tstamps>3cbe7e4d-d0fa-5930-b0fa-f0be43c6ba7e</tstamps>
+      <tstamps>cb1af8b3-35c5-5fce-b35a-f545b6c3b061</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -916,7 +920,7 @@
       <property name="ki_keywords" value="connector"/>
       <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
       <sheetpath names="/CM5 Core / Allocated Pins/" tstamps="/8d185cd7-4b0c-594c-b71d-9bf1ce0f8e76/"/>
-      <tstamps>89a35f3b-c082-5bdf-85dc-29abffb924bb</tstamps>
+      <tstamps>7274cf44-ba1f-5457-b822-c95bc1bf34df</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -947,7 +951,7 @@
       <property name="ki_keywords" value="connector"/>
       <property name="ki_fp_filters" value="Connector*:*_2x??_*"/>
       <sheetpath names="/CM5 Core / Allocated Pins/" tstamps="/8d185cd7-4b0c-594c-b71d-9bf1ce0f8e76/"/>
-      <tstamps>8d6ff1e2-0bbf-51f4-8667-55256c4800b9</tstamps>
+      <tstamps>38707945-d48b-539d-864c-ec15aed8633e</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -16713,7 +16717,7 @@
       <fields>
         <field name="Reference">J</field>
         <field name="Value">RADXA CM5 J1 MATE</field>
-        <field name="Footprint">Connector_Hirose_DF40:Hirose_DF40C-100DS-0.4V_2x50_P0.4mm</field>
+        <field name="Footprint">CM5Carrier:Radxa_CM5_J24_DF40C_100DS_OFFICIAL</field>
         <field name="Datasheet">https://dl.radxa.com/cm5/v2210/radxa_cm5_v2210_pinout.xlsx</field>
         <field name="Description">Radxa CM5 J1, all 100 physical contacts</field>
       </fields>
@@ -16826,7 +16830,7 @@
       <fields>
         <field name="Reference">J</field>
         <field name="Value">RADXA CM5 U13-A MATE</field>
-        <field name="Footprint">Connector_Hirose_DF40:Hirose_DF40C-100DS-0.4V_2x50_P0.4mm</field>
+        <field name="Footprint">CM5Carrier:Radxa_CM5_U33A_DF40C_100DS_OFFICIAL</field>
         <field name="Datasheet">https://dl.radxa.com/cm5/v2210/radxa_cm5_v2210_pinout.xlsx</field>
         <field name="Description">Radxa CM5 U13-A, all 100 physical contacts</field>
       </fields>
@@ -16931,6 +16935,10 @@
         <pin num="98" name="GND" type="passive"/>
         <pin num="99" name="PWRON_L" type="passive"/>
         <pin num="100" name="SPIO_MISO_M1" type="passive"/>
+        <pin num="201" name="MODULE_MOUNT_GND_1" type="passive"/>
+        <pin num="202" name="MODULE_MOUNT_GND_2" type="passive"/>
+        <pin num="203" name="MODULE_MOUNT_GND_3" type="passive"/>
+        <pin num="204" name="MODULE_MOUNT_GND_4" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="CM5Carrier" part="Radxa_CM5_U13_B">
@@ -16939,7 +16947,7 @@
       <fields>
         <field name="Reference">J</field>
         <field name="Value">RADXA CM5 U13-B MATE</field>
-        <field name="Footprint">Connector_Hirose_DF40:Hirose_DF40C-100DS-0.4V_2x50_P0.4mm</field>
+        <field name="Footprint">CM5Carrier:Radxa_CM5_U33B_DF40C_100DS_OFFICIAL</field>
         <field name="Datasheet">https://dl.radxa.com/cm5/v2210/radxa_cm5_v2210_pinout.xlsx</field>
         <field name="Description">Radxa CM5 U13-B, all 100 physical contacts</field>
       </fields>
@@ -18770,6 +18778,10 @@
       <node ref="J501" pin="13" pinfunction="GND_13" pintype="passive"/>
       <node ref="J501" pin="14" pinfunction="GND_14" pintype="passive"/>
       <node ref="J501" pin="2" pinfunction="GND_2" pintype="passive"/>
+      <node ref="J501" pin="201" pinfunction="MODULE_MOUNT_GND_1_201" pintype="passive"/>
+      <node ref="J501" pin="202" pinfunction="MODULE_MOUNT_GND_2_202" pintype="passive"/>
+      <node ref="J501" pin="203" pinfunction="MODULE_MOUNT_GND_3_203" pintype="passive"/>
+      <node ref="J501" pin="204" pinfunction="MODULE_MOUNT_GND_4_204" pintype="passive"/>
       <node ref="J501" pin="22" pinfunction="GND_22" pintype="passive"/>
       <node ref="J501" pin="23" pinfunction="GND_23" pintype="passive"/>
       <node ref="J501" pin="32" pinfunction="GND_32" pintype="passive"/>

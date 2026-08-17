@@ -2,7 +2,7 @@
 
 ## Decision
 
-**Electrical capture is complete. PCB placement and routing remain held.**
+**Electrical capture is complete. Engineering PCB layout is authorized.**
 
 The native KiCad source consists of sixteen controlled sheets across
 `PWR-SELECT`, `CM5-CARRIER`, and `AUDIO-8X8`. The complete deterministic review
@@ -42,7 +42,7 @@ representations cannot update a PCB.
 - Cross-board XLR, fan, temperature, telemetry, source-control, TDM, and audio
   power assignments pass.
 
-## Physical Gates Before PCB
+## Physical Gates Before Fabrication Release
 
 The root-counted component audit covers 1203 unique schematic components. Ten routing blockers are
 deliberately retained for physical evidence:
@@ -55,10 +55,11 @@ The Kycon STX-353K7A-6N-KTTR headset jack is route-ready at the schematic level
 but remains blocked from production until its sample, plated-hole, bezel,
 switch-polarity, and CTIA coupon pass. Total production blockers: 11.
 
-Mechanical A2 remains `HOLD_FOR_MEASUREMENT`. Board outlines, connector Z
-datums, support coordinates, sidewall machining, and panel cut files cannot be
-released until M001-M080 is completed on the actual hardware and the mechanical
-release validator passes.
+Mechanical A2 remains `HOLD_FOR_MEASUREMENT` for factory release. Rev L board
+envelopes and the controlled A1-A6/C1-C6 support coordinates authorize
+engineering placement and routing now. Exact connector Z datums, sidewall
+machining, panel cut files, and final manufacturing outputs cannot be released
+until M001-M080 is completed and the mechanical validator passes.
 
 ## Controlled Commands
 

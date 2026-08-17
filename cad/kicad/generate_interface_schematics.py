@@ -8,6 +8,8 @@ from contextlib import contextmanager
 from pathlib import Path
 import re
 import shutil
+import subprocess
+import tempfile
 import uuid as _uuid
 
 
@@ -78,6 +80,17 @@ KICAD_TEMPLATE = Path(
     "/Applications/KiCad/KiCad.app/Contents/SharedSupport/template/"
     "EuroCard160mmX100mm/EuroCard160mmX100mm.kicad_pro"
 )
+KICAD_CLI = Path(
+    "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli"
+)
+RADXA_CM5_IO_ASC = (
+    WORKSPACE
+    / "references"
+    / "radxa-cm-projects"
+    / "cm5"
+    / "radxa-cm5-io-board"
+    / "radxa_cm5_io_board_v2200.asc"
+)
 
 MF_2X2 = "Connector_Molex:Molex_Micro-Fit_3.0_43045-0412_2x02_P3.00mm_Vertical"
 MF_2X4 = "Connector_Molex:Molex_Micro-Fit_3.0_43045-0812_2x04_P3.00mm_Vertical"
@@ -97,10 +110,12 @@ MILLIGRID_2X15 = (
     "Connector_Molex_Milligrid:"
     "Molex_8783230xx_2x15_P2.0mm_Header_Vertical_Polarized_MountingPegs"
 )
-CM5_DF40_FOOTPRINT = (
-    "Connector_Hirose_DF40:"
-    "Hirose_DF40C-100DS-0.4V_2x50_P0.4mm"
-)
+CM5_DF40_FOOTPRINTS = {
+    "U13-A": "CM5Carrier:Radxa_CM5_U33A_DF40C_100DS_OFFICIAL",
+    "U13-B": "CM5Carrier:Radxa_CM5_U33B_DF40C_100DS_OFFICIAL",
+    "J1": "CM5Carrier:Radxa_CM5_J24_DF40C_100DS_OFFICIAL",
+}
+CM5_MODULE_MOUNT_FOOTPRINT = "CM5Carrier:Radxa_CM5_Module_Mount_2p6mm_OFFICIAL"
 
 # These mappings are package-code or manufacturer-drawing backed. Keep this
 # list exact: an unlisted MPN must remain blocked until its package is checked.
@@ -578,22 +593,23 @@ def _escape_symbol_text(value: str) -> str:
 
 
 def write_cm5_local_library() -> dict[str, list[tuple[int, str]]]:
-    """Build exact 100-contact CM5 mating symbols from Radxa's V2.21 pinout."""
+    """Build exact CM5 mating symbols from Radxa's V2.21 pinout."""
     pinout = load_cm5_pinout()
     lines = ["(kicad_symbol_lib (version 20231120) (generator procomm_cm5_generator)"]
     for connector, pins in pinout.items():
         symbol_name = f"Radxa_CM5_{connector.replace('-', '_')}"
         start_pin = pins[0][0]
+        body_bottom = -69.85 if connector == "U13-A" else -63.5
         lines.extend(
             [
                 f'  (symbol "{symbol_name}" (pin_names (offset 0.9)) (in_bom yes) (on_board yes)',
                 '    (property "Reference" "J" (at -25.4 67.31 0) (effects (font (size 1.27 1.27)) (justify left)))',
                 f'    (property "Value" "RADXA CM5 {connector} MATE" (at -25.4 64.77 0) (effects (font (size 1.27 1.27)) (justify left)))',
-                f'    (property "Footprint" "{CM5_DF40_FOOTPRINT}" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))',
+                f'    (property "Footprint" "{CM5_DF40_FOOTPRINTS[connector]}" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))',
                 '    (property "Datasheet" "https://dl.radxa.com/cm5/v2210/radxa_cm5_v2210_pinout.xlsx" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))',
                 f'    (property "Description" "Radxa CM5 {connector}, all 100 physical contacts" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))',
                 f'    (symbol "{symbol_name}_0_1"',
-                '      (rectangle (start -25.4 63.5) (end 25.4 -63.5) (stroke (width 0.254) (type default)) (fill (type background)))',
+                f'      (rectangle (start -25.4 63.5) (end 25.4 {body_bottom}) (stroke (width 0.254) (type default)) (fill (type background)))',
                 "    )",
                 f'    (symbol "{symbol_name}_1_1"',
             ]
@@ -614,6 +630,17 @@ def write_cm5_local_library() -> dict[str, list[tuple[int, str]]]:
                 f'(name "{escaped}" (effects (font (size 0.75 0.75)))) '
                 f'(number "{pin}" (effects (font (size 0.75 0.75)))))'
             )
+        if connector == "U13-A":
+            for index, pin in enumerate(range(201, 205)):
+                is_left = index % 2 == 0
+                x = -27.94 if is_left else 27.94
+                y = -66.04 - (index // 2) * 2.54
+                orientation = 0 if is_left else 180
+                lines.append(
+                    f'      (pin passive line (at {x:.2f} {y:.2f} {orientation}) (length 2.54) '
+                    f'(name "MODULE_MOUNT_GND_{pin - 200}" (effects (font (size 0.75 0.75)))) '
+                    f'(number "{pin}" (effects (font (size 0.75 0.75)))))'
+                )
         lines.extend(["    )", "  )"])
 
     lines.extend(
@@ -1126,6 +1153,287 @@ def write_cm5_local_library() -> dict[str, list[tuple[int, str]]]:
     return pinout
 
 
+def _balanced_sexpr(text: str, start: int) -> str:
+    """Return one balanced KiCad S-expression beginning at start."""
+    depth = 0
+    quoted = False
+    escaped = False
+    for index in range(start, len(text)):
+        character = text[index]
+        if quoted:
+            if escaped:
+                escaped = False
+            elif character == "\\":
+                escaped = True
+            elif character == '"':
+                quoted = False
+            continue
+        if character == '"':
+            quoted = True
+        elif character == "(":
+            depth += 1
+        elif character == ")":
+            depth -= 1
+            if depth == 0:
+                return text[start:index + 1]
+    raise RuntimeError("Unbalanced KiCad S-expression in imported Radxa board")
+
+
+def _top_level_sexprs(expression: str) -> list[str]:
+    """Return the direct child expressions of a KiCad S-expression."""
+    children: list[str] = []
+    depth = 0
+    quoted = False
+    escaped = False
+    child_start: int | None = None
+    for index, character in enumerate(expression):
+        if quoted:
+            if escaped:
+                escaped = False
+            elif character == "\\":
+                escaped = True
+            elif character == '"':
+                quoted = False
+            continue
+        if character == '"':
+            quoted = True
+        elif character == "(":
+            depth += 1
+            if depth == 2:
+                child_start = index
+        elif character == ")":
+            if depth == 2 and child_start is not None:
+                children.append(expression[child_start:index + 1])
+                child_start = None
+            depth -= 1
+    return children
+
+
+def _sexpr_name(expression: str) -> str:
+    match = re.match(r"\(\s*([^\s()]+)", expression)
+    if not match:
+        raise RuntimeError(f"Cannot identify KiCad expression: {expression[:80]!r}")
+    return match.group(1)
+
+
+def _strip_board_ownership(expression: str) -> str:
+    """Remove board-instance fields while preserving source geometry."""
+    return re.sub(
+        r"\n\s*\((?:net|uuid|path)\s+[^\n()]*\)",
+        "",
+        expression,
+    )
+
+
+def _imported_footprint(board_text: str, reference: str) -> str:
+    marker = f'(property "Reference" "{reference}"'
+    property_offset = board_text.find(marker)
+    if property_offset < 0:
+        raise RuntimeError(f"Official Radxa board has no {reference} footprint")
+    footprint_offset = board_text.rfind("(footprint ", 0, property_offset)
+    if footprint_offset < 0:
+        raise RuntimeError(f"Cannot locate official Radxa {reference} footprint")
+    return _balanced_sexpr(board_text, footprint_offset)
+
+
+def _write_official_footprint(
+    name: str,
+    description: str,
+    reference_position: tuple[float, float],
+    children: list[str],
+) -> None:
+    """Write a footprint made only from geometry imported from Radxa's PCB."""
+    x, y = reference_position
+    lines = [
+        f'(footprint "{name}"',
+        '  (version 20240108)',
+        '  (generator "procomm_radxa_official_pads_import")',
+        '  (layer "F.Cu")',
+        f'  (descr "{description}")',
+        '  (tags "Radxa CM5 official V2.20 DF40 exact mating geometry")',
+        f'  (property "Reference" "REF**" (at {x:.3f} {y:.3f} 0) (layer "F.SilkS") (effects (font (size 0.8 0.8) (thickness 0.12))))',
+        f'  (property "Value" "{name}" (at {x:.3f} {y + 2.0:.3f} 0) (layer "F.Fab") hide (effects (font (size 0.8 0.8) (thickness 0.12))))',
+        '  (attr smd)',
+    ]
+    for child in children:
+        sanitized = _strip_board_ownership(child)
+        if _sexpr_name(child).startswith("fp_"):
+            # PADS assembly/component outlines are mating references, not
+            # guaranteed production silkscreen. Preserve them on Fab so source
+            # geometry remains visible without printing ink across 0.4 mm pads.
+            sanitized = sanitized.replace('(layer "F.SilkS")', '(layer "F.Fab")')
+        lines.extend("  " + line.expandtabs(2) for line in sanitized.splitlines())
+    lines.append(")")
+    (CM5_LOCAL_FOOTPRINTS / f"{name}.kicad_mod").write_text("\n".join(lines) + "\n")
+
+
+def _radxa_df40_decal_contract() -> None:
+    """Verify the native PADS decal before correcting the KiCad import artifact."""
+    source = RADXA_CM5_IO_ASC.read_text(errors="replace")
+    start_match = re.search(r"^DF40C_100DS\s+M\s", source, re.MULTILINE)
+    if not start_match:
+        raise RuntimeError("Official Radxa source has no DF40C_100DS PADS decal")
+    next_decal = re.search(
+        r"^[A-Za-z0-9_+.-]+\s+M\s",
+        source[start_match.end():],
+        re.MULTILINE,
+    )
+    if not next_decal:
+        raise RuntimeError("Cannot delimit the official DF40C_100DS PADS decal")
+    decal = source[start_match.start():start_match.end() + next_decal.start()]
+    pins = [
+        int(pin)
+        for pin in re.findall(
+            r"^T-?\d+\s+-?\d+\s+-?\d+\s+-?\d+\s+(\d+)\s*$",
+            decal,
+            re.MULTILINE,
+        )
+    ]
+    if pins != list(range(1, 101)):
+        raise RuntimeError("Official DF40C_100DS decal does not contain ordered pins 1-100")
+    pad_stack = re.search(
+        r"^PAD 0 3\s*\n-2 300000 RF\s+0\.000 1710000\b",
+        decal,
+        re.MULTILINE,
+    )
+    if not pad_stack:
+        raise RuntimeError(
+            "Official DF40C_100DS PADS stack is not 0.20 x 1.14 mm at 0 degrees"
+        )
+
+
+def _normalize_j24_imported_pad_angles(children: list[str]) -> list[str]:
+    """Remove KiCad's proven double application of J24's 270-degree rotation.
+
+    Radxa's native DF40C_100DS decal defines its 1.14 x 0.20 mm rectangular
+    land at 0 degrees. J24 is then placed at 270 degrees on the Radxa IO board.
+    KiCad 10.0.5 converts the pad coordinates into footprint-local coordinates
+    but incorrectly retains 270 degrees on every child pad. That makes adjacent
+    0.40 mm-pitch pads overlap. Preserve position and size verbatim and restore
+    only the native decal angle.
+    """
+    normalized: list[str] = []
+    corrected = 0
+    for child in children:
+        if _sexpr_name(child) != "pad":
+            normalized.append(child)
+            continue
+        at_match = re.search(
+            r"\(at\s+(-?[0-9.]+)\s+(-?[0-9.]+)\s+(-?[0-9.]+)\)",
+            child,
+        )
+        if not at_match or float(at_match.group(3)) % 360.0 != 270.0:
+            raise RuntimeError(
+                "KiCad PADS import behavior changed; refusing an unproved J24 correction"
+            )
+        replacement = f"(at {at_match.group(1)} {at_match.group(2)})"
+        normalized.append(child[:at_match.start()] + replacement + child[at_match.end():])
+        corrected += 1
+    if corrected != 100:
+        raise RuntimeError(f"Expected to normalize 100 J24 pads; corrected {corrected}")
+    return normalized
+
+
+def write_radxa_cm5_official_footprints() -> None:
+    """Extract the CM5 mating pattern from Radxa's official PCB.
+
+    Radxa models U33-A, U33-B and the four module mounts as one PADS decal.
+    They are split into two KiCad BOM footprints at the same origin so the
+    three purchased DF40C-100DS connectors remain distinct while their pad
+    coordinates cannot drift. J24 retains Radxa's official relative transform.
+    Its child pad angle is restored from the native PADS decal after checking
+    the known KiCad importer double-rotation artifact.
+    """
+    if not RADXA_CM5_IO_ASC.exists():
+        raise FileNotFoundError(f"Official Radxa PCB source missing: {RADXA_CM5_IO_ASC}")
+    _radxa_df40_decal_contract()
+    with tempfile.TemporaryDirectory(prefix="radxa-cm5-official-geometry-") as temp:
+        imported_board = Path(temp) / "radxa_cm5_io_board_v2200.kicad_pcb"
+        result = subprocess.run(
+            [
+                str(KICAD_CLI),
+                "pcb",
+                "import",
+                "--format",
+                "pads",
+                "--output",
+                str(imported_board),
+                str(RADXA_CM5_IO_ASC),
+            ],
+            check=False,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True,
+        )
+        if result.returncode:
+            raise RuntimeError(f"Radxa PADS import failed:\n{result.stderr.strip()}")
+        board_text = imported_board.read_text()
+
+    u33_children = _top_level_sexprs(_imported_footprint(board_text, "U33"))
+    j24_children = _top_level_sexprs(_imported_footprint(board_text, "J24"))
+
+    u33a: list[str] = []
+    u33b: list[str] = []
+    for child in u33_children:
+        kind = _sexpr_name(child)
+        if kind == "pad":
+            pin_match = re.match(r'\(pad "(\d+)"', child)
+            if not pin_match:
+                continue
+            pin = int(pin_match.group(1))
+            if 1 <= pin <= 100 or 201 <= pin <= 204:
+                u33a.append(child)
+            elif 101 <= pin <= 200:
+                u33b.append(child)
+        elif kind == "fp_line":
+            coordinates = [
+                (float(x), float(y))
+                for x, y in re.findall(
+                    r"\((?:start|end)\s+(-?[0-9.]+)\s+(-?[0-9.]+)",
+                    child,
+                )
+            ]
+            is_left_connector = coordinates and all(
+                -20.0 < x < -14.0 and -15.0 < y < 10.0
+                for x, y in coordinates
+            )
+            (u33b if is_left_connector else u33a).append(child)
+
+    j24_geometry = [
+        child
+        for child in j24_children
+        if _sexpr_name(child) in {"fp_line", "fp_arc", "fp_rect", "fp_circle", "fp_poly", "pad"}
+    ]
+    j24_geometry = _normalize_j24_imported_pad_angles(j24_geometry)
+    u33a_pads = [item for item in u33a if _sexpr_name(item) == "pad"]
+    u33b_pads = [item for item in u33b if _sexpr_name(item) == "pad"]
+    j24_pads = [item for item in j24_geometry if _sexpr_name(item) == "pad"]
+    if (len(u33a_pads), len(u33b_pads), len(j24_pads)) != (104, 100, 100):
+        raise RuntimeError(
+            "Official CM5 footprint extraction expected U33-A=104, U33-B=100, J24=100 pads; "
+            f"found {len(u33a_pads)}, {len(u33b_pads)}, {len(j24_pads)}"
+        )
+
+    _write_official_footprint(
+        "Radxa_CM5_U33A_DF40C_100DS_OFFICIAL",
+        "U33-A pads 1-100 plus grounded module mounts 201-204; exact Radxa CM5 IO V2.20 PADS geometry",
+        (21.5, 10.5),
+        u33a,
+    )
+    _write_official_footprint(
+        "Radxa_CM5_U33B_DF40C_100DS_OFFICIAL",
+        "U33-B pads 101-200; exact Radxa CM5 IO V2.20 PADS geometry; place at the same origin as U33-A",
+        (-21.5, 10.5),
+        u33b,
+    )
+    _write_official_footprint(
+        "Radxa_CM5_J24_DF40C_100DS_OFFICIAL",
+        "J24 pads 1-100; Radxa CM5 IO V2.20 PADS coordinates and sizes; native decal pad angle restored after verified KiCad importer correction",
+        (1.4, -2.0),
+        j24_geometry,
+    )
+
+
 def write_cm5_local_footprints() -> None:
     """Copy controlled connector mechanics into this project's local library."""
     CM5_LOCAL_FOOTPRINTS.mkdir(parents=True, exist_ok=True)
@@ -1153,16 +1461,19 @@ def write_cm5_local_footprints() -> None:
     write_traco_tri20_footprint()
     write_power_magnetic_and_shunt_footprints()
     write_power_semiconductor_footprints()
+    write_radxa_cm5_official_footprints()
     (CM5_LOCAL_LIBRARY.parent / "fp-lib-table").write_text(
         '(fp_lib_table\n'
         '  (version 7)\n'
         '  (lib (name "CM5Carrier")(type "KiCad")(uri "${KIPRJMOD}/CM5Carrier.pretty")(options "")(descr "Radxa CM5 carrier-local footprints"))\n'
+        '  (lib (name "ProCommMechanical")(type "KiCad")(uri "${KIPRJMOD}/../ProCommMechanical.pretty")(options "")(descr "Controlled ProComm support and mechanical footprints"))\n'
         ')\n'
     )
     (ROOT / "AUDIO-8X8" / "fp-lib-table").write_text(
         '(fp_lib_table\n'
         '  (version 7)\n'
         '  (lib (name "CM5Carrier")(type "KiCad")(uri "${KIPRJMOD}/../CM5-CARRIER/CM5Carrier.pretty")(options "")(descr "Shared Radxa CM5 carrier and audio footprints"))\n'
+        '  (lib (name "ProCommMechanical")(type "KiCad")(uri "${KIPRJMOD}/../ProCommMechanical.pretty")(options "")(descr "Controlled ProComm support and mechanical footprints"))\n'
         ')\n'
     )
 
@@ -2006,9 +2317,9 @@ def build_cm5_core_sheet(pinout: dict[str, list[tuple[int, str]]]) -> Path:
         rev="A1",
         company="ProComm",
         comments={
-            1: "Three 100-contact Hirose DF40C mates; all physical pin numbers follow CM5 V2.21",
+            1: "Three DF40C-100DS mates; pad geometry and relative placement come from Radxa IO V2.20",
             2: "76 contacts are owned: 74 connected and 2 assigned no-connect; all other functions are no-connect",
-            3: "All connector grounds join the carrier ground plane; allocated GPIO domain is 3.3 V",
+            3: "U33-A includes the four official grounded CM5 mounting pads; allocated GPIO domain is 3.3 V",
             4: "DETAILED CAPTURE BASELINE - verify CM5 voltage limits before release",
         },
     )
@@ -2048,7 +2359,7 @@ def build_cm5_core_sheet(pinout: dict[str, list[tuple[int, str]]]) -> Path:
             reference,
             f"RADXA CM5 {connector} MATE",
             (x, 105),
-            CM5_DF40_FOOTPRINT,
+            CM5_DF40_FOOTPRINTS[connector],
             "Hirose",
             "DF40C-100DS-0.4V(51)",
         )
@@ -2065,7 +2376,17 @@ def build_cm5_core_sheet(pinout: dict[str, list[tuple[int, str]]]) -> Path:
                 add_global_net_label(schematic, "GND", position, 0.62, justify)
             else:
                 schematic.no_connects.add(position)
-        note(schematic, f"{connector}: 100 physical contacts", (x - 28, 174), 0.82)
+        if connector == "U13-A":
+            for mounting_pad in range(201, 205):
+                position = pin_xy(component, mounting_pad)
+                justify = "right" if position[0] < x else "left"
+                add_global_net_label(schematic, "GND", position, 0.62, justify)
+        contact_note = (
+            "100 contacts + official grounded module pads 201-204"
+            if connector == "U13-A"
+            else "100 physical contacts"
+        )
+        note(schematic, f"{connector}: {contact_note}", (x - 28, 178), 0.82)
 
     heading(schematic, "2. INTERNAL POWER / STARTUP / RECOVERY SERVICE", (45, 202), 1.6)
     add_connector(
@@ -2142,6 +2463,7 @@ def build_cm5_core_sheet(pinout: dict[str, list[tuple[int, str]]]) -> Path:
         two_row=True,
     )
     note(schematic, "Kelvin-sense SYS_4V0 at J501; 4.0 V follows the Radxa CM5 carrier design note.", (420, 260), 0.85)
+    note(schematic, "PCB lock: J501 and J502 share the U33 origin; J503 is +11.405, -25.415 mm at -90 degrees.", (420, 270), 0.82)
 
     heading(schematic, "3. OWNERSHIP AUDIT", (45, 295), 1.6)
     audit_lines = (
@@ -5485,9 +5807,17 @@ def main() -> None:
     symbol_cache = get_symbol_cache()
     symbol_cache.add_library_path(CM5_LOCAL_LIBRARY)
     symbol_cache.add_library_path(CM5_WURTH_LIBRARY)
+    carrier = build_carrier()
+    with isolated_uuid_namespace("cm5-core-official-mating-geometry"):
+        cm5_core = build_cm5_core_sheet(pinout)
+    # The original CM5 core occupied 670 IDs in the stable global sequence.
+    # Keep that historical reservation so a local mechanical correction does
+    # not rewrite UUIDs in every unrelated downstream schematic.
+    for _reserved_cm5_core_id in range(670):
+        _uuid.uuid4()
     paths = (
-        build_carrier(),
-        build_cm5_core_sheet(pinout),
+        carrier,
+        cm5_core,
         build_network_pcie_sheet(),
         build_wwan_sim_sheet(),
         build_display_harness_sheet(),

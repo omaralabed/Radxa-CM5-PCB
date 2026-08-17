@@ -28,11 +28,11 @@
   </g>
   <g>
     <circle class="keep" cx="52" cy="38" r="5"/><circle class="hole" cx="52" cy="38" r="1.7"/><text class="tiny" x="55" y="36">A1</text>
-    <circle class="keep" cx="92" cy="38" r="5"/><circle class="hole" cx="92" cy="38" r="1.7"/><text class="tiny" x="88" y="36">A2</text>
+    <circle class="keep" cx="93" cy="38" r="5"/><circle class="hole" cx="93" cy="38" r="1.7"/><text class="tiny" x="89" y="36">A2</text>
     <circle class="keep" cx="52" cy="166" r="5"/><circle class="hole" cx="52" cy="166" r="1.7"/><text class="tiny" x="55" y="164">A3</text>
-    <circle class="keep" cx="92" cy="166" r="5"/><circle class="hole" cx="92" cy="166" r="1.7"/><text class="tiny" x="88" y="164">A4</text>
+    <circle class="keep" cx="93" cy="166" r="5"/><circle class="hole" cx="93" cy="166" r="1.7"/><text class="tiny" x="89" y="164">A4</text>
     <circle class="keep" cx="52" cy="294" r="5"/><circle class="hole" cx="52" cy="294" r="1.7"/><text class="tiny" x="55" y="292">A5</text>
-    <circle class="keep" cx="92" cy="294" r="5"/><circle class="hole" cx="92" cy="294" r="1.7"/><text class="tiny" x="88" y="292">A6</text>
+    <circle class="keep" cx="93" cy="294" r="5"/><circle class="hole" cx="93" cy="294" r="1.7"/><text class="tiny" x="89" y="292">A6</text>
   </g>
 
   <text class="head" x="115" y="28">CM5-CARRIER - 166 x 268 - SUPPORTS C1-C6</text>
@@ -78,5 +78,5 @@
   <text class="small" x="314" y="306">OUTER RING = dia 10 COMPONENT KEEPOUT; INNER HOLE = dia 3.4 NPTH</text>
   <text class="small" x="20" y="312">SUPPORT COORDINATES: fabrication/mechanical-release/pcb-support-pattern-a2.csv</text>
   <text class="small" x="20" y="319">CONNECTOR LOAD MATRIX: fabrication/mechanical-release/connector-load-path-a2.csv</text>
-  <text class="tiny" x="20" y="326">A2 HOLD: release actual connector/bracket coupons, standoff height, panel/frame survey, tool access, torque, and vibration test before PCB routing.</text>
+  <text class="tiny" x="20" y="326">A2 HOLD: release actual connector/bracket coupons, standoff height, panel/frame survey, tool access, torque, and vibration test before final route freeze.</text>
 </svg>

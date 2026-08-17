@@ -2,7 +2,7 @@
 
 ## Decision
 
-**SCHEMATIC ELECTRICAL REVIEW PASS / PCB ROUTING HOLD**
+**SCHEMATIC ELECTRICAL REVIEW PASS / ENGINEERING PCB LAYOUT AUTHORIZED**
 
 The three electrically authoritative KiCad board roots currently pass ERC with
 `0 errors / 0 warnings`:

@@ -1,0 +1,72 @@
+{
+  "schema": "procomm.cm5-mating-geometry.v1",
+  "revision": "A1",
+  "status": "LOCKED_TO_RADXA_OFFICIAL_SOURCE",
+  "source": {
+    "pcb": "../../../references/radxa-cm-projects/cm5/radxa-cm5-io-board/radxa_cm5_io_board_v2200.asc",
+    "bom": "../../../references/radxa-cm-projects/cm5/radxa-cm5-io-board/radxa_cm5_io_board_v2200_BOM.xlsx",
+    "pinout": "../../../docs/radxa_cm5_v2210_pinout.xlsx",
+    "connector_drawing": "../../../references/components/hirose/DF40C-100DS-0.4V/DF40C-100DS-0.4V-51_2D_drawing.pdf",
+    "connector_drawing_sha256": "30b4c54ab38ddd18a65e1f3b631b8bcfb64efd1799c2a4a10936f010070521cd"
+  },
+  "connectors": {
+    "J501": {
+      "radxa_designator": "U33-A",
+      "mpn": "DF40C-100DS-0.4V(51)",
+      "anchor_mm": [0.0, 0.0],
+      "rotation_deg": 0.0,
+      "pads": [1, 100],
+      "additional_grounded_pads": [201, 202, 203, 204]
+    },
+    "J502": {
+      "radxa_designator": "U33-B",
+      "mpn": "DF40C-100DS-0.4V(51)",
+      "anchor_mm": [0.0, 0.0],
+      "rotation_deg": 0.0,
+      "pads": [101, 200]
+    },
+    "J503": {
+      "radxa_designator": "J24",
+      "mpn": "DF40C-100DS-0.4V(51)",
+      "anchor_mm": [11.405, -25.415],
+      "rotation_deg": -90.0,
+      "pads": [1, 100]
+    }
+  },
+  "module_mounts_relative_to_u33_mm": {
+    "201": [16.51, 23.98],
+    "202": [-16.49, 23.98],
+    "203": [-16.51, -23.97],
+    "204": [16.49, -23.97]
+  },
+  "module_mount_pad": {
+    "finished_drill_mm": 2.6,
+    "copper_diameter_mm": 6.0,
+    "net": "GND"
+  },
+  "radxa_df40_land_pattern": {
+    "source_units_per_mm": 1500000,
+    "contact_pitch_mm": 0.4,
+    "row_center_spacing_mm": 2.64,
+    "pad_size_mm": [1.14, 0.2],
+    "native_decal_pad_rotation_deg": 0.0,
+    "inter_row_copper_gap_mm": 1.5
+  },
+  "importer_correction": {
+    "tool": "KiCad 10.0.5 PADS importer",
+    "scope": "J24 child pad angles only",
+    "observed": "Importer converts J24 pad coordinates to footprint-local coordinates but retains the parent 270 degree placement on every child pad.",
+    "correction": "Restore the native DF40C_100DS PADS decal angle of 0 degrees while preserving all pad positions, sizes, numbers, layers, and the J24 parent transform.",
+    "proof": "Radxa native PADS PAD 0 stack plus Hirose EDC3-311352-00 recommended-pattern orientation and zero-overlap validator"
+  },
+  "placement_rule": "J501 and J502 must share position and rotation. J503 and all module mounts must remain at the exact source-derived transforms above.",
+  "carrier_bottom_transform": {
+    "reason": "CM5 faces the case floor",
+    "mapping": "T(x,y)=R(90 degrees)*mirror-X(x,y)=(-y,-x)",
+    "u33_carrier_anchor_mm": [127.0, 245.0],
+    "j501_carrier": {"anchor_mm": [127.0, 245.0], "rotation_deg": 90.0, "layer": "B.Cu"},
+    "j502_carrier": {"anchor_mm": [127.0, 245.0], "rotation_deg": 90.0, "layer": "B.Cu"},
+    "j503_carrier": {"anchor_mm": [152.415, 233.595], "rotation_deg": 180.0, "layer": "B.Cu"}
+  },
+  "validation": "python3 cad/kicad/CM5-CARRIER/validate_cm5_mating_geometry.py"
+}

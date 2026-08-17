@@ -82,8 +82,10 @@ frame, tray, panel, and case.
 6. Enter measured minimum/maximum values in
    `mechanical-release-a2.json`, attach measurement photos or inspection
    records, and run `validate_mechanical_release.py --release`.
-7. Only after the release validator passes may the exact panel outline, panel
-   screw coordinates, and PCB mounting-hole coordinates be frozen for routing.
+7. Rev L nominal board envelopes and the controlled A1-A6/C1-C6 support pattern
+   authorize engineering PCB placement and routing. Only after the release
+   validator passes may the exact panel outline, connector Z datums, panel
+   screw coordinates, and production machining files be frozen for fabrication.
 
 ## Hard Constraints
 
